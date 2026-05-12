@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="260" viewBox="0 0 500 260" role="img" aria-labelledby="t15">
+  <title id="t15">Diagrama de radiacion: puntos A y B en los flancos del haz a media potencia</title>
+  <rect width="500" height="260" fill="#0f1419" rx="10"/>
+  <text x="250" y="28" text-anchor="middle" fill="#e8ecf4" font-size="14" font-family="system-ui,sans-serif">Diagrama de radiacion (orientativo)</text>
+  <ellipse cx="250" cy="150" rx="160" ry="70" fill="none" stroke="#4a5568" stroke-width="1.5"/>
+  <path d="M 250 150 L 250 55 Q 360 95 390 150 Q 360 205 250 245 Q 140 205 110 150 Q 140 95 250 55 Z" fill="rgba(126,182,255,0.12)" stroke="#7eb6ff" stroke-width="2"/>
+  <line x1="250" y1="150" x2="330" y2="118" stroke="#f4b942" stroke-width="4"/>
+  <line x1="250" y1="150" x2="170" y2="118" stroke="#f4b942" stroke-width="4"/>
+  <text x="158" y="112" fill="#f4b942" font-size="16" font-weight="700" font-family="system-ui,sans-serif">A</text>
+  <text x="328" y="112" fill="#f4b942" font-size="16" font-weight="700" font-family="system-ui,sans-serif">B</text>
+  <text x="250" y="248" text-anchor="middle" fill="#9aa3b5" font-size="12" font-family="system-ui,sans-serif">A y B: puntos de media potencia del haz (lineas gruesas)</text>
+</svg>

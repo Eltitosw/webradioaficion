@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="Preparación para el examen de radioaficionado en España: práctica, tarjetas y métodos de estudio con base científica." />
+  <meta name="theme-color" content="#090c11" />
+  <link rel="canonical" href="https://examenradioaficionado.online/" />
+  <title>RadioExamen · Preparación radioaficionado</title>
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23121926'/%3E%3Cpath fill='%23e4a82a' d='M16 7l5.5 10H10.5L16 7zm0 18l-5.5-10h11L16 25z'/%3E%3C/svg%3E"
+    type="image/svg+xml"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <noscript>
+    <p style="margin:0;padding:1rem;background:#2a1f0a;color:#ffd478;font-family:system-ui,sans-serif;">
+      Activa JavaScript para usar RadioExamen. Si abriste el archivo desde el disco, usa un servidor local (ver <code>README.md</code>): <code>npx serve</code> dentro de la carpeta <code>web</code>.
+    </p>
+  </noscript>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="#inicio" data-nav="inicio">
+        <span class="logo__mark" aria-hidden="true">◇</span>
+        <span class="logo__text">RadioExamen</span>
+      </a>
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        id="nav-toggle"
+        aria-label="Abrir o cerrar el menú de navegación"
+      >
+        Menú
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Principal">
+        <a href="#inicio" data-nav="inicio">Inicio</a>
+        <a href="#temario" data-nav="temario">Temario</a>
+        <a href="#normativa" data-nav="normativa">Normativa</a>
+        <a href="#metodologia" data-nav="metodologia">Metodología</a>
+        <a href="#practicar" data-nav="practicar">Practicar</a>
+        <a href="#tarjetas" data-nav="tarjetas">Tarjetas</a>
+      </nav>
+      <details class="a11y-toolbar" id="a11y-panel">
+        <summary class="a11y-toolbar__summary">Accesibilidad</summary>
+        <div class="a11y-toolbar__body">
+          <p class="a11y-toolbar__intro">
+            Preferencias guardadas en este navegador. La opción de movimiento también respeta la configuración del sistema si está activada.
+          </p>
+          <ul class="a11y-toolbar__list" role="list">
+            <li>
+              <label class="a11y-check">
+                <input type="checkbox" id="a11y-large" />
+                <span>Texto más grande</span>
+              </label>
+            </li>
+            <li>
+              <label class="a11y-check">
+                <input type="checkbox" id="a11y-spacing" />
+                <span>Más espacio entre líneas</span>
+              </label>
+            </li>
+            <li>
+              <label class="a11y-check">
+                <input type="checkbox" id="a11y-reduce-motion" />
+                <span>Reducir animaciones</span>
+              </label>
+            </li>
+            <li>
+              <label class="a11y-check">
+                <input type="checkbox" id="a11y-contrast" />
+                <span>Más contraste (bordes y textos)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="app-error" class="app-error" role="alert" hidden></div>
+    <div id="route-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <section id="view-inicio" class="view view--active" aria-labelledby="titulo-inicio" aria-hidden="false">
+      <div class="hero">
+        <p class="hero__eyebrow">España · examen tipo test</p>
+        <h1 id="titulo-inicio">Prepara el examen sin memorizar a ciegas</h1>
+        <p class="hero__lead">
+          Esta web es un <strong>entorno de práctica</strong>: tests, tarjetas y rutas de estudio
+          pensadas con ideas de la psicología del aprendizaje. Los PDF que tengas (URE, resúmenes, guías)
+          sirven como <strong>apoyo</strong>: aquí no se republican; tú enlazas conceptos con preguntas
+          generadas o importadas con criterio propio.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#practicar" data-nav="practicar">Empezar práctica</a>
+          <a class="btn btn--ghost" href="#normativa" data-nav="normativa">Ver normativa BOE</a>
+          <a class="btn btn--ghost" href="#metodologia" data-nav="metodologia">Ver métodos con evidencia</a>
+        </div>
+        <ul class="hero__facts" role="list">
+          <li><strong>2 pruebas</strong> (técnica + reglamento), 30 preguntas cada una en el examen real.</li>
+          <li><strong>50 %</strong> de aciertos por prueba para APTO (referencia habitual en convocatorias públicas).</li>
+          <li>Modos <strong>estudio</strong>, <strong>examen</strong> (sin pistas) e <strong>intercalado</strong> (mezcla de temas).</li>
+        </ul>
+        <div id="user-stats-root" class="user-stats" aria-live="polite"></div>
+        <div class="route-panel" aria-labelledby="ruta-titulo">
+          <h2 id="ruta-titulo" class="route-panel__title">Cómo está organizada la web</h2>
+          <ol class="route-steps">
+            <li>
+              <a href="#normativa" data-nav="normativa"><strong>Normativa</strong></a>
+              — BOE primero (IET/1311/2013), leyes marco, CEPT, práctica de examen, <strong>guías y cursos</strong> (PDF, URVAG, EA5URA, URE) y enlaces a asociaciones verificables (p. ej. URE, EA7URS).
+            </li>
+            <li>
+              <a href="#temario" data-nav="temario"><strong>Temario</strong></a>
+              — bloques para orientar el estudio y filtrar preguntas por tema.
+            </li>
+            <li>
+              <a href="#metodologia" data-nav="metodologia"><strong>Metodología</strong></a>
+              — ideas de aprendizaje con respaldo en evidencia científica.
+            </li>
+            <li>
+              <a href="#practicar" data-nav="practicar"><strong>Practicar</strong></a>
+              y <a href="#tarjetas" data-nav="tarjetas"><strong>Tarjetas</strong></a>
+              — tests en modo libre o <strong>examen tipo test</strong> (30 preguntas al azar, 30 min en examen), con variantes de estudio (inmediato, confianza o temario/libro), más tarjetas con repaso espaciado.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-normativa" class="view" hidden aria-labelledby="titulo-normativa" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-normativa">Normativa y enlaces oficiales</h1>
+        <p class="section-head__sub">
+          Secciones ordenadas: texto oficial (BOE), leyes marco, CEPT, práctica de examen, <strong>guías y cursos</strong> (PDF, URVAG, EA5URA, URE),
+          asociaciones de referencia y resúmenes temáticos.
+          El texto jurídico vinculante sigue estando solo en el <strong>BOE</strong> y en la sede administrativa vigente.
+        </p>
+      </div>
+      <div id="normativa-root" class="temario"></div>
+    </section>
+
+    <section id="view-temario" class="view" hidden aria-labelledby="titulo-temario" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-temario">Temario orientativo</h1>
+        <p class="section-head__sub">
+          Cada bloque incluye <strong>ganchos para memorizar</strong>, un <strong>repaso express</strong> (1–3 minutos),
+          <strong>más detalle</strong> si dispones de 10–15 minutos, <strong>tarjetas volteables didácticas</strong> (texto fijo en esta página) distintas de las <strong>tarjetas del banco</strong> en la vista Tarjetas (preguntas reales con repaso espaciado),
+          y enlaces a Practicar, Tarjetas globales y Normativa. Los textos condensan el programa tipo examen (HAREC / reglamento BOE, CEPT, URE);
+          contrasta siempre con el BOE y tu manual.
+        </p>
+      </div>
+      <div class="temario-toolbar panel">
+        <label for="temario-filter">Buscar en el temario</label>
+        <input type="search" id="temario-filter" class="temario-toolbar__input" placeholder="Ej.: dipolo, ROE, mezclador…" autocomplete="off" />
+      </div>
+      <div id="temario-root" class="temario"></div>
+    </section>
+
+    <section id="view-metodologia" class="view" hidden aria-labelledby="titulo-metodo" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-metodo">Aprendizaje con respaldo científico</h1>
+        <p class="section-head__sub">
+          No son “trucos mágicos”: son estrategias con meta-análisis y revisiones en revistas de psicología
+          y educación. En la práctica, <strong>combinarlas</strong> suele dar más ventaja que usar solo una.
+        </p>
+      </div>
+      <div class="method-grid" id="method-root"></div>
+      <p class="fine-print">
+        Referencias de entrada: Dunlosky et al. (2013), revisiones sobre
+        <a href="https://doi.org/10.1037/a0023669" rel="noopener noreferrer">práctica de recuperación</a>,
+        espaciado e intercalado; Pan &amp; Rickard (2018) meta-análisis de espaciado;
+        <a href="https://www.nature.com/articles/s44159-022-00089-1" rel="noopener noreferrer">Nature Reviews Psychology (2022)</a>
+        sobre espaciado y recuperación.
+      </p>
+    </section>
+
+    <section id="view-practicar" class="view" hidden aria-labelledby="titulo-practicar" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-practicar">Practicar</h1>
+        <p class="section-head__sub">
+          Incluye preguntas base, un <strong>banco propio</strong> redactado solo con criterio de examen (BOE, CEPT, URE), <strong>URE · Electricidad</strong> (30), <strong>FEDI-EA 22/10/2011</strong> (60 ítems)
+          y un bloque importado desde
+          <a href="https://radioclubquijotes.org/qsm_quiz/reglamentacion/" rel="noopener noreferrer">Radio Club Quijotes (EA3RCQ)</a>
+          (filtrado a contenido orientado a España). El modo <strong>Examen tipo test</strong> sigue el modelo habitual de examen: bloque de 30 preguntas distintas cada vez, sin pistas en modo examen y resultado al cierre.
+          En estudio puedes elegir <strong>corrección inmediata</strong>, <strong>confianza antes de corregir</strong> o <strong>temario y libro</strong> (explicación literal del banco + enlaces), siempre en formato test.
+        </p>
+      </div>
+      <details class="exam-hint">
+        <summary>Cómo funciona el examen tipo test</summary>
+        <div class="exam-hint__body">
+          <p>
+            Como en muchos exámenes oficiales en formato test: <strong>un bloque acotado de preguntas</strong>, en modo examen
+            <strong>no ves si acertaste</strong> hasta el final y puedes <strong>volver atrás</strong> para cambiar la opción marcada.
+            Aquí son <strong>30 preguntas</strong> elegidas al azar del banco (sin repetir en la misma sesión). En examen hay
+            <strong>30 minutos</strong> de tiempo. El criterio de apto del examen de radioaficionado en España suele publicarse como
+            <strong>50 % por prueba</strong>; lo usamos como referencia (15 aciertos de 30). Comprueba siempre la convocatoria oficial.
+            En <strong>estudio</strong> puedes usar corrección al momento, <strong>confianza antes de corregir</strong> o <strong>temario y libro</strong> (tras cada respuesta ves la explicación literal del banco y enlaces al bloque del temario y al material URE).
+          </p>
+        </div>
+      </details>
+      <p id="quiz-progress-summary" class="quiz-progress-summary muted" aria-live="polite"></p>
+      <div class="panel">
+        <div class="panel__row">
+          <label for="quiz-part">Contenido</label>
+          <select id="quiz-part">
+            <option value="1">1.ª prueba · Electricidad y radioelectricidad</option>
+            <option value="2">2.ª prueba · Reglamentación</option>
+            <option value="mix">Intercalado (mezcla 1.ª y 2.ª)</option>
+          </select>
+        </div>
+        <div class="panel__row">
+          <label for="quiz-topic">Tema (opcional)</label>
+          <select id="quiz-topic" title="Filtra el banco a un solo bloque del temario. «Todos los temas» usa el banco completo según la parte elegida."></select>
+        </div>
+        <div class="panel__row">
+          <label for="quiz-session">Tipo de test</label>
+          <select id="quiz-session" title="Libre: todas las preguntas del banco mezcladas. Examen tipo test: 30 preguntas aleatorias, modelo de examen oficial.">
+            <option value="libre">Libre · banco completo (orden aleatorio)</option>
+            <option value="teorico">Examen tipo test · 30 preguntas al azar</option>
+          </select>
+        </div>
+        <div class="panel__row">
+          <label for="quiz-mode">Modo</label>
+          <select id="quiz-mode" title="Estudio: corrección al responder. Confianza: metacognición antes de la corrección. Temario y libro: explicación literal del banco y enlaces al temario y URE. Examen: sin corrección hasta el final.">
+            <option value="study">Estudio · corrección inmediata</option>
+            <option value="study_confidence">Estudio · confianza antes de corregir</option>
+            <option value="study_deepen">Estudio · temario y libro (explicación literal + enlaces)</option>
+            <option value="exam">Examen · corrección al final</option>
+          </select>
+        </div>
+        <div class="panel__row panel__row--recovery" id="quiz-wrong-row" hidden>
+          <label class="check">
+            <input type="checkbox" id="quiz-wrong-only" />
+            <span>Solo las <strong>falladas de la última sesión</strong> (respeta parte y tema elegidos arriba).</span>
+          </label>
+        </div>
+        <div class="panel__row panel__row--actions">
+          <button type="button" class="btn btn--primary" id="quiz-start">Nueva sesión</button>
+          <label class="check" id="quiz-pretest-wrap">
+            <input type="checkbox" id="quiz-pretest" />
+            <span>Precueba</span>
+            <span class="check__hint" title="Intenta responder antes de ver opciones; mejora retención en algunos diseños experimentales.">?</span>
+          </label>
+        </div>
+        <details class="quiz-kbd-hint">
+          <summary>Atajos de teclado en la sesión</summary>
+          <p class="quiz-kbd-hint__body">
+            Con el foco fuera del cuadro de precueba: teclas <kbd>1</kbd>–<kbd>4</kbd> eligen la opción (si hay cuatro respuestas);
+            <kbd>→</kbd> o <kbd>N</kbd> avanza; <kbd>←</kbd> o <kbd>P</kbd> retrocede. En móvil/tablet usa los botones táctiles habituales.
+          </p>
+        </details>
+      </div>
+      <div id="quiz-area" class="quiz" hidden>
+        <div class="quiz__meta">
+          <span id="quiz-progress" aria-hidden="true"></span>
+          <span id="quiz-stats" class="quiz__stats" aria-hidden="true"></span>
+          <span id="quiz-timer" class="quiz__timer" hidden></span>
+          <span id="quiz-score" class="quiz__score" hidden></span>
+        </div>
+        <div id="quiz-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+        <div id="quiz-pretest-box" class="pretest" hidden>
+          <p class="pretest__label">Sin ver opciones todavía: ¿cuál dirías que es la respuesta (en una frase)?</p>
+          <textarea id="quiz-pretext" rows="2" placeholder="Opcional: escribe tu hipótesis…"></textarea>
+        </div>
+        <article class="q-card" id="quiz-question" aria-live="polite"></article>
+        <div class="quiz__nav">
+          <button type="button" class="btn btn--ghost" id="quiz-prev" disabled>Anterior</button>
+          <button type="button" class="btn btn--primary" id="quiz-next">Siguiente</button>
+        </div>
+        <div id="quiz-feedback" class="feedback" role="status"></div>
+      </div>
+    </section>
+
+    <section id="view-tarjetas" class="view" hidden aria-labelledby="titulo-tarjetas" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-tarjetas">Tarjetas y repaso espaciado simple</h1>
+        <p class="section-head__sub">
+          Voltea la tarjeta con un clic o con <kbd>Espacio</kbd> (modo volteo). Elige un <strong>tema del banco</strong> para practicar solo ese bloque (alineado con Practicar y el temario) o deja «Todos los temas».
+          Los botones «Lo sabía / No» programan la próxima revisión en este navegador (espaciado básico 1 · 3 · 7 días).
+          <strong>Copia de seguridad:</strong> exporta JSON antes de limpiar datos del navegador; importa para fusionar o, con la casilla inferior, reemplazar toda la programación.
+        </p>
+      </div>
+      <div class="panel">
+        <div class="panel__row">
+          <label for="fc-topic">Tema del banco (opcional)</label>
+          <select id="fc-topic" title="Filtra las preguntas usadas como tarjetas. Misma lista de bloques que en Practicar."></select>
+        </div>
+        <div class="panel__row">
+          <label for="fc-display-mode">Presentación de la tarjeta</label>
+          <select id="fc-display-mode" title="Volteo clásico, solo enunciado o enunciado y respuesta visibles a la vez.">
+            <option value="flip">Volteo 3D (recomendado)</option>
+            <option value="front_only">Solo enunciado (sin voltear; evalúa de memoria)</option>
+            <option value="both">Enunciado y respuesta visibles (sin volteo)</option>
+          </select>
+        </div>
+      </div>
+      <div class="panel panel--inline">
+        <button type="button" class="btn btn--primary" id="fc-load">Cargar tarjetas desde preguntas</button>
+        <button type="button" class="btn btn--ghost" id="fc-export">Exportar programación</button>
+        <button type="button" class="btn btn--ghost" id="fc-import">Importar JSON</button>
+        <input type="file" id="fc-import-file" accept="application/json,.json" hidden />
+        <span id="fc-due" class="muted"></span>
+      </div>
+      <p id="fc-schedule-detail" class="muted fc-schedule-detail" aria-live="polite"></p>
+      <p class="fine-print fc-import-hint">
+        <label class="check">
+          <input type="checkbox" id="fc-import-replace" />
+          <span>Al importar JSON: <strong>reemplazar toda</strong> la programación guardada (se eliminan entradas que no vengan en el archivo).</span>
+        </label>
+      </p>
+      <div id="fc-area" class="flashcard-wrap" hidden>
+        <div class="flashcard" id="fc-card" role="button" tabindex="0" aria-expanded="false">
+          <div class="flashcard__inner">
+            <div class="flashcard__face flashcard__face--front" id="fc-front"></div>
+            <div class="flashcard__face flashcard__face--back" id="fc-back"></div>
+          </div>
+        </div>
+        <p class="fc-flip-hint" id="fc-flip-hint" aria-live="polite"></p>
+        <div class="fc-actions">
+          <button type="button" class="btn btn--danger" id="fc-hard">No lo tenía claro</button>
+          <button type="button" class="btn btn--primary" id="fc-easy">Lo sabía</button>
+        </div>
+        <p class="muted" id="fc-meta"></p>
+        <p class="fine-print" id="fc-import-status" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-note">
+      Preferencias, programación de tarjetas y resumen de progreso se guardan solo en tu navegador (sin cuenta en esta app).
+    </p>
+    <p class="footer-host">
+      Alojado by <a href="https://forclus.net" rel="noopener noreferrer">FORCLUS.NET</a>
+    </p>
+    <details class="footer-sources-drawer" id="fuentes">
+      <summary class="footer-sources-drawer__summary">Fuentes y referencias web</summary>
+      <div class="footer-sources-drawer__body">
+        <p class="footer-sources-drawer__intro">
+          Sitios de los que se ha tomado o contrastado información. Las URLs pueden cambiar; el criterio legal sigue en el BOE y en la administración vigente.
+        </p>
+        <ul class="footer-sources-drawer__list">
+          <li>
+            <a href="https://www.boe.es/" rel="noopener noreferrer">boe.es</a> — publicación y consolidación de normas (p. ej. Orden IET/1311/2013 y leyes marco enlazadas en Normativa).
+          </li>
+          <li>
+            <a href="https://sede.miteco.gob.es/" rel="noopener noreferrer">sede.miteco.gob.es</a> — sede electrónica MITECO (trámites administrativos).
+          </li>
+          <li>
+            <a href="https://www.cnmc.es/" rel="noopener noreferrer">cnmc.es</a> — CNMC, normativa en telecomunicaciones (contexto enlazado desde Normativa).
+          </li>
+          <li>
+            <a href="https://www.cept.org/ecc/ham-radio" rel="noopener noreferrer">cept.org</a> — CEPT / ECC, documentación HAREC y licencias CEPT.
+          </li>
+          <li>
+            <a href="https://www.ure.es/" rel="noopener noreferrer">ure.es</a> — Unión de Radioaficionados Españoles (legislación, exámenes de práctica y material citado en la app y en «Ampliación» del test).
+          </li>
+          <li>
+            <a href="https://www.fediea.org/examen/ejercicios/" rel="noopener noreferrer">fediea.org</a> — FEDI-EA, banco de ejercicios (ítems importados en el banco).
+          </li>
+          <li>
+            <a href="https://radioclubquijotes.org/" rel="noopener noreferrer">radioclubquijotes.org</a> — Radio Club Quijotes EA3RCQ (tests en línea; subconjunto importado en el banco).
+          </li>
+          <li>
+            <a href="https://urvag.com/" rel="noopener noreferrer">urvag.com</a> — URVAG / artículos EA3OG (curso enlazado en Normativa).
+          </li>
+          <li>
+            <a href="https://ea5ura.org/" rel="noopener noreferrer">ea5ura.org</a> — EA5URA (guía orientativa enlazada en Normativa).
+          </li>
+          <li>
+            <a href="https://www.ea7urs.es/" rel="noopener noreferrer">ea7urs.es</a> — EA7URS (asociación citada a modo de ejemplo en Normativa).
+          </li>
+          <li>
+            <a href="https://radiomania.net/" rel="noopener noreferrer">radiomania.net</a> — Radiomanía (PDF comercial de temario enlazado en Normativa).
+          </li>
+          <li>
+            <a href="https://doi.org/10.1037/a0023669" rel="noopener noreferrer">doi.org</a> — artículo APA citado en Metodología (práctica de recuperación).
+          </li>
+          <li>
+            <a href="https://www.nature.com/articles/s44159-022-00089-1" rel="noopener noreferrer">nature.com</a> — <em>Nature Reviews Psychology</em> (2022), citado en Metodología.
+          </li>
+          <li>
+            <a href="https://fonts.google.com/" rel="noopener noreferrer">fonts.google.com</a> — tipografías DM Sans y JetBrains Mono servidas en esta página.
+          </li>
+        </ul>
+      </div>
+    </details>
+  </footer>
+
+  <script>
+    (function () {
+      function show(msg) {
+        var el = document.getElementById("app-error");
+        if (!el) return;
+        el.hidden = false;
+        el.textContent = msg;
+      }
+      window.addEventListener("unhandledrejection", function () {
+        show("Error al cargar módulos (import). Sirve la carpeta web por HTTP y recarga; revisa la consola (F12).");
+      });
+      window.addEventListener("error", function (e) {
+        var fn = e && e.filename ? String(e.filename) : "";
+        var msg = e && e.message ? String(e.message) : "";
+        if (/app\.js|failed to load module|import/i.test(fn + " " + msg)) {
+          show("No se pudo cargar el código de la app. Usa un servidor HTTP en la carpeta web (ver README).");
+        }
+      });
+    })();
+  </script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>

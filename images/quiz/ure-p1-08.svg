@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="240" viewBox="0 0 500 240" role="img" aria-labelledby="t8">
+  <title id="t8">Pantalla de osciloscopio: A indica un intervalo en el eje horizontal (tiempo); B indica la amplitud pico en el eje vertical</title>
+  <rect width="500" height="240" fill="#0f1419" rx="10"/>
+  <rect x="40" y="40" width="420" height="160" fill="#121722" stroke="#3d4a63" stroke-width="2" rx="6"/>
+  <line x1="60" y1="120" x2="440" y2="120" stroke="#3d4a63" stroke-width="1"/>
+  <polyline fill="none" stroke="#7eb6ff" stroke-width="2.5"
+    points="70,120 90,75 110,42 130,75 150,120 170,165 190,198 210,165 230,120 250,75 270,42 290,75 310,120 330,165 350,198 370,165 390,120 410,75 430,42"/>
+  <line x1="110" y1="200" x2="290" y2="200" stroke="#f4b942" stroke-width="2.5"/>
+  <polygon points="110,200 118,195 118,205" fill="#f4b942"/>
+  <polygon points="290,200 282,195 282,205" fill="#f4b942"/>
+  <text x="190" y="218" fill="#f4b942" font-size="16" font-weight="700" font-family="system-ui,sans-serif">A</text>
+  <line x1="400" y1="42" x2="400" y2="198" stroke="#f4b942" stroke-width="2.5"/>
+  <polygon points="400,42 395,50 405,50" fill="#f4b942"/>
+  <polygon points="400,198 395,190 405,190" fill="#f4b942"/>
+  <text x="408" y="125" fill="#f4b942" font-size="16" font-weight="700" font-family="system-ui,sans-serif">B</text>
+  <text x="250" y="28" text-anchor="middle" fill="#e8ecf4" font-size="14" font-family="system-ui,sans-serif">Osciloscopio (esquema orientativo)</text>
+</svg>
