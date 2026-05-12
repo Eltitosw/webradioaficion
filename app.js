@@ -6,7 +6,7 @@ import fediea2011 from "./data/fediea-2011.js";
 import quijotesEa3rcq from "./data/quijotes-ea3rcq.js";
 import questionsExamenPropias from "./data/questions-examen-propias.js";
 import regulatory from "./data/regulatory.js";
-import { shuffle, buildQuestionList } from "./lib/quiz-session.mjs";
+import { shuffle, buildQuestionList } from "./lib/quiz-session.js";
 
 const STORAGE_KEY = "radioexam_card_schedule_v1";
 const TOPIC_PRESELECT_KEY = "radioexam_practicar_topic";

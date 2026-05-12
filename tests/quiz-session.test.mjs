@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { shuffle, buildQuestionList } from "../lib/quiz-session.mjs";
+import { shuffle, buildQuestionList } from "../lib/quiz-session.js";
 
 const sample = [
   { id: "a", part: 1, topicId: "t1" },
