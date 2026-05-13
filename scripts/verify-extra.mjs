@@ -1,11 +1,12 @@
 /**
- * Comprobaciones extra: cobertura topicId ↔ banco, h1 de rutas, #ids estáticos en app vs index.
- * Ejecutar desde web/: node scripts/verify-extra.mjs
+ * Comprobaciones extra: cobertura topicId ↔ banco, rutas, h1, #ids, avisos de fuentes y figuras.
+ * Ejecutar desde la raíz del proyecto: node scripts/verify-extra.mjs
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import regulatory from "../data/regulatory.js";
 import topics from "../data/topics.js";
 import questions from "../data/questions.js";
 import ure from "../data/ure-electricidad.js";
@@ -43,9 +44,32 @@ for (const id of blockIds) {
 
 const html = fs.readFileSync(path.join(webRoot, "index.html"), "utf8");
 const app = fs.readFileSync(path.join(webRoot, "app.js"), "utf8");
+const sourceDocPath = path.join(webRoot, "FUENTES_VERIFICACION.md");
 
 const htmlIds = new Set();
 for (const m of html.matchAll(/\bid\s*=\s*"([^"]+)"/gi)) htmlIds.add(m[1]);
+
+const expectedViews = ["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"];
+for (const id of expectedViews) {
+  if (!htmlIds.has(`view-${id}`)) fail(`Falta sección principal id="view-${id}" en index.html`);
+  if (!app.includes(`${id}: "RadioExamen`)) fail(`Falta título de documento para ruta "${id}" en DOC_TITLES`);
+}
+
+for (const m of html.matchAll(/data-nav\s*=\s*"([^"]+)"/gi)) {
+  const id = m[1];
+  if (!expectedViews.includes(id)) fail(`data-nav="${id}" no corresponde a una vista principal esperada.`);
+}
+
+for (const id of expectedViews) {
+  if (!new RegExp(`href="#${id}"[^>]*data-nav="${id}"`).test(html)) {
+    fail(`No hay enlace de navegación coherente href="#${id}" data-nav="${id}" en index.html`);
+  }
+}
+
+for (const m of html.matchAll(/<section\b[^>]*id="(view-[^"]+)"[^>]*aria-labelledby="([^"]+)"/gi)) {
+  const [, viewId, headingId] = m;
+  if (!htmlIds.has(headingId)) fail(`${viewId} usa aria-labelledby="${headingId}" pero el título no existe.`);
+}
 
 const vhBlock = app.match(/const VIEW_HEADINGS = \{([\s\S]*?)\n\};/);
 if (!vhBlock) {
@@ -64,6 +88,23 @@ for (const m of app.matchAll(/\$\(\s*"#([^"]+)"\s*\)/g)) appRefs.add(m[1]);
 for (const id of appRefs) {
   if (dynamicIds.has(id)) continue;
   if (!htmlIds.has(id)) fail(`app.js usa $("#${id}") pero no hay id="${id}" en index.html`);
+}
+
+if (!fs.existsSync(sourceDocPath)) fail("Falta FUENTES_VERIFICACION.md para auditoría editorial.");
+if (!/Control de veracidad del banco/.test(html)) fail("Practicar debe mostrar un aviso visible de veracidad del banco.");
+if (!Array.isArray(regulatory.sourceHierarchy) || regulatory.sourceHierarchy.length < 4) {
+  fail("data/regulatory.js debe definir sourceHierarchy con jerarquía clara de fuentes.");
+} else {
+  const hierarchy = regulatory.sourceHierarchy.join(" ");
+  for (const word of ["BOE", "convocatoria", "CEPT", "Bancos históricos"]) {
+    if (!hierarchy.includes(word)) fail(`sourceHierarchy no menciona "${word}".`);
+  }
+}
+if (!regulatory.lastReviewNote || !/\d{2}\/\d{2}\/\d{4}/.test(regulatory.lastReviewNote)) {
+  fail("data/regulatory.js debe indicar fecha de última revisión interna en lastReviewNote.");
+}
+if (/README\.md|carpeta web/.test(html + app)) {
+  fail("Quedan mensajes de despliegue obsoletos que citan README.md o carpeta web.");
 }
 
 checkStemFigures(all, webRoot, fail);

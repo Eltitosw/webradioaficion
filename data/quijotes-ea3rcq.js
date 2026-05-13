@@ -562,7 +562,7 @@ export default [
   {
     id: "quijotes-040",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "¿Cómo se denomina el siguiente circuito eléctrico?",
     stemFigure: "images/quiz/envelope-detector-am.svg",
     stemFigureAlt: "Esquema con diodo y filtro RC: detector de envolvente AM.",
@@ -606,7 +606,7 @@ export default [
   {
     id: "quijotes-043",
     part: 1,
-    topicId: "receptores-emisores",
+    topicId: "magnetismo-ondas",
     stem: "En un equipo transmisor con modulación de frecuencia (FM) la desviación máxima de frecuencia es 25 KHz y la frecuencia moduladora es 10 KHz. ¿Cuál es el valor del \"índice de modulación\" del equipo?:",
     options: [
       "250",
@@ -663,8 +663,8 @@ export default [
   },
   {
     id: "quijotes-047",
-    part: 1,
-    topicId: "electricidad-basica",
+    part: 2,
+    topicId: "instalaciones",
     stem: "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
     options: [
       "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado.",

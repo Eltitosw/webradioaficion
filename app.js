@@ -37,28 +37,31 @@ const VIEW_HEADINGS = {
   examen: "titulo-examen",
   cuaderno: "titulo-cuaderno",
   tarjetas: "titulo-tarjetas",
+  ayuda: "titulo-ayuda",
 };
 
 const DOC_TITLES = {
   inicio: "RadioExamen · Inicio",
   temario: "RadioExamen · Temario y repaso",
   normativa: "RadioExamen · Normativa BOE y enlaces",
-  metodologia: "RadioExamen · Metodología de estudio",
+  metodologia: "RadioExamen · Método de estudio",
   practicar: "RadioExamen · Practicar test",
   examen: "RadioExamen · Simulacro de examen",
   cuaderno: "RadioExamen · Cuaderno de errores",
   tarjetas: "RadioExamen · Tarjetas",
+  ayuda: "RadioExamen · Ayuda",
 };
 
 const ROUTE_ANNOUNCE = {
   inicio: "Inicio",
   temario: "Temario",
   normativa: "Normativa",
-  metodologia: "Metodología",
+  metodologia: "Método",
   practicar: "Practicar",
   examen: "Examen",
   cuaderno: "Cuaderno de errores",
   tarjetas: "Tarjetas",
+  ayuda: "Ayuda",
 };
 
 const methods = [
@@ -102,7 +105,7 @@ const methods = [
     title: "Preguntas previas",
     tag: "Activar hipótesis",
     body:
-      "<p>Intentar responder antes de ver opciones activa conocimientos previos. Aunque falles, el feedback posterior se pega mejor porque ya tenías una hipótesis que corregir.</p><h4>Cómo aplicarlo</h4><ul><li>Activa <strong>Precueba</strong> en sesiones libres.</li><li>Escribe una respuesta corta: fórmula, palabra clave o criterio legal.</li><li>Revela opciones y comprueba si tu hipótesis apuntaba al concepto correcto.</li></ul><p><strong>Úsalo especialmente</strong> al empezar un bloque nuevo o cuando repitas falladas.</p>",
+      "<p>Intentar responder antes de ver opciones activa conocimientos previos. Aunque falles, el feedback posterior se pega mejor porque ya tenías una hipótesis que corregir.</p><h4>Cómo aplicarlo</h4><ul><li>Activa <strong>Preprueba</strong> en sesiones libres.</li><li>Escribe una respuesta corta: fórmula, palabra clave o criterio legal.</li><li>Revela opciones y comprueba si tu hipótesis apuntaba al concepto correcto.</li></ul><p><strong>Úsalo especialmente</strong> al empezar un bloque nuevo o cuando repitas falladas.</p>",
   },
   {
     title: "Autoexplicación y generación",
@@ -146,11 +149,98 @@ let allQuestions = [
   ...quijotesEa3rcq.map(withQuijotesExplanation),
 ];
 
+const TRAP_QUESTION_IDS = new Set([
+  "q6",
+  "q8",
+  "q10",
+  "q11",
+  "q12",
+  "ofic-004",
+  "ofic-010",
+  "ofic-011",
+  "ofic-015",
+  "ofic-016",
+  "ofic-017",
+  "ofic-018",
+  "ofic-019",
+  "ofic-020",
+  "ofic-021",
+  "ofic-022",
+  "ofic-023",
+  "ofic-024",
+  "ofic-025",
+  "ofic-026",
+  "ofic-027",
+  "ofic-028",
+  "ofic-029",
+  "ofic-030",
+  "ofic-031",
+  "ure-p1-02",
+  "ure-p1-03",
+  "ure-p1-04",
+  "ure-p1-08",
+  "ure-p1-13",
+  "ure-p1-14",
+  "ure-p1-15",
+  "ure-p1-16",
+  "ure-p1-17",
+  "ure-p1-18",
+  "ure-p1-20",
+  "ure-p1-24",
+  "ure-p1-25",
+  "ure-p1-27",
+  "ure-p1-30",
+  "fedi-ag-003",
+  "fedi-ag-006",
+  "fedi-ag-009",
+  "fedi-ag-013",
+  "fedi-ag-014",
+  "fedi-ag-016",
+  "fedi-ag-017",
+  "fedi-ag-018",
+  "fedi-ag-022",
+  "fedi-ag-026",
+  "fedi-ag-030",
+  "fedi-ah-032",
+  "fedi-ah-035",
+  "fedi-ah-036",
+  "fedi-ah-037",
+  "fedi-ah-040",
+  "fedi-ah-041",
+  "fedi-ah-042",
+  "fedi-ah-047",
+  "fedi-ah-048",
+  "fedi-ah-049",
+  "fedi-ah-050",
+  "fedi-ah-053",
+  "fedi-ah-054",
+  "fedi-ah-057",
+  "fedi-ah-059",
+  "fedi-ah-060",
+  "quijotes-020",
+  "quijotes-039",
+  "quijotes-044",
+  "quijotes-047",
+  "quijotes-051",
+  "quijotes-057",
+  "quijotes-058",
+  "quijotes-062",
+  "quijotes-070",
+  "quijotes-077",
+  "quijotes-087",
+  "quijotes-093",
+  "quijotes-095",
+  "quijotes-106",
+  "quijotes-110",
+  "quijotes-111",
+]);
+
 function $(sel, root = document) {
   return root.querySelector(sel);
 }
 
 function showView(id) {
+  if (id !== "practicar") setQuizFocusMode(false);
   document.querySelectorAll(".view").forEach((v) => {
     const match = v.id === `view-${id}`;
     v.hidden = !match;
@@ -172,6 +262,19 @@ function announceRoute(viewId) {
   const ann = $("#route-announce");
   if (!ann) return;
   ann.textContent = ROUTE_ANNOUNCE[viewId] || viewId;
+}
+
+let saveToastTimer = 0;
+
+function showSaveToast(message = "Progreso guardado en este navegador.") {
+  const el = $("#save-toast");
+  if (!el) return;
+  el.textContent = message;
+  el.hidden = false;
+  window.clearTimeout(saveToastTimer);
+  saveToastTimer = window.setTimeout(() => {
+    el.hidden = true;
+  }, 2200);
 }
 
 function focusViewHeading(viewId) {
@@ -262,13 +365,14 @@ function onRoute() {
     const sub = raw.slice("normativa--".length);
     id = "normativa";
     if (sub) scrollTargetId = sub;
-  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas"].includes(raw)) {
+  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(raw)) {
     id = "inicio";
   }
   if (id !== "practicar") clearExamTimer();
   showView(id);
   updateDocumentTitle(id);
   announceRoute(id);
+  renderHeaderStatus();
   requestAnimationFrame(() => focusViewHeading(id));
   if (id === "tarjetas") {
     syncFcTopicFromSession();
@@ -347,6 +451,16 @@ function renderNormativa() {
   const trust = regulatory.trustNote
     ? `<p class="part-card__lead">${escapeHtml(regulatory.trustNote)}</p>`
     : "";
+  const hierarchyHtml = regulatory.sourceHierarchy?.length
+    ? `
+    <article class="part-card" id="normativa-verificacion">
+      <h2>Jerarquía de verificación</h2>
+      <ol class="source-hierarchy">
+        ${regulatory.sourceHierarchy.map((b) => `<li><span>${escapeHtml(b)}</span></li>`).join("")}
+      </ol>
+      <p class="fine-print">${escapeHtml(regulatory.lastReviewNote || "")}</p>
+    </article>`
+    : "";
 
   root.innerHTML = `
     ${jumpNav}
@@ -355,6 +469,7 @@ function renderNormativa() {
       <p>${escapeHtml(regulatory.intro || "")}</p>
       ${trust}
     </article>
+    ${hierarchyHtml}
     ${linkGroupsHtml}
     <section id="normativa-temas" class="normativa-stack" aria-labelledby="normativa-temas-title">
       <h2 id="normativa-temas-title" class="normativa-stack__title">Temas de estudio (resúmenes)</h2>
@@ -392,8 +507,13 @@ function renderBlockStudy(blockId) {
   const readMore = detailHtml
     ? `<details class="temario-details"><summary>3. Aprender el tema: teoría + ejemplos + programa</summary>${detailHtml}</details>`
     : "";
+  const trapWarnings = study.trapWarnings?.length
+    ? `<details class="temario-details"><summary>4. Preguntas trampa para estudiar a fondo</summary><ul class="temario-list">${study.trapWarnings
+        .map((x) => `<li>${escapeHtml(x)}</li>`)
+        .join("")}</ul></details>`
+    : "";
   const examChecklist = study.examChecklist?.length
-    ? `<details class="temario-details"><summary>4. Errores típicos y puntos de examen</summary><ul class="temario-list">${study.examChecklist
+    ? `<details class="temario-details"><summary>5. Errores típicos y puntos de examen</summary><ul class="temario-list">${study.examChecklist
         .map((x) => `<li>${escapeHtml(x)}</li>`)
         .join("")}</ul></details>`
     : "";
@@ -425,14 +545,15 @@ function renderBlockStudy(blockId) {
             <ul class="temario-list temario-list--compact">${express}</ul>
           </details>
           ${readMore}
+          ${trapWarnings}
           ${examChecklist}
           <div class="temario-fc-block">
-            <p class="temario-fc-head">5. Autoevaluación conceptual (volteo en esta página; distinta de «Tarjetas del banco»)</p>
+            <p class="temario-fc-head">6. Autoevaluación conceptual (volteo en esta página; distinta de «Tarjetas del banco»)</p>
             <div class="temario-fc-grid">${cards}</div>
           </div>
           ${sources}
           <p class="temario-cta">
-            <a href="#practicar" data-nav="practicar" data-practicar-topic="${escapeHtml(blockId)}" class="btn btn--ghost btn--sm">Practicar tests</a>
+            <a href="#practicar" data-nav="practicar" data-practicar-topic="${escapeHtml(blockId)}" class="btn btn--primary btn--sm temario-cta__main">Practicar este bloque</a>
             <a href="#tarjetas" data-nav="tarjetas" data-tarjetas-topic="${escapeHtml(blockId)}" class="btn btn--ghost btn--sm">Tarjetas del banco (este bloque)</a>
             <a href="#tarjetas" data-nav="tarjetas" class="btn btn--ghost btn--sm">Tarjetas (todo el banco)</a>
             <a href="#normativa" data-nav="normativa" class="btn btn--ghost btn--sm">Normativa BOE</a>
@@ -455,20 +576,20 @@ function renderTemario() {
           .map((b) => {
             const nq = counts[b.id] ?? 0;
             const st = topicStats[b.id];
-            const prog =
-              st && st.t > 0
-                ? `<span class="temario-block__progress" title="Modo estudio en esta app (este navegador)">${st.ok}/${st.t} aciertos en práctica</span>`
-                : "";
+            const progress = topicProgressState(st);
             const searchRaw = buildTemarioSearchIndex(b.id, b, topicStudy[b.id]).toLowerCase();
             return `
-          <li id="temario-${escapeHtml(b.id)}" class="temario-block" data-temario-search="${escapeHtml(searchRaw)}">
+          <li id="temario-${escapeHtml(b.id)}" class="temario-block" data-progress-state="${escapeHtml(progress.cls)}" data-temario-search="${escapeHtml(searchRaw)}">
             <div class="temario-block__head">
               <strong class="temario-block__title">${escapeHtml(b.title)}</strong>
               <span class="temario-block__hint">${escapeHtml(b.hint)}</span>
             </div>
             <div class="temario-block__meta">
               <span class="temario-block__count">${nq} preguntas en el banco</span>
-              ${prog}
+              <span class="temario-block__progress temario-block__progress--${escapeHtml(progress.cls)}" title="Modo estudio en esta app (este navegador)">
+                <strong>${escapeHtml(progress.label)}</strong>
+                ${escapeHtml(progress.detail)}
+              </span>
             </div>
             ${renderBlockStudy(b.id)}
           </li>`;
@@ -635,7 +756,7 @@ function syncPretestAvailability() {
   if (session === "teorico") {
     cb.checked = false;
     cb.disabled = true;
-    if (wrap) wrap.title = "La precueba no está disponible en el examen tipo test (30 preguntas).";
+    if (wrap) wrap.title = "La preprueba no está disponible en el examen tipo test (30 preguntas).";
   } else {
     cb.disabled = false;
     if (wrap) wrap.title = "";
@@ -690,10 +811,17 @@ function startQuiz() {
   renderQuizPracticeGuide();
   quizState._statsCounted = new Set();
   const wrongOnly = !!$("#quiz-wrong-only")?.checked;
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
   let onlyPool = null;
   if (wrongOnly) {
     const ids = loadLastWrongIds();
     if (ids.length) onlyPool = new Set(ids);
+  }
+  if (trapOnly) {
+    onlyPool =
+      onlyPool && onlyPool.size
+        ? new Set([...onlyPool].filter((id) => TRAP_QUESTION_IDS.has(id)))
+        : new Set(TRAP_QUESTION_IDS);
   }
   quizState.list = buildQuestionList(
     allQuestions,
@@ -718,10 +846,19 @@ function startQuiz() {
   $("#quiz-score").hidden = true;
   if (!quizState.list.length) {
     const wrongOnly = !!$("#quiz-wrong-only")?.checked;
-    const msg =
-      wrongOnly && loadLastWrongIds().length
-        ? "<p><strong>No hay preguntas</strong> para «solo falladas» con el filtro actual. Prueba «Todos los temas», otra parte o desmarca la casilla de falladas.</p>"
-        : "<p><strong>No hay preguntas</strong> con esta combinación de parte, tema y tipo de sesión. Prueba «Todos los temas» u otra parte.</p>";
+    const trapOnly = !!$("#quiz-trap-only")?.checked;
+    let msg =
+      "<p><strong>No hay preguntas</strong> con esta combinación de parte, tema y tipo de sesión. Prueba «Todos los temas» u otra parte.</p>";
+    if (wrongOnly && trapOnly) {
+      msg =
+        "<p><strong>No hay preguntas</strong> que sean a la vez falladas y trampa con el filtro actual. Prueba «Todos los temas» o desmarca una de las dos casillas.</p>";
+    } else if (wrongOnly && loadLastWrongIds().length) {
+      msg =
+        "<p><strong>No hay preguntas</strong> para «solo falladas» con el filtro actual. Prueba «Todos los temas», otra parte o desmarca la casilla de falladas.</p>";
+    } else if (trapOnly) {
+      msg =
+        "<p><strong>No hay preguntas trampa</strong> con este filtro. Prueba «Todos los temas», otra parte o desmarca la casilla de preguntas trampa.</p>";
+    }
     $("#quiz-feedback").innerHTML = msg;
     $("#quiz-question").innerHTML =
       '<p class="muted">Ajusta los selectores arriba y pulsa de nuevo <strong>Nueva sesión</strong>.</p>';
@@ -854,8 +991,13 @@ function renderQuestion() {
   const hideTopicMeta = quizState.sessionType === "teorico" && quizState.mode === "exam";
   const topicTitle = topicBlockLabel(q.topicId);
   const topicMeta = hideTopicMeta
-    ? ""
-    : `<p class="muted q-card__topic" style="margin:0 0 0.5rem;font-size:0.85rem"><strong>${escapeHtml(topicTitle)}</strong> <span class="muted">(${escapeHtml(q.topicId)})</span> · Parte ${q.part}</p>`;
+    ? `<div class="q-card__meta"><span>Pregunta ${quizState.index + 1}/${total}</span><span>Simulacro sin pistas</span></div>`
+    : `<div class="q-card__meta">
+        <span>Pregunta ${quizState.index + 1}/${total}</span>
+        <strong>${escapeHtml(topicTitle)}</strong>
+        <span>Parte ${q.part}</span>
+        <span>${escapeHtml(q.topicId)}</span>
+      </div>`;
   const figureHtml = stemFigureBlock(q);
 
   const confDone =
@@ -914,7 +1056,7 @@ function renderQuestion() {
   box.innerHTML = `
     ${topicMeta}
     ${figureHtml}
-    <h2>${escapeHtml(q.stem)}</h2>
+    <h2 class="q-card__stem">${escapeHtml(q.stem)}</h2>
     <div class="opts" role="radiogroup" aria-label="Opciones">${optsHtml}</div>
     ${confidenceInline}
     ${preBtn}
@@ -987,6 +1129,36 @@ function questionCountByTopic() {
   return m;
 }
 
+function topicProgressState(st) {
+  if (!st || !st.t) {
+    return {
+      cls: "idle",
+      label: "Sin empezar",
+      detail: "Lee el bloque y haz una sesión corta.",
+    };
+  }
+  const pct = Math.round((st.ok / st.t) * 100);
+  if (st.t >= 10 && pct >= 80) {
+    return {
+      cls: "strong",
+      label: "Fuerte",
+      detail: `${pct} % · ${st.ok}/${st.t} aciertos`,
+    };
+  }
+  if (st.t >= 5 && pct < 60) {
+    return {
+      cls: "weak",
+      label: "Débil",
+      detail: `${pct} % · repasar teoría y falladas`,
+    };
+  }
+  return {
+    cls: "active",
+    label: "En práctica",
+    detail: `${pct} % · ${st.ok}/${st.t} aciertos`,
+  };
+}
+
 /** Texto plano para filtrar bloques del temario (sin HTML). */
 function buildTemarioSearchIndex(blockId, blockMeta, study) {
   const bits = [blockId, blockMeta.title, blockMeta.hint];
@@ -999,6 +1171,7 @@ function buildTemarioSearchIndex(blockId, blockMeta, study) {
       "bookGuide",
       "quickSession",
       "examChecklist",
+      "trapWarnings",
       "sources",
     ]) {
       const arr = /** @type {unknown} */ (study)[k];
@@ -1037,7 +1210,8 @@ function saveQuizPrefs() {
   const session = $("#quiz-session")?.value || "libre";
   const mode = $("#quiz-mode")?.value || "study";
   const pretest = !!$("#quiz-pretest")?.checked;
-  localStorage.setItem(QUIZ_PREFS_KEY, JSON.stringify({ part, topic, session, mode, pretest }));
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
+  localStorage.setItem(QUIZ_PREFS_KEY, JSON.stringify({ part, topic, session, mode, pretest, trapOnly }));
 }
 
 function applyQuizPrefsToForm() {
@@ -1055,6 +1229,8 @@ function applyQuizPrefsToForm() {
   if (modeEl instanceof HTMLSelectElement && typeof p.mode === "string") modeEl.value = p.mode;
   const preEl = $("#quiz-pretest");
   if (preEl instanceof HTMLInputElement) preEl.checked = !!p.pretest;
+  const trapEl = $("#quiz-trap-only");
+  if (trapEl instanceof HTMLInputElement) trapEl.checked = !!p.trapOnly;
   syncPretestAvailability();
   validateTopicPartConsistency();
 }
@@ -1064,6 +1240,7 @@ function initQuizPrefsAutosave() {
     $(`#${id}`)?.addEventListener("change", saveQuizPrefs);
   }
   $("#quiz-pretest")?.addEventListener("change", saveQuizPrefs);
+  $("#quiz-trap-only")?.addEventListener("change", saveQuizPrefs);
 }
 
 function computeWrongIdsFromCurrentSession() {
@@ -1284,8 +1461,136 @@ function pctBar(p) {
   return `<div class="user-stats__bar" role="progressbar" aria-valuenow="${Math.round(clamped)}" aria-valuemin="0" aria-valuemax="100"><span class="user-stats__bar-fill" style="width:${clamped}%"></span></div>`;
 }
 
+function dueScheduledFlashcardsCount() {
+  const sched = loadSchedule();
+  const now = Date.now();
+  let n = 0;
+  for (const item of Object.values(sched || {})) {
+    if (item && typeof item === "object" && Number(item.due || 0) <= now) n += 1;
+  }
+  return n;
+}
+
+function renderHeaderStatus() {
+  const el = $("#header-status");
+  if (!el) return;
+  const u = loadUserStats();
+  const bank = allQuestions.length;
+  const seen = u.seenQuestionIds && typeof u.seenQuestionIds === "object" ? Object.keys(u.seenQuestionIds).length : 0;
+  const coverage = bank ? Math.round((seen / bank) * 100) : 0;
+  const activeErrors = errorNotebookEntries(loadErrorNotebook()).filter(isActiveError).length;
+  const dueCards = dueScheduledFlashcardsCount();
+  el.innerHTML = `
+    <span><strong>${coverage} %</strong> banco</span>
+    <span><strong>${activeErrors}</strong> errores</span>
+    <span><strong>${dueCards}</strong> tarjetas</span>
+  `;
+}
+
+function pickTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal) {
+  const notebookEntries = errorNotebookEntries(loadErrorNotebook());
+  const activeErrors = notebookEntries.filter(isActiveError).length;
+  const highSecurity = notebookEntries.reduce((sum, entry) => sum + (entry.highSecurityWrongCount || 0), 0);
+  const dueCards = dueScheduledFlashcardsCount();
+  const gradedP1 = u.gradedByPart?.p1?.passed || 0;
+  const gradedP2 = u.gradedByPart?.p2?.passed || 0;
+  const byPart = aggregateTopicPracticeByPart(topicStats);
+
+  if (activeErrors > 0 || highSecurity > 0) {
+    return {
+      tag: "Prioridad",
+      title: "Hoy toca cerrar errores",
+      text:
+        highSecurity > 0
+          ? `Tienes ${highSecurity} fallo(s) con seguridad alta. Corrígelos antes de hacer más simulacros.`
+          : `Tienes ${activeErrors} error(es) activo(s). Repásalos y convierte cada fallo en una regla corta.`,
+      href: "#cuaderno",
+      cta: "Abrir cuaderno",
+      secondaryHref: "#practicar",
+      secondaryCta: "Practicar después",
+    };
+  }
+
+  if ((u.flashRatings || 0) > 0 && dueCards > 0) {
+    return {
+      tag: "Retención",
+      title: "Hoy toca repaso espaciado",
+      text: `Tienes ${dueCards} tarjeta(s) programada(s) para repasar. Hazlas antes de abrir temas nuevos.`,
+      href: "#tarjetas",
+      cta: "Repasar tarjetas",
+      secondaryHref: "#practicar",
+      secondaryCta: "Practicar luego",
+    };
+  }
+
+  if (coverage === 0 && blocksTouched === 0) {
+    return {
+      tag: "Primer paso",
+      title: "Empieza por un bloque pequeño",
+      text: "Lee Electricidad básica o Marco normativo, quédate con la idea clave y luego haz una sesión corta de práctica.",
+      href: "#temario",
+      cta: "Empezar temario",
+      secondaryHref: "#practicar",
+      secondaryCta: "Ir a practicar",
+    };
+  }
+
+  if (blocksTotal && blocksTouched < Math.ceil(blocksTotal * 0.45)) {
+    const weakPart = byPart.p1.t <= byPart.p2.t ? "1.ª prueba" : "2.ª prueba";
+    return {
+      tag: "Cobertura",
+      title: "Hoy amplía cobertura por bloques",
+      text: `Has practicado ${blocksTouched}/${blocksTotal} bloques. Elige un tema de ${weakPart} y trabaja en modo estudio con corrección inmediata.`,
+      href: "#practicar",
+      cta: "Practicar un bloque",
+      secondaryHref: "#temario",
+      secondaryCta: "Ver teoría",
+    };
+  }
+
+  if (!gradedP1 || !gradedP2) {
+    return {
+      tag: "Medición",
+      title: "Hoy mide nivel con un simulacro",
+      text: "Ya tienes base suficiente para comprobar una prueba sin pistas. Haz un simulacro y revisa solo los fallos.",
+      href: "#examen",
+      cta: "Lanzar simulacro",
+      secondaryHref: "#cuaderno",
+      secondaryCta: "Ver errores",
+    };
+  }
+
+  return {
+    tag: "Consolidación",
+    title: "Hoy mantén ritmo sin abrir frentes",
+    text: "Alterna 15 preguntas trampa con tarjetas. Si todo va bien, conserva energía para un simulacro completo.",
+    href: "#practicar",
+    cta: "Practicar trampas",
+    secondaryHref: "#tarjetas",
+    secondaryCta: "Repasar tarjetas",
+  };
+}
+
+function renderTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal) {
+  const root = $("#today-plan-root");
+  if (!root) return;
+  const plan = pickTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal);
+  root.innerHTML = `
+    <div class="today-plan__copy">
+      <p class="eyebrow">${escapeHtml(plan.tag)}</p>
+      <h2 id="today-plan-title">Hoy qué hago</h2>
+      <p><strong>${escapeHtml(plan.title)}:</strong> ${escapeHtml(plan.text)}</p>
+    </div>
+    <div class="today-plan__actions">
+      <a class="btn btn--primary btn--hero-action" href="${escapeHtml(plan.href)}">${escapeHtml(plan.cta)}</a>
+      <a class="btn btn--ghost" href="${escapeHtml(plan.secondaryHref)}">${escapeHtml(plan.secondaryCta)}</a>
+    </div>
+  `;
+}
+
 function renderUserProgress() {
   const root = $("#user-stats-root");
+  renderHeaderStatus();
   if (!root) return;
   const u = loadUserStats();
   const topicStats = loadTopicQuizStats();
@@ -1308,6 +1613,8 @@ function renderUserProgress() {
       : null;
   const p1rate = byPart.p1.t > 0 ? Math.round((byPart.p1.ok / byPart.p1.t) * 100) : null;
   const p2rate = byPart.p2.t > 0 ? Math.round((byPart.p2.ok / byPart.p2.t) * 100) : null;
+
+  renderTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal);
 
   root.innerHTML = `
     <h2 id="user-stats-title" class="user-stats__title">Tu progreso</h2>
@@ -1346,7 +1653,7 @@ function renderUserProgress() {
         <span class="user-stats__metric-hint">${avgGraded !== null ? `Media acumulada: ${avgGraded} %` : "Examen al cierre o test de 30 en estudio"}</span>
       </div>
       <div class="user-stats__metric">
-        <span class="user-stats__metric-label">Tarjetas (Lo sabía / No)</span>
+        <span class="user-stats__metric-label">Tarjetas (Lo sabía / No lo tenía claro)</span>
         <strong class="user-stats__metric-value">${escapeHtml(String(u.flashRatings || 0))}</strong>
         <span class="user-stats__metric-hint">Programaciones de repaso espaciado</span>
       </div>
@@ -1467,11 +1774,13 @@ function startExamSimulation(partValue) {
   const sessionEl = $("#quiz-session");
   const modeEl = $("#quiz-mode");
   const preEl = $("#quiz-pretest");
+  const trapEl = $("#quiz-trap-only");
   if (partEl) partEl.value = partValue;
   if (topicEl) topicEl.value = "all";
   if (sessionEl) sessionEl.value = "teorico";
   if (modeEl) modeEl.value = "exam";
   if (preEl instanceof HTMLInputElement) preEl.checked = false;
+  if (trapEl instanceof HTMLInputElement) trapEl.checked = false;
   syncPretestAvailability();
   validateTopicPartConsistency();
   renderQuizPracticeGuide();
@@ -1504,8 +1813,8 @@ function renderExamReadiness() {
       <div class="exam-readiness__grid">${renderReadinessCards(readiness)}</div>
     </section>
     <div class="exam-coach__actions">
-      <button type="button" class="btn btn--primary" data-exam-start="1">Simulacro 1.ª prueba</button>
-      <button type="button" class="btn btn--primary" data-exam-start="2">Simulacro 2.ª prueba</button>
+      <button type="button" class="btn btn--primary btn--hero-action" data-exam-start="1">Simulacro 1.ª prueba</button>
+      <button type="button" class="btn btn--primary btn--hero-action" data-exam-start="2">Simulacro 2.ª prueba</button>
       <a class="btn btn--ghost" href="#cuaderno" data-nav="cuaderno">Ver cuaderno</a>
     </div>
   `;
@@ -1521,7 +1830,11 @@ function renderErrorNotebook() {
   const { entries, activeEntries, highSecurity, topTopics, plan, recent } = coachSnapshot();
   const empty =
     entries.length === 0
-      ? `<p class="exam-coach__empty">Aún no hay errores guardados. Responde en modo estudio o examen y el cuaderno empezará a detectar temas débiles.</p>`
+      ? `<div class="empty-state empty-state--coach">
+          <strong>Tu cuaderno todavía está limpio.</strong>
+          <p>Haz una sesión en Practicar. Cuando falles, aquí aparecerán errores activos, fallos con seguridad alta y temas prioritarios.</p>
+          <a class="btn btn--primary btn--sm" href="#practicar" data-nav="practicar">Crear primeros datos</a>
+        </div>`
       : "";
   const topicsHtml = topTopics.length
     ? topTopics
@@ -1600,6 +1913,7 @@ function renderErrorNotebook() {
 }
 
 function renderExamCoach() {
+  renderHeaderStatus();
   renderExamReadiness();
   renderErrorNotebook();
 }
@@ -1615,10 +1929,16 @@ function renderQuizPracticeGuide() {
   const root = $("#quiz-practice-guide");
   if (!root) return;
   const topic = selectedQuizTopicForGuide();
+  const part = $("#quiz-part")?.value || "1";
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
+  const trapCount = trapOnly
+    ? buildQuestionList(allQuestions, part, "libre", topic, allQuestions.length, TRAP_QUESTION_IDS).length
+    : 0;
   const generic = [
-    "Elige un tema, responde sin mirar apuntes y corrige con calma: primero entiende por qué la opción correcta encaja.",
+    "Si eres nuevo, no cambies todo: elige una parte, un tema y deja el modo Estudio · corrección inmediata.",
+    "Responde sin mirar apuntes y corrige con calma: primero entiende por qué la opción correcta encaja.",
     "Cuando falles, vuelve al bloque correspondiente del Temario y escribe la regla en una frase.",
-    "Después repite solo las falladas o usa «Estudio · temario y libro» para enlazar explicación, temario y fuentes.",
+    "Cuando quieras subir dificultad, activa preguntas trampa, falladas o usa Examen para simular sin pistas.",
   ];
   const title = topic === "all" ? "Práctica guiada · todos los temas" : `Práctica guiada · ${topicBlockLabel(topic)}`;
   const items = topic === "all" ? generic : topicStudy[topic]?.practiceDrills || generic;
@@ -1631,7 +1951,12 @@ function renderQuizPracticeGuide() {
     <div class="quiz-practice-guide__head">
       <div>
         <h2>${escapeHtml(title)}</h2>
-        <p>Este bloque pertenece a <strong>Practicar</strong>: aquí se trabaja el método test → explicación → refuerzo en Temario → repetición.</p>
+        <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test → explicación → refuerzo en Temario → repetición.</p>
+        ${
+          trapOnly
+            ? `<p><strong>Modo preguntas trampa activo:</strong> este filtro prioriza distractores típicos, excepciones y confusiones frecuentes (${trapCount} pregunta(s) con los filtros actuales).</p>`
+            : ""
+        }
       </div>
       ${topicLink}
     </div>
@@ -1673,6 +1998,21 @@ function quizAreaActive() {
   const area = $("#quiz-area");
   const view = $("#view-practicar");
   return !!(area && view && !area.hidden && !view.hidden);
+}
+
+function setQuizFocusMode(on) {
+  const view = $("#view-practicar");
+  const btn = $("#quiz-focus-toggle");
+  view?.classList.toggle("is-focus-mode", !!on);
+  if (btn instanceof HTMLButtonElement) {
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.textContent = on ? "Salir foco" : "Modo foco";
+  }
+}
+
+function toggleQuizFocusMode() {
+  const view = $("#view-practicar");
+  setQuizFocusMode(!view?.classList.contains("is-focus-mode"));
 }
 
 function initQuizKeyboard() {
@@ -1719,15 +2059,21 @@ function initQuizKeyboard() {
 
 function initTemarioFilter() {
   const inp = $("#temario-filter");
+  const weakOnly = $("#temario-weak-only");
   const root = $("#temario-root");
   if (!(inp instanceof HTMLInputElement) || !root) return;
-  inp.addEventListener("input", () => {
+  const apply = () => {
     const qv = inp.value.trim().toLowerCase();
+    const onlyWeak = weakOnly instanceof HTMLInputElement && weakOnly.checked;
     root.querySelectorAll(".temario-block").forEach((li) => {
       const hay = (li.getAttribute("data-temario-search") || "").toLowerCase();
-      li.hidden = qv.length > 0 && !hay.includes(qv);
+      const matchesText = qv.length === 0 || hay.includes(qv);
+      const matchesWeak = !onlyWeak || li.getAttribute("data-progress-state") === "weak";
+      li.hidden = !matchesText || !matchesWeak;
     });
-  });
+  };
+  inp.addEventListener("input", apply);
+  weakOnly?.addEventListener("change", apply);
 }
 
 function getFcDisplayMode() {
@@ -1797,7 +2143,7 @@ function renderDeepenPanel(q) {
     }
     <p class="quiz-deepen__note">Relación con tu estudio y fuentes oficiales:</p>
     <ul class="quiz-deepen__links">
-      <li><a href="${temarioHref}">Temario orientativo · ${escapeHtml(blockTitle)}</a></li>
+      <li><a href="${temarioHref}">Temario de examen · ${escapeHtml(blockTitle)}</a></li>
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
       <li><a href="${normativaHref}">Normativa · BOE y administración</a></li>
       <li><a href="https://www.cept.org/ecc/ham-radio" rel="noopener noreferrer">CEPT · HAREC y documentación</a></li>
@@ -1911,14 +2257,15 @@ function showStudyFeedback(q) {
     quizState.studyFeedback === "confidence" && quizState.confidence[q.id] !== undefined
       ? confidenceCalibrationLine(q, sel, quizState.confidence[q.id])
       : "";
+  const label = `<p class="feedback__eyebrow">Corrección</p>`;
   if (quizState.studyFeedback === "deepen") {
     const lead = ok
       ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
       : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = lead + answerReasoningPanel(q, sel) + renderDeepenPanel(q) + cal;
+    fb.innerHTML = label + lead + answerReasoningPanel(q, sel) + renderDeepenPanel(q) + cal;
     return;
   }
-  fb.innerHTML = (ok
+  fb.innerHTML = label + (ok
     ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}`
     : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}`) + cal;
 }
@@ -1962,6 +2309,88 @@ function quizMissingConfidenceCount() {
     const sel = quizState.answers[qq.id];
     return sel !== null && sel !== undefined && quizState.confidence[qq.id] === undefined;
   }).length;
+}
+
+function wrongTopicSummary(wrong) {
+  if (!wrong.length) return "";
+  const counts = new Map();
+  for (const q of wrong) {
+    const title = topicBlockLabel(q.topicId);
+    counts.set(title, (counts.get(title) || 0) + 1);
+  }
+  const rows = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  return `
+    <div class="result-topic-summary">
+      <strong>Fallos por bloque</strong>
+      <ul>
+        ${rows.map(([title, n]) => `<li><span>${escapeHtml(title)}</span><strong>${n}</strong></li>`).join("")}
+      </ul>
+    </div>`;
+}
+
+function resultNextActionPanel(good, total, wrong) {
+  const pct = total ? Math.round((good / total) * 100) : 0;
+  const firstWrong = wrong.find((q) => q && q.topicId);
+  const topicHref = firstWrong ? `#temario--${encodeURIComponent(firstWrong.topicId)}` : "#temario";
+  const topicLabel = firstWrong ? topicBlockLabel(firstWrong.topicId) : "Temario";
+  if (wrong.length > 0) {
+    const title = pct >= 50 ? "Buen punto de partida: cierra fallos antes de seguir" : "Prioridad: vuelve a base y repite falladas";
+    const text =
+      wrong.length === 1
+        ? "Solo queda 1 pregunta por corregir. Revísala ahora para que no se convierta en fallo repetido."
+        : `Hay ${wrong.length} pregunta(s) para repasar. Lo más rentable es repetir falladas y volver al bloque débil.`;
+    return `
+      <div class="result-next">
+        <p class="feedback__eyebrow">Siguiente acción</p>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(text)}</p>
+        <div class="result-next__actions">
+          <button type="button" class="btn btn--primary btn--sm" data-result-repeat-wrong>Repetir falladas</button>
+          <a class="btn btn--ghost btn--sm" href="${escapeHtml(topicHref)}">Ver teoría · ${escapeHtml(topicLabel)}</a>
+          <a class="btn btn--ghost btn--sm" href="#cuaderno" data-nav="cuaderno">Abrir cuaderno</a>
+        </div>
+      </div>`;
+  }
+  if (quizState.sessionType === "teorico" && quizState.mode === "exam") {
+    return `
+      <div class="result-next result-next--ok">
+        <p class="feedback__eyebrow">Siguiente acción</p>
+        <h3>Simulacro limpio: mide la otra prueba o conserva ritmo</h3>
+        <p>Si esta prueba ya sale fuerte, pasa a la otra parte o usa tarjetas para mantener memoria sin saturarte.</p>
+        <div class="result-next__actions">
+          <a class="btn btn--primary btn--sm" href="#examen" data-nav="examen">Ir a Examen</a>
+          <a class="btn btn--ghost btn--sm" href="#tarjetas" data-nav="tarjetas">Repasar tarjetas</a>
+        </div>
+      </div>`;
+  }
+  return `
+    <div class="result-next result-next--ok">
+      <p class="feedback__eyebrow">Siguiente acción</p>
+      <h3>Sesión limpia: sube dificultad</h3>
+      <p>Activa preguntas trampa, cambia de bloque o mide nivel con un simulacro sin pistas.</p>
+      <div class="result-next__actions">
+        <a class="btn btn--primary btn--sm" href="#examen" data-nav="examen">Hacer simulacro</a>
+        <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Otra práctica</a>
+      </div>
+    </div>`;
+}
+
+function bindResultActions() {
+  $("#quiz-feedback")?.querySelector("[data-result-repeat-wrong]")?.addEventListener("click", () => {
+    const wrongEl = $("#quiz-wrong-only");
+    const trapEl = $("#quiz-trap-only");
+    const modeEl = $("#quiz-mode");
+    const sessionEl = $("#quiz-session");
+    if (wrongEl instanceof HTMLInputElement) wrongEl.checked = true;
+    if (trapEl instanceof HTMLInputElement) trapEl.checked = false;
+    if (modeEl instanceof HTMLSelectElement) modeEl.value = "study";
+    if (sessionEl instanceof HTMLSelectElement) sessionEl.value = "libre";
+    saveQuizPrefs();
+    startQuiz();
+    requestAnimationFrame(() => {
+      $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 }
 
 function finishQuiz() {
@@ -2043,10 +2472,14 @@ function finishQuiz() {
     ${timeMsg}
     <strong>Resultado:</strong> ${good} / ${total} (${pct} %).
     ${verdict}
+    ${wrongTopicSummary(wrong)}
     ${wrongListHtml}
-    ${calibrationSessionSummary()}`;
+    ${calibrationSessionSummary()}
+    ${resultNextActionPanel(good, total, wrong)}`;
+  bindResultActions();
   $("#quiz-score").hidden = false;
   $("#quiz-score").textContent = `${good}/${total}`;
+  showSaveToast("Resultado y progreso guardados.");
 }
 
 function goNext() {
@@ -2118,10 +2551,19 @@ function finishOrAdvanceQuiz() {
     wrongIds.length > 0
       ? ` Fallaste ${wrongIds.length}: marca «Solo las falladas de la última sesión» y pulsa <strong>Nueva sesión</strong> para repasarlas.`
       : "";
-  $("#quiz-feedback").innerHTML = `<strong>Sesión completada.</strong>${wrongHint} Vuelve a empezar o cambia modo / parte para variar.`;
+  const wrongQs = quizState.list.filter((q) => wrongIds.includes(q.id));
+  $("#quiz-feedback").innerHTML = `<strong>Sesión completada.</strong>${wrongHint} Vuelve a empezar o cambia modo / parte para variar.${wrongTopicSummary(
+    wrongQs,
+  )}${resultNextActionPanel(
+    quizState.list.length - wrongQs.length,
+    quizState.list.length,
+    wrongQs,
+  )}`;
+  bindResultActions();
   mutateUserStats((s) => {
     s.studySessionsClosed += 1;
   });
+  showSaveToast("Sesión completada y progreso guardado.");
 }
 
 function goPrev() {
@@ -2274,6 +2716,8 @@ function scheduleCard(qid, easy) {
   }
   sched[qid] = { step, due: now + add };
   saveSchedule(sched);
+  renderHeaderStatus();
+  showSaveToast(easy ? "Tarjeta programada para repaso." : "Tarjeta marcada para reforzar pronto.");
 }
 
 function updateFcFlipHint() {
@@ -2347,6 +2791,12 @@ function loadFlashcards() {
   if (imp) imp.textContent = "";
   if (!fcState.deck.length) {
     $("#fc-area").hidden = true;
+    const empty = $("#fc-empty-state");
+    if (empty) {
+      empty.hidden = false;
+      empty.textContent =
+        "No hay preguntas en el banco para el tema seleccionado. Elige «Todos los temas» u otro bloque y pulsa de nuevo «Cargar tarjetas desde preguntas».";
+    }
     const meta = $("#fc-meta");
     if (meta) {
       meta.textContent =
@@ -2355,6 +2805,8 @@ function loadFlashcards() {
     updateDueBadge();
     return;
   }
+  const empty = $("#fc-empty-state");
+  if (empty) empty.hidden = true;
   $("#fc-area").hidden = false;
   renderFlashcard();
   updateDueBadge();
@@ -2514,6 +2966,7 @@ document.addEventListener("DOMContentLoaded", () => {
       renderQuizPracticeGuide();
     });
     $("#quiz-topic")?.addEventListener("change", renderQuizPracticeGuide);
+    $("#quiz-trap-only")?.addEventListener("change", renderQuizPracticeGuide);
     onRoute();
     renderUserProgress();
     renderQuizProgressSummary();
@@ -2523,6 +2976,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#quiz-start")?.addEventListener("click", startQuiz);
     $("#quiz-next")?.addEventListener("click", finishOrAdvanceQuiz);
     $("#quiz-prev")?.addEventListener("click", goPrev);
+    $("#quiz-focus-toggle")?.addEventListener("click", toggleQuizFocusMode);
 
     $("#fc-load")?.addEventListener("click", loadFlashcards);
     $("#fc-topic")?.addEventListener("change", () => {
@@ -2572,7 +3026,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (el) {
       el.hidden = false;
       el.textContent =
-        "No se pudo inicializar la aplicación. Recarga la página; si persiste, abre la consola (F12) y comprueba que sirves la carpeta web por HTTP.";
+        "No se pudo inicializar la aplicación. Recarga la página; si persiste, abre la consola (F12) y comprueba que sirves la carpeta del proyecto por HTTP.";
     }
   }
 });

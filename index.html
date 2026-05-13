@@ -20,7 +20,7 @@
 <body>
   <noscript>
     <p style="margin:0;padding:1rem;background:#2a1f0a;color:#ffd478;font-family:system-ui,sans-serif;">
-      Activa JavaScript para usar RadioExamen. Si abriste el archivo desde el disco, usa un servidor local (ver <code>README.md</code>): <code>npx serve</code> dentro de la carpeta <code>web</code>.
+      Activa JavaScript para usar RadioExamen. Si abriste el archivo desde el disco, sirve la carpeta del proyecto con un servidor local antes de estudiar.
     </p>
   </noscript>
   <a class="skip-link" href="#main">Saltar al contenido</a>
@@ -49,7 +49,9 @@
         <a href="#cuaderno" data-nav="cuaderno">Cuaderno</a>
         <a href="#metodologia" data-nav="metodologia">Método</a>
         <a href="#tarjetas" data-nav="tarjetas">Tarjetas</a>
+        <a href="#ayuda" data-nav="ayuda">Ayuda</a>
       </nav>
+      <div id="header-status" class="header-status" aria-live="polite"></div>
       <details class="a11y-toolbar" id="a11y-panel">
         <summary class="a11y-toolbar__summary">Accesibilidad</summary>
         <div class="a11y-toolbar__body">
@@ -90,6 +92,7 @@
   <main id="main">
     <div id="app-error" class="app-error" role="alert" hidden></div>
     <div id="route-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    <div id="save-toast" class="save-toast" role="status" aria-live="polite" hidden></div>
     <section id="view-inicio" class="view view--active" aria-labelledby="titulo-inicio" aria-hidden="false">
       <div class="hero">
         <p class="hero__eyebrow">España · examen tipo test</p>
@@ -101,15 +104,41 @@
           generadas o importadas con criterio propio.
         </p>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#practicar" data-nav="practicar">Empezar práctica</a>
-          <a class="btn btn--ghost" href="#examen" data-nav="examen">Ver preparación</a>
+          <a class="btn btn--primary" href="#temario" data-nav="temario">Empezar ruta guiada</a>
+          <a class="btn btn--ghost" href="#practicar" data-nav="practicar">Ir a practicar</a>
+          <a class="btn btn--ghost" href="#examen" data-nav="examen">Ver si estoy listo</a>
           <a class="btn btn--ghost" href="#normativa" data-nav="normativa">Ver normativa BOE</a>
         </div>
         <ul class="hero__facts" role="list">
-          <li><strong>2 pruebas</strong> (técnica + reglamento), 30 preguntas cada una en el examen real.</li>
-          <li><strong>50 %</strong> de aciertos por prueba para APTO (referencia habitual en convocatorias públicas).</li>
+          <li><strong>2 pruebas</strong> (técnica + reglamento), habitualmente 30 preguntas cada una.</li>
+          <li><strong>50 %</strong> de aciertos por prueba para APTO como referencia habitual; la convocatoria oficial manda.</li>
           <li>Modos <strong>estudio</strong>, <strong>examen</strong> (sin pistas) e <strong>intercalado</strong> (mezcla de temas).</li>
         </ul>
+        <section class="start-path" aria-labelledby="start-path-title">
+          <div class="start-path__head">
+            <p class="eyebrow">Si no sabes por dónde empezar</p>
+            <h2 id="start-path-title">Ruta simple para no perderte</h2>
+            <p>No necesitas tocar todas las opciones el primer día. Sigue este ciclo y la app te irá llevando.</p>
+          </div>
+          <ol class="start-path__steps">
+            <li>
+              <span class="start-path__num">1</span>
+              <strong>Estudia un bloque</strong>
+              <p>Entra en <a href="#temario" data-nav="temario">Temario</a>, elige un tema y lee idea clave, teoría y trampas.</p>
+            </li>
+            <li>
+              <span class="start-path__num">2</span>
+              <strong>Practica ese mismo tema</strong>
+              <p>Ve a <a href="#practicar" data-nav="practicar">Practicar</a>, deja modo estudio y corrige con explicación.</p>
+            </li>
+            <li>
+              <span class="start-path__num">3</span>
+              <strong>Mide y corrige</strong>
+              <p>Usa <a href="#examen" data-nav="examen">Examen</a> para simular y <a href="#cuaderno" data-nav="cuaderno">Cuaderno</a> para cerrar errores.</p>
+            </li>
+          </ol>
+        </section>
+        <section id="today-plan-root" class="today-plan" aria-live="polite" aria-labelledby="today-plan-title"></section>
         <div id="user-stats-root" class="user-stats" aria-live="polite"></div>
         <div class="route-panel" aria-labelledby="ruta-titulo">
           <h2 id="ruta-titulo" class="route-panel__title">Cómo está organizada la web</h2>
@@ -123,7 +152,7 @@
               — bloques para orientar el estudio y filtrar preguntas por tema.
             </li>
             <li>
-              <a href="#metodologia" data-nav="metodologia"><strong>Metodología</strong></a>
+              <a href="#metodologia" data-nav="metodologia"><strong>Método</strong></a>
               — ideas de aprendizaje con respaldo en evidencia científica.
             </li>
             <li>
@@ -139,6 +168,10 @@
               y <a href="#tarjetas" data-nav="tarjetas"><strong>Tarjetas</strong></a>
               — errores activos, repaso inteligente y repaso espaciado.
             </li>
+            <li>
+              <a href="#ayuda" data-nav="ayuda"><strong>Ayuda</strong></a>
+              — dudas frecuentes sobre cómo usar la web, qué significan los modos y qué hacer si te pierdes.
+            </li>
           </ol>
         </div>
       </div>
@@ -146,36 +179,61 @@
 
     <section id="view-normativa" class="view" hidden aria-labelledby="titulo-normativa" aria-hidden="true">
       <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Normativa</p>
         <h1 id="titulo-normativa">Normativa y enlaces oficiales</h1>
         <p class="section-head__sub">
-          Secciones ordenadas: texto oficial (BOE), leyes marco, CEPT, práctica de examen, <strong>guías y cursos</strong> (PDF, URVAG, EA5URA, URE),
-          asociaciones de referencia y resúmenes temáticos.
-          El texto jurídico vinculante sigue estando solo en el <strong>BOE</strong> y en la sede administrativa vigente.
+          Empieza aquí cuando una pregunta dependa de BOE, convocatoria, CEPT o trámites vigentes.
         </p>
+        <details class="section-more">
+          <summary>Qué encontrarás en Normativa</summary>
+          <p>
+            Texto oficial (BOE), leyes marco, CEPT, práctica de examen, guías/cursos, asociaciones de referencia y resúmenes temáticos.
+            El texto jurídico vinculante sigue estando solo en el <strong>BOE</strong> y en la sede administrativa vigente.
+          </p>
+        </details>
       </div>
+      <aside class="next-step" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Abre primero BOE consolidado si vas a estudiar potencias, bandas, plazos o trámites.</span>
+        <a class="btn btn--ghost btn--sm" href="#normativa--normativa-boe">Ir a BOE</a>
+      </aside>
       <div id="normativa-root" class="temario"></div>
     </section>
 
     <section id="view-temario" class="view" hidden aria-labelledby="titulo-temario" aria-hidden="true">
       <div class="section-head">
-        <h1 id="titulo-temario">Temario orientativo</h1>
+        <p class="section-path">Estás aquí: Inicio → Temario</p>
+        <h1 id="titulo-temario">Temario de examen</h1>
         <p class="section-head__sub">
-          Esta vista queda para <strong>teoría</strong>: cada bloque ordena el aprendizaje por formatos
-          (<strong>idea clave</strong>, <strong>repaso express</strong>, <strong>teoría explicada</strong>, <strong>ejemplos guiados</strong>,
-          <strong>programa de examen</strong> y <strong>tarjetas conceptuales</strong>). Los tests y ejercicios están en <strong>Practicar</strong>.
-          Los textos condensan el programa tipo examen (HAREC / reglamento BOE, CEPT, URE);
-          contrasta siempre con el BOE y tu manual.
+          Teoría por bloques: entiende primero, practica después en <strong>Practicar</strong>.
         </p>
+        <details class="section-more">
+          <summary>Cómo está ordenado el temario</summary>
+          <p>
+            Cada bloque incluye idea clave, repaso express, teoría explicada, ejemplos guiados, programa de examen y tarjetas conceptuales.
+            Los textos condensan el programa tipo examen; contrasta siempre normativa sensible con BOE y convocatoria.
+          </p>
+        </details>
       </div>
+      <aside class="next-step" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Elige un bloque, léelo y después practica ese mismo tema sin cambiar demasiadas opciones.</span>
+        <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Practicar después</a>
+      </aside>
       <div class="temario-toolbar panel">
         <label for="temario-filter">Buscar en el temario</label>
         <input type="search" id="temario-filter" class="temario-toolbar__input" placeholder="Ej.: dipolo, ROE, mezclador…" autocomplete="off" />
+        <label class="check temario-toolbar__weak">
+          <input type="checkbox" id="temario-weak-only" />
+          <span>Ver solo bloques débiles</span>
+        </label>
       </div>
       <div id="temario-root" class="temario"></div>
     </section>
 
     <section id="view-metodologia" class="view" hidden aria-labelledby="titulo-metodo" aria-hidden="true">
       <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Método</p>
         <h1 id="titulo-metodo">Aprendizaje con respaldo científico</h1>
         <p class="section-head__sub">
           No son “trucos mágicos”: son estrategias prácticas para estudiar el examen de radioaficionado con menos
@@ -183,7 +241,83 @@
           <strong>entender → practicar → explicar → espaciar → simular examen</strong>.
         </p>
       </div>
+      <aside class="next-step" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Usa el ciclo entender → practicar → explicar → espaciar antes de lanzar simulacros.</span>
+        <a class="btn btn--ghost btn--sm" href="#temario" data-nav="temario">Volver a Temario</a>
+      </aside>
       <div class="method-grid" id="method-root"></div>
+      <section class="final-kit panel" aria-labelledby="chuleta-final-title">
+        <div class="final-kit__head">
+          <p class="eyebrow">Cierre de estudio</p>
+          <h2 id="chuleta-final-title">Chuleta final por categorías</h2>
+          <p>
+            Repaso rápido para los últimos días. Está dividido por bloques cortos: abre solo la categoría que estés repasando
+            y después practica ese tema o activa «preguntas trampa».
+          </p>
+        </div>
+        <div class="final-kit__grid">
+          <details class="final-kit__card">
+            <summary>Fórmulas y unidades</summary>
+            <ul>
+              <li>Ohm: V = I·R. Potencia: P = V·I = I²R = V²/R.</li>
+              <li>λ(m) ≈ 300/f(MHz). Si sube frecuencia, baja longitud de onda.</li>
+              <li>+3 dB en potencia ≈ doble; +10 dB ≈ diez veces; dBm referencia 1 mW.</li>
+              <li>RMS senoidal: Vef = Vp/√2. En osciloscopio: horizontal tiempo, vertical tensión.</li>
+            </ul>
+          </details>
+          <details class="final-kit__card">
+            <summary>Componentes y equipos</summary>
+            <ul>
+              <li>Condensador en CC estable: circuito abierto ideal; bobina ideal: casi cortocircuito.</li>
+              <li>Xc baja al subir frecuencia; Xl sube al subir frecuencia.</li>
+              <li>Zener: referencia/regulación en inversa. Varicap: capacidad variable por tensión.</li>
+              <li>Superheterodino: mezclador + oscilador local → FI. AGC/CAG regula ganancia.</li>
+              <li>Filtro de salida: reduce armónicos y espurias antes de antena.</li>
+            </ul>
+          </details>
+          <details class="final-kit__card">
+            <summary>Antenas y propagación</summary>
+            <ul>
+              <li>Dipolo media onda: longitud total ≈ λ/2; cada brazo ≈ λ/4.</li>
+              <li>ROE alta = desadaptación y potencia reflejada.</li>
+              <li>Yagi: reflector detrás, directores delante, lóbulo principal hacia directores.</li>
+              <li>dBi referencia isotrópica; dBd referencia dipolo; diferencia aproximada 2,15 dB.</li>
+              <li>HF: ionosfera. VHF/UHF: visión directa, altura, obstáculos y repetidores.</li>
+            </ul>
+          </details>
+          <details class="final-kit__card">
+            <summary>Normativa clave</summary>
+            <ul>
+              <li>Reglamento principal: Orden IET/1311/2013 y anexos; ante duda manda BOE vigente.</li>
+              <li>HAREC acredita aptitud; autorización administrativa + distintivo habilitan a operar.</li>
+              <li>CEPT T/R 61-01: licencia CEPT temporal. T/R 61-02: programa HAREC.</li>
+              <li>IARU recomienda planes de banda; CNAF atribuye bandas y condiciones en España.</li>
+              <li>Estaciones automáticas VHF/UHF: vigila dentro/fuera de casco urbano si el enunciado cita art. 25.h.</li>
+            </ul>
+          </details>
+          <details class="final-kit__card">
+            <summary>Indicativos y operación</summary>
+            <ul>
+              <li>Indicativo: prefijo + distrito + sufijo. En España, prefijos de la serie E.</li>
+              <li>Alfabeto: N = Noviembre en test español. Cuidado con November, Alpha, Juliet y palabras inventadas.</li>
+              <li>QRM = interferencia; QRN = ruido natural. QRO = aumentar potencia; QRP = baja potencia.</li>
+              <li>QSY = cambiar frecuencia; QRT = dejar de transmitir; PSE = por favor.</li>
+              <li>RST = legibilidad, intensidad y tono. En fonía normalmente R y S.</li>
+            </ul>
+          </details>
+          <details class="final-kit__card">
+            <summary>Emergencias e instalaciones</summary>
+            <ul>
+              <li>Mayday = socorro; Pan Pan = urgencia; Sécurité/Securite = seguridad.</li>
+              <li>Comunicaciones claras, identificadas y relacionadas con el servicio; no cifrar para ocultar significado.</li>
+              <li>No tocar antena en transmisión. Mantén tierra, protecciones y distancias de seguridad.</li>
+              <li>RF en equipos cercanos: ferritas, filtros, apantallamiento, tierra y revisión de armónicos.</li>
+              <li>Antenas en comunidad: no es libertad total ni prohibición absoluta; hay procedimiento y condiciones.</li>
+            </ul>
+          </details>
+        </div>
+      </section>
       <p class="fine-print">
         Referencias de entrada: Dunlosky et al. (2013), revisiones sobre
         <a href="https://doi.org/10.1037/a0023669" rel="noopener noreferrer">práctica de recuperación</a>,
@@ -195,17 +329,50 @@
 
     <section id="view-practicar" class="view" hidden aria-labelledby="titulo-practicar" aria-hidden="true">
       <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Practicar → Sesión de estudio</p>
         <h1 id="titulo-practicar">Practicar</h1>
         <p class="section-head__sub">
-          Incluye preguntas base, un <strong>banco propio</strong> redactado solo con criterio de examen (BOE, CEPT, URE), <strong>URE · Electricidad</strong> (30), <strong>FEDI-EA 22/10/2011</strong> (60 ítems)
-          y un bloque importado desde
-          <a href="https://radioclubquijotes.org/qsm_quiz/reglamentacion/" rel="noopener noreferrer">Radio Club Quijotes (EA3RCQ)</a>
-          (filtrado a contenido orientado a España). En cada sesión se <strong>aleatorizan preguntas y respuestas</strong> para que no memorices posiciones.
-          Esta vista queda para practicar: por tema, por parte, en intercalado o con feedback. Para simulacro completo y preparación final usa <strong>Examen</strong>; para errores pendientes usa <strong>Cuaderno</strong>.
+          Entrena por tema o por prueba con preguntas y respuestas aleatorizadas. Para simulacro completo usa <strong>Examen</strong>.
         </p>
+        <details class="section-more">
+          <summary>Qué banco usa Practicar</summary>
+          <p>
+            Incluye preguntas base, banco propio con criterio de examen, URE · Electricidad, FEDI-EA 22/10/2011 y un bloque importado desde
+            <a href="https://radioclubquijotes.org/qsm_quiz/reglamentacion/" rel="noopener noreferrer">Radio Club Quijotes (EA3RCQ)</a>.
+            Para errores pendientes usa <strong>Cuaderno</strong>.
+          </p>
+        </details>
       </div>
       <p id="quiz-progress-summary" class="quiz-progress-summary muted" aria-live="polite"></p>
+      <aside class="next-step next-step--primary" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Si estás empezando: parte + tema concreto + modo estudio. Después pulsa Nueva sesión.</span>
+        <a class="btn btn--ghost btn--sm" href="#temario" data-nav="temario">Revisar teoría</a>
+      </aside>
       <div id="quiz-practice-guide" class="quiz-practice-guide panel" aria-live="polite"></div>
+      <details class="source-check panel" open>
+        <summary>Control de veracidad del banco</summary>
+        <p>
+          Las preguntas propias se redactan con BOE, CEPT/HAREC y material URE como referencia. Los bloques FEDI-EA y Quijotes son bancos útiles de entrenamiento, pero pueden contener formulaciones antiguas o erratas: ante potencias, plazos, bandas, trámites o condiciones legales, manda <a href="#normativa">Normativa</a> y, por encima de todo, BOE consolidado y convocatoria vigente.
+        </p>
+      </details>
+      <details class="choice-helper panel" open>
+        <summary>¿Qué elijo aquí?</summary>
+        <div class="choice-helper__grid">
+          <article>
+            <strong>Estoy empezando</strong>
+            <p>Elige una parte, un tema concreto y deja <em>Estudio · corrección inmediata</em>. No actives examen todavía.</p>
+          </article>
+          <article>
+            <strong>Quiero reforzar fallos</strong>
+            <p>Activa <em>preguntas trampa</em> o <em>falladas</em>. Usa el feedback y vuelve al Temario si no puedes explicar la regla.</p>
+          </article>
+          <article>
+            <strong>Quiero medir nivel</strong>
+            <p>Ve a <a href="#examen">Examen</a> y lanza un simulacro. Ahí la app configura 30 preguntas sin pistas.</p>
+          </article>
+        </div>
+      </details>
       <div class="panel">
         <div class="panel__row">
           <label for="quiz-part">Contenido</label>
@@ -241,18 +408,24 @@
             <span>Solo las <strong>falladas de la última sesión</strong> (respeta parte y tema elegidos arriba).</span>
           </label>
         </div>
+        <div class="panel__row panel__row--recovery">
+          <label class="check">
+            <input type="checkbox" id="quiz-trap-only" />
+            <span>Solo <strong>preguntas trampa</strong> (distractores típicos, excepciones y confusiones frecuentes).</span>
+          </label>
+        </div>
         <div class="panel__row panel__row--actions">
-          <button type="button" class="btn btn--primary" id="quiz-start">Nueva sesión</button>
+          <button type="button" class="btn btn--primary btn--hero-action" id="quiz-start">Nueva sesión</button>
           <label class="check" id="quiz-pretest-wrap">
             <input type="checkbox" id="quiz-pretest" />
-            <span>Precueba</span>
+            <span>Preprueba</span>
             <span class="check__hint" title="Intenta responder antes de ver opciones; mejora retención en algunos diseños experimentales.">?</span>
           </label>
         </div>
         <details class="quiz-kbd-hint">
           <summary>Atajos de teclado en la sesión</summary>
           <p class="quiz-kbd-hint__body">
-            Con el foco fuera del cuadro de precueba: teclas <kbd>1</kbd>–<kbd>4</kbd> eligen la opción (si hay cuatro respuestas);
+            Con el foco fuera del cuadro de preprueba: teclas <kbd>1</kbd>–<kbd>4</kbd> eligen la opción (si hay cuatro respuestas);
             <kbd>→</kbd> o <kbd>N</kbd> avanza; <kbd>←</kbd> o <kbd>P</kbd> retrocede. En móvil/tablet usa los botones táctiles habituales.
           </p>
         </details>
@@ -263,6 +436,7 @@
           <span id="quiz-stats" class="quiz__stats" aria-hidden="true"></span>
           <span id="quiz-timer" class="quiz__timer" hidden></span>
           <span id="quiz-score" class="quiz__score" hidden></span>
+          <button type="button" class="btn btn--ghost btn--sm quiz-focus-toggle" id="quiz-focus-toggle" aria-pressed="false">Modo foco</button>
         </div>
         <div id="quiz-announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
         <div id="quiz-pretest-box" class="pretest" hidden>
@@ -280,11 +454,17 @@
 
     <section id="view-examen" class="view" hidden aria-labelledby="titulo-examen" aria-hidden="true">
       <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Examen → Simulacro</p>
         <h1 id="titulo-examen">Examen</h1>
         <p class="section-head__sub">
           Aquí se mide preparación: simulacros de 30 preguntas por prueba, resultado al cierre e indicador de si conviene presentarse o seguir corrigiendo puntos débiles.
         </p>
       </div>
+      <aside class="next-step next-step--primary" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Haz simulacro solo si ya has practicado varios bloques; si sale bajo, vuelve al Cuaderno.</span>
+        <a class="btn btn--ghost btn--sm" href="#cuaderno" data-nav="cuaderno">Ver errores</a>
+      </aside>
       <details class="exam-hint" open>
         <summary>Cómo funciona el examen tipo test</summary>
         <div class="exam-hint__body">
@@ -294,31 +474,100 @@
             Aquí son <strong>30 preguntas</strong> elegidas al azar del banco (sin repetir en la misma sesión). En examen hay
             <strong>30 minutos</strong> de tiempo. El criterio de apto del examen de radioaficionado en España suele publicarse como
             <strong>50 % por prueba</strong>; lo usamos como referencia (15 aciertos de 30). Comprueba siempre la convocatoria oficial.
+            Al iniciar un simulacro se abrirá la sesión de preguntas con el mismo motor que Practicar, pero configurado sin pistas.
           </p>
         </div>
       </details>
+      <section class="final-kit panel" aria-labelledby="ultima-semana-title">
+        <div class="final-kit__head">
+          <p class="eyebrow">Plan de cierre</p>
+          <h2 id="ultima-semana-title">Última semana antes del examen</h2>
+          <p>
+            Ruta corta para llegar con calma. La idea no es abrir más frentes, sino medir, corregir y descansar lo suficiente.
+          </p>
+        </div>
+        <div class="week-plan">
+          <article class="week-plan__card">
+            <strong>Día 7</strong>
+            <h3>Diagnóstico real</h3>
+            <p>Haz un simulacro de cada prueba. No estudies entre medias. Apunta bloques débiles y errores con seguridad alta.</p>
+          </article>
+          <article class="week-plan__card">
+            <strong>Día 6</strong>
+            <h3>Técnica débil</h3>
+            <p>Repasa solo 1.ª prueba: fórmulas, FI, receptores, antenas y preguntas con figura. Termina con preguntas trampa.</p>
+          </article>
+          <article class="week-plan__card">
+            <strong>Día 5</strong>
+            <h3>Reglamentación débil</h3>
+            <p>Repasa CEPT/HAREC, indicativos, operación, emergencias, comunidad e interferencias. Evita memorizar datos obsoletos.</p>
+          </article>
+          <article class="week-plan__card">
+            <strong>Día 4</strong>
+            <h3>Cuaderno de errores</h3>
+            <p>Trabaja solo falladas y errores activos. Si una regla no sale en voz alta, vuelve al bloque de Temario correspondiente.</p>
+          </article>
+          <article class="week-plan__card">
+            <strong>Día 3</strong>
+            <h3>Simulacro completo</h3>
+            <p>Haz 30 + 30 en modo examen. Revisa solo los fallos. Si estás cerca del apto, prioriza trampas y normativa.</p>
+          </article>
+          <article class="week-plan__card">
+            <strong>Día 2</strong>
+            <h3>Chuleta final</h3>
+            <p>Lee la chuleta por categorías. Practica 20-30 preguntas trampa, sin abrir temas nuevos.</p>
+          </article>
+          <article class="week-plan__card week-plan__card--calm">
+            <strong>Día 1</strong>
+            <h3>Descanso activo</h3>
+            <p>Repasa alfabeto, códigos Q, CEPT/HAREC y fórmulas básicas. Nada de sesiones largas ni bancos nuevos.</p>
+          </article>
+        </div>
+        <div class="final-kit__actions">
+          <a class="btn btn--primary btn--hero-action" href="#practicar">Practicar ahora</a>
+          <a class="btn btn--ghost" href="#cuaderno">Ver errores activos</a>
+          <a class="btn btn--ghost" href="#metodologia">Abrir chuleta final</a>
+        </div>
+      </section>
       <section id="exam-readiness-root" class="exam-coach panel" aria-labelledby="exam-readiness-title"></section>
     </section>
 
     <section id="view-cuaderno" class="view" hidden aria-labelledby="titulo-cuaderno" aria-hidden="true">
       <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Cuaderno → Corregir errores</p>
         <h1 id="titulo-cuaderno">Cuaderno de errores</h1>
         <p class="section-head__sub">
           Reúne fallos activos, errores con seguridad alta y el repaso inteligente. Úsalo para decidir qué corregir antes de volver a practicar o simular examen.
         </p>
       </div>
+      <aside class="next-step" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Corrige primero fallos con seguridad alta; son los errores que más engañan en examen.</span>
+        <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Volver a practicar</a>
+      </aside>
       <section id="error-notebook-root" class="exam-coach panel" aria-labelledby="error-notebook-title"></section>
     </section>
 
     <section id="view-tarjetas" class="view" hidden aria-labelledby="titulo-tarjetas" aria-hidden="true">
       <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Tarjetas → Repaso espaciado</p>
         <h1 id="titulo-tarjetas">Tarjetas y repaso espaciado simple</h1>
         <p class="section-head__sub">
-          Voltea la tarjeta con un clic o con <kbd>Espacio</kbd> (modo volteo). Elige un <strong>tema del banco</strong> para practicar solo ese bloque (alineado con Practicar y el temario) o deja «Todos los temas».
-          Los botones «Lo sabía / No» programan la próxima revisión en este navegador (espaciado básico 1 · 3 · 7 días).
-          <strong>Copia de seguridad:</strong> exporta JSON antes de limpiar datos del navegador; importa para fusionar o, con la casilla inferior, reemplazar toda la programación.
+          Repasa preguntas como tarjetas y programa la próxima revisión con <strong>Lo sabía</strong> o <strong>No lo tenía claro</strong>.
         </p>
+        <details class="section-more">
+          <summary>Cómo usar Tarjetas</summary>
+          <p>
+            Voltea la tarjeta con un clic o con <kbd>Espacio</kbd>. Elige un tema o deja «Todos los temas».
+            Exporta la programación antes de limpiar datos del navegador; importa para fusionar o reemplazar.
+          </p>
+        </details>
       </div>
+      <aside class="next-step next-step--primary" aria-label="Siguiente paso recomendado">
+        <strong>Siguiente recomendado</strong>
+        <span>Carga el mazo, responde de memoria y marca sin piedad: “No lo tenía claro” también cuenta como repaso útil.</span>
+        <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Practicar preguntas</a>
+      </aside>
       <div class="panel">
         <div class="panel__row">
           <label for="fc-topic">Tema del banco (opcional)</label>
@@ -334,13 +583,16 @@
         </div>
       </div>
       <div class="panel panel--inline">
-        <button type="button" class="btn btn--primary" id="fc-load">Cargar tarjetas desde preguntas</button>
+        <button type="button" class="btn btn--primary btn--hero-action" id="fc-load">Cargar tarjetas desde preguntas</button>
         <button type="button" class="btn btn--ghost" id="fc-export">Exportar programación</button>
         <button type="button" class="btn btn--ghost" id="fc-import">Importar JSON</button>
         <input type="file" id="fc-import-file" accept="application/json,.json" hidden />
         <span id="fc-due" class="muted"></span>
       </div>
       <p id="fc-schedule-detail" class="muted fc-schedule-detail" aria-live="polite"></p>
+      <p id="fc-empty-state" class="empty-state">
+        Aún no hay mazo en pantalla. Elige un tema si quieres filtrar y pulsa <strong>Cargar tarjetas desde preguntas</strong>.
+      </p>
       <p class="fine-print fc-import-hint">
         <label class="check">
           <input type="checkbox" id="fc-import-replace" />
@@ -363,6 +615,98 @@
         <p class="fine-print" id="fc-import-status" role="status"></p>
       </div>
     </section>
+
+    <section id="view-ayuda" class="view" hidden aria-labelledby="titulo-ayuda" aria-hidden="true">
+      <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Ayuda</p>
+        <h1 id="titulo-ayuda">Ayuda para usar la web</h1>
+        <p class="section-head__sub">
+          Resuelve dudas frecuentes sobre el flujo de estudio, los modos, el progreso local y las fuentes.
+        </p>
+      </div>
+
+      <aside class="next-step next-step--primary" aria-label="Siguiente paso recomendado">
+        <strong>Si te pierdes</strong>
+        <span>Usa esta ruta: Temario → Practicar → Cuaderno → Examen. No necesitas tocar todos los módulos el primer día.</span>
+        <a class="btn btn--ghost btn--sm" href="#inicio" data-nav="inicio">Volver a Inicio</a>
+      </aside>
+
+      <div class="help-grid">
+        <section class="help-panel panel" aria-labelledby="help-start-title">
+          <h2 id="help-start-title">Primeros pasos</h2>
+          <div class="help-quick-actions">
+            <a class="btn btn--primary btn--sm" href="#temario" data-nav="temario">Empezar por Temario</a>
+            <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Practicar</a>
+            <a class="btn btn--ghost btn--sm" href="#examen" data-nav="examen">Medir nivel</a>
+          </div>
+          <ol class="help-steps">
+            <li><strong>Estudia un bloque.</strong> Lee idea clave, teoría, ejemplos y trampas.</li>
+            <li><strong>Practica ese mismo tema.</strong> Usa modo estudio con corrección inmediata.</li>
+            <li><strong>Corrige fallos.</strong> Abre Cuaderno antes de hacer otro simulacro.</li>
+            <li><strong>Mide preparación.</strong> Usa Examen cuando ya tengas varios bloques practicados.</li>
+          </ol>
+        </section>
+
+        <section class="help-panel panel" aria-labelledby="help-faq-title">
+          <h2 id="help-faq-title">Preguntas frecuentes</h2>
+
+          <details class="help-faq" open>
+            <summary>¿Por dónde empiezo si soy nuevo?</summary>
+            <p>Empieza por <strong>Temario</strong>, elige un bloque pequeño y después ve a <strong>Practicar</strong> con ese mismo tema. Si no sabes cuál elegir, empieza por Electricidad básica o Marco normativo.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué diferencia hay entre Temario, Practicar y Examen?</summary>
+            <p><strong>Temario</strong> es teoría. <strong>Practicar</strong> es entrenamiento con feedback. <strong>Examen</strong> es simulación sin pistas y con resultado al final.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué son las preguntas trampa?</summary>
+            <p>Son preguntas con distractores típicos: unidades parecidas, siglas confundibles, excepciones legales o palabras casi iguales. Úsalas cuando ya hayas visto el bloque al menos una vez.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Cómo uso el Cuaderno de errores?</summary>
+            <p>El Cuaderno reúne fallos activos, fallos con seguridad alta y temas débiles. Si fallas con mucha seguridad, corrige primero ese punto: es el error más peligroso para el examen.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Para qué sirven las Tarjetas?</summary>
+            <p>Sirven para repaso espaciado. Si marcas <strong>No lo tenía claro</strong>, la tarjeta vuelve antes. Si marcas <strong>Lo sabía</strong>, se programa más adelante.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué significa el indicador de preparación?</summary>
+            <p>Es una señal orientativa basada en cobertura, aciertos, errores activos, fallos de seguridad alta y simulacros aprobados. No sustituye la convocatoria ni garantiza el resultado real.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Dónde se guardan mis datos?</summary>
+            <p>En este navegador, mediante almacenamiento local. No hay cuenta ni servidor propio para tu progreso. Si limpias datos del navegador, puedes perder estadísticas y programación de tarjetas.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué fuentes son oficiales?</summary>
+            <p>Para normativa manda el <strong>BOE</strong>, la convocatoria vigente y la sede administrativa competente. URE, FEDI-EA, Quijotes y guías externas sirven como apoyo o entrenamiento, pero no sustituyen el texto oficial.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué hago si una pregunta parece contradecir una norma?</summary>
+            <p>Consulta <strong>Normativa</strong> y el BOE consolidado. Si es un banco histórico, estudia la explicación corregida y no memorices un dato antiguo sin contexto.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué hago la última semana?</summary>
+            <p>No abras muchos temas nuevos. Haz simulacros, corrige el Cuaderno, repasa tarjetas, revisa preguntas trampa y descansa. En <strong>Examen</strong> tienes un plan de cierre por días.</p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Qué hago si la web no carga bien?</summary>
+            <p>Recarga la página. Si la abriste desde disco, sirve la carpeta por HTTP/HTTPS. Si publicas en hosting, sube también <code>app.js</code>, <code>data/</code>, <code>lib/</code>, <code>styles.css</code> e imágenes.</p>
+          </details>
+        </section>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -383,7 +727,7 @@
             <a href="https://www.boe.es/" rel="noopener noreferrer">boe.es</a> — publicación y consolidación de normas (p. ej. Orden IET/1311/2013 y leyes marco enlazadas en Normativa).
           </li>
           <li>
-            <a href="https://sede.miteco.gob.es/" rel="noopener noreferrer">sede.miteco.gob.es</a> — sede electrónica MITECO (trámites administrativos).
+            <a href="https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx" rel="noopener noreferrer">avance.digital.gob.es</a> — autorización de radioaficionado en la administración competente.
           </li>
           <li>
             <a href="https://www.cnmc.es/" rel="noopener noreferrer">cnmc.es</a> — CNMC, normativa en telecomunicaciones (contexto enlazado desde Normativa).
@@ -439,8 +783,8 @@
         var mime = /MIME|javascript|module/i.test(r);
         show(
           mime
-            ? "El servidor no está sirviendo los .js como JavaScript (MIME). Sube toda la carpeta web y revisa la configuración del hosting (ver README)."
-            : "Error al cargar módulos (import). Sirve la carpeta web por HTTP/HTTPS, no abras el archivo desde el disco; revisa la consola (F12).",
+            ? "El servidor no está sirviendo los .js como JavaScript (MIME). Sube todos los archivos del proyecto y revisa la configuración del hosting."
+            : "Error al cargar módulos (import). Sirve la carpeta del proyecto por HTTP/HTTPS, no abras el archivo desde el disco; revisa la consola (F12).",
         );
       });
       window.addEventListener("error", function (e) {
@@ -448,7 +792,7 @@
         var msg = e && e.message ? String(e.message) : "";
         if (/app\.js|failed to load module|import|MIME/i.test(fn + " " + msg)) {
           show(
-            "No se pudo cargar el código de la app. Sube app.js, lib/, data/ y styles.css junto al index; sirve por HTTP/HTTPS (ver README).",
+            "No se pudo cargar el código de la app. Sube app.js, lib/, data/ y styles.css junto al index; sirve por HTTP/HTTPS.",
           );
         }
       });

@@ -38,7 +38,7 @@ export default {
         {
           id: "marco-normativo",
           title: "Marco normativo y organismos",
-          hint: "Orden IET/1311/2013 (reglamento del servicio), SETSI/MITECO, UIT/CEPT, CNAF.",
+          hint: "Orden IET/1311/2013, Secretaría de Estado competente en telecomunicaciones, UIT/CEPT, CNAF.",
         },
         {
           id: "licencias-indicativos",

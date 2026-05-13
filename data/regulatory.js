@@ -7,10 +7,11 @@ export default {
   intro:
     "La prueba de radioaficionado y la autorización se encuadran en el uso especial del espectro. La base del reglamento del servicio es la Orden IET/1311/2013, que aprueba el Reglamento de uso del dominio público radioeléctrico por radioaficionados.",
   trustNote:
-    "Las asociaciones y los bancos de tests enlazan aquí como apoyo didáctico. Si hay discrepancia con un artículo o anexo del BOE, prevalece siempre el texto oficial y las resoluciones de la Administración competentes.",
+    "Las asociaciones y los bancos de tests enlazan aquí como apoyo didáctico. Si hay discrepancia con un artículo o anexo del BOE, prevalece siempre el texto oficial y las resoluciones de la Administración competente.",
   /** Saltos dentro de la vista Normativa (scroll suave). */
   normativaNav: [
     { id: "normativa-boe", label: "BOE" },
+    { id: "normativa-verificacion", label: "Verificación" },
     { id: "normativa-marco", label: "Leyes marco" },
     { id: "normativa-europa", label: "CEPT" },
     { id: "normativa-practica", label: "Práctica examen" },
@@ -46,9 +47,9 @@ export default {
           note: "Misma norma que el HTML consolidado; útil para buscar artículos (p. ej. 25.h potencias repetidores) y anexo I (tabla de potencias por banda).",
         },
         {
-          label: "Trámites en sede electrónica (MITECO / sucesores)",
-          href: "https://sede.miteco.gob.es/",
-          note: "Portal de procedimientos; la URL exacta del trámite de autorización puede cambiar: busca «radioaficionado» o «dominio público radioeléctrico» en la sede vigente.",
+          label: "Autorización de radioaficionado · Secretaría de Estado competente",
+          href: "https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx",
+          note: "Página administrativa sobre autorización de radioaficionado. La sede o URL concreta puede cambiar: busca «radioaficionado» o «dominio público radioeléctrico» en la sede ministerial vigente.",
         },
       ],
     },
@@ -117,7 +118,7 @@ export default {
         {
           label: "Tests en línea · Radio Club Quijotes (EA3RCQ)",
           href: "https://radioclubquijotes.org/qsm_quiz/reglamentacion/",
-          note: "Reglamentación y electricidad (examen y corrección inmediata). Esta app importa un subconjunto; regenerar con `node scripts/build-quijotes.mjs` en la carpeta web.",
+          note: "Reglamentación y electricidad (examen y corrección inmediata). Esta app importa un subconjunto; si se actualiza, vuelve a contrastarlo con BOE y convocatoria.",
         },
       ],
     },
@@ -173,6 +174,14 @@ export default {
       ],
     },
   ],
+  sourceHierarchy: [
+    "Fuente vinculante: BOE publicado/consolidado, convocatoria oficial de la prueba y sede administrativa vigente. Aquí se verifican potencias, bandas, plazos, trámites, sanciones y criterio real del examen.",
+    "Armonización: CEPT/ECC, especialmente T/R 61-01 para licencia CEPT temporal y T/R 61-02 para programa HAREC. Sirve para entender reconocimiento y programa, no sustituye la norma española.",
+    "Apoyo técnico y didáctico: URE, manuales, guías y cursos. Son útiles para estudiar, pero las cifras legales se contrastan con BOE y convocatoria.",
+    "Bancos históricos o de terceros: FEDI-EA, Quijotes y otros tests. Se usan para entrenar redacción tipo test; si contradicen BOE, se estudia la explicación corregida y no el dato antiguo.",
+  ],
+  lastReviewNote:
+    "Última revisión interna de fuentes y avisos críticos: 13/05/2026. Antes de presentarse, revisa BOE consolidado, convocatoria abierta y sede administrativa por si hubiera cambios posteriores.",
   /** Puntos útiles para estudiar la 2.ª prueba; no sustituyen la lectura del artículo. */
   studyAnchors: [
     {
@@ -182,7 +191,7 @@ export default {
         "La autorización de radioaficionado exige, en general, superar la prueba de capacitación (salvo supuestos de reconocimiento o reciprocidad para residentes extranjeros con HAREC u otros convenios, recogidos en el propio texto).",
         "La prueba consta de dos partes independientes: electricidad/radioelectricidad y normativa de estaciones.",
         "El programa figura como anexo II del reglamento, alineado con el anexo 6 de la Recomendación CEPT T/R 61-02.",
-        "La SETSI (hoy en el marco ministerial vigente) dicta resolución sobre condiciones de la prueba; quienes sean aptos en ambas partes reciben el certificado HAREC.",
+        "La Secretaría de Estado competente en telecomunicaciones dicta resolución sobre condiciones de la prueba; superar ambas partes acredita la capacitación y el procedimiento asociado al certificado HAREC.",
       ],
     },
     {

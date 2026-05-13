@@ -2,7 +2,7 @@
  * Descarga los tests QSM del Radio Club Quijotes (EA3RCQ) y genera
  * `data/quijotes-ea3rcq.js` (solo contenido orientado a España).
  *
- * Uso (desde la carpeta web): node scripts/build-quijotes.mjs
+ * Uso (desde la raíz del proyecto): node scripts/build-quijotes.mjs
  */
 import fs from "fs";
 import path from "path";

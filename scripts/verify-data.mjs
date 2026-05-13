@@ -1,6 +1,6 @@
 /**
  * Comprueba coherencia de datos (preguntas, temario, topic-study).
- * Ejecutar desde la carpeta web: npm run verify
+ * Ejecutar desde la raíz del proyecto: npm run verify
  */
 import topics from "../data/topics.js";
 import topicStudy from "../data/topics-study.js";
