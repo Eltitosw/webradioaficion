@@ -598,6 +598,44 @@ html.a11y-reduce-motion .opt:active {
   box-shadow: var(--shadow-sm), var(--surface-inset);
 }
 
+.quiz-practice-guide {
+  border-color: rgba(46, 184, 122, 0.28);
+  background: linear-gradient(165deg, rgba(46, 184, 122, 0.08) 0%, rgba(18, 25, 38, 0.88) 100%);
+}
+
+.quiz-practice-guide__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.85rem 1rem;
+}
+
+.quiz-practice-guide h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: #b8ebd4;
+}
+
+.quiz-practice-guide p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.quiz-practice-guide__list {
+  margin: 0.85rem 0 0;
+  padding-left: 1.25rem;
+  color: #d0d8ea;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.quiz-practice-guide__list li + li {
+  margin-top: 0.35rem;
+}
+
 .section-head {
   margin-bottom: clamp(1.35rem, 4vw, 2rem);
   padding: 0.4rem 0 0.4rem 1rem;

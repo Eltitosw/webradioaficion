@@ -98,7 +98,7 @@ const methods = [
     title: "Micro-objetivos y delimitación",
     tag: "Evitar la sobrecarga",
     body:
-      "<p>La carga cognitiva trabaja mejor con <strong>unidades pequeñas</strong> medibles (p. ej. “10 preguntas de dipolos + revisar un esquema”). Encaja con listas de verificación del temario sin leer el libro linealmente.</p><p><em>En la app:</em> cada bloque del <strong>Temario</strong> propone una <strong>micro-sesión</strong> (ganchos, repaso express, tarjetas y acceso a tests) para encajar estudio en pausas cortas.</p>",
+      "<p>La carga cognitiva trabaja mejor con <strong>unidades pequeñas</strong> medibles (p. ej. “entender ROE + revisar un esquema”). Encaja con listas de verificación del temario sin leer el libro linealmente.</p><p><em>En la app:</em> cada bloque del <strong>Temario</strong> ordena la teoría por formatos breves: ganchos, repaso express, desarrollo guiado, guía de lectura y tarjetas conceptuales.</p>",
   },
 ];
 
@@ -194,6 +194,7 @@ function syncTopicFromSession() {
     validateTopicPartConsistency();
   }
   sessionStorage.removeItem(TOPIC_PRESELECT_KEY);
+  renderQuizPracticeGuide();
 }
 
 function syncFcTopicFromSession() {
@@ -251,7 +252,10 @@ function onRoute() {
     initTemarioInteractions();
   }
   if (id === "inicio") renderUserProgress();
-  if (id === "practicar") renderQuizProgressSummary();
+  if (id === "practicar") {
+    renderQuizProgressSummary();
+    renderQuizPracticeGuide();
+  }
   if (scrollTargetId) {
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -351,16 +355,16 @@ function renderBlockStudy(blockId) {
         </section>`
       : "";
   const detailHtml = [
-    detailGroup("Ampliación guiada", study.readMore || []),
+    detailGroup("Desarrollo guiado", study.readMore || []),
     detailGroup("Cobertura FEDI-EA / programa oficial", study.fedieaSyllabus || []),
-    detailGroup("Libro/manual de examen: qué leer con atención", study.bookGuide || []),
-    detailGroup("Repaso de 10–15 min", study.quickSession || []),
+    detailGroup("Teoría explicada del bloque", study.bookGuide || []),
+    detailGroup("Sesión teórica de 10–15 min", study.quickSession || []),
   ].join("");
   const readMore = detailHtml
-    ? `<details class="temario-details"><summary>Más detalle FEDI-EA + libro (10–15 min)</summary>${detailHtml}</details>`
+    ? `<details class="temario-details"><summary>3. Teoría ampliada (10–15 min)</summary>${detailHtml}</details>`
     : "";
   const examChecklist = study.examChecklist?.length
-    ? `<details class="temario-details"><summary>Puntos de examen que suelen caer</summary><ul class="temario-list">${study.examChecklist
+    ? `<details class="temario-details"><summary>4. Puntos teóricos que conviene dominar</summary><ul class="temario-list">${study.examChecklist
         .map((x) => `<li>${escapeHtml(x)}</li>`)
         .join("")}</ul></details>`
     : "";
@@ -380,21 +384,21 @@ function renderBlockStudy(blockId) {
     : "";
   return `
         <div class="temario-study">
-          <p class="temario-method-tip"><strong>Micro-sesión (≈3–5 min):</strong> ${escapeHtml(
-            "lee los ganchos, voltea unas tarjetas del bloque y enlaza con el banco: «Practicar tests» (tipo test filtrado) o «Tarjetas del banco» (repaso espaciado solo de este tema).",
+          <p class="temario-method-tip"><strong>Ruta teórica:</strong> ${escapeHtml(
+            "primero fija los ganchos, después lee el repaso express, amplía con teoría explicada y cierra con tarjetas conceptuales. La práctica tipo test queda en la vista «Practicar».",
           )}</p>
           <details class="temario-details" open>
-            <summary>Ganchos para memorizar</summary>
+            <summary>1. Ganchos para memorizar</summary>
             <ul class="temario-list">${hooks}</ul>
           </details>
           <details class="temario-details">
-            <summary>Repaso express (≈1–3 min)</summary>
+            <summary>2. Repaso express (≈1–3 min)</summary>
             <ul class="temario-list temario-list--compact">${express}</ul>
           </details>
           ${readMore}
           ${examChecklist}
           <div class="temario-fc-block">
-            <p class="temario-fc-head">Tarjetas didácticas del bloque (volteo en esta página; distintas de «Tarjetas del banco»)</p>
+            <p class="temario-fc-head">5. Tarjetas conceptuales del bloque (volteo en esta página; distintas de «Tarjetas del banco»)</p>
             <div class="temario-fc-grid">${cards}</div>
           </div>
           ${sources}
@@ -652,6 +656,7 @@ function startQuiz() {
     $("#quiz-topic").value = "all";
   }
   quizState.topicFilter = topicFilter;
+  renderQuizPracticeGuide();
   quizState._statsCounted = new Set();
   const wrongOnly = !!$("#quiz-wrong-only")?.checked;
   let onlyPool = null;
@@ -1248,6 +1253,43 @@ function renderQuizProgressSummary() {
     `Sesiones con nota: ${u.gradedSessionsClosed || 0}`,
   ];
   el.textContent = bits.join(" · ");
+}
+
+function selectedQuizTopicForGuide() {
+  const part = $("#quiz-part")?.value || "1";
+  const topic = $("#quiz-topic")?.value || "all";
+  if (topic === "all" || !topicBelongsToPart(topic, part)) return "all";
+  return topic;
+}
+
+function renderQuizPracticeGuide() {
+  const root = $("#quiz-practice-guide");
+  if (!root) return;
+  const topic = selectedQuizTopicForGuide();
+  const generic = [
+    "Elige un tema, responde sin mirar apuntes y corrige con calma: primero entiende por qué la opción correcta encaja.",
+    "Cuando falles, vuelve al bloque correspondiente del Temario y escribe la regla en una frase.",
+    "Después repite solo las falladas o usa «Estudio · temario y libro» para enlazar explicación, temario y fuentes.",
+  ];
+  const title = topic === "all" ? "Práctica guiada · todos los temas" : `Práctica guiada · ${topicBlockLabel(topic)}`;
+  const items = topic === "all" ? generic : topicStudy[topic]?.practiceDrills || generic;
+  const topicLink =
+    topic === "all"
+      ? ""
+      : `<a class="btn btn--ghost btn--sm" href="#temario--${encodeURIComponent(topic)}">Ver teoría de este tema</a>`;
+
+  root.innerHTML = `
+    <div class="quiz-practice-guide__head">
+      <div>
+        <h2>${escapeHtml(title)}</h2>
+        <p>Este bloque pertenece a <strong>Practicar</strong>: aquí se trabaja el método test → explicación → refuerzo en Temario → repetición.</p>
+      </div>
+      ${topicLink}
+    </div>
+    <ol class="quiz-practice-guide__list">
+      ${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}
+    </ol>
+  `;
 }
 
 function bumpTopicQuizStatIfNew(q, isCorrect) {
@@ -2068,10 +2110,15 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileNav();
     syncPretestAvailability();
     $("#quiz-session")?.addEventListener("change", syncPretestAvailability);
-    $("#quiz-part")?.addEventListener("change", validateTopicPartConsistency);
+    $("#quiz-part")?.addEventListener("change", () => {
+      validateTopicPartConsistency();
+      renderQuizPracticeGuide();
+    });
+    $("#quiz-topic")?.addEventListener("change", renderQuizPracticeGuide);
     onRoute();
     renderUserProgress();
     renderQuizProgressSummary();
+    renderQuizPracticeGuide();
 
     $("#quiz-start")?.addEventListener("click", startQuiz);
     $("#quiz-next")?.addEventListener("click", finishOrAdvanceQuiz);
