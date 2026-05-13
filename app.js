@@ -4,6 +4,7 @@ import questionsData from "./data/questions.js";
 import ureElectricidad from "./data/ure-electricidad.js";
 import fediea2011 from "./data/fediea-2011.js";
 import quijotesEa3rcq from "./data/quijotes-ea3rcq.js";
+import quijotesExplanations from "./data/quijotes-explanations.js";
 import questionsExamenPropias from "./data/questions-examen-propias.js";
 import regulatory from "./data/regulatory.js";
 import { shuffle, buildQuestionList } from "./lib/quiz-session.js";
@@ -101,8 +102,21 @@ const methods = [
   },
 ];
 
+function withQuijotesExplanation(q) {
+  const text = quijotesExplanations[q.id];
+  if (!text) return q;
+  const source = typeof q.explain === "string" && q.explain.trim() ? ` ${q.explain.trim()}` : "";
+  return { ...q, explain: `${text}${source}` };
+}
+
 /** @type {typeof questionsData} */
-let allQuestions = [...questionsData, ...questionsExamenPropias, ...ureElectricidad, ...fediea2011, ...quijotesEa3rcq];
+let allQuestions = [
+  ...questionsData,
+  ...questionsExamenPropias,
+  ...ureElectricidad,
+  ...fediea2011,
+  ...quijotesEa3rcq.map(withQuijotesExplanation),
+];
 
 function $(sel, root = document) {
   return root.querySelector(sel);
@@ -329,8 +343,24 @@ function renderBlockStudy(blockId) {
   if (!study) return "";
   const hooks = (study.memoryHooks || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
   const express = (study.expressBullets || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
-  const readMore = study.readMore?.length
-    ? `<details class="temario-details"><summary>Más detalle (10–15 min)</summary><ul class="temario-list">${study.readMore
+  const detailGroup = (title, items) =>
+    items?.length
+      ? `<section class="temario-study-group">
+          <h4>${escapeHtml(title)}</h4>
+          <ul class="temario-list">${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
+        </section>`
+      : "";
+  const detailHtml = [
+    detailGroup("Ampliación guiada", study.readMore || []),
+    detailGroup("Cobertura FEDI-EA / programa oficial", study.fedieaSyllabus || []),
+    detailGroup("Libro/manual de examen: qué leer con atención", study.bookGuide || []),
+    detailGroup("Repaso de 10–15 min", study.quickSession || []),
+  ].join("");
+  const readMore = detailHtml
+    ? `<details class="temario-details"><summary>Más detalle FEDI-EA + libro (10–15 min)</summary>${detailHtml}</details>`
+    : "";
+  const examChecklist = study.examChecklist?.length
+    ? `<details class="temario-details"><summary>Puntos de examen que suelen caer</summary><ul class="temario-list">${study.examChecklist
         .map((x) => `<li>${escapeHtml(x)}</li>`)
         .join("")}</ul></details>`
     : "";
@@ -362,6 +392,7 @@ function renderBlockStudy(blockId) {
             <ul class="temario-list temario-list--compact">${express}</ul>
           </details>
           ${readMore}
+          ${examChecklist}
           <div class="temario-fc-block">
             <p class="temario-fc-head">Tarjetas didácticas del bloque (volteo en esta página; distintas de «Tarjetas del banco»)</p>
             <div class="temario-fc-grid">${cards}</div>
@@ -745,6 +776,23 @@ function renderQuestion() {
     })
     .join("");
 
+  const confidenceInline =
+    quizState.mode === "study" &&
+    quizState.studyFeedback === "confidence" &&
+    sel !== null &&
+    sel !== undefined &&
+    quizState.confidence[q.id] === undefined
+      ? `
+        <div class="confidence-inline" id="quiz-confidence" role="group" aria-label="Nivel de confianza">
+          <p class="conf-prompt"><strong>Antes de corregir:</strong> elige tu confianza.</p>
+          <div class="confidence-bar">
+            <button type="button" class="btn btn--ghost conf-btn" data-conf="0">Baja</button>
+            <button type="button" class="btn btn--ghost conf-btn" data-conf="1">Media</button>
+            <button type="button" class="btn btn--ghost conf-btn" data-conf="2">Alta</button>
+          </div>
+        </div>`
+      : "";
+
   const preBtn =
     quizState.pretest && !showOpts
       ? `<p style="margin-top:1rem"><button type="button" class="btn btn--primary" id="quiz-reveal">Mostrar opciones</button></p>`
@@ -764,6 +812,7 @@ function renderQuestion() {
     ${figureHtml}
     <h2>${escapeHtml(q.stem)}</h2>
     <div class="opts" role="radiogroup" aria-label="Opciones">${optsHtml}</div>
+    ${confidenceInline}
     ${preBtn}
     ${toolbar}
   `;
@@ -790,6 +839,14 @@ function renderQuestion() {
         delete quizState.confidence[q.id];
       }
       updateQuizStats();
+      renderQuestion();
+    });
+  });
+
+  box.querySelectorAll("[data-conf]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const v = Number.parseInt(btn.getAttribute("data-conf") || "1", 10);
+      quizState.confidence[q.id] = Number.isFinite(v) ? v : 1;
       renderQuestion();
     });
   });
@@ -830,7 +887,16 @@ function questionCountByTopic() {
 function buildTemarioSearchIndex(blockId, blockMeta, study) {
   const bits = [blockId, blockMeta.title, blockMeta.hint];
   if (study && typeof study === "object") {
-    for (const k of ["memoryHooks", "expressBullets", "readMore", "sources"]) {
+    for (const k of [
+      "memoryHooks",
+      "expressBullets",
+      "readMore",
+      "fedieaSyllabus",
+      "bookGuide",
+      "quickSession",
+      "examChecklist",
+      "sources",
+    ]) {
       const arr = /** @type {unknown} */ (study)[k];
       if (Array.isArray(arr)) {
         for (const x of arr) bits.push(String(x));
@@ -1347,22 +1413,14 @@ function renderDeepenPanel(q) {
   </div>`;
 }
 
-function showConfidencePrompt(q) {
-  const fb = $("#quiz-feedback");
-  fb.innerHTML = `
-    <p class="conf-prompt"><strong>Antes de la corrección:</strong> ¿cuán seguro estás de haber acertado?</p>
-    <div class="confidence-bar" role="group" aria-label="Nivel de confianza">
-      <button type="button" class="btn btn--ghost conf-btn" data-conf="0">Baja</button>
-      <button type="button" class="btn btn--ghost conf-btn" data-conf="1">Media</button>
-      <button type="button" class="btn btn--ghost conf-btn" data-conf="2">Alta</button>
-    </div>`;
-  fb.querySelectorAll("[data-conf]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const v = Number.parseInt(btn.getAttribute("data-conf") || "1", 10);
-      quizState.confidence[q.id] = Number.isFinite(v) ? v : 1;
-      renderQuestion();
-    });
-  });
+function focusConfidencePicker() {
+  const picker = document.getElementById("quiz-confidence");
+  if (!picker) return;
+  picker.scrollIntoView({ behavior: "smooth", block: "center" });
+  const first = picker.querySelector("[data-conf]");
+  if (first instanceof HTMLButtonElement) {
+    first.focus({ preventScroll: true });
+  }
 }
 
 function confidenceCalibrationLine(q, sel, confLevel) {
@@ -1416,7 +1474,7 @@ function showStudyFeedback(q) {
     return;
   }
   if (quizState.mode === "study" && quizState.studyFeedback === "confidence" && quizState.confidence[q.id] === undefined) {
-    showConfidencePrompt(q);
+    fb.textContent = "";
     return;
   }
   const ok = sel === q.correctIndex;
@@ -1574,8 +1632,8 @@ function finishOrAdvanceQuiz() {
       sel !== undefined &&
       quizState.confidence[q.id] === undefined
     ) {
-      $("#quiz-feedback").innerHTML =
-        "<strong>Falta un paso:</strong> indica tu confianza (baja / media / alta) antes de pasar de pregunta.";
+      $("#quiz-feedback").textContent = "";
+      focusConfidencePicker();
       return;
     }
     goNext();
@@ -1588,6 +1646,13 @@ function finishOrAdvanceQuiz() {
   if (quizState.sessionType === "teorico") {
     const missEnd = quizMissingConfidenceCount();
     if (missEnd > 0) {
+      const q = currentQ();
+      const sel = q ? quizState.answers[q.id] : undefined;
+      if (q && sel !== null && sel !== undefined && quizState.confidence[q.id] === undefined) {
+        $("#quiz-feedback").textContent = "";
+        focusConfidencePicker();
+        return;
+      }
       $("#quiz-feedback").innerHTML = `<strong>Falta confianza en ${missEnd} pregunta(s).</strong> Usa «Anterior» y marca tu nivel de seguridad antes de finalizar.`;
       return;
     }
@@ -1596,6 +1661,13 @@ function finishOrAdvanceQuiz() {
   }
   const missLibre = quizMissingConfidenceCount();
   if (missLibre > 0) {
+    const q = currentQ();
+    const sel = q ? quizState.answers[q.id] : undefined;
+    if (q && sel !== null && sel !== undefined && quizState.confidence[q.id] === undefined) {
+      $("#quiz-feedback").textContent = "";
+      focusConfidencePicker();
+      return;
+    }
     $("#quiz-feedback").innerHTML = `<strong>Falta confianza en ${missLibre} pregunta(s).</strong> Revísalas antes de cerrar la sesión.`;
     return;
   }

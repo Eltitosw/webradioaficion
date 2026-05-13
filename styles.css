@@ -1198,6 +1198,14 @@ select {
   font-size: 0.95rem;
 }
 
+.confidence-inline {
+  margin-top: 0.95rem;
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(107, 163, 245, 0.28);
+  background: rgba(107, 163, 245, 0.08);
+}
+
 .confidence-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1209,6 +1217,17 @@ select {
   min-width: 5.5rem;
   touch-action: manipulation;
   transition: transform 0.12s var(--ease-out), filter 0.15s ease;
+}
+
+@media (max-width: 540px) {
+  .confidence-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .conf-btn {
+    width: 100%;
+  }
 }
 
 .conf-btn:active {
@@ -2021,6 +2040,17 @@ html.a11y-reduce-motion .flashcard__inner {
   color: #d0d8ea;
   font-size: 0.92rem;
   line-height: 1.5;
+}
+
+.temario-study-group {
+  margin: 0 0 0.8rem;
+}
+
+.temario-study-group h4 {
+  margin: 0 0 0.4rem;
+  font-size: 0.84rem;
+  letter-spacing: 0.01em;
+  color: var(--focus);
 }
 
 .temario-list--compact li {

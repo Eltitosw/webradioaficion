@@ -165,19 +165,26 @@ export default [
     part: 1,
     topicId: "antenas-prop",
     stem: "En el siguiente gráfico, si la antena emite tres señales en distintas frecuencias, ¿cuál tiene frecuencia superior a la frecuencia crítica? (ver gráfico en FEDI-EA)",
+    stemFigure: "images/quiz/fedi-ag-013-critical-frequency.svg",
+    stemFigureAlt:
+      "Esquema de propagación con tres rayos: las señales 1 y 2 se refractan en la ionosfera y la señal 3 atraviesa la capa.",
     options: ["Las señales 1 y 2", "La señal 1", "La señal 3", "Las señales 1 y 3"],
     correctIndex: 2,
-    explain: "Por encima de la frecuencia crítica la ionosfera no refleja de forma útil; suele asociarse a la curva más alta en frecuencia del dibujo. Verifica con la figura. FEDI-EA.",
+    explain:
+      "La frecuencia crítica es el límite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometría. En el esquema, la señal 3 atraviesa la capa en lugar de regresar: por eso es la que está por encima de la frecuencia crítica. FEDI-EA.",
   },
   {
     id: "fedi-ag-014",
     part: 1,
     topicId: "componentes",
     stem: "En el siguiente circuito, en régimen permanente, ¿qué tensión tiene el condensador C? (ver circuito en FEDI-EA)",
+    stemFigure: "images/quiz/fedi-ag-014-capacitor-divider.svg",
+    stemFigureAlt:
+      "Divisor de tensión de 12 voltios con una caída de 3 voltios en la rama superior y condensador en paralelo con la rama inferior de 9 voltios.",
     options: ["12", "3", "0", "9"],
     correctIndex: 3,
     explain:
-      "En el esquema habitual de este enunciado (12 V con divisor y C en derivación), en régimen permanente el condensador queda a la tensión de la rama en paralelo; suele ser 9 V (divisor 9 V + 3 V). Comprueba siempre con la figura en FEDI-EA.",
+      "En corriente continua y en régimen permanente, el condensador ideal se comporta como circuito abierto: no circula corriente por él, pero queda cargado a la tensión entre sus bornes. Como está en paralelo con la rama inferior del divisor, su tensión es la de esa rama: 9 V. FEDI-EA.",
   },
   {
     id: "fedi-ag-015",
@@ -198,9 +205,13 @@ export default [
     part: 1,
     topicId: "receptores-emisores",
     stem: "En el diagrama de bloques de un receptor elemental de conversión directa, el bloque con interrogantes representa un: (ver diagrama en FEDI-EA)",
+    stemFigure: "images/quiz/fedi-ag-016-direct-conversion.svg",
+    stemFigureAlt:
+      "Diagrama de receptor de conversión directa: antena y radiofrecuencia entran a un mezclador, un bloque con interrogantes alimenta el mezclador y la salida pasa a audiofrecuencia.",
     options: ["Amplificador RF", "Filtro paso banda", "Oscilador local", "Variador de potencia"],
     correctIndex: 2,
-    explain: "En muchos esquemas de DC receiver el LO alimenta el mezclador/product detector; confirma con la figura. FEDI-EA.",
+    explain:
+      "Un receptor de conversión directa mezcla la señal de RF recibida con una señal generada localmente para obtener directamente audio o una frecuencia muy baja. El bloque que alimenta al mezclador debe ser, por tanto, el oscilador local. FEDI-EA.",
   },
   {
     id: "fedi-ag-017",

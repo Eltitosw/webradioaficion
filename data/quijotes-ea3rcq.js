@@ -581,7 +581,7 @@ export default [
     topicId: "electricidad-basica",
     stem: "Indique el orden de los elementos de una fuente de alimentación lineal:",
     options: [
-      "A Transformador, B Rectificador, C Regulador, D Filtro.",
+      "A Transformador, B Rectificador, C Filtro, D Regulador.",
       "A Rectificador, B Transformador, C Filtro, D Regulador.",
       "A Regulador, B Filtro, C Transformador, D Rectificador.",
       "A Filtro, B Transformador, C Regulador, D Rectificador.",

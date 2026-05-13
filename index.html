@@ -402,14 +402,22 @@
         el.hidden = false;
         el.textContent = msg;
       }
-      window.addEventListener("unhandledrejection", function () {
-        show("Error al cargar módulos (import). Sirve la carpeta web por HTTP y recarga; revisa la consola (F12).");
+      window.addEventListener("unhandledrejection", function (ev) {
+        var r = ev && ev.reason ? String(ev.reason) : "";
+        var mime = /MIME|javascript|module/i.test(r);
+        show(
+          mime
+            ? "El servidor no está sirviendo los .js como JavaScript (MIME). Sube toda la carpeta web y revisa la configuración del hosting (ver README)."
+            : "Error al cargar módulos (import). Sirve la carpeta web por HTTP/HTTPS, no abras el archivo desde el disco; revisa la consola (F12).",
+        );
       });
       window.addEventListener("error", function (e) {
         var fn = e && e.filename ? String(e.filename) : "";
         var msg = e && e.message ? String(e.message) : "";
-        if (/app\.js|failed to load module|import/i.test(fn + " " + msg)) {
-          show("No se pudo cargar el código de la app. Usa un servidor HTTP en la carpeta web (ver README).");
+        if (/app\.js|failed to load module|import|MIME/i.test(fn + " " + msg)) {
+          show(
+            "No se pudo cargar el código de la app. Sube app.js, lib/, data/ y styles.css junto al index; sirve por HTTP/HTTPS (ver README).",
+          );
         }
       });
     })();
