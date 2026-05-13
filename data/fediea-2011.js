@@ -39,7 +39,8 @@ export default [
     stem: 'El llamado "detector de envolvente" se implementa en receptores para señales con modulación de:',
     options: ["Fase (PM)", "Amplitud (AM)", "Frecuencia (FM)", "Banda lateral única"],
     correctIndex: 1,
-    explain: "La envolvente es propia de la AM. FEDI-EA.",
+    explain:
+      "La envolvente es la variación de amplitud que contiene la información en AM. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio; no sirve como detector principal de FM, PM o SSB. FEDI-EA.",
   },
   {
     id: "fedi-ag-004",
@@ -290,7 +291,8 @@ export default [
     stem: "Indique el valor de la resistencia cuyos colores son, en este orden: violeta, verde, rojo, oro:",
     options: ["7.500 Ω y 5 %", "75 Ω y 10 %", "570 Ω y 1 %", "No se puede calcular"],
     correctIndex: 0,
-    explain: "7-5-×10² → 7500 Ω; oro = 5 %. FEDI-EA.",
+    explain:
+      "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. FEDI-EA.",
   },
   {
     id: "fedi-ag-023",
@@ -346,7 +348,8 @@ export default [
       "La potencia en ausencia de modulación",
     ],
     correctIndex: 0,
-    explain: "Armónicos a nf₀. FEDI-EA.",
+    explain:
+      "Una radiación armónica aparece en múltiplos enteros de la frecuencia fundamental: 2f₀, 3f₀, 4f₀, etc. Es radiación no esencial y se controla con filtrado para no interferir fuera de la frecuencia principal. FEDI-EA.",
   },
   {
     id: "fedi-ag-027",

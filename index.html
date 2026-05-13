@@ -44,8 +44,10 @@
         <a href="#inicio" data-nav="inicio">Inicio</a>
         <a href="#temario" data-nav="temario">Temario</a>
         <a href="#normativa" data-nav="normativa">Normativa</a>
-        <a href="#metodologia" data-nav="metodologia">Metodología</a>
         <a href="#practicar" data-nav="practicar">Practicar</a>
+        <a href="#examen" data-nav="examen">Examen</a>
+        <a href="#cuaderno" data-nav="cuaderno">Cuaderno</a>
+        <a href="#metodologia" data-nav="metodologia">Método</a>
         <a href="#tarjetas" data-nav="tarjetas">Tarjetas</a>
       </nav>
       <details class="a11y-toolbar" id="a11y-panel">
@@ -100,8 +102,8 @@
         </p>
         <div class="hero__actions">
           <a class="btn btn--primary" href="#practicar" data-nav="practicar">Empezar práctica</a>
+          <a class="btn btn--ghost" href="#examen" data-nav="examen">Ver preparación</a>
           <a class="btn btn--ghost" href="#normativa" data-nav="normativa">Ver normativa BOE</a>
-          <a class="btn btn--ghost" href="#metodologia" data-nav="metodologia">Ver métodos con evidencia</a>
         </div>
         <ul class="hero__facts" role="list">
           <li><strong>2 pruebas</strong> (técnica + reglamento), 30 preguntas cada una en el examen real.</li>
@@ -126,8 +128,16 @@
             </li>
             <li>
               <a href="#practicar" data-nav="practicar"><strong>Practicar</strong></a>
+              — preguntas por tema, aleatorizadas, con modos de estudio: corrección inmediata, seguridad y temario/libro.
+            </li>
+            <li>
+              <a href="#examen" data-nav="examen"><strong>Examen</strong></a>
+              — simulacro de 30 preguntas, preparación por prueba e indicador de apto orientativo.
+            </li>
+            <li>
+              <a href="#cuaderno" data-nav="cuaderno"><strong>Cuaderno</strong></a>
               y <a href="#tarjetas" data-nav="tarjetas"><strong>Tarjetas</strong></a>
-              — tests en modo libre o <strong>examen tipo test</strong> (30 preguntas al azar, 30 min en examen), con variantes de estudio (inmediato, confianza o temario/libro), más tarjetas con repaso espaciado.
+              — errores activos, repaso inteligente y repaso espaciado.
             </li>
           </ol>
         </div>
@@ -151,8 +161,8 @@
         <h1 id="titulo-temario">Temario orientativo</h1>
         <p class="section-head__sub">
           Esta vista queda para <strong>teoría</strong>: cada bloque ordena el aprendizaje por formatos
-          (<strong>ganchos</strong>, <strong>repaso express</strong>, <strong>teoría ampliada</strong>, <strong>apuntes explicados</strong>
-          y <strong>tarjetas conceptuales</strong>). Los tests y ejercicios están en <strong>Practicar</strong>.
+          (<strong>idea clave</strong>, <strong>repaso express</strong>, <strong>teoría explicada</strong>, <strong>ejemplos guiados</strong>,
+          <strong>programa de examen</strong> y <strong>tarjetas conceptuales</strong>). Los tests y ejercicios están en <strong>Practicar</strong>.
           Los textos condensan el programa tipo examen (HAREC / reglamento BOE, CEPT, URE);
           contrasta siempre con el BOE y tu manual.
         </p>
@@ -168,8 +178,9 @@
       <div class="section-head">
         <h1 id="titulo-metodo">Aprendizaje con respaldo científico</h1>
         <p class="section-head__sub">
-          No son “trucos mágicos”: son estrategias con meta-análisis y revisiones en revistas de psicología
-          y educación. En la práctica, <strong>combinarlas</strong> suele dar más ventaja que usar solo una.
+          No son “trucos mágicos”: son estrategias prácticas para estudiar el examen de radioaficionado con menos
+          relectura pasiva y más recuperación, corrección, espaciado y simulación. Úsalas como una ruta:
+          <strong>entender → practicar → explicar → espaciar → simular examen</strong>.
         </p>
       </div>
       <div class="method-grid" id="method-root"></div>
@@ -189,23 +200,10 @@
           Incluye preguntas base, un <strong>banco propio</strong> redactado solo con criterio de examen (BOE, CEPT, URE), <strong>URE · Electricidad</strong> (30), <strong>FEDI-EA 22/10/2011</strong> (60 ítems)
           y un bloque importado desde
           <a href="https://radioclubquijotes.org/qsm_quiz/reglamentacion/" rel="noopener noreferrer">Radio Club Quijotes (EA3RCQ)</a>
-          (filtrado a contenido orientado a España). El modo <strong>Examen tipo test</strong> sigue el modelo habitual de examen: bloque de 30 preguntas distintas cada vez, sin pistas en modo examen y resultado al cierre.
-          En estudio puedes elegir <strong>corrección inmediata</strong>, <strong>confianza antes de corregir</strong> o <strong>temario y libro</strong> (explicación literal del banco + enlaces), siempre en formato test y con guía práctica según el tema elegido.
+          (filtrado a contenido orientado a España). En cada sesión se <strong>aleatorizan preguntas y respuestas</strong> para que no memorices posiciones.
+          Esta vista queda para practicar: por tema, por parte, en intercalado o con feedback. Para simulacro completo y preparación final usa <strong>Examen</strong>; para errores pendientes usa <strong>Cuaderno</strong>.
         </p>
       </div>
-      <details class="exam-hint">
-        <summary>Cómo funciona el examen tipo test</summary>
-        <div class="exam-hint__body">
-          <p>
-            Como en muchos exámenes oficiales en formato test: <strong>un bloque acotado de preguntas</strong>, en modo examen
-            <strong>no ves si acertaste</strong> hasta el final y puedes <strong>volver atrás</strong> para cambiar la opción marcada.
-            Aquí son <strong>30 preguntas</strong> elegidas al azar del banco (sin repetir en la misma sesión). En examen hay
-            <strong>30 minutos</strong> de tiempo. El criterio de apto del examen de radioaficionado en España suele publicarse como
-            <strong>50 % por prueba</strong>; lo usamos como referencia (15 aciertos de 30). Comprueba siempre la convocatoria oficial.
-            En <strong>estudio</strong> puedes usar corrección al momento, <strong>confianza antes de corregir</strong> o <strong>temario y libro</strong> (tras cada respuesta ves la explicación literal del banco y enlaces al bloque del temario y al material URE).
-          </p>
-        </div>
-      </details>
       <p id="quiz-progress-summary" class="quiz-progress-summary muted" aria-live="polite"></p>
       <div id="quiz-practice-guide" class="quiz-practice-guide panel" aria-live="polite"></div>
       <div class="panel">
@@ -230,9 +228,9 @@
         </div>
         <div class="panel__row">
           <label for="quiz-mode">Modo</label>
-          <select id="quiz-mode" title="Estudio: corrección al responder. Confianza: metacognición antes de la corrección. Temario y libro: explicación literal del banco y enlaces al temario y URE. Examen: sin corrección hasta el final.">
+          <select id="quiz-mode" title="Estudio: corrección al responder. Mide tu seguridad: marcas baja/media/alta antes de ver el resultado. Temario y libro: explicación literal del banco y enlaces al temario y URE. Examen: sin corrección hasta el final.">
             <option value="study">Estudio · corrección inmediata</option>
-            <option value="study_confidence">Estudio · confianza antes de corregir</option>
+            <option value="study_confidence">Estudio · mide tu seguridad</option>
             <option value="study_deepen">Estudio · temario y libro (explicación literal + enlaces)</option>
             <option value="exam">Examen · corrección al final</option>
           </select>
@@ -278,6 +276,38 @@
         </div>
         <div id="quiz-feedback" class="feedback" role="status"></div>
       </div>
+    </section>
+
+    <section id="view-examen" class="view" hidden aria-labelledby="titulo-examen" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-examen">Examen</h1>
+        <p class="section-head__sub">
+          Aquí se mide preparación: simulacros de 30 preguntas por prueba, resultado al cierre e indicador de si conviene presentarse o seguir corrigiendo puntos débiles.
+        </p>
+      </div>
+      <details class="exam-hint" open>
+        <summary>Cómo funciona el examen tipo test</summary>
+        <div class="exam-hint__body">
+          <p>
+            Como en muchos exámenes oficiales en formato test: <strong>un bloque acotado de preguntas</strong>, en modo examen
+            <strong>no ves si acertaste</strong> hasta el final y puedes <strong>volver atrás</strong> para cambiar la opción marcada.
+            Aquí son <strong>30 preguntas</strong> elegidas al azar del banco (sin repetir en la misma sesión). En examen hay
+            <strong>30 minutos</strong> de tiempo. El criterio de apto del examen de radioaficionado en España suele publicarse como
+            <strong>50 % por prueba</strong>; lo usamos como referencia (15 aciertos de 30). Comprueba siempre la convocatoria oficial.
+          </p>
+        </div>
+      </details>
+      <section id="exam-readiness-root" class="exam-coach panel" aria-labelledby="exam-readiness-title"></section>
+    </section>
+
+    <section id="view-cuaderno" class="view" hidden aria-labelledby="titulo-cuaderno" aria-hidden="true">
+      <div class="section-head">
+        <h1 id="titulo-cuaderno">Cuaderno de errores</h1>
+        <p class="section-head__sub">
+          Reúne fallos activos, errores con seguridad alta y el repaso inteligente. Úsalo para decidir qué corregir antes de volver a practicar o simular examen.
+        </p>
+      </div>
+      <section id="error-notebook-root" class="exam-coach panel" aria-labelledby="error-notebook-title"></section>
     </section>
 
     <section id="view-tarjetas" class="view" hidden aria-labelledby="titulo-tarjetas" aria-hidden="true">

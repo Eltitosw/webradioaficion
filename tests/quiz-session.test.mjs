@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { shuffle, buildQuestionList } from "../lib/quiz-session.js";
+import { shuffle, buildQuestionList, shuffleQuestionOptions } from "../lib/quiz-session.js";
 
 const sample = [
   { id: "a", part: 1, topicId: "t1" },
@@ -15,6 +15,23 @@ test("shuffle conserva elementos", () => {
     new Set(s.map((x) => x.id)),
     new Set(["a", "b", "c"]),
   );
+});
+
+test("shuffleQuestionOptions conserva la respuesta correcta", () => {
+  const original = {
+    id: "q1",
+    part: 1,
+    topicId: "t1",
+    options: ["a", "b", "c", "d"],
+    optionExplanations: ["A", "B", "C", "D"],
+    correctIndex: 1,
+  };
+  const shuffled = shuffleQuestionOptions(original, () => 0);
+  assert.notEqual(shuffled, original);
+  assert.deepEqual(original.options, ["a", "b", "c", "d"]);
+  assert.deepEqual(shuffled.options, ["b", "c", "d", "a"]);
+  assert.deepEqual(shuffled.optionExplanations, ["B", "C", "D", "A"]);
+  assert.equal(shuffled.options[shuffled.correctIndex], "b");
 });
 
 test("buildQuestionList filtra por parte", () => {

@@ -7,7 +7,16 @@ import quijotesEa3rcq from "./data/quijotes-ea3rcq.js";
 import quijotesExplanations from "./data/quijotes-explanations.js";
 import questionsExamenPropias from "./data/questions-examen-propias.js";
 import regulatory from "./data/regulatory.js";
-import { shuffle, buildQuestionList } from "./lib/quiz-session.js";
+import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
+import {
+  buildExamReadiness,
+  buildRecommendedPlan,
+  buildSmartReviewQuestionIds,
+  buildTopicDiagnostics,
+  errorNotebookEntries,
+  isActiveError,
+  updateErrorNotebookWithResult,
+} from "./lib/learning-coach.js";
 
 const STORAGE_KEY = "radioexam_card_schedule_v1";
 const TOPIC_PRESELECT_KEY = "radioexam_practicar_topic";
@@ -15,6 +24,7 @@ const FC_TOPIC_PRESELECT_KEY = "radioexam_tarjetas_topic";
 const QUIZ_PREFS_KEY = "radioexam_quiz_prefs_v1";
 const LAST_WRONG_SESSION_KEY = "radioexam_last_wrong_ids_v1";
 const QUIZ_TOPIC_STATS_KEY = "radioexam_topic_quiz_stats_v1";
+const ERROR_NOTEBOOK_KEY = "radioexam_error_notebook_v1";
 /** Resumen global, racha y cobertura del banco (solo este navegador). */
 const USER_STATS_KEY = "radioexam_user_stats_v1";
 
@@ -24,6 +34,8 @@ const VIEW_HEADINGS = {
   normativa: "titulo-normativa",
   metodologia: "titulo-metodo",
   practicar: "titulo-practicar",
+  examen: "titulo-examen",
+  cuaderno: "titulo-cuaderno",
   tarjetas: "titulo-tarjetas",
 };
 
@@ -33,6 +45,8 @@ const DOC_TITLES = {
   normativa: "RadioExamen · Normativa BOE y enlaces",
   metodologia: "RadioExamen · Metodología de estudio",
   practicar: "RadioExamen · Practicar test",
+  examen: "RadioExamen · Simulacro de examen",
+  cuaderno: "RadioExamen · Cuaderno de errores",
   tarjetas: "RadioExamen · Tarjetas",
 };
 
@@ -42,63 +56,77 @@ const ROUTE_ANNOUNCE = {
   normativa: "Normativa",
   metodologia: "Metodología",
   practicar: "Practicar",
+  examen: "Examen",
+  cuaderno: "Cuaderno de errores",
   tarjetas: "Tarjetas",
 };
 
 const methods = [
   {
-    title: "Práctica de recuperación activa (self-testing)",
+    title: "Ruta recomendada: entender, practicar, corregir y repetir",
+    tag: "Plan base",
+    body:
+      "<p>El ciclo más eficiente no es leer mucho seguido: es <strong>comprender una pieza pequeña</strong>, intentar recuperarla, corregir el fallo y volver a verla unos días después.</p><h4>Cómo aplicarlo</h4><ul><li><strong>1.</strong> Entra en <strong>Temario</strong> y estudia un bloque: idea clave, repaso express, teoría explicada y ejemplos.</li><li><strong>2.</strong> Pasa a <strong>Practicar</strong> con ese mismo tema en modo estudio.</li><li><strong>3.</strong> Lee el feedback completo: tu respuesta, correcta, por qué encaja y explicación.</li><li><strong>4.</strong> Guarda mentalmente el error como una regla corta y repásalo con <strong>Tarjetas</strong>.</li><li><strong>5.</strong> Cuando ya aciertes por tema, usa <strong>Intercalado</strong> y después <strong>Examen</strong>.</li></ul><p><strong>Evita:</strong> saltar al test sin leer el bloque; eso entrena reconocimiento de opciones, no comprensión.</p>",
+  },
+  {
+    title: "Práctica de recuperación activa",
     tag: "Efecto testing",
     body:
-      "<p>Responder preguntas sin apuntes obliga al cerebro a <strong>recuperar</strong>, no solo a reconocer. Las revisiones muestran que esto suele superar a releer pasivamente el mismo tiempo.</p><p><em>En la app:</em> modo <strong>Estudio</strong> con corrección inmediata, <strong>Estudio con confianza</strong> (metacognición), <strong>Estudio temario y libro</strong> (explicación literal del banco + enlaces al temario y material URE) o <strong>Examen</strong> para simular carga cognitiva. El modo <strong>Examen tipo test</strong> (30 ítems al azar, reloj en examen) reproduce el formato habitual de examen oficial. Los ítems adicionales del proyecto van en <code>data/questions-examen-propias.js</code> (solo temática típica de examen, con <code>sourceRef</code> al BOE/CEPT/URE).</p>",
+      "<p>Responder sin mirar apuntes obliga al cerebro a <strong>recuperar</strong>. Ese esfuerzo fija más que releer, porque comprueba si realmente puedes traer la idea cuando el examen la pida.</p><h4>Cómo aplicarlo</h4><ul><li>Antes de mirar opciones, di en voz baja qué fórmula, definición o norma crees que aplica.</li><li>Marca la respuesta y corrige al momento en modo <strong>Estudio</strong>.</li><li>Si fallas, no memorices la letra: escribe la regla que habría descartado el distractor.</li></ul><p><strong>Señal de dominio:</strong> puedes explicar por qué tres opciones son falsas, no solo reconocer la verdadera.</p>",
   },
   {
-    title: "Juicio de aprendizaje y confianza (metacognición)",
-    tag: "Calibración",
+    title: "Feedback elaborado: aprender del acierto y del fallo",
+    tag: "Corrección útil",
     body:
-      "<p>Indicar <strong>cuánta confianza</strong> tienes en tu respuesta <em>antes</em> de ver si es correcta obliga a estimar qué dominas de verdad; con feedback después suele mejorar la calibración y, en varios diseños experimentales con test, también el aprendizaje.</p><p><em>En la app:</em> modo <strong>Estudio · confianza antes de corregir</strong> (mismo formato tipo test; la corrección y el color de acierto/error aparecen tras marcar baja/media/alta).</p>",
+      "<p>El feedback más útil no dice solo “correcto” o “incorrecto”: muestra <strong>qué criterio decidía la pregunta</strong>. En radioaficionado suele ser una unidad, una relación, un bloque de equipo, una norma o un procedimiento.</p><h4>Cómo aplicarlo</h4><ul><li>Tras cada respuesta, lee primero <strong>tu opción</strong> y la <strong>respuesta correcta</strong>.</li><li>Busca la diferencia exacta: unidad, frecuencia, órgano competente, etapa del circuito o palabra legal.</li><li>Reformula la explicación en una frase propia.</li></ul><p><strong>Evita:</strong> avanzar rápido tras acertar. Un acierto con duda todavía necesita explicación.</p>",
   },
   {
-    title: "Espaciado (spacing)",
-    tag: "Retención a largo plazo",
+    title: "Mide tu seguridad antes de corregir",
+    tag: "Metacognición",
     body:
-      "<p>Repartir sesiones en el tiempo vence con frecuencia al “atracón” del mismo día: la memoria consolida con pausas. Los meta-análisis de espaciado miden beneficios robustos según intervalo y materia.</p><p><em>En la app:</em> tarjetas con botones <strong>Lo sabía / No</strong> que calculan la próxima revisión (1 · 3 · 7 días, simplificado).</p>",
+      "<p>Medir tu seguridad antes del feedback entrena a distinguir <strong>lo que sabes</strong> de lo que solo te suena. Eso evita llegar al examen con falsa seguridad.</p><h4>Cómo aplicarlo</h4><ul><li>Usa <strong>Estudio · mide tu seguridad</strong> cuando ya hayas visto un bloque al menos una vez.</li><li>Prioriza los fallos con seguridad alta: son errores peligrosos y van primero al repaso.</li><li>Si aciertas con seguridad baja, vuelve al temario para convertir intuición en regla.</li></ul><p><strong>Objetivo:</strong> que los aciertos importantes pasen de “me suena” a “sé justificarlo”.</p>",
   },
   {
-    title: "Intercalado (interleaving)",
-    tag: "Contrastar conceptos",
+    title: "Espaciado y tarjetas",
+    tag: "Retención",
     body:
-      "<p>Mezclar tipos de problemas (p. ej. AM vs FM vs ROE) fuerza a <strong>elegir la regla correcta</strong> en cada intento, no a repetir el mismo patrón en racha. Suele sentirse más difícil al principio, pero mejora la discriminación.</p><p><em>En la app:</em> selector <strong>Intercalado</strong> en Practicar.</p>",
+      "<p>Estudiar una vez no basta. La memoria mejora cuando vuelves al concepto justo antes de olvidarlo, con intervalos crecientes.</p><h4>Cómo aplicarlo</h4><ul><li>Usa <strong>Tarjetas</strong> para fórmulas, unidades, códigos Q, organismos, indicativos y relaciones rápidas.</li><li>Marca <strong>Lo sabía</strong> solo si puedes responder sin mirar y explicar el porqué.</li><li>Marca <strong>No</strong> si acertaste por descarte débil o por memoria visual de la opción.</li></ul><p><strong>Evita:</strong> repasar siempre lo fácil; el espaciado debe traer de vuelta lo que cuesta.</p>",
   },
   {
-    title: "Dificultades deseables (desirable difficulties)",
-    tag: "Bjork & Bjork",
+    title: "Intercalado: mezclar temas para discriminar",
+    tag: "Contraste",
     body:
-      "<p>Lo cómodo no siempre es lo que más fija: un poco de fricción (olvidar casi, equivocarse, esperar feedback) puede aumentar el aprendizaje duradero si hay feedback de calidad después.</p><p><em>En la app:</em> modo <strong>Examen</strong> retrasa la corrección para imitar esa fricción controlada.</p>",
+      "<p>Cuando haces muchas preguntas iguales seguidas, aprendes el patrón local. Cuando mezclas electricidad, modulación, antenas y normativa, entrenas la habilidad real del examen: <strong>elegir la regla correcta</strong>.</p><h4>Cómo aplicarlo</h4><ul><li>Primero domina cada tema por separado.</li><li>Después usa <strong>Intercalado</strong> para mezclar 1.ª y 2.ª prueba.</li><li>Si fallas por confundir bloques, vuelve al temario y compara dos conceptos parecidos.</li></ul><p><strong>Ejemplo:</strong> no estudies ROE, MUF y dB como palabras sueltas; aprende qué pregunta pertenece a línea, ionosfera o relación logarítmica.</p>",
   },
   {
-    title: "Preguntas previas (prequestions)",
+    title: "Preguntas previas",
     tag: "Activar hipótesis",
     body:
-      "<p>Intentar responder <strong>antes</strong> de estudiar el tema activa esquemas mentales y mejora en varios experimentos la comprensión posterior, incluso si fallas.</p><p><em>En la app:</em> casilla <strong>Precueba</strong>: escribe tu hipótesis y luego revela opciones.</p>",
+      "<p>Intentar responder antes de ver opciones activa conocimientos previos. Aunque falles, el feedback posterior se pega mejor porque ya tenías una hipótesis que corregir.</p><h4>Cómo aplicarlo</h4><ul><li>Activa <strong>Precueba</strong> en sesiones libres.</li><li>Escribe una respuesta corta: fórmula, palabra clave o criterio legal.</li><li>Revela opciones y comprueba si tu hipótesis apuntaba al concepto correcto.</li></ul><p><strong>Úsalo especialmente</strong> al empezar un bloque nuevo o cuando repitas falladas.</p>",
   },
   {
-    title: "Generación y autoexplicación",
+    title: "Autoexplicación y generación",
     tag: "Más allá de la letra",
     body:
-      "<p>Explicar <em>por qué</em> es la respuesta (en voz alta o por escrito) enlaza ideas nuevas con las que ya tienes. Es barato y muy alineado con el artículo EA1CN: ir del test al libro y viceversa.</p><p><em>En la app:</em> tras cada ítem, lee la explicación y reformúlala con tus palabras antes de seguir.</p>",
+      "<p>Explicar con tus palabras obliga a organizar el concepto. En examen, esa organización ayuda a detectar trampas de redacción.</p><h4>Cómo aplicarlo</h4><ul><li>Después del feedback, completa la frase: “La respuesta es esta porque...”.</li><li>Si hay fórmula, di qué significa cada magnitud y unidad.</li><li>Si hay normativa, separa organismo, documento y consecuencia práctica.</li></ul><p><strong>Evita:</strong> copiar literalmente la explicación sin convertirla en una regla que puedas recordar.</p>",
   },
   {
-    title: "Doble codificación (palabra + imagen)",
+    title: "Doble codificación: texto + imagen",
     tag: "Dual coding",
     body:
-      "<p>Combinar canal verbal con esquema (diagrama de bloques, flechas en la antena…) crea más rutas de acceso a la memoria. El libro URE es fuerte en figuras: úsalas como ancla, no solo el texto.</p>",
+      "<p>Los esquemas reducen carga mental: una onda, un detector, un divisor o un diagrama de radiación se entiende mejor si conectas palabra e imagen.</p><h4>Cómo aplicarlo</h4><ul><li>En preguntas con figura, mira primero qué representa cada eje, flecha, bloque o punto marcado.</li><li>Describe la imagen en una frase antes de responder.</li><li>Después conecta la explicación con el esquema: qué elemento decide la respuesta.</li></ul><p><strong>Ejemplo:</strong> en osciloscopio, horizontal suele ser tiempo y vertical tensión; en antenas, el lóbulo o la línea marcada suele dar la pista.</p>",
   },
   {
-    title: "Micro-objetivos y delimitación",
-    tag: "Evitar la sobrecarga",
+    title: "Simulación de examen",
+    tag: "Transferencia",
     body:
-      "<p>La carga cognitiva trabaja mejor con <strong>unidades pequeñas</strong> medibles (p. ej. “entender ROE + revisar un esquema”). Encaja con listas de verificación del temario sin leer el libro linealmente.</p><p><em>En la app:</em> cada bloque del <strong>Temario</strong> ordena la teoría por formatos breves: ganchos, repaso express, desarrollo guiado, guía de lectura y tarjetas conceptuales.</p>",
+      "<p>Cuando ya has entrenado por temas, necesitas practicar en condiciones parecidas al examen: tiempo, mezcla, sin feedback inmediato y resultado al final.</p><h4>Cómo aplicarlo</h4><ul><li>Usa <strong>Examen tipo test</strong> con 30 preguntas.</li><li>Hazlo sin consultar temario durante la sesión.</li><li>Al terminar, revisa falladas y vuelve a <strong>Practicar</strong> con solo falladas.</li></ul><p><strong>Momento adecuado:</strong> no al inicio. Úsalo cuando tu estudio por bloques ya tenga base y quieras medir preparación.</p>",
+  },
+  {
+    title: "Micro-objetivos y control de carga",
+    tag: "Evitar saturación",
+    body:
+      "<p>El temario mezcla técnica, normativa y operación. Si intentas abarcarlo todo en una sentada, baja la calidad del recuerdo.</p><h4>Cómo aplicarlo</h4><ul><li>Trabaja objetivos pequeños: “Ohm y potencia”, “ROE y adaptación”, “CEPT y HAREC”, “códigos Q”.</li><li>Cierra cada sesión con una decisión: repetir, pasar a tarjetas o hacer test.</li><li>Si aparecen muchos fallos seguidos, vuelve a teoría explicada en vez de acumular preguntas.</li></ul><p><strong>Regla práctica:</strong> una sesión buena deja claro qué sabes, qué no sabes y cuál es el siguiente bloque.</p>",
   },
 ];
 
@@ -234,7 +262,7 @@ function onRoute() {
     const sub = raw.slice("normativa--".length);
     id = "normativa";
     if (sub) scrollTargetId = sub;
-  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "tarjetas"].includes(raw)) {
+  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas"].includes(raw)) {
     id = "inicio";
   }
   if (id !== "practicar") clearExamTimer();
@@ -256,6 +284,7 @@ function onRoute() {
     renderQuizProgressSummary();
     renderQuizPracticeGuide();
   }
+  if (id === "examen" || id === "cuaderno") renderExamCoach();
   if (scrollTargetId) {
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -355,16 +384,16 @@ function renderBlockStudy(blockId) {
         </section>`
       : "";
   const detailHtml = [
-    detailGroup("Desarrollo guiado", study.readMore || []),
-    detailGroup("Cobertura FEDI-EA / programa oficial", study.fedieaSyllabus || []),
-    detailGroup("Teoría explicada del bloque", study.bookGuide || []),
-    detailGroup("Sesión teórica de 10–15 min", study.quickSession || []),
+    detailGroup("A. Teoría explicada del bloque", study.bookGuide || []),
+    detailGroup("B. Ejemplos guiados y aplicación", study.quickSession || []),
+    detailGroup("C. Ampliación conceptual", study.readMore || []),
+    detailGroup("D. Programa de examen que cubre", study.fedieaSyllabus || []),
   ].join("");
   const readMore = detailHtml
-    ? `<details class="temario-details"><summary>3. Teoría ampliada (10–15 min)</summary>${detailHtml}</details>`
+    ? `<details class="temario-details"><summary>3. Aprender el tema: teoría + ejemplos + programa</summary>${detailHtml}</details>`
     : "";
   const examChecklist = study.examChecklist?.length
-    ? `<details class="temario-details"><summary>4. Puntos teóricos que conviene dominar</summary><ul class="temario-list">${study.examChecklist
+    ? `<details class="temario-details"><summary>4. Errores típicos y puntos de examen</summary><ul class="temario-list">${study.examChecklist
         .map((x) => `<li>${escapeHtml(x)}</li>`)
         .join("")}</ul></details>`
     : "";
@@ -385,10 +414,10 @@ function renderBlockStudy(blockId) {
   return `
         <div class="temario-study">
           <p class="temario-method-tip"><strong>Ruta teórica:</strong> ${escapeHtml(
-            "primero fija los ganchos, después lee el repaso express, amplía con teoría explicada y cierra con tarjetas conceptuales. La práctica tipo test queda en la vista «Practicar».",
+            "lee en este orden: idea clave, resumen, teoría explicada, ejemplos guiados, errores típicos y tarjetas conceptuales. Así no saltas al test sin entender el tema.",
           )}</p>
           <details class="temario-details" open>
-            <summary>1. Ganchos para memorizar</summary>
+            <summary>1. Idea clave para memorizar</summary>
             <ul class="temario-list">${hooks}</ul>
           </details>
           <details class="temario-details">
@@ -398,7 +427,7 @@ function renderBlockStudy(blockId) {
           ${readMore}
           ${examChecklist}
           <div class="temario-fc-block">
-            <p class="temario-fc-head">5. Tarjetas conceptuales del bloque (volteo en esta página; distintas de «Tarjetas del banco»)</p>
+            <p class="temario-fc-head">5. Autoevaluación conceptual (volteo en esta página; distinta de «Tarjetas del banco»)</p>
             <div class="temario-fc-grid">${cards}</div>
           </div>
           ${sources}
@@ -474,8 +503,8 @@ function renderMethods() {
   if (!root) return;
   root.innerHTML = methods
     .map(
-      (m) => `
-    <details class="method-card">
+      (m, i) => `
+    <details class="method-card"${i === 0 ? " open" : ""}>
       <summary>${escapeHtml(m.title)}</summary>
       <div class="method-card__body">
         <span class="method-card__tag">${escapeHtml(m.tag)}</span>
@@ -542,6 +571,7 @@ const quizState = {
   timerId: /** @type {ReturnType<typeof setInterval>|null} */ (null),
   timedOut: false,
   _finished: false,
+  smartLabel: "",
   /** @type {string} */
   topicFilter: "all",
   /** Contadores de estudio por pregunta (una vez por ítem y sesión). */
@@ -649,6 +679,7 @@ function startQuiz() {
     quizState.studyFeedback = "immediate";
   }
   quizState.sessionType = $("#quiz-session")?.value === "teorico" ? "teorico" : "libre";
+  quizState.smartLabel = "";
   quizState.pretest = !!$("#quiz-pretest")?.checked && quizState.sessionType === "libre";
   const topicRaw = $("#quiz-topic")?.value || "all";
   let topicFilter = topicRaw === "all" || topicBelongsToPart(topicRaw, part) ? topicRaw : "all";
@@ -671,7 +702,7 @@ function startQuiz() {
     topicFilter,
     TEORICO_COUNT,
     onlyPool,
-  );
+  ).map((q) => shuffleQuestionOptions(q));
   quizState.index = 0;
   quizState.answers = {};
   quizState.confidence = {};
@@ -707,6 +738,70 @@ function startQuiz() {
   renderQuestion();
 }
 
+function startSmartReviewSession() {
+  if ($("#view-practicar")?.hidden) {
+    location.hash = "practicar";
+    showView("practicar");
+    updateDocumentTitle("practicar");
+    announceRoute("practicar");
+  }
+  const notebook = loadErrorNotebook();
+  const diagnostics = buildTopicDiagnostics(notebook, loadTopicQuizStats(), topicsData.parts);
+  const ids = buildSmartReviewQuestionIds(notebook, diagnostics, allQuestions, 15);
+  const byId = new Map(allQuestions.map((q) => [q.id, q]));
+  const list = ids.map((id) => byId.get(id)).filter(Boolean);
+
+  quizState.mode = "study";
+  quizState.studyFeedback = "confidence";
+  quizState.sessionType = "libre";
+  quizState.pretest = false;
+  quizState.topicFilter = "all";
+  quizState.smartLabel = "Repaso inteligente";
+  quizState._statsCounted = new Set();
+  quizState.list = shuffle(list).map((q) => shuffleQuestionOptions(q));
+  quizState.index = 0;
+  quizState.answers = {};
+  quizState.confidence = {};
+  quizState.marked = {};
+  quizState.optionsVisible = true;
+  quizState.timedOut = false;
+  quizState._finished = false;
+  clearExamTimer();
+
+  const modeEl = $("#quiz-mode");
+  const sessEl = $("#quiz-session");
+  const partEl = $("#quiz-part");
+  const topicEl = $("#quiz-topic");
+  if (modeEl) modeEl.value = "study_confidence";
+  if (sessEl) sessEl.value = "libre";
+  if (partEl) partEl.value = "mix";
+  if (topicEl) topicEl.value = "all";
+  saveQuizPrefs();
+  renderQuizPracticeGuide();
+  renderQuizProgressSummary();
+
+  $("#quiz-area").hidden = false;
+  $("#quiz-pretest-box").hidden = true;
+  $("#quiz-pretext").value = "";
+  $("#quiz-feedback").textContent = "";
+  $("#quiz-score").hidden = true;
+
+  if (!quizState.list.length) {
+    $("#quiz-feedback").innerHTML =
+      "<p><strong>No hay preguntas disponibles</strong> para crear el repaso inteligente. Revisa que el banco esté cargado.</p>";
+    $("#quiz-question").innerHTML = '<p class="muted">No se pudo crear la sesión.</p>';
+    $("#quiz-progress").textContent = "Sin preguntas";
+    $("#quiz-prev").disabled = true;
+    $("#quiz-next").disabled = true;
+    updateQuizStats();
+    return;
+  }
+
+  $("#quiz-next").disabled = false;
+  updateQuizStats();
+  renderQuestion();
+}
+
 function currentQ() {
   return quizState.list[quizState.index];
 }
@@ -728,7 +823,10 @@ function stemFigureBlock(q) {
     typeof rawAlt === "string" && rawAlt.trim()
       ? rawAlt.trim()
       : "Figura asociada al enunciado.";
-  return `<figure class="q-card__figure"><img class="q-card__figure-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" /></figure>`;
+  return `<figure class="q-card__figure">
+    <img class="q-card__figure-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" />
+    <figcaption class="q-card__figure-caption">${escapeHtml(alt)}</figcaption>
+  </figure>`;
 }
 
 function renderQuestion() {
@@ -744,11 +842,12 @@ function renderQuestion() {
   }
   const sessionLabel =
     quizState.sessionType === "teorico" ? " · Examen tipo test (30 máx.)" : "";
+  const smartLabel = quizState.smartLabel ? ` · ${escapeHtml(quizState.smartLabel)}` : "";
   const topicExtra =
     quizState.topicFilter && quizState.topicFilter !== "all"
       ? ` · Tema: ${escapeHtml(topicBlockLabel(quizState.topicFilter))}`
       : "";
-  $("#quiz-progress").textContent = `Pregunta ${quizState.index + 1} de ${total}${sessionLabel}${topicExtra}`;
+  $("#quiz-progress").textContent = `Pregunta ${quizState.index + 1} de ${total}${sessionLabel}${smartLabel}${topicExtra}`;
   announceQuizQuestion(q, quizState.index, total);
   const sel = quizState.answers[q.id];
   const showOpts = quizState.optionsVisible;
@@ -788,8 +887,8 @@ function renderQuestion() {
     sel !== undefined &&
     quizState.confidence[q.id] === undefined
       ? `
-        <div class="confidence-inline" id="quiz-confidence" role="group" aria-label="Nivel de confianza">
-          <p class="conf-prompt"><strong>Antes de corregir:</strong> elige tu confianza.</p>
+        <div class="confidence-inline" id="quiz-confidence" role="group" aria-label="Nivel de seguridad antes de corregir">
+          <p class="conf-prompt"><strong>Antes de corregir:</strong> mide tu seguridad.</p>
           <div class="confidence-bar">
             <button type="button" class="btn btn--ghost conf-btn" data-conf="0">Baja</button>
             <button type="button" class="btn btn--ghost conf-btn" data-conf="1">Media</button>
@@ -1002,6 +1101,32 @@ function updateWrongOnlyCheckboxVisibility() {
   if (row) row.hidden = n === 0;
 }
 
+function loadErrorNotebook() {
+  try {
+    const raw = localStorage.getItem(ERROR_NOTEBOOK_KEY);
+    if (!raw) return {};
+    const o = JSON.parse(raw);
+    return o && typeof o === "object" ? o : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveErrorNotebook(notebook) {
+  try {
+    localStorage.setItem(ERROR_NOTEBOOK_KEY, JSON.stringify(notebook || {}));
+  } catch {
+    /* ignore quota */
+  }
+}
+
+function topicPartValue(topicId) {
+  for (const part of topicsData.parts || []) {
+    if ((part.blocks || []).some((b) => b.id === topicId)) return part.id === "p2" ? "2" : "1";
+  }
+  return "1";
+}
+
 function loadTopicQuizStats() {
   try {
     const raw = localStorage.getItem(QUIZ_TOPIC_STATS_KEY);
@@ -1040,6 +1165,10 @@ function defaultUserStats() {
     gradedSessionsClosed: 0,
     gradedCorrectSum: 0,
     gradedTotalSum: 0,
+    gradedByPart: {
+      p1: { sessions: 0, passed: 0 },
+      p2: { sessions: 0, passed: 0 },
+    },
     flashRatings: 0,
     seenQuestionIds: /** @type {Record<string, 1>} */ ({}),
   };
@@ -1056,10 +1185,21 @@ function loadUserStats() {
       o.seenQuestionIds && typeof o.seenQuestionIds === "object"
         ? /** @type {Record<string, 1>} */ (o.seenQuestionIds)
         : {};
+    const gradedByPart = {
+      p1: {
+        sessions: Number.isFinite(o.gradedByPart?.p1?.sessions) ? o.gradedByPart.p1.sessions : 0,
+        passed: Number.isFinite(o.gradedByPart?.p1?.passed) ? o.gradedByPart.p1.passed : 0,
+      },
+      p2: {
+        sessions: Number.isFinite(o.gradedByPart?.p2?.sessions) ? o.gradedByPart.p2.sessions : 0,
+        passed: Number.isFinite(o.gradedByPart?.p2?.passed) ? o.gradedByPart.p2.passed : 0,
+      },
+    };
     return {
       ...base,
       ...o,
       seenQuestionIds: seen,
+      gradedByPart,
     };
   } catch {
     return base;
@@ -1255,6 +1395,215 @@ function renderQuizProgressSummary() {
   el.textContent = bits.join(" · ");
 }
 
+function recordQuestionOutcome(q, selectedIndex, isCorrect) {
+  const confidenceLevel =
+    quizState.studyFeedback === "confidence" && quizState.confidence[q.id] !== undefined
+      ? quizState.confidence[q.id]
+      : null;
+  const notebook = loadErrorNotebook();
+  const next = updateErrorNotebookWithResult(notebook, q, selectedIndex, isCorrect, confidenceLevel);
+  saveErrorNotebook(next);
+  renderExamCoach();
+}
+
+function coachSnapshot() {
+  const notebook = loadErrorNotebook();
+  const entries = errorNotebookEntries(notebook);
+  const activeEntries = entries.filter(isActiveError);
+  const highSecurity = entries.reduce((sum, entry) => sum + (entry.highSecurityWrongCount || 0), 0);
+  const diagnostics = buildTopicDiagnostics(notebook, loadTopicQuizStats(), topicsData.parts);
+  const readiness = buildExamReadiness(topicsData.parts, diagnostics, loadUserStats());
+  const plan = buildRecommendedPlan(diagnostics);
+  const topTopics = diagnostics.slice(0, 3);
+  const recent = [...entries]
+    .sort((a, b) => (b.lastWrongAt || 0) - (a.lastWrongAt || 0))
+    .slice(0, 4);
+  return { entries, activeEntries, highSecurity, diagnostics, readiness, plan, topTopics, recent };
+}
+
+function renderReadinessCards(readiness) {
+  return readiness
+    .map(
+      (item) => `
+      <article class="exam-ready exam-ready--${escapeHtml(item.status)}">
+        <div class="exam-ready__head">
+          <h3>${escapeHtml(item.title)}</h3>
+          <strong>${escapeHtml(item.label)}</strong>
+        </div>
+        <div class="exam-ready__metrics">
+          <span>${item.accuracy === null ? "Sin aciertos aún" : `${item.accuracy} % aciertos`}</span>
+          <span>${item.coverage} % bloques</span>
+          <span>${item.passedSimulations} simulacro(s) apto(s)</span>
+        </div>
+        <ul>${item.reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>
+        <p><strong>Siguiente acción:</strong> ${escapeHtml(item.nextAction)}</p>
+      </article>`,
+    )
+    .join("");
+}
+
+function preparePracticeTopic(topicId) {
+  const partEl = $("#quiz-part");
+  const topicEl = $("#quiz-topic");
+  if (partEl) partEl.value = topicPartValue(topicId);
+  if (topicEl) topicEl.value = topicId;
+  validateTopicPartConsistency();
+  renderQuizPracticeGuide();
+  renderQuizProgressSummary();
+  saveQuizPrefs();
+  location.hash = "practicar";
+  requestAnimationFrame(() => {
+    setTimeout(() => $("#quiz-start")?.focus(), 80);
+  });
+}
+
+function startExamSimulation(partValue) {
+  location.hash = "practicar";
+  showView("practicar");
+  updateDocumentTitle("practicar");
+  announceRoute("practicar");
+  const partEl = $("#quiz-part");
+  const topicEl = $("#quiz-topic");
+  const sessionEl = $("#quiz-session");
+  const modeEl = $("#quiz-mode");
+  const preEl = $("#quiz-pretest");
+  if (partEl) partEl.value = partValue;
+  if (topicEl) topicEl.value = "all";
+  if (sessionEl) sessionEl.value = "teorico";
+  if (modeEl) modeEl.value = "exam";
+  if (preEl instanceof HTMLInputElement) preEl.checked = false;
+  syncPretestAvailability();
+  validateTopicPartConsistency();
+  renderQuizPracticeGuide();
+  renderQuizProgressSummary();
+  saveQuizPrefs();
+  startQuiz();
+  requestAnimationFrame(() => {
+    $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function renderExamReadiness() {
+  const root = $("#exam-readiness-root");
+  if (!root) return;
+  const { entries, activeEntries, highSecurity, readiness } = coachSnapshot();
+  root.innerHTML = `
+    <div class="exam-coach__head">
+      <div>
+        <h2 id="exam-readiness-title">Preparación para examen</h2>
+        <p>Simula cada prueba y usa el indicador para decidir si estás listo o si conviene cerrar errores antes.</p>
+      </div>
+    </div>
+    <div class="exam-coach__metrics" aria-label="Resumen de preparación">
+      <span><strong>${entries.length}</strong> pregunta(s) en cuaderno</span>
+      <span><strong>${activeEntries.length}</strong> error(es) pendiente(s)</span>
+      <span><strong>${highSecurity}</strong> fallo(s) con seguridad alta</span>
+    </div>
+    <section class="exam-readiness" aria-label="Indicador de preparación por prueba">
+      <h3>Indicador por prueba</h3>
+      <div class="exam-readiness__grid">${renderReadinessCards(readiness)}</div>
+    </section>
+    <div class="exam-coach__actions">
+      <button type="button" class="btn btn--primary" data-exam-start="1">Simulacro 1.ª prueba</button>
+      <button type="button" class="btn btn--primary" data-exam-start="2">Simulacro 2.ª prueba</button>
+      <a class="btn btn--ghost" href="#cuaderno" data-nav="cuaderno">Ver cuaderno</a>
+    </div>
+  `;
+
+  root.querySelectorAll("[data-exam-start]").forEach((button) => {
+    button.addEventListener("click", () => startExamSimulation(button.getAttribute("data-exam-start") === "2" ? "2" : "1"));
+  });
+}
+
+function renderErrorNotebook() {
+  const root = $("#error-notebook-root");
+  if (!root) return;
+  const { entries, activeEntries, highSecurity, topTopics, plan, recent } = coachSnapshot();
+  const empty =
+    entries.length === 0
+      ? `<p class="exam-coach__empty">Aún no hay errores guardados. Responde en modo estudio o examen y el cuaderno empezará a detectar temas débiles.</p>`
+      : "";
+  const topicsHtml = topTopics.length
+    ? topTopics
+        .map((row) => {
+          const acc = row.accuracy === null ? "sin precisión aún" : `${row.accuracy} % aciertos`;
+          return `<li>
+            <strong>${escapeHtml(row.title)}</strong>
+            <span>${escapeHtml(acc)} · ${row.activeErrors} error(es) activo(s) · ${row.highSecurityWrongCount} fallo(s) con seguridad alta</span>
+            <button type="button" class="btn btn--ghost btn--sm" data-coach-topic="${escapeHtml(row.topicId)}">Preparar sesión</button>
+          </li>`;
+        })
+        .join("")
+    : `<li><strong>Sin temas priorizados todavía</strong><span>Haz una sesión de estudio para generar diagnóstico.</span></li>`;
+  const planTopicButton = plan.topicId
+    ? `<button type="button" class="btn btn--primary btn--sm" data-coach-topic="${escapeHtml(plan.topicId)}">Practicar prioridad</button>`
+    : "";
+  const smartButton = `<button type="button" class="btn btn--primary btn--sm" id="error-notebook-smart">Repaso inteligente</button>`;
+  const recentHtml = recent.length
+    ? recent
+        .map((entry) => {
+          const topic = topicBlockLabel(entry.topicId);
+          const status = isActiveError(entry) ? "pendiente" : "en mejora";
+          return `<li>
+            <strong>${escapeHtml(entry.stem.slice(0, 110))}${entry.stem.length > 110 ? "…" : ""}</strong>
+            <span>${escapeHtml(topic)} · ${escapeHtml(status)} · fallos: ${entry.wrongCount || 0}</span>
+          </li>`;
+        })
+        .join("")
+    : `<li><span>Sin errores recientes guardados.</span></li>`;
+
+  root.innerHTML = `
+    <div class="exam-coach__head">
+      <div>
+        <h2 id="error-notebook-title">Cuaderno y repaso inteligente</h2>
+        <p>Diagnóstico local basado en tus fallos, aciertos posteriores y seguridad marcada.</p>
+      </div>
+      <button type="button" class="btn btn--ghost btn--sm" id="error-notebook-clear" ${entries.length ? "" : "disabled"}>Vaciar cuaderno</button>
+    </div>
+    <div class="exam-coach__metrics" aria-label="Resumen del cuaderno de errores">
+      <span><strong>${entries.length}</strong> pregunta(s) en cuaderno</span>
+      <span><strong>${activeEntries.length}</strong> pendiente(s)</span>
+      <span><strong>${highSecurity}</strong> fallo(s) con seguridad alta</span>
+    </div>
+    ${empty}
+    <div class="exam-coach__grid">
+      <section>
+        <h3>Diagnóstico por tema</h3>
+        <ul class="exam-coach__topic-list">${topicsHtml}</ul>
+      </section>
+      <section>
+        <h3>${escapeHtml(plan.title)}</h3>
+        <ol class="exam-coach__steps">${plan.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
+        <div class="exam-coach__actions">${smartButton}${planTopicButton}</div>
+      </section>
+    </div>
+    <details class="exam-coach__notebook">
+      <summary>Cuaderno de errores reciente</summary>
+      <ul>${recentHtml}</ul>
+    </details>
+  `;
+
+  root.querySelectorAll("[data-coach-topic]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const topicId = button.getAttribute("data-coach-topic") || "all";
+      preparePracticeTopic(topicId);
+    });
+  });
+
+  root.querySelector("#error-notebook-clear")?.addEventListener("click", () => {
+    if (!window.confirm("¿Vaciar el cuaderno de errores? No borra estadísticas globales ni tarjetas.")) return;
+    saveErrorNotebook({});
+    renderExamCoach();
+  });
+
+  root.querySelector("#error-notebook-smart")?.addEventListener("click", startSmartReviewSession);
+}
+
+function renderExamCoach() {
+  renderExamReadiness();
+  renderErrorNotebook();
+}
+
 function selectedQuizTopicForGuide() {
   const part = $("#quiz-part")?.value || "1";
   const topic = $("#quiz-topic")?.value || "all";
@@ -1292,10 +1641,11 @@ function renderQuizPracticeGuide() {
   `;
 }
 
-function bumpTopicQuizStatIfNew(q, isCorrect) {
+function bumpTopicQuizStatIfNew(q, selectedIndex, isCorrect) {
   if (quizState.mode !== "study") return;
   if (quizState._statsCounted.has(q.id)) return;
   quizState._statsCounted.add(q.id);
+  recordQuestionOutcome(q, selectedIndex, isCorrect);
   const stats = loadTopicQuizStats();
   const cur = stats[q.topicId] || { t: 0, ok: 0 };
   cur.t += 1;
@@ -1470,21 +1820,21 @@ function confidenceCalibrationLine(q, sel, confLevel) {
   const labels = ["baja", "media", "alta"];
   const lab = labels[confLevel] ?? "media";
   if (ok && confLevel === 2) {
-    return `<p class="conf-cal conf-cal--ok">Calibración: acertaste con confianza ${lab}.</p>`;
+    return `<p class="conf-cal conf-cal--ok"><strong>Concepto consolidado:</strong> acertaste con seguridad ${lab}. Mantén esta pregunta en repasos espaciados, pero no es prioridad.</p>`;
   }
   if (!ok && confLevel === 2) {
-    return `<p class="conf-cal conf-cal--warn">Calibración: fallaste con confianza ${lab}; conviene repasar este punto en el temario.</p>`;
+    return `<p class="conf-cal conf-cal--warn"><strong>Prioridad máxima de repaso:</strong> fallaste con seguridad ${lab}. Revisa el bloque del temario y convierte el error en una regla corta.</p>`;
   }
   if (ok && confLevel === 0) {
-    return `<p class="conf-cal conf-cal--ok">Acertaste con confianza ${lab}: repasa el porqué para fijar la idea.</p>`;
+    return `<p class="conf-cal conf-cal--ok"><strong>Acierto frágil:</strong> acertaste con seguridad ${lab}. Lee la explicación y fija por qué la opción correcta encaja.</p>`;
   }
   if (!ok && confLevel === 0) {
-    return `<p class="conf-cal">Fallaste con confianza ${lab}: usa la explicación de arriba para cerrar el hueco.</p>`;
+    return `<p class="conf-cal"><strong>Hueco detectado:</strong> fallaste con seguridad ${lab}. Usa la explicación para construir la regla básica antes de repetir tests.</p>`;
   }
   if (ok) {
-    return `<p class="conf-cal conf-cal--ok">Acertaste (confianza ${lab}).</p>`;
+    return `<p class="conf-cal conf-cal--ok"><strong>Buen avance:</strong> acertaste con seguridad ${lab}. Refuerza la explicación para subirla a seguridad alta.</p>`;
   }
-  return `<p class="conf-cal conf-cal--warn">Incorrecto (confianza ${lab}).</p>`;
+  return `<p class="conf-cal conf-cal--warn"><strong>Repaso recomendado:</strong> fallaste con seguridad ${lab}. Vuelve al concepto y repite una pregunta parecida.</p>`;
 }
 
 function correctAnswerParagraph(q) {
@@ -1494,6 +1844,40 @@ function correctAnswerParagraph(q) {
       : "";
   if (!t) return "";
   return `<p class="quiz-fb-correct"><strong>Respuesta correcta:</strong> ${escapeHtml(t)}</p>`;
+}
+
+function selectedAnswerParagraph(q, sel) {
+  const t = Array.isArray(q.options) && typeof sel === "number" && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  if (!t) return "";
+  return `<p class="quiz-fb-selected"><strong>Tu respuesta:</strong> ${escapeHtml(t)}</p>`;
+}
+
+function answerReasoningPanel(q, sel) {
+  const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
+  const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
+  const correctExplanation =
+    typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
+  const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  const correctText =
+    Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
+  if (sel === q.correctIndex) {
+    const detail =
+      correctExplanation ||
+      "Encaja con el concepto que pide el enunciado. Lee la explicación para fijar la regla, fórmula o criterio de examen que la justifica.";
+    return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
+  }
+  const whyWrong =
+    selectedExplanation ||
+    "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
+  const whyCorrect =
+    correctExplanation ||
+    (correctText
+      ? `La opción correcta es «${correctText}»; la explicación desarrolla la regla que permite distinguirla del distractor marcado.`
+      : "La explicación desarrolla la regla que permite distinguir la opción correcta del distractor marcado.");
+  return `<div class="quiz-fb-reasoning">
+    ${selectedText ? `<p><strong>Por qué no encaja tu opción:</strong> ${escapeHtml(whyWrong)}</p>` : ""}
+    <p><strong>Por qué encaja la correcta:</strong> ${escapeHtml(whyCorrect)}</p>
+  </div>`;
 }
 
 /** Texto `explain` del banco, siempre en bloque etiquetado (acierto o error). */
@@ -1521,7 +1905,7 @@ function showStudyFeedback(q) {
   }
   const ok = sel === q.correctIndex;
   if (quizState.mode === "study") {
-    bumpTopicQuizStatIfNew(q, ok);
+    bumpTopicQuizStatIfNew(q, sel, ok);
   }
   const cal =
     quizState.studyFeedback === "confidence" && quizState.confidence[q.id] !== undefined
@@ -1530,13 +1914,13 @@ function showStudyFeedback(q) {
   if (quizState.studyFeedback === "deepen") {
     const lead = ok
       ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
-      : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${correctAnswerParagraph(q)}`;
-    fb.innerHTML = lead + renderDeepenPanel(q) + cal;
+      : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
+    fb.innerHTML = lead + answerReasoningPanel(q, sel) + renderDeepenPanel(q) + cal;
     return;
   }
   fb.innerHTML = (ok
-    ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${quizFeedbackExplainParagraph(q)}`
-    : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${correctAnswerParagraph(q)}${quizFeedbackExplainParagraph(q)}`) + cal;
+    ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}`
+    : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}`) + cal;
 }
 
 function calibrationSessionSummary() {
@@ -1569,7 +1953,7 @@ function calibrationSessionSummary() {
   if (medOk + medWrong > 0) bits.push(`media: ${medOk}✓ / ${medWrong}✗`);
   if (loOk + loWrong > 0) bits.push(`baja: ${loOk}✓ / ${loWrong}✗`);
   if (!bits.length) return "";
-  return `<p class="muted conf-summary"><strong>Resumen de confianza (sesión):</strong> ${bits.join(" · ")}.</p>`;
+  return `<p class="muted conf-summary"><strong>Resumen de seguridad (sesión):</strong> ${bits.join(" · ")}.</p>`;
 }
 
 function quizMissingConfidenceCount() {
@@ -1591,26 +1975,41 @@ function finishQuiz() {
     const sel = quizState.answers[q.id];
     if (sel === null || sel === undefined) {
       wrong.push(q);
+      if (quizState.mode === "exam") recordQuestionOutcome(q, -1, false);
       return;
     }
-    if (sel === q.correctIndex) good += 1;
+    const correct = sel === q.correctIndex;
+    if (quizState.mode === "exam") recordQuestionOutcome(q, sel, correct);
+    if (correct) good += 1;
     else wrong.push(q);
   });
   const total = quizState.list.length;
+  const pct = total ? Math.round((good / total) * 100) : 0;
+  const isT = quizState.sessionType === "teorico";
+  const minPass = Math.ceil(total / 2);
+  const pass = isT && good >= minPass;
+  const partsInSession = new Set(quizState.list.map((q) => q.part));
+  const partKey =
+    isT && partsInSession.size === 1 ? ([...partsInSession][0] === 2 ? "p2" : "p1") : null;
   if (total > 0) {
     mutateUserStats((s) => {
       s.gradedSessionsClosed += 1;
       s.gradedCorrectSum += good;
       s.gradedTotalSum += total;
+      if (!s.gradedByPart) {
+        s.gradedByPart = { p1: { sessions: 0, passed: 0 }, p2: { sessions: 0, passed: 0 } };
+      }
+      if (partKey) {
+        const partStats = s.gradedByPart[partKey] || { sessions: 0, passed: 0 };
+        partStats.sessions += 1;
+        if (pass) partStats.passed += 1;
+        s.gradedByPart[partKey] = partStats;
+      }
       for (const qq of quizState.list) {
         s.seenQuestionIds[qq.id] = 1;
       }
     });
   }
-  const pct = total ? Math.round((good / total) * 100) : 0;
-  const isT = quizState.sessionType === "teorico";
-  const minPass = Math.ceil(total / 2);
-  const pass = isT && good >= minPass;
   const verdict = isT
     ? `<div class="result-verdict ${pass ? "result-verdict--ok" : "result-verdict--fail"}">${pass ? "APTO" : "NO APTO"} · ${good}/${total} (mínimo ${minPass} para 50 %)</div>
        <p class="muted" style="margin:0.5rem 0 0;font-size:0.88rem">Criterio orientativo como en convocatorias habituales; revisa siempre las bases oficiales del examen.</p>`
@@ -1695,7 +2094,7 @@ function finishOrAdvanceQuiz() {
         focusConfidencePicker();
         return;
       }
-      $("#quiz-feedback").innerHTML = `<strong>Falta confianza en ${missEnd} pregunta(s).</strong> Usa «Anterior» y marca tu nivel de seguridad antes de finalizar.`;
+      $("#quiz-feedback").innerHTML = `<strong>Falta medir tu seguridad en ${missEnd} pregunta(s).</strong> Usa «Anterior» y marca baja, media o alta antes de finalizar.`;
       return;
     }
     finishQuiz();
@@ -1710,7 +2109,7 @@ function finishOrAdvanceQuiz() {
       focusConfidencePicker();
       return;
     }
-    $("#quiz-feedback").innerHTML = `<strong>Falta confianza en ${missLibre} pregunta(s).</strong> Revísalas antes de cerrar la sesión.`;
+    $("#quiz-feedback").innerHTML = `<strong>Falta medir tu seguridad en ${missLibre} pregunta(s).</strong> Revísalas antes de cerrar la sesión.`;
     return;
   }
   const wrongIds = computeWrongIdsFromCurrentSession();
@@ -2118,6 +2517,7 @@ document.addEventListener("DOMContentLoaded", () => {
     onRoute();
     renderUserProgress();
     renderQuizProgressSummary();
+    renderExamCoach();
     renderQuizPracticeGuide();
 
     $("#quiz-start")?.addEventListener("click", startQuiz);
