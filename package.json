@@ -1,0 +1,10 @@
+{
+  "name": "radioexam-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "verify": "node scripts/verify-data.mjs",
+    "test": "node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/learning-coach.test.mjs",
+    "verify:all": "node scripts/verify-data.mjs && node scripts/verify-extra.mjs && node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/learning-coach.test.mjs"
+  }
+}

@@ -1,0 +1,3090 @@
+import topicsData from "./data/topics.js";
+import topicStudy from "./data/topics-study.js";
+import questionsData from "./data/questions.js";
+import ureElectricidad from "./data/ure-electricidad.js";
+import fediea2011 from "./data/fediea-2011.js";
+import quijotesEa3rcq from "./data/quijotes-ea3rcq.js";
+import quijotesExplanations from "./data/quijotes-explanations.js";
+import questionsExamenPropias from "./data/questions-examen-propias.js";
+import regulatory from "./data/regulatory.js";
+import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
+import {
+  buildExamReadiness,
+  buildRecommendedPlan,
+  buildSmartReviewQuestionIds,
+  buildTopicDiagnostics,
+  errorNotebookEntries,
+  isActiveError,
+  updateErrorNotebookWithResult,
+} from "./lib/learning-coach.js";
+
+const STORAGE_KEY = "radioexam_card_schedule_v1";
+const TOPIC_PRESELECT_KEY = "radioexam_practicar_topic";
+const FC_TOPIC_PRESELECT_KEY = "radioexam_tarjetas_topic";
+const QUIZ_PREFS_KEY = "radioexam_quiz_prefs_v1";
+const LAST_WRONG_SESSION_KEY = "radioexam_last_wrong_ids_v1";
+const QUIZ_TOPIC_STATS_KEY = "radioexam_topic_quiz_stats_v1";
+const ERROR_NOTEBOOK_KEY = "radioexam_error_notebook_v1";
+/** Resumen global, racha y cobertura del banco (solo este navegador). */
+const USER_STATS_KEY = "radioexam_user_stats_v1";
+
+const VIEW_HEADINGS = {
+  inicio: "titulo-inicio",
+  temario: "titulo-temario",
+  normativa: "titulo-normativa",
+  metodologia: "titulo-metodo",
+  practicar: "titulo-practicar",
+  examen: "titulo-examen",
+  cuaderno: "titulo-cuaderno",
+  tarjetas: "titulo-tarjetas",
+  ayuda: "titulo-ayuda",
+};
+
+const DOC_TITLES = {
+  inicio: "RadioExamen · Inicio",
+  temario: "RadioExamen · Temario y repaso",
+  normativa: "RadioExamen · Normativa BOE y enlaces",
+  metodologia: "RadioExamen · Método de estudio",
+  practicar: "RadioExamen · Practicar test",
+  examen: "RadioExamen · Simulacro de examen",
+  cuaderno: "RadioExamen · Cuaderno de errores",
+  tarjetas: "RadioExamen · Tarjetas",
+  ayuda: "RadioExamen · Ayuda",
+};
+
+const ROUTE_ANNOUNCE = {
+  inicio: "Inicio",
+  temario: "Temario",
+  normativa: "Normativa",
+  metodologia: "Método",
+  practicar: "Practicar",
+  examen: "Examen",
+  cuaderno: "Cuaderno de errores",
+  tarjetas: "Tarjetas",
+  ayuda: "Ayuda",
+};
+
+const ABBREVIATION_GLOSSARY = [
+  ["FI", "frecuencia intermedia: frecuencia fija a la que el receptor traslada la señal para filtrarla y amplificarla mejor."],
+  ["RF", "radiofrecuencia: señal de radio antes de convertirse a frecuencia intermedia o audio."],
+  ["AF", "audiofrecuencia: señal ya convertida a sonido o audio."],
+  ["AGC", "control automático de ganancia: ajusta la ganancia del receptor para mantener estable el nivel de audio."],
+  ["DSP", "procesador digital de señal: permite filtros y tratamientos digitales de la señal."],
+  ["NBFM", "modulación de frecuencia de banda estrecha: FM con desviación limitada."],
+  ["AM", "modulación de amplitud: varía la amplitud de la portadora."],
+  ["FM", "modulación de frecuencia: varía la frecuencia instantánea de la portadora."],
+  ["SSB", "banda lateral única: emisión de una sola banda lateral, sin portadora completa."],
+  ["ROE", "relación de ondas estacionarias: indica adaptación entre línea y antena; alta ROE implica potencia reflejada."],
+  ["SWR", "equivalente inglés de ROE: Standing Wave Ratio."],
+  ["HPBW", "ancho de haz a media potencia: ángulo entre los puntos de media potencia del lóbulo principal."],
+  ["CEPT", "Conferencia Europea de Administraciones de Correos y Telecomunicaciones; coordina recomendaciones como T/R 61-01 y T/R 61-02."],
+  ["HAREC", "certificado armonizado CEPT que acredita conocimientos de operador de radioaficionado."],
+  ["dBm", "nivel de potencia referido a 1 mW en escala logarítmica."],
+  ["dBµV", "nivel de tensión referido a 1 microvoltio en escala logarítmica."],
+  ["QRM", "interferencia causada por otras señales o estaciones."],
+  ["QRN", "ruido natural o atmosférico."],
+  ["QRP", "operación con baja potencia."],
+  ["QSY", "cambiar de frecuencia o desplazarse en la banda."],
+];
+
+const methods = [
+  {
+    title: "Ruta recomendada: entender, practicar, corregir y repetir",
+    tag: "Plan base",
+    body:
+      "<p>El ciclo más eficiente no es leer mucho seguido: es <strong>comprender una pieza pequeña</strong>, intentar recuperarla, corregir el fallo y volver a verla unos días después.</p><h4>Cómo aplicarlo</h4><ul><li><strong>1.</strong> Entra en <strong>Temario</strong> y estudia un bloque: idea clave, repaso express, teoría explicada y ejemplos.</li><li><strong>2.</strong> Pasa a <strong>Practicar</strong> con ese mismo tema en modo estudio.</li><li><strong>3.</strong> Lee el feedback completo: tu respuesta, correcta, por qué encaja y explicación.</li><li><strong>4.</strong> Guarda mentalmente el error como una regla corta y repásalo con <strong>Tarjetas</strong>.</li><li><strong>5.</strong> Cuando ya aciertes por tema, usa <strong>Intercalado</strong> y después <strong>Examen</strong>.</li></ul><p><strong>Evita:</strong> saltar al test sin leer el bloque; eso entrena reconocimiento de opciones, no comprensión.</p>",
+  },
+  {
+    title: "Práctica de recuperación activa",
+    tag: "Efecto testing",
+    body:
+      "<p>Responder sin mirar apuntes obliga al cerebro a <strong>recuperar</strong>. Ese esfuerzo fija más que releer, porque comprueba si realmente puedes traer la idea cuando el examen la pida.</p><h4>Cómo aplicarlo</h4><ul><li>Antes de mirar opciones, di en voz baja qué fórmula, definición o norma crees que aplica.</li><li>Marca la respuesta y corrige al momento en modo <strong>Estudio</strong>.</li><li>Si fallas, no memorices la letra: escribe la regla que habría descartado el distractor.</li></ul><p><strong>Señal de dominio:</strong> puedes explicar por qué tres opciones son falsas, no solo reconocer la verdadera.</p>",
+  },
+  {
+    title: "Feedback elaborado: aprender del acierto y del fallo",
+    tag: "Corrección útil",
+    body:
+      "<p>El feedback más útil no dice solo “correcto” o “incorrecto”: muestra <strong>qué criterio decidía la pregunta</strong>. En radioaficionado suele ser una unidad, una relación, un bloque de equipo, una norma o un procedimiento.</p><h4>Cómo aplicarlo</h4><ul><li>Tras cada respuesta, lee primero <strong>tu opción</strong> y la <strong>respuesta correcta</strong>.</li><li>Busca la diferencia exacta: unidad, frecuencia, órgano competente, etapa del circuito o palabra legal.</li><li>Reformula la explicación en una frase propia.</li></ul><p><strong>Evita:</strong> avanzar rápido tras acertar. Un acierto con duda todavía necesita explicación.</p>",
+  },
+  {
+    title: "Mide tu seguridad antes de corregir",
+    tag: "Metacognición",
+    body:
+      "<p>Medir tu seguridad antes del feedback entrena a distinguir <strong>lo que sabes</strong> de lo que solo te suena. Eso evita llegar al examen con falsa seguridad.</p><h4>Cómo aplicarlo</h4><ul><li>Usa <strong>Estudio · mide tu seguridad</strong> cuando ya hayas visto un bloque al menos una vez.</li><li>Prioriza los fallos con seguridad alta: son errores peligrosos y van primero al repaso.</li><li>Si aciertas con seguridad baja, vuelve al temario para convertir intuición en regla.</li></ul><p><strong>Objetivo:</strong> que los aciertos importantes pasen de “me suena” a “sé justificarlo”.</p>",
+  },
+  {
+    title: "Espaciado y tarjetas",
+    tag: "Retención",
+    body:
+      "<p>Estudiar una vez no basta. La memoria mejora cuando vuelves al concepto justo antes de olvidarlo, con intervalos crecientes.</p><h4>Cómo aplicarlo</h4><ul><li>Usa <strong>Tarjetas</strong> para fórmulas, unidades, códigos Q, organismos, indicativos y relaciones rápidas.</li><li>Marca <strong>Lo sabía</strong> solo si puedes responder sin mirar y explicar el porqué.</li><li>Marca <strong>No</strong> si acertaste por descarte débil o por memoria visual de la opción.</li></ul><p><strong>Evita:</strong> repasar siempre lo fácil; el espaciado debe traer de vuelta lo que cuesta.</p>",
+  },
+  {
+    title: "Intercalado: mezclar temas para discriminar",
+    tag: "Contraste",
+    body:
+      "<p>Cuando haces muchas preguntas iguales seguidas, aprendes el patrón local. Cuando mezclas electricidad, modulación, antenas y normativa, entrenas la habilidad real del examen: <strong>elegir la regla correcta</strong>.</p><h4>Cómo aplicarlo</h4><ul><li>Primero domina cada tema por separado.</li><li>Después usa <strong>Intercalado</strong> para mezclar 1.ª y 2.ª prueba.</li><li>Si fallas por confundir bloques, vuelve al temario y compara dos conceptos parecidos.</li></ul><p><strong>Ejemplo:</strong> no estudies ROE, MUF y dB como palabras sueltas; aprende qué pregunta pertenece a línea, ionosfera o relación logarítmica.</p>",
+  },
+  {
+    title: "Preguntas previas",
+    tag: "Activar hipótesis",
+    body:
+      "<p>Intentar responder antes de ver opciones activa conocimientos previos. Aunque falles, el feedback posterior se pega mejor porque ya tenías una hipótesis que corregir.</p><h4>Cómo aplicarlo</h4><ul><li>Activa <strong>Preprueba</strong> en sesiones libres.</li><li>Escribe una respuesta corta: fórmula, palabra clave o criterio legal.</li><li>Revela opciones y comprueba si tu hipótesis apuntaba al concepto correcto.</li></ul><p><strong>Úsalo especialmente</strong> al empezar un bloque nuevo o cuando repitas falladas.</p>",
+  },
+  {
+    title: "Autoexplicación y generación",
+    tag: "Más allá de la letra",
+    body:
+      "<p>Explicar con tus palabras obliga a organizar el concepto. En examen, esa organización ayuda a detectar trampas de redacción.</p><h4>Cómo aplicarlo</h4><ul><li>Después del feedback, completa la frase: “La respuesta es esta porque...”.</li><li>Si hay fórmula, di qué significa cada magnitud y unidad.</li><li>Si hay normativa, separa organismo, documento y consecuencia práctica.</li></ul><p><strong>Evita:</strong> copiar literalmente la explicación sin convertirla en una regla que puedas recordar.</p>",
+  },
+  {
+    title: "Doble codificación: texto + imagen",
+    tag: "Dual coding",
+    body:
+      "<p>Los esquemas reducen carga mental: una onda, un detector, un divisor o un diagrama de radiación se entiende mejor si conectas palabra e imagen.</p><h4>Cómo aplicarlo</h4><ul><li>En preguntas con figura, mira primero qué representa cada eje, flecha, bloque o punto marcado.</li><li>Describe la imagen en una frase antes de responder.</li><li>Después conecta la explicación con el esquema: qué elemento decide la respuesta.</li></ul><p><strong>Ejemplo:</strong> en osciloscopio, horizontal suele ser tiempo y vertical tensión; en antenas, el lóbulo o la línea marcada suele dar la pista.</p>",
+  },
+  {
+    title: "Simulación de examen",
+    tag: "Transferencia",
+    body:
+      "<p>Cuando ya has entrenado por temas, necesitas practicar en condiciones parecidas al examen: tiempo, mezcla, sin feedback inmediato y resultado al final.</p><h4>Cómo aplicarlo</h4><ul><li>Usa <strong>Examen tipo test</strong> con 30 preguntas.</li><li>Hazlo sin consultar temario durante la sesión.</li><li>Al terminar, revisa falladas y vuelve a <strong>Practicar</strong> con solo falladas.</li></ul><p><strong>Momento adecuado:</strong> no al inicio. Úsalo cuando tu estudio por bloques ya tenga base y quieras medir preparación.</p>",
+  },
+  {
+    title: "Micro-objetivos y control de carga",
+    tag: "Evitar saturación",
+    body:
+      "<p>El temario mezcla técnica, normativa y operación. Si intentas abarcarlo todo en una sentada, baja la calidad del recuerdo.</p><h4>Cómo aplicarlo</h4><ul><li>Trabaja objetivos pequeños: “Ohm y potencia”, “ROE y adaptación”, “CEPT y HAREC”, “códigos Q”.</li><li>Cierra cada sesión con una decisión: repetir, pasar a tarjetas o hacer test.</li><li>Si aparecen muchos fallos seguidos, vuelve a teoría explicada en vez de acumular preguntas.</li></ul><p><strong>Regla práctica:</strong> una sesión buena deja claro qué sabes, qué no sabes y cuál es el siguiente bloque.</p>",
+  },
+];
+
+function withQuijotesExplanation(q) {
+  const text = quijotesExplanations[q.id];
+  if (!text) return q;
+  const source = typeof q.explain === "string" && q.explain.trim() ? ` ${q.explain.trim()}` : "";
+  return { ...q, explain: `${text}${source}` };
+}
+
+/** @type {typeof questionsData} */
+let allQuestions = [
+  ...questionsData,
+  ...questionsExamenPropias,
+  ...ureElectricidad,
+  ...fediea2011,
+  ...quijotesEa3rcq.map(withQuijotesExplanation),
+];
+
+const TRAP_QUESTION_IDS = new Set([
+  "q6",
+  "q8",
+  "q10",
+  "q11",
+  "q12",
+  "ofic-004",
+  "ofic-010",
+  "ofic-011",
+  "ofic-015",
+  "ofic-016",
+  "ofic-017",
+  "ofic-018",
+  "ofic-019",
+  "ofic-020",
+  "ofic-021",
+  "ofic-022",
+  "ofic-023",
+  "ofic-024",
+  "ofic-025",
+  "ofic-026",
+  "ofic-027",
+  "ofic-028",
+  "ofic-029",
+  "ofic-030",
+  "ofic-031",
+  "ure-p1-02",
+  "ure-p1-03",
+  "ure-p1-04",
+  "ure-p1-08",
+  "ure-p1-13",
+  "ure-p1-14",
+  "ure-p1-15",
+  "ure-p1-16",
+  "ure-p1-17",
+  "ure-p1-18",
+  "ure-p1-20",
+  "ure-p1-24",
+  "ure-p1-25",
+  "ure-p1-27",
+  "ure-p1-30",
+  "fedi-ag-003",
+  "fedi-ag-006",
+  "fedi-ag-009",
+  "fedi-ag-013",
+  "fedi-ag-014",
+  "fedi-ag-016",
+  "fedi-ag-017",
+  "fedi-ag-018",
+  "fedi-ag-022",
+  "fedi-ag-026",
+  "fedi-ag-030",
+  "fedi-ah-032",
+  "fedi-ah-035",
+  "fedi-ah-036",
+  "fedi-ah-037",
+  "fedi-ah-040",
+  "fedi-ah-041",
+  "fedi-ah-042",
+  "fedi-ah-047",
+  "fedi-ah-048",
+  "fedi-ah-049",
+  "fedi-ah-050",
+  "fedi-ah-053",
+  "fedi-ah-054",
+  "fedi-ah-057",
+  "fedi-ah-059",
+  "fedi-ah-060",
+  "quijotes-020",
+  "quijotes-039",
+  "quijotes-044",
+  "quijotes-047",
+  "quijotes-051",
+  "quijotes-057",
+  "quijotes-058",
+  "quijotes-062",
+  "quijotes-070",
+  "quijotes-077",
+  "quijotes-087",
+  "quijotes-093",
+  "quijotes-095",
+  "quijotes-106",
+  "quijotes-110",
+  "quijotes-111",
+]);
+
+function $(sel, root = document) {
+  return root.querySelector(sel);
+}
+
+function showView(id) {
+  if (id !== "practicar") setQuizFocusMode(false);
+  document.querySelectorAll(".view").forEach((v) => {
+    const match = v.id === `view-${id}`;
+    v.hidden = !match;
+    v.classList.toggle("view--active", match);
+    v.setAttribute("aria-hidden", match ? "false" : "true");
+  });
+  document.querySelectorAll("[data-nav]").forEach((a) => {
+    const on = a.getAttribute("data-nav") === id;
+    if (on) a.setAttribute("aria-current", "page");
+    else a.removeAttribute("aria-current");
+  });
+}
+
+function updateDocumentTitle(viewId) {
+  document.title = DOC_TITLES[viewId] || DOC_TITLES.inicio;
+}
+
+function announceRoute(viewId) {
+  const ann = $("#route-announce");
+  if (!ann) return;
+  ann.textContent = ROUTE_ANNOUNCE[viewId] || viewId;
+}
+
+let saveToastTimer = 0;
+
+function showSaveToast(message = "Progreso guardado en este navegador.") {
+  const el = $("#save-toast");
+  if (!el) return;
+  el.textContent = message;
+  el.hidden = false;
+  window.clearTimeout(saveToastTimer);
+  saveToastTimer = window.setTimeout(() => {
+    el.hidden = true;
+  }, 2200);
+}
+
+function focusViewHeading(viewId) {
+  const hid = VIEW_HEADINGS[viewId];
+  const el = hid ? document.getElementById(hid) : null;
+  if (!el || !(el instanceof HTMLElement)) return;
+  el.setAttribute("tabindex", "-1");
+  try {
+    el.focus({ preventScroll: true, focusVisible: false });
+  } catch {
+    el.focus({ preventScroll: true });
+  }
+  el.addEventListener(
+    "blur",
+    () => {
+      el.removeAttribute("tabindex");
+    },
+    { once: true },
+  );
+}
+
+function topicBelongsToPart(topicId, partValue) {
+  if (topicId === "all") return true;
+  if (partValue === "mix") return true;
+  const partKey = partValue === "1" ? "p1" : partValue === "2" ? "p2" : "";
+  if (!partKey) return false;
+  const p = topicsData.parts.find((x) => x.id === partKey);
+  return !!p?.blocks.some((b) => b.id === topicId);
+}
+
+function validateTopicPartConsistency() {
+  const part = $("#quiz-part")?.value || "1";
+  const sel = $("#quiz-topic");
+  if (!sel) return;
+  const topic = sel.value || "all";
+  if (topic !== "all" && !topicBelongsToPart(topic, part)) {
+    sel.value = "all";
+  }
+}
+
+function syncTopicFromSession() {
+  const raw = sessionStorage.getItem(TOPIC_PRESELECT_KEY);
+  const sel = $("#quiz-topic");
+  if (!sel || !raw) return;
+  const has = [...sel.options].some((o) => o.value === raw);
+  if (has) {
+    sel.value = raw;
+    validateTopicPartConsistency();
+  }
+  sessionStorage.removeItem(TOPIC_PRESELECT_KEY);
+  renderQuizPracticeGuide();
+}
+
+function syncFcTopicFromSession() {
+  const raw = sessionStorage.getItem(FC_TOPIC_PRESELECT_KEY);
+  const sel = $("#fc-topic");
+  if (!sel || !raw) return;
+  const has = [...sel.options].some((o) => o.value === raw);
+  if (has) {
+    sel.value = raw;
+  }
+  sessionStorage.removeItem(FC_TOPIC_PRESELECT_KEY);
+}
+
+function onRoute() {
+  const rawFull = (location.hash || "#inicio").slice(1);
+  const raw = rawFull || "inicio";
+
+  if (raw === "fuentes") {
+    const fuentes = document.getElementById("fuentes");
+    if (fuentes instanceof HTMLDetailsElement) {
+      fuentes.open = true;
+      requestAnimationFrame(() => {
+        fuentes.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    }
+    return;
+  }
+
+  /** @type {string|null} */
+  let scrollTargetId = null;
+  let id = raw;
+  if (raw.startsWith("temario--")) {
+    const sub = raw.slice("temario--".length);
+    id = "temario";
+    if (sub) scrollTargetId = `temario-${sub}`;
+  } else if (raw.startsWith("normativa--")) {
+    const sub = raw.slice("normativa--".length);
+    id = "normativa";
+    if (sub) scrollTargetId = sub;
+  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(raw)) {
+    id = "inicio";
+  }
+  if (id !== "practicar") clearExamTimer();
+  showView(id);
+  updateDocumentTitle(id);
+  announceRoute(id);
+  renderHeaderStatus();
+  requestAnimationFrame(() => focusViewHeading(id));
+  if (id === "tarjetas") {
+    syncFcTopicFromSession();
+    updateDueBadge();
+  }
+  if (id === "practicar") syncTopicFromSession();
+  if (id === "temario") {
+    renderTemario();
+    initTemarioInteractions();
+  }
+  if (id === "inicio") renderUserProgress();
+  if (id === "practicar") {
+    renderQuizProgressSummary();
+    renderQuizPracticeGuide();
+  }
+  if (id === "examen" || id === "cuaderno") renderExamCoach();
+  if (scrollTargetId) {
+    requestAnimationFrame(() => {
+      setTimeout(() => {
+        document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 70);
+    });
+  }
+}
+
+function renderNormativa() {
+  const root = $("#normativa-root");
+  if (!root) return;
+  const jumpNav =
+    regulatory.normativaNav?.length > 0
+      ? `<nav class="normativa-jump" aria-label="Ir a sección">
+        ${regulatory.normativaNav
+          .map(
+            (n) =>
+              `<button type="button" class="pill" data-norm-jump="${escapeHtml(n.id)}">${escapeHtml(n.label)}</button>`,
+          )
+          .join("")}
+      </nav>`
+      : "";
+
+  const linkGroupsHtml = (regulatory.linkGroups || [])
+    .map((g) => {
+      const links = (g.links || [])
+        .map(
+          (l) => `
+    <li>
+      <strong><a href="${escapeHtml(l.href)}" rel="noopener noreferrer">${escapeHtml(l.label)}</a></strong>
+      <span>${escapeHtml(l.note)}</span>
+    </li>`,
+        )
+        .join("");
+      const blurb = g.blurb ? `<p class="part-card__lead">${escapeHtml(g.blurb)}</p>` : "";
+      return `
+    <article class="part-card" id="${escapeHtml(g.id)}">
+      <h2>${escapeHtml(g.title)}</h2>
+      ${blurb}
+      <ul class="block-list" style="margin-top:0.75rem">
+        ${links}
+      </ul>
+    </article>`;
+    })
+    .join("");
+
+  const anchorsHtml = (regulatory.studyAnchors || [])
+    .map(
+      (a) => `
+    <article class="part-card" id="${escapeHtml(a.id)}">
+      <h2>${escapeHtml(a.title)}</h2>
+      <ul class="block-list">
+        ${(a.bullets || []).map((b) => `<li><span>${escapeHtml(b)}</span></li>`).join("")}
+      </ul>
+    </article>`,
+    )
+    .join("");
+
+  const trust = regulatory.trustNote
+    ? `<p class="part-card__lead">${escapeHtml(regulatory.trustNote)}</p>`
+    : "";
+  const hierarchyHtml = regulatory.sourceHierarchy?.length
+    ? `
+    <article class="part-card" id="normativa-verificacion">
+      <h2>Jerarquía de verificación</h2>
+      <ol class="source-hierarchy">
+        ${regulatory.sourceHierarchy.map((b) => `<li><span>${escapeHtml(b)}</span></li>`).join("")}
+      </ol>
+      <p class="fine-print">${escapeHtml(regulatory.lastReviewNote || "")}</p>
+    </article>`
+    : "";
+
+  root.innerHTML = `
+    ${jumpNav}
+    <article class="part-card part-card--hero">
+      <h2>${escapeHtml(regulatory.headline || "")}</h2>
+      <p>${escapeHtml(regulatory.intro || "")}</p>
+      ${trust}
+    </article>
+    ${hierarchyHtml}
+    ${linkGroupsHtml}
+    <section id="normativa-temas" class="normativa-stack" aria-labelledby="normativa-temas-title">
+      <h2 id="normativa-temas-title" class="normativa-stack__title">Temas de estudio (resúmenes)</h2>
+      ${anchorsHtml}
+    </section>
+  `;
+
+  root.querySelectorAll("[data-norm-jump]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.getAttribute("data-norm-jump");
+      const el = id ? document.getElementById(id) : null;
+      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function renderBlockStudy(blockId) {
+  const study = topicStudy[blockId];
+  if (!study) return "";
+  const hooks = (study.memoryHooks || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
+  const express = (study.expressBullets || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
+  const detailGroup = (title, items) =>
+    items?.length
+      ? `<section class="temario-study-group">
+          <h4>${escapeHtml(title)}</h4>
+          <ul class="temario-list">${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
+        </section>`
+      : "";
+  const detailHtml = [
+    detailGroup("A. Teoría explicada del bloque", study.bookGuide || []),
+    detailGroup("B. Ejemplos guiados y aplicación", study.quickSession || []),
+    detailGroup("C. Ampliación conceptual", study.readMore || []),
+    detailGroup("D. Programa de examen que cubre", study.fedieaSyllabus || []),
+  ].join("");
+  const readMore = detailHtml
+    ? `<details class="temario-details"><summary>3. Aprender el tema: teoría + ejemplos + programa</summary>${detailHtml}</details>`
+    : "";
+  const trapWarnings = study.trapWarnings?.length
+    ? `<details class="temario-details"><summary>4. Preguntas trampa para estudiar a fondo</summary><ul class="temario-list">${study.trapWarnings
+        .map((x) => `<li>${escapeHtml(x)}</li>`)
+        .join("")}</ul></details>`
+    : "";
+  const examChecklist = study.examChecklist?.length
+    ? `<details class="temario-details"><summary>5. Errores típicos y puntos de examen</summary><ul class="temario-list">${study.examChecklist
+        .map((x) => `<li>${escapeHtml(x)}</li>`)
+        .join("")}</ul></details>`
+    : "";
+  const cards = (study.flashcards || [])
+    .map(
+      (fc, i) => `
+        <div class="temario-flipcard" tabindex="0" role="button" aria-label="Tarjeta ${i + 1} del bloque. Activar para voltear.">
+          <div class="temario-flipcard__inner">
+            <div class="temario-flipcard__face temario-flipcard__face--front">${escapeHtml(fc.front)}</div>
+            <div class="temario-flipcard__face temario-flipcard__face--back">${escapeHtml(fc.back)}</div>
+          </div>
+        </div>`,
+    )
+    .join("");
+  const sources = study.sources
+    ? `<p class="temario-sources"><strong>Contrastar con:</strong> ${escapeHtml(study.sources)}</p>`
+    : "";
+  return `
+        <div class="temario-study">
+          <p class="temario-method-tip"><strong>Ruta teórica:</strong> ${escapeHtml(
+            "lee en este orden: idea clave, resumen, teoría explicada, ejemplos guiados, errores típicos y tarjetas conceptuales. Así no saltas al test sin entender el tema.",
+          )}</p>
+          <details class="temario-details" open>
+            <summary>1. Idea clave para memorizar</summary>
+            <ul class="temario-list">${hooks}</ul>
+          </details>
+          <details class="temario-details">
+            <summary>2. Repaso express (≈1–3 min)</summary>
+            <ul class="temario-list temario-list--compact">${express}</ul>
+          </details>
+          ${readMore}
+          ${trapWarnings}
+          ${examChecklist}
+          <div class="temario-fc-block">
+            <p class="temario-fc-head">6. Autoevaluación conceptual (volteo en esta página; distinta de «Tarjetas del banco»)</p>
+            <div class="temario-fc-grid">${cards}</div>
+          </div>
+          ${sources}
+          <p class="temario-cta">
+            <a href="#practicar" data-nav="practicar" data-practicar-topic="${escapeHtml(blockId)}" class="btn btn--primary btn--sm temario-cta__main">Practicar este bloque</a>
+            <a href="#tarjetas" data-nav="tarjetas" data-tarjetas-topic="${escapeHtml(blockId)}" class="btn btn--ghost btn--sm">Tarjetas del banco (este bloque)</a>
+            <a href="#tarjetas" data-nav="tarjetas" class="btn btn--ghost btn--sm">Tarjetas (todo el banco)</a>
+            <a href="#normativa" data-nav="normativa" class="btn btn--ghost btn--sm">Normativa BOE</a>
+          </p>
+        </div>`;
+}
+
+function renderTemario() {
+  const root = $("#temario-root");
+  if (!root) return;
+  const counts = questionCountByTopic();
+  const topicStats = loadTopicQuizStats();
+  root.innerHTML = topicsData.parts
+    .map(
+      (p) => `
+    <article class="part-card">
+      <h2>${escapeHtml(p.title)}</h2>
+      <ul class="block-list block-list--temario">
+        ${p.blocks
+          .map((b) => {
+            const nq = counts[b.id] ?? 0;
+            const st = topicStats[b.id];
+            const progress = topicProgressState(st);
+            const searchRaw = buildTemarioSearchIndex(b.id, b, topicStudy[b.id]).toLowerCase();
+            return `
+          <li id="temario-${escapeHtml(b.id)}" class="temario-block" data-progress-state="${escapeHtml(progress.cls)}" data-temario-search="${escapeHtml(searchRaw)}">
+            <div class="temario-block__head">
+              <strong class="temario-block__title">${escapeHtml(b.title)}</strong>
+              <span class="temario-block__hint">${escapeHtml(b.hint)}</span>
+            </div>
+            <div class="temario-block__meta">
+              <span class="temario-block__count">${nq} preguntas en el banco</span>
+              <span class="temario-block__progress temario-block__progress--${escapeHtml(progress.cls)}" title="Modo estudio en esta app (este navegador)">
+                <strong>${escapeHtml(progress.label)}</strong>
+                ${escapeHtml(progress.detail)}
+              </span>
+            </div>
+            ${renderBlockStudy(b.id)}
+          </li>`;
+          })
+          .join("")}
+      </ul>
+    </article>`,
+    )
+    .join("");
+}
+
+function initTemarioInteractions() {
+  const root = $("#temario-root");
+  if (!root || root.dataset.temarioBound === "1") return;
+  root.dataset.temarioBound = "1";
+  root.addEventListener("click", (e) => {
+    const card = e.target.closest(".temario-flipcard");
+    if (!card || !root.contains(card)) return;
+    card.classList.toggle("is-flipped");
+  });
+  root.addEventListener("keydown", (e) => {
+    if (e.key !== " " && e.key !== "Enter") return;
+    const card = e.target.closest(".temario-flipcard");
+    if (!card || !root.contains(card)) return;
+    e.preventDefault();
+    card.classList.toggle("is-flipped");
+  });
+}
+
+function renderMethods() {
+  const root = $("#method-root");
+  if (!root) return;
+  root.innerHTML = methods
+    .map(
+      (m, i) => `
+    <details class="method-card"${i === 0 ? " open" : ""}>
+      <summary>${escapeHtml(m.title)}</summary>
+      <div class="method-card__body">
+        <span class="method-card__tag">${escapeHtml(m.tag)}</span>
+        ${m.body}
+      </div>
+    </details>`,
+    )
+    .join("");
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function fillTopicSelect(/** @type {HTMLSelectElement} */ sel) {
+  const parts = topicsData.parts || [];
+  sel.innerHTML =
+    '<option value="all">Todos los temas (sin filtro)</option>' +
+    parts
+      .map((part) => {
+        const label =
+          part.id === "p1" ? "1.ª prueba" : part.id === "p2" ? "2.ª prueba" : escapeHtml(part.title || part.id);
+        const opts = (part.blocks || [])
+          .map((b) => `<option value="${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`)
+          .join("");
+        return `<optgroup label="${escapeHtml(label)}">${opts}</optgroup>`;
+      })
+      .join("");
+}
+
+function initQuizTopicSelect() {
+  const sel = $("#quiz-topic");
+  if (sel instanceof HTMLSelectElement) fillTopicSelect(sel);
+}
+
+function initFcTopicSelect() {
+  const sel = $("#fc-topic");
+  if (sel instanceof HTMLSelectElement) fillTopicSelect(sel);
+}
+
+/* ---------- Quiz ---------- */
+/** Examen tipo test: misma longitud que una prueba oficial (30 ítems). */
+const TEORICO_COUNT = 30;
+const TEORICO_EXAM_MS = 30 * 60 * 1000;
+
+const quizState = {
+  list: /** @type {typeof questionsData} */ ([]),
+  index: 0,
+  mode: /** @type {"study"|"exam"} */ ("study"),
+  /** Solo en estudio: inmediato, confianza (JOL) o panel temario/libro con texto literal del banco. */
+  studyFeedback: /** @type {"immediate"|"confidence"|"deepen"} */ ("immediate"),
+  sessionType: /** @type {"libre"|"teorico"} */ ("libre"),
+  answers: /** @type {Record<string, number|null>} */ ({}),
+  /** 0 baja · 1 media · 2 alta — solo modo confianza, tras elegir opción. */
+  confidence: /** @type {Record<string, number>} */ ({}),
+  marked: /** @type {Record<string, boolean>} */ ({}),
+  pretest: false,
+  optionsVisible: true,
+  examEndsAt: /** @type {number|null} */ (null),
+  timerId: /** @type {ReturnType<typeof setInterval>|null} */ (null),
+  timedOut: false,
+  _finished: false,
+  smartLabel: "",
+  /** @type {string} */
+  topicFilter: "all",
+  /** Contadores de estudio por pregunta (una vez por ítem y sesión). */
+  _statsCounted: /** @type {Set<string>} */ (new Set()),
+};
+
+function clearExamTimer() {
+  if (quizState.timerId) {
+    clearInterval(quizState.timerId);
+    quizState.timerId = null;
+  }
+  quizState.examEndsAt = null;
+  const el = $("#quiz-timer");
+  if (el) {
+    el.hidden = true;
+    el.textContent = "";
+    el.classList.remove("quiz__timer--warn");
+  }
+}
+
+function formatCountdown(ms) {
+  const s = Math.max(0, Math.ceil(ms / 1000));
+  const m = Math.floor(s / 60);
+  const r = s % 60;
+  return `${String(m).padStart(2, "0")}:${String(r).padStart(2, "0")}`;
+}
+
+function startExamTimer() {
+  clearExamTimer();
+  if (quizState.sessionType !== "teorico" || quizState.mode !== "exam") return;
+  const el = $("#quiz-timer");
+  if (!el) return;
+  el.hidden = false;
+  quizState.examEndsAt = Date.now() + TEORICO_EXAM_MS;
+  quizState.timedOut = false;
+  const tick = () => {
+    const end = quizState.examEndsAt || 0;
+    const left = end - Date.now();
+    if (left <= 0) {
+      el.textContent = "00:00";
+      el.classList.add("quiz__timer--warn");
+      clearExamTimer();
+      if (!quizState.timedOut && quizState.list.length) {
+        quizState.timedOut = true;
+        finishQuiz();
+      }
+      return;
+    }
+    el.textContent = formatCountdown(left);
+    el.classList.toggle("quiz__timer--warn", left <= 120000);
+  };
+  tick();
+  quizState.timerId = setInterval(tick, 1000);
+}
+
+function syncPretestAvailability() {
+  const session = $("#quiz-session")?.value || "libre";
+  const wrap = $("#quiz-pretest-wrap");
+  const cb = $("#quiz-pretest");
+  if (!cb) return;
+  if (session === "teorico") {
+    cb.checked = false;
+    cb.disabled = true;
+    if (wrap) wrap.title = "La preprueba no está disponible en el examen tipo test (30 preguntas).";
+  } else {
+    cb.disabled = false;
+    if (wrap) wrap.title = "";
+  }
+}
+
+function updateQuizStats() {
+  const el = $("#quiz-stats");
+  if (!el || !quizState.list.length) {
+    if (el) el.textContent = "";
+    return;
+  }
+  const total = quizState.list.length;
+  let answered = 0;
+  let marked = 0;
+  quizState.list.forEach((q) => {
+    const sel = quizState.answers[q.id];
+    if (sel !== null && sel !== undefined) answered += 1;
+    if (quizState.marked[q.id]) marked += 1;
+  });
+  const bits = [`Respondidas: ${answered}/${total}`];
+  if (marked) bits.push(`Marcadas repaso: ${marked}`);
+  el.textContent = bits.join(" · ");
+}
+
+function startQuiz() {
+  syncPretestAvailability();
+  const part = $("#quiz-part")?.value || "1";
+  const modeVal = $("#quiz-mode")?.value || "study";
+  if (modeVal === "exam") {
+    quizState.mode = "exam";
+    quizState.studyFeedback = "immediate";
+  } else if (modeVal === "study_confidence") {
+    quizState.mode = "study";
+    quizState.studyFeedback = "confidence";
+  } else if (modeVal === "study_deepen") {
+    quizState.mode = "study";
+    quizState.studyFeedback = "deepen";
+  } else {
+    quizState.mode = "study";
+    quizState.studyFeedback = "immediate";
+  }
+  quizState.sessionType = $("#quiz-session")?.value === "teorico" ? "teorico" : "libre";
+  quizState.smartLabel = "";
+  quizState.pretest = !!$("#quiz-pretest")?.checked && quizState.sessionType === "libre";
+  const topicRaw = $("#quiz-topic")?.value || "all";
+  let topicFilter = topicRaw === "all" || topicBelongsToPart(topicRaw, part) ? topicRaw : "all";
+  if (topicRaw !== "all" && topicFilter === "all" && $("#quiz-topic")) {
+    $("#quiz-topic").value = "all";
+  }
+  quizState.topicFilter = topicFilter;
+  renderQuizPracticeGuide();
+  quizState._statsCounted = new Set();
+  const wrongOnly = !!$("#quiz-wrong-only")?.checked;
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
+  let onlyPool = null;
+  if (wrongOnly) {
+    const ids = loadLastWrongIds();
+    if (ids.length) onlyPool = new Set(ids);
+  }
+  if (trapOnly) {
+    onlyPool =
+      onlyPool && onlyPool.size
+        ? new Set([...onlyPool].filter((id) => TRAP_QUESTION_IDS.has(id)))
+        : new Set(TRAP_QUESTION_IDS);
+  }
+  quizState.list = buildQuestionList(
+    allQuestions,
+    part,
+    quizState.sessionType,
+    topicFilter,
+    TEORICO_COUNT,
+    onlyPool,
+  ).map((q) => shuffleQuestionOptions(q));
+  quizState.index = 0;
+  quizState.answers = {};
+  quizState.confidence = {};
+  quizState.marked = {};
+  quizState.optionsVisible = !quizState.pretest;
+  quizState.timedOut = false;
+  quizState._finished = false;
+  clearExamTimer();
+  $("#quiz-area").hidden = false;
+  $("#quiz-pretest-box").hidden = !quizState.pretest;
+  $("#quiz-pretext").value = "";
+  $("#quiz-feedback").textContent = "";
+  $("#quiz-score").hidden = true;
+  if (!quizState.list.length) {
+    const wrongOnly = !!$("#quiz-wrong-only")?.checked;
+    const trapOnly = !!$("#quiz-trap-only")?.checked;
+    let msg =
+      "<p><strong>No hay preguntas</strong> con esta combinación de parte, tema y tipo de sesión. Prueba «Todos los temas» u otra parte.</p>";
+    if (wrongOnly && trapOnly) {
+      msg =
+        "<p><strong>No hay preguntas</strong> que sean a la vez falladas y trampa con el filtro actual. Prueba «Todos los temas» o desmarca una de las dos casillas.</p>";
+    } else if (wrongOnly && loadLastWrongIds().length) {
+      msg =
+        "<p><strong>No hay preguntas</strong> para «solo falladas» con el filtro actual. Prueba «Todos los temas», otra parte o desmarca la casilla de falladas.</p>";
+    } else if (trapOnly) {
+      msg =
+        "<p><strong>No hay preguntas trampa</strong> con este filtro. Prueba «Todos los temas», otra parte o desmarca la casilla de preguntas trampa.</p>";
+    }
+    $("#quiz-feedback").innerHTML = msg;
+    $("#quiz-question").innerHTML =
+      '<p class="muted">Ajusta los selectores arriba y pulsa de nuevo <strong>Nueva sesión</strong>.</p>';
+    $("#quiz-progress").textContent = "Sin preguntas";
+    $("#quiz-prev").disabled = true;
+    $("#quiz-next").disabled = true;
+    updateQuizStats();
+    return;
+  }
+  $("#quiz-next").disabled = false;
+  updateQuizStats();
+  startExamTimer();
+  saveQuizPrefs();
+  renderQuestion();
+}
+
+function startSmartReviewSession() {
+  if ($("#view-practicar")?.hidden) {
+    location.hash = "practicar";
+    showView("practicar");
+    updateDocumentTitle("practicar");
+    announceRoute("practicar");
+  }
+  const notebook = loadErrorNotebook();
+  const diagnostics = buildTopicDiagnostics(notebook, loadTopicQuizStats(), topicsData.parts);
+  const ids = buildSmartReviewQuestionIds(notebook, diagnostics, allQuestions, 15);
+  const byId = new Map(allQuestions.map((q) => [q.id, q]));
+  const list = ids.map((id) => byId.get(id)).filter(Boolean);
+
+  quizState.mode = "study";
+  quizState.studyFeedback = "confidence";
+  quizState.sessionType = "libre";
+  quizState.pretest = false;
+  quizState.topicFilter = "all";
+  quizState.smartLabel = "Repaso inteligente";
+  quizState._statsCounted = new Set();
+  quizState.list = shuffle(list).map((q) => shuffleQuestionOptions(q));
+  quizState.index = 0;
+  quizState.answers = {};
+  quizState.confidence = {};
+  quizState.marked = {};
+  quizState.optionsVisible = true;
+  quizState.timedOut = false;
+  quizState._finished = false;
+  clearExamTimer();
+
+  const modeEl = $("#quiz-mode");
+  const sessEl = $("#quiz-session");
+  const partEl = $("#quiz-part");
+  const topicEl = $("#quiz-topic");
+  if (modeEl) modeEl.value = "study_confidence";
+  if (sessEl) sessEl.value = "libre";
+  if (partEl) partEl.value = "mix";
+  if (topicEl) topicEl.value = "all";
+  saveQuizPrefs();
+  renderQuizPracticeGuide();
+  renderQuizProgressSummary();
+
+  $("#quiz-area").hidden = false;
+  $("#quiz-pretest-box").hidden = true;
+  $("#quiz-pretext").value = "";
+  $("#quiz-feedback").textContent = "";
+  $("#quiz-score").hidden = true;
+
+  if (!quizState.list.length) {
+    $("#quiz-feedback").innerHTML =
+      "<p><strong>No hay preguntas disponibles</strong> para crear el repaso inteligente. Revisa que el banco esté cargado.</p>";
+    $("#quiz-question").innerHTML = '<p class="muted">No se pudo crear la sesión.</p>';
+    $("#quiz-progress").textContent = "Sin preguntas";
+    $("#quiz-prev").disabled = true;
+    $("#quiz-next").disabled = true;
+    updateQuizStats();
+    return;
+  }
+
+  $("#quiz-next").disabled = false;
+  updateQuizStats();
+  renderQuestion();
+}
+
+function currentQ() {
+  return quizState.list[quizState.index];
+}
+
+function safeStemFigureSrc(raw) {
+  if (typeof raw !== "string") return null;
+  const s = raw.trim();
+  if (!s || s.includes("..") || s.includes("\\")) return null;
+  if (!/^images\/quiz\/[A-Za-z0-9._-]+\.(svg|png|webp)$/i.test(s)) return null;
+  return s;
+}
+
+function stemFigureBlock(q) {
+  if (!("stemFigure" in q)) return "";
+  const src = safeStemFigureSrc(/** @type {{ stemFigure?: string }} */ (q).stemFigure);
+  if (!src) return "";
+  const rawAlt = "stemFigureAlt" in q ? /** @type {{ stemFigureAlt?: string }} */ (q).stemFigureAlt : "";
+  const alt =
+    typeof rawAlt === "string" && rawAlt.trim()
+      ? rawAlt.trim()
+      : "Figura asociada al enunciado.";
+  return `<figure class="q-card__figure">
+    <img class="q-card__figure-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" onerror="this.closest('figure').classList.add('is-missing')" />
+    <figcaption class="q-card__figure-caption">${escapeHtml(alt)}</figcaption>
+    <p class="q-card__figure-missing"><strong>Imagen no disponible:</strong> falta subir <code>${escapeHtml(src)}</code>. ${escapeHtml(alt)}</p>
+  </figure>`;
+}
+
+function renderQuestion() {
+  const q = currentQ();
+  const total = quizState.list.length;
+  const box = $("#quiz-question");
+  if (!q || !total) {
+    $("#quiz-progress").textContent = total ? "" : "Sin preguntas";
+    if (box && !box.innerHTML.trim()) {
+      box.innerHTML = '<p class="muted">Sin preguntas en esta sesión. Pulsa «Nueva sesión».</p>';
+    }
+    return;
+  }
+  const sessionLabel =
+    quizState.sessionType === "teorico" ? " · Examen tipo test (30 máx.)" : "";
+  const smartLabel = quizState.smartLabel ? ` · ${escapeHtml(quizState.smartLabel)}` : "";
+  const topicExtra =
+    quizState.topicFilter && quizState.topicFilter !== "all"
+      ? ` · Tema: ${escapeHtml(topicBlockLabel(quizState.topicFilter))}`
+      : "";
+  $("#quiz-progress").textContent = `Pregunta ${quizState.index + 1} de ${total}${sessionLabel}${smartLabel}${topicExtra}`;
+  announceQuizQuestion(q, quizState.index, total);
+  const sel = quizState.answers[q.id];
+  const showOpts = quizState.optionsVisible;
+  const hideTopicMeta = quizState.sessionType === "teorico" && quizState.mode === "exam";
+  const topicTitle = topicBlockLabel(q.topicId);
+  const topicMeta = hideTopicMeta
+    ? `<div class="q-card__meta"><span>Pregunta ${quizState.index + 1}/${total}</span><span>Simulacro sin pistas</span></div>`
+    : `<div class="q-card__meta">
+        <span>Pregunta ${quizState.index + 1}/${total}</span>
+        <strong>${escapeHtml(topicTitle)}</strong>
+        <span>Parte ${q.part}</span>
+        <span>${escapeHtml(q.topicId)}</span>
+      </div>`;
+  const figureHtml = stemFigureBlock(q);
+
+  const confDone =
+    quizState.mode !== "study" ||
+    quizState.studyFeedback !== "confidence" ||
+    sel === null ||
+    sel === undefined ||
+    quizState.confidence[q.id] !== undefined;
+  const optsHtml = q.options
+    .map((opt, i) => {
+      let cls = "opt";
+      const checked = sel === i ? "checked" : "";
+      if (quizState.mode === "study" && sel !== null && sel !== undefined && confDone) {
+        if (i === q.correctIndex) cls += " opt--correct";
+        else if (sel === i) cls += " opt--wrong";
+      }
+      return `
+        <label class="${cls}">
+          <input type="radio" name="opt" value="${i}" ${checked} ${showOpts ? "" : "disabled"} />
+          <span>${escapeHtml(opt)}</span>
+        </label>`;
+    })
+    .join("");
+
+  const confidenceInline =
+    quizState.mode === "study" &&
+    quizState.studyFeedback === "confidence" &&
+    sel !== null &&
+    sel !== undefined &&
+    quizState.confidence[q.id] === undefined
+      ? `
+        <div class="confidence-inline" id="quiz-confidence" role="group" aria-label="Nivel de seguridad antes de corregir">
+          <p class="conf-prompt"><strong>Antes de corregir:</strong> mide tu seguridad.</p>
+          <div class="confidence-bar">
+            <button type="button" class="btn btn--ghost conf-btn" data-conf="0">Baja</button>
+            <button type="button" class="btn btn--ghost conf-btn" data-conf="1">Media</button>
+            <button type="button" class="btn btn--ghost conf-btn" data-conf="2">Alta</button>
+          </div>
+        </div>`
+      : "";
+
+  const preBtn =
+    quizState.pretest && !showOpts
+      ? `<p style="margin-top:1rem"><button type="button" class="btn btn--primary" id="quiz-reveal">Mostrar opciones</button></p>`
+      : "";
+
+  const markedOn = !!quizState.marked[q.id];
+  const toolbar = `
+    <div class="q-card__toolbar">
+      <label>
+        <input type="checkbox" id="quiz-mark-review" ${markedOn ? "checked" : ""} />
+        Marcar para repasar antes de entregar
+      </label>
+    </div>`;
+
+  box.innerHTML = `
+    ${topicMeta}
+    ${figureHtml}
+    <h2 class="q-card__stem">${escapeHtml(q.stem)}</h2>
+    <div class="opts" role="radiogroup" aria-label="Opciones">${optsHtml}</div>
+    ${confidenceInline}
+    ${preBtn}
+    ${toolbar}
+  `;
+
+  $("#quiz-mark-review")?.addEventListener("change", (e) => {
+    const t = /** @type {HTMLInputElement} */ (e.target);
+    quizState.marked[q.id] = !!t.checked;
+    updateQuizStats();
+  });
+
+  if (quizState.pretest && !showOpts) {
+    $("#quiz-reveal")?.addEventListener("click", () => {
+      quizState.optionsVisible = true;
+      renderQuestion();
+    });
+  }
+
+  box.querySelectorAll('input[name="opt"]').forEach((inp) => {
+    inp.addEventListener("change", () => {
+      const idx = Number.parseInt(inp.value, 10);
+      const prev = quizState.answers[q.id];
+      quizState.answers[q.id] = idx;
+      if (quizState.mode === "study" && quizState.studyFeedback === "confidence" && prev !== idx) {
+        delete quizState.confidence[q.id];
+      }
+      updateQuizStats();
+      renderQuestion();
+    });
+  });
+
+  box.querySelectorAll("[data-conf]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const v = Number.parseInt(btn.getAttribute("data-conf") || "1", 10);
+      quizState.confidence[q.id] = Number.isFinite(v) ? v : 1;
+      renderQuestion();
+    });
+  });
+
+  $("#quiz-prev").disabled = quizState.index === 0;
+  const atEnd = quizState.index === total - 1;
+  $("#quiz-next").textContent = atEnd ? "Finalizar" : "Siguiente";
+
+  if (quizState.mode === "study") {
+    const selEnd = quizState.answers[q.id];
+    if (selEnd !== null && selEnd !== undefined) {
+      showStudyFeedback(q);
+    } else {
+      $("#quiz-feedback").textContent = "";
+    }
+  }
+
+  updateQuizStats();
+}
+
+function topicBlockLabel(topicId) {
+  for (const p of topicsData.parts) {
+    const b = p.blocks.find((x) => x.id === topicId);
+    if (b) return b.title;
+  }
+  return topicId;
+}
+
+function questionCountByTopic() {
+  const m = /** @type {Record<string, number>} */ ({});
+  for (const q of allQuestions) {
+    m[q.topicId] = (m[q.topicId] || 0) + 1;
+  }
+  return m;
+}
+
+function topicProgressState(st) {
+  if (!st || !st.t) {
+    return {
+      cls: "idle",
+      label: "Sin empezar",
+      detail: "Lee el bloque y haz una sesión corta.",
+    };
+  }
+  const pct = Math.round((st.ok / st.t) * 100);
+  if (st.t >= 10 && pct >= 80) {
+    return {
+      cls: "strong",
+      label: "Fuerte",
+      detail: `${pct} % · ${st.ok}/${st.t} aciertos`,
+    };
+  }
+  if (st.t >= 5 && pct < 60) {
+    return {
+      cls: "weak",
+      label: "Débil",
+      detail: `${pct} % · repasar teoría y falladas`,
+    };
+  }
+  return {
+    cls: "active",
+    label: "En práctica",
+    detail: `${pct} % · ${st.ok}/${st.t} aciertos`,
+  };
+}
+
+/** Texto plano para filtrar bloques del temario (sin HTML). */
+function buildTemarioSearchIndex(blockId, blockMeta, study) {
+  const bits = [blockId, blockMeta.title, blockMeta.hint];
+  if (study && typeof study === "object") {
+    for (const k of [
+      "memoryHooks",
+      "expressBullets",
+      "readMore",
+      "fedieaSyllabus",
+      "bookGuide",
+      "quickSession",
+      "examChecklist",
+      "trapWarnings",
+      "sources",
+    ]) {
+      const arr = /** @type {unknown} */ (study)[k];
+      if (Array.isArray(arr)) {
+        for (const x of arr) bits.push(String(x));
+      } else if (k === "sources" && typeof arr === "string") {
+        bits.push(arr);
+      }
+    }
+    const fcs = study.flashcards;
+    if (Array.isArray(fcs)) {
+      for (const fc of fcs) {
+        if (fc && typeof fc === "object") {
+          bits.push(String(fc.front || ""), String(fc.back || ""));
+        }
+      }
+    }
+  }
+  return bits.join(" ");
+}
+
+function loadQuizPrefs() {
+  try {
+    const raw = localStorage.getItem(QUIZ_PREFS_KEY);
+    if (!raw) return null;
+    const o = JSON.parse(raw);
+    return o && typeof o === "object" ? o : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveQuizPrefs() {
+  const part = $("#quiz-part")?.value || "1";
+  const topic = $("#quiz-topic")?.value || "all";
+  const session = $("#quiz-session")?.value || "libre";
+  const mode = $("#quiz-mode")?.value || "study";
+  const pretest = !!$("#quiz-pretest")?.checked;
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
+  localStorage.setItem(QUIZ_PREFS_KEY, JSON.stringify({ part, topic, session, mode, pretest, trapOnly }));
+}
+
+function applyQuizPrefsToForm() {
+  const p = loadQuizPrefs();
+  if (!p) return;
+  const partEl = $("#quiz-part");
+  if (partEl instanceof HTMLSelectElement && typeof p.part === "string") partEl.value = p.part;
+  const topicEl = $("#quiz-topic");
+  if (topicEl instanceof HTMLSelectElement && typeof p.topic === "string") {
+    if ([...topicEl.options].some((o) => o.value === p.topic)) topicEl.value = p.topic;
+  }
+  const sessEl = $("#quiz-session");
+  if (sessEl instanceof HTMLSelectElement && typeof p.session === "string") sessEl.value = p.session;
+  const modeEl = $("#quiz-mode");
+  if (modeEl instanceof HTMLSelectElement && typeof p.mode === "string") modeEl.value = p.mode;
+  const preEl = $("#quiz-pretest");
+  if (preEl instanceof HTMLInputElement) preEl.checked = !!p.pretest;
+  const trapEl = $("#quiz-trap-only");
+  if (trapEl instanceof HTMLInputElement) trapEl.checked = !!p.trapOnly;
+  syncPretestAvailability();
+  validateTopicPartConsistency();
+}
+
+function initQuizPrefsAutosave() {
+  for (const id of ["quiz-part", "quiz-topic", "quiz-session", "quiz-mode"]) {
+    $(`#${id}`)?.addEventListener("change", saveQuizPrefs);
+  }
+  $("#quiz-pretest")?.addEventListener("change", saveQuizPrefs);
+  $("#quiz-trap-only")?.addEventListener("change", saveQuizPrefs);
+}
+
+function computeWrongIdsFromCurrentSession() {
+  const out = [];
+  for (const q of quizState.list) {
+    const sel = quizState.answers[q.id];
+    if (sel !== null && sel !== undefined && sel !== q.correctIndex) out.push(q.id);
+  }
+  return out;
+}
+
+function saveLastWrongIds(ids) {
+  try {
+    localStorage.setItem(LAST_WRONG_SESSION_KEY, JSON.stringify({ ids, savedAt: Date.now() }));
+  } catch {
+    /* ignore quota */
+  }
+  updateWrongOnlyCheckboxVisibility();
+}
+
+function loadLastWrongIds() {
+  try {
+    const raw = localStorage.getItem(LAST_WRONG_SESSION_KEY);
+    if (!raw) return [];
+    const o = JSON.parse(raw);
+    return Array.isArray(o?.ids) ? o.ids.filter((/** @type {unknown} */ x) => typeof x === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+function updateWrongOnlyCheckboxVisibility() {
+  const row = $("#quiz-wrong-row");
+  const n = loadLastWrongIds().length;
+  if (row) row.hidden = n === 0;
+}
+
+function loadErrorNotebook() {
+  try {
+    const raw = localStorage.getItem(ERROR_NOTEBOOK_KEY);
+    if (!raw) return {};
+    const o = JSON.parse(raw);
+    return o && typeof o === "object" ? o : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveErrorNotebook(notebook) {
+  try {
+    localStorage.setItem(ERROR_NOTEBOOK_KEY, JSON.stringify(notebook || {}));
+  } catch {
+    /* ignore quota */
+  }
+}
+
+function topicPartValue(topicId) {
+  for (const part of topicsData.parts || []) {
+    if ((part.blocks || []).some((b) => b.id === topicId)) return part.id === "p2" ? "2" : "1";
+  }
+  return "1";
+}
+
+function loadTopicQuizStats() {
+  try {
+    const raw = localStorage.getItem(QUIZ_TOPIC_STATS_KEY);
+    if (!raw) return /** @type {Record<string, { t: number; ok: number }>} */ ({});
+    const o = JSON.parse(raw);
+    if (!o || typeof o !== "object") return {};
+    return /** @type {Record<string, { t: number; ok: number }>} */ (o);
+  } catch {
+    return {};
+  }
+}
+
+/** @returns {string} Fecha local YYYY-MM-DD */
+function localDayKey(d = new Date()) {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+/** @param {string} ymd */
+function addCalendarDaysYMD(ymd, deltaDays) {
+  const [y, mo, dy] = ymd.split("-").map((x) => Number.parseInt(x, 10));
+  const dt = new Date(y, mo - 1, dy + deltaDays);
+  return localDayKey(dt);
+}
+
+function defaultUserStats() {
+  return {
+    v: 1,
+    streak: 0,
+    lastActivityDay: /** @type {string|null} */ (null),
+    lastActiveAt: /** @type {number|null} */ (null),
+    studyLifetimeGrades: 0,
+    studySessionsClosed: 0,
+    gradedSessionsClosed: 0,
+    gradedCorrectSum: 0,
+    gradedTotalSum: 0,
+    gradedByPart: {
+      p1: { sessions: 0, passed: 0 },
+      p2: { sessions: 0, passed: 0 },
+    },
+    flashRatings: 0,
+    seenQuestionIds: /** @type {Record<string, 1>} */ ({}),
+  };
+}
+
+function loadUserStats() {
+  const base = defaultUserStats();
+  try {
+    const raw = localStorage.getItem(USER_STATS_KEY);
+    if (!raw) return base;
+    const o = JSON.parse(raw);
+    if (!o || typeof o !== "object") return base;
+    const seen =
+      o.seenQuestionIds && typeof o.seenQuestionIds === "object"
+        ? /** @type {Record<string, 1>} */ (o.seenQuestionIds)
+        : {};
+    const gradedByPart = {
+      p1: {
+        sessions: Number.isFinite(o.gradedByPart?.p1?.sessions) ? o.gradedByPart.p1.sessions : 0,
+        passed: Number.isFinite(o.gradedByPart?.p1?.passed) ? o.gradedByPart.p1.passed : 0,
+      },
+      p2: {
+        sessions: Number.isFinite(o.gradedByPart?.p2?.sessions) ? o.gradedByPart.p2.sessions : 0,
+        passed: Number.isFinite(o.gradedByPart?.p2?.passed) ? o.gradedByPart.p2.passed : 0,
+      },
+    };
+    return {
+      ...base,
+      ...o,
+      seenQuestionIds: seen,
+      gradedByPart,
+    };
+  } catch {
+    return base;
+  }
+}
+
+function saveUserStats(/** @type {ReturnType<typeof defaultUserStats>} */ stats) {
+  try {
+    localStorage.setItem(USER_STATS_KEY, JSON.stringify(stats));
+  } catch {
+    /* ignore quota */
+  }
+}
+
+/**
+ * @param {(s: ReturnType<typeof defaultUserStats>) => void} fn
+ */
+function mutateUserStats(fn) {
+  const stats = loadUserStats();
+  if (!stats.seenQuestionIds || typeof stats.seenQuestionIds !== "object") stats.seenQuestionIds = {};
+  fn(stats);
+  const today = localDayKey();
+  const now = Date.now();
+  if (stats.lastActivityDay !== today) {
+    const yesterday = addCalendarDaysYMD(today, -1);
+    if (stats.lastActivityDay === yesterday) {
+      stats.streak = (stats.streak || 0) + 1;
+    } else {
+      stats.streak = 1;
+    }
+    stats.lastActivityDay = today;
+  }
+  stats.lastActiveAt = now;
+  saveUserStats(stats);
+  renderUserProgress();
+  renderQuizProgressSummary();
+}
+
+function totalTemarioBlocks() {
+  let n = 0;
+  for (const p of topicsData.parts || []) {
+    n += (p.blocks || []).length;
+  }
+  return n;
+}
+
+/** Aciertos en modo estudio agregados por parte (temario). */
+function aggregateTopicPracticeByPart(topicStats) {
+  const out = {
+    p1: { t: 0, ok: 0, blocks: 0, touched: 0 },
+    p2: { t: 0, ok: 0, blocks: 0, touched: 0 },
+  };
+  for (const part of topicsData.parts || []) {
+    const key = part.id === "p1" ? "p1" : part.id === "p2" ? "p2" : null;
+    if (!key) continue;
+    for (const b of part.blocks || []) {
+      out[key].blocks += 1;
+      const s = topicStats[b.id];
+      if (s && s.t > 0) {
+        out[key].touched += 1;
+        out[key].t += s.t;
+        out[key].ok += s.ok;
+      }
+    }
+  }
+  return out;
+}
+
+function formatRelativeLastActive(ts) {
+  if (!ts || !Number.isFinite(ts)) return "Sin registro todavía";
+  const dayMs = 86400000;
+  const diff = Date.now() - ts;
+  if (diff < dayMs && localDayKey(new Date(ts)) === localDayKey()) return "Hoy";
+  if (diff < 2 * dayMs && localDayKey(new Date(ts)) === addCalendarDaysYMD(localDayKey(), -1)) return "Ayer";
+  const d = Math.floor(diff / dayMs);
+  if (d < 14) return `Hace ${d} días`;
+  return new Date(ts).toLocaleDateString("es-ES", { day: "numeric", month: "short" });
+}
+
+function pctBar(p) {
+  const clamped = Math.max(0, Math.min(100, p));
+  return `<div class="user-stats__bar" role="progressbar" aria-valuenow="${Math.round(clamped)}" aria-valuemin="0" aria-valuemax="100"><span class="user-stats__bar-fill" style="width:${clamped}%"></span></div>`;
+}
+
+function dueScheduledFlashcardsCount() {
+  const sched = loadSchedule();
+  const now = Date.now();
+  let n = 0;
+  for (const item of Object.values(sched || {})) {
+    if (item && typeof item === "object" && Number(item.due || 0) <= now) n += 1;
+  }
+  return n;
+}
+
+function renderHeaderStatus() {
+  const el = $("#header-status");
+  if (!el) return;
+  const u = loadUserStats();
+  const bank = allQuestions.length;
+  const seen = u.seenQuestionIds && typeof u.seenQuestionIds === "object" ? Object.keys(u.seenQuestionIds).length : 0;
+  const coverage = bank ? Math.round((seen / bank) * 100) : 0;
+  const activeErrors = errorNotebookEntries(loadErrorNotebook()).filter(isActiveError).length;
+  const dueCards = dueScheduledFlashcardsCount();
+  el.innerHTML = `
+    <span><strong>${coverage} %</strong> banco</span>
+    <span><strong>${activeErrors}</strong> errores</span>
+    <span><strong>${dueCards}</strong> tarjetas</span>
+  `;
+}
+
+function pickTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal) {
+  const notebookEntries = errorNotebookEntries(loadErrorNotebook());
+  const activeErrors = notebookEntries.filter(isActiveError).length;
+  const highSecurity = notebookEntries.reduce((sum, entry) => sum + (entry.highSecurityWrongCount || 0), 0);
+  const dueCards = dueScheduledFlashcardsCount();
+  const gradedP1 = u.gradedByPart?.p1?.passed || 0;
+  const gradedP2 = u.gradedByPart?.p2?.passed || 0;
+  const byPart = aggregateTopicPracticeByPart(topicStats);
+
+  if (activeErrors > 0 || highSecurity > 0) {
+    return {
+      tag: "Prioridad",
+      title: "Hoy toca cerrar errores",
+      text:
+        highSecurity > 0
+          ? `Tienes ${highSecurity} fallo(s) con seguridad alta. Corrígelos antes de hacer más simulacros.`
+          : `Tienes ${activeErrors} error(es) activo(s). Repásalos y convierte cada fallo en una regla corta.`,
+      href: "#cuaderno",
+      cta: "Abrir cuaderno",
+      secondaryHref: "#practicar",
+      secondaryCta: "Practicar después",
+    };
+  }
+
+  if ((u.flashRatings || 0) > 0 && dueCards > 0) {
+    return {
+      tag: "Retención",
+      title: "Hoy toca repaso espaciado",
+      text: `Tienes ${dueCards} tarjeta(s) programada(s) para repasar. Hazlas antes de abrir temas nuevos.`,
+      href: "#tarjetas",
+      cta: "Repasar tarjetas",
+      secondaryHref: "#practicar",
+      secondaryCta: "Practicar luego",
+    };
+  }
+
+  if (coverage === 0 && blocksTouched === 0) {
+    return {
+      tag: "Primer paso",
+      title: "Empieza por un bloque pequeño",
+      text: "Lee Electricidad básica o Marco normativo, quédate con la idea clave y luego haz una sesión corta de práctica.",
+      href: "#temario",
+      cta: "Empezar temario",
+      secondaryHref: "#practicar",
+      secondaryCta: "Ir a practicar",
+    };
+  }
+
+  if (blocksTotal && blocksTouched < Math.ceil(blocksTotal * 0.45)) {
+    const weakPart = byPart.p1.t <= byPart.p2.t ? "1.ª prueba" : "2.ª prueba";
+    return {
+      tag: "Cobertura",
+      title: "Hoy amplía cobertura por bloques",
+      text: `Has practicado ${blocksTouched}/${blocksTotal} bloques. Elige un tema de ${weakPart} y trabaja en modo estudio con corrección inmediata.`,
+      href: "#practicar",
+      cta: "Practicar un bloque",
+      secondaryHref: "#temario",
+      secondaryCta: "Ver teoría",
+    };
+  }
+
+  if (!gradedP1 || !gradedP2) {
+    return {
+      tag: "Medición",
+      title: "Hoy mide nivel con un simulacro",
+      text: "Ya tienes base suficiente para comprobar una prueba sin pistas. Haz un simulacro y revisa solo los fallos.",
+      href: "#examen",
+      cta: "Lanzar simulacro",
+      secondaryHref: "#cuaderno",
+      secondaryCta: "Ver errores",
+    };
+  }
+
+  return {
+    tag: "Consolidación",
+    title: "Hoy mantén ritmo sin abrir frentes",
+    text: "Alterna 15 preguntas trampa con tarjetas. Si todo va bien, conserva energía para un simulacro completo.",
+    href: "#practicar",
+    cta: "Practicar trampas",
+    secondaryHref: "#tarjetas",
+    secondaryCta: "Repasar tarjetas",
+  };
+}
+
+function renderTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal) {
+  const root = $("#today-plan-root");
+  if (!root) return;
+  const plan = pickTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal);
+  root.innerHTML = `
+    <div class="today-plan__copy">
+      <p class="eyebrow">${escapeHtml(plan.tag)}</p>
+      <h2 id="today-plan-title">Hoy qué hago</h2>
+      <p><strong>${escapeHtml(plan.title)}:</strong> ${escapeHtml(plan.text)}</p>
+    </div>
+    <div class="today-plan__actions">
+      <a class="btn btn--primary btn--hero-action" href="${escapeHtml(plan.href)}">${escapeHtml(plan.cta)}</a>
+      <a class="btn btn--ghost" href="${escapeHtml(plan.secondaryHref)}">${escapeHtml(plan.secondaryCta)}</a>
+    </div>
+  `;
+}
+
+function renderUserProgress() {
+  const root = $("#user-stats-root");
+  renderHeaderStatus();
+  if (!root) return;
+  const u = loadUserStats();
+  const topicStats = loadTopicQuizStats();
+  const bank = allQuestions.length;
+  const seen = u.seenQuestionIds && typeof u.seenQuestionIds === "object" ? Object.keys(u.seenQuestionIds).length : 0;
+  const coverage = bank ? Math.round((seen / bank) * 100) : 0;
+  const blocksTotal = totalTemarioBlocks();
+  let blocksTouched = 0;
+  for (const p of topicsData.parts || []) {
+    for (const b of p.blocks || []) {
+      const s = topicStats[b.id];
+      if (s && s.t > 0) blocksTouched += 1;
+    }
+  }
+  const blockPct = blocksTotal ? Math.round((blocksTouched / blocksTotal) * 100) : 0;
+  const byPart = aggregateTopicPracticeByPart(topicStats);
+  const avgGraded =
+    u.gradedSessionsClosed > 0 && u.gradedTotalSum > 0
+      ? Math.round((u.gradedCorrectSum / u.gradedTotalSum) * 100)
+      : null;
+  const p1rate = byPart.p1.t > 0 ? Math.round((byPart.p1.ok / byPart.p1.t) * 100) : null;
+  const p2rate = byPart.p2.t > 0 ? Math.round((byPart.p2.ok / byPart.p2.t) * 100) : null;
+
+  renderTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal);
+
+  root.innerHTML = `
+    <h2 id="user-stats-title" class="user-stats__title">Tu progreso</h2>
+    <p class="user-stats__note">Resumen guardado solo en este navegador. Sirve para ver constancia y cobertura; no sustituye a un tutor ni al baremo oficial.</p>
+    <div class="user-stats__grid">
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Racha (días seguidos con práctica)</span>
+        <strong class="user-stats__metric-value">${escapeHtml(String(u.streak || 0))}</strong>
+        <span class="user-stats__metric-hint">${escapeHtml(formatRelativeLastActive(u.lastActiveAt || 0))}</span>
+      </div>
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Preguntas distintas vistas</span>
+        <strong class="user-stats__metric-value">${seen}<span class="user-stats__metric-den">/${bank}</span></strong>
+        ${pctBar(coverage)}
+        <span class="user-stats__metric-hint">Cobertura aproximada del banco cargado</span>
+      </div>
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Bloques del temario con práctica</span>
+        <strong class="user-stats__metric-value">${blocksTouched}<span class="user-stats__metric-den">/${blocksTotal}</span></strong>
+        ${pctBar(blockPct)}
+        <span class="user-stats__metric-hint">Al menos una respuesta en estudio por bloque</span>
+      </div>
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Respuestas valoradas en estudio</span>
+        <strong class="user-stats__metric-value">${escapeHtml(String(u.studyLifetimeGrades || 0))}</strong>
+        <span class="user-stats__metric-hint">Cada ítem al corregir (puede repetirse en otra sesión)</span>
+      </div>
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Sesiones de estudio libre completadas</span>
+        <strong class="user-stats__metric-value">${escapeHtml(String(u.studySessionsClosed || 0))}</strong>
+        <span class="user-stats__metric-hint">Llegaste al final sin modo examen tipo test</span>
+      </div>
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Sesiones con nota final</span>
+        <strong class="user-stats__metric-value">${escapeHtml(String(u.gradedSessionsClosed || 0))}</strong>
+        <span class="user-stats__metric-hint">${avgGraded !== null ? `Media acumulada: ${avgGraded} %` : "Examen al cierre o test de 30 en estudio"}</span>
+      </div>
+      <div class="user-stats__metric">
+        <span class="user-stats__metric-label">Tarjetas (Lo sabía / No lo tenía claro)</span>
+        <strong class="user-stats__metric-value">${escapeHtml(String(u.flashRatings || 0))}</strong>
+        <span class="user-stats__metric-hint">Programaciones de repaso espaciado</span>
+      </div>
+    </div>
+    <div class="user-stats__parts" aria-label="Ritmo en estudio por prueba">
+      <div class="user-stats__part">
+        <span class="user-stats__part-label">1.ª prueba (estudio)</span>
+        ${p1rate !== null ? `<span class="user-stats__part-val">${p1rate} % aciertos (${byPart.p1.ok}/${byPart.p1.t})</span>` : `<span class="user-stats__part-val muted">Sin datos aún</span>`}
+      </div>
+      <div class="user-stats__part">
+        <span class="user-stats__part-label">2.ª prueba (estudio)</span>
+        ${p2rate !== null ? `<span class="user-stats__part-val">${p2rate} % aciertos (${byPart.p2.ok}/${byPart.p2.t})</span>` : `<span class="user-stats__part-val muted">Sin datos aún</span>`}
+      </div>
+    </div>
+    <div class="user-stats__actions">
+      <button type="button" class="btn btn--ghost btn--sm" id="user-stats-reset">Restablecer solo este resumen</button>
+    </div>
+  `;
+
+  $("#user-stats-reset")?.addEventListener("click", () => {
+    if (!window.confirm("¿Borrar racha, cobertura y contadores del resumen global? No borra la programación de tarjetas ni los aciertos por bloque del temario.")) {
+      return;
+    }
+    try {
+      localStorage.removeItem(USER_STATS_KEY);
+    } catch {
+      /* ignore */
+    }
+    renderUserProgress();
+    renderQuizProgressSummary();
+  });
+}
+
+function renderQuizProgressSummary() {
+  const el = $("#quiz-progress-summary");
+  if (!el) return;
+  const u = loadUserStats();
+  const bank = allQuestions.length;
+  const seen = u.seenQuestionIds && typeof u.seenQuestionIds === "object" ? Object.keys(u.seenQuestionIds).length : 0;
+  const coverage = bank ? Math.round((seen / bank) * 100) : 0;
+  const bits = [
+    `Racha: ${u.streak || 0} día(s)`,
+    `Cobertura banco: ${coverage} % (${seen}/${bank})`,
+    `Sesiones con nota: ${u.gradedSessionsClosed || 0}`,
+  ];
+  el.textContent = bits.join(" · ");
+}
+
+function recordQuestionOutcome(q, selectedIndex, isCorrect) {
+  const confidenceLevel =
+    quizState.studyFeedback === "confidence" && quizState.confidence[q.id] !== undefined
+      ? quizState.confidence[q.id]
+      : null;
+  const notebook = loadErrorNotebook();
+  const next = updateErrorNotebookWithResult(notebook, q, selectedIndex, isCorrect, confidenceLevel);
+  saveErrorNotebook(next);
+  renderExamCoach();
+}
+
+function coachSnapshot() {
+  const notebook = loadErrorNotebook();
+  const entries = errorNotebookEntries(notebook);
+  const activeEntries = entries.filter(isActiveError);
+  const highSecurity = entries.reduce((sum, entry) => sum + (entry.highSecurityWrongCount || 0), 0);
+  const diagnostics = buildTopicDiagnostics(notebook, loadTopicQuizStats(), topicsData.parts);
+  const readiness = buildExamReadiness(topicsData.parts, diagnostics, loadUserStats());
+  const plan = buildRecommendedPlan(diagnostics);
+  const topTopics = diagnostics.slice(0, 3);
+  const recent = [...entries]
+    .sort((a, b) => (b.lastWrongAt || 0) - (a.lastWrongAt || 0))
+    .slice(0, 4);
+  return { entries, activeEntries, highSecurity, diagnostics, readiness, plan, topTopics, recent };
+}
+
+function renderReadinessCards(readiness) {
+  return readiness
+    .map(
+      (item) => `
+      <article class="exam-ready exam-ready--${escapeHtml(item.status)}">
+        <div class="exam-ready__head">
+          <h3>${escapeHtml(item.title)}</h3>
+          <strong>${escapeHtml(item.label)}</strong>
+        </div>
+        <div class="exam-ready__metrics">
+          <span>${item.accuracy === null ? "Sin aciertos aún" : `${item.accuracy} % aciertos`}</span>
+          <span>${item.coverage} % bloques</span>
+          <span>${item.passedSimulations} simulacro(s) apto(s)</span>
+        </div>
+        <ul>${item.reasons.map((reason) => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>
+        <p><strong>Siguiente acción:</strong> ${escapeHtml(item.nextAction)}</p>
+      </article>`,
+    )
+    .join("");
+}
+
+function preparePracticeTopic(topicId) {
+  const partEl = $("#quiz-part");
+  const topicEl = $("#quiz-topic");
+  if (partEl) partEl.value = topicPartValue(topicId);
+  if (topicEl) topicEl.value = topicId;
+  validateTopicPartConsistency();
+  renderQuizPracticeGuide();
+  renderQuizProgressSummary();
+  saveQuizPrefs();
+  location.hash = "practicar";
+  requestAnimationFrame(() => {
+    setTimeout(() => $("#quiz-start")?.focus(), 80);
+  });
+}
+
+function startExamSimulation(partValue) {
+  location.hash = "practicar";
+  showView("practicar");
+  updateDocumentTitle("practicar");
+  announceRoute("practicar");
+  const partEl = $("#quiz-part");
+  const topicEl = $("#quiz-topic");
+  const sessionEl = $("#quiz-session");
+  const modeEl = $("#quiz-mode");
+  const preEl = $("#quiz-pretest");
+  const trapEl = $("#quiz-trap-only");
+  if (partEl) partEl.value = partValue;
+  if (topicEl) topicEl.value = "all";
+  if (sessionEl) sessionEl.value = "teorico";
+  if (modeEl) modeEl.value = "exam";
+  if (preEl instanceof HTMLInputElement) preEl.checked = false;
+  if (trapEl instanceof HTMLInputElement) trapEl.checked = false;
+  syncPretestAvailability();
+  validateTopicPartConsistency();
+  renderQuizPracticeGuide();
+  renderQuizProgressSummary();
+  saveQuizPrefs();
+  startQuiz();
+  requestAnimationFrame(() => {
+    $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function renderExamReadiness() {
+  const root = $("#exam-readiness-root");
+  if (!root) return;
+  const { entries, activeEntries, highSecurity, readiness } = coachSnapshot();
+  root.innerHTML = `
+    <div class="exam-coach__head">
+      <div>
+        <h2 id="exam-readiness-title">Preparación para examen</h2>
+        <p>Simula cada prueba y usa el indicador para decidir si estás listo o si conviene cerrar errores antes.</p>
+      </div>
+    </div>
+    <div class="exam-coach__metrics" aria-label="Resumen de preparación">
+      <span><strong>${entries.length}</strong> pregunta(s) en cuaderno</span>
+      <span><strong>${activeEntries.length}</strong> error(es) pendiente(s)</span>
+      <span><strong>${highSecurity}</strong> fallo(s) con seguridad alta</span>
+    </div>
+    <section class="exam-readiness" aria-label="Indicador de preparación por prueba">
+      <h3>Indicador por prueba</h3>
+      <div class="exam-readiness__grid">${renderReadinessCards(readiness)}</div>
+    </section>
+    <div class="exam-coach__actions">
+      <button type="button" class="btn btn--primary btn--hero-action" data-exam-start="1">Simulacro 1.ª prueba</button>
+      <button type="button" class="btn btn--primary btn--hero-action" data-exam-start="2">Simulacro 2.ª prueba</button>
+      <a class="btn btn--ghost" href="#cuaderno" data-nav="cuaderno">Ver cuaderno</a>
+    </div>
+  `;
+
+  root.querySelectorAll("[data-exam-start]").forEach((button) => {
+    button.addEventListener("click", () => startExamSimulation(button.getAttribute("data-exam-start") === "2" ? "2" : "1"));
+  });
+}
+
+function renderErrorNotebook() {
+  const root = $("#error-notebook-root");
+  if (!root) return;
+  const { entries, activeEntries, highSecurity, topTopics, plan, recent } = coachSnapshot();
+  const empty =
+    entries.length === 0
+      ? `<div class="empty-state empty-state--coach">
+          <strong>Tu cuaderno todavía está limpio.</strong>
+          <p>Haz una sesión en Practicar. Cuando falles, aquí aparecerán errores activos, fallos con seguridad alta y temas prioritarios.</p>
+          <a class="btn btn--primary btn--sm" href="#practicar" data-nav="practicar">Crear primeros datos</a>
+        </div>`
+      : "";
+  const topicsHtml = topTopics.length
+    ? topTopics
+        .map((row) => {
+          const acc = row.accuracy === null ? "sin precisión aún" : `${row.accuracy} % aciertos`;
+          return `<li>
+            <strong>${escapeHtml(row.title)}</strong>
+            <span>${escapeHtml(acc)} · ${row.activeErrors} error(es) activo(s) · ${row.highSecurityWrongCount} fallo(s) con seguridad alta</span>
+            <button type="button" class="btn btn--ghost btn--sm" data-coach-topic="${escapeHtml(row.topicId)}">Preparar sesión</button>
+          </li>`;
+        })
+        .join("")
+    : `<li><strong>Sin temas priorizados todavía</strong><span>Haz una sesión de estudio para generar diagnóstico.</span></li>`;
+  const planTopicButton = plan.topicId
+    ? `<button type="button" class="btn btn--primary btn--sm" data-coach-topic="${escapeHtml(plan.topicId)}">Practicar prioridad</button>`
+    : "";
+  const smartButton = `<button type="button" class="btn btn--primary btn--sm" id="error-notebook-smart">Repaso inteligente</button>`;
+  const recentHtml = recent.length
+    ? recent
+        .map((entry) => {
+          const topic = topicBlockLabel(entry.topicId);
+          const status = isActiveError(entry) ? "pendiente" : "en mejora";
+          return `<li>
+            <strong>${escapeHtml(entry.stem.slice(0, 110))}${entry.stem.length > 110 ? "…" : ""}</strong>
+            <span>${escapeHtml(topic)} · ${escapeHtml(status)} · fallos: ${entry.wrongCount || 0}</span>
+          </li>`;
+        })
+        .join("")
+    : `<li><span>Sin errores recientes guardados.</span></li>`;
+
+  root.innerHTML = `
+    <div class="exam-coach__head">
+      <div>
+        <h2 id="error-notebook-title">Cuaderno y repaso inteligente</h2>
+        <p>Diagnóstico local basado en tus fallos, aciertos posteriores y seguridad marcada.</p>
+      </div>
+      <button type="button" class="btn btn--ghost btn--sm" id="error-notebook-clear" ${entries.length ? "" : "disabled"}>Vaciar cuaderno</button>
+    </div>
+    <div class="exam-coach__metrics" aria-label="Resumen del cuaderno de errores">
+      <span><strong>${entries.length}</strong> pregunta(s) en cuaderno</span>
+      <span><strong>${activeEntries.length}</strong> pendiente(s)</span>
+      <span><strong>${highSecurity}</strong> fallo(s) con seguridad alta</span>
+    </div>
+    ${empty}
+    <div class="exam-coach__grid">
+      <section>
+        <h3>Diagnóstico por tema</h3>
+        <ul class="exam-coach__topic-list">${topicsHtml}</ul>
+      </section>
+      <section>
+        <h3>${escapeHtml(plan.title)}</h3>
+        <ol class="exam-coach__steps">${plan.steps.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
+        <div class="exam-coach__actions">${smartButton}${planTopicButton}</div>
+      </section>
+    </div>
+    <details class="exam-coach__notebook">
+      <summary>Cuaderno de errores reciente</summary>
+      <ul>${recentHtml}</ul>
+    </details>
+  `;
+
+  root.querySelectorAll("[data-coach-topic]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const topicId = button.getAttribute("data-coach-topic") || "all";
+      preparePracticeTopic(topicId);
+    });
+  });
+
+  root.querySelector("#error-notebook-clear")?.addEventListener("click", () => {
+    if (!window.confirm("¿Vaciar el cuaderno de errores? No borra estadísticas globales ni tarjetas.")) return;
+    saveErrorNotebook({});
+    renderExamCoach();
+  });
+
+  root.querySelector("#error-notebook-smart")?.addEventListener("click", startSmartReviewSession);
+}
+
+function renderExamCoach() {
+  renderHeaderStatus();
+  renderExamReadiness();
+  renderErrorNotebook();
+}
+
+function selectedQuizTopicForGuide() {
+  const part = $("#quiz-part")?.value || "1";
+  const topic = $("#quiz-topic")?.value || "all";
+  if (topic === "all" || !topicBelongsToPart(topic, part)) return "all";
+  return topic;
+}
+
+function renderQuizPracticeGuide() {
+  const root = $("#quiz-practice-guide");
+  if (!root) return;
+  const topic = selectedQuizTopicForGuide();
+  const part = $("#quiz-part")?.value || "1";
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
+  const trapCount = trapOnly
+    ? buildQuestionList(allQuestions, part, "libre", topic, allQuestions.length, TRAP_QUESTION_IDS).length
+    : 0;
+  const generic = [
+    "Si eres nuevo, no cambies todo: elige una parte, un tema y deja el modo Estudio · corrección inmediata.",
+    "Responde sin mirar apuntes y corrige con calma: primero entiende por qué la opción correcta encaja.",
+    "Cuando falles, vuelve al bloque correspondiente del Temario y escribe la regla en una frase.",
+    "Cuando quieras subir dificultad, activa preguntas trampa, falladas o usa Examen para simular sin pistas.",
+  ];
+  const title = topic === "all" ? "Práctica guiada · todos los temas" : `Práctica guiada · ${topicBlockLabel(topic)}`;
+  const items = topic === "all" ? generic : topicStudy[topic]?.practiceDrills || generic;
+  const topicLink =
+    topic === "all"
+      ? ""
+      : `<a class="btn btn--ghost btn--sm" href="#temario--${encodeURIComponent(topic)}">Ver teoría de este tema</a>`;
+
+  root.innerHTML = `
+    <div class="quiz-practice-guide__head">
+      <div>
+        <h2>${escapeHtml(title)}</h2>
+        <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test → explicación → refuerzo en Temario → repetición.</p>
+        ${
+          trapOnly
+            ? `<p><strong>Modo preguntas trampa activo:</strong> este filtro prioriza distractores típicos, excepciones y confusiones frecuentes (${trapCount} pregunta(s) con los filtros actuales).</p>`
+            : ""
+        }
+      </div>
+      ${topicLink}
+    </div>
+    <ol class="quiz-practice-guide__list">
+      ${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}
+    </ol>
+  `;
+}
+
+function bumpTopicQuizStatIfNew(q, selectedIndex, isCorrect) {
+  if (quizState.mode !== "study") return;
+  if (quizState._statsCounted.has(q.id)) return;
+  quizState._statsCounted.add(q.id);
+  recordQuestionOutcome(q, selectedIndex, isCorrect);
+  const stats = loadTopicQuizStats();
+  const cur = stats[q.topicId] || { t: 0, ok: 0 };
+  cur.t += 1;
+  if (isCorrect) cur.ok += 1;
+  stats[q.topicId] = cur;
+  try {
+    localStorage.setItem(QUIZ_TOPIC_STATS_KEY, JSON.stringify(stats));
+  } catch {
+    /* ignore */
+  }
+  mutateUserStats((glob) => {
+    glob.studyLifetimeGrades += 1;
+    glob.seenQuestionIds[q.id] = 1;
+  });
+}
+
+function announceQuizQuestion(q, index, total) {
+  const ann = $("#quiz-announce");
+  if (!ann) return;
+  const title = topicBlockLabel(q.topicId);
+  ann.textContent = `Pregunta ${index + 1} de ${total}. Tema: ${title}. Parte ${q.part}.`;
+}
+
+function quizAreaActive() {
+  const area = $("#quiz-area");
+  const view = $("#view-practicar");
+  return !!(area && view && !area.hidden && !view.hidden);
+}
+
+function setQuizFocusMode(on) {
+  const view = $("#view-practicar");
+  const btn = $("#quiz-focus-toggle");
+  view?.classList.toggle("is-focus-mode", !!on);
+  if (btn instanceof HTMLButtonElement) {
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.textContent = on ? "Salir foco" : "Modo foco";
+  }
+}
+
+function toggleQuizFocusMode() {
+  const view = $("#view-practicar");
+  setQuizFocusMode(!view?.classList.contains("is-focus-mode"));
+}
+
+function initQuizKeyboard() {
+  document.addEventListener("keydown", (e) => {
+    if (!quizAreaActive() || quizState._finished) return;
+    const ae = document.activeElement;
+    if (
+      ae &&
+      (ae instanceof HTMLTextAreaElement ||
+        (ae instanceof HTMLInputElement && (ae.type === "text" || ae.type === "search" || ae.type === "number")))
+    ) {
+      return;
+    }
+    const q = currentQ();
+    if (!q) return;
+    const key = e.key;
+    if (key === "ArrowRight" || key === "ArrowDown" || key === "n" || key === "N") {
+      if (!e.altKey && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        finishOrAdvanceQuiz();
+      }
+      return;
+    }
+    if (key === "ArrowLeft" || key === "ArrowUp" || key === "p" || key === "P") {
+      if (!e.altKey && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        goPrev();
+      }
+      return;
+    }
+    if (/^[1-9]$/.test(key)) {
+      const idx = Number.parseInt(key, 10) - 1;
+      if (idx >= 0 && idx < q.options.length && quizState.optionsVisible) {
+        const inp = document.querySelector(`#quiz-question input[name="opt"][value="${idx}"]`);
+        if (inp instanceof HTMLInputElement) {
+          e.preventDefault();
+          inp.checked = true;
+          inp.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+      }
+    }
+  });
+}
+
+function initTemarioFilter() {
+  const inp = $("#temario-filter");
+  const weakOnly = $("#temario-weak-only");
+  const root = $("#temario-root");
+  if (!(inp instanceof HTMLInputElement) || !root) return;
+  const apply = () => {
+    const qv = inp.value.trim().toLowerCase();
+    const onlyWeak = weakOnly instanceof HTMLInputElement && weakOnly.checked;
+    root.querySelectorAll(".temario-block").forEach((li) => {
+      const hay = (li.getAttribute("data-temario-search") || "").toLowerCase();
+      const matchesText = qv.length === 0 || hay.includes(qv);
+      const matchesWeak = !onlyWeak || li.getAttribute("data-progress-state") === "weak";
+      li.hidden = !matchesText || !matchesWeak;
+    });
+  };
+  inp.addEventListener("input", apply);
+  weakOnly?.addEventListener("change", apply);
+}
+
+function getFcDisplayMode() {
+  const v = $("#fc-display-mode")?.value;
+  if (v === "front_only" || v === "both") return v;
+  return "flip";
+}
+
+function updateFlashcardWrapMode() {
+  const wrap = document.querySelector(".flashcard-wrap");
+  if (!wrap) return;
+  wrap.classList.remove("fc-mode--front-only", "fc-mode--both");
+  const m = getFcDisplayMode();
+  if (m === "front_only") wrap.classList.add("fc-mode--front-only");
+  if (m === "both") wrap.classList.add("fc-mode--both");
+}
+
+function updateScheduleDetail() {
+  const el = $("#fc-schedule-detail");
+  if (!el) return;
+  const sched = loadSchedule();
+  const pool = flashQuestionPool();
+  const now = Date.now();
+  const day = 86400000;
+  let due0 = 0;
+  let due3 = 0;
+  let later = 0;
+  let none = 0;
+  for (const q of pool) {
+    const s = sched[q.id];
+    if (!s || !s.due) {
+      none += 1;
+      continue;
+    }
+    if (s.due <= now) due0 += 1;
+    else if (s.due <= now + 3 * day) due3 += 1;
+    else later += 1;
+  }
+  el.textContent = `Programación (mazo filtrado): ${due0} vencidas o sin cita · ${due3} en las próximas 72 h · ${later} más adelante · ${none} sin fecha de repaso guardada.`;
+}
+
+function quizFeedbackTemarioHint(q) {
+  const href = `#temario--${encodeURIComponent(q.topicId)}`;
+  const label = topicBlockLabel(q.topicId);
+  return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> amplía en el bloque «${escapeHtml(label)}» del <a href="${href}">temario</a> (ganchos y viñetas de estudio).</p>`;
+}
+
+/** Panel post-respuesta: texto literal `explain` del banco + enlaces a temario y material de estudio. */
+function renderDeepenPanel(q) {
+  const blockTitle = topicBlockLabel(q.topicId);
+  const temarioHref = `#temario--${encodeURIComponent(q.topicId)}`;
+  const ureHref =
+    q.part === 1
+      ? "https://www.ure.es/examenes/electricidad-y-radioelectricidad/"
+      : "https://www.ure.es/legislacion-y-reglamentacion/";
+  const ureLinkText =
+    q.part === 1 ? "URE · Material de práctica (electricidad y radioelectricidad)" : "URE · Legislación y reglamentación";
+  const normativaHref = "#normativa--normativa-boe";
+  return `<div class="quiz-deepen">
+    <h3 class="quiz-deepen__title">Ampliación · temario y libro</h3>
+    <p class="quiz-deepen__note">Explicación <strong>exacta</strong> registrada en el banco para esta pregunta (no es un resumen generado).</p>
+    <blockquote class="quiz-deepen__exact"><p>${escapeHtml(q.explain)}</p></blockquote>
+    ${
+      "sourceRef" in q && q.sourceRef
+        ? `<p class="quiz-deepen__source"><strong>Fuente al redactar el ítem:</strong> ${escapeHtml(String(q.sourceRef))}</p>`
+        : ""
+    }
+    <p class="quiz-deepen__note">Relación con tu estudio y fuentes oficiales:</p>
+    <ul class="quiz-deepen__links">
+      <li><a href="${temarioHref}">Temario de examen · ${escapeHtml(blockTitle)}</a></li>
+      <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
+      <li><a href="${normativaHref}">Normativa · BOE y administración</a></li>
+      <li><a href="https://www.cept.org/ecc/ham-radio" rel="noopener noreferrer">CEPT · HAREC y documentación</a></li>
+    </ul>
+  </div>`;
+}
+
+function focusConfidencePicker() {
+  const picker = document.getElementById("quiz-confidence");
+  if (!picker) return;
+  picker.scrollIntoView({ behavior: "smooth", block: "center" });
+  const first = picker.querySelector("[data-conf]");
+  if (first instanceof HTMLButtonElement) {
+    first.focus({ preventScroll: true });
+  }
+}
+
+function confidenceCalibrationLine(q, sel, confLevel) {
+  const ok = sel === q.correctIndex;
+  const labels = ["baja", "media", "alta"];
+  const lab = labels[confLevel] ?? "media";
+  if (ok && confLevel === 2) {
+    return `<p class="conf-cal conf-cal--ok"><strong>Concepto consolidado:</strong> acertaste con seguridad ${lab}. Mantén esta pregunta en repasos espaciados, pero no es prioridad.</p>`;
+  }
+  if (!ok && confLevel === 2) {
+    return `<p class="conf-cal conf-cal--warn"><strong>Prioridad máxima de repaso:</strong> fallaste con seguridad ${lab}. Revisa el bloque del temario y convierte el error en una regla corta.</p>`;
+  }
+  if (ok && confLevel === 0) {
+    return `<p class="conf-cal conf-cal--ok"><strong>Acierto frágil:</strong> acertaste con seguridad ${lab}. Lee la explicación y fija por qué la opción correcta encaja.</p>`;
+  }
+  if (!ok && confLevel === 0) {
+    return `<p class="conf-cal"><strong>Hueco detectado:</strong> fallaste con seguridad ${lab}. Usa la explicación para construir la regla básica antes de repetir tests.</p>`;
+  }
+  if (ok) {
+    return `<p class="conf-cal conf-cal--ok"><strong>Buen avance:</strong> acertaste con seguridad ${lab}. Refuerza la explicación para subirla a seguridad alta.</p>`;
+  }
+  return `<p class="conf-cal conf-cal--warn"><strong>Repaso recomendado:</strong> fallaste con seguridad ${lab}. Vuelve al concepto y repite una pregunta parecida.</p>`;
+}
+
+function correctAnswerParagraph(q) {
+  const t =
+    Array.isArray(q.options) && typeof q.correctIndex === "number" && q.options[q.correctIndex] !== undefined
+      ? String(q.options[q.correctIndex])
+      : "";
+  if (!t) return "";
+  return `<p class="quiz-fb-correct"><strong>Respuesta correcta:</strong> ${escapeHtml(t)}</p>`;
+}
+
+function selectedAnswerParagraph(q, sel) {
+  const t = Array.isArray(q.options) && typeof sel === "number" && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  if (!t) return "";
+  return `<p class="quiz-fb-selected"><strong>Tu respuesta:</strong> ${escapeHtml(t)}</p>`;
+}
+
+function answerReasoningPanel(q, sel) {
+  const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
+  const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
+  const correctExplanation =
+    typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
+  const generalExplanation = typeof q.explain === "string" ? q.explain.trim() : "";
+  const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  const correctText =
+    Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
+  if (sel === q.correctIndex) {
+    const detail =
+      correctExplanation ||
+      generalExplanation ||
+      "Encaja con el concepto que pide el enunciado. Lee la explicación para fijar la regla, fórmula o criterio de examen que la justifica.";
+    return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
+  }
+  const whyWrong =
+    selectedExplanation ||
+    "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
+  const whyCorrect =
+    correctExplanation ||
+    generalExplanation ||
+    (correctText
+      ? `La opción correcta es «${correctText}»; la explicación desarrolla la regla que permite distinguirla del distractor marcado.`
+      : "La explicación desarrolla la regla que permite distinguir la opción correcta del distractor marcado.");
+  return `<div class="quiz-fb-reasoning">
+    ${selectedText ? `<p><strong>Por qué no encaja tu opción:</strong> ${escapeHtml(whyWrong)}</p>` : ""}
+    <p><strong>Por qué encaja la correcta:</strong> ${escapeHtml(whyCorrect)}</p>
+  </div>`;
+}
+
+/** Texto `explain` del banco, siempre en bloque etiquetado (acierto o error). */
+function quizFeedbackExplainParagraph(q) {
+  const raw = q.explain;
+  const ex = typeof raw === "string" ? raw.trim() : "";
+  if (!ex) {
+    return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> No hay texto de explicación registrado en el banco para este ítem.</p>${quizFeedbackTemarioHint(q)}`;
+  }
+  const base = `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(ex)}</p>`;
+  const sourceOnly = /^fuente\s*:/i.test(ex) && ex.length < 360;
+  return base + (sourceOnly ? quizFeedbackTemarioHint(q) : "");
+}
+
+function abbreviationTextForQuestion(q) {
+  const bits = [
+    q.stem,
+    q.explain,
+    ...(Array.isArray(q.options) ? q.options : []),
+    ...(Array.isArray(q.optionExplanations) ? q.optionExplanations : []),
+  ];
+  return bits.filter((x) => typeof x === "string").join(" ");
+}
+
+function questionAbbreviationPanel(q) {
+  const text = abbreviationTextForQuestion(q);
+  if (!text.trim()) return "";
+  const matches = [];
+  for (const [abbr, meaning] of ABBREVIATION_GLOSSARY) {
+    const escaped = abbr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}(?=$|[^\\p{L}\\p{N}])`, "u");
+    if (re.test(text)) matches.push([abbr, meaning]);
+  }
+  if (!matches.length) return "";
+  return `<div class="abbr-hints" aria-label="Abreviaturas de esta pregunta">
+    <strong>Abreviaturas:</strong>
+    <ul>
+      ${matches
+        .map(([abbr, meaning]) => `<li><span>${escapeHtml(abbr)}</span>${escapeHtml(meaning)}</li>`)
+        .join("")}
+    </ul>
+  </div>`;
+}
+
+function showStudyFeedback(q) {
+  const sel = quizState.answers[q.id];
+  const fb = $("#quiz-feedback");
+  if (sel === null || sel === undefined) {
+    fb.textContent = "";
+    return;
+  }
+  if (quizState.mode === "study" && quizState.studyFeedback === "confidence" && quizState.confidence[q.id] === undefined) {
+    fb.textContent = "";
+    return;
+  }
+  const ok = sel === q.correctIndex;
+  if (quizState.mode === "study") {
+    bumpTopicQuizStatIfNew(q, sel, ok);
+  }
+  const cal =
+    quizState.studyFeedback === "confidence" && quizState.confidence[q.id] !== undefined
+      ? confidenceCalibrationLine(q, sel, quizState.confidence[q.id])
+      : "";
+  const label = `<p class="feedback__eyebrow">Corrección</p>`;
+  const abbr = questionAbbreviationPanel(q);
+  if (quizState.studyFeedback === "deepen") {
+    const lead = ok
+      ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
+      : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
+    fb.innerHTML = label + lead + answerReasoningPanel(q, sel) + renderDeepenPanel(q) + abbr + cal;
+    return;
+  }
+  fb.innerHTML = label + (ok
+    ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}${abbr}`
+    : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}${abbr}`) + cal;
+}
+
+function calibrationSessionSummary() {
+  if (quizState.mode !== "study" || quizState.studyFeedback !== "confidence") return "";
+  let hiOk = 0;
+  let hiWrong = 0;
+  let medOk = 0;
+  let medWrong = 0;
+  let loOk = 0;
+  let loWrong = 0;
+  for (const qq of quizState.list) {
+    const sel = quizState.answers[qq.id];
+    if (sel === null || sel === undefined) continue;
+    const c = quizState.confidence[qq.id];
+    if (c === undefined) continue;
+    const correct = sel === qq.correctIndex;
+    if (c === 2) {
+      if (correct) hiOk += 1;
+      else hiWrong += 1;
+    } else if (c === 1) {
+      if (correct) medOk += 1;
+      else medWrong += 1;
+    } else {
+      if (correct) loOk += 1;
+      else loWrong += 1;
+    }
+  }
+  const bits = [];
+  if (hiOk + hiWrong > 0) bits.push(`alta: ${hiOk}✓ / ${hiWrong}✗`);
+  if (medOk + medWrong > 0) bits.push(`media: ${medOk}✓ / ${medWrong}✗`);
+  if (loOk + loWrong > 0) bits.push(`baja: ${loOk}✓ / ${loWrong}✗`);
+  if (!bits.length) return "";
+  return `<p class="muted conf-summary"><strong>Resumen de seguridad (sesión):</strong> ${bits.join(" · ")}.</p>`;
+}
+
+function quizMissingConfidenceCount() {
+  if (quizState.mode !== "study" || quizState.studyFeedback !== "confidence") return 0;
+  return quizState.list.filter((qq) => {
+    const sel = quizState.answers[qq.id];
+    return sel !== null && sel !== undefined && quizState.confidence[qq.id] === undefined;
+  }).length;
+}
+
+function wrongTopicSummary(wrong) {
+  if (!wrong.length) return "";
+  const counts = new Map();
+  for (const q of wrong) {
+    const title = topicBlockLabel(q.topicId);
+    counts.set(title, (counts.get(title) || 0) + 1);
+  }
+  const rows = [...counts.entries()].sort((a, b) => b[1] - a[1]);
+  return `
+    <div class="result-topic-summary">
+      <strong>Fallos por bloque</strong>
+      <ul>
+        ${rows.map(([title, n]) => `<li><span>${escapeHtml(title)}</span><strong>${n}</strong></li>`).join("")}
+      </ul>
+    </div>`;
+}
+
+function resultNextActionPanel(good, total, wrong) {
+  const pct = total ? Math.round((good / total) * 100) : 0;
+  const firstWrong = wrong.find((q) => q && q.topicId);
+  const topicHref = firstWrong ? `#temario--${encodeURIComponent(firstWrong.topicId)}` : "#temario";
+  const topicLabel = firstWrong ? topicBlockLabel(firstWrong.topicId) : "Temario";
+  if (wrong.length > 0) {
+    const title = pct >= 50 ? "Buen punto de partida: cierra fallos antes de seguir" : "Prioridad: vuelve a base y repite falladas";
+    const text =
+      wrong.length === 1
+        ? "Solo queda 1 pregunta por corregir. Revísala ahora para que no se convierta en fallo repetido."
+        : `Hay ${wrong.length} pregunta(s) para repasar. Lo más rentable es repetir falladas y volver al bloque débil.`;
+    return `
+      <div class="result-next">
+        <p class="feedback__eyebrow">Siguiente acción</p>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(text)}</p>
+        <div class="result-next__actions">
+          <button type="button" class="btn btn--primary btn--sm" data-result-repeat-wrong>Repetir falladas</button>
+          <a class="btn btn--ghost btn--sm" href="${escapeHtml(topicHref)}">Ver teoría · ${escapeHtml(topicLabel)}</a>
+          <a class="btn btn--ghost btn--sm" href="#cuaderno" data-nav="cuaderno">Abrir cuaderno</a>
+        </div>
+      </div>`;
+  }
+  if (quizState.sessionType === "teorico" && quizState.mode === "exam") {
+    return `
+      <div class="result-next result-next--ok">
+        <p class="feedback__eyebrow">Siguiente acción</p>
+        <h3>Simulacro limpio: mide la otra prueba o conserva ritmo</h3>
+        <p>Si esta prueba ya sale fuerte, pasa a la otra parte o usa tarjetas para mantener memoria sin saturarte.</p>
+        <div class="result-next__actions">
+          <a class="btn btn--primary btn--sm" href="#examen" data-nav="examen">Ir a Examen</a>
+          <a class="btn btn--ghost btn--sm" href="#tarjetas" data-nav="tarjetas">Repasar tarjetas</a>
+        </div>
+      </div>`;
+  }
+  return `
+    <div class="result-next result-next--ok">
+      <p class="feedback__eyebrow">Siguiente acción</p>
+      <h3>Sesión limpia: sube dificultad</h3>
+      <p>Activa preguntas trampa, cambia de bloque o mide nivel con un simulacro sin pistas.</p>
+      <div class="result-next__actions">
+        <a class="btn btn--primary btn--sm" href="#examen" data-nav="examen">Hacer simulacro</a>
+        <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Otra práctica</a>
+      </div>
+    </div>`;
+}
+
+function bindResultActions() {
+  $("#quiz-feedback")?.querySelector("[data-result-repeat-wrong]")?.addEventListener("click", () => {
+    const wrongEl = $("#quiz-wrong-only");
+    const trapEl = $("#quiz-trap-only");
+    const modeEl = $("#quiz-mode");
+    const sessionEl = $("#quiz-session");
+    if (wrongEl instanceof HTMLInputElement) wrongEl.checked = true;
+    if (trapEl instanceof HTMLInputElement) trapEl.checked = false;
+    if (modeEl instanceof HTMLSelectElement) modeEl.value = "study";
+    if (sessionEl instanceof HTMLSelectElement) sessionEl.value = "libre";
+    saveQuizPrefs();
+    startQuiz();
+    requestAnimationFrame(() => {
+      $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+function finishQuiz() {
+  if (quizState._finished) return;
+  saveLastWrongIds(computeWrongIdsFromCurrentSession());
+  quizState._finished = true;
+  clearExamTimer();
+  let good = 0;
+  const wrong = [];
+  quizState.list.forEach((q) => {
+    const sel = quizState.answers[q.id];
+    if (sel === null || sel === undefined) {
+      wrong.push(q);
+      if (quizState.mode === "exam") recordQuestionOutcome(q, -1, false);
+      return;
+    }
+    const correct = sel === q.correctIndex;
+    if (quizState.mode === "exam") recordQuestionOutcome(q, sel, correct);
+    if (correct) good += 1;
+    else wrong.push(q);
+  });
+  const total = quizState.list.length;
+  const pct = total ? Math.round((good / total) * 100) : 0;
+  const isT = quizState.sessionType === "teorico";
+  const minPass = Math.ceil(total / 2);
+  const pass = isT && good >= minPass;
+  const partsInSession = new Set(quizState.list.map((q) => q.part));
+  const partKey =
+    isT && partsInSession.size === 1 ? ([...partsInSession][0] === 2 ? "p2" : "p1") : null;
+  if (total > 0) {
+    mutateUserStats((s) => {
+      s.gradedSessionsClosed += 1;
+      s.gradedCorrectSum += good;
+      s.gradedTotalSum += total;
+      if (!s.gradedByPart) {
+        s.gradedByPart = { p1: { sessions: 0, passed: 0 }, p2: { sessions: 0, passed: 0 } };
+      }
+      if (partKey) {
+        const partStats = s.gradedByPart[partKey] || { sessions: 0, passed: 0 };
+        partStats.sessions += 1;
+        if (pass) partStats.passed += 1;
+        s.gradedByPart[partKey] = partStats;
+      }
+      for (const qq of quizState.list) {
+        s.seenQuestionIds[qq.id] = 1;
+      }
+    });
+  }
+  const verdict = isT
+    ? `<div class="result-verdict ${pass ? "result-verdict--ok" : "result-verdict--fail"}">${pass ? "APTO" : "NO APTO"} · ${good}/${total} (mínimo ${minPass} para 50 %)</div>
+       <p class="muted" style="margin:0.5rem 0 0;font-size:0.88rem">Criterio orientativo como en convocatorias habituales; revisa siempre las bases oficiales del examen.</p>`
+    : "";
+  const timeMsg =
+    quizState.timedOut && isT && quizState.mode === "exam"
+      ? `<p><strong>Tiempo agotado</strong> (límite ${formatCountdown(TEORICO_EXAM_MS)}).</p>`
+      : "";
+  const unanswered = wrong.filter(
+    (q) => quizState.answers[q.id] === null || quizState.answers[q.id] === undefined,
+  );
+  const wrongAnswered = wrong.filter(
+    (q) => quizState.answers[q.id] !== null && quizState.answers[q.id] !== undefined,
+  );
+  let wrongListHtml = "";
+  if (isT) {
+    if (wrongAnswered.length) {
+      wrongListHtml = `<br/><br/><strong>Falladas:</strong><ul style="margin:0.5rem 0 0 1.1rem">${wrongAnswered
+        .map((qq) => `<li>${escapeHtml(qq.stem.slice(0, 140))}${qq.stem.length > 140 ? "…" : ""}</li>`)
+        .join("")}</ul>`;
+    }
+    if (unanswered.length) {
+      wrongListHtml += `<br/><strong>Sin marcar respuesta:</strong> ${unanswered.length} (cuentan como error).`;
+    }
+  } else if (wrong.length) {
+    wrongListHtml = `<br/><br/><strong>Repasar:</strong><ul style="margin:0.5rem 0 0 1.1rem">${wrong
+      .map((qq) => `<li>${escapeHtml(qq.stem.slice(0, 120))}${qq.stem.length > 120 ? "…" : ""}</li>`)
+      .join("")}</ul>`;
+  }
+  $("#quiz-feedback").innerHTML = `
+    ${timeMsg}
+    <strong>Resultado:</strong> ${good} / ${total} (${pct} %).
+    ${verdict}
+    ${wrongTopicSummary(wrong)}
+    ${wrongListHtml}
+    ${calibrationSessionSummary()}
+    ${resultNextActionPanel(good, total, wrong)}`;
+  bindResultActions();
+  $("#quiz-score").hidden = false;
+  $("#quiz-score").textContent = `${good}/${total}`;
+  showSaveToast("Resultado y progreso guardados.");
+}
+
+function goNext() {
+  const total = quizState.list.length;
+  if (quizState.index >= total - 1) return;
+  quizState.index += 1;
+  const q = currentQ();
+  quizState.optionsVisible = !quizState.pretest;
+  $("#quiz-pretext").value = "";
+  $("#quiz-feedback").textContent = "";
+  renderQuestion();
+}
+
+function finishOrAdvanceQuiz() {
+  const total = quizState.list.length;
+  if (!total) return;
+  if (quizState.index < total - 1) {
+    const q = currentQ();
+    const sel = quizState.answers[q.id];
+    if (
+      quizState.mode === "study" &&
+      quizState.studyFeedback === "confidence" &&
+      sel !== null &&
+      sel !== undefined &&
+      quizState.confidence[q.id] === undefined
+    ) {
+      $("#quiz-feedback").textContent = "";
+      focusConfidencePicker();
+      return;
+    }
+    goNext();
+    return;
+  }
+  if (quizState.mode === "exam") {
+    finishQuiz();
+    return;
+  }
+  if (quizState.sessionType === "teorico") {
+    const missEnd = quizMissingConfidenceCount();
+    if (missEnd > 0) {
+      const q = currentQ();
+      const sel = q ? quizState.answers[q.id] : undefined;
+      if (q && sel !== null && sel !== undefined && quizState.confidence[q.id] === undefined) {
+        $("#quiz-feedback").textContent = "";
+        focusConfidencePicker();
+        return;
+      }
+      $("#quiz-feedback").innerHTML = `<strong>Falta medir tu seguridad en ${missEnd} pregunta(s).</strong> Usa «Anterior» y marca baja, media o alta antes de finalizar.`;
+      return;
+    }
+    finishQuiz();
+    return;
+  }
+  const missLibre = quizMissingConfidenceCount();
+  if (missLibre > 0) {
+    const q = currentQ();
+    const sel = q ? quizState.answers[q.id] : undefined;
+    if (q && sel !== null && sel !== undefined && quizState.confidence[q.id] === undefined) {
+      $("#quiz-feedback").textContent = "";
+      focusConfidencePicker();
+      return;
+    }
+    $("#quiz-feedback").innerHTML = `<strong>Falta medir tu seguridad en ${missLibre} pregunta(s).</strong> Revísalas antes de cerrar la sesión.`;
+    return;
+  }
+  const wrongIds = computeWrongIdsFromCurrentSession();
+  saveLastWrongIds(wrongIds);
+  const wrongHint =
+    wrongIds.length > 0
+      ? ` Fallaste ${wrongIds.length}: marca «Solo las falladas de la última sesión» y pulsa <strong>Nueva sesión</strong> para repasarlas.`
+      : "";
+  const wrongQs = quizState.list.filter((q) => wrongIds.includes(q.id));
+  $("#quiz-feedback").innerHTML = `<strong>Sesión completada.</strong>${wrongHint} Vuelve a empezar o cambia modo / parte para variar.${wrongTopicSummary(
+    wrongQs,
+  )}${resultNextActionPanel(
+    quizState.list.length - wrongQs.length,
+    quizState.list.length,
+    wrongQs,
+  )}`;
+  bindResultActions();
+  mutateUserStats((s) => {
+    s.studySessionsClosed += 1;
+  });
+  showSaveToast("Sesión completada y progreso guardado.");
+}
+
+function goPrev() {
+  if (quizState.index === 0) return;
+  quizState.index -= 1;
+  quizState.optionsVisible = true;
+  renderQuestion();
+}
+
+/* ---------- Flashcards + spacing ---------- */
+const fcState = {
+  deck: /** @type {Array<{ q: (typeof questionsData)[number]; due: number; step: number }>} */ ([]),
+  index: 0,
+  flipped: false,
+};
+
+function loadSchedule() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function saveSchedule(obj) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(obj));
+}
+
+function exportFlashcardSchedule() {
+  const data = loadSchedule();
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  const url = URL.createObjectURL(blob);
+  a.href = url;
+  a.download = `radioexam-tarjetas-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function parseScheduleEntries(o) {
+  const out = {};
+  if (!o || typeof o !== "object") return out;
+  for (const [k, v] of Object.entries(o)) {
+    if (!v || typeof v !== "object") continue;
+    const step = Number(v.step);
+    const due = Number(v.due);
+    if (!Number.isFinite(step) && !Number.isFinite(due)) continue;
+    out[k] = {
+      step: Number.isFinite(step) ? step : 0,
+      due: Number.isFinite(due) ? due : 0,
+    };
+  }
+  return out;
+}
+
+function importFlashcardScheduleFile(file) {
+  const status = $("#fc-import-status");
+  const replace = !!$("#fc-import-replace")?.checked;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const o = JSON.parse(String(reader.result));
+      if (!o || typeof o !== "object") throw new Error("invalid");
+      const parsed = parseScheduleEntries(o);
+      if (replace) {
+        saveSchedule(parsed);
+        if (status) status.textContent = "Programación importada (sustituye por completo la anterior).";
+      } else {
+        saveSchedule({ ...loadSchedule(), ...parsed });
+        if (status) status.textContent = "Programación importada (fusionada con la actual).";
+      }
+      updateDueBadge();
+      if (fcState.deck.length) {
+        fcState.deck = buildFlashDeck();
+        renderFlashcard();
+      }
+    } catch {
+      if (status) status.textContent = "No se pudo leer el JSON. Comprueba el formato.";
+    }
+  };
+  reader.onerror = () => {
+    if (status) status.textContent = "No se pudo leer el archivo.";
+  };
+  reader.readAsText(file);
+}
+
+function getFlashTopicFilter() {
+  const v = $("#fc-topic")?.value;
+  return v && v !== "all" ? v : "all";
+}
+
+function flashQuestionPool() {
+  const t = getFlashTopicFilter();
+  if (t === "all") return allQuestions;
+  return allQuestions.filter((q) => q.topicId === t);
+}
+
+function buildFlashDeck() {
+  const sched = loadSchedule();
+  const pool = flashQuestionPool();
+  return shuffle(
+    pool.map((q) => {
+      const s = sched[q.id] || { step: 0, due: 0 };
+      return {
+        q,
+        due: s.due || 0,
+        step: s.step || 0,
+      };
+    }),
+  ).sort((a, b) => a.due - b.due);
+}
+
+function updateDueBadge() {
+  const el = $("#fc-due");
+  if (!el) return;
+  const sched = loadSchedule();
+  const now = Date.now();
+  const pool = flashQuestionPool();
+  const due = pool.filter((q) => {
+    const s = sched[q.id];
+    return !s || !s.due || s.due <= now;
+  }).length;
+  const t = getFlashTopicFilter();
+  if (t === "all") {
+    el.textContent = due ? `${due} tarjetas pendientes hoy` : "Nada urgente: repaso espaciado al día";
+  } else {
+    const title = topicBlockLabel(t);
+    el.textContent = due
+      ? `${due} pendientes en «${title}» (mazo filtrado)`
+      : `Nada urgente en «${title}» con el mazo filtrado`;
+  }
+  updateScheduleDetail();
+}
+
+function scheduleCard(qid, easy) {
+  const sched = loadSchedule();
+  const cur = sched[qid] || { step: 0, due: 0 };
+  const now = Date.now();
+  const day = 86400000;
+  let step = cur.step;
+  let add = day;
+  if (easy) {
+    const next = Math.min(step + 1, 4);
+    step = next === 4 ? 4 : next;
+    const days = [1, 3, 7, 14];
+    add = days[Math.min(next, 4) - 1] * day;
+  } else {
+    step = 0;
+    add = 0.5 * day;
+  }
+  sched[qid] = { step, due: now + add };
+  saveSchedule(sched);
+  renderHeaderStatus();
+  showSaveToast(easy ? "Tarjeta programada para repaso." : "Tarjeta marcada para reforzar pronto.");
+}
+
+function updateFcFlipHint() {
+  const hint = $("#fc-flip-hint");
+  if (!hint) return;
+  const m = getFcDisplayMode();
+  if (m === "front_only") {
+    hint.textContent = "Modo solo enunciado: decide de memoria y usa «Lo sabía / No lo tenía claro» (sin voltear).";
+    return;
+  }
+  if (m === "both") {
+    hint.textContent = "Modo lectura: enunciado y respuesta visibles a la vez. Usa los botones para programar el repaso.";
+    return;
+  }
+  hint.textContent = fcState.flipped
+    ? "Pulsa de nuevo la tarjeta o Espacio para volver al enunciado."
+    : "Pulsa la tarjeta o Espacio para ver la respuesta correcta y la explicación.";
+}
+
+function renderFlashcard() {
+  const item = fcState.deck[fcState.index];
+  const card = $("#fc-card");
+  const front = $("#fc-front");
+  const back = $("#fc-back");
+  if (!item || !card || !front || !back) {
+    $("#fc-area").hidden = true;
+    return;
+  }
+  $("#fc-area").hidden = false;
+  updateFlashcardWrapMode();
+  const mode = getFcDisplayMode();
+  const { q } = item;
+  const topicTitle = escapeHtml(topicBlockLabel(q.topicId));
+  const partLabel = q.part === 2 ? "2.ª" : "1.ª";
+  const badge = `<p class="fc-topic-line muted"><strong>${topicTitle}</strong> · Parte ${partLabel} · <span class="fc-topic-id">${escapeHtml(q.topicId)}</span></p>`;
+  const ans =
+    Array.isArray(q.options) && typeof q.correctIndex === "number" && q.options[q.correctIndex] !== undefined
+      ? q.options[q.correctIndex]
+      : "";
+  const stemBlock = `<div class="fc-stem">${escapeHtml(q.stem)}</div>`;
+  front.innerHTML = badge + stemBlock;
+  if (!ans) {
+    back.innerHTML = `${badge}<p class="muted">No hay texto de respuesta asociado a esta pregunta.</p>`;
+  } else {
+    back.innerHTML = `${badge}<div><strong>${escapeHtml(ans)}</strong><p style="margin-top:0.75rem;font-weight:400;font-size:0.95rem;line-height:1.45">${escapeHtml(
+      q.explain || "",
+    )}</p></div>`;
+  }
+  fcState.flipped = false;
+  card.classList.remove("is-flipped");
+  if (mode === "both") {
+    card.setAttribute("aria-expanded", "true");
+    card.setAttribute("aria-label", "Tarjeta. Enunciado y respuesta visibles.");
+  } else {
+    card.setAttribute("aria-expanded", "false");
+    card.setAttribute("aria-label", "Tarjeta. Pulsa para mostrar la respuesta.");
+  }
+  const tf = getFlashTopicFilter();
+  const scope = tf === "all" ? "todo el banco" : topicBlockLabel(tf);
+  const meta = $("#fc-meta");
+  if (meta) {
+    meta.textContent = `Tarjeta ${fcState.index + 1} de ${fcState.deck.length} · ${scope}`;
+  }
+  updateFcFlipHint();
+}
+
+function loadFlashcards() {
+  fcState.deck = buildFlashDeck();
+  fcState.index = 0;
+  const imp = $("#fc-import-status");
+  if (imp) imp.textContent = "";
+  if (!fcState.deck.length) {
+    $("#fc-area").hidden = true;
+    const empty = $("#fc-empty-state");
+    if (empty) {
+      empty.hidden = false;
+      empty.textContent =
+        "No hay preguntas en el banco para el tema seleccionado. Elige «Todos los temas» u otro bloque y pulsa de nuevo «Cargar tarjetas desde preguntas».";
+    }
+    const meta = $("#fc-meta");
+    if (meta) {
+      meta.textContent =
+        "No hay preguntas en el banco para el tema seleccionado. Elige «Todos los temas» u otro bloque y pulsa de nuevo «Cargar tarjetas desde preguntas».";
+    }
+    updateDueBadge();
+    return;
+  }
+  const empty = $("#fc-empty-state");
+  if (empty) empty.hidden = true;
+  $("#fc-area").hidden = false;
+  renderFlashcard();
+  updateDueBadge();
+  updateScheduleDetail();
+}
+
+function flipCard() {
+  if (getFcDisplayMode() !== "flip") return;
+  fcState.flipped = !fcState.flipped;
+  const card = $("#fc-card");
+  card.classList.toggle("is-flipped", fcState.flipped);
+  card.setAttribute("aria-expanded", fcState.flipped ? "true" : "false");
+  card.setAttribute(
+    "aria-label",
+    fcState.flipped ? "Tarjeta. Pulsa para volver al enunciado." : "Tarjeta. Pulsa para mostrar la respuesta.",
+  );
+  updateFcFlipHint();
+}
+
+function advanceCard(easy) {
+  const item = fcState.deck[fcState.index];
+  if (item) {
+    scheduleCard(item.q.id, easy);
+    mutateUserStats((s) => {
+      s.flashRatings += 1;
+    });
+  }
+  fcState.index += 1;
+  if (fcState.index >= fcState.deck.length) {
+    fcState.index = 0;
+    fcState.deck = buildFlashDeck();
+  }
+  renderFlashcard();
+  updateDueBadge();
+  updateScheduleDetail();
+}
+
+/* ---------- Init ---------- */
+let navDocumentBound = false;
+let hashChangeBound = false;
+
+function initNav() {
+  if (!navDocumentBound) {
+    navDocumentBound = true;
+    document.addEventListener("click", (e) => {
+      const el = e.target.closest("[data-nav]");
+      if (!el) return;
+      const id = el.getAttribute("data-nav");
+      if (!id) return;
+      if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      if (id === "practicar") {
+        const topic = el.getAttribute("data-practicar-topic");
+        if (topic) sessionStorage.setItem(TOPIC_PRESELECT_KEY, topic);
+        else sessionStorage.removeItem(TOPIC_PRESELECT_KEY);
+      }
+      if (id === "tarjetas") {
+        const fcTopic = el.getAttribute("data-tarjetas-topic");
+        if (fcTopic) sessionStorage.setItem(FC_TOPIC_PRESELECT_KEY, fcTopic);
+        else sessionStorage.removeItem(FC_TOPIC_PRESELECT_KEY);
+      }
+      if (el.tagName === "A") {
+        const href = el.getAttribute("href") || "";
+        if (href.startsWith("#")) {
+          e.preventDefault();
+          location.hash = href.slice(1) || id;
+        }
+      } else {
+        location.hash = id;
+      }
+      $("#site-nav")?.classList.remove("is-open");
+      $("#nav-toggle")?.setAttribute("aria-expanded", "false");
+    });
+  }
+  if (!hashChangeBound) {
+    hashChangeBound = true;
+    window.addEventListener("hashchange", onRoute);
+  }
+}
+
+function initMobileNav() {
+  const btn = $("#nav-toggle");
+  const nav = $("#site-nav");
+  if (!btn || !nav) return;
+  btn.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    btn.setAttribute("aria-expanded", String(open));
+  });
+}
+
+const A11Y_STORAGE_KEY = "radioexam_a11y_v1";
+
+function loadA11yOpts() {
+  try {
+    const raw = localStorage.getItem(A11Y_STORAGE_KEY);
+    if (!raw) return {};
+    const o = JSON.parse(raw);
+    return typeof o === "object" && o ? o : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveA11yOpts(/** @type {Record<string, boolean>} */ opts) {
+  localStorage.setItem(A11Y_STORAGE_KEY, JSON.stringify(opts));
+}
+
+function applyA11yOpts(/** @type {Record<string, boolean>} */ opts) {
+  const root = document.documentElement;
+  root.classList.toggle("a11y-large-text", !!opts.large);
+  root.classList.toggle("a11y-wide-lines", !!opts.spacing);
+  root.classList.toggle("a11y-reduce-motion", !!opts.reduceMotion);
+  root.classList.toggle("a11y-high-contrast", !!opts.contrast);
+}
+
+function initA11y() {
+  const defaults = { large: false, spacing: false, reduceMotion: false, contrast: false };
+  const opts = { ...defaults, ...loadA11yOpts() };
+  applyA11yOpts(opts);
+
+  const bind = (id, key) => {
+    const el = document.getElementById(id);
+    if (!(el instanceof HTMLInputElement)) return;
+    el.checked = !!opts[key];
+    el.addEventListener("change", () => {
+      opts[key] = el.checked;
+      saveA11yOpts(opts);
+      applyA11yOpts(opts);
+    });
+  };
+
+  bind("a11y-large", "large");
+  bind("a11y-spacing", "spacing");
+  bind("a11y-reduce-motion", "reduceMotion");
+  bind("a11y-contrast", "contrast");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    initA11y();
+    renderTemario();
+    initTemarioInteractions();
+    renderNormativa();
+    renderMethods();
+    initQuizTopicSelect();
+    initFcTopicSelect();
+    applyQuizPrefsToForm();
+    initQuizPrefsAutosave();
+    initQuizKeyboard();
+    initTemarioFilter();
+    updateWrongOnlyCheckboxVisibility();
+    initNav();
+    initMobileNav();
+    syncPretestAvailability();
+    $("#quiz-session")?.addEventListener("change", syncPretestAvailability);
+    $("#quiz-part")?.addEventListener("change", () => {
+      validateTopicPartConsistency();
+      renderQuizPracticeGuide();
+    });
+    $("#quiz-topic")?.addEventListener("change", renderQuizPracticeGuide);
+    $("#quiz-trap-only")?.addEventListener("change", renderQuizPracticeGuide);
+    onRoute();
+    renderUserProgress();
+    renderQuizProgressSummary();
+    renderExamCoach();
+    renderQuizPracticeGuide();
+
+    $("#quiz-start")?.addEventListener("click", startQuiz);
+    $("#quiz-next")?.addEventListener("click", finishOrAdvanceQuiz);
+    $("#quiz-prev")?.addEventListener("click", goPrev);
+    $("#quiz-focus-toggle")?.addEventListener("click", toggleQuizFocusMode);
+
+    $("#fc-load")?.addEventListener("click", loadFlashcards);
+    $("#fc-topic")?.addEventListener("change", () => {
+      updateDueBadge();
+      const area = $("#fc-area");
+      if (!area || area.hidden || !fcState.deck.length) return;
+      fcState.deck = buildFlashDeck();
+      fcState.index = 0;
+      if (!fcState.deck.length) {
+        area.hidden = true;
+        const meta = $("#fc-meta");
+        if (meta) {
+          meta.textContent =
+            "El filtro actual no deja ninguna pregunta en el mazo. Elige otro tema o «Todos los temas» y vuelve a cargar.";
+        }
+      } else {
+        renderFlashcard();
+      }
+    });
+    $("#fc-export")?.addEventListener("click", exportFlashcardSchedule);
+    $("#fc-import")?.addEventListener("click", () => $("#fc-import-file")?.click());
+    $("#fc-import-file")?.addEventListener("change", (e) => {
+      const inp = /** @type {HTMLInputElement} */ (e.target);
+      const f = inp.files?.[0];
+      inp.value = "";
+      if (f) importFlashcardScheduleFile(f);
+    });
+    $("#fc-display-mode")?.addEventListener("change", () => {
+      fcState.flipped = false;
+      $("#fc-card")?.classList.remove("is-flipped");
+      renderFlashcard();
+    });
+    $("#fc-card")?.addEventListener("click", flipCard);
+    $("#fc-card")?.addEventListener("keydown", (e) => {
+      if (e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        flipCard();
+      }
+    });
+    $("#fc-easy")?.addEventListener("click", () => advanceCard(true));
+    $("#fc-hard")?.addEventListener("click", () => advanceCard(false));
+
+    updateDueBadge();
+  } catch (err) {
+    console.error(err);
+    const el = $("#app-error");
+    if (el) {
+      el.hidden = false;
+      el.textContent =
+        "No se pudo inicializar la aplicación. Recarga la página; si persiste, abre la consola (F12) y comprueba que sirves la carpeta del proyecto por HTTP.";
+    }
+  }
+});

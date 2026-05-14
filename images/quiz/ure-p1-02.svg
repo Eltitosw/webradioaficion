@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="140" viewBox="0 0 520 140" role="img" aria-labelledby="t2">
+  <title id="t2">Esquema: transmisor, watimetro, linea y antena con la misma impedancia</title>
+  <rect width="520" height="140" fill="#0f1419" rx="10"/>
+  <text x="260" y="26" text-anchor="middle" fill="#e8ecf4" font-size="14" font-family="system-ui,sans-serif">Adaptacion de impedancias (esquema orientativo)</text>
+  <rect x="35" y="55" width="90" height="52" rx="6" fill="#161d2a" stroke="#7eb6ff" stroke-width="1.5"/>
+  <text x="80" y="86" text-anchor="middle" fill="#e8ecf4" font-size="13" font-family="system-ui,sans-serif">TX</text>
+  <line x1="125" y1="81" x2="155" y2="81" stroke="#9aa3b5" stroke-width="2"/>
+  <rect x="155" y="58" width="70" height="46" rx="6" fill="#161d2a" stroke="#f4b942" stroke-width="1.5"/>
+  <text x="190" y="86" text-anchor="middle" fill="#f4b942" font-size="12" font-family="system-ui,sans-serif">W</text>
+  <line x1="225" y1="81" x2="255" y2="81" stroke="#9aa3b5" stroke-width="2"/>
+  <rect x="255" y="58" width="100" height="46" rx="6" fill="#161d2a" stroke="#7eb6ff" stroke-width="1.5"/>
+  <text x="305" y="86" text-anchor="middle" fill="#e8ecf4" font-size="12" font-family="system-ui,sans-serif">Linea</text>
+  <line x1="355" y1="81" x2="385" y2="81" stroke="#9aa3b5" stroke-width="2"/>
+  <path d="M 395 58 L 455 40 L 455 122 L 395 104 Z" fill="#161d2a" stroke="#3ecf8e" stroke-width="1.5"/>
+  <text x="425" y="88" text-anchor="middle" fill="#3ecf8e" font-size="12" font-family="system-ui,sans-serif">ANT</text>
+</svg>

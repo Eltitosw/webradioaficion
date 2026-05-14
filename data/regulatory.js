@@ -1,0 +1,230 @@
+/**
+ * Enlaces y notas orientativas. El texto legal completo solo en el BOE.
+ * Texto consolidado: informativo; para fines jurídicos, publicación oficial.
+ */
+export default {
+  headline: "Normativa principal (España)",
+  intro:
+    "La prueba de radioaficionado y la autorización se encuadran en el uso especial del espectro. La base del reglamento del servicio es la Orden IET/1311/2013, que aprueba el Reglamento de uso del dominio público radioeléctrico por radioaficionados.",
+  trustNote:
+    "Las asociaciones y los bancos de tests enlazan aquí como apoyo didáctico. Si hay discrepancia con un artículo o anexo del BOE, prevalece siempre el texto oficial y las resoluciones de la Administración competente.",
+  /** Saltos dentro de la vista Normativa (scroll suave). */
+  normativaNav: [
+    { id: "normativa-boe", label: "BOE" },
+    { id: "normativa-verificacion", label: "Verificación" },
+    { id: "normativa-marco", label: "Leyes marco" },
+    { id: "normativa-europa", label: "CEPT" },
+    { id: "normativa-practica", label: "Práctica examen" },
+    { id: "normativa-guias", label: "Guías y cursos" },
+    { id: "normativa-asociaciones", label: "Asociaciones" },
+    { id: "normativa-temas", label: "Temas de estudio" },
+  ],
+  linkGroups: [
+    {
+      id: "normativa-boe",
+      title: "1. BOE y administración (fuente vinculante)",
+      blurb:
+        "Para potencias, bandas, trámites o sanciones, acude al texto publicado y a la sede electrónica vigente del departamento que gestione telecomunicaciones.",
+      links: [
+        {
+          label: "Texto publicado en el BOE (original)",
+          href: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2013-7624",
+          note: "Referencia BOE-A-2013-7624 · BOE núm. 166, de 12 de julio de 2013.",
+        },
+        {
+          label: "Texto consolidado (BOE)",
+          href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-7624",
+          note: "Integra modificaciones hasta la última actualización indicada por el BOE. Aviso del propio BOE: es informativo; para actos jurídicos consulta la publicación oficial.",
+        },
+        {
+          label: "Identificador ELI (consolidado)",
+          href: "https://www.boe.es/eli/es/o/2013/07/09/iet1311/con",
+          note: "Permalink europeo Law Identifier (ELI) con redacción consolidada.",
+        },
+        {
+          label: "PDF consolidado del Reglamento (BOE)",
+          href: "https://www.boe.es/buscar/pdf/2013/BOE-A-2013-7624-consolidado.pdf",
+          note: "Misma norma que el HTML consolidado; útil para buscar artículos (p. ej. 25.h potencias repetidores) y anexo I (tabla de potencias por banda).",
+        },
+        {
+          label: "Autorización de radioaficionado · Secretaría de Estado competente",
+          href: "https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx",
+          note: "Página administrativa sobre autorización de radioaficionado. La sede o URL concreta puede cambiar: busca «radioaficionado» o «dominio público radioeléctrico» en la sede ministerial vigente.",
+        },
+      ],
+    },
+    {
+      id: "normativa-marco",
+      title: "2. Leyes marco citadas en el reglamento (BOE)",
+      blurb:
+        "El reglamento de aficionado remite con frecuencia a la Ley General de Telecomunicaciones, a la ley de antenas en fachadas y al RD de instalaciones de antenas. Complétalo con el anexo I del propio reglamento.",
+      links: [
+        {
+          label: "Ley 9/2014, General de Telecomunicaciones (BOE)",
+          href: "https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950",
+          note: "Marco sectorial; parte de su articulado ha sido sustituida por la Ley 11/2022, pero sigue citándose en formación y textos consolidados.",
+        },
+        {
+          label: "Ley 11/2022, General de Telecomunicaciones (BOE)",
+          href: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-10757",
+          note: "Texto vigente que desarrolla y actualiza el marco de telecomunicaciones en España.",
+        },
+        {
+          label: "Ley 19/1983 — antenas en el exterior de inmuebles (BOE)",
+          href: "https://www.boe.es/buscar/act.php?id=BOE-A-1983-25445",
+          note: "Base habitual de preguntas sobre comunidades de propietarios y desmontajes; el reglamento IET/1311/2013 la cita al regular estaciones fijas.",
+        },
+        {
+          label: "Normativa en telecomunicaciones · CNMC",
+          href: "https://www.cnmc.es/somos-cnmc/normativa/normativa-telecomunicaciones",
+          note: "Supervisión de mercados y normativa aplicable en telecomunicaciones (complementario respecto al examen de aficionado; útil para contexto jurídico).",
+        },
+      ],
+    },
+    {
+      id: "normativa-europa",
+      title: "3. CEPT y HAREC (armonización europea)",
+      blurb:
+        "El programa de examen y la licencia CEPT están alineados con recomendaciones CEPT; el BOE español sigue siendo la referencia para operar en España.",
+      links: [
+        {
+          label: "CEPT · Documentación HAREC / exámenes armonizados",
+          href: "https://www.cept.org/ecc/ham-radio",
+          note: "Página del grupo ECC: enlaces a T/R 61-01 (licencia CEPT) y T/R 61-02 (programa de examen HAREC).",
+        },
+      ],
+    },
+    {
+      id: "normativa-practica",
+      title: "4. Práctica de examen y bancos de preguntas",
+      blurb:
+        "Material de entrenamiento. Los enunciados pueden quedar obsoletos o contener erratas: contrasta siempre con el BOE y el anexo I del reglamento.",
+      links: [
+        {
+          label: "Legislación y reglamentación · URE",
+          href: "https://www.ure.es/legislacion-y-reglamentacion/",
+          note: "Recopilación desde la Unión de Radioaficionados Españoles (entidad de ámbito estatal, utilidad pública).",
+        },
+        {
+          label: "Exámenes de práctica · URE (Electricidad y radioelectricidad)",
+          href: "https://www.ure.es/examenes/electricidad-y-radioelectricidad/",
+          note: "Listado tipo test en la web de la URE.",
+        },
+        {
+          label: "Ejercicios y tests · FEDI-EA",
+          href: "https://www.fediea.org/examen/ejercicios/",
+          note: "Banco histórico por bloques y convocatorias (puede estar obsoleto; advierten posibles errores).",
+        },
+        {
+          label: "Tests en línea · Radio Club Quijotes (EA3RCQ)",
+          href: "https://radioclubquijotes.org/qsm_quiz/reglamentacion/",
+          note: "Reglamentación y electricidad (examen y corrección inmediata). Esta app importa un subconjunto; si se actualiza, vuelve a contrastarlo con BOE y convocatoria.",
+        },
+      ],
+    },
+    {
+      id: "normativa-guias",
+      title: "5. Guías, temarios en PDF y cursos (terceros)",
+      blurb:
+        "Material didáctico de editoriales, asociaciones y particulares. Las URLs pueden cambiar; el criterio legal y técnico sigue en el BOE y en la convocatoria oficial. Contrasta fechas y cifras (potencias, bandas) con el reglamento consolidado.",
+      links: [
+        {
+          label: "PDF · Temario simplificado del libro de examen (tienda Radiomanía)",
+          href: "https://radiomania.net/WebRoot/Store14/Shops/a460337c-7435-4ca8-a697-f50605a3ed82/58C2/A070/5BDC/3557/4836/0A48/3534/C9F6/89754710-Temario-Simplificado-Del-Libro-de-Examen-de-Radio-Aficionado.pdf",
+          note: "Descarga comercial; úsalo como resumen, no como sustituto del anexo II del BOE ni del programa HAREC.",
+        },
+        {
+          label: "Curso interactivo · URVAG (artículo EA3OG)",
+          href: "https://urvag.com/index.php/radioaficion/articulos-de-ea3og/674-curso-interactivo-para-la-obtencion-de-la-autorizacion-de-operador-radioaficionado",
+          note: "Curso divulgativo en abierto; requisitos y textos vinculantes: BOE y sede administrativa vigente.",
+        },
+        {
+          label: "Guía para obtener la licencia en España · EA5URA",
+          href: "https://ea5ura.org/guia-para-obtener-la-licencia-de-radioaficionado-en-espana/",
+          note: "Guía orientativa sobre trámite y estudio; verifica siempre la normativa y los plazos publicados oficialmente.",
+        },
+        {
+          label: "URE · Ejemplos de examen",
+          href: "https://www.ure.es/ejemplos-de-examen/",
+          note: "Material de apoyo en el sitio de la Unión de Radioaficionados Españoles.",
+        },
+        {
+          label: "URE · Exámenes (índice de recursos)",
+          href: "https://www.ure.es/examenes/",
+          note: "Listados de práctica, electricidad, reglamentación y convocatorias según la web vigente de la URE.",
+        },
+      ],
+    },
+    {
+      id: "normativa-asociaciones",
+      title: "6. Asociaciones y clubes (divulgación y comunidad)",
+      blurb:
+        "Ejemplos de entidades que publican actividades y refuerzan el cumplimiento del Reglamento de Radiocomunicaciones y del reglamento de aficionados. No son fuente legal sustitutiva del BOE.",
+      links: [
+        {
+          label: "Unión de Radioaficionados de Sevilla (EA7URS)",
+          href: "https://www.ea7urs.es/que-es-la-u-r-s/",
+          note: "Asociación territorial miembro de URE; en sus fines figura explícitamente cumplir y estimular el cumplimiento de la normativa de radiocomunicaciones y de estaciones de aficionado.",
+        },
+        {
+          label: "Web principal EA7URS",
+          href: "https://www.ea7urs.es/",
+          note: "Calendario, sede y actividades en Sevilla.",
+        },
+      ],
+    },
+  ],
+  sourceHierarchy: [
+    "Fuente vinculante: BOE publicado/consolidado, convocatoria oficial de la prueba y sede administrativa vigente. Aquí se verifican potencias, bandas, plazos, trámites, sanciones y criterio real del examen.",
+    "Armonización: CEPT/ECC, especialmente T/R 61-01 para licencia CEPT temporal y T/R 61-02 para programa HAREC. Sirve para entender reconocimiento y programa, no sustituye la norma española.",
+    "Apoyo técnico y didáctico: URE, manuales, guías y cursos. Son útiles para estudiar, pero las cifras legales se contrastan con BOE y convocatoria.",
+    "Bancos históricos o de terceros: FEDI-EA, Quijotes y otros tests. Se usan para entrenar redacción tipo test; si contradicen BOE, se estudia la explicación corregida y no el dato antiguo.",
+  ],
+  lastReviewNote:
+    "Última revisión interna de fuentes y avisos críticos: 13/05/2026. Antes de presentarse, revisa BOE consolidado, convocatoria abierta y sede administrativa por si hubiera cambios posteriores.",
+  /** Puntos útiles para estudiar la 2.ª prueba; no sustituyen la lectura del artículo. */
+  studyAnchors: [
+    {
+      id: "art5-10",
+      title: "Autorización y prueba (título II, arts. 5 a 10)",
+      bullets: [
+        "La autorización de radioaficionado exige, en general, superar la prueba de capacitación (salvo supuestos de reconocimiento o reciprocidad para residentes extranjeros con HAREC u otros convenios, recogidos en el propio texto).",
+        "La prueba consta de dos partes independientes: electricidad/radioelectricidad y normativa de estaciones.",
+        "El programa figura como anexo II del reglamento, alineado con el anexo 6 de la Recomendación CEPT T/R 61-02.",
+        "La Secretaría de Estado competente en telecomunicaciones dicta resolución sobre condiciones de la prueba; superar ambas partes acredita la capacitación y el procedimiento asociado al certificado HAREC.",
+      ],
+    },
+    {
+      id: "cept",
+      title: "Licencia CEPT y operación en el extranjero (arts. 11 a 15)",
+      bullets: [
+        "Se definen licencias CEPT según adopción de la Recomendación T/R 61-01 y equivalencias para visitantes.",
+        "En emisión en país visitado suele exigirse el prefijo del país seguido del indicativo nacional (el texto desarrolla supuestos y límites).",
+      ],
+    },
+    {
+      id: "estaciones",
+      title: "Estaciones fijas, móviles y régimen técnico (títulos III en adelante)",
+      bullets: [
+        "Instalaciones, licencias de estación, potencias y condiciones técnicas aparecen reguladas en el reglamento y sus anexos; conviene estudiarlos junto al CNAF y al Reglamento de Radiocomunicaciones de la UIT.",
+        "Los plazos de resolución de ciertos procedimientos administrativos están fijados en el artículo 4 (seis semanas en los supuestos que enumera).",
+      ],
+    },
+    {
+      id: "repetidores-potencia",
+      title: "Repetidores y estaciones desatendidas (art. 25.h) y tabla de potencias (anexo I)",
+      bullets: [
+        "Art. 25.h: en VHF/UHF, estaciones automáticas desatendidas —salvo circunstancias especiales motivadas— no superan 50 W de salida fuera del casco urbano y 10 W dentro; la ganancia del sistema radiante no suele superar 6 dBd (mismo artículo).",
+        "Las potencias máximas por banda de emisión del aficionado (incluidos tramos en MHz) están en el anexo I, apartado 3.1, del mismo reglamento; conviene contrastar tests antiguos (p. ej. FEDI 2011) porque el enunciado puede quedar desfasado.",
+      ],
+    },
+    {
+      id: "titular-estacion",
+      title: "Titular de la estación y licencia (art. 18 y examen tipo)",
+      bullets: [
+        "La licencia de estación fija se asocia a la autorización de radioaficionado de su titular (art. 18.1); el distintivo y la responsabilidad siguen al marco de esa titularidad.",
+        "En bancos tipo test suele darse como correcta la opción «otro titular de autorización puede operar con permiso del titular de la estación» frente a «solo el titular» en sentido absoluto: refleja la práctica de operación bajo responsabilidad y consentimiento del titular de la instalación.",
+      ],
+    },
+  ],
+};
