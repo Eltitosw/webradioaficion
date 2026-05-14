@@ -14,6 +14,8 @@ import fedi from "../data/fediea-2011.js";
 import quij from "../data/quijotes-ea3rcq.js";
 import quijotesExplanations from "../data/quijotes-explanations.js";
 import propias from "../data/questions-examen-propias.js";
+import figureSvgs from "../data/figure-assets.js";
+import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS } from "../data/question-policy.js";
 import { checkStemFigures } from "../lib/stem-figure-check.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -133,9 +135,15 @@ for (const q of all) {
     fail(`Pregunta ${q.id}: el enunciado requiere figura pero no tiene stemFigure.`);
   }
   if (q.stemFigure) {
-    const figureText = `${q.stem || ""} ${q.explain || ""}`;
+    const figureText = `${q.stem || ""} ${q.explain || ""} ${Array.isArray(q.optionExplanations) ? q.optionExplanations.join(" ") : ""}`;
     if (externalFigureReferenceRe.test(figureText)) {
       fail(`Pregunta ${q.id}: tiene stemFigure local; no debe derivar la figura a URE/FEDI/web externa.`);
+    }
+    if (String(q.stemFigure).endsWith(".svg") && typeof figureSvgs[q.stemFigure] !== "string") {
+      fail(`Pregunta ${q.id}: ${q.stemFigure} debe estar embebida en data/figure-assets.js para evitar imágenes rotas en hosting.`);
+    }
+    if (!EXACT_FIGURE_QUESTION_IDS.has(q.id) && !EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id)) {
+      fail(`Pregunta ${q.id}: figura sin estatus editorial. Debe certificarse como exacta o excluirse del banco activo.`);
     }
   }
 }

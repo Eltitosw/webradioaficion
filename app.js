@@ -7,6 +7,8 @@ import quijotesEa3rcq from "./data/quijotes-ea3rcq.js";
 import quijotesExplanations from "./data/quijotes-explanations.js";
 import questionsExamenPropias from "./data/questions-examen-propias.js";
 import regulatory from "./data/regulatory.js";
+import figureSvgs from "./data/figure-assets.js";
+import { isActiveQuestion } from "./data/question-policy.js";
 import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
 import {
   buildExamReadiness,
@@ -170,7 +172,7 @@ let allQuestions = [
   ...ureElectricidad,
   ...fediea2011,
   ...quijotesEa3rcq.map(withQuijotesExplanation),
-];
+].filter(isActiveQuestion);
 
 const TRAP_QUESTION_IDS = new Set([
   "q6",
@@ -970,7 +972,7 @@ function safeStemFigureSrc(raw) {
   if (typeof raw !== "string") return null;
   const s = raw.trim();
   if (!s || s.includes("..") || s.includes("\\")) return null;
-  if (!/^images\/quiz\/[A-Za-z0-9._-]+\.(svg|png|webp)$/i.test(s)) return null;
+  if (!/^images\/quiz\/[A-Za-z0-9._-]+\.(svg|png|webp|jpg|jpeg)$/i.test(s)) return null;
   return s;
 }
 
@@ -983,6 +985,13 @@ function stemFigureBlock(q) {
     typeof rawAlt === "string" && rawAlt.trim()
       ? rawAlt.trim()
       : "Figura asociada al enunciado.";
+  const inlineSvg = typeof figureSvgs[src] === "string" ? figureSvgs[src] : "";
+  if (inlineSvg) {
+    return `<figure class="q-card__figure">
+      <div class="q-card__figure-inline" aria-label="${escapeHtml(alt)}">${inlineSvg}</div>
+      <figcaption class="q-card__figure-caption">${escapeHtml(alt)}</figcaption>
+    </figure>`;
+  }
   return `<figure class="q-card__figure">
     <img class="q-card__figure-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" onerror="this.closest('figure').classList.add('is-missing')" />
     <figcaption class="q-card__figure-caption">${escapeHtml(alt)}</figcaption>
@@ -2028,9 +2037,11 @@ function setQuizFocusMode(on) {
   const view = $("#view-practicar");
   const btn = $("#quiz-focus-toggle");
   view?.classList.toggle("is-focus-mode", !!on);
+  document.body.classList.toggle("quiz-focus-active", !!on);
   if (btn instanceof HTMLButtonElement) {
     btn.setAttribute("aria-pressed", on ? "true" : "false");
     btn.textContent = on ? "Salir foco" : "Modo foco";
+    btn.setAttribute("aria-label", on ? "Salir del modo foco" : "Entrar en modo foco");
   }
 }
 
@@ -2170,7 +2181,7 @@ function renderDeepenPanel(q) {
       <li><a href="${temarioHref}">Temario de examen · ${escapeHtml(blockTitle)}</a></li>
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
       <li><a href="${normativaHref}">Normativa · BOE y administración</a></li>
-      <li><a href="https://www.cept.org/ecc/ham-radio" rel="noopener noreferrer">CEPT · HAREC y documentación</a></li>
+      <li><a href="https://docdb.cept.org/document/926" rel="noopener noreferrer">ECO/CEPT · HAREC T/R 61-02</a></li>
     </ul>
   </div>`;
 }

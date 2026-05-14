@@ -4,7 +4,7 @@
  * Bloques importados:
  *   - ag: 1.ª prueba 22/10/2011 (preguntas 001–030)
  *   - ah: 2.ª prueba 22/10/2011 (preguntas 031–060)
- * Las preguntas con figura en la web original deben contrastarse con el dibujo allí.
+ * Las preguntas que dependen de figura incluyen un `stemFigure` local y explicación propia.
  * Advertencia de FEDI: pueden contener errores o quedar obsoletas.
  * Revisión aplicada (normativa/técnica): 2026-05-12 — fedi-ag-014, fedi-ah-031, fedi-ah-035, fedi-ah-040 (potencias vs BOE).
  */
@@ -108,8 +108,8 @@ export default [
     part: 1,
     topicId: "receptores-emisores",
     stem: "¿Cómo se denomina el siguiente circuito eléctrico?",
-    stemFigure: "images/quiz/envelope-detector-am.svg",
-    stemFigureAlt: "Esquema con diodo y filtro RC: detector de envolvente AM.",
+    stemFigure: "images/quiz/fedi-ag-009-original.jpg",
+    stemFigureAlt: "Figura original FEDI-EA ag-9: circuito eléctrico de detector de envolvente.",
     options: [
       "Generador de audiofrecuencia",
       "Detector de envolvente",
@@ -167,9 +167,9 @@ export default [
     part: 1,
     topicId: "antenas-prop",
     stem: "En el siguiente gráfico, si la antena emite tres señales en distintas frecuencias, ¿cuál tiene frecuencia superior a la frecuencia crítica?",
-    stemFigure: "images/quiz/fedi-ag-013-critical-frequency.svg",
+    stemFigure: "images/quiz/fedi-ag-013-original.jpg",
     stemFigureAlt:
-      "Esquema de propagación con tres rayos: las señales 1 y 2 se refractan en la ionosfera y la señal 3 atraviesa la capa.",
+      "Figura original FEDI-EA ag-13: tres señales con distintas trayectorias respecto a la ionosfera.",
     options: ["Las señales 1 y 2", "La señal 1", "La señal 3", "Las señales 1 y 3"],
     correctIndex: 2,
     explain:
@@ -180,9 +180,9 @@ export default [
     part: 1,
     topicId: "componentes",
     stem: "En el siguiente circuito, en régimen permanente, ¿qué tensión tiene el condensador C?",
-    stemFigure: "images/quiz/fedi-ag-014-capacitor-divider.svg",
+    stemFigure: "images/quiz/fedi-ag-014-original.jpg",
     stemFigureAlt:
-      "Divisor de tensión de 12 voltios con una caída de 3 voltios en la rama superior y condensador en paralelo con la rama inferior de 9 voltios.",
+      "Figura original FEDI-EA ag-14: circuito con condensador C y tensiones indicadas.",
     options: ["12", "3", "0", "9"],
     correctIndex: 3,
     explain:
@@ -207,9 +207,9 @@ export default [
     part: 1,
     topicId: "receptores-emisores",
     stem: "En el diagrama de bloques de un receptor elemental de conversión directa, el bloque con interrogantes representa un:",
-    stemFigure: "images/quiz/fedi-ag-016-direct-conversion.svg",
+    stemFigure: "images/quiz/fedi-ag-016-original.jpg",
     stemFigureAlt:
-      "Diagrama de receptor de conversión directa: antena y radiofrecuencia entran a un mezclador, un bloque con interrogantes alimenta el mezclador y la salida pasa a audiofrecuencia.",
+      "Figura original FEDI-EA ag-16: diagrama de bloques de receptor elemental de conversión directa con interrogantes.",
     options: ["Amplificador RF", "Filtro paso banda", "Oscilador local", "Variador de potencia"],
     correctIndex: 2,
     explain:
@@ -653,7 +653,8 @@ export default [
     stem: "¿Qué sufijo puede asignarse a una autorización de radioaficionado?",
     options: ["DDD", "FFF", "TTT", "XXX"],
     correctIndex: 2,
-    explain: "En el criterio del test original suele descartarse XXX (asociación a señales); confirma con el corrector de FEDI-EA. FEDI-EA.",
+    explain:
+      "TTT es el sufijo que recoge este banco como asignable. XXX se descarta por su asociación a señales especiales o de llamada general en otros contextos; no conviene memorizarlo como sufijo ordinario de autorización.",
   },
   {
     id: "fedi-ah-052",

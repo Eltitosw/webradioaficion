@@ -19,17 +19,20 @@ Este proyecto es una herramienta de estudio para el examen de radioaficionado en
 
 ## Checklist de auditoría manual
 
-- [ ] Orden IET/1311/2013: texto consolidado BOE revisado.
-- [ ] Anexo I: potencias y bandas contrastadas con la versión vigente.
-- [ ] Anexo II: programa de examen contrastado con HAREC/CEPT T/R 61-02.
-- [ ] Convocatoria abierta: número de preguntas, tiempo y baremo revisados.
-- [ ] Sede administrativa vigente: autorización, tasas, órgano competente y trámites revisados.
-- [ ] CEPT T/R 61-01: operación temporal en otros países revisada.
-- [ ] Bancos FEDI-EA/Quijotes: preguntas sensibles revisadas frente a BOE si citan cifras, plazos o trámites.
-- [ ] Preguntas propias: `sourceRef` revisado en los ítems normativos.
+- [x] Orden IET/1311/2013: texto consolidado BOE revisado.
+- [x] Anexo I: potencias y bandas contrastadas con la versión vigente.
+- [x] Anexo II: programa de examen contrastado con HAREC/CEPT T/R 61-02.
+- [x] Convocatoria abierta: número de preguntas, tiempo y baremo revisados.
+- [x] Sede administrativa vigente: autorización, tasas, órgano competente y trámites revisados.
+- [x] CEPT T/R 61-01: operación temporal en otros países revisada.
+- [x] Bancos FEDI-EA/Quijotes: preguntas sensibles revisadas frente a BOE si citan cifras, plazos o trámites.
+- [x] Preguntas propias: `sourceRef` revisado en los ítems normativos.
+- [x] Figuras de bancos externos: solo activas si se dispone de calco exacto documentado.
 
 ## Regla editorial
 
 Si un banco antiguo contradice BOE o convocatoria vigente, se corrige la explicación y se indica el riesgo. No se debe reforzar un dato legal solo porque aparezca repetido en bancos de práctica.
 
-Última revisión interna de avisos críticos: 13/05/2026.
+Las preguntas que dependen de una figura de banco externo no pueden usar recreaciones aproximadas. Si no se dispone de la figura original exacta o de un calco documentado, la pregunta se conserva para auditoría pero queda excluida del banco activo.
+
+Última revisión interna de avisos críticos: 14/05/2026.

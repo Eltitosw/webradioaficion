@@ -88,9 +88,24 @@ export default {
         "El programa de examen y la licencia CEPT están alineados con recomendaciones CEPT; el BOE español sigue siendo la referencia para operar en España.",
       links: [
         {
-          label: "CEPT · Documentación HAREC / exámenes armonizados",
-          href: "https://www.cept.org/ecc/ham-radio",
-          note: "Página del grupo ECC: enlaces a T/R 61-01 (licencia CEPT) y T/R 61-02 (programa de examen HAREC).",
+          label: "ECO/CEPT · T/R 61-01 (licencia CEPT de radioaficionado)",
+          href: "https://docdb.cept.org/document/925",
+          note: "Documento activo de la base ECO: licencia CEPT para operación temporal; última actualización publicada 18/10/2024.",
+        },
+        {
+          label: "ECO/CEPT · T/R 61-02 (HAREC y programa armonizado)",
+          href: "https://docdb.cept.org/document/926",
+          note: "Documento activo de la base ECO: certificados HAREC y programa armonizado; última actualización publicada 16/02/2024.",
+        },
+        {
+          label: "ECO/CEPT · Implementación T/R 61-01 y T/R 61-02",
+          href: "https://docdb.cept.org/implementation/925",
+          note: "Estado de implementación por países para T/R 61-01.",
+        },
+        {
+          label: "ECO/CEPT · Implementación HAREC/T/R 61-02",
+          href: "https://docdb.cept.org/implementation/926",
+          note: "Estado de implementación por países para certificados HAREC y recomendación T/R 61-02.",
         },
       ],
     },
@@ -181,7 +196,7 @@ export default {
     "Bancos históricos o de terceros: FEDI-EA, Quijotes y otros tests. Se usan para entrenar redacción tipo test; si contradicen BOE, se estudia la explicación corregida y no el dato antiguo.",
   ],
   lastReviewNote:
-    "Última revisión interna de fuentes y avisos críticos: 13/05/2026. Antes de presentarse, revisa BOE consolidado, convocatoria abierta y sede administrativa por si hubiera cambios posteriores.",
+    "Última revisión interna de fuentes y avisos críticos: 14/05/2026. Antes de presentarse, revisa BOE consolidado, convocatoria abierta y sede administrativa por si hubiera cambios posteriores.",
   /** Puntos útiles para estudiar la 2.ª prueba; no sustituyen la lectura del artículo. */
   studyAnchors: [
     {

@@ -9,6 +9,7 @@ import ure from "../data/ure-electricidad.js";
 import fedi from "../data/fediea-2011.js";
 import quij from "../data/quijotes-ea3rcq.js";
 import propias from "../data/questions-examen-propias.js";
+import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
 
 const blockIds = new Set();
 for (const p of topics.parts || []) {
@@ -29,6 +30,7 @@ for (const id of blockIds) {
 }
 
 const all = [...questions, ...propias, ...ure, ...fedi, ...quij];
+const active = all.filter(isActiveQuestion);
 const ids = new Set();
 for (const q of all) {
   if (!q || typeof q.id !== "string") {
@@ -49,7 +51,15 @@ for (const q of propias) {
   if (!q.sourceRef || !String(q.sourceRef).trim()) fail(`questions-examen-propias: falta sourceRef en ${q.id}`);
 }
 
+for (const q of all) {
+  if (!q.stemFigure) continue;
+  if (!EXACT_FIGURE_QUESTION_IDS.has(q.id) && !EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id)) {
+    fail(`Pregunta ${q.id}: tiene figura, pero no está certificada como exacta ni excluida hasta tener calco.`);
+  }
+}
+
 console.log("Preguntas totales:", all.length);
+console.log("Preguntas activas:", active.length, `(excluidas por figura exacta pendiente: ${all.length - active.length})`);
 if (errors) {
   console.error(`\nverify-data: ${errors} error(es).`);
   process.exit(1);

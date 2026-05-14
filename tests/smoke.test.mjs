@@ -7,8 +7,10 @@ import ownQuestions from "../data/questions-examen-propias.js";
 import ure from "../data/ure-electricidad.js";
 import fedi from "../data/fediea-2011.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
+import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
 
 const allQuestions = [...questions, ...ownQuestions, ...ure, ...fedi, ...quijotes];
+const activeQuestions = allQuestions.filter(isActiveQuestion);
 
 test("regulatory export tiene estructura mínima", () => {
   assert.ok(regulatory.headline);
@@ -57,5 +59,19 @@ test("preguntas propias tienen trazabilidad de fuente", () => {
   for (const q of ownQuestions) {
     assert.equal(q.options.length, 4, `cada pregunta propia debe tener 4 opciones: ${q.id}`);
     assert.ok(typeof q.sourceRef === "string" && q.sourceRef.trim().length > 0, `falta sourceRef en ${q.id}`);
+  }
+});
+
+test("preguntas activas no usan figuras externas pendientes de calco exacto", () => {
+  for (const q of allQuestions) {
+    if (!q.stemFigure) continue;
+    assert.ok(
+      EXACT_FIGURE_QUESTION_IDS.has(q.id) || EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id),
+      `figura sin estatus editorial: ${q.id}`,
+    );
+  }
+  for (const q of activeQuestions) {
+    if (!q.stemFigure) continue;
+    assert.ok(EXACT_FIGURE_QUESTION_IDS.has(q.id), `pregunta activa con figura no certificada exacta: ${q.id}`);
   }
 });
