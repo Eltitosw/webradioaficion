@@ -105,23 +105,6 @@ const figureSvgs = {
   <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L8,3 z" fill="#9aa3b5"/></marker></defs>
   <text x="310" y="246" text-anchor="middle" fill="#9aa3b5" font-size="12" font-family="system-ui,sans-serif">En conversión directa, el mezclador necesita una señal local para bajar la RF directamente a audio.</text>
 </svg>`,
-  "images/quiz/ofic-yagi-elements.svg": `<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-labelledby="title desc">
-  <title id="title">Elementos de una antena Yagi</title>
-  <desc id="desc">Esquema simplificado con reflector, elemento excitado y directores; el lobulo principal apunta hacia los directores.</desc>
-  <rect width="720" height="360" rx="20" fill="#101827"/>
-  <line x1="100" y1="180" x2="620" y2="180" stroke="#93b8ff" stroke-width="8" stroke-linecap="round"/>
-  <line x1="150" y1="80" x2="150" y2="280" stroke="#e4a82a" stroke-width="14" stroke-linecap="round"/>
-  <line x1="285" y1="100" x2="285" y2="260" stroke="#6ba3f5" stroke-width="14" stroke-linecap="round"/>
-  <line x1="420" y1="120" x2="420" y2="240" stroke="#c4ccd8" stroke-width="12" stroke-linecap="round"/>
-  <line x1="530" y1="130" x2="530" y2="230" stroke="#c4ccd8" stroke-width="12" stroke-linecap="round"/>
-  <path d="M570 180h75" stroke="#2eb87a" stroke-width="10" stroke-linecap="round"/>
-  <path d="M650 180l-32-22v44z" fill="#2eb87a"/>
-  <text x="150" y="52" text-anchor="middle" fill="#f0bc4d" font-family="Arial, sans-serif" font-size="24" font-weight="700">Reflector</text>
-  <text x="285" y="82" text-anchor="middle" fill="#93b8ff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Excitado</text>
-  <text x="475" y="112" text-anchor="middle" fill="#eef2f8" font-family="Arial, sans-serif" font-size="24" font-weight="700">Directores</text>
-  <text x="605" y="155" text-anchor="middle" fill="#b8ebd4" font-family="Arial, sans-serif" font-size="22" font-weight="700">Lobulo principal</text>
-  <text x="360" y="325" text-anchor="middle" fill="#8a94a8" font-family="Arial, sans-serif" font-size="18">La direccion de maxima radiacion va hacia los directores.</text>
-</svg>`,
   "images/quiz/quijotes-044-lc-wattmeter.svg": `<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200" viewBox="0 0 560 200" role="img" aria-labelledby="q44">
   <title id="q44">Esquema orientativo: transmisor, vatimetro, red resonante LC y linea hacia antena</title>
   <rect width="560" height="200" fill="#0f1419" rx="10"/>

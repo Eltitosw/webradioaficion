@@ -19,6 +19,9 @@ import {
   isActiveError,
   updateErrorNotebookWithResult,
 } from "./lib/learning-coach.js";
+import appVersion from "./data/version.js";
+import { showAppConfirm, initAppDialog } from "./lib/app-dialog.js";
+import { buildProgressBackupPayload, applyProgressBackupPayload } from "./lib/progress-backup.js";
 
 const STORAGE_KEY = "radioexam_card_schedule_v1";
 const TOPIC_PRESELECT_KEY = "radioexam_practicar_topic";
@@ -29,6 +32,21 @@ const QUIZ_TOPIC_STATS_KEY = "radioexam_topic_quiz_stats_v1";
 const ERROR_NOTEBOOK_KEY = "radioexam_error_notebook_v1";
 /** Resumen global, racha y cobertura del banco (solo este navegador). */
 const USER_STATS_KEY = "radioexam_user_stats_v1";
+/** Borrador de sesión de práctica en curso (solo este navegador). */
+const QUIZ_DRAFT_KEY = "radioexam_quiz_draft_v1";
+const QUIZ_DRAFT_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+const A11Y_STORAGE_KEY = "radioexam_a11y_v1";
+
+const PROGRESS_STORE_KEYS = {
+  userStats: USER_STATS_KEY,
+  topicQuizStats: QUIZ_TOPIC_STATS_KEY,
+  errorNotebook: ERROR_NOTEBOOK_KEY,
+  lastWrong: LAST_WRONG_SESSION_KEY,
+  quizPrefs: QUIZ_PREFS_KEY,
+  flashcards: STORAGE_KEY,
+  quizDraft: QUIZ_DRAFT_KEY,
+  a11y: A11Y_STORAGE_KEY,
+};
 
 const VIEW_HEADINGS = {
   inicio: "titulo-inicio",
@@ -291,15 +309,44 @@ function announceRoute(viewId) {
 
 let saveToastTimer = 0;
 
-function showSaveToast(message = "Progreso guardado en este navegador.") {
+function trySetLocalStorage(key, value) {
+  try {
+    localStorage.setItem(key, value);
+    return true;
+  } catch {
+    showSaveToast(
+      "No se pudo guardar en este navegador (almacenamiento lleno, modo privado estricto o bloqueado).",
+      true,
+    );
+    return false;
+  }
+}
+
+function readLocalStorage(key) {
+  try {
+    return localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+}
+
+function showSaveToast(message = "Progreso guardado en este navegador.", warn = false) {
   const el = $("#save-toast");
   if (!el) return;
   el.textContent = message;
+  el.classList.toggle("save-toast--warn", !!warn);
   el.hidden = false;
   window.clearTimeout(saveToastTimer);
   saveToastTimer = window.setTimeout(() => {
     el.hidden = true;
-  }, 2200);
+    el.classList.remove("save-toast--warn");
+  }, warn ? 4200 : 2200);
+}
+
+function renderAppVersion() {
+  const el = $("#app-version");
+  if (!el) return;
+  el.textContent = `Versión ${appVersion.label}`;
 }
 
 function focusViewHeading(viewId) {
@@ -364,7 +411,61 @@ function syncFcTopicFromSession() {
   sessionStorage.removeItem(FC_TOPIC_PRESELECT_KEY);
 }
 
-function onRoute() {
+let quizLeaveGuardReverting = false;
+
+/** @param {string} raw */
+function resolveViewIdFromHash(raw) {
+  if (raw.startsWith("temario--")) return "temario";
+  if (raw.startsWith("normativa--")) return "normativa";
+  if (
+    ["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(
+      raw,
+    )
+  ) {
+    return raw;
+  }
+  return "inicio";
+}
+
+function isQuizSessionInProgress() {
+  return quizState.list.length > 0 && !quizState._finished && !$("#quiz-area")?.hidden;
+}
+
+async function confirmAbandonQuizSession() {
+  return showAppConfirm({
+    title: "¿Salir del test?",
+    message:
+      "Saldrás de la sesión en pantalla. Tu progreso quedará guardado en este dispositivo y podrás continuar después desde Practicar con «Continuar sesión».",
+    confirmLabel: "Salir y guardar",
+    cancelLabel: "Seguir practicando",
+  });
+}
+
+function abandonQuizSession() {
+  if (quizState.list.length && !quizState._finished) {
+    flushSaveQuizDraft();
+  }
+  clearExamTimer();
+  quizState.list = [];
+  quizState.index = 0;
+  quizState.answers = {};
+  quizState.confidence = {};
+  quizState.marked = {};
+  quizState._finished = true;
+  quizState.smartLabel = "";
+  const area = $("#quiz-area");
+  if (area) area.hidden = true;
+  const fb = $("#quiz-feedback");
+  if (fb) fb.textContent = "";
+  const score = $("#quiz-score");
+  if (score) score.hidden = true;
+  const qEl = $("#quiz-question");
+  if (qEl) qEl.innerHTML = "";
+  setQuizFocusMode(false);
+  renderQuizResumePanel();
+}
+
+async function onRoute() {
   const rawFull = (location.hash || "#inicio").slice(1);
   const raw = rawFull || "inicio";
 
@@ -377,6 +478,18 @@ function onRoute() {
       });
     }
     return;
+  }
+
+  const targetId = resolveViewIdFromHash(raw);
+  if (quizLeaveGuardReverting) {
+    quizLeaveGuardReverting = false;
+  } else if (isQuizSessionInProgress() && targetId !== "practicar") {
+    if (!(await confirmAbandonQuizSession())) {
+      quizLeaveGuardReverting = true;
+      location.hash = "practicar";
+      return;
+    }
+    abandonQuizSession();
   }
 
   /** @type {string|null} */
@@ -412,6 +525,7 @@ function onRoute() {
   if (id === "practicar") {
     renderQuizProgressSummary();
     renderQuizPracticeGuide();
+    renderQuizResumePanel();
   }
   if (id === "examen" || id === "cuaderno") renderExamCoach();
   if (scrollTargetId) {
@@ -745,13 +859,15 @@ function formatCountdown(ms) {
   return `${String(m).padStart(2, "0")}:${String(r).padStart(2, "0")}`;
 }
 
-function startExamTimer() {
+function startExamTimer(/** @type {number|undefined} */ remainingMs) {
   clearExamTimer();
   if (quizState.sessionType !== "teorico" || quizState.mode !== "exam") return;
   const el = $("#quiz-timer");
   if (!el) return;
   el.hidden = false;
-  quizState.examEndsAt = Date.now() + TEORICO_EXAM_MS;
+  const duration =
+    typeof remainingMs === "number" && Number.isFinite(remainingMs) ? Math.max(0, remainingMs) : TEORICO_EXAM_MS;
+  quizState.examEndsAt = Date.now() + duration;
   quizState.timedOut = false;
   const tick = () => {
     const end = quizState.examEndsAt || 0;
@@ -788,6 +904,257 @@ function syncPretestAvailability() {
   }
 }
 
+let quizDraftSaveTimer = /** @type {ReturnType<typeof setTimeout>|null} */ (null);
+
+function readQuizSetupFromForm() {
+  return {
+    part: $("#quiz-part")?.value || "1",
+    topic: $("#quiz-topic")?.value || "all",
+    session: $("#quiz-session")?.value === "teorico" ? "teorico" : "libre",
+    mode: $("#quiz-mode")?.value || "study",
+    pretest: !!$("#quiz-pretest")?.checked,
+    wrongOnly: !!$("#quiz-wrong-only")?.checked,
+    trapOnly: !!$("#quiz-trap-only")?.checked,
+  };
+}
+
+function applyQuizSetupToForm(/** @type {Record<string, unknown>} */ setup) {
+  if (!setup || typeof setup !== "object") return;
+  const partEl = $("#quiz-part");
+  if (partEl instanceof HTMLSelectElement && typeof setup.part === "string") partEl.value = setup.part;
+  const topicEl = $("#quiz-topic");
+  if (topicEl instanceof HTMLSelectElement && typeof setup.topic === "string") {
+    if ([...topicEl.options].some((o) => o.value === setup.topic)) topicEl.value = setup.topic;
+  }
+  const sessEl = $("#quiz-session");
+  if (sessEl instanceof HTMLSelectElement && typeof setup.session === "string") sessEl.value = setup.session;
+  const modeEl = $("#quiz-mode");
+  if (modeEl instanceof HTMLSelectElement && typeof setup.mode === "string") modeEl.value = setup.mode;
+  const preEl = $("#quiz-pretest");
+  if (preEl instanceof HTMLInputElement) preEl.checked = !!setup.pretest;
+  const wrongEl = $("#quiz-wrong-only");
+  if (wrongEl instanceof HTMLInputElement) wrongEl.checked = !!setup.wrongOnly;
+  const trapEl = $("#quiz-trap-only");
+  if (trapEl instanceof HTMLInputElement) trapEl.checked = !!setup.trapOnly;
+  syncPretestAvailability();
+  validateTopicPartConsistency();
+}
+
+function clearQuizDraft() {
+  try {
+    localStorage.removeItem(QUIZ_DRAFT_KEY);
+  } catch {
+    /* ignore */
+  }
+  $("#view-practicar")?.classList.remove("has-resume-draft");
+}
+
+function formatQuizDraftSavedAt(/** @type {number} */ ts) {
+  const diff = Date.now() - ts;
+  if (diff < 60_000) return "hace un momento";
+  if (diff < 3_600_000) return `hace ${Math.max(1, Math.round(diff / 60_000))} min`;
+  if (diff < 86_400_000) return `hace ${Math.max(1, Math.round(diff / 3_600_000))} h`;
+  return `hace ${Math.max(1, Math.round(diff / 86_400_000))} día(s)`;
+}
+
+function quizDraftSessionLabel(/** @type {{ smartLabel?: string; sessionType?: string; mode?: string; studyFeedback?: string }} */ s) {
+  if (s.smartLabel) return s.smartLabel;
+  const type = s.sessionType === "teorico" ? "Examen tipo test" : "Práctica libre";
+  if (s.mode === "exam") return `${type} · modo examen`;
+  if (s.studyFeedback === "confidence") return `${type} · estudio con seguridad`;
+  if (s.studyFeedback === "deepen") return `${type} · estudio temario y libro`;
+  return `${type} · estudio`;
+}
+
+/** @param {unknown} draft */
+function validateQuizDraft(draft) {
+  if (!draft || typeof draft !== "object") return null;
+  const d = /** @type {Record<string, unknown>} */ (draft);
+  if (d.version !== 1) return null;
+  const savedAt = typeof d.savedAt === "number" ? d.savedAt : 0;
+  if (!savedAt || Date.now() - savedAt > QUIZ_DRAFT_MAX_AGE_MS) return null;
+  const session = d.session;
+  if (!session || typeof session !== "object") return null;
+  const s = /** @type {Record<string, unknown>} */ (session);
+  if (!Array.isArray(s.list) || !s.list.length) return null;
+  const index = typeof s.index === "number" ? s.index : 0;
+  if (index < 0 || index >= s.list.length) return null;
+  const knownIds = new Set(allQuestions.map((q) => q.id));
+  for (const q of s.list) {
+    if (!q || typeof q !== "object") return null;
+    const item = /** @type {Record<string, unknown>} */ (q);
+    if (typeof item.id !== "string" || !knownIds.has(item.id)) return null;
+    if (!Array.isArray(item.options) || typeof item.correctIndex !== "number") return null;
+  }
+  return /** @type {{ version: number; savedAt: number; setup: Record<string, unknown>; session: Record<string, unknown> }} */ (
+    d
+  );
+}
+
+function loadQuizDraft() {
+  try {
+    const raw = readLocalStorage(QUIZ_DRAFT_KEY);
+    if (!raw) return null;
+    return validateQuizDraft(JSON.parse(raw));
+  } catch {
+    return null;
+  }
+}
+
+function saveQuizDraft() {
+  if (quizState._finished || !quizState.list.length || $("#quiz-area")?.hidden) return;
+  let examRemainingMs = null;
+  if (quizState.examEndsAt) examRemainingMs = Math.max(0, quizState.examEndsAt - Date.now());
+  const payload = {
+    version: 1,
+    savedAt: Date.now(),
+    setup: readQuizSetupFromForm(),
+    session: {
+      list: quizState.list,
+      index: quizState.index,
+      mode: quizState.mode,
+      studyFeedback: quizState.studyFeedback,
+      sessionType: quizState.sessionType,
+      answers: quizState.answers,
+      confidence: quizState.confidence,
+      marked: quizState.marked,
+      pretest: quizState.pretest,
+      optionsVisible: quizState.optionsVisible,
+      topicFilter: quizState.topicFilter,
+      smartLabel: quizState.smartLabel,
+      timedOut: quizState.timedOut,
+      statsCounted: [...quizState._statsCounted],
+      pretext: $("#quiz-pretext")?.value || "",
+      examRemainingMs,
+    },
+  };
+  trySetLocalStorage(QUIZ_DRAFT_KEY, JSON.stringify(payload));
+  renderQuizResumePanel();
+}
+
+function scheduleSaveQuizDraft() {
+  if (quizState._finished || !quizState.list.length || $("#quiz-area")?.hidden) return;
+  if (quizDraftSaveTimer) clearTimeout(quizDraftSaveTimer);
+  quizDraftSaveTimer = setTimeout(() => {
+    quizDraftSaveTimer = null;
+    saveQuizDraft();
+  }, 250);
+}
+
+function flushSaveQuizDraft() {
+  if (quizDraftSaveTimer) {
+    clearTimeout(quizDraftSaveTimer);
+    quizDraftSaveTimer = null;
+  }
+  saveQuizDraft();
+}
+
+function renderQuizResumePanel() {
+  const panel = $("#quiz-resume-panel");
+  const meta = $("#quiz-resume-meta");
+  const view = $("#view-practicar");
+  if (!panel) return;
+  const draft = loadQuizDraft();
+  const show = !!draft && !isQuizSessionInProgress();
+  panel.hidden = !show;
+  view?.classList.toggle("has-resume-draft", show);
+  if (!show || !meta || !draft) return;
+  const s = /** @type {Record<string, unknown>} */ (draft.session);
+  const list = /** @type {unknown[]} */ (s.list);
+  const answers = /** @type {Record<string, number|null>} */ (s.answers || {});
+  const index = typeof s.index === "number" ? s.index : 0;
+  let answered = 0;
+  for (const q of list) {
+    const id = q && typeof q === "object" ? /** @type {{ id?: string }} */ (q).id : null;
+    if (id && answers[id] !== null && answers[id] !== undefined) answered += 1;
+  }
+  const label = quizDraftSessionLabel(
+    /** @type {{ smartLabel?: string; sessionType?: string; mode?: string; studyFeedback?: string }} */ (s),
+  );
+  meta.textContent = `${label} · pregunta ${index + 1}/${list.length} · ${answered} respondida(s) · ${formatQuizDraftSavedAt(draft.savedAt)}.`;
+}
+
+async function confirmReplaceQuizDraft() {
+  if (!loadQuizDraft() || isQuizSessionInProgress()) return true;
+  const ok = await showAppConfirm({
+    title: "¿Empezar una sesión nueva?",
+    message:
+      "Hay una sesión guardada sin terminar en este dispositivo. Si continúas, se descartará la guardada y empezarás otra desde cero.",
+    confirmLabel: "Nueva sesión",
+    cancelLabel: "Cancelar",
+    danger: true,
+  });
+  if (ok) {
+    clearQuizDraft();
+    renderQuizResumePanel();
+  }
+  return ok;
+}
+
+function launchQuizUi(/** @type {number|undefined} */ examRemainingMs) {
+  $("#quiz-area").hidden = false;
+  $("#quiz-score").hidden = true;
+  $("#quiz-next").disabled = false;
+  updateQuizStats();
+  startExamTimer(examRemainingMs);
+  flushSaveQuizDraft();
+  renderQuizResumePanel();
+  renderQuestion();
+}
+
+function resumeQuizSession() {
+  const draft = loadQuizDraft();
+  if (!draft || isQuizSessionInProgress()) return;
+  const s = /** @type {Record<string, unknown>} */ (draft.session);
+  applyQuizSetupToForm(draft.setup);
+  quizState.list = /** @type {typeof quizState.list} */ (s.list);
+  quizState.index = typeof s.index === "number" ? s.index : 0;
+  quizState.mode = s.mode === "exam" ? "exam" : "study";
+  quizState.studyFeedback =
+    s.studyFeedback === "confidence" || s.studyFeedback === "deepen" ? s.studyFeedback : "immediate";
+  quizState.sessionType = s.sessionType === "teorico" ? "teorico" : "libre";
+  quizState.answers = /** @type {Record<string, number|null>} */ (s.answers || {});
+  quizState.confidence = /** @type {Record<string, number>} */ (s.confidence || {});
+  quizState.marked = /** @type {Record<string, boolean>} */ (s.marked || {});
+  quizState.pretest = !!s.pretest;
+  quizState.optionsVisible = s.optionsVisible !== false;
+  quizState.topicFilter = typeof s.topicFilter === "string" ? s.topicFilter : "all";
+  quizState.smartLabel = typeof s.smartLabel === "string" ? s.smartLabel : "";
+  quizState.timedOut = !!s.timedOut;
+  quizState._finished = false;
+  quizState._statsCounted = new Set(
+    Array.isArray(s.statsCounted) ? s.statsCounted.filter((id) => typeof id === "string") : [],
+  );
+  $("#quiz-pretest-box").hidden = !quizState.pretest;
+  $("#quiz-pretext").value = typeof s.pretext === "string" ? s.pretext : "";
+  $("#quiz-feedback").textContent = "";
+  const examRemainingMs =
+    typeof s.examRemainingMs === "number" && Number.isFinite(s.examRemainingMs) ? s.examRemainingMs : undefined;
+  if (
+    examRemainingMs !== undefined &&
+    examRemainingMs <= 0 &&
+    quizState.sessionType === "teorico" &&
+    quizState.mode === "exam"
+  ) {
+    launchQuizUi(0);
+    quizState.timedOut = true;
+    requestAnimationFrame(() => finishQuiz());
+    return;
+  }
+  launchQuizUi(examRemainingMs);
+  requestAnimationFrame(() => {
+    $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  showSaveToast("Sesión reanudada.");
+}
+
+function initQuizDraftPersistence() {
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") flushSaveQuizDraft();
+  });
+  window.addEventListener("pagehide", () => flushSaveQuizDraft());
+}
+
 function updateQuizStats() {
   const el = $("#quiz-stats");
   if (!el || !quizState.list.length) {
@@ -807,7 +1174,12 @@ function updateQuizStats() {
   el.textContent = bits.join(" · ");
 }
 
-function startQuiz() {
+async function startQuiz() {
+  if (isQuizSessionInProgress()) {
+    if (!(await confirmAbandonQuizSession())) return;
+    abandonQuizSession();
+  }
+  if (!(await confirmReplaceQuizDraft())) return;
   syncPretestAvailability();
   const part = $("#quiz-part")?.value || "1";
   const modeVal = $("#quiz-mode")?.value || "study";
@@ -893,14 +1265,16 @@ function startQuiz() {
     updateQuizStats();
     return;
   }
-  $("#quiz-next").disabled = false;
-  updateQuizStats();
-  startExamTimer();
   saveQuizPrefs();
-  renderQuestion();
+  launchQuizUi();
 }
 
-function startSmartReviewSession() {
+async function startSmartReviewSession() {
+  if (isQuizSessionInProgress()) {
+    if (!(await confirmAbandonQuizSession())) return;
+    abandonQuizSession();
+  }
+  if (!(await confirmReplaceQuizDraft())) return;
   if ($("#view-practicar")?.hidden) {
     location.hash = "practicar";
     showView("practicar");
@@ -959,9 +1333,7 @@ function startSmartReviewSession() {
     return;
   }
 
-  $("#quiz-next").disabled = false;
-  updateQuizStats();
-  renderQuestion();
+  launchQuizUi();
 }
 
 function currentQ() {
@@ -1100,12 +1472,14 @@ function renderQuestion() {
     const t = /** @type {HTMLInputElement} */ (e.target);
     quizState.marked[q.id] = !!t.checked;
     updateQuizStats();
+    scheduleSaveQuizDraft();
   });
 
   if (quizState.pretest && !showOpts) {
     $("#quiz-reveal")?.addEventListener("click", () => {
       quizState.optionsVisible = true;
       renderQuestion();
+      scheduleSaveQuizDraft();
     });
   }
 
@@ -1119,6 +1493,7 @@ function renderQuestion() {
       }
       updateQuizStats();
       renderQuestion();
+      scheduleSaveQuizDraft();
     });
   });
 
@@ -1127,6 +1502,7 @@ function renderQuestion() {
       const v = Number.parseInt(btn.getAttribute("data-conf") || "1", 10);
       quizState.confidence[q.id] = Number.isFinite(v) ? v : 1;
       renderQuestion();
+      scheduleSaveQuizDraft();
     });
   });
 
@@ -1144,6 +1520,7 @@ function renderQuestion() {
   }
 
   updateQuizStats();
+  scheduleSaveQuizDraft();
 }
 
 function topicBlockLabel(topicId) {
@@ -1706,8 +2083,16 @@ function renderUserProgress() {
     </div>
   `;
 
-  $("#user-stats-reset")?.addEventListener("click", () => {
-    if (!window.confirm("¿Borrar racha, cobertura y contadores del resumen global? No borra la programación de tarjetas ni los aciertos por bloque del temario.")) {
+  $("#user-stats-reset")?.addEventListener("click", async () => {
+    if (
+      !(await showAppConfirm({
+        title: "¿Restablecer resumen global?",
+        message:
+          "Se borrarán racha, cobertura y contadores del resumen global. No afecta a tarjetas, cuaderno ni aciertos por bloque del temario.",
+        confirmLabel: "Restablecer",
+        danger: true,
+      }))
+    ) {
       return;
     }
     try {
@@ -1936,8 +2321,17 @@ function renderErrorNotebook() {
     });
   });
 
-  root.querySelector("#error-notebook-clear")?.addEventListener("click", () => {
-    if (!window.confirm("¿Vaciar el cuaderno de errores? No borra estadísticas globales ni tarjetas.")) return;
+  root.querySelector("#error-notebook-clear")?.addEventListener("click", async () => {
+    if (
+      !(await showAppConfirm({
+        title: "¿Vaciar el cuaderno?",
+        message: "Se eliminarán todos los errores activos del cuaderno. No borra estadísticas globales ni tarjetas.",
+        confirmLabel: "Vaciar cuaderno",
+        danger: true,
+      }))
+    ) {
+      return;
+    }
     saveErrorNotebook({});
     renderExamCoach();
   });
@@ -2233,19 +2627,24 @@ function selectedAnswerParagraph(q, sel) {
   return `<p class="quiz-fb-selected"><strong>Tu respuesta:</strong> ${escapeHtml(t)}</p>`;
 }
 
+function hasBankExplainParagraph(q) {
+  return typeof q.explain === "string" && q.explain.trim().length > 0;
+}
+
 function answerReasoningPanel(q, sel) {
   const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
   const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
   const correctExplanation =
     typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
   const generalExplanation = typeof q.explain === "string" ? q.explain.trim() : "";
+  const bankExplainShownElsewhere = hasBankExplainParagraph(q);
   const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
   const correctText =
     Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
   if (sel === q.correctIndex) {
     const detail =
       correctExplanation ||
-      generalExplanation ||
+      (!bankExplainShownElsewhere ? generalExplanation : "") ||
       "Encaja con el concepto que pide el enunciado. Lee la explicación para fijar la regla, fórmula o criterio de examen que la justifica.";
     return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
   }
@@ -2254,7 +2653,7 @@ function answerReasoningPanel(q, sel) {
     "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
   const whyCorrect =
     correctExplanation ||
-    generalExplanation ||
+    (!bankExplainShownElsewhere ? generalExplanation : "") ||
     (correctText
       ? `La opción correcta es «${correctText}»; la explicación desarrolla la regla que permite distinguirla del distractor marcado.`
       : "La explicación desarrolla la regla que permite distinguir la opción correcta del distractor marcado.");
@@ -2286,14 +2685,31 @@ function abbreviationTextForQuestion(q) {
   return bits.filter((x) => typeof x === "string").join(" ");
 }
 
-function questionAbbreviationPanel(q) {
+/** No repetir abreviatura si el feedback ya la desarrolla (p. ej. «FI significa…»). */
+function abbreviationAlreadyExplainedIn(text, abbr, meaning) {
+  if (!text || !abbr) return false;
+  const escaped = abbr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (new RegExp(`${escaped}\\s*(significa|significa que|=|es)\\s*`, "iu").test(text)) return true;
+  const core = meaning
+    .replace(/^[^:]+:\s*/, "")
+    .split(/[.;]/)[0]
+    .trim()
+    .toLowerCase();
+  if (core.length >= 12 && text.toLowerCase().includes(core.slice(0, Math.min(48, core.length)))) return true;
+  return false;
+}
+
+function questionAbbreviationPanel(q, visibleFeedbackText = "") {
   const text = abbreviationTextForQuestion(q);
   if (!text.trim()) return "";
+  const skipDup = [visibleFeedbackText, typeof q.explain === "string" ? q.explain : ""].filter(Boolean).join(" ");
   const matches = [];
   for (const [abbr, meaning] of ABBREVIATION_GLOSSARY) {
     const escaped = abbr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const re = new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}(?=$|[^\\p{L}\\p{N}])`, "u");
-    if (re.test(text)) matches.push([abbr, meaning]);
+    if (!re.test(text)) continue;
+    if (abbreviationAlreadyExplainedIn(skipDup, abbr, meaning)) continue;
+    matches.push([abbr, meaning]);
   }
   if (!matches.length) return "";
   return `<div class="abbr-hints" aria-label="Abreviaturas de esta pregunta">
@@ -2326,17 +2742,22 @@ function showStudyFeedback(q) {
       ? confidenceCalibrationLine(q, sel, quizState.confidence[q.id])
       : "";
   const label = `<p class="feedback__eyebrow">Corrección</p>`;
-  const abbr = questionAbbreviationPanel(q);
+  const reasoning = answerReasoningPanel(q, sel);
+  const explainBlock = quizFeedbackExplainParagraph(q);
+  const visibleForAbbr = [reasoning, explainBlock, quizState.studyFeedback === "deepen" ? String(q.explain || "") : ""]
+    .filter(Boolean)
+    .join(" ");
+  const abbr = questionAbbreviationPanel(q, visibleForAbbr);
   if (quizState.studyFeedback === "deepen") {
     const lead = ok
       ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
       : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + answerReasoningPanel(q, sel) + renderDeepenPanel(q) + abbr + cal;
+    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok
-    ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}${abbr}`
-    : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${answerReasoningPanel(q, sel)}${quizFeedbackExplainParagraph(q)}${abbr}`) + cal;
+    ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${reasoning}${explainBlock}${abbr}`
+    : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${reasoning}${explainBlock}${abbr}`) + cal;
 }
 
 function calibrationSessionSummary() {
@@ -2464,6 +2885,8 @@ function bindResultActions() {
 
 function finishQuiz() {
   if (quizState._finished) return;
+  clearQuizDraft();
+  renderQuizResumePanel();
   saveLastWrongIds(computeWrongIdsFromCurrentSession());
   quizState._finished = true;
   clearExamTimer();
@@ -2555,11 +2978,11 @@ function goNext() {
   const total = quizState.list.length;
   if (quizState.index >= total - 1) return;
   quizState.index += 1;
-  const q = currentQ();
   quizState.optionsVisible = !quizState.pretest;
   $("#quiz-pretext").value = "";
   $("#quiz-feedback").textContent = "";
   renderQuestion();
+  scheduleSaveQuizDraft();
 }
 
 function finishOrAdvanceQuiz() {
@@ -2640,6 +3063,7 @@ function goPrev() {
   quizState.index -= 1;
   quizState.optionsVisible = true;
   renderQuestion();
+  scheduleSaveQuizDraft();
 }
 
 /* ---------- Flashcards + spacing ---------- */
@@ -2917,15 +3341,89 @@ function advanceCard(easy) {
 let navDocumentBound = false;
 let hashChangeBound = false;
 
+function exportUserProgress() {
+  const payload = buildProgressBackupPayload(PROGRESS_STORE_KEYS, readLocalStorage, appVersion.build);
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `radioexam-progreso-${new Date().toISOString().slice(0, 10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showSaveToast("Copia de seguridad exportada.");
+}
+
+function importUserProgressFile(/** @type {File} */ file) {
+  const status = $("#progress-import-status");
+  const replace = !!$("#progress-import-replace")?.checked;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(String(reader.result));
+      const count = applyProgressBackupPayload(data, PROGRESS_STORE_KEYS, readLocalStorage, trySetLocalStorage, {
+        replace,
+      });
+      applyQuizPrefsToForm();
+      renderUserProgress();
+      renderQuizProgressSummary();
+      renderQuizPracticeGuide();
+      renderQuizResumePanel();
+      renderExamCoach();
+      updateDueBadge();
+      if (status) {
+        status.textContent = replace
+          ? `Progreso importado (${count} bloque(s)); sustituye el anterior.`
+          : `Progreso importado (${count} bloque(s)); fusionado con el actual.`;
+      }
+      showSaveToast("Copia de seguridad restaurada en este navegador.");
+    } catch (err) {
+      const code = err instanceof Error ? err.message : "";
+      if (status) {
+        if (code === "version") status.textContent = "Versión de archivo no compatible.";
+        else if (code === "quota") status.textContent = "No hay espacio suficiente en este navegador.";
+        else status.textContent = "No se pudo leer el JSON. Comprueba el archivo.";
+      }
+    }
+  };
+  reader.onerror = () => {
+    if (status) status.textContent = "No se pudo leer el archivo.";
+  };
+  reader.readAsText(file);
+}
+
+function initProgressBackup() {
+  $("#progress-export")?.addEventListener("click", exportUserProgress);
+  $("#progress-import")?.addEventListener("click", () => $("#progress-import-file")?.click());
+  $("#progress-import-file")?.addEventListener("change", (e) => {
+    const input = /** @type {HTMLInputElement} */ (e.target);
+    const f = input.files?.[0];
+    input.value = "";
+    if (f) importUserProgressFile(f);
+  });
+}
+
+function initQuizLeaveGuard() {
+  window.addEventListener("beforeunload", (e) => {
+    if (!isQuizSessionInProgress()) return;
+    e.preventDefault();
+    e.returnValue = "";
+  });
+}
+
 function initNav() {
   if (!navDocumentBound) {
     navDocumentBound = true;
-    document.addEventListener("click", (e) => {
+    document.addEventListener("click", async (e) => {
       const el = e.target.closest("[data-nav]");
       if (!el) return;
       const id = el.getAttribute("data-nav");
       if (!id) return;
       if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      if (isQuizSessionInProgress() && id !== "practicar") {
+        e.preventDefault();
+        if (!(await confirmAbandonQuizSession())) return;
+        abandonQuizSession();
+      }
       if (id === "practicar") {
         const topic = el.getAttribute("data-practicar-topic");
         if (topic) sessionStorage.setItem(TOPIC_PRESELECT_KEY, topic);
@@ -2964,8 +3462,6 @@ function initMobileNav() {
     btn.setAttribute("aria-expanded", String(open));
   });
 }
-
-const A11Y_STORAGE_KEY = "radioexam_a11y_v1";
 
 function loadA11yOpts() {
   try {
@@ -3015,6 +3511,8 @@ function initA11y() {
 document.addEventListener("DOMContentLoaded", () => {
   try {
     initA11y();
+    initAppDialog();
+    renderAppVersion();
     renderTemario();
     initTemarioInteractions();
     renderNormativa();
@@ -3027,6 +3525,9 @@ document.addEventListener("DOMContentLoaded", () => {
     initTemarioFilter();
     updateWrongOnlyCheckboxVisibility();
     initNav();
+    initQuizLeaveGuard();
+    initQuizDraftPersistence();
+    initProgressBackup();
     initMobileNav();
     syncPretestAvailability();
     $("#quiz-session")?.addEventListener("change", syncPretestAvailability);
@@ -3043,6 +3544,22 @@ document.addEventListener("DOMContentLoaded", () => {
     renderQuizPracticeGuide();
 
     $("#quiz-start")?.addEventListener("click", startQuiz);
+    $("#quiz-resume")?.addEventListener("click", resumeQuizSession);
+    $("#quiz-discard-draft")?.addEventListener("click", async () => {
+      if (!loadQuizDraft()) return;
+      if (
+        !(await showAppConfirm({
+          title: "¿Descartar sesión guardada?",
+          message: "No podrás recuperar el progreso de esa sesión en este dispositivo.",
+          confirmLabel: "Descartar",
+          danger: true,
+        }))
+      ) {
+        return;
+      }
+      clearQuizDraft();
+      renderQuizResumePanel();
+    });
     $("#quiz-next")?.addEventListener("click", finishOrAdvanceQuiz);
     $("#quiz-prev")?.addEventListener("click", goPrev);
     $("#quiz-focus-toggle")?.addEventListener("click", toggleQuizFocusMode);

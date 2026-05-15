@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2026.05.15" />
 </head>
 <body>
   <noscript>
@@ -344,7 +344,22 @@
         </details>
       </div>
       <p id="quiz-progress-summary" class="quiz-progress-summary muted" aria-live="polite"></p>
-      <aside class="next-step next-step--primary" aria-label="Siguiente paso recomendado">
+      <aside
+        id="quiz-resume-panel"
+        class="quiz-resume panel next-step next-step--primary"
+        hidden
+        aria-label="Sesión de práctica guardada"
+      >
+        <div class="quiz-resume__copy">
+          <strong>Sesión guardada en este dispositivo</strong>
+          <span id="quiz-resume-meta"></span>
+        </div>
+        <div class="quiz-resume__actions">
+          <button type="button" class="btn btn--primary btn--sm" id="quiz-resume">Continuar sesión</button>
+          <button type="button" class="btn btn--ghost btn--sm" id="quiz-discard-draft">Descartar</button>
+        </div>
+      </aside>
+      <aside id="quiz-practicar-next-step" class="next-step next-step--primary" aria-label="Siguiente paso recomendado">
         <strong>Siguiente recomendado</strong>
         <span>Si estás empezando: parte + tema concreto + modo estudio. Después pulsa Nueva sesión.</span>
         <a class="btn btn--ghost btn--sm" href="#temario" data-nav="temario">Revisar teoría</a>
@@ -430,6 +445,7 @@
           <p class="quiz-kbd-hint__body">
             Con el foco fuera del cuadro de preprueba: teclas <kbd>1</kbd>–<kbd>4</kbd> eligen la opción (si hay cuatro respuestas);
             <kbd>→</kbd> o <kbd>N</kbd> avanza; <kbd>←</kbd> o <kbd>P</kbd> retrocede. En móvil/tablet usa los botones táctiles habituales.
+            La sesión en curso se guarda sola en este dispositivo; si cierras la pestaña o recargas, usa <strong>Continuar sesión</strong> en Practicar (válida 7 días).
           </p>
         </details>
       </div>
@@ -702,7 +718,26 @@
 
           <details class="help-faq">
             <summary>¿Dónde se guardan mis datos?</summary>
-            <p>En este navegador, mediante almacenamiento local. No hay cuenta ni servidor propio para tu progreso. Si limpias datos del navegador, puedes perder estadísticas y programación de tarjetas.</p>
+            <p>
+              En este navegador (almacenamiento local). No hay cuenta ni servidor propio. Se guardan estadísticas, cuaderno de errores, preferencias de práctica, programación de tarjetas y, si dejas un test a medias, una <strong>sesión de práctica</strong> recuperable durante 7 días desde Practicar.
+              Si limpias datos del navegador sin exportar copia, lo pierdes todo.
+            </p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Cómo pauso o recupero un test?</summary>
+            <p>
+              La sesión en curso se guarda sola al responder o al cambiar de pregunta. Si sales a otra sección, confirma y vuelve después con <strong>Continuar sesión</strong> en Practicar.
+              Si recargas o cierras la pestaña, el borrador sigue ahí (salvo que lo descartes o finalices el test).
+            </p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿Cómo hago copia de seguridad?</summary>
+            <p>
+              En esta página, sección <strong>Copia de seguridad del progreso</strong>, exporta un JSON con cuaderno, estadísticas, tarjetas y preferencias.
+              Las tarjetas también se pueden exportar por separado en su sección. Importa el JSON en el mismo navegador o en otro dispositivo antes de estudiar de nuevo.
+            </p>
           </details>
 
           <details class="help-faq">
@@ -725,14 +760,46 @@
             <p>Recarga la página. Si la abriste desde disco, sirve la carpeta por HTTP/HTTPS. Si publicas en hosting, sube también <code>app.js</code>, <code>data/</code>, <code>lib/</code>, <code>styles.css</code> e imágenes.</p>
           </details>
         </section>
+
+        <section class="help-panel panel" aria-labelledby="help-backup-title">
+          <h2 id="help-backup-title">Copia de seguridad del progreso</h2>
+          <p class="muted">
+            Exporta un archivo JSON con cuaderno, estadísticas, tarjetas, preferencias de práctica y sesión guardada (si existe).
+            Útil antes de limpiar datos del navegador o para pasar a otro dispositivo.
+          </p>
+          <div class="panel panel--inline help-backup-actions">
+            <button type="button" class="btn btn--primary btn--sm" id="progress-export">Exportar progreso</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="progress-import">Importar JSON</button>
+            <input type="file" id="progress-import-file" accept="application/json,.json" hidden />
+          </div>
+          <p class="fine-print">
+            <label class="check">
+              <input type="checkbox" id="progress-import-replace" />
+              <span>Al importar: <strong>reemplazar todo</strong> el progreso guardado (no fusionar).</span>
+            </label>
+          </p>
+          <p id="progress-import-status" class="muted" role="status"></p>
+        </section>
       </div>
     </section>
   </main>
+
+  <dialog id="app-dialog" class="app-dialog" aria-labelledby="app-dialog-title" aria-describedby="app-dialog-message">
+    <form id="app-dialog-form" method="dialog" class="app-dialog__panel">
+      <h2 id="app-dialog-title" class="app-dialog__title"></h2>
+      <p id="app-dialog-message" class="app-dialog__message"></p>
+      <div class="app-dialog__actions">
+        <button type="submit" value="cancel" class="btn btn--ghost" id="app-dialog-cancel">Cancelar</button>
+        <button type="submit" value="confirm" class="btn btn--primary" id="app-dialog-confirm">Aceptar</button>
+      </div>
+    </form>
+  </dialog>
 
   <footer class="site-footer">
     <p class="footer-note">
       Preferencias, programación de tarjetas y resumen de progreso se guardan solo en tu navegador (sin cuenta en esta app).
     </p>
+    <p class="footer-version muted" id="app-version" aria-label="Versión de la aplicación"></p>
     <p class="footer-host">
       Alojado by <a href="https://forclus.net" rel="noopener noreferrer">FORCLUS.NET</a>
     </p>
@@ -818,6 +885,6 @@
       });
     })();
   </script>
-  <script src="app.js" type="module"></script>
+  <script src="app.js?v=2026.05.15" type="module"></script>
 </body>
 </html>

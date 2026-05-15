@@ -1,6 +1,4 @@
 export const EXACT_FIGURE_QUESTION_IDS = new Set([
-  // Figura propia: el enunciado fue redactado para este esquema, por tanto no replica un banco externo.
-  "ofic-019",
   // Figuras originales FEDI-EA descargadas desde el bloque público ag 22/10/2011.
   "fedi-ag-009",
   "fedi-ag-013",

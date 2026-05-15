@@ -220,10 +220,7 @@ export default [
     id: "ofic-019",
     part: 1,
     topicId: "antenas-prop",
-    stem: "En el siguiente esquema de una antena Yagi, el lóbulo principal apunta normalmente hacia:",
-    stemFigure: "images/quiz/ofic-yagi-elements.svg",
-    stemFigureAlt:
-      "Esquema de Yagi con reflector detrás, elemento excitado en el centro y dos directores delante; una flecha indica el lóbulo principal hacia los directores.",
+    stem: "En una antena Yagi, el lóbulo principal de radiación apunta normalmente hacia:",
     options: ["El reflector", "Los directores", "El mástil de soporte", "La línea coaxial"],
     correctIndex: 1,
     explain:
