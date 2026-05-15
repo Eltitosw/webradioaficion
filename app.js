@@ -20,7 +20,7 @@ import {
   updateErrorNotebookWithResult,
 } from "./lib/learning-coach.js";
 import appVersion from "./data/version.js";
-import { showAppConfirm, showQuizLeaveDialog, initAppDialog } from "./lib/app-dialog.js";
+import { showAppConfirm, showQuizLeaveDialog, showReplaceDraftDialog, initAppDialog } from "./lib/app-dialog.js";
 import { buildProgressBackupPayload, applyProgressBackupPayload } from "./lib/progress-backup.js";
 
 const STORAGE_KEY = "radioexam_card_schedule_v1";
@@ -1076,19 +1076,17 @@ function renderQuizResumePanel() {
 
 async function confirmReplaceQuizDraft() {
   if (!loadQuizDraft() || isQuizSessionInProgress()) return true;
-  const ok = await showAppConfirm({
-    title: "¿Empezar una sesión nueva?",
-    message:
-      "Hay una sesión guardada sin terminar en este dispositivo. Si continúas, se descartará la guardada y empezarás otra desde cero.",
-    confirmLabel: "Nueva sesión",
-    cancelLabel: "Cancelar",
-    danger: true,
-  });
-  if (ok) {
+  const choice = await showReplaceDraftDialog();
+  if (choice === "keep") {
+    showSaveToast("Sesión guardada conservada. Usa «Continuar sesión» cuando quieras.");
+    return false;
+  }
+  if (choice === "new") {
     clearQuizDraft();
     renderQuizResumePanel();
+    return true;
   }
-  return ok;
+  return false;
 }
 
 function launchQuizUi(/** @type {number|undefined} */ examRemainingMs) {
