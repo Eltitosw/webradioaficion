@@ -727,8 +727,8 @@
           <details class="help-faq">
             <summary>¿Cómo pauso o recupero un test?</summary>
             <p>
-              La sesión en curso se guarda sola al responder o al cambiar de pregunta. Si sales a otra sección, confirma y vuelve después con <strong>Continuar sesión</strong> en Practicar.
-              Si recargas o cierras la pestaña, el borrador sigue ahí (salvo que lo descartes o finalices el test).
+              La sesión en curso se guarda sola al responder o al cambiar de pregunta. Si sales a otra sección puedes <strong>salir y guardar</strong>, <strong>salir sin guardar</strong> o seguir practicando.
+              Si guardas, vuelve con <strong>Continuar sesión</strong> en Practicar (válida 7 días).
             </p>
           </details>
 
@@ -790,6 +790,7 @@
       <p id="app-dialog-message" class="app-dialog__message"></p>
       <div class="app-dialog__actions">
         <button type="submit" value="cancel" class="btn btn--ghost" id="app-dialog-cancel">Cancelar</button>
+        <button type="submit" value="alt" class="btn btn--ghost" id="app-dialog-alt" hidden>Salir sin guardar</button>
         <button type="submit" value="confirm" class="btn btn--primary" id="app-dialog-confirm">Aceptar</button>
       </div>
     </form>

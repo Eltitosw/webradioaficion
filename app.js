@@ -20,7 +20,7 @@ import {
   updateErrorNotebookWithResult,
 } from "./lib/learning-coach.js";
 import appVersion from "./data/version.js";
-import { showAppConfirm, initAppDialog } from "./lib/app-dialog.js";
+import { showAppConfirm, showQuizLeaveDialog, initAppDialog } from "./lib/app-dialog.js";
 import { buildProgressBackupPayload, applyProgressBackupPayload } from "./lib/progress-backup.js";
 
 const STORAGE_KEY = "radioexam_card_schedule_v1";
@@ -431,19 +431,20 @@ function isQuizSessionInProgress() {
   return quizState.list.length > 0 && !quizState._finished && !$("#quiz-area")?.hidden;
 }
 
-async function confirmAbandonQuizSession() {
-  return showAppConfirm({
-    title: "¿Salir del test?",
-    message:
-      "Saldrás de la sesión en pantalla. Tu progreso quedará guardado en este dispositivo y podrás continuar después desde Practicar con «Continuar sesión».",
-    confirmLabel: "Salir y guardar",
-    cancelLabel: "Seguir practicando",
-  });
+/** @returns {Promise<boolean>} true si el usuario eligió salir (guardando o sin guardar) */
+async function promptQuizLeave() {
+  const choice = await showQuizLeaveDialog();
+  if (choice === "stay") return false;
+  abandonQuizSession({ saveDraft: choice === "save" });
+  if (choice === "discard") showSaveToast("Sesión descartada.");
+  return true;
 }
 
-function abandonQuizSession() {
-  if (quizState.list.length && !quizState._finished) {
+function abandonQuizSession(/** @type {{ saveDraft?: boolean }} */ { saveDraft = true } = {}) {
+  if (saveDraft && quizState.list.length && !quizState._finished) {
     flushSaveQuizDraft();
+  } else {
+    clearQuizDraft();
   }
   clearExamTimer();
   quizState.list = [];
@@ -484,12 +485,11 @@ async function onRoute() {
   if (quizLeaveGuardReverting) {
     quizLeaveGuardReverting = false;
   } else if (isQuizSessionInProgress() && targetId !== "practicar") {
-    if (!(await confirmAbandonQuizSession())) {
+    if (!(await promptQuizLeave())) {
       quizLeaveGuardReverting = true;
       location.hash = "practicar";
       return;
     }
-    abandonQuizSession();
   }
 
   /** @type {string|null} */
@@ -1176,8 +1176,7 @@ function updateQuizStats() {
 
 async function startQuiz() {
   if (isQuizSessionInProgress()) {
-    if (!(await confirmAbandonQuizSession())) return;
-    abandonQuizSession();
+    if (!(await promptQuizLeave())) return;
   }
   if (!(await confirmReplaceQuizDraft())) return;
   syncPretestAvailability();
@@ -1271,8 +1270,7 @@ async function startQuiz() {
 
 async function startSmartReviewSession() {
   if (isQuizSessionInProgress()) {
-    if (!(await confirmAbandonQuizSession())) return;
-    abandonQuizSession();
+    if (!(await promptQuizLeave())) return;
   }
   if (!(await confirmReplaceQuizDraft())) return;
   if ($("#view-practicar")?.hidden) {
@@ -3421,8 +3419,7 @@ function initNav() {
       if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
       if (isQuizSessionInProgress() && id !== "practicar") {
         e.preventDefault();
-        if (!(await confirmAbandonQuizSession())) return;
-        abandonQuizSession();
+        if (!(await promptQuizLeave())) return;
       }
       if (id === "practicar") {
         const topic = el.getAttribute("data-practicar-topic");

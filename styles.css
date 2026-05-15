@@ -179,6 +179,26 @@ body {
   gap: 0.5rem;
 }
 
+.app-dialog--leave .app-dialog__actions {
+  justify-content: stretch;
+}
+
+.app-dialog--leave .app-dialog__actions .btn {
+  flex: 1 1 auto;
+  min-width: 8.5rem;
+}
+
+@media (max-width: 520px) {
+  .app-dialog--leave .app-dialog__actions {
+    flex-direction: column;
+  }
+
+  .app-dialog--leave .app-dialog__actions .btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
 .help-backup-actions {
   display: flex;
   flex-wrap: wrap;
