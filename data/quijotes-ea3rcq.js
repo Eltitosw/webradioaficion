@@ -1,44 +1,1978 @@
 /**
  * Radio Club Quijotes (EA3RCQ) — tests en línea.
- * Generado por `node scripts/build-quijotes.mjs` (no editar a mano el bloque masivo).
+ * Generado por `node scripts/build-quijotes.mjs` (no editar el bloque masivo a mano).
+ * Rondas de muestreo por quiz: 60 (cada ronda ~30 preguntas aleatorias del pool).
  * Fuentes:
- *   - https://radioclubquijotes.org/qsm_quiz/electricidad-y-radioelectricidad/
- *   - https://radioclubquijotes.org/qsm_quiz/radioelectricidad-correccion-inmediata/
- *   - https://radioclubquijotes.org/qsm_quiz/reglamentacion/
- *   - https://radioclubquijotes.org/qsm_quiz/reglamentacion-correccion-inmediata/
- * Se excluyen ítems con referencias claras a normativa estadounidense u otros países (FCC, ARRL, etc.).
+ *   - https://radioclubquijotes.org/qsm_quiz/comunicaciones/ (quiz 85, comunicaciones)
+ *   - https://radioclubquijotes.org/qsm_quiz/electricidad-y-radioelectricidad/ (quiz 1, electricidad-y-radioelectricidad)
+ *   - https://radioclubquijotes.org/qsm_quiz/radioelectricidad-correccion-inmediata/ (quiz 83, radioelectricidad-correccion-inmediata)
+ *   - https://radioclubquijotes.org/qsm_quiz/reglamentacion-correccion-inmediata/ (quiz 84, reglamentacion-correccion-inmediata)
+ *   - https://radioclubquijotes.org/qsm_quiz/reglamentacion/ (quiz 14, reglamentacion)
+ * Se excluyen ítems con referencias FCC/ARRL u otros países, y enunciados que exigen figura.
  */
 export default [
   {
-    id: "quijotes-001",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?:",
+    id: "quijotes-85-2109",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué tensión suelen usar los equipos de radio portátiles?",
     options: [
-      "Rectificación",
-      "Demodulación",
-      "Realimentación",
-      "Conversión",
+      "220V",
+      "110V",
+      "3,5 a 12V",
+      "50V",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 6.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-002",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:",
+    id: "quijotes-85-2113",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa VHF?",
     options: [
-      "Mayor",
-      "Menor",
-      "Igual",
-      "No existe",
+      "Very Hard Frequency",
+      "Very High Frequency",
+      "Variable HF",
+      "Virtual HF",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2116",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La banda VHF comprende frecuencias:",
+    options: [
+      "30-300 MHz",
+      "300-3000 MHz",
+      "3-30 MHz",
+      "3-30 GHz",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 14.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-003",
+    id: "quijotes-85-2118",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué potencia aproximada tienen los equipos portátiles de EA3RCQ?",
+    options: [
+      "0,5 W",
+      "1 W",
+      "5 W",
+      "10 W",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2119",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué tipo de encriptación usan las redes de EA3RCQ?",
+    options: [
+      "DES",
+      "AES-128",
+      "AES-256",
+      "RC4",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2123",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En TETRA, ¿cuántos slots de tiempo hay en una portadora?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2123). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2126",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es “simplex”?",
+    options: [
+      "Comunicación con repetidor",
+      "Comunicación directa sin repetidor",
+      "Comunicación digital",
+      "Comunicación cifrada",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2128",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Para que usamos el “roaming” en radios digitales?",
+    options: [
+      "Cambiar de idioma",
+      "Buscar el repetidor con mejor cobertura",
+      "Cambiar de canal manualmente",
+      "Modificar la potencia",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2129",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué es un indicativo de radio?",
+    options: [
+      "Una contraseña",
+      "Un apodo o nombre identificador",
+      "Un canal de comunicación",
+      "Una frecuencia",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2137",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es una llamada múltiple?",
+    options: [
+      "Llamada entre dos personas",
+      "Llamada de un mando a varios indicativos",
+      "Llamada de un usuario a la central",
+      "Una llamada de emergencia",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2141",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa P en el protocolo PAS?",
+    options: [
+      "Prevenir",
+      "Proteger",
+      "Parar",
+      "Preparar",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2143",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa S en el protocolo PAS?",
+    options: [
+      "Socorrer",
+      "Salvar",
+      "Señalizar",
+      "Sujetar",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2143). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2154",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa la palabra clave “TOME NOTA”?",
+    options: [
+      "Mirar una información",
+      "Información a anotar",
+      "Fin de comunicación",
+      "Repetir mensaje",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2158",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un equipo base?",
+    options: [
+      "Un portátil con más batería",
+      "Un equipo móvil con fuente de alimentación fija",
+      "Una antena direccional",
+      "Un equipo de exterior",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2161",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se puede usar un repetidor DMR?",
+    options: [
+      "Solo analógico",
+      "Puede ser analógico y digital",
+      "Solo digital",
+      "Solo en UHF",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2162",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Para que podemos usar el potenciómetro en la radio?",
+    options: [
+      "Un tipo de antena",
+      "Botón de encendido y volumen",
+      "Conector de batería",
+      "Selector de canal",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2165",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “encriptación de voz”?",
+    options: [
+      "Mejorar el volumen",
+      "Codificar la comunicación",
+      "Repetir la voz dos veces",
+      "Reducir interferencias",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2166",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué se recomienda antes de transmitir por radio?",
+    options: [
+      "Pulsar y hablar rápido",
+      "Comprobar que no hay otra transmisión",
+      "Gritar para claridad",
+      "Poner música",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2168",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un “Talk Group” en digital?",
+    options: [
+      "Un canal de audio",
+      "Un grupo de conversación",
+      "Una clave secreta",
+      "Un repetidor",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2174",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “conciso” en comunicación por radio?",
+    options: [
+      "Sin palabras de más",
+      "Muy largo",
+      "Con adornos",
+      "Informal",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2175",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “concentrado” en comunicación por radio?",
+    options: [
+      "Usar tecnicismos y datos justos",
+      "Hablar lentamente",
+      "Gritar al micrófono",
+      "Repetir mucho",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2179",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué indica “sentido de circulación”?",
+    options: [
+      "Dirección según vehículos",
+      "Dirección contraria",
+      "Subida de calle",
+      "Numeración de calle",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2181",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “ascendente” en orientación?",
+    options: [
+      "Subida",
+      "Bajada",
+      "Numeración decreciente",
+      "Hacia el mar",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2182",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “descendente”?",
+    options: [
+      "Subida",
+      "Bajada",
+      "Numeración decreciente",
+      "Hacia el mar",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2186",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué es un indicativo variable?",
+    options: [
+      "Que cambia según servicio",
+      "Que siempre es igual",
+      "Que identifica a mandos",
+      "Que identifica emergencias",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2188",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “monitorización remota” en radios modernas?",
+    options: [
+      "Controlar otro equipo a distancia",
+      "Escuchar música en el equipo",
+      "Cambiar de canal",
+      "Aumentar potencia automaticamente",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2189",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es el vocoder en radios digitales?",
+    options: [
+      "Conversor de voz a datos",
+      "Amplificador",
+      "Antena",
+      "Micrófono",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2190",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa GPS en radios profesionales?",
+    options: [
+      "Global Positioning System",
+      "General Portable Signal",
+      "Ground Point Service",
+      "Grid Power Source",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2197",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Con la referencia de barcelona, cuando se dice “lado MONTAÑA” se entiende…",
+    options: [
+      "Orientación hacia el sur",
+      "Orientación hacia el norte, dirección montaña",
+      "Orientación hacia el este",
+      "Orientación hacia el mar",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2199",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Cuando en comunicaciones de Barcelona se usa la palabra “BESÒS”, ¿qué indica?",
+    options: [
+      "Lado izquierdo de la ciudad mirando hacia el mar",
+      "Lado derecho mirando desde el centro",
+      "El centro de la ciudad",
+      "Una calle principal",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2111",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "La impedancia de las antenas en radios suele ser:",
+    options: [
+      "25 ohmios",
+      "75 ohmios",
+      "50 ohmios",
+      "100 ohmios",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2111). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2120",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es el DMR?",
+    options: [
+      "Digital Multi Relay",
+      "Digital Mobile Radio",
+      "Digital Master Radio",
+      "Data Mobile Receiver",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2121",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué sistema usa la Red SIRDE en España?",
+    options: [
+      "DMR",
+      "TETRA",
+      "Tetrapol",
+      "APCO25",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2122",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En DMR, ¿cuántos slots de tiempo hay en una portadora?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2122). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2127",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es “trunking”?",
+    options: [
+      "Un sistema de encriptación",
+      "Un sistema para concentrar comunicaciones",
+      "Un sistema de antenas",
+      "Una forma de modulación",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2131",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué se usa para deletrear letras en radio?",
+    options: [
+      "Código Morse",
+      "Código ICAO",
+      "Código ASCII",
+      "Código QR",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2131). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2132",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se dice la letra “S” en código ICAO?",
+    options: [
+      "Sierra",
+      "Sun",
+      "Salamanca",
+      "Signal",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2133",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se dice la letra “N” en código ICAO?",
+    options: [
+      "November",
+      "Nine",
+      "North",
+      "Neptune",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2133). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2134",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se confirma un dato afirmativo en radio?",
+    options: [
+      "Sí",
+      "Afirmativo Sierra",
+      "Rebut",
+      "Copiado",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2140",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es una llamada de emergencia?",
+    options: [
+      "Llamada rápida entre amigos",
+      "Llamada solo en caso de urgencia",
+      "Llamada de confirmación",
+      "Una llamada múltiple",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2144",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué número hay que marcar en Europa en caso de emergencia?",
+    options: [
+      "061",
+      "092",
+      "112",
+      "911",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2151",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa TMO en TETRA?",
+    options: [
+      "Transmission Multiple Output",
+      "Trunked Mode Operation",
+      "Transfer Mode Option",
+      "Time Multiplex Operation",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2155",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa la palabra clave “FILIACIÓN”?",
+    options: [
+      "Dar o pedir datos personales",
+      "Cifrado de claves",
+      "Llamada de emergencia",
+      "Dirección de tráfico",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2167",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo debe ser el lenguaje en radio profesional?",
+    options: [
+      "Informal y amistoso",
+      "Breve, conciso y concentrado",
+      "Largo y detallado",
+      "Con modismos",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2169",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un “radio faro” en digital?",
+    options: [
+      "Una clave de acceso",
+      "Una portadora de referencia del repetidor",
+      "Una antena omnidireccional",
+      "Un mensaje cifrado",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2172",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es la modulación en FM?",
+    options: [
+      "Fase modulada",
+      "Frecuencia modulada",
+      "Amplitud modulada",
+      "Digital modulada",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2176",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “breve” en comunicación por radio?",
+    options: [
+      "Lo más corto posible",
+      "Usar claves",
+      "Repetir varias veces",
+      "Hablar rápido",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2178",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué sucede en digital cuando hay mala cobertura?",
+    options: [
+      "Se escucha con fritura",
+      "Se corta y parece “voz de pato”",
+      "Se distorsiona",
+      "Se mezcla con otras voces",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2180",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa contra sentido de circulación?",
+    options: [
+      "Circular a favor",
+      "Circular en sentido contrario",
+      "Circular en línea recta",
+      "Circular en rotonda",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2110",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "¿Qué pasa si transmitimos sin antena?",
+    options: [
+      "Aumenta la cobertura",
+      "Se daña el equipo",
+      "Se escucha mejor",
+      "Nada",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2112",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa UHF?",
+    options: [
+      "Ultra High Frequency",
+      "Universal HF",
+      "Ultra Hard Field",
+      "Upper HF",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2115",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La banda UHF comprende frecuencias:",
+    options: [
+      "3-30 MHz",
+      "30-300 MHz",
+      "300-3000 MHz",
+      "3-30 GHz",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2115). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2130",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué tipo de orden es la palabra clave “SILENCIO RADIO”?",
+    options: [
+      "Fin del turno",
+      "Apagar el equipo",
+      "Orden de máxima prioridad",
+      "Llamada múltiple",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2138",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es una llamada colectiva?",
+    options: [
+      "Llamada a todos los indicativos de un sector",
+      "Llamada privada",
+      "Llamada de emergencia",
+      "Llamada de confirmación",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2139",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es una llamada general?",
+    options: [
+      "Una llamada informal",
+      "Una llamada para toda la malla",
+      "Una llamada de prueba",
+      "Una llamada múltiple",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2145",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué no debe hacerse a un motorista accidentado?",
+    options: [
+      "Aflojar la ropa",
+      "Protegerlo del frío",
+      "Retirar el casco",
+      "No moverlo innecesariamente",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2146",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es la PLS?",
+    options: [
+      "Posición lateral de seguridad",
+      "Posición larga sentada",
+      "Plan de localización segura",
+      "Punto de luz secundaria",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2148",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué debe hacerse al comunicarse con un accidentado?",
+    options: [
+      "Hablar rápido y fuerte",
+      "Hablar calmado y cercano",
+      "Hablar insistentemente",
+      "No hablar",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2149",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué trato se recomienda con accidentados adultos?",
+    options: [
+      "Tutear",
+      "Trato de usted",
+      "Usar apodos",
+      "No hablarles",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2153",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un Gateway en TETRA?",
+    options: [
+      "Equipo para cifrar",
+      "Equipo que conecta DMO con TMO",
+      "Equipo de repetición analógico",
+      "Equipo para medir cobertura",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2160",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un equipo portátil?",
+    options: [
+      "Un repetidor",
+      "Un walkie-talkie",
+      "Una antena móvil",
+      "Un transmisor fijo",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2173",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿En qué banda se usa la AM en radio profesional?",
+    options: [
+      "Banda aérea",
+      "Banda marítima",
+      "Banda UHF",
+      "Banda VHF",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2183",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “creciente”?",
+    options: [
+      "Numeración que baja",
+      "Numeración que aumenta",
+      "Calle cerrada",
+      "Calle en obras",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2194",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?",
+    options: [
+      "Llamar a emergencias",
+      "Proteger la zona",
+      "Socorrer inmediatamente",
+      "Gritar pidiendo ayuda",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2196",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En Barcelona, la ciudad está delimitada por el mar al sur y la montaña al norte. ¿Qué significa la referencia “lado MAR”?",
+    options: [
+      "Orientación hacia la montaña",
+      "Orientación hacia el norte",
+      "Orientación hacia el sur, hacia el mar",
+      "Orientación hacia el río",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2108",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué es un transceptor?",
+    options: [
+      "Un aparato que solo transmite",
+      "Un aparato que solo recibe",
+      "Un aparato que transmite y recibe",
+      "Un amplificador de señal",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2108). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2124",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se llama el botón para transmitir en radio?",
+    options: [
+      "Call",
+      "TX",
+      "PTT",
+      "Send",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2135",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se responde negativamente en radio?",
+    options: [
+      "No",
+      "Negativo November",
+      "Cancelado",
+      "En obsoluto",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2147",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuándo se debe aplicar la PLS?",
+    options: [
+      "Inconsciente y respira",
+      "Inconsciente y no respira",
+      "Con fracturas graves",
+      "Solo con niños",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2150",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa DMO en TETRA?",
+    options: [
+      "Direct Mode Operation",
+      "Digital Manual Operation",
+      "Data Management Option",
+      "Direct Mobile Output",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2157",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “Fin de Silencio Radio”?",
+    options: [
+      "Apagar radios",
+      "Termina la orden prioritaria de silencio",
+      "Cambiar de canal",
+      "Reiniciar comunicaciones",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2159",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un equipo móvil?",
+    options: [
+      "Equipo instalado en vehículos",
+      "Equipo portátil de mano",
+      "Equipo fijo en edificios",
+      "Antena",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2171",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué pasa en digital cuando no hay cobertura?",
+    options: [
+      "Se escucha ruido",
+      "No transmite, hace un tono de alarma",
+      "Se distorsiona lentamente",
+      "Se pone en analógico",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2177",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué no debe hacerse al hablar por radio digital?",
+    options: [
+      "Hablar normal",
+      "Alejarse del micro",
+      "Alzar la voz",
+      "Vocalizar",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2184",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa “decreciente”?",
+    options: [
+      "Numeración que disminuye",
+      "Numeración que sube",
+      "Señal de tráfico",
+      "Indicación de peligro",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2200",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En orientación urbana, ¿qué ventaja tiene usar referencias como MAR, MONTAÑA, BESÒS o LLOBREGAT?",
+    options: [
+      "Evitar tener que usar coordenadas complicadas",
+      "Servir solo para radioaficionados",
+      "Son códigos secretos que no entiende nadie",
+      "Reemplazan a las direcciones oficiales",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2117",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué potencia aproximada tienen los equipos fijos de EA3RCQ?",
+    options: [
+      "1 W",
+      "5 W",
+      "40 W",
+      "100 W",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2125",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es un repetidor?",
+    options: [
+      "Un equipo que amplifica el volumen",
+      "Un equipo que retransmite en otra frecuencia",
+      "Una antena direccional",
+      "Un amplificador",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2142",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa A en el protocolo PAS?",
+    options: [
+      "Asistir",
+      "Avisar",
+      "Atacar",
+      "Ayudar",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2142). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2136",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es una llamada individual?",
+    options: [
+      "Una llamada a muchos usuarios",
+      "Una llamada a la estación directora",
+      "Una llamada de un corresponsal a otro",
+      "Una llamada de emergencia",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2156",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa la palabra clave “DISPÓNGASE”?",
+    options: [
+      "Saludar",
+      "Prepararse para recibir órdenes",
+      "Esperar instrucciones",
+      "Avisar de un corte",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2164",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué es la función “roaming” en digital?",
+    options: [
+      "Cambio manual de canal",
+      "Cambio automático de potencia",
+      "Cambio automático de repetidor",
+      "Cambio de antena",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2185",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué es un indicativo fijo?",
+    options: [
+      "Que cambia según servicio",
+      "Que siempre es el mismo",
+      "Que depende de la zona",
+      "Que identifica solo vehículos",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2195",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué debemos hacer cuando un indicativo inicia su transmisión con “ATENCIÓN ATENCIÓN”?",
+    options: [
+      "Continuar con nuestras comunicaciones normales.",
+      "Repetir también “ATENCIÓN ATENCIÓN” para confirmar.",
+      "Guardar silencio inmediatamente y escuchar el comunicado",
+      "Cambiar de canal para no interrumpir.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2187",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué es un indicativo de especialización?",
+    options: [
+      "Asignado por habilidades o funciones",
+      "Numérico solamente",
+      "Temporal",
+      "Que identifica emergencias",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2191",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa que una comunicación sea “banal”?",
+    options: [
+      "Profesional",
+      "Entre amigos sin importancia",
+      "Crítica",
+      "En clave",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2163",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué tipo de baterías suelen usar los equipos portátiles modernos?",
+    options: [
+      "Níquel-cadmio",
+      "Níquel-metal hidruro",
+      "Iones de litio",
+      "Plomo-ácido",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2192",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué significa que una comunicación sea “crítica”?",
+    options: [
+      "Con importancia vital",
+      "Entre amigos",
+      "Cotidiana",
+      "Banales",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-85-2152",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué potencia suelen tener los equipos portátiles TETRA?",
+    options: [
+      "10 W",
+      "1–3 W",
+      "5W",
+      "18 W",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0004",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El llamado \"detector de envolvente\" es implementado en receptores para señales con modulación de:",
+    options: [
+      "Fase (PM)",
+      "Frecuencia (FM)",
+      "Amplitud (AM)",
+      "Banda lateral única",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 4). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0052",
+    part: 1,
+    topicId: "componentes",
+    stem: "En general los diodos se caracterizan por ser dispositivos que:",
+    options: [
+      "Permiten el paso de la corriente en una única dirección.",
+      "Permiten el paso de la corriente en las dos direcciones.",
+      "No permiten el paso de la corriente.",
+      "Ninguna de las anteriores respuestas es correcta.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 52). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0057",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La radiación armónica es:",
+    options: [
+      "La radiación no esencial en múltiplos enteros de la frecuencia principal.",
+      "La frecuencia a la que resuena la antena.",
+      "La emisión del oscilador de batido.",
+      "La potencia que suministra el transmisor en ausencia de modulación.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 57). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0063",
+    part: 1,
+    topicId: "componentes",
+    stem: "En un circuito con dos resistencias en paralelo, la intensidad total será:",
+    options: [
+      "La suma de las caídas de tensión.",
+      "La misma que la que circule por la rama con la menor resistencia.",
+      "La misma que la que circule por la rama con la mayor resistencia.",
+      "La suma de las intensidades de cada una de las ramas.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 63). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0064",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Las ondas de radio son de naturaleza:",
+    options: [
+      "Eléctrica.",
+      "Magnética.",
+      "Electromagnética.",
+      "Acústica.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 64). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0100",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En una antena pasiva, se puede afirmar que",
+    options: [
+      "La ganancia es igual a la directividad.",
+      "La ganancia es superior a la directividad.",
+      "Los diagramas de radiación en transmisión y en recepción son iguales.",
+      "La impedancia es constante con la frecuencia.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 100). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0102",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?",
+    options: [
+      "Un interruptor.",
+      "El mezclador.",
+      "Un filtro paso bajo o paso banda.",
+      "La etapa de potencia.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 102). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0112",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La relación señal/ruido en un receptor:",
+    options: [
+      "Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).",
+      "Es siempre igual a uno.",
+      "No tiene sentido. En los receptores de alta calidad no hay ruido.",
+      "Depende de la potencia del equipo y se expresa en dBm.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 112). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0130",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué ancho de frecuencia máxima permite?",
+    options: [
+      "12 KHz.",
+      "50 KHz.",
+      "150 KHz.",
+      "25 MHz.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 130). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0133",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La variación momentánea de la intensidad de campo recibida se conoce como:",
+    options: [
+      "Desvanecimiento o Fading.",
+      "Dispersión troposférica.",
+      "Dispersión meteórica.",
+      "Atenuación de espacio libre.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 133). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0135",
+    part: 1,
+    topicId: "componentes",
+    stem: "La \"relación de transformación\" de un transformador de tensión depende de:",
+    options: [
+      "El tamaño y el peso del mismo.",
+      "El dieléctrico utilizado.",
+      "La tensión de entrada.",
+      "El número de espiras del primario y del secundario.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 135). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0139",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La aplicación más importante del osciloscopio consiste en:",
+    options: [
+      "La representación gráfica de las formas de onda.",
+      "Determinar la anchura de banda.",
+      "Determinar la potencia",
+      "Ser utilizado para comunicaciones de corta distancia.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 139). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0181",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Una antena dipolo con trampas:",
+    options: [
+      "Sólo se puede utilizar como antena receptora.",
+      "Permite obtener resonancia en varias frecuencias.",
+      "Incrementa el ancho de banda de la señal radiada.",
+      "Tiene varios elementos denominados parásitos.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 181). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0190",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Los transistores bipolares son dispositivos que:",
+    options: [
+      "Son elementos pasivos.",
+      "Siempre dan más potencia que las válvulas.",
+      "Tienen tres terminales.",
+      "Disponen de rejilla.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 190). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0208",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Una antena en trasmisión, ¿se puede tocar con las manos?:",
+    options: [
+      "Sólo si existe una eficaz toma de tierra.",
+      "Si, para aumentar su potencia.",
+      "Solo cuando el suelo esté seco, no habría ningún problema.",
+      "No se debe tocar una antena en transmisión.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 208). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0209",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un enlace radioeléctrico entre España y Nueva Zelanda podría emplear:",
+    options: [
+      "Una frecuencia de la banda HF por encima de la frecuencia crítica.",
+      "Cualquier frecuencia múltiplo de la frecuencia crítica.",
+      "Una frecuencia de la banda HF por debajo de la frecuencia crítica.",
+      "Ninguna de las respuestas anteriores es correcta.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 209). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0211",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
+    options: [
+      "Potencia eléctrica.",
+      "Diferencia de potencial eléctrico.",
+      "Corriente eléctrica.",
+      "Longitud de onda.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 211). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0240",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Si a la entrada de un mezclador se aplican las frecuencias 14 MHz. y 4 MHz., indique que frecuencía dará a la salida:",
+    options: [
+      "14.4 MHz.",
+      "1 MHz.",
+      "200 MHz.",
+      "10 MHz.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 240). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0250",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "El Control Automático de Nivel conocido como ALC pemite:",
+    options: [
+      "Aumentar el ancho de banda del filtro de frecuencia intermedia.",
+      "Ajustar la ganancia de radiofrecuencia del receptor.",
+      "Trasmitir modos digitales utilizando el conector de micrófono de la emisora.",
+      "Evitar emisiones interferentes alrededor de la frecuencia de trabajo.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 250). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0253",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En relación con las baterías es correcto afirmar que:",
+    options: [
+      "No se pueden conectar en serie.",
+      "Sólo se pueden conectar en paralelo.",
+      "La tensión de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas.",
+      "Transforman la energía eléctrica en magnética.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 253). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0265",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En la propagación de ondas electromágneticas por reflexión ionosférica, para la banda de 3,5 MHz, durante el día frente a la noche, se consiguen alcances:",
+    options: [
+      "Mayores",
+      "Menores",
+      "Iguales",
+      "Nulos",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 265). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0269",
+    part: 1,
+    topicId: "componentes",
+    stem: "¿Qué indica el factor de calidad \"Q\" de un circuito resonante?:",
+    options: [
+      "La calidad de los componentes eléctricos",
+      "La facultad para estabilizar un circuito",
+      "Relación entre el ancho de banda de entrada y salida",
+      "Facultad para seleccionar una frecuencia eliminando las demás",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 269). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1558",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Los circuitos osciladores pueden sufrir variaciones apreciables de frecuencia al variar:",
+    options: [
+      "La luz ambiental",
+      "La temperatura",
+      "La densidad de electrones libres",
+      "Las condiciones de propagación",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1558). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1571",
+    part: 1,
+    topicId: "componentes",
+    stem: "La intensidad total a la salida de un circuito formado por varias resistencias conectadas en paralelo:",
+    options: [
+      "Es superior a la de entrada.",
+      "Es inferior a la de entrada.",
+      "Es igual a la de entrada.",
+      "Es superior o inferior a la de entrada según los casos.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1571). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2213",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Qué tipo de comunicación ocupa un mayor ancho de banda",
+    options: [
+      "Telegrafía",
+      "Banda lateral única",
+      "Frecuencia modulada",
+      "Amplitud modulada",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0003",
+    part: 1,
+    topicId: "componentes",
+    stem: "En la teoría de electricidad, un ohmio equivale a:",
+    options: [
+      "1 amperio x 1 voltio",
+      "1 amperio x 1 segundo",
+      "1 voltio / 1 amperio",
+      "1 amperio / 1 voltio",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 3). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0009",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Cuando la impedancia de la antena, de la línea de transmisión y de salida del emisor, coinciden:",
+    options: [
+      "La corriente que circula es cero",
+      "Se transfiere la máxima energía a la antena",
+      "Su impedancia dependerá de la altura",
+      "Habrá que adaptar con un balun 1:1",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 9). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0019",
+    part: 1,
+    topicId: "componentes",
+    stem: "El valor de la tolerancia de una resistencia viene indicada por la:",
+    options: [
+      "Primera línea de color",
+      "Segunda línea de color",
+      "Tercera línea de color.",
+      "Cuarta línea de color",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 19). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0049",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La potencia suministrada a la línea de alimentación de la antena, por un transmisor, durante un ciclo de frecuencia en ausencia de modulación, se denomina:",
+    options: [
+      "Potencia reflejada.",
+      "Potencia de pico de la envolvente.",
+      "Potencia de portadora.",
+      "Ninguna de las respuestas anteriores es correcta.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 49). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0060",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En función de la actividad solar, la capa de la atmósfera responsable de las variaciones de propagación radioeléctrica en frecuencias inferiores a 30 MHz, se denomina:",
+    options: [
+      "Reflexosfera.",
+      "Estratosfera.",
+      "Ionosfera.",
+      "Troposfera.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 60). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0067",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En un circuito electrónico, un transistor no se puede emplear como:",
+    options: [
+      "Amplificador.",
+      "Oscilador.",
+      "Mezclador.",
+      "Balun.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 67). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0096",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La lectura \"10 dBμV\", es un valor de:",
+    options: [
+      "Resistencia eléctrica.",
+      "Potencia eléctrica.",
+      "Intensidad de corriente eléctrica.",
+      "Tensión eléctrica.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 96). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0106",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En relación con los fusibles eléctricos de protección, es correcto afirmar que:",
+    options: [
+      "Es recomendable instalarlos entre la emisora y el acoplador de antena.",
+      "Deben tener un valor nominal superior al máximo consumo previsto para el equipo.",
+      "Deben tener un valor nominal inferior al consumo máximo previsto para el equipo.",
+      "Sólo se deben instalar los de tipo semiconductor.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 106). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0111",
+    part: 1,
+    topicId: "componentes",
+    stem: "Una resistencia SHUNT se puede utilizar para:",
+    options: [
+      "Adaptar la impedancia de la etapa final.",
+      "Adaptar la impedancia de la antena.",
+      "Proteger aparatos de medida.",
+      "Nada de lo anterior.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 111). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0125",
+    part: 1,
+    topicId: "componentes",
+    stem: "La oposición que presenta una bobina de inductancia L al paso de una corriente alterna se llama reactancia inductiva, y:",
+    options: [
+      "Se expresa en hertzios.",
+      "Si la frecuencia es 0, su valor es 0.",
+      "Si la frecuencia es f, su valor es 5π/fL.",
+      "Siempre vale 1.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 125). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0131",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La característica de un receptor conocida como CAG significa:",
+    options: [
+      "Control Automático de Ganancia.",
+      "Centro Automático de Gestión.",
+      "Control Automático de Gálibo.",
+      "Certificado de Alta Garantía.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 131). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0150",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
+    options: [
+      "Condensador variable.",
+      "Filtro paso banda.",
+      "Aislante.",
+      "Balun",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 150). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0191",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Qué magnitud se expresa en unidades \"dBw\"?:",
+    options: [
+      "Resistencia.",
+      "Energía.",
+      "Ancho de banda.",
+      "Potencia.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 191). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0221",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "En un receptor, la capacidad de mantener la frecuencia sintonizada se denomina:",
+    options: [
+      "Sintonía fina.",
+      "Sensibilidad.",
+      "Selectividad.",
+      "Estabilidad.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 221). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0226",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un transistor bipolar está compuesto por:",
+    options: [
+      "Base, colector y drenador.",
+      "Emisor, colector y escape.",
+      "Emisor, base y colector.",
+      "Fuente, base y emisor.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 226). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0233",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Modulación de señales radioeléctricas:",
+    options: [
+      "La modulación AM, hace variar la amplitud de la portadora.",
+      "La modulación AM, hace variar fundamentalmente la frecuencia de la portadora.",
+      "La modulación AM, ya no se utiliza.",
+      "Las siglas AM, significan modulación de armónicos.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0242",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "El mando NB de un transceptor sirve para:",
+    options: [
+      "Seleccionar las señales moduladas en AM.",
+      "Suprimir ruidos impulsivos.",
+      "Suprimir ruidos de emisoras no deseadas.",
+      "Anula la salida del receptor cuando se recibe una señal con ruido muy alto.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 242). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0244",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Se conoce como \"frecuencia de corte\" de una guía de onda a:",
+    options: [
+      "La frecuencia por debajo de la cual no es posible la transmisión en la guía de onda.",
+      "La frecuencia máxima de la transmisión.",
+      "La frecuencia intermedia.",
+      "La frecuencia con la que debe cortarse la guía para la transmisión.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 244). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0249",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Señale cual de las unidades de medida/magnitud siguientes es incorrecta:",
+    options: [
+      "Voltio: Diferencia de potencial.",
+      "Amperio: Corriente eléctrica.",
+      "Faradio: Cantidad de carga.",
+      "Hertzio: Frecuencia.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 249). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0251",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Las radiaciones espurias de los transmisores:",
+    options: [
+      "Son aquellas que no molestan a otros receptores.",
+      "Se anularan, cuando la frecuencia de trabajo sea inferior a 30 MHz.",
+      "Deben estar 40 dB por debajo de la frecuencia fundamental.",
+      "Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 251). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0254",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La velocidad de propagación de las ondas electromagnéticas en el vacio es de:",
+    options: [
+      "300.000 km/s.",
+      "300.000 km/h.",
+      "300.000 m/s.",
+      "300.000 m/h.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 254). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0268",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El índice de modulación caracteriza a:",
+    options: [
+      "La modulación de amplitud",
+      "La distorsión del modulador",
+      "La modulación de frecuencia",
+      "La ganancia de modulación",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 268). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1559",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La anchura de banda necesaria de un transmisor:",
+    options: [
+      "Es la máxima anchura de banda permitida al transmisor",
+      "Es la necesaria para lograr transmitir a la máxima distancia",
+      "Es la suficiente que permite la transmisión a la velocidad y calidad requeridas",
+      "Es aquella que contiene el 99% de la potencia emitida por el transmisor",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1559). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2101",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Se modula en amplitud cuando:",
+    options: [
+      "Se varía la amplitud de una señal de audio por medio de una señal de radiofrecuencia.",
+      "Se hace variar la fase de una portadora por medio de una señal de audio.",
+      "Se varía la amplitud de una portadora de radiofrecuencia por medio de una señal de audio.",
+      "Se hace variar la frecuencia portadora por medio una señal de audio.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2101). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2103",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Una de las características de las fuentes lineales de alta intensidad es:",
+    options: [
+      "Su elevado peso",
+      "Su bajo consumo",
+      "Su falta de filtrado en la salida",
+      "Su inestabilidad frente a la radiofrecuencia",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2103). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0018",
+    part: 1,
+    topicId: "componentes",
+    stem: "Un kiloohmio equivale a:",
+    options: [
+      "Cien ohmios",
+      "Mil ohmios",
+      "Un Megaohmio",
+      "Diez mil ohmios",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 18). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0046",
     part: 1,
     topicId: "componentes",
     stem: "La capacidad de un condensador se mide en:",
@@ -51,416 +1985,24 @@ export default [
       "Condensos",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 46.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 46). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-004",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "Es recomendable ante la previsión de una tormenta:",
-    options: [
-      "Desconectar los cables de bajada de antena.",
-      "Proteger los cables con un fusible apropiado.",
-      "Conectar la red eléctrica a la toma de tierra.",
-      "Desconectar las antenas y la toma de tierra.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 48.",
-  },
-  {
-    id: "quijotes-005",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "La radiación armónica es:",
-    options: [
-      "La radiación no esencial en múltiplos enteros de la frecuencia principal.",
-      "La frecuencia a la que resuena la antena.",
-      "La emisión del oscilador de batido.",
-      "La potencia que suministra el transmisor en ausencia de modulación.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 57.",
-  },
-  {
-    id: "quijotes-006",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:",
-    options: [
-      "Ionósfera - mesosfera - estratosfera",
-      "Troposfera - ionosfera - mesosfera",
-      "Estratosfera - mesosfera - ionosfera.",
-      "Troposfera - estratosfera - ionosfera",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 103.",
-  },
-  {
-    id: "quijotes-007",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "La relación señal/ruido en un receptor:",
-    options: [
-      "Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).",
-      "Es siempre igual a uno.",
-      "No tiene sentido. En los receptores de alta calidad no hay ruido.",
-      "Depende de la potencia del equipo y se expresa en dBm.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 112.",
-  },
-  {
-    id: "quijotes-008",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "El máximo de radiación del diagrama de una antena vertical se produce:",
-    options: [
-      "Hacia arriba.",
-      "En la dirección más despejada.",
-      "En el plano horizontal.",
-      "Hacia tierra.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 118.",
-  },
-  {
-    id: "quijotes-009",
-    part: 1,
-    topicId: "componentes",
-    stem: "Las resistencias conectadas:",
-    options: [
-      "En serie, se restan.",
-      "En paralelo, se suman.",
-      "En mixto, no se pueden colocar.",
-      "En serie, la resistencia total siempre es mayor que cualquiera de ellas.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 121.",
-  },
-  {
-    id: "quijotes-010",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "Los sintetizadores digitales de señal (DDS) se emplean como:",
-    options: [
-      "Generadores automáticos de voz.",
-      "Osciladores variables de precisión",
-      "Filtros de rechazo digitales.",
-      "Moduladores de banda lateral.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 126.",
-  },
-  {
-    id: "quijotes-011",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "La característica de un receptor conocida como CAG significa:",
-    options: [
-      "Control Automático de Ganancia.",
-      "Centro Automático de Gestión.",
-      "Control Automático de Gálibo.",
-      "Certificado de Alta Garantía.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 131.",
-  },
-  {
-    id: "quijotes-012",
-    part: 1,
-    topicId: "componentes",
-    stem: "El amperímetro se debe conectar:",
-    options: [
-      "En serie.",
-      "En paralelo.",
-      "Por medio de un transformador.",
-      "Con una carga fiticia.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 168.",
-  },
-  {
-    id: "quijotes-013",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "¿Cuál es la impedancia de salida típica en los transmisores de radioaficionado?:",
-    options: [
-      "50 MegaOhmios.",
-      "25 ohmios.",
-      "50 ohmios.",
-      "125 ohmios.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 176.",
-  },
-  {
-    id: "quijotes-014",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "El mezclador de un emisor, combina dos frecuencias f1 y f2, de tal manera que a su salida se encuentra, entre otras la frecuencia:",
-    options: [
-      "f2 x f2",
-      "f1 / f2",
-      "f1 + f2",
-      "(f1 - f2) / (f1 + f2)",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 178.",
-  },
-  {
-    id: "quijotes-015",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "¿Cuál de los siguientes conceptos puede ser motivo de generación de interferencias?:",
-    options: [
-      "La sensibilidad.",
-      "La amigabilidad.",
-      "La intermodulación.",
-      "Clase de emisión.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 186.",
-  },
-  {
-    id: "quijotes-016",
+    id: "quijotes-1-0062",
     part: 1,
     topicId: "magnetismo-ondas",
-    stem: "Al objeto de evitar que el transceptor introduzca señales de radiofrecuencia en la red de suministro eléctrico, se emplea:",
+    stem: "Para evitar interferencias en los altavoces de un equipo de baja frecuencia, se debe:",
     options: [
-      "Blindaje por apantallamiento.",
-      "El cable coaxial.",
-      "El acoplador de antena.",
-      "Filtro de línea de desacoplo.",
+      "Conectar un diodo detector entre los terminales de las bombillas.",
+      "Conectar a masa los terminales del microondas.",
+      "Utilizar para su conexión cable de igual longitud de onda que la señal interferente.",
+      "Utilizar para su conexión cable blindado.",
     ],
     correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 199.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 62). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-017",
-    part: 1,
-    topicId: "componentes",
-    stem: "Un transformador está formado por al menos:",
-    options: [
-      "Un circuito resonante serie.",
-      "Dos resistencias con propiedades ferromagnéticas.",
-      "Bobinas con rectificadores de onda completa.",
-      "Dos bobinas acopladas.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 200.",
-  },
-  {
-    id: "quijotes-018",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "En un receptor, la capacidad de mantener la frecuencia sintonizada se denomina:",
-    options: [
-      "Sintonía fina.",
-      "Sensibilidad.",
-      "Selectividad.",
-      "Estabilidad.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 221.",
-  },
-  {
-    id: "quijotes-019",
-    part: 1,
-    topicId: "componentes",
-    stem: "Un elevado nivel de intensidad de campo eléctrico puede producir:",
-    options: [
-      "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones.",
-      "Un aumento de la potencia entregada por la línea de alimentación a la antena.",
-      "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético.",
-      "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 222.",
-  },
-  {
-    id: "quijotes-020",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "Según las leyes básicas de la electricidad ¿Cuál de las siguientes fórmulas es incorrecta?:",
-    options: [
-      "E = I × R",
-      "P = I² × R",
-      "P = E²R",
-      "P = E² / R",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 228.",
-  },
-  {
-    id: "quijotes-021",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "Los transmisores de VHF en radioafición se utilizan normalmente:",
-    options: [
-      "Para cualquier distancia.",
-      "Para distancias muy largas.",
-      "Para distancias cortas.",
-      "No se pueden utilizar.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 241.",
-  },
-  {
-    id: "quijotes-022",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "La propagación radioeléctrica por onda de superficie:",
-    options: [
-      "Se emplea para cualquier enlace radioeléctrico a excepción de los enlaces satélites.",
-      "La señal radioeléctrica se propaga siguiendo la curvatura terrestre.",
-      "Sólo se emplea para trayectos marítimos.",
-      "Es el medio de propagación característico en las grandes ciudades.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 247.",
-  },
-  {
-    id: "quijotes-023",
-    part: 1,
-    topicId: "componentes",
-    stem: "Un condensador es un dispositivo que almacena:",
-    options: [
-      "Carga acústica",
-      "Carga electromágnetica",
-      "Carga eléctrica",
-      "No amacena nada",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 261.",
-  },
-  {
-    id: "quijotes-024",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "Los receptores de conversión directa:",
-    options: [
-      "Tienen un circuito de frecuencia fija denominada etapa de frecuencia intermedia",
-      "Mezclan directamente la señal recibida para obtener una señal de audiofrecuencia",
-      "Incorporan dos osciladores locales con acoplo directo",
-      "Convierten la señal recibida a una de frecuencia fija denominada frecuencia imagen",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 266.",
-  },
-  {
-    id: "quijotes-025",
-    part: 1,
-    topicId: "componentes",
-    stem: "¿Qué indica el factor de calidad \"Q\" de un circuito resonante?:",
-    options: [
-      "La calidad de los componentes eléctricos",
-      "La facultad para estabilizar un circuito",
-      "Relación entre el ancho de banda de entrada y salida",
-      "Facultad para seleccionar una frecuencia eliminando las demás",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 269.",
-  },
-  {
-    id: "quijotes-026",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "La polarización de una antena es:",
-    options: [
-      "La relación entre la impedancia de entrada y la potencia transmitida",
-      "La orientación del campo eléctrico transmitido",
-      "El cociente entre la ganancia y la directividad",
-      "La orientación del campo magnético transmitido",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 271.",
-  },
-  {
-    id: "quijotes-027",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
-    options: [
-      "Menor a la de la antena",
-      "Comprendida entre la de la antena y la del transmisor",
-      "Inferior a la del transmisor",
-      "Igual a la de la antena y a la del transmisor",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 272.",
-  },
-  {
-    id: "quijotes-028",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "La anchura de banda necesaria de un transmisor:",
-    options: [
-      "Es la máxima anchura de banda permitida al transmisor",
-      "Es la necesaria para lograr transmitir a la máxima distancia",
-      "Es la suficiente que permite la transmisión a la velocidad y calidad requeridas",
-      "Es aquella que contiene el 99% de la potencia emitida por el transmisor",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 1559.",
-  },
-  {
-    id: "quijotes-029",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "¿Cuál de las siguientes expresiones es correcta?",
-    options: [
-      "Vatio = Amperio X Ohmio",
-      "Faradio = Voltio X Ohmio",
-      "Voltio = Amperio X Ohmio",
-      "Amperio = Culombio / Segundo",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 1562.",
-  },
-  {
-    id: "quijotes-030",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "Un motor eléctrico funciona a 220 V y consume 10 A. ¿Cuál es su potencia eléctrica aproximada?",
-    options: [
-      "22 W",
-      "220 W",
-      "2.200 W",
-      "22.000 W",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — electricidad-examen, quiz QSM 1, pregunta 2218.",
-  },
-  {
-    id: "quijotes-031",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "Un dieléctrico es:",
-    options: [
-      "Un aislante",
-      "Un condensador con polaridad",
-      "Semiconductor",
-      "Un buen conductor",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1581.",
-  },
-  {
-    id: "quijotes-032",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "En función de la actividad solar, la capa de la atmósfera responsable de las variaciones de propagación radioeléctrica en frecuencias inferiores a 30 MHz, se denomina:",
-    options: [
-      "Reflexosfera.",
-      "Estratosfera.",
-      "Ionosfera.",
-      "Troposfera.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1608.",
-  },
-  {
-    id: "quijotes-033",
+    id: "quijotes-1-0066",
     part: 1,
     topicId: "receptores-emisores",
     stem: "Una etapa de frecuencia intermedia en un receptor superheterodino, básicamente, se compone de:",
@@ -471,126 +2013,38 @@ export default [
       "Demoduladores y redes inductivas.",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1614.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 66). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-034",
+    id: "quijotes-1-0095",
     part: 1,
     topicId: "componentes",
-    stem: "Una resistencia en SHUNT irá colocada:",
+    stem: "El \"Factor de calidad, Q\" de un circuito resonante es:",
     options: [
-      "En serie.",
-      "En mixto con otra en serie.",
-      "En paralelo.",
-      "Nunca podrá conectarse una resistencia en SHUNT.",
+      "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.",
+      "Independiente de la frecuencia.",
+      "La relación entre la onda estacionaria y el ancho de banda del circuito.",
+      "Inexistente.",
     ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1616.",
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 95). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-035",
+    id: "quijotes-1-0117",
     part: 1,
     topicId: "receptores-emisores",
-    stem: "Los osciladores a cristal de cuarzo generan una señal:",
+    stem: "Decimos que hay sobre modulación, cuando:",
     options: [
-      "De frecuencia muy estable.",
-      "Variable en función de la impedancia del circuito.",
-      "Poco estable no utilizándose en la actualidad.",
-      "Modulada en banda lateral única.",
+      "Se emiten 2 portadorasa la vez.",
+      "El índice de modulación es inferior al 100%.",
+      "El volumen está al máximo.",
+      "El índice de modulación es superior al 100%.",
     ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1649.",
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-036",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
-    options: [
-      "Clase A.",
-      "Clase B.",
-      "Clase C.",
-      "La distorsión es independiente de la clase de amplificador.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1654.",
-  },
-  {
-    id: "quijotes-037",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "Para determinar la desadaptación de impedancias entre el transmisor y la antena se usa:",
-    options: [
-      "Un medidor de R.O.E.",
-      "Un osciloscopio.",
-      "Un amperímetro.",
-      "Un polímetro digital.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1660.",
-  },
-  {
-    id: "quijotes-038",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "Las interferencias son más frecuentes empleando:",
-    options: [
-      "Modulación AM.",
-      "Antenas directivas.",
-      "Amplificadores lineales de potencia.",
-      "Receptores convencionales.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1662.",
-  },
-  {
-    id: "quijotes-039",
-    part: 1,
-    topicId: "antenas-prop",
-    stem: "En el siguiente diagrama de radiación de una antena, la diferencia de decibelios entre los puntos 1 y 2, se denomina:",
-    stemFigure: "images/quiz/quijotes-039-original.jpg",
-    stemFigureAlt: "Figura original FEDI-EA w-27: diagrama de radiación con puntos 1 y 2 para relación delante-atrás.",
-    options: [
-      "Ganancia",
-      "Relación delante/atrás (D/A)",
-      "Directividad",
-      "Impedancia",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1674.",
-  },
-  {
-    id: "quijotes-040",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "¿Cómo se denomina el siguiente circuito eléctrico?",
-    stemFigure: "images/quiz/fedi-ag-009-original.jpg",
-    stemFigureAlt: "Figura original FEDI-EA ag-9: circuito eléctrico de detector de envolvente.",
-    options: [
-      "Generador de audiofrecuencia.",
-      "Detector de envolvente.",
-      "Conversor de audiofrecuencia.",
-      "Detector de fase.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1680.",
-  },
-  {
-    id: "quijotes-041",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "Indique el orden de los elementos de una fuente de alimentación lineal:",
-    options: [
-      "A Transformador, B Rectificador, C Filtro, D Regulador.",
-      "A Rectificador, B Transformador, C Filtro, D Regulador.",
-      "A Regulador, B Filtro, C Transformador, D Rectificador.",
-      "A Filtro, B Transformador, C Regulador, D Rectificador.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1681.",
-  },
-  {
-    id: "quijotes-042",
+    id: "quijotes-1-0172",
     part: 1,
     topicId: "componentes",
     stem: "El factor de calidad \"Q\" de un circuito resonante es:",
@@ -601,54 +2055,38 @@ export default [
       "Inexistente.",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1693.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 172). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-043",
+    id: "quijotes-1-0179",
     part: 1,
-    topicId: "magnetismo-ondas",
-    stem: "En un equipo transmisor con modulación de frecuencia (FM) la desviación máxima de frecuencia es 25 KHz y la frecuencia moduladora es 10 KHz. ¿Cuál es el valor del \"índice de modulación\" del equipo?:",
+    topicId: "antenas-prop",
+    stem: "Un dipolo de media onda, para la banda de 20 metros, debe tener una longitud aproximada de:",
     options: [
-      "250",
-      "10",
-      "2,5",
-      "1",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1696.",
-  },
-  {
-    id: "quijotes-044",
-    part: 1,
-    topicId: "receptores-emisores",
-    stem: "Si en el siguiente esquema el conjunto L-C resuena a la frecuencia del transmisor, se puede afirmar que la potencia medida por el vatímetro será:",
-    stemFigure: "images/quiz/quijotes-044-original.jpg",
-    stemFigureAlt: "Figura original FEDI-EA o-25: transmisor, vatímetro y conjunto L-C resonante antes de la antena.",
-    options: [
-      "Igual a la del transmisor.",
-      "La mitad de la disipada en el circuito L-C.",
-      "Mínima.",
-      "El doble de la disipada en el circuito L-C.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1710.",
-  },
-  {
-    id: "quijotes-045",
-    part: 1,
-    topicId: "electricidad-basica",
-    stem: "¿Cuál de las siguientes afirmaciones es cierta?",
-    options: [
-      "Un voltio se mide en ciclos por segundo.",
-      "Un voltio es la diferencia de potencial que se origina entre los extremos de una resistencia de un ohmio al circular por ella una intensidad de corriente de un amperio.",
-      "Un voltio es una unidad de intensidad de campo eléctrico.",
-      "Un voltio no se puede medir nunca.",
+      "2 m",
+      "10 m",
+      "80 m",
+      "40 m",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1716.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 179). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-046",
+    id: "quijotes-1-0187",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un polímetro, también denominado multímetro o tester, NO sirve para medir:",
+    options: [
+      "La resistencia eléctrica.",
+      "La impedancia de la antena.",
+      "La corriente eléctrica.",
+      "La tensión eléctrica",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 187). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0198",
     part: 1,
     topicId: "electricidad-basica",
     stem: "La unidad dBm corresponde a la magnitud:",
@@ -659,24 +2097,276 @@ export default [
       "Intensidad.",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1719.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 198). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-047",
-    part: 2,
-    topicId: "instalaciones",
+    id: "quijotes-1-0206",
+    part: 1,
+    topicId: "componentes",
+    stem: "El producto de 15 voltios por 2 amperio son",
+    options: [
+      "30 Vatios (W)",
+      "15 Amperios (A)",
+      "15 Ohmios (Ω)",
+      "30 Faradios (F)",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 206). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0214",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Si queremos sintonizar una frecuencia de 7 MHz en un receptor que tiene una frecuencia intermedia de 9 MHz ¿Cuál deberá ser la frecuencia del oscilador local?:",
+    options: [
+      "63 MHz.",
+      "79 MHz.",
+      "16 MHz.",
+      "8MHz.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 214). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0224",
+    part: 1,
+    topicId: "componentes",
+    stem: "Se conoce con el nombre genérico de \"diodo\" a:",
+    options: [
+      "Un componente para amplificar señales.",
+      "Un diversificador de corriente.",
+      "Un componente que permite el paso de la comente eléctrica en un único sentido.",
+      "Un tipo de antena.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 224). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0243",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "¿A qué se le conoce como \"dipolo con trampas\"?:",
+    options: [
+      "Una partícula mal imantada.",
+      "Un dipolo de onda completa.",
+      "Una antena dipolo con circuitos resonantes instalados simétricamente, en cada rama, desde el centro, para su utilización en una banda de frecuencias más amplia.",
+      "Una varilla con varios tramos.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 243). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0260",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "El ancho de banda ocupado es:",
+    options: [
+      "El comprendido entre los límites superior e inferior de la señal modulada",
+      "El ancho del canal en uso, más los adyacentes",
+      "El número de vatios necesarios para mantener una buena comunicación",
+      "El número de kiloherzios que ocupa la banda de trabajo del equipo",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 260). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1562",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Cuál de las siguientes expresiones es correcta?",
+    options: [
+      "Vatio = Amperio X Ohmio",
+      "Faradio = Voltio X Ohmio",
+      "Voltio = Amperio X Ohmio",
+      "Amperio = Culombio / Segundo",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1562). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2218",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un motor eléctrico funciona a 220 V y consume 10 A. ¿Cuál es su potencia eléctrica aproximada?",
+    options: [
+      "22 W",
+      "220 W",
+      "2.200 W",
+      "22.000 W",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2218). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2221",
+    part: 1,
+    topicId: "componentes",
+    stem: "En una resistencia, ¿qué indica la banda de color dorado?",
+    options: [
+      "El valor de la resistencia",
+      "El coeficiente térmico",
+      "La potencia máxima",
+      "La tolerancia del ±5 %",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2221). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0048",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Es recomendable ante la previsión de una tormenta:",
+    options: [
+      "Desconectar los cables de bajada de antena.",
+      "Proteger los cables con un fusible apropiado.",
+      "Conectar la red eléctrica a la toma de tierra.",
+      "Desconectar las antenas y la toma de tierra.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 48). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0053",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+    options: [
+      "Fallo en la fuente de alimentación.",
+      "Insuficiente ancho de banda de la señal de salida.",
+      "Escaso nivel de Squelch.",
+      "Excesivo nivel de señal en la antena.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 53). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0069",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
+    options: [
+      "Directamente proporcional a la inductancia de la bobina.",
+      "Directamente proporcional a la capacidad del condensador.",
+      "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador.",
+      "Cero.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 69). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0108",
+    part: 1,
+    topicId: "componentes",
+    stem: "¿Cuál es la \"condición de resonancia\" para un circuito resonante?",
+    options: [
+      "Que se produzca un buen eco del sonido.",
+      "Que las impedancias capacitivas e inductivas se igualen.",
+      "Que tenga dos bobinas iguales.",
+      "Que el circuito sea de corriente continua.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 108). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0110",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Una batería eléctrica es un dispositivo que convierte:",
+    options: [
+      "Energía química en energía eléctrica.",
+      "Energía cinética en energía potencial.",
+      "Ninguna de las anteriores.",
+      "Energía química en potencial negativo.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 110). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0123",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En un sistema de radiocomunicación, el llamado \"ruido blanco\":",
+    options: [
+      "Es inaudible.",
+      "Es independiente de la fuente de alimentación.",
+      "Depende únicamente del micrófono y del altavoz.",
+      "Es independiente de la frecuencia.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 123). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0129",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En una emisión de banda lateral única (SSB):",
+    options: [
+      "Se tiene una sola banda lateral sin portadora.",
+      "Se tiene una única banda lateral más la portadora.",
+      "La portadora está modulada en frecuencia.",
+      "La portadora está desfasada 180º respecto a la única banda lateral.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 129). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0142",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Qué se entiende por \"Procesador Digital de Señal\" (DSP)",
+    options: [
+      "Es un dispositivo para suspensión de periodos.",
+      "Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad.",
+      "Es un ondulador para hacer señales cuadradas.",
+      "Es un duplicador de frecuencias digitales.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 142). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0144",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "¿Qué es el denominado \"squelch\" de un equipo?",
+    options: [
+      "Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel.",
+      "Un circuito amplificador para oír el sonido con mayor volumen que en la entrada.",
+      "Un circuito atenuador de la señal portadora que mejora la señal/ruido.",
+      "El oscilador de cuarzo.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 144). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0204",
+    part: 1,
+    topicId: "electricidad-basica",
     stem: "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
     options: [
-      "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado.",
       "Se tiene que dejar de emitir, al menos temporalmente.",
+      "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado.",
       "Se comunica al presidente de la comunidad.",
       "Se debe apagar la instalación de ICT.",
     ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1726.",
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 204). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-048",
+    id: "quijotes-1-0217",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "De las siguientes bandas de frecuencias la más adecuada para comunicaciones por satélite se corresponde con:",
+    options: [
+      "HF.",
+      "MF.",
+      "LF.",
+      "VHF.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 217). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0223",
     part: 1,
     topicId: "electricidad-basica",
     stem: "¿Qué se entiende por \"amplitud\" de una señal sinusoidal?:",
@@ -687,24 +2377,472 @@ export default [
       "Es el valor indicativo de la diferencia de fase de la sinusoide.",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1744.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 223). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-049",
+    id: "quijotes-1-0229",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Una instalación radioeléctrica con desadaptación de impedancias entre el transmisor y la antena podrá producir:",
+    options: [
+      "Interferencias.",
+      "Una mayor potencia radiada.",
+      "Acoplamiento magnético de alta frecuencia.",
+      "Componentes de campo ajustados a impedancia nula.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 229). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0239",
     part: 1,
     topicId: "receptores-emisores",
-    stem: "Si a la entrada de un mezclador se aplican las frecuencias 14 MHz. y 4 MHz., indique que frecuencía dará a la salida:",
+    stem: "La sensibilidad de un receptor se define como:",
     options: [
-      "14.4 MHz.",
-      "1 MHz.",
-      "200 MHz.",
-      "10 MHz.",
+      "La facultad que tiene para seleccionar una determinada señal y separarla de las restantes.",
+      "La capacidad que tiene de captar señales débiles y amplificarlas.",
+      "La propiedad por la que reproduce la modulación emitida sin distorsión.",
+      "No es correcta ninguna de las anteriores respuestas.",
     ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1757.",
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 239). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-050",
+    id: "quijotes-1-0245",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Indique que factores influyen en cualquier comunicación radioeléctrica:",
+    options: [
+      "La polarización de la señal radioeléctrica.",
+      "La potencia y la frecuencia de emisión.",
+      "La ubicación de las antenas transmisora y receptora.",
+      "Todos los anteriores.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 245). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0270",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En una antena yagi existen los llamados \"elementos parásitos\". ¿Qué son estos elementos?:",
+    options: [
+      "Componentes de la antena activos",
+      "Componentes de la antena no activos",
+      "Elementos que sobran",
+      "Elementos que viven a costa de los demás",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 270). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1564",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La potencia de pico de un transmisor con modulación de amplitud es siempre:",
+    options: [
+      "Constante.",
+      "Inferior a la potencia media del transmisor.",
+      "Superior a la potencia media del transmisor.",
+      "Igual a la potencia media del transmisor.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1564). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0006",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?:",
+    options: [
+      "Rectificación",
+      "Demodulación",
+      "Realimentación",
+      "Conversión",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 6). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0008",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un dieléctrico es:",
+    options: [
+      "Un aislante",
+      "Un condensador con polaridad",
+      "Semiconductor",
+      "Un buen conductor",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 8). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0047",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "¿Qué es un oscilador?",
+    options: [
+      "Dispositivo que convierte la corriente continua en alterna.",
+      "Circuito que se emplea para estabilizar la señal de RF.",
+      "Elemento del transmisor que reduce el ancho de banda.",
+      "Parte del transmisor que reduce los ruidos.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 47). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0104",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La capacidad de que un sistema electrónico no produzca interferencias que comprometan su funcionamiento o que afecten a su entorno, se denomina:",
+    options: [
+      "Fiabilidad y baja distorsión interferente.",
+      "Compatibilidad electromagnética.",
+      "AMC (Ambiente Medido y Comprobado).",
+      "SLI (Sistema Libre de Interferencias).",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 104). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0115",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?",
+    options: [
+      "No hay limitaciones.",
+      "Si, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW.",
+      "Si, menor de 30 dBm.",
+      "Sólo cuando hay interferencias.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 115). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0116",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Los llamados \"detectores de envolvente\" tienen la particularidad de:",
+    options: [
+      "Funcionar fuera del receptor.",
+      "Estar instalados después de la etapa final de potencia.",
+      "No requerir en el receptor la sincronización con el transmisor, por ser síncronos.",
+      "Realimentar la señal de salida con parte de la señal de entrada.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 116). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0124",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "El período de una corriente alterna es:",
+    options: [
+      "El tiempo que tarda en empezar a circular la corriente.",
+      "El tiempo que está encendido un interruptor.",
+      "El tiempo que transcurre entre dos valores máximos consecutivos.",
+      "Siempre es 0.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 124). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0148",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?:",
+    options: [
+      "Rectificación",
+      "Conversión",
+      "Demodulación",
+      "Realimentación",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 148). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0162",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La inclinación de los radiales en una antena vertical de cuarto de onda, produce:",
+    options: [
+      "Una variación de la polarización de la señal emitida.",
+      "Un incremento de la altura efectiva.",
+      "Una variación de la impedancia de entrada.",
+      "Una reducción del ruido captado por la antena.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 162). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0169",
+    part: 1,
+    topicId: "componentes",
+    stem: "El valor de la resistencia total resultante de asociar varias resistencias en serie:",
+    options: [
+      "Es mayor que el valor de cualquiera de las resistencias.",
+      "Es igual al valor de la mayor de las resistencias.",
+      "Es menor que cualquiera de las resistencias.",
+      "Es igual al valor de la menor de las resistencias.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 169). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0174",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "En un receptor se denomina selectividad a:",
+    options: [
+      "La mínima señal que puede recibir.",
+      "La capacidad de separar dos señales muy próximas en frecuencia.",
+      "El nivel de señal del canal adyacente.",
+      "La capacidad de rechazar frecuencias superiores a la frecuencia intermedia.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 174). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0176",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "¿Cuál es la impedancia de salida típica en los transmisores de radioaficionado?:",
+    options: [
+      "50 MegaOhmios.",
+      "25 ohmios.",
+      "50 ohmios.",
+      "125 ohmios.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 176). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0177",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "¿Qué símbolo va asociado a la modulación de frecuencia en fonía?",
+    options: [
+      "PNP",
+      "F3E",
+      "F1F",
+      "AM",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 177). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0234",
+    part: 1,
+    topicId: "componentes",
+    stem: "Cuando se conectan condensadores en paralelo, la capacidad resultante del conjunto es:",
+    options: [
+      "La suma de las inversas de las capacidades individuales.",
+      "El producto de las capacidades individuales dividido por la suma de estas.",
+      "La mayor de las capacidades individuales.",
+      "La suma de las capacidades individuales.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 234). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0248",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Una señal radioeléctrica se puede caracterizar por su:",
+    options: [
+      "Capacidad e inductancia.",
+      "Amplitud y frecuencia.",
+      "Resistividad y refracción.",
+      "Dispersión por propagación.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 248). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0261",
+    part: 1,
+    topicId: "componentes",
+    stem: "Un condensador es un dispositivo que almacena:",
+    options: [
+      "Carga acústica",
+      "Carga electromágnetica",
+      "Carga eléctrica",
+      "No amacena nada",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 261). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1561",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "¿Dónde se produce la frecuencia intermedia en un receptor?",
+    options: [
+      "En el control automático de ganancia",
+      "En el mezclador",
+      "En el oscilador local",
+      "En la etapa de radiofrecuencia",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1561). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2205",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Si un usuario tiene contratado un acceso a Internet “ADSL de 2 megas”, esto significa que:",
+    options: [
+      "Dispone de una velocidad de descarga de 2 megabytes por segundo.",
+      "Dispone de un ancho de banda de 2 millones de bits por segundo.",
+      "Puede transmitir datos a una velocidad constante de 2 MHz.",
+      "Tiene garantizada una velocidad mínima real de 2 Mbps en todo momento.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2205). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0017",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El control automático de ganancia (CAG) en un receptor tiene como objetivo:",
+    options: [
+      "Mantener constante la amplitud de la señal de salida",
+      "Anular el control de volumen",
+      "Ajustar el nivel de silenciador",
+      "Mantener constante el valor de la frecuencia intermedia",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 17). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0061",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
+    options: [
+      "Emitir con más potencia.",
+      "Optimizar los filtros del transceptor.",
+      "Disminuir la potencia reflejada en la línea de transmisión.",
+      "Incrementar el tiempo de transmisión sin calentamiento del equipo.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 61). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0097",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Los transceptores con cambio de frecuencia de emisión, utilizan:",
+    options: [
+      "Un oscilador de frecuencia variable.",
+      "Un amplificador de clase AB.",
+      "Filtros de cristal.",
+      "Redes de desplazamiento de fase.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 97). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0113",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Referido al parámetro de \"ROE\" de una estación transmisora, señale la opción que es correcta:",
+    options: [
+      "Debe ser cero.",
+      "Es un indicador de grado de adaptación de impedancias entre el transmisor y la antena.",
+      "Sirve para indicar el consumo de energía de la estación.",
+      "Cuanto más elevado sea su valor, mayor rendimiento se obtiene en la transmisión.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 113). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0122",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Para medir la potencia de una señal eléctrica, se emplea un:",
+    options: [
+      "Vatímetro.",
+      "Frecuencímetro",
+      "Puente se resonancia.",
+      "Capacímetro.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 122). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0141",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Las emisiones situadas fuera de la banda necesaria están constituidas por:",
+    options: [
+      "La frecuencia imagen más los armónicos.",
+      "El conjunto de emisiones no esenciales y las emisiones fuera de banda.",
+      "El nivel de campo mínimo utilizable.",
+      "Las emisiones parásitas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 141). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0200",
+    part: 1,
+    topicId: "componentes",
+    stem: "Un transformador está formado por al menos:",
+    options: [
+      "Un circuito resonante serie.",
+      "Dos resistencias con propiedades ferromagnéticas.",
+      "Bobinas con rectificadores de onda completa.",
+      "Dos bobinas acopladas.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 200). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0203",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La radiodifusión sonora con Modulación de Frecuencia (FM), ¿qué banda de frecuencias utiliza?",
+    options: [
+      "SHF",
+      "VHF",
+      "HF",
+      "UHF",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 203). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0227",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Qué es un \"resonador de cuarzo\"?:",
+    options: [
+      "Los conmuUn dispositivo capaz de presentar un efecto de resonancia basado en una propiedad piezoeléctrica.tadores en la posición 1.",
+      "Una envoltura translúcida de un instrumento musical.",
+      "Una caja de reverberación.",
+      "Un altavoz de lujo.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 227). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0228",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Según las leyes básicas de la electricidad ¿Cuál de las siguientes fórmulas es incorrecta?:",
+    options: [
+      "E = I × R",
+      "P = I² × R",
+      "P = E²R",
+      "P = E² / R",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 228). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0246",
     part: 1,
     topicId: "antenas-prop",
     stem: "Las antenas Yagi:",
@@ -715,26 +2853,164 @@ export default [
       "Solo tienen dipolo y directores.",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1763.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 246). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-051",
+    id: "quijotes-1-0262",
     part: 1,
-    topicId: "electricidad-basica",
-    stem: "En la siguiente gráfica de la pantalla de un osciloscopio, se puede afirmar que:",
-    stemFigure: "images/quiz/quijotes-051-original.jpg",
-    stemFigureAlt: "Figura original FEDI-EA k-28: osciloscopio con A en vertical y B en horizontal.",
+    topicId: "componentes",
+    stem: "En una resistencia de 1 Kohm, por la que pasa una corriente de continua de 10 mA, se genera una diferencia de potencial de:",
     options: [
-      "A es la frecuencia y B es la amplitud de la señal.",
-      "A es el período y B es la amplitud de la señal.",
-      "A es la amplitud y B es la potencia de la señal.",
-      "A es la amplitud y B es el periodo de la señal.",
+      "10 voltios",
+      "1 voltio",
+      "1000 voltios",
+      "100 voltios",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 262). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0271",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La polarización de una antena es:",
+    options: [
+      "La relación entre la impedancia de entrada y la potencia transmitida",
+      "La orientación del campo eléctrico transmitido",
+      "El cociente entre la ganancia y la directividad",
+      "La orientación del campo magnético transmitido",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 271). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0002",
+    part: 1,
+    topicId: "componentes",
+    stem: "Un elevado nivel de intensidad de campo eléctrico puede producir:",
+    options: [
+      "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones",
+      "Un aumento de la potencia entregada por la línea de alimentación a la antena",
+      "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica",
+      "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0058",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "El tamaño físico de una antena debe ser función de la:",
+    options: [
+      "Frecuencia.",
+      "Altura efectiva.",
+      "Conductividad del terreno.",
+      "Potencia de emisión.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 58). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0121",
+    part: 1,
+    topicId: "componentes",
+    stem: "Las resistencias conectadas:",
+    options: [
+      "En serie, se restan.",
+      "En paralelo, se suman.",
+      "En mixto, no se pueden colocar.",
+      "En serie, la resistencia total siempre es mayor que cualquiera de ellas.",
     ],
     correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1771.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 121). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-052",
+    id: "quijotes-1-0138",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Para determinar la desadaptación de impedancias entre el transmisor y la antena se usa:",
+    options: [
+      "Un medidor de R.O.E.",
+      "Un osciloscopio.",
+      "Un amperímetro.",
+      "Un polímetro digital.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 138). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0140",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Las interferencias son más frecuentes empleando:",
+    options: [
+      "Modulación AM.",
+      "Antenas directivas.",
+      "Amplificadores lineales de potencia.",
+      "Receptores convencionales.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 140). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0170",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En esta pregunta sobre unidades eléctricas, cuál es la respuesta correcta:",
+    options: [
+      "La intensidad se mide en voltios.",
+      "La tensión se mide en vatios.",
+      "Un culombio es igual al producto de un amperio por segundo.",
+      "La tensión se mide en amperios.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 170). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0188",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "El medidor comúnmente denominado \"S-meter\" indica:",
+    options: [
+      "La relación de onda estacionaria.",
+      "La estabilidad del receptor.",
+      "La intensidad de la señal de entrada del receptor.",
+      "El consumo de potencia de alimentación.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 188). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0193",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Como medida de protección y seguridad toda estación radioeléctrica debe disponer de:",
+    options: [
+      "Un limitador de potencia ajustable.",
+      "Un interruptor general de suministro eléctrico.",
+      "Dos acopladores de antena sintonizados a la frecuencia de trabajo.",
+      "Un receptor de reserva conectado en paralelo con la antena.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 193). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0199",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Al objeto de evitar que el transceptor introduzca señales de radiofrecuencia en la red de suministro eléctrico, se emplea:",
+    options: [
+      "Blindaje por apantallamiento.",
+      "El cable coaxial.",
+      "El acoplador de antena.",
+      "Filtro de línea de desacoplo.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 199). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0267",
     part: 1,
     topicId: "magnetismo-ondas",
     stem: "El multiplicador de frecuencia se emplea para:",
@@ -745,52 +3021,66 @@ export default [
       "Incrementar el margen de sintonía de un amplificador",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1781.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 267). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-053",
+    id: "quijotes-1-1565",
     part: 1,
     topicId: "receptores-emisores",
-    stem: "Los circuitos osciladores pueden sufrir variaciones apreciables de frecuencia al variar:",
+    stem: "Un transmisor debe realizar al menos las siguientes funciones:",
     options: [
-      "La luz ambiental",
-      "La temperatura",
-      "La densidad de electrones libres",
-      "Las condiciones de propagación",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1787.",
-  },
-  {
-    id: "quijotes-054",
-    part: 1,
-    topicId: "componentes",
-    stem: "Con tres baterías iguales, de X voltios cada una, y conectadas adecuadamente en serie, se consigue una tensión de:",
-    options: [
-      "3 X voltios",
-      "X/3 voltios",
-      "3 voltios",
-      "0 voltios",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1789.",
-  },
-  {
-    id: "quijotes-055",
-    part: 1,
-    topicId: "componentes",
-    stem: "Cuando dos bobinados tienen sus espiras en la misma dirección:",
-    options: [
-      "Sus inducciones se restan.",
-      "Sus capacidades se restan.",
-      "Sus capacidades se suman.",
-      "Sus inducciones se suman.",
+      "Generar la señal, modular y demodular.",
+      "Entregar una señal útil a partir de la recogida en la antena.",
+      "Generar la señal, demodular y amplificar.",
+      "Generar la señal, modular y amplificar.",
     ],
     correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 1797.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1565). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-056",
+    id: "quijotes-1-1569",
+    part: 1,
+    topicId: "componentes",
+    stem: "Cuando colocamos varias pilas en serie, el voltaje resultante del conjunto es:",
+    options: [
+      "El producto del voltaje de todas las pilas.",
+      "La suma del voltaje de todas las pilas.",
+      "El de la mayor de las pilas.",
+      "El de la menor de las pilas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1569). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1570",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "La onda que rebasa el horizonte y llega a la atmósfera se denomina:",
+    options: [
+      "Onda de transmisión directa.",
+      "Onda especial indirecta.",
+      "Onda espacial.",
+      "Onda de horizonte visto.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1570). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2207",
+    part: 1,
+    topicId: "componentes",
+    stem: "En un circuito con varias baterías conectadas en paralelo:",
+    options: [
+      "La tensión total se suma.",
+      "La corriente disponible disminuye.",
+      "La resistencia interna equivalente del conjunto disminuye.",
+      "La tensión del conjunto es cero.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2207). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2220",
     part: 1,
     topicId: "magnetismo-ondas",
     stem: "¿En qué capa de la atmósfera se producen las reflexiones que permiten las comunicaciones en HF a larga distancia?",
@@ -801,528 +3091,1326 @@ export default [
       "Mesosfera",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — radioelectricidad-correccion, quiz QSM 83, pregunta 2219.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2220). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-057",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Excepto en casos de urgencia, ¿con qué antelación la propiedad del inmueble debe requerir el desmontaje de antenas de radioaficionado por la realización de obras?:",
+    id: "quijotes-1-0015",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:",
     options: [
-      "Un mes.",
-      "Dos meses.",
-      "Tres meses.",
-      "Medio año.",
+      "Mayor",
+      "Menor",
+      "Igual",
+      "No existe",
     ],
     correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 275.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 15). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-058",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "¿Quién puede hacer uso de una estación de aficionado?",
+    id: "quijotes-1-0098",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La sensibilidad de un receptor indica:",
     options: [
-      "Cualquier familiar de primer grado que conviva con él, bajo su responsabilidad.",
-      "Cualquiera que vaya a obtener el Diploma de Operador.",
-      "Solo su titular.",
-      "Cualquier titular de autorización de radioaficionado, con permiso de su propietario.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 276.",
-  },
-  {
-    id: "quijotes-059",
-    part: 2,
-    topicId: "operacion-seguridad",
-    stem: "El significado de la abreviatura PSE es:",
-    options: [
-      "Por si está a la escucha.",
-      "Por favor.",
-      "Puede seguir emitiendo.",
-      "Esta abreviatura no significa nada.",
+      "El ancho de banda del preamplificador de RF.",
+      "Su capacidad para recibir señales débiles.",
+      "El máximo nivel de señal que puede recibir su antena.",
+      "Su capacidad para rechazar señales fuertes.",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 287.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 98). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-060",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Entre las obligaciones de un gestor de una estación desatendida no se encuentra la de:",
+    id: "quijotes-1-0101",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
     options: [
-      "Actualizar periódicamente la información existente.",
-      "Procurar que el mantenimiento técnico dé la estación garantice el servicio continuo de la misma.",
-      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.",
-      "No tienen limitaciones geográficas.Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto.",
+      "HF",
+      "UHF",
+      "SHF",
+      "EHF",
+      "VHF",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 101). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0120",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En que bandas de frecuencia predomina el modo de propagación por ondas ionosférica:",
+    options: [
+      "VHF",
+      "HF",
+      "UHF",
+      "LF",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 120). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0195",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Cuál de las siguientes afirmaciones es cierta?",
+    options: [
+      "Un voltio se mide en ciclos por segundo.",
+      "Un voltio es la diferencia de potencial que se origina entre los extremos de una resistencia de un ohmio al circular por ella una intensidad de corriente de un amperio.",
+      "Un voltio es una unidad de intensidad de campo eléctrico.",
+      "Un voltio no se puede medir nunca.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 195). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0201",
+    part: 1,
+    topicId: "componentes",
+    stem: "¿Qué potencia se disipará en una resistencia de 30 ohmios por la que circula una corriente eléctrica de 2 amperios?",
+    options: [
+      "30 vatios.",
+      "60 vatios.",
+      "120 vatios.",
+      "15 vatios.",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 323.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 201). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-061",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "En caso de que el titular de estación de aficionado tenga constancia de que esta causando interferencias a otros servicios de telecomunicaciones autorizados, ¿Qué medida deberá adoptar, de las siguientes propuestas?:",
+    id: "quijotes-1-0216",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Los equipos radioeléctricos deberán estar contenidos en cajas metálicas para:",
     options: [
-      "Darse de baja inmediatamente en el servicio de aficionados.",
-      "Deberá a su costa, adoptar en su estación todas las medidas razonables de tipo técnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspección de Telecomunicaciones las medidas adoptadas.",
-      "Cambiar de equipo antes de cualquier inspección por parte de la Dirección General de Telecomunicaciones.",
+      "Mantener la estabilidad térmica.",
+      "Reducir la ganancia de conversión.",
+      "Aumentar el peso y resistencia del equipo.",
+      "Limitar radiaciones indeseadas.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 216). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0222",
+    part: 1,
+    topicId: "componentes",
+    stem: "Un elevado nivel de intensidad de campo eléctrico puede producir:",
+    options: [
+      "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones.",
+      "Un aumento de la potencia entregada por la línea de alimentación a la antena.",
+      "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético.",
+      "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 222). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0232",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Para qué se ponen \"circuitos de filtrado\" en la salidas de las fuentes de alimentación?:",
+    options: [
+      "Para impedir señales espúreas en la entrada de la fuente.",
+      "Para protección de los bobinados.",
+      "Para reducir el rizado de la señal de salida y obtener un valor más constante de esta.",
+      "Para igualar la señal de salida a la de entrada.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 232). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2100",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Si una onda electromagnética atraviesa un objeto, se produce un efecto de:",
+    options: [
+      "Atenuación",
+      "Amplificación",
+      "Reflexión",
+      "Intermodulación",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2100). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0054",
+    part: 1,
+    topicId: "componentes",
+    stem: "El valor y tolerancia de las resistencias más habituales se indica mediante un código de colores. Indique el valor de la resistencia cuyos colores son, por este orden: verde, rojo, rojo, plata:",
+    options: [
+      "5.2k Ω 10% de tolerancia",
+      "52 Ω y 5% de tolerancia.",
+      "520 Ω y 0.1% de tolerancia.",
+      "No se puede calcular.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 54). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0105",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La emisión de señales armónicas y espurias:",
+    options: [
+      "Disminuye la posible producción de interferencias.",
+      "Es necesaria en la banda de HF.",
+      "Implica la posible producción de interferencias.",
+      "Sólo hay que tenerlo en cuenta en las bandas de VHF y superiores.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 105). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0163",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "¿Qué ventajas presenta la antena dipolo en V invertida?:",
+    options: [
+      "Un valor de impedancia próximo a 75Ω y polarización circular.",
+      "Un valor de impedancia próximo a 75Ω y un diagrama de radiación muy directivo.",
+      "Un valor de impedancia constante y elevada ganancia.",
+      "Un valor de impedancia próximo a 50Ω y un diagrama de radiación prácticamente omnidireccional.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 163). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0183",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Los transmisores de radiofrecuencia producen una emisión de energía denominada:",
+    options: [
+      "Radiación electromagnética.",
+      "Emisión termoeléctrica.",
+      "Intensidad de campo.",
+      "Rayos gamma.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 183). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0196",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe procurarse:",
+    options: [
+      "Radiar con potencia elevada.",
+      "Tener una ROE alta.",
+      "Tener una ROE baja.",
+      "Tener un sintonizador muy fino.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 196). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0272",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+    options: [
+      "Menor a la de la antena",
+      "Comprendida entre la de la antena y la del transmisor",
+      "Inferior a la del transmisor",
+      "Igual a la de la antena y a la del transmisor",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 272). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0065",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Si se reduce la sección de un conductor:",
+    options: [
+      "Aumenta el número de átomos por centímetro cuadrado.",
+      "Disminuye la temperatura del conductor.",
+      "La resistencia eléctrica disminuye.",
+      "La resistencia eléctrica aumenta.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 65). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0068",
+    part: 1,
+    topicId: "componentes",
+    stem: "Una resistencia en SHUNT irá colocada:",
+    options: [
+      "En serie.",
+      "En mixto con otra en serie.",
+      "En paralelo.",
+      "Nunca podrá conectarse una resistencia en SHUNT.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 68). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0109",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "La característica de un filtro denominada como \"frecuencia de corte\" es:",
+    options: [
+      "La frecuencia central del filtro.",
+      "El primer armónico de la frecuencia a la que el filtro deja de funcionar.",
+      "La frecuencia que delimita la banda de paso o no paso por el filtro.",
+      "Un dato irrelevante para filtro.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 109). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0134",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La ganancia de una antena de 40 dB equivale a una relación de:",
+    options: [
+      "10.000",
+      "1.000",
+      "100",
+      "40",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 134). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0192",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Si al emitir en la banda de 2 metros se tiene conocimiento de que se producen interferencias al Servicio Móvil Aeronáutico, deberá:",
+    options: [
+      "Emitir con menos potencia.",
       "Seguir emitiendo.",
+      "Dejar de emitir.",
+      "Comunicárselo al aeropuerto.",
     ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 325.",
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 192). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-062",
-    part: 2,
-    topicId: "instalaciones",
-    stem: "Para no desmontar el sistema radiante de una estación fija, una vez cancelada la licencia, y dejarlo sólo para recepción, su titular deberá obtener:",
+    id: "quijotes-1-0197",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "El periodo de una onda sinusoidal:",
     options: [
-      "Autorización por escrito de la Jefatura Provincial de Inspección de Telecomunicaciones.",
-      "Autorización por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios.",
-      "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
-      "Comunicarlo por escrito a la propiedad del inmueble o, en su caso, de la comunidad de propietarios.",
+      "Es el valor entre un máximo y un mínimo.",
+      "Las ondas no tienen periodo.",
+      "Es el tiempo que transcurre entre dos mínimos consecutivos.",
+      "No se puede calcular.",
     ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 349.",
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 197). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-063",
+    id: "quijotes-1-0212",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La etapa de FI en un receptor debe estar conectada:",
+    options: [
+      "A la entrada del mezclador.",
+      "Al amplificador de B.F.",
+      "A la salida del mezclador.",
+      "Al oscilador local.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 212). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1566",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Entre las antenas de apertura están:",
+    options: [
+      "Las yagis.",
+      "Las verticales.",
+      "Los dipolos.",
+      "Las de bocina.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1566). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1568",
+    part: 1,
+    topicId: "componentes",
+    stem: "Cuando dos bobinados tienen sus espiras en la misma dirección:",
+    options: [
+      "Sus inducciones se restan.",
+      "Sus capacidades se restan.",
+      "Sus capacidades se suman.",
+      "Sus inducciones se suman.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1568). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0001",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Se denomina receptor superheterodino de doble conversión al:",
+    options: [
+      "Receptor con dos frecuencias intermedias independientes",
+      "Receptor con dos amplificadores de RF",
+      "Receptor con dos entradas de antenas",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0012",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Si aumenta la temperatura en un conductor",
+    options: [
+      "Aumenta su resistencia eléctrica.",
+      "Mejora la conductancia",
+      "Disminuye su resistencia eléctrica",
+      "La resistencia eléctrica es inmune a los cambios de temperatura",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0044",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En la realización de medidas, usando un polímetro, indique la respuesta correcta",
+    options: [
+      "Para medidas de tensión, se conectan las puntas de prueba en serie con el elemento en el que deseamos medir la tensión.",
+      "Para medidas de corriente, se conectan las puntas de prueba en paralelo con el elemento a través del cual circula la corriente que deseamos medir.",
+      "Para medidas de resistencia, se conectan las puntas de prueba en serie con la resistencia que deseamos medir.",
+      "Ninguna de las anteriores respuestas es correcta.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 44). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0114",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Las capas ionizadas de la atmósfera se denominan:",
+    options: [
+      "A, B, C1 y C2.",
+      "P1, P2, P3, P4.",
+      "D, E, F1 y F2.",
+      "1, 2, 3, 4.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 114). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0126",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Los sintetizadores digitales de señal (DDS) se emplean como:",
+    options: [
+      "Generadores automáticos de voz.",
+      "Osciladores variables de precisión",
+      "Filtros de rechazo digitales.",
+      "Moduladores de banda lateral.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 126). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0127",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Los osciladores a cristal de cuarzo generan una señal:",
+    options: [
+      "De frecuencia muy estable.",
+      "Variable en función de la impedancia del circuito.",
+      "Poco estable no utilizándose en la actualidad.",
+      "Modulada en banda lateral única.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 127). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0258",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La ley de Coulomb dice que la fuerza entre dos cargas eléctricas es:",
+    options: [
+      "Directamente proporcional a la distancia de separación",
+      "Directamente proporcional al cuadrado de la distancia de separación",
+      "Inversamente proporcional a las cargas",
+      "Directamente proporcional al producto de las cargas",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 258). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0005",
+    part: 1,
+    topicId: "componentes",
+    stem: "Colocamos 3 Condensadores en paralelo, si el valor individual de 2 de ellos es 100 pF, y el valor total es de 400 pF, ¿Cuál serà el valor del otro condensador?:",
+    options: [
+      "800 pF",
+      "100 pF",
+      "200 pF",
+      "100 pF",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 5). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0007",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La diferencia de potencial eléctrico se mide en:",
+    options: [
+      "Vatios",
+      "Microfaradios",
+      "Voltios",
+      "Faradios",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 7). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0128",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La velocidad de propagación de las ondas electromagnéticas:",
+    options: [
+      "En el vacío es menor que a través del aire.",
+      "Aumenta con la frecuencia.",
+      "Disminuye con la frecuencia.",
+      "Es constante en un determinado medio.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 128). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0180",
+    part: 1,
+    topicId: "componentes",
+    stem: "En un transformador con relación 2:1 se puede afirmar que:",
+    options: [
+      "Uno de los devanados tiene doble número de espiras que el otro.",
+      "Amplifica con un factor de cuatro la tensión de entrada.",
+      "Atenúa en un factor de dos la potencia de entrada.",
+      "Duplica la potencia que se le entrega",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 180). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0194",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Para que una antena que resuena en 29.900 KHz resuene en 28.500 KHz, deberemos:",
+    options: [
+      "Acortarla.",
+      "Aumentar el ancho de banda.",
+      "Alargarla.",
+      "Colocarle un plano de tierra.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 194). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0210",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En un circuito eléctrico de corriente continua:",
+    options: [
+      "La intensidad está en razón inversa a la tensión.",
+      "La resistencia es variable con la tensión.",
+      "La intensidad está en razón directa a la tensión.",
+      "La capacidad del circuito disminuye.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 210). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0225",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Para cualquier comunicación radioeléctrica en la banda UHF, se puede afirmar que:",
+    options: [
+      "A mayor frecuencia, menor es el alcance.",
+      "A mayor altura de las antenas menor es el alcance.",
+      "A menor frecuencia mayor deberá de ser la altura de las antenas.",
+      "A menor alcance mayor será la polarización de la señal.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 225). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0263",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "El transceptor debe estar conectado a tierra para:",
+    options: [
+      "Evitar las interferencias atmosféricas",
+      "Evitar variaciones de señal",
+      "Proteger al operador de descargas",
+      "No es necesario conectarlo a tierra",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 263). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0051",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En una instalación eléctrica, el llamado \"factor de potencia\" o \"Coseno de φ\" es:",
+    options: [
+      "Un valor indicador del desfasaje entre la tensión y la corriente en un determinado componente de la instalación.",
+      "Un factor para duplicar la potencia consumida en un determinado componente.",
+      "Una magnitud relacionada con la potencia que varía entre 1 y 3.",
+      "Un factor que sólo se aplica en corriente continua.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 51). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0055",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "El excitador:",
+    options: [
+      "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+      "Suma las frecuencias del oscilador local y del oscilador variable.",
+      "Excita la etapa osciladora.",
+      "Alimenta el transmisor.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 55). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0147",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "La curvatura que experimenta una onda radioeléctrica al encontrarse un obstáculo en su trayectoria, se denomina:",
+    options: [
+      "Difracción.",
+      "Reflexión.",
+      "Dispersión.",
+      "Refracción.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 147). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0178",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El mezclador de un emisor, combina dos frecuencias f1 y f2, de tal manera que a su salida se encuentra, entre otras la frecuencia:",
+    options: [
+      "f2 x f2",
+      "f1 / f2",
+      "f1 + f2",
+      "(f1 - f2) / (f1 + f2)",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 178). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0219",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En un amplificador de ganancia 20 dB, con impedancia de entrada igual a la de salida, y una potencia de entrada de 0.2 watios. ¿Cuánto vale la potencia de salida?:",
+    options: [
+      "200 W",
+      "120 W",
+      "20 W",
+      "20.2 W",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 219). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0241",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Los transmisores de VHF en radioafición se utilizan normalmente:",
+    options: [
+      "Para cualquier distancia.",
+      "Para distancias muy largas.",
+      "Para distancias cortas.",
+      "No se pueden utilizar.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 241). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0264",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "¿Qué se consigue con el efecto llamado \"dispersión troposférica\", en la propagación de las ondas electromágneticas?:",
+    options: [
+      "Nada",
+      "Únicamente desvanecimientos",
+      "Reflexiones en la ionosfera",
+      "Mayor alcance que el meramente visual entre las antenas transmisora y receptora",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 264). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2209",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "En electricidad, la letra Z corresponde a:",
+    options: [
+      "Resistencia.",
+      "Impedancia.",
+      "Tensión.",
+      "Reactancia.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2209). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0020",
+    part: 1,
+    topicId: "componentes",
+    stem: "En un transformador eléctrico, ¿qué se conoce como \"relación de transformación\"?:",
+    options: [
+      "El tamaño del primario frente al secundario.",
+      "La relación entre las espiras mayores y las menores del primario.",
+      "La separación entre la entrada y la salida.",
+      "La relación entre el número de espiras del primario y el número de espiras del secundario.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 20). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0137",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En que bandas de frecuencia predomina el modo de propagación por onda de superficie:",
+    options: [
+      "VHF.",
+      "UHF.",
+      "MF.",
+      "HF.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 137). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0213",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Los detectores de señal pueden ser asíncronos ó síncronos. A los primeros también se les conoce como:",
+    options: [
+      "De entrada.",
+      "De salida.",
+      "De portadora.",
+      "De envolvente.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 213). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0266",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Los receptores de conversión directa:",
+    options: [
+      "Tienen un circuito de frecuencia fija denominada etapa de frecuencia intermedia",
+      "Mezclan directamente la señal recibida para obtener una señal de audiofrecuencia",
+      "Incorporan dos osciladores locales con acoplo directo",
+      "Convierten la señal recibida a una de frecuencia fija denominada frecuencia imagen",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 266). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0118",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "El máximo de radiación del diagrama de una antena vertical se produce:",
+    options: [
+      "Hacia arriba.",
+      "En la dirección más despejada.",
+      "En el plano horizontal.",
+      "Hacia tierra.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 118). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0185",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "¿Qué bandas de frecuencia son más idóneas para conseguir una comunicación mediante \"rebote lunar\"?",
+    options: [
+      "No se puede hacer rebote lunar.",
+      "Todas.",
+      "VLF.",
+      "VHF y superiores.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 185). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0045",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El ancho de banda necesario de un transmisor es:",
+    options: [
+      "La anchura de banda de frecuencias estrictamente suficiente para asegurar la transmisión de la información en condiciones adecuadas.",
+      "El conjunto de frecuencias que puede trabajar un transmisor.",
+      "La relación entre la ganancia de antena y la impedancia del transmisor.",
+      "La dependencia del margen de frecuencias que pueda trabajar la antena sin acoplador",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 45). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0059",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "¿Cómo se puede eliminar una interferencia generada por la fuente de alimentación de un transmisor?",
+    options: [
+      "Elevando el nivel de Squelch.",
+      "Colocando un filtro apropiado.",
+      "Poniendo una etapa adicional de potencia.",
+      "Suprimiendo la portadora.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 59). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0103",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:",
+    options: [
+      "Ionósfera - mesosfera - estratosfera",
+      "Troposfera - ionosfera - mesosfera",
+      "Estratosfera - mesosfera - ionosfera.",
+      "Troposfera - estratosfera - ionosfera",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 103). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0132",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
+    options: [
+      "Clase A.",
+      "Clase B.",
+      "Clase C.",
+      "La distorsión es independiente de la clase de amplificador.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 132). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0218",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Indique cual de las siguientes respuestas es falsa:",
+    options: [
+      "Un amplificador es lineal cuando la señal de salida es fiel reflejo de la entrada, pero amplificada.",
+      "Los amplificadores pueden ser clase A, B o C.",
+      "La carga de un amplificador de potencia debe ser del valor especificado por el fabricante.",
+      "La salida de un amplificador de potencia, nunca va seguida de filtros destinados a eliminar los armónicos.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 218). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0016",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La velocidad de propagación de las ondas electromagnéticas en vacío es",
+    options: [
+      "Creciente",
+      "Decreciente",
+      "Directamente proporcional a la frecuencia de las ondas",
+      "Constante",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 16). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0143",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un termistor PTC es aquel que:",
+    options: [
+      "Su resistencia está en función de la corriente que la atraviesa.",
+      "Su valor aumenta con la temperatura.",
+      "Se usa como estabilizador de corriente.",
+      "Su valor disminuye al aumentar la temperatura.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 143). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0136",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La forma más común de propagación en VHF y UHF es por:",
+    options: [
+      "Onda de superficie.",
+      "Onda directa.",
+      "Onda ionosférica.",
+      "Onda reflejada.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 136). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0230",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En una antena dipolo con trampas multibanda, las trampas están formadas por:",
+    options: [
+      "Rectificadores supresores de ondas estacionarias.",
+      "Transformadores simétricos-asimétricos.",
+      "Circuitos resonantes.",
+      "Aisladores para corrientes inversas.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 230). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0259",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Una de las técnicas para tratar de eliminar interferencias es el filtrado. Si se utiliza un filtro pasobanda, ¿Qué se consigue?:",
+    options: [
+      "Acrecentar la banda de frecuencias",
+      "Anular la sensibilidad del receptor",
+      "Atenuar las frecuencias superiores e inferiores al intervalo de la banda de paso",
+      "Nada",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 259). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0175",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "En un equipo transmisor con modulación de frecuencia (FM) la desviación máxima de frecuencia es 25 KHz y la frecuencia moduladora es 10 KHz. ¿Cuál es el valor del \"índice de modulación\" del equipo?:",
+    options: [
+      "250",
+      "10",
+      "2,5",
+      "1",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 175). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0207",
+    part: 1,
+    topicId: "componentes",
+    stem: "En la conexión de resistencias en un circuito:",
+    options: [
+      "El valor de la agrupación de ellas en serie puede ser menor que el valor de una de ellas.",
+      "El valor de la conexión de dos resistencias en paralelo, da un valor resultante menor que cualquiera de ellas.",
+      "Sólo se pueden conectar en serie.",
+      "Sólo se pueden conectar en paralelo.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 207). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0056",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Los medios más comunes para proteger de interferencias a un receptor son:",
+    options: [
+      "Sobremodular la señal de entrada.",
+      "Transformadores de tensión.",
+      "Altavoces de alta impedancia.",
+      "Toma a tierra y condensadores.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 56). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0168",
+    part: 1,
+    topicId: "componentes",
+    stem: "El amperímetro se debe conectar:",
+    options: [
+      "En serie.",
+      "En paralelo.",
+      "Por medio de un transformador.",
+      "Con una carga fiticia.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 168). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0247",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "La propagación radioeléctrica por onda de superficie:",
+    options: [
+      "Se emplea para cualquier enlace radioeléctrico a excepción de los enlaces satélites.",
+      "La señal radioeléctrica se propaga siguiendo la curvatura terrestre.",
+      "Sólo se emplea para trayectos marítimos.",
+      "Es el medio de propagación característico en las grandes ciudades.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 247). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0013",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La unidad de medida de intensidad eléctrica es el",
+    options: [
+      "Voltio",
+      "Vatio",
+      "Ohmio",
+      "Amperio",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 13). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0166",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Una batería almacena energía eléctrica mediante un proceso:",
+    options: [
+      "Químico.",
+      "Acústico.",
+      "Mecánico.",
+      "Eólico.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 166). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0202",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "La transferencia máxima de potencia entre dos circuitos se dará cuando:",
+    options: [
+      "La antena esté bien despejada.",
+      "La antena esté puesta a tierra.",
+      "Exista adaptación de las impedancias",
+      "Haya ondas estacionarias.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 202). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0160",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Indique el orden de los elementos de una fuente de alimentación lineal:",
+    options: [
+      "A Transformador, B Rectificador, C Regulador, D Filtro.",
+      "A Rectificador, B Transformador, C Filtro, D Regulador.",
+      "A Regulador, B Filtro, C Transformador, D Rectificador.",
+      "A Filtro, B Transformador, C Regulador, D Rectificador.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 160). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0186",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Cuál de los siguientes conceptos puede ser motivo de generación de interferencias?:",
+    options: [
+      "La sensibilidad.",
+      "La amigabilidad.",
+      "La intermodulación.",
+      "Clase de emisión.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 186). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0220",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "¿Qué valor indicará un medidor de ondas estacionarias, en el caso de un acoplamiento óptimo entre un transmisor y una antena?:",
+    options: [
+      "0",
+      "10",
+      "2",
+      "1",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 220). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1560",
+    part: 1,
+    topicId: "componentes",
+    stem: "Con tres baterías iguales, de X voltios cada una, y conectadas adecuadamente en serie, se consigue una tensión de:",
+    options: [
+      "3 X voltios",
+      "X/3 voltios",
+      "3 voltios",
+      "0 voltios",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1560). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0182",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Para el desvanecimiento o fading, es correcto afirmar que:",
+    options: [
+      "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+      "Se evita con una antena omnidireccional.",
+      "La energía de una onda permanece invariable.",
+      "A frecuencias muy altas se pierden las ondas espaciales.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 182). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0099",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En una antena directiva tipo Yagi los elementos parásitos:",
+    options: [
+      "Se conectan al cable de alimentación.",
+      "Necesitan un balun para su adaptación.",
+      "Permiten aumentar el ancho de banda de emisión.",
+      "Proporcionan directividad.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 99). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0205",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
+    options: [
+      "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado.",
+      "Se tiene que dejar de emitir, al menos temporalmente.",
+      "Se comunica al presidente de la comunidad.",
+      "Se debe apagar la instalación de ICT.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 205). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-2102",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Un circuito con un transistor montado en colector común se denomina también:",
+    options: [
+      "Colector mixto",
+      "Colector par",
+      "Seguidor emisor",
+      "Colector seguidor.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2102). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-0050",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "Cuando dos o más señales atraviesan simultáneamente un sistema no lineal, existe el riesgo de que se genere",
+    options: [
+      "Realimentación excesiva en las etapas amplificadoras.",
+      "Disminución del volumen.",
+      "Distorsión por intermodulación.",
+      "Alto nivel de ruido térmico.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 50). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-1-1567",
+    part: 1,
+    topicId: "componentes",
+    stem: "En el código de colores para la identificación de resistencias, el número cuatro está indicado por el color",
+    options: [
+      "Verde.",
+      "Azul.",
+      "Rojo.",
+      "Amarillo.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1567). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1801",
     part: 2,
     topicId: "marco-normativo",
-    stem: "Las utilizaciones de carácter experimental con características técnicas distintas a las especificadas en el Reglamento de uso del dominio público radioeléctrico por aficionados:",
+    stem: "El examen de radioaficionado:",
     options: [
-      "Únicamente están previstas en bandas de frecuencia superiores a 10,6 GHz.",
-      "Requerirán una autorización especial.",
-      "No están previstas en la reglamentación vigente.",
-      "Deberán ser previamente autorizadas por el Ayuntamiento de la localidad.",
+      "Evalúa la capacidad de la persona para operar estaciones radioeléctricas del Servicio de Aficionados y Servicio de Aficionados por Satélite.",
+      "Quien lo supera puede iniciar las emisiones en las bandas de radioaficionados.",
+      "Sólo puede realizarse una vez al año.",
+      "En Europa sólo se exige en España y Portugal.",
     ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 374.",
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1801). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-064",
+    id: "quijotes-84-1826",
     part: 2,
     topicId: "marco-normativo",
-    stem: "Los planes de banda de la IARU:",
+    stem: "¿Con qué potencia máxima de portadora se puede emitir en la banda de frecuencias 50.0-51-0 MHz, de acuerdo con el Reglamento de Radioaficionados?",
     options: [
-      "Solamente tienen en cuenta las bandas inferiores a 1.000 MHz.",
-      "Proporcionan información sobre el modo recomendado de utilización en cada banda de frecuencias.",
-      "Solamente detallan el uso de bandas superiores a 1.000 MHz.",
-      "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT.",
+      "50W.",
+      "100W.",
+      "150W.",
+      "200W.",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 399.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1826). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-065",
+    id: "quijotes-84-1841",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El plazo de que dispone la Administración para resolver y notíficar las solicítudes de autorizaciones de radioaficionado será de:",
+    options: [
+      "Tres semanas.",
+      "Cuatro semanas.",
+      "Cinco semanas.",
+      "Seis semanas.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1841). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1844",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Cual de los siguientes sufijos podrá ser asignado a un distintivo de llamada de la autorización de radioaficionado?:",
+    options: [
+      "EEE.",
+      "TTT.",
+      "PAN.",
+      "QRS.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1847",
     part: 2,
     topicId: "instalaciones",
-    stem: "Como norma general las instalaciones en una estación de radioaficionado deberán ser efectuadas:",
+    stem: "Como norma general, la instalación de una estación de aficionado deberá ser efectuada:",
     options: [
-      "Directamente por el propietario de la estación.",
-      "Exclusivamente por un técnico de una Asociación legalizada de Radioaficionados.",
-      "Por un funcionario técnico de la Administración competente.",
+      "Únicamente por el propietario de la estación.",
+      "Por un funcionario técnico de la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente.",
+      "Exclusivamente por un técnico de una asociación legalizada de radioaficionados.",
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.",
     ],
     correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 403.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-066",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "En la nomenclatura de las bandas de frecuencia, la banda SHF corresponde a las frecuencias comprendidas entre:",
-    options: [
-      "3 y 30 MHz.",
-      "300 y 3.000 kHz.",
-      "3 y 30 GHz.",
-      "300 y 3.000 MHz.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 426.",
-  },
-  {
-    id: "quijotes-067",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Cada autorización de radioaficionado dispondrá de un distintivo de llamada, cuyo sufijo estará constituido por:",
-    options: [
-      "Una cifra correspondiente al distrito de residencia.",
-      "Dos primeras letras de alguna de las series internacionales atribuidas a España.",
-      "Hasta tres letras que se asignarán ordenadas alfabéticamente por turno riguroso de expedición.",
-      "Tres letras que comiencen por la Q.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 428.",
-  },
-  {
-    id: "quijotes-068",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
-    options: [
-      "87,5 - 107 MHz sin limitación de potencia.",
-      "26,960 - 27,410 MHz.",
-      "144 - 146 y 430-440 MHz.",
-      "87,5 - 108 MHz con potencia máxima de 10mW.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 450.",
-  },
-  {
-    id: "quijotes-069",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "En relación con una estación de aficionado y su utilización es correcto significar que:",
-    options: [
-      "El operador viene obligado a utilizar potencias altas para comunicaciones de corta distancia.",
-      "Deberá estar provista la estación de los elementos adecuados para comprobar que la emisión se realiza dentro de las bandas autorizadas.",
-      "En el caso de una operación se podrá ocupar mayor anchura de banda que la anchura de banda necesaria para cada clase de emisión.",
-      "El operador no viene obligado a cumplir el Reglamento sobre perturbaciones parasitas en vigor.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 462.",
-  },
-  {
-    id: "quijotes-070",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Los extranjeros que acrediten la condición de residentes en España podrán ser titulares de autorizaciones de radioaficionado españolas en los siguientes casos, indique la alternativa incorrecta:",
-    options: [
-      "Cuando sean titulares de un diploma de operador.",
-      "Cuando sean titulares de un cetificado HAREC expedido por cualquier país que haya aplicado la Recomendación CEPT/R 61-02.",
-      "Cuando exista Acuerdo o Convenio de reciprocidad en la materia con el país de origen del radioaficionado.",
-      "Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 467.",
-  },
-  {
-    id: "quijotes-071",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "En un distintivo de llamada, la cifra 0 podrá ser autorizada exclusivamente:",
-    options: [
-      "Para exposiciones de carácter internacional.",
-      "Para concursos de alta competitividad.",
-      "Con motivos de actos que sean inaugurados o visitados por Su Majestad el Rey.",
-      "Para uso temporal en eventos de carácter autonómico o local.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 468.",
-  },
-  {
-    id: "quijotes-072",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "¿Cómo se deletrea la palabra REY?",
-    options: [
-      "Radio, Echo, Yankee",
-      "Romeo, Echo, Yankee",
-      "Radio, Elo, Yuma",
-      "Romeo, Echo, Yuma",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 487.",
-  },
-  {
-    id: "quijotes-073",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "¿Cuál de las siguientes acciones está permitida realizar en el tráfico entre estaciones de aficionado?:",
-    options: [
-      "Transmitir mensajes de naturaleza técnica sobre ensayos",
-      "Transmitir propaganda electoral",
-      "Emitir anuncios relacionados con productos a utilizar en la radioafición, siempre y cuando sean con fines lucrativos",
-      "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 488.",
-  },
-  {
-    id: "quijotes-074",
+    id: "quijotes-84-1860",
     part: 2,
     topicId: "operacion-seguridad",
-    stem: "El código RST se utiliza para:",
+    stem: "¿Qué grupo del código Q indica que el operador de la estación llamará más tarde?",
     options: [
-      "Deletrear el mensaje",
-      "Informar sobre la banda de frecuencias que se está utilizando",
-      "Acceder a un repetidor",
-      "Informar sobre la intensidad de la señal recibida",
+      "QRZ.",
+      "QRX.",
+      "QRL.",
+      "QSW.",
     ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 493.",
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1860). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-075",
+    id: "quijotes-84-1868",
     part: 2,
     topicId: "licencias-indicativos",
-    stem: "La tranmisión del distintivo de llamada se efectuará:",
+    stem: "El prefijo \"EG\" de un distintivo de llamada se relaciona con:",
     options: [
-      "Unicamente al comienzo de la emisión.",
-      "Al menos cada treinta minutos.",
-      "Unicamente si se emite desde una estación móvil.",
-      "Al comienzo y final de cada emisión.",
+      "Usos temporales de especial relevancia para eventos de carácter regional, autonómico o local.",
+      "Usos temporales de especial relevancia para eventos de carácter nacional.",
+      "Usos temporales no especialmente significativos.",
+      "Usos temporales de relevancia internacional.",
     ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 521.",
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-076",
+    id: "quijotes-84-1873",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El acceso a los repetidores analógicos y digitales finales será necesariamente:",
+    options: [
+      "Obligatorio.",
+      "Condicionado.",
+      "Libre y si estuvieran dotados de código de acceso, este deberá ser público.",
+      "Intermitente.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1873). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1885",
     part: 2,
     topicId: "instalaciones",
-    stem: "Es obligatorio que la Jefatura Provincial de Inspección de Telecomunicaciones informe al presidente de la comunidad de propietarios afectada siempre que:",
+    stem: "Un radioaficionado podrá instalar la antena de su estación fija en el exterior de un inmueble si:",
     options: [
-      "Se pretenda cambiar las antenas.",
-      "Se pretenda instalar las antenas en el exterior del inmueble.",
-      "Se reciba la autorización de telecomunicaciones.",
-      "Se vayan a realizar obras por parte de la comunidad.",
+      "En el inmueble reside un amigo.",
+      "En el inmueble no hay instalada otra antena.",
+      "Se hace cargo de los costes de instalación.",
+      "Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.",
     ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 523.",
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-077",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "¿Qué es la licencia CEPT?:",
-    options: [
-      "Aquella que permite temporalmente su utilización en todos los países acogidos a la Recomendación T/R 61-01.",
-      "La que permite transmitir en cualquier país de Europa.",
-      "La que sólo permite la transmisión en bandas VHF/UHF.",
-      "Aquella que permite su utilización a nivel internacional.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 524.",
-  },
-  {
-    id: "quijotes-078",
+    id: "quijotes-84-1887",
     part: 2,
     topicId: "marco-normativo",
-    stem: "Una estación portable de aficionado:",
+    stem: "La Ley General de Telecomunicaciones tipifica como infracción grave:",
     options: [
-      "Puede ser utilizada durante su traslado.",
-      "Es una estación fija, que puede ser utilizada temporalmente en ubicación distinta de la habitual.",
-      "Al ser estación móvil, puede ser utilizada mientras se encuentre detenida en puntos no determinados.",
-      "Posee antena y fuente de energía incorporada al propio equipo, ya que es una estación móvil.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 526.",
-  },
-  {
-    id: "quijotes-079",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "¿Cuál de las siguientes alternativas es correcta?",
-    options: [
-      "No se precisa una autorización administrativa para la utilización de un distintivo de llamada temporal.",
-      "La autorización especial del uso del espectro radioeléctrico por radioaficionados será nominativa.",
-      "Una autorización de radioaficionado no tiene por qué llevar asociado un distintivo de llamada.",
-      "Una estación portable de aficionado es a la vez estación móvil.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 537.",
-  },
-  {
-    id: "quijotes-080",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Si una estación tiene el indicativo de llamada EF2GGG:",
-    options: [
-      "Pertenece a un radioaficionado de la provincia de Cantabria.",
-      "Se le ha adjudicado al periódico de tirada nacional &quot;GGG&quot;, de ahí el sufijo.",
-      "Es concedido para uso temporal por un evento no especialmente significativo.",
-      "Es de naturaleza indefinida.",
+      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.",
+      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios por otros operadores.",
+      "La emisión de señales de identificación falsas o engañosas.",
+      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general.",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 551.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1887). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-081",
+    id: "quijotes-84-1918",
     part: 2,
     topicId: "marco-normativo",
-    stem: "En el servicio de aficionados, la radiobaliza:",
+    stem: "La señal de seguridad en radiotelefonía se compone:",
     options: [
-      "Es una estación individual de radioaficionado.",
-      "Puede ser utilizada con carácter temporal en ubicación distinta de la habitual.",
-      "Tiene por objeto ampliar el alcance de las comunicaciones.",
-      "Basa su funcionamiento en la emisión automática de señales de identificación.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 560.",
-  },
-  {
-    id: "quijotes-082",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "De acuerdo con la Ley General de Telecomunicación, la sanción impuesta por una falta grave prescribirá:",
-    options: [
-      "Al año.",
-      "A los dos años.",
-      "Al mes.",
-      "A los tres años.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 563.",
-  },
-  {
-    id: "quijotes-083",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Al realizar las emisiones desde estaciones de radioaficionados:",
-    options: [
-      "Es aceptable dar únicamente la parte final (sufijo) del indicativo.",
-      "Es aceptable inventar nuevas palabras para deletrear el indicativo.",
-      "Es recomendable finalizar la emisión con la palabra &quot;cambio&quot;.",
-      "Es aconsejable emitir sin comprobar que la frecuencia se está utilizando.",
+      "De la palabra &quot;Securité&quot; repetida cinco veces.",
+      "De la palabra Cuidado repetida cinco veces.",
+      "De la palabra &quot;Securité&quot; repetida tres veces.",
+      "De la palabra Cuidado repetida tres veces.",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 1572.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-084",
+    id: "quijotes-84-1919",
     part: 2,
-    topicId: "marco-normativo",
-    stem: "Los Planes de Banda:",
+    topicId: "licencias-indicativos",
+    stem: "Los distintivos de llamada con sufijo de 2 letras:",
     options: [
-      "Son establecidos por las Asociaciones locales de radioaficionados.",
-      "Sirven de guía a los radioaficionados de todo el mundo.",
-      "Son establecidos sin tener en cuenta la división en Regiones de la UIT.",
-      "Deben ser aprobados por la Dirección General de Telecomunicaciones.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 1573.",
-  },
-  {
-    id: "quijotes-085",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "En España, los Planes de Banda utilizados por los radioaficionados:",
-    options: [
-      "Son establecidos por asociaciones locales de radioaficionados.",
-      "Son aprobados por la Dirección General de Telecomunicaciones.",
-      "Son los planes de la IARU Región 1, utilizados como norma general.",
-      "No tienen ninguna relación con la UIT.",
+      "Se reservan únicamente para estaciones colectivas.",
+      "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+      "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+      "No pueden ser reutilizados.",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-examen, quiz QSM 14, pregunta 2211.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-086",
-    part: 2,
-    topicId: "operacion-seguridad",
-    stem: "El código Q:",
-    options: [
-      "Se utiliza exclusivamente en situaciones de emergencia.",
-      "Está compuesto por siete letras.",
-      "Actualmente ha caído en desuso.",
-      "Empieza siempre por la letra Q.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1803.",
-  },
-  {
-    id: "quijotes-087",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "El deletreo del distintivo EA3RCQ según el alfabeto fonético internacional:",
-    options: [
-      "Echo, Alfa, Tres, Romeo, Charlie, Quebec.",
-      "E, A, Tres, R, C, Q.",
-      "Echo, Alfa, Three, Romeo, Charlie, Quebec.",
-      "El deletreo de distintivos no está permitido.",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1812.",
-  },
-  {
-    id: "quijotes-088",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "En telegrafía, la abreviatura de procedimiento usada para finalizar una transmisión es:",
-    options: [
-      "AS.",
-      "TU.",
-      "FN.",
-      "AR.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1831.",
-  },
-  {
-    id: "quijotes-089",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "La autorización de aficionados para extranjeros residentes en España se podrá obtener:radioaficionado, cuando:",
-    options: [
-      "Cuando sea titular de un certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.",
-      "Solo si existe Acuerdo o Convenio de reciprocidad en la materia con su país de origen.",
-      "No existen autorizaciones de aficionados para extranjeros residentes, solamente temporales.",
-      "Si se han examinado en España de la Reglamentación Nacional.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1842.",
-  },
-  {
-    id: "quijotes-090",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "La banda de frecuencias número 8, cuyo símbolo es VHF, corresponde a las ondas:",
-    options: [
-      "Kilométricas.",
-      "Métricas.",
-      "Decimétricas.",
-      "Milimétricas.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1850.",
-  },
-  {
-    id: "quijotes-091",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Se puede interferir deliberadamente a otra estación de radioaficionado:",
-    options: [
-      "Si está operando ilegalmente.",
-      "Para disminuir la ocupación de la banda.",
-      "Si no ha emitido su indicativo.",
-      "Nunca.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1892.",
-  },
-  {
-    id: "quijotes-092",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Para la obtención de la licencia de estación de radioaficionado es necesario presentar:",
-    options: [
-      "Solicitud adjuntando una memoria descriptiva del conjunto de la instalación.",
-      "Un escrito informando que se ha efectuado la instalación.",
-      "La cédula de habitabilidad del inmueble donde se va a instalar.",
-      "Documento que acredite estar inscrito en un asociación de Radioaficionado.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1898.",
-  },
-  {
-    id: "quijotes-093",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "En comunicaciones del Servicio de Aficionados, la palabra CID se deletrea:",
-    options: [
-      "Charter, India, Delfo.",
-      "Charlie, India, Delta.",
-      "Charlie, India, Delfo.",
-      "Charter, Inca, Delta.",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1915.",
-  },
-  {
-    id: "quijotes-094",
+    id: "quijotes-84-1941",
     part: 2,
     topicId: "licencias-indicativos",
     stem: "El certificado HAREC:",
@@ -1333,80 +4421,66 @@ export default [
       "Permite obtener autorización de radioaficionado en cualquier país que aplique la recomendación CEPT T/R 61-02.",
     ],
     correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1941.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1941). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-095",
-    part: 2,
-    topicId: "operacion-seguridad",
-    stem: "¿Cuál de las siguientes abreviaturas del código Q indica que debe aumentar la potencia de transmisión?:",
-    options: [
-      "QRO.",
-      "QRM.",
-      "QSV.",
-      "QRP.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1946.",
-  },
-  {
-    id: "quijotes-096",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Los distritos de los indicativos de llamada son:",
-    options: [
-      "Nueve.",
-      "Ilimitados.",
-      "Todos los que se soliciten.",
-      "Se han suprimido los distritos.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1947.",
-  },
-  {
-    id: "quijotes-097",
+    id: "quijotes-84-1954",
     part: 2,
     topicId: "marco-normativo",
-    stem: "Cómo definiría \"Radiocomunicación\":",
+    stem: "Sobre los planes de banda de la IARU es correcto decir que:",
     options: [
-      "Toda telecomunicación transmitida exclusivamente a través de satélites de comunicaciones.",
-      "Toda telecomunicación transmitida por medio de ondas radioeléctricas.",
-      "Toda telecomunicación que pueda transmitirse fuera del territorio nacional.",
-      "Cualquier telecomunicación que permita la tolerancia de frecuencias.",
+      "Solo existen planes para la Región 1.",
+      "Los planes para la Región 1 y la Región 2 son idénticos.",
+      "No tienen previstas frecuencias para repetidores.",
+      "Tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1954). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1956",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "La señal de urgencia en radiotelefonía se compone:",
+    options: [
+      "Del grupo &quot;urgence urgente&quot; repetido tres veces.",
+      "Del grupo &quot;pan pan&quot; repetido tres veces.",
+      "De la palabra &quot;urgente&quot; repetido tres veces.",
+      "De la palabra &quot;pan&quot; repetido tres veces.",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1949.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-098",
+    id: "quijotes-84-1960",
     part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Toda licencia CEPT expedida por una Administración que haya adoptado la Recomendación T/R 61-01.",
+    topicId: "marco-normativo",
+    stem: "El Reglamento de uso del dominio público radioeléctrico por aficionados se dicta al amparo de lo dispuesto en el artículo 149.1.21ª de la Constitución, que atribuye al Estado competencias exclusivas en materia de:",
     options: [
-      "Da derecho a la obtención del Diploma de Operador.",
-      "Da derecho a obtener un distintivo de llamada en el país visitado.",
-      "Goza de equiparación a la autorización de aficionado nacional, en los términos recogidos en el Reglamento de uso del dominio público radioeléctrico por aficionados.",
-      "Su titular tendrá que superar un examen especial.",
+      "Telecomunicaciones.",
+      "Interferencias y calidad de los servicios de radiocomunicaciones.",
+      "Gestión en materia de protección de medio ambiente.",
+      "Normas básicas del régimen de prensa, radio y televisión.",
     ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1951.",
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1960). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-099",
+    id: "quijotes-84-1961",
     part: 2,
-    topicId: "licencias-indicativos",
-    stem: "En el caso de que un radioaficionado cambie de domicilio que implique cambio de distrito. ¿Qué ocurriría con su distintivo?:",
+    topicId: "marco-normativo",
+    stem: "Señale la proposición incorrecta:",
     options: [
-      "Tendría que volverse a examinar de nuevo.",
-      "No ocurriría nada, los distintivos son únicos e inamovibles.",
-      "El interesado podrá solicitar mantener su sufijo, si este estuviera disponible. Caso contrario le será asignado un nuevo sufijo siguiendo el orden establecido.",
-      "Se le autorizaría uno temporal de periodo ilimitado.",
+      "Las antenas y elementos anejos se instalarán de forma que no produzcan molestias, peligro o daño a personas o bienes.",
+      "En los casos en que las antenas se sitúen en azoteas o lugares transitables se señalizarán los anclajes y riostras.",
+      "La instalación de las antenas se hará de modo que se respeten las separaciones entre ellas y los elementos, instalaciones y antenas de otros servicios para que estos no resulten degradados en su funcionamiento.",
+      "Las antenas y elementos anejos, y en particular, soportes, anclajes y riostras deberán ser de materiales endebles y de fácil instalación para facilitar su posterior desmontaje.",
     ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1952.",
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1961). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-100",
+    id: "quijotes-84-1971",
     part: 2,
     topicId: "marco-normativo",
     stem: "En los casos de cambio de domicilio:",
@@ -1417,150 +4491,122 @@ export default [
       "Deberá cambiarse siempre el prefijo del distintivo de llamada.",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1971.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1971). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-101",
+    id: "quijotes-84-1999",
     part: 2,
-    topicId: "marco-normativo",
-    stem: "Defina, estación fija remota de aficionado:",
+    topicId: "licencias-indicativos",
+    stem: "Las autorizaciones especiales para emisiones en bandas de frecuencias de uso restringido:",
     options: [
-      "Estación fija de aficionado que puede ser accionada a distancia.",
-      "Estación móvil de uso intermitente.",
-      "Estación portátil que se utiliza en itinerarios de larga distancia.",
-      "Estación repetidora de gran alcance.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 1997.",
-  },
-  {
-    id: "quijotes-102",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "El acceso a los repetidores analógicos y digitales finales:",
-    options: [
-      "Estará restringido a los miembros de la Asociación titular de la licencia de la estación repetidora",
-      "Será necesariamente libre",
-      "Estará restringido a los titulares de licencia con antigüedad superior a 1 año",
-      "Estará restringido a los titulares de distintivo de llamada con sufijo de 2 letras",
-    ],
-    correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2006.",
-  },
-  {
-    id: "quijotes-103",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Los planes de banda de la IARU:",
-    options: [
-      "Son iguales a nivel mundial",
-      "No proporcionan información sobre el modo preferido de utilización",
-      "Son un instrumento básico para regular el uso de las bandas de frecuencias",
-      "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT",
+      "No están previstas en la reglamentación vigente.",
+      "Están previstas para realizar emisiones sin utilización de un distintivo.",
+      "Se otorgarán por un plazo máximo de dieciocho meses.",
+      "No permiten la utilización de equipos de construcción propia.",
     ],
     correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2015.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1999). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-104",
+    id: "quijotes-84-2003",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional la letra N se codifica como:",
+    options: [
+      "Never",
+      "Name",
+      "Nice",
+      "November",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2003). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2037",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los planes de banda de la IARU en las diferentes Regiones geográficas definidas por la Unión Internacional de Telecomunicaciones (ITU):",
+    options: [
+      "Pueden ser distintos en cada Región.",
+      "Son los mismos en todas las Regiones.",
+      "Son siempre iguales los de la Región 1 a los de la Región 3.",
+      "No hay planes de banda en la Región 3.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2037). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2044",
     part: 2,
     topicId: "instalaciones",
-    stem: "En la instalación de una antena de radioaficionado y sus elementos anejos:",
+    stem: "Es obligatorio que la Jefatura Provincial de Inspección de Telecomunicaciones informe al presidente de la comunidad de propietarios afectada siempre que:",
     options: [
-      "No es necesario tener en cuenta la proximidad de líneas eléctricas aéreas",
-      "No es necesario señalizar los anclajes y riostras si la antena está situada en un lugar transitable",
-      "Es necesario tener en cuenta las instalaciones y antenas de otros servicios",
-      "Los soportes de la antena se podrán fijar al mástil de conducción aérea de energía eléctrica",
-    ],
-    correctIndex: 2,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2024.",
-  },
-  {
-    id: "quijotes-105",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "Entre las condiciones de utilización de la licencia CEPT señaladas en el Reglamento de Aficionados, no se encuentra una de las siguientes. Indíquela:",
-    options: [
-      "Dicha licencia habilita para las utilizaciones de estaciones portables y móviles",
-      "Su titular viene obligado a presentar la licencia a petición de las autoridades del país visitado",
-      "El titular no podrá solicitar protección contra las interferencias perjudiciales",
-      "La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2032.",
-  },
-  {
-    id: "quijotes-106",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "De acuerdo con el artículo 25 del Reglamento de Radiocomunicaciones de la ITU:",
-    options: [
-      "Las transmisiones entre estaciones de aficionado de diferentes países no deberán codificarse para ocultar su significado.",
-      "Siempre estarán permitidas las comunicaciones por radio entre radioaficionados de distintos países.",
-      "Las comunicaciones por radio entre radioaficionados de diferentes países se utilizarán únicamente en casos de emergencia o desastre.",
-      "La potencia máxima de las estaciones de aficionado será fijada por la Unión Internacional de Telecomunicaciones (ITU).",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2048.",
-  },
-  {
-    id: "quijotes-107",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "La licencia CEPT de un radioaficionado español:",
-    options: [
-      "Solamente le permite hacer uso de ella dentro del territorio español.",
-      "No le habilita para utilizar estaciones portables.",
-      "Se la concederá la autoridad competente del país europeo que vaya a visitar.",
-      "Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación.",
-    ],
-    correctIndex: 3,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2055.",
-  },
-  {
-    id: "quijotes-108",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Puedo realizar transmisiones desde Andorra si tengo la licencia?",
-    options: [
-      "Si, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el país en el que residen habitualmente, pueden obtener una licencia temporal para usar su estación en territorio andorrano.",
-      "Si",
-      "No, en ningun caso",
-      "Solo en caso de emergencia",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2057.",
-  },
-  {
-    id: "quijotes-109",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "El certificado HAREC:",
-    options: [
-      "Se expedirá conjuntamente con el diploma de operador.",
-      "Permite operar en frecuencias distintas a las autorizadas.",
-      "No sirve para demostrar que se ha aprobado el examen de radioaficionado con un programa básico.",
-      "Permite obtener licencia en cualquier país del mundo.",
-    ],
-    correctIndex: 0,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2061.",
-  },
-  {
-    id: "quijotes-110",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF, cuando estén instaladas fuera del casco urbano, será:",
-    options: [
-      "Igual que la permitida en la banda de HF.",
-      "50 W.",
-      "Igual que la permitida a las instaladas en el interior del casco urbano.",
-      "35 W.",
+      "Se pretenda cambiar las antenas.",
+      "Se pretenda instalar las antenas en el exterior del inmueble.",
+      "Se reciba la autorización de telecomunicaciones.",
+      "Se vayan a realizar obras por parte de la comunidad.",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2063.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2044). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    id: "quijotes-111",
+    id: "quijotes-84-2049",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por obras en la comunidad, cuando estas hayan terminado:",
+    options: [
+      "Tendrá que presentar nueva memoria.",
+      "Podrá instalarla nuevamente en condiciones similares a las anteriores.",
+      "Ha de pedir permiso a la comunidad de propietarios.",
+      "Deberá comunicarlo a la Dirección General de Telecomunicaciones y Tecnología de la Información.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2049). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2066",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Es erróneo afirmar que:",
+    options: [
+      "Las transmisiones entre estaciones de radioaficionados se efectuarán en lenguaje claro.",
+      "Podrá hacer uso de una estación cualquier otro operador (distinto de su titular) que se encuentre en posesión de la autorización de radioaficionado.",
+      "Las transmisiones entre estaciones de radioaficionado deberá limitarse a mensajes de naturaleza técnica relativos a ensayos y a observaciones de carácter puramente personal.",
+      "En la transmisión entre estaciones de radioaficionado está permitido la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2066). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2067",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "No es causa de revocación de una autorización de radioaficionado:",
+    options: [
+      "El mal uso del dominio público que provoque alteraciones que impidan el uso por terceros que dispongan del correspondiente título habilitante.",
+      "No adquirir una estación radioeléctrica de aficionado.",
+      "El incumplimiento del deber de comunicar fehacientemente a la Administración, cada cinco años, la intención de continuar utilizando el dominio público radioeléctrico.",
+      "La utilización para fines distintos de los que se establecen en la resolución de la autorización.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2067). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2071",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Una emisión de radioaficionado:",
+    options: [
+      "Se podrá codificar para ocultar su contenido.",
+      "No debe utilizarse para casos de emergencia o desastre.",
+      "Podrá utilizarse para comunicar con radioaficionados de cualquier pasís, sin limitaciones.",
+      "Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2071). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2074",
     part: 2,
     topicId: "instalaciones",
     stem: "Para instalar una antena en un edificio en régimen de propiedad horizontal:",
@@ -1571,6 +4617,3758 @@ export default [
       "No será necesario tener en cuenta las características mecánicas de la misma.",
     ],
     correctIndex: 1,
-    explain: "Fuente: Radio Club Quijotes (EA3RCQ) — reglamentacion-correccion, quiz QSM 84, pregunta 2074.",
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2074). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2081",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En el servicio de aficionados, la radiobaliza:",
+    options: [
+      "Es una estación individual de radioaficionado.",
+      "Puede ser utilizada con carácter temporal en ubicación distinta de la habitual.",
+      "Tiene por objeto ampliar el alcance de las comunicaciones.",
+      "Basa su funcionamiento en la emisión automática de señales de identificación.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2081). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2082",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Una estación fija de radioaficionado:",
+    options: [
+      "Puede ser utilizada mientras esté detenida en puntos no determinados.",
+      "Podrá se utilizada con carácter temporal como portable.",
+      "No podrá ser accionada a distancia, ya que se convertiría en móvil.",
+      "Se encuentra dentro de la clasificación de estaciones automáticas desatendidas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2082). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2104",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de las emisiones, no deberá ser superior a",
+    options: [
+      "5 w",
+      "50 w",
+      "75 w",
+      "1000 w",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1805",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Quién puede hacer uso de una estación de aficionado?",
+    options: [
+      "Cualquier familiar de primer grado que conviva con él, bajo su responsabilidad.",
+      "Cualquiera que vaya a obtener el Diploma de Operador.",
+      "Solo su titular.",
+      "Cualquier titular de autorización de radioaficionado, con permiso de su propietario.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1805). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1806",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Con que anticipación a la fecha prevista para el comienzo de las emisiones, se deberá solicitar una autorización especial de uso del espectro radioeléctrico por radioaficionados?",
+    options: [
+      "1 Mes.",
+      "2 Semanas.",
+      "3 Meses.",
+      "Ninguna.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1806). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1817",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En la licencia de estación de radioaficionado CEPT habrá de constar necesariamente una determinada información. Indique la respuesta incorrecta:",
+    options: [
+      "Autoridad que expide la licencia.",
+      "Distintivo de llamada.",
+      "Asociación de radioaficionados a la que pertenece.",
+      "Periodo de validez.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1823",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los planes de banda de la IARU:",
+    options: [
+      "Tienen previstas frecuencias para repetidores digitales en la banda 91.5-95.0 MHz.",
+      "Tienen previstas frecuencias para repetidores en la banda 433-433.375 MHz.",
+      "No tienen previstas frecuencias para comunicaciones por satélite.",
+      "No se aplican en países del Hemisferio Sur.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1823). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1835",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La obtención de la autorización de radioaficionado requerirá la obtención previa de:",
+    options: [
+      "Titulo de operador.",
+      "Carnet de operador.",
+      "Diploma de operador.",
+      "Permiso de un radio club.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1835). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1837",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "¿Qué abreviatura del código Q se refiere a la inteligibílidad de las señales?:",
+    options: [
+      "QRV.",
+      "QRK.",
+      "QRA.",
+      "QSW.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1837). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1852",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Un radioaficionado debe tener siempre una estación fija?",
+    options: [
+      "Si reside en una isla.",
+      "Si ha obtenido el diploma hace más de 5 años.",
+      "Si emite únicamente en VHF.",
+      "No es obligatorio disponer de estación fija.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1852). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1857",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
+    options: [
+      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias.",
+      "Efectuar emisiones radioeléctricas que incumplan gravemente los límites de exposición establecidos en la normativa de desarrollo del artículo 44 de esta Ley e incumplir gravemente las demás medidas de seguridad establecidas en dicha normativa, incluidas las obligaciones de señalización o vallado de las instalaciones radioeléctricas.",
+      "La divulgación del contenido, o de simples existencias, de mensajes no destinados al público en general emitidos o recibidos a través de servicios de telecomunicaciones, a los que se acceda mediante la interceptación voluntaria o involuntaria, su publicación o cualquier otro uso de ellos sin la debida autorización.",
+      "El incumplimiento reiterado de los requerimientos de información formulados por el órgano competente de la Administración del Estado en el ejercicio de sus funciones.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1857). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1863",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué plazo tiene la Administración para resolver una solicitud de Autorización de radioaficionado?",
+    options: [
+      "Cinco semanas.",
+      "Seis semanas.",
+      "Siete semanas.",
+      "Ocho semanas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1863). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1875",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Para no desmontar el sistema radiante de una estación fija, una vez cancelada la licencia, y dejarlo sólo para recepción, su titular deberá obtener:",
+    options: [
+      "Autorización por escrito de la Jefatura Provincial de Inspección de Telecomunicaciones.",
+      "Autorización por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios.",
+      "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+      "Comunicarlo por escrito a la propiedad del inmueble o, en su caso, de la comunidad de propietarios.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1875). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1900",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Las utilizaciones de carácter experimental con características técnicas distintas a las especificadas en el Reglamento de uso del dominio público radioeléctrico por aficionados:",
+    options: [
+      "Únicamente están previstas en bandas de frecuencia superiores a 10,6 GHz.",
+      "Requerirán una autorización especial.",
+      "No están previstas en la reglamentación vigente.",
+      "Deberán ser previamente autorizadas por el Ayuntamiento de la localidad.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1900). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1901",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En el Reglamento de uso del dominio público radioeléctrico por aficionados aparece la abreviatura CNAF que significa:",
+    options: [
+      "Cuadro Nacional de Autorización de Frecuencias.",
+      "Cuadro Normativo de Autorización de Frecuencias.",
+      "Cuadro Normativo de Atribución de Frecuencias.",
+      "Cuadro Nacional de Atribución de Frecuencias.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1911",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Al visitar un país distinto al suyo, todo titular de una licencia CEPT podrá:",
+    options: [
+      "Operar en cualquier banda de frecuencias sin limitación de potencia.",
+      "Solicitar protección a la administración del país visitado contra las interferencias perjudiciales.",
+      "Identificarse durante las emisiones emitiendo únicamente su propio distintivo.",
+      "Realizar emisiones si el país visitado ha adoptado la Recomendación CEPT T/R61-01.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1911). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1912",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con la división de la UIT del mundo en tres Regiones:",
+    options: [
+      "Toda España se encuentra en la Región 1.",
+      "La España peninsular y Baleares se encuentran en la Región 2 y Canarias en la Región 1.",
+      "Toda España se encuentra en la Región 2.",
+      "La división en Regiones sólo se aplica al continente americano.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1912). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1935",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Se entiende por estación digital de aficionado, la estación:",
+    options: [
+      "Dotada de un conjunto de dispositivos que permiten la realización de emisiones con técnicas digitales.",
+      "Destinada a ser utilizada exclusivamente en movimiento.",
+      "Fija de aficionado.",
+      "Que posee antena y fuente de energía incorporada al propio equipo.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1935). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1942",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Según el Reglamento de Radiocomunicaciones de la UIT:",
+    options: [
+      "El Servicio de Aficionados por Satélite no es un servicio de radiocomunicación.",
+      "La banda 144,00-146,00 MHz no está atribuida al Servicio de Aficionados.",
+      "Las estaciones de aficionado nunca pueden ser utilizadas para la transmisión de comunicaciones internacionales en nombre de terceros.",
+      "Una estación de aficionado es una estación del Servicio de Aficionados.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1942). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1944",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se deletrea el número 7?:",
+    options: [
+      "Severo",
+      "Sesteo.",
+      "Seven.",
+      "Siete.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1944). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1965",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En caso de cancelación de la Licencia de Estación de Aficionado. ¿Puede su titular mantener instalado el sistema radiante?:",
+    options: [
+      "Nunca.",
+      "Sí, si el sistema es poco voluminosos.",
+      "Siempre que lo autorice la Dirección General de Telecomunicaciones.",
+      "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1965). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1984",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El plazo del que dispone la Administración para resolver una solicitud de autorización de radioaficionado será de:",
+    options: [
+      "Seis semanas.",
+      "Un mes.",
+      "Tres meses.",
+      "Quince días.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1984). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1989",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En un distintivo de llamada, la cifra 0 podrá ser autorizada exclusivamente:",
+    options: [
+      "Para exposiciones de carácter internacional.",
+      "Para concursos de alta competitividad.",
+      "Con motivos de actos que sean inaugurados o visitados por Su Majestad el Rey.",
+      "Para uso temporal en eventos de carácter autonómico o local.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1989). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1996",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Los soportes de una antena de radioaficionado:",
+    options: [
+      "Se podrán fijar a los anclajes de un pararrayos.",
+      "No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen.",
+      "Se podrán fijar al soporte de una conducción aérea de energía eléctrica.",
+      "Nunca se fijarán directamente a la obra civil.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1998",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Es obligatorio respetar la reglamentación del país CEPT donde vayamos a emitir?:",
+    options: [
+      "No. Seguiemos siempre la reglamentación española.",
+      "Siempre.",
+      "Utilizaremos solo VHF/UHF.",
+      "Siempre y cuando no este en contradicción con la nuestra.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1998). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2021",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El \"distrito\", que compone el distintivo de llamada de un radioaficionado:",
+    options: [
+      "Es la cifra coincidente con el Distrito Postal de residencia del titular",
+      "Son las dos últimas cifras del D.N.I. de la autorización",
+      "Es la cifra coincidente con el número de distrito de residencia del titular, con arreglo a la división geográfica que se especifica en el Reglamento de Aficionados en vigor",
+      "Es la cifra 0 de uso exclusiva para distintivos temporales",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2027",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Si observa que un distitivo de llamada va precedido del prefijo EA seguido de un determinado número (del 1 al 9):",
+    options: [
+      "No haga caso, ya que se trata de una llamada de estación no autorizada",
+      "Deberá corregir al que emite, pues lo está haciendo mal",
+      "Se trata de un radioaficionado de clase A",
+      "Es que un titular de licencia CEPT extranjero está emitiendo en España",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2073",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con la Ley General de Telecomunicaciones, por comisión de infracciones graves se puede imponer al infractor una multa de hasta:",
+    options: [
+      "50.000 Euros",
+      "2.000.000 Euros",
+      "100.000 Euros",
+      "500.000 Euros",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2073). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2089",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Si se desea utilizar con carácter temporal una estación fija en emplazamiento distinto al autorizado, ¿con qué plazo de antelación se deberá notificar a la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente tal circunstancia?:",
+    options: [
+      "Una semana.",
+      "Cinco días.",
+      "Quince días.",
+      "Dos semanas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2089). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2095",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los Planes de Banda:",
+    options: [
+      "Son establecidos por las Asociaciones locales de radioaficionados.",
+      "Sirven de guía a los radioaficionados de todo el mundo.",
+      "Son establecidos sin tener en cuenta la división en Regiones de la UIT.",
+      "Deben ser aprobados por la Dirección General de Telecomunicaciones.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2095). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1811",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Si una antena debidamente autorizada, e instalada en la terraza de una Comunidad de propietarios, impide la realización de obras de conservación del edificio, el radioaficionado titular de la misma:",
+    options: [
+      "Puede exigir a la Comunidad el pago de los costes de desmontaje.",
+      "Está obligado a desmontarla temporalmente sin derecho a indemnización.",
+      "Sólo debe abonar la mitad de los costes.",
+      "Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1811). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1816",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El significado de la abreviatura PSE es:",
+    options: [
+      "Por si está a la escucha.",
+      "Por favor.",
+      "Puede seguir emitiendo.",
+      "Esta abreviatura no significa nada.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1816). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1845",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la memoria descriptiva, para la obtención de la licencia de una estación de aficionado, no es preciso incluir:",
+    options: [
+      "Las características y resistencia de la toma de tierra.",
+      "Un plano señalando la ubicación de la estación.",
+      "Marca, modelo y número de serie de los equipos radioeléctricos.",
+      "Certificado de empadronamiento.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1845). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1866",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Indica cual de las siguientes series de prefijos internacionales corresponden a las atribuidas a España, según el Reglamento de Radiocomunicaciones:",
+    options: [
+      "FM, FN, FA.",
+      "EA, EB, EC.",
+      "KN, KK, KL.",
+      "EPA, EQZ, EAA.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1866). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1869",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra \"CL\", que significa:",
+    options: [
+      "Cierre de la estación.",
+      "Repita.",
+      "Interferencia de RF.",
+      "Estación de control.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1889",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional la letra Q se identifica por:",
+    options: [
+      "Qwerty.",
+      "Queen.",
+      "Quebar.",
+      "Quebec.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1889). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1908",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Para que un menor de edad pueda obtener una licencia de estación de radioaficionado, deberá:",
+    options: [
+      "Aportar un escrito de autorización, en forma fehaciente de sus padres o personas que ostenten su custodia legal, en el que asumirán las responsabilidades que correspondan al menor titular de la licencia.",
+      "Estar en posesión del título de Graduado Escolar.",
+      "Presentar una declaración jurada de que hará buen uso del espectro radioeléctrico.",
+      "Poseer una walkie.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1908). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1914",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Por la comisión de una infracción grave tipificada en la Ley General de Telecomunicaciones se podrá imponer al infractor una multa por importe de hasta el duplo del beneficio bruto obtenido o, en el caso de que no resulte aplicable este criterio el límite máximo será de:",
+    options: [
+      "2.000.000 €",
+      "500.000 €",
+      "1.000.000 €",
+      "Ninguna de las anteriores.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1914). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1924",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Las Estaciones Repetidoras y Radiobalizas, deberán disponer de un sistema de alimentación ininterrumpida, para que en caso de fallo en la alimentación externa, puedan seguir funcionando por un periodo mínimo de:",
+    options: [
+      "Seis horas.",
+      "Siete horas.",
+      "Ocho horas.",
+      "Nueve horas.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1932",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De entre las diversas obligaciones del gestor de una estación desatendida NO se encuentra la de:",
+    options: [
+      "Actualizar periódicamente la información existente.",
+      "Procurar que el mantenimiento técnico de la estación garantice el servicio continuo de la misma.",
+      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.",
+      "Verificar que el tráfco de información se realice conforme a lo previsto por la normativa vigente al respecto.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1932). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1938",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Es correcto afirmar que:",
+    options: [
+      "Las transmisiones entre estaciones de aficionados se deberán efectuar en lenguaje claro.",
+      "Únicamente podrá utilizar una estación de aficionado su titular.",
+      "En la transmisión entre estaciones de aficionado está permitida la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero.",
+      "Las transmisiones entre estaciones de aficionado no deberán limitarse a mensajes de naturaleza técnica relativos a ensayos y a observaciones de carácter puramente personal.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1938). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1952",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En el caso de que un radioaficionado cambie de domicilio que implique cambio de distrito. ¿Qué ocurriría con su distintivo?:",
+    options: [
+      "Tendría que volverse a examinar de nuevo.",
+      "No ocurriría nada, los distintivos son únicos e inamovibles.",
+      "El interesado podrá solicitar mantener su sufijo, si este estuviera disponible. Caso contrario le será asignado un nuevo sufijo siguiendo el orden establecido.",
+      "Se le autorizaría uno temporal de periodo ilimitado.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1968",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La reglamentación vigente permite:",
+    options: [
+      "Ser titular de una autorización administrativa de radioaficionado sin haber obtenido el Diploma de Operador ni el certificado HAREC.",
+      "Ser titular de una licencia de estación sin disponer de autorización administrativa de radioaficionado.",
+      "Disponer de distintivo de llamada sin tener una licencia de estación.",
+      "Disponer de hasta un máximo de cinco distintivos de llamada.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1968). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1982",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Utilizar la palabra \"cambio\" al finalizar una transmisión en fonía es:",
+    options: [
+      "Recomendable.",
+      "Obligatorio.",
+      "Necesario.",
+      "Sancionable según la reglamentación vigente.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1982). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1985",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional la letra V se corresponde con la palabra:",
+    options: [
+      "Victor.",
+      "Valencia.",
+      "Victoria.",
+      "Vid.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1985). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1991",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "Toda estación colectiva fija de aficionado destinada a realizar estudios de propagación y cuyo funcionamiento se basa en la emisión automática de señales de identificación, recibe el nombre de:",
+    options: [
+      "Servicio de aficionado por satélite.",
+      "Estación repetidora de portadora o nodo.",
+      "Estación repetidora final.",
+      "Radiobaliza.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1993",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Definiría \"Estación automática desatendida\" como?:",
+    options: [
+      "Estación de emisiones no deseadas.",
+      "Estación repetidora de poco uso.",
+      "Estación colectiva de aficionado, que para su funcionamiento habitual no requiere la intervención directa del operador.",
+      "Estación de mediciones de potencia.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1993). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2004",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con el artículo 5 del Reglamento de Radiocomunicaciones de la UIT, desde el punto de vista de la atribución de frecuencias:",
+    options: [
+      "El mundo está dividido en cuatro Regiones",
+      "En la Región 4 no están permitidas las emisiones de radioaficionados",
+      "España se encuentra en la Región 1",
+      "Canarias se encuentra en la Región 2",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2023",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El indicativo de llamada ED3ZHO:",
+    options: [
+      "Pertenece a una estación fija de la provincia de Zaragoza",
+      "Tiene carácter temporal",
+      "Corresponde a una estación automática desatendida",
+      "No se puede adjudicar a estación colectiva alguna",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2030",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En aquellas Comunidades Autónomas en las que exista lengua cooficial además del castellano, la autorización de radioaficionados:",
+    options: [
+      "Siempre se expedirá únicamente en la lengua coficial",
+      "Deberá expedirse en formato bilingüe, si así lo solicita el interesado",
+      "Se expedirá únicamente en castellano",
+      "El Reglamento de Aficionados no contempla tal extremo",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2030). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2034",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Conforme a la nota 5.141C del Reglamento de Radioaficionados de la Unión Internacional de Radiocomunicaciones:",
+    options: [
+      "La banda 7100 a 7200 kHz está atribuida a titulo primario al servicio de radiodifusión hasta el 29 de marzo de 2009",
+      "La banda 144 - 146 MHz no está atribuida al Servicio de Aficionados",
+      "La banda 144 - 146 MHz está atribuida al Servicio de Aficionados hasta el 29 de marzo de 2030",
+      "La banda 7100 - 7200 kHz no está atribuida a ningún servicio",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2041",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La señal QRT tiene el significado de:",
+    options: [
+      "Su frecuencia varía.",
+      "Deje de transmitir.",
+      "Haga el favor de no interferir.",
+      "Acuse recibo.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2041). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2042",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La tranmisión del distintivo de llamada se efectuará:",
+    options: [
+      "Unicamente al comienzo de la emisión.",
+      "Al menos cada treinta minutos.",
+      "Unicamente si se emite desde una estación móvil.",
+      "Al comienzo y final de cada emisión.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2042). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2048",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con el artículo 25 del Reglamento de Radiocomunicaciones de la ITU:",
+    options: [
+      "Las transmisiones entre estaciones de aficionado de diferentes países no deberán codificarse para ocultar su significado.",
+      "Siempre estarán permitidas las comunicaciones por radio entre radioaficionados de distintos países.",
+      "Las comunicaciones por radio entre radioaficionados de diferentes países se utilizarán únicamente en casos de emergencia o desastre.",
+      "La potencia máxima de las estaciones de aficionado será fijada por la Unión Internacional de Telecomunicaciones (ITU).",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2048). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2052",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o elemento de fijación de las riostras en la obra civil del inmueble, repartiendo los esfuerzos mecánicos, se conoce con el nombre de:",
+    options: [
+      "Mástil.",
+      "Soporte.",
+      "Plano de tierra.",
+      "Anclaje.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2052). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2064",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional la letra B se codifica como:",
+    options: [
+      "Barril.",
+      "Breico",
+      "Bravo",
+      "Barco",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2064). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2203",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el sistema GMDSS, la alerta de socorro inicial en MF/HF se realiza mediante Llamada Selectiva Digital (DSC). ¿En qué frecuencia se transmite esta alerta en banda MF?",
+    options: [
+      "2.182 kHz",
+      "2.187,5 kHz",
+      "1.414 kHz",
+      "156,525 MHz",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1812",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El deletreo del distintivo EA3RCQ según el alfabeto fonético internacional:",
+    options: [
+      "Echo, Alfa, Tres, Romeo, Charlie, Quebec.",
+      "E, A, Tres, R, C, Q.",
+      "Echo, Alfa, Three, Romeo, Charlie, Quebec.",
+      "El deletreo de distintivos no está permitido.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1812). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1820",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "La señal de socorro en radiotelefonía es:",
+    options: [
+      "Mayday.",
+      "Socorro.",
+      "SOS.",
+      "Utilizada únicamente a bordo de barcos.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1820). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1849",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Entre las obligaciones de un gestor de una estación desatendida no se encuentra la de:",
+    options: [
+      "Actualizar periódicamente la información existente.",
+      "Procurar que el mantenimiento técnico dé la estación garantice el servicio continuo de la misma.",
+      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.",
+      "No tienen limitaciones geográficas.Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1849). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1851",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En caso de que el titular de estación de aficionado tenga constancia de que esta causando interferencias a otros servicios de telecomunicaciones autorizados, ¿Qué medida deberá adoptar, de las siguientes propuestas?:",
+    options: [
+      "Darse de baja inmediatamente en el servicio de aficionados.",
+      "Deberá a su costa, adoptar en su estación todas las medidas razonables de tipo técnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspección de Telecomunicaciones las medidas adoptadas.",
+      "Cambiar de equipo antes de cualquier inspección por parte de la Dirección General de Telecomunicaciones.",
+      "Seguir emitiendo.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1851). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1858",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional con que palabra se identifica la letra R:",
+    options: [
+      "Radio",
+      "Romeo",
+      "Roto",
+      "Roma",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1858). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1872",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Para la instalación de una estación fija de radioaficionado, es necesario:",
+    options: [
+      "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+      "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+      "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
+      "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1872). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1874",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
+    options: [
+      "La gama de frecuencia de 3 a 30 GHz.",
+      "El símbolo MF.",
+      "La banda nº 9.",
+      "La abreviatura métrica B.m.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1893",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los repetidores analógicos, ¿a que velocidad deberán emitir, de forma automática, su distintivo en código Morse?:",
+    options: [
+      "Nueve palabras por minuto.",
+      "Diez palabras por minuto.",
+      "Once palabras por minuto.",
+      "Doce palabras por minuto.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1898",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Para la obtención de la licencia de estación de radioaficionado es necesario presentar:",
+    options: [
+      "Solicitud adjuntando una memoria descriptiva del conjunto de la instalación.",
+      "Un escrito informando que se ha efectuado la instalación.",
+      "La cédula de habitabilidad del inmueble donde se va a instalar.",
+      "Documento que acredite estar inscrito en un asociación de Radioaficionado.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1898). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1902",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los prefijos de los distintivos de llamada correspondientes a España son, entre otros:",
+    options: [
+      "FM - UHF.",
+      "EA, EB, EC.",
+      "UHM - ARG.",
+      "No existen.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1905",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En relación con los exámenes para la obtención del diploma de operador de estación de aficionado, indique la opción incorrecta:",
+    options: [
+      "Es necesario estar en posesión del certificado HAREC para poder acceder a ellos.",
+      "Para poder examinarse es necesario abonar previamente la tasa por presentación a las pruebas.",
+      "Entre las materias de examen objeto se encuentra el conocimiento y dominio de la normativa reglamentaria referente a las estaciones de aficionado.",
+      "Se convocan por Resolución de la Secretaría de Estado de Telecomunicaciones y para la Sociedad de la Información.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1905). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1916",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Como norma general, la ganancia del sistema radiante de las estaciones desatendidas en las bandas de VHF y UHF, no será superior a:",
+    options: [
+      "6 dB.",
+      "8 dB.",
+      "10 dB.",
+      "12 dB.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1916). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1917",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "¿A quién se le puede autorizar la instalación de una Estación Automática Desatendida?:",
+    options: [
+      "A cualquier titular de licencia de Estación.",
+      "A cualquier Asociación de Aficionado legalmente reconocida.",
+      "A cualquier titular de Autorización de Radioaficionado.",
+      "Solo puede instalarla la A.E.R. (Agencia Estatal de Radiocomunicaciones).",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1925",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Como norma general las instalaciones en una estación de radioaficionado deberán ser efectuadas:",
+    options: [
+      "Directamente por el propietario de la estación.",
+      "Exclusivamente por un técnico de una Asociación legalizada de Radioaficionados.",
+      "Por un funcionario técnico de la Administración competente.",
+      "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1966",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Si un radioaficionado no es titular de la estación que está utilizando:",
+    options: [
+      "Infringe el Reglamento de uso del dominio público radioeléctrico por aficionados.",
+      "Se identificará, con autorización del titular, mediante su propio distintivo precedido del distintivo del titular de la estación operada.",
+      "No podrá emitir en todas las bandas de frecuencias.",
+      "Deberá obtener un permiso especial de la Inspección de Telecomunicaciones.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1966). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2026",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En las comunicaciones del Servicio de Aficionados, ¿cuál de las siguientes proposiciones es correcta?:",
+    options: [
+      "La revocación de la autorización de radioaficionado llevará aparejada la cancelación de las licencias de los equipos",
+      "Todo radioaficionado deberá, como mínimo, esperar cinco años para poder solicitar la cancelación de su autorización",
+      "La normativa vigente en materia de radioaficionados contempla un límite de edad para poder ser titular de una autorización de radioaficionado",
+      "El titular de una licencia de estación fija de aficionado siempre precisa autorización previa administrativa para utilizarla como portable",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2026). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2032",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Entre las condiciones de utilización de la licencia CEPT señaladas en el Reglamento de Aficionados, no se encuentra una de las siguientes. Indíquela:",
+    options: [
+      "Dicha licencia habilita para las utilizaciones de estaciones portables y móviles",
+      "Su titular viene obligado a presentar la licencia a petición de las autoridades del país visitado",
+      "El titular no podrá solicitar protección contra las interferencias perjudiciales",
+      "La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2032). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2035",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda necesaria, resultante del proceso de modulación, se denomina emisión:",
+    options: [
+      "Esencial",
+      "Fuera de banda",
+      "Armónica",
+      "En duplex",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2035). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2038",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La utilizacion de frecuencias de llamada:",
+    options: [
+      "Sólo se usan en HF.",
+      "Actualmente ya no se utilizan.",
+      "Permiten contactar con otros operadores que utilizan el mismo modo.",
+      "Nunca se usan en VHF.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2038). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2051",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En las comunicaciones de radio, la palabra GOLF se deletreará:",
+    options: [
+      "Simplemete con la palabra Golf.",
+      "Golfo, oscar, lima, félix.",
+      "Golfo, oscar, lima, foxtrot.",
+      "Golf, oscar, lima, foxtrot.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2051). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2061",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El certificado HAREC:",
+    options: [
+      "Se expedirá conjuntamente con el diploma de operador.",
+      "Permite operar en frecuencias distintas a las autorizadas.",
+      "No sirve para demostrar que se ha aprobado el examen de radioaficionado con un programa básico.",
+      "Permite obtener licencia en cualquier país del mundo.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2061). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2094",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Al realizar las emisiones desde estaciones de radioaficionados:",
+    options: [
+      "Es aceptable dar únicamente la parte final (sufijo) del indicativo.",
+      "Es aceptable inventar nuevas palabras para deletrear el indicativo.",
+      "Es recomendable finalizar la emisión con la palabra &quot;cambio&quot;.",
+      "Es aconsejable emitir sin comprobar que la frecuencia se está utilizando.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1809",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Cual de estas provincias pertenece al distrito 7:",
+    options: [
+      "Guipuzkoa.",
+      "Girona.",
+      "Guadalajara.",
+      "Granada.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1809). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1840",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Clubs respectivamente?:",
+    options: [
+      "Los que comienzan por: DD; TT; XX.",
+      "Los que comienzan por: UR y RC o RK.",
+      "Los que comienzan por: MMA, MAM, PAN.",
+      "Los que comienzan por: EEE, EDD, EFF.v",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1840). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1850",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La banda de frecuencias número 8, cuyo símbolo es VHF, corresponde a las ondas:",
+    options: [
+      "Kilométricas.",
+      "Métricas.",
+      "Decimétricas.",
+      "Milimétricas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1850). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1853",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Un radioaficionado que cambia de residencia no podrá mantener el mismo indicativo si:",
+    options: [
+      "Su nueva residencia se encuentra en otra provincia.",
+      "Su nueva residencia se encuentra en una provincia a la que corresponde el distrito 0.",
+      "Su nueva provincia de residencia pertenece a un distrito distinto.",
+      "Su nueva provincia de residencia se encuentra en distinta Comunidad Autónoma.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1854",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Un radioaficionado está obligado a ser socio de una asociación de radioaficionados:",
+    options: [
+      "Siempre.",
+      "Únicamente si el radioaficionado es menor de 18 años.",
+      "No, pero es recomendable.",
+      "Únicamente si efectúa emisiones en frecuencias atribuidas al Servicio de Aficionados por Satélite.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1854). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1899",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Las estaciones automáticas desatendidas en la banda de HF tendrán una potencia de salida máxima de:",
+    options: [
+      "25 W.",
+      "50 W.",
+      "75 W.",
+      "100 W.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1899). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1906",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Según la normativa vigente:",
+    options: [
+      "Tendrá carácter personal y no transferible.",
+      "Habilita para el uso de cualquier banda de frecuencias del Servicio de Aficionados con determinadas características técnicas y restricciones geográficas.",
+      "Requerirá disponer previamente del diploma de operador de estación de aficionado.",
+      "El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1909",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Cómo se efectúa el acceso a los repetidores analógicos y digitales finales:",
+    options: [
+      "Se accede solamente en el caso de que el radioaficionado tenga una licencia de 10 años de antigüedad.",
+      "El acceso será necesariamente libre y si la estación estuviera dotada de código de acceso éste deberá ser públicamente conocido.",
+      "Únicamente las Asociaciones de radioaficionados reconocidas, tendrán acceso a cualquier tipo de repetidor.",
+      "Dado que el número de estaciones automáticas desatendidas es limitado, no es posible su acceso si el radioaficionado no pertenece a un Radio Club.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1909). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1936",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "El cambio de ubicación de una antena:",
+    options: [
+      "No es necesario solicitarlo a la Dirección General de Telecomunicaciones.",
+      "Se debe solicitar a la Dirección General de Telecomunicaciones y seguir un procedimiento distinto al de la primera instalación.",
+      "Se debe solicitar a la Dirección General de Telecomunicaciones y seguir el mismo procedimiento que si se tratase de la primera instalación.",
+      "Únicamente requiere ser notificado al Ayuntamiento de la localidad.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1936). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1946",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "¿Cuál de las siguientes abreviaturas del código Q indica que debe aumentar la potencia de transmisión?:",
+    options: [
+      "QRO.",
+      "QRM.",
+      "QSV.",
+      "QRP.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1946). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2007",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los distintivos de uso temporal con sufijo de una sola letra están reservados para:",
+    options: [
+      "La participación en concursos internacionales",
+      "La participación en concursos nacionales de alta competitividad",
+      "Eventos que sean inaugurados o visitados por Su Majestad el Rey",
+      "La participación en concursos internacionales de alta competitividad",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2011",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los prefijos de los distitivos de llamada correspondientes a España son, entre otros:",
+    options: [
+      "FM-UHF",
+      "EA, EB, EC",
+      "UHM-ARG",
+      "No existen",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2025",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El radioaficionado está obligado a comunicar, fehacientemente, su intención de continuar utilizando el dominio público radioeléctrico cada:",
+    options: [
+      "Ya no hay que comunicarlo",
+      "Cinco años",
+      "Siete años",
+      "Diez años",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2028",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Tras la revocación, en su caso, de la autorización de radioaficionado, el interesado:",
+    options: [
+      "Conserva la licencia de radioaficionado",
+      "El distintivo de llamada de su licencia no podrá ser adjudicado a un tercero",
+      "Hasta una nueva autorización no podrá ejercer la actividad de la radioafición",
+      "Queda inhabilitado a perpetuidad a ser radioaficionado",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2028). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2040",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se deletrea la palabra MAR?",
+    options: [
+      "Mayo, Alfa, Roma.",
+      "Mike, Alfa, Roma.",
+      "Mayo, Alfa, Romeo.",
+      "Mike, Alfa, Romeo.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2040). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2054",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Con autorización de su titular, podrá hacer uso de una estación de aficionado:",
+    options: [
+      "Cualquier familiar de primer grado de consanguinidad.",
+      "Aquella persona que se encuentre solamente en posesión del diploma de operador de estaciones radioeléctricas de aficionado.",
+      "Salvo en casos de emergencia o desastre, nadie.",
+      "Cualquier otro titular de autorización de radioaficionado.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2054). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2068",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Una de las siguientes provincias españolas se encuentra adscrita al distrito 5. Indíquela:",
+    options: [
+      "Almería.",
+      "Albacete.",
+      "Álava.",
+      "Ávila.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2068). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2070",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Para utilizar un repetidor de VHF se emitirá en el canal apropiado de la banda:",
+    options: [
+      "145,0000 - 145,1875 MHz",
+      "144,000 - 144,500 MHz",
+      "430,000 - 440,000 MHz",
+      "431,050 - 431,825 MHz",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2091",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
+    options: [
+      "Melillla.",
+      "Barcelona.",
+      "Zamora.",
+      "Murcia.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2091). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1807",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Las estaciones radioeléctricas de aficionado quedan sometidas a la inspección de Telecomunicaciones:",
+    options: [
+      "Únicamente en el caso de que se produzca interferencias a otros usuarios.",
+      "Únicamente en el caso de que el operador de la estación tenga menos de 5 años de antigüedad.",
+      "Siempre.",
+      "Únicamente si emite con más de 500 W de potencia.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1807). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1814",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Una emisión de estación de aficionado debe identificarse con un distintivo:",
+    options: [
+      "Únicamente si el operador es menor de edad.",
+      "Únicamente si emite con una potencia de pico superior a 50W.",
+      "Únicamente si emite con una potencia media superior a 50W.",
+      "Siempre.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1814). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1822",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Las transmisiones entre estaciones de radioaficionados deberá limitarse a:",
+    options: [
+      "La actualidad nacional e internacional.",
+      "Comunicaciones relacionadas con el Servicio de Aficionados.",
+      "Los boletines de su radio club.",
+      "Cualquier comunicación.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1829",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En el caso de que un titular de una autorización especial de emisiones produzca interferencias a otros sistemas y, específicamente a instalaciones receptoras de radiodifusión o televisión, deberá:",
+    options: [
+      "Informar al titular de la estación interferida del horario en que va a emitir.",
+      "Suspender de inmediato las emisiones.",
+      "Comunicar la interferencia a Telecomunicaciones para que adopte medidas.",
+      "Seguir emitiendo.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1856",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La clase de emisión A3E corresponde a:",
+    options: [
+      "Doble banda lateral con ausencia de señal moduladora.",
+      "Doble banda lateral con un solo canal con información analógica.",
+      "Modulación de frecuencia con dos o más canales.",
+      "Banda lateral única con portadora reducida.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1856). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1861",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El distintivo de llamada estará constituido por un grupo alfanumérico del modo siguiente:",
+    options: [
+      "Prefijo + 1 letra.",
+      "UR + RC + RK.",
+      "Prefijo + Distrito + Sufijo.",
+      "EA+EB+EC.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1861). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1865",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en la misma, es:",
+    options: [
+      "Muy perjudicial para el uso eficiente del espectro radioeléctrico.",
+      "Obligatorio.",
+      "Una práctica de operar adecuada.",
+      "Sancionable según la reglamentación vigente.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1865). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1910",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Al instalar una antena de radioaficionado se tendrá en cuenta que:",
+    options: [
+      "No se pueden situar en azoteas o lugares transitables.",
+      "Es obligatorio fijar sus soportes a anclajes o soportes de pararrayos o conducciones eléctricas.",
+      "Se debe garantizar el derecho de terceros a no sufrir daños en su propiedad derivados de la instalación.",
+      "Los elementos radiantes nunca deben sobrepasar el espacio de los inmuebles donde están situados.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1926",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra RPT que significa:",
+    options: [
+      "Repetir.",
+      "Corte de transmisión.",
+      "Recibido.",
+      "Transmisor.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1926). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1934",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La obtención de la Autorización de Aficionado por un extranjero residente en España precisará:",
+    options: [
+      "Que sea titular de un Diploma de operador expedido en España, o de un Certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.",
+      "Que únicamente exista Acuerdo o Convenio de reciprocidad en la materia con su país de origen.",
+      "Que el país de origen del radioaficionado aplique la Recomendación T/R 5000.",
+      "Que se haya examinado en España exclusivamente de la Reglamentación Nacional.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1934). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1940",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los prefijos de uso temporal ED, EE y EF:",
+    options: [
+      "Deberán solicitarse exclusivamente a una asociación de radioaficionados reconocida.",
+      "Mantendrán sin variación el resto del distintivo asignado con carácter permanente al radioaficionado.",
+      "Están reservados solamente para los distritos 7, 8 y 9.",
+      "Se asignarán para eventos especiales de relevancia internacional.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1940). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1943",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La Ley General de Telecomunicaciones tipifica como infracción leve:",
+    options: [
+      "La emisión de señales de identificación falsas o engañosas.",
+      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.",
+      "La instalación de estaciones radioeléctricas sin autorización, cuando, de acuerdo con lo dispuesto en la normativa reguladora de las telecomunicaciones, sea necesaria.",
+      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1943). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1953",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿En qué caso se reasignará un distintivo ya utilizado?:",
+    options: [
+      "Si se cancela la autorización correspondiente.",
+      "Si el radioaficionado se integra en una asociación reconocida.",
+      "En el supuesto de que se produzca sanción por mal uso de la estación.",
+      "Si su titular crea interferencias.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1958",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Una condición imprescindible para que a un extranjero se le otorgue una autorización de radioaficionado es que:",
+    options: [
+      "Sea propietario de bienes inmuebles en España.",
+      "Sea titular de un diploma español de operador de estaciones de aficionado.",
+      "Exista Acuerdo de Reciprocidad en esta materia con su país de origen.",
+      "Acredite documentalmente su condición de residente en España.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1958). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1976",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En el procedimiento previsto en la Recomendación CEPT T/R 61-02 sobre el certificado HAREC pueden participar:",
+    options: [
+      "Únicamente países pertenecientes a la CEPT.",
+      "Únicamente países pertenecientes a la CEPT y los Estados Unidos.",
+      "Todos los países pertenezcan, o no, a la CEPT.",
+      "Únicamente países de la Comunidad Europea.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1976). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1979",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Las estaciones automáticas desatendidas utilizarán el prefijo:",
+    options: [
+      "AM y AN.",
+      "EC, EB, EA.",
+      "ED.",
+      "AD",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1979). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1986",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La utilización con carácter temporal de estaciones fijas, en emplazamientos distintos a los autorizados, no precisarán notificación previa a la Jefatura Provincial de Inspección de Telecomunicaciones cuando se efectúe dentro del distrito de residencia del radioaficionado y su duración máxima sea de:",
+    options: [
+      "Tres días naturales consecutivos.",
+      "Cuatro días naturales consecutivos.",
+      "Cinco días naturales consecutivos.",
+      "Seis días naturales consecutivos.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1986). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2014",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "El código RST se utiliza para:",
+    options: [
+      "Deletrear el mensaje",
+      "Informar sobre la banda de frecuencias que se está utilizando",
+      "Acceder a un repetidor",
+      "Informar sobre la intensidad de la señal recibida",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2014). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2022",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "En el tejado de un edificio donde está instalada una antena de radioaficionado autorizada:",
+    options: [
+      "Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena",
+      "No se podrá realizar ninguna obra",
+      "Se podrán realizar obras previa autorización del titular de la antena",
+      "Se podrá desmontar la antena para realizar obras previo pago de una indemnización al titular de la antena",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2031",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Cuál de las siguientes alternativas es válida, en relación con la autorización administrativa del uso del espectro radioeléctrico por Aficionados?:",
+    options: [
+      "Es gratuita",
+      "Su periodo máximo de validez es de cuatro años",
+      "Cuando se conceda, a la vez se otorgará el distintivo de llamada",
+      "No se exigen requisitos previos para solicitarla",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2031). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2046",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Las comunicaciones entre estaciones de aficionados se identificarán mediante un distintivo de llamada al comienzo y al final de cada emisión. Esta norma puede verse modificada en el supuesto de que la emisión:",
+    options: [
+      "Se realice a partir de las 22 horas.",
+      "Sea demasiado extensa.",
+      "Se realice para información de propaganda, cualquiera que sea la naturaleza de esta.",
+      "Sea de un corresponsal extranjero.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2046). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2084",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con la Ley General de Telecomunicación, la sanción impuesta por una falta grave prescribirá:",
+    options: [
+      "Al año.",
+      "A los dos años.",
+      "Al mes.",
+      "A los tres años.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2084). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1803",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "El código Q:",
+    options: [
+      "Se utiliza exclusivamente en situaciones de emergencia.",
+      "Está compuesto por siete letras.",
+      "Actualmente ha caído en desuso.",
+      "Empieza siempre por la letra Q.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1803). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1830",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se deletrea la palabra fin?",
+    options: [
+      "Fado, India, November.",
+      "Foxtrot, India, November.",
+      "Foxtrot, Inglés, Nono.",
+      "Fox, India, Nada.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1830). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1846",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la nomenclatura de las bandas de frecuencia, el símbolo LF corresponde a la banda de frecuencias:",
+    options: [
+      "30 a 300 kHz.",
+      "30 a 300 GHz.",
+      "300 a 3000 GHz.",
+      "30 a 300 MHz.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1846). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1883",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
+    options: [
+      "Si la antigüedad de su licencia es superior a 5 años.",
+      "En ningún caso.",
+      "Unicamente en localidades de menos de 5000 habitantes.",
+      "Si la cota de su emplazamiento es inferior a 500 metros.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1890",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "La señal de socorro en radiotelefonía es:",
+    options: [
+      "Securité.",
+      "Urgente.",
+      "Mayday.",
+      "Pan.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1890). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1915",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En comunicaciones del Servicio de Aficionados, la palabra CID se deletrea:",
+    options: [
+      "Charter, India, Delfo.",
+      "Charlie, India, Delta.",
+      "Charlie, India, Delfo.",
+      "Charter, Inca, Delta.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1915). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1959",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El certificado HAREC lo hemos de relacionar con la Recomendación CEPT:",
+    options: [
+      "T/R 61-00",
+      "T/R 61-01",
+      "T/R 61-02",
+      "T/R 61-03",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1959). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1969",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El Certificado HAREC:",
+    options: [
+      "Sirve para poder realizar emisiones al visitar otro país.",
+      "Sirve para demostrar que se ha superado un examen de radioaficionado.",
+      "Permite realizar emisiones al visitar cualquier país de Africa.",
+      "En España, únicamente se puede expedir para ciudadanos extranjeros.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1969). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1983",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En relación con una estación de aficionado y su utilización es correcto significar que:",
+    options: [
+      "El operador viene obligado a utilizar potencias altas para comunicaciones de corta distancia.",
+      "Deberá estar provista la estación de los elementos adecuados para comprobar que la emisión se realiza dentro de las bandas autorizadas.",
+      "En el caso de una operación se podrá ocupar mayor anchura de banda que la anchura de banda necesaria para cada clase de emisión.",
+      "El operador no viene obligado a cumplir el Reglamento sobre perturbaciones parasitas en vigor.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1983). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1988",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los extranjeros que acrediten la condición de residentes en España podrán ser titulares de autorizaciones de radioaficionado españolas en los siguientes casos, indique la alternativa incorrecta:",
+    options: [
+      "Cuando sean titulares de un diploma de operador.",
+      "Cuando sean titulares de un cetificado HAREC expedido por cualquier país que haya aplicado la Recomendación CEPT/R 61-02.",
+      "Cuando exista Acuerdo o Convenio de reciprocidad en la materia con el país de origen del radioaficionado.",
+      "Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1988). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2002",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "¿Cuál de las siguientes abreviaturas del código Q indica que se debe cesar de transmitir?:",
+    options: [
+      "QRT.",
+      "QRI.",
+      "QRH.",
+      "QSA.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2002). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2008",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se deletrea la palabra REY?",
+    options: [
+      "Radio, Echo, Yankee",
+      "Romeo, Echo, Yankee",
+      "Radio, Elo, Yuma",
+      "Romeo, Echo, Yuma",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2008). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2029",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La utilización, con carácter temporal, de una estación fija de aficionado en emplazamiento fuera del distrito de residencia:",
+    options: [
+      "Nunca se podra dar tal supuesto",
+      "Deberá ser notificada a la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente, con al menos cinco días de antelación del comienzo de las emisiones",
+      "Se podrá autorizar, pero siempre con la adjudicación de un distintivo de llamada temporal",
+      "Se requiere que el interesado sea socio de una Asociación colectiva de Radioaficionados",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2029). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2056",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En el país visitado temporalmente, el radioaficionado está obligado a:",
+    options: [
+      "Pedir indicativo de dicho país.",
+      "Presentar copia de su expediente.",
+      "Solicitar permiso de antenas.",
+      "Presentar la autorización de radioaficionado, si las autoridades se lo exigen.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2056). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2076",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Una estación automática desatendida (repetidora):",
+    options: [
+      "Es destinada a realizar estudios de propagación.",
+      "Es una estación colectiva bien fija, bien portátil.",
+      "Basa su funcionamiento en la emisión automática de señales de identificación.",
+      "Tiene por objeto ampliar el alcance de las comunicaciones.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2076). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2085",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La tipificación de las infracciones en que puede incurrir un radioaficionado es establecida por:",
+    options: [
+      "La Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común.",
+      "La Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones.",
+      "El Reglamento de uso del dominio público radioeléctrico por aficionados, Orden ITC/1791/2006, de 5 de junio.",
+      "La Resolución de 20 de septiembre de 2006, de la Secretaría de Estado de Telecomunicaciones y para la Sociedad de la Información, por la que se dictan Instrucciones para el desarrollo y aplicación del Reglamento de uso del dominio público radioeléctrico por aficionados.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2085). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2088",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En relación con la licencia CEPT, señale la alternativa falsa:",
+    options: [
+      "Habilita a su titular a operar su estación de radioaficionado en el territorio de aquellos países que hayan adoptado la Recomendación CEPT T/R 61-01.",
+      "La utilización a que habilita es de forma temporal.",
+      "Se concede a través del certificado HAREC.",
+      "En ella ha de constar, entre otros datos, el distintivo de llamada y su periodo de validez.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2088). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1855",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Un radioaficionado español que traslade su residencia a Croacia podrá obtener una licencia de radioaficionado en dicho país si:",
+    options: [
+      "Croacia aplica la Recomendación T/R 61-02 de la CEPT.",
+      "Tiene una antigüedad mínima de 5 años.",
+      "Tiene familiares de nacionalidad croata.",
+      "Se compromete a emitir únicamente en VHF.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1855). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1888",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional con que palabra se identifica el número 9:",
+    options: [
+      "Neuf.",
+      "Nove.",
+      "Nine.",
+      "Neun.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1888). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1895",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los Planes de Banda de la IARU:",
+    options: [
+      "Son de obligado cumplimiento por ley en todos los países.",
+      "Son establecidos por las administraciones nacionales.",
+      "Sirven de guía para los radioaficionados, pudiendo ser adaptados según la región UIT",
+      "Sustituyen a la normativa nacional.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1895). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1929",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La utilización de una estación de aficionado se debe ajustar a una serie de normas, entre las que se encuentra una de las que se citan a continuación, indíquela:",
+    options: [
+      "Solamente el titular de la estación podrá hacer uso de ella.",
+      "Las transmisiones entre estaciones no deberán codificarse para ocultar su significado.",
+      "No existen limitaciones de comunicación en las transmisiones entre estaciones.",
+      "En general se permite que entre estaciones se transmitan comunicaciones en nombre de terceras personas.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1929). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1967",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Podrá ser titular de una estación automática desatendida:",
+    options: [
+      "Cualquier titular de una autorización de radioaficionado con una antigüedad de al menos tres años.",
+      "Cualquier titular de una autorización de radioaficionado.",
+      "Una asociación de radioaficionados reconocida.",
+      "Cualquier titular de licencia CEPT.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1974",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se deletrea la palabra TOP?:",
+    options: [
+      "Tunga, Oslo, Papa.",
+      "Tango, Oscar, Papa.",
+      "Tunga, Oscar, Pepe.",
+      "Tango, Oslo, Pepe.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1974). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1977",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los sufijos de dos letras podrán ser asignados:",
+    options: [
+      "Nunca.",
+      "Siempre y cuando comiencen por la letra Q.",
+      "Únicamente a una agrupación de radioaficionados.",
+      "A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1977). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1981",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En los planes de bandas de la IARU para la Región 1:",
+    options: [
+      "Hay previstas frecuencias para repetidores en la banda 145,594-145,7935 MHz.",
+      "No hay previstas frecuencias para repetidores en UHF.",
+      "Hay previstas frecuencias para repetidores analógicos en la banda 88,5 - 99,0 MHz.",
+      "No hay planes de banda de la IARU para la Región 1.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1981). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2039",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Los daños y perjuicios originados por una antena de una estación de radioaficionado, correrán a cargo del titular de la licencia de la estación:",
+    options: [
+      "Unicamente los producidos al instalar la antena.",
+      "Los producidos con motivo de la instalación, mantenimiento y desmontaje de la antena.",
+      "Unicamente los producidos al desmontar la antena.",
+      "Unicamente los producidos por un mantenimiento defectuoso.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2083",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La licencia CEPT habilita para la utilización de estaciones móviles en:",
+    options: [
+      "Todo el mundo.",
+      "En cualquier país que haya adoptado la Recomendación T/R 61-01.",
+      "Todo el mundo excepto la Región 3 de la UIT.",
+      "Únicamente en Europa.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2083). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1804",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Excepto en casos de urgencia, ¿con qué antelación la propiedad del inmueble debe requerir el desmontaje de antenas de radioaficionado por la realización de obras?:",
+    options: [
+      "Un mes.",
+      "Dos meses.",
+      "Tres meses.",
+      "Medio año.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1804). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1831",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En telegrafía, la abreviatura de procedimiento usada para finalizar una transmisión es:",
+    options: [
+      "AS.",
+      "TU.",
+      "FN.",
+      "AR.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1831). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1834",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Sobre los planes de bandas de la IARU es correcto decir que:",
+    options: [
+      "La IARU no tiene planes de banda para la Región 1.",
+      "Sirven de guía a los radioaficionados de todo el mundo.",
+      "Deben ser tenidos en cuenta únicamente si se opera en Canarias.",
+      "En España se deben aplicar los planes de banda de la IARU para la Región 2.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1834). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1878",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "No se puede considerar como estación automática desatendida a una estación:",
+    options: [
+      "Repetidora de portadora.",
+      "Radiobaliza.",
+      "Repetidora digital.",
+      "Colectiva de aficionado.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1891",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Que está ocurriendo si un radioaficionado se identifica como EA3/IZ4RKL:",
+    options: [
+      "Se están realizando pruebas en el distrito 3.",
+      "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
+      "Se están realizando cambios en el reglamento y el distrito 3 es pionero.",
+      "Se trata de una conexión con interferencias.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1891). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1903",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La licencia de estación de radioaficionado se expedirá:",
+    options: [
+      "Finalizado el montaje de la instalación y presentada la documentación requerida en cada caso.",
+      "En el momento del otorgamiento del diploma de operador de estación de aficionado.",
+      "La primera semana de cada mes.",
+      "En el momento de presentar la memoria descriptiva de la estación.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1903). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1921",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los planes de banda de la IARU:",
+    options: [
+      "Solamente tienen en cuenta las bandas inferiores a 1.000 MHz.",
+      "Proporcionan información sobre el modo recomendado de utilización en cada banda de frecuencias.",
+      "Solamente detallan el uso de bandas superiores a 1.000 MHz.",
+      "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1921). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1949",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Cómo definiría \"Radiocomunicación\":",
+    options: [
+      "Toda telecomunicación transmitida exclusivamente a través de satélites de comunicaciones.",
+      "Toda telecomunicación transmitida por medio de ondas radioeléctricas.",
+      "Toda telecomunicación que pueda transmitirse fuera del territorio nacional.",
+      "Cualquier telecomunicación que permita la tolerancia de frecuencias.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1949). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1951",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Toda licencia CEPT expedida por una Administración que haya adoptado la Recomendación T/R 61-01.",
+    options: [
+      "Da derecho a la obtención del Diploma de Operador.",
+      "Da derecho a obtener un distintivo de llamada en el país visitado.",
+      "Goza de equiparación a la autorización de aficionado nacional, en los términos recogidos en el Reglamento de uso del dominio público radioeléctrico por aficionados.",
+      "Su titular tendrá que superar un examen especial.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1951). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1963",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Qué se entiende por emisiones no deseadas?:",
+    options: [
+      "Conjunto de emisiones que producen interferencias.",
+      "Conjunto de emisiones situadas fuera de la anchura de banda.",
+      "Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.",
+      "Conjunto de emisiones de banda estrecha.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1980",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:",
+    options: [
+      "Autorización administrativa.",
+      "Licencia de Estación.",
+      "Nada.",
+      "Solo el Diploma de Operador.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2062",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:",
+    options: [
+      "Espectro radioeléctrico.",
+      "Radioafición.",
+      "Campo eléctrico.",
+      "Radiocomunicación.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2062). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1808",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "El Alfabeto fonético internacional:",
+    options: [
+      "Se utiliza exclusivamente en emisiones digitales.",
+      "Se utiliza para el deletreo de palabras.",
+      "Se utiliza exclusivamente para deletrear números.",
+      "Actualmente está prohibida su utilización.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1808). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1832",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "La señal de Socorro en radiotelefonía se compone de:",
+    options: [
+      "MAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).",
+      "AQUI o DE, el distintivo de llamada (tres veces) y la palabra MAYDAY (tres veces).",
+      "Únicamente MAYDAY (tres veces).",
+      "MAYDAY (una vez), la palabra AQUI o DE y el distintivo de llamada (tres veces).",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1870",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "Un mensaje de socorro NO incluirá:",
+    options: [
+      "La señal de socorro Mayday.",
+      "Datos relativos a la estación en peligro.",
+      "Indicaciones relativas a su situación y otras informaciones aclaratorias.",
+      "La señal de seguridad Securite.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1870). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1871",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El titular de una licencia CEPT, expedida por una Administración que haya adoptado la recomendación T/R 61-01, estará obligado a: (indique cual de estas afirmaciones es falsa)",
+    options: [
+      "Respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentación vigente en el País visitado.",
+      "No respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentación vigente en el país de origen.",
+      "Observar todas las limitaciones que le vengan impuestas en lo concerniente a las condiciones locales de naturaleza técnica relativa a los poderes públicos.",
+      "Respetar las diferencias de atribuciones de frecuencias en los servicios de aficionados en las tres Regiones de la Unión Internacional de Telecomunicaciones.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1871). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1904",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la banda de frecuencia de 50,00-51,00 MHz, existen restricciones geográficas de uso. Señale la provincia desde la que se podrán efectuar emisiones:",
+    options: [
+      "Madrid.",
+      "Avila.",
+      "Valladolid.",
+      "Almería.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1920",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La utilización de distintivos temporales requerirá la presentación de una solicitud; señale la proposición errónea:",
+    options: [
+      "Indicando el nombre y distintivo de llamada del solicitante.",
+      "Dirigida a la Asociación o Radio Club de aficionados correspondiente, que será la que autorice.",
+      "Indicando el período de utilización.",
+      "Indicando el distintivo de llamada solicitado.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1927",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La ondas métricas se representan por el símbolo:",
+    options: [
+      "LF.",
+      "UHF.",
+      "EHF.",
+      "VHF.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1927). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1955",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "La Dirección General de Telecomunicaciones debe informar al presidente de la comunidad de propietarios afectada siempre que:",
+    options: [
+      "Se pretenda cambiar las antenas.",
+      "Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.",
+      "Se expida la autorización de radioaficionado a algún residente.",
+      "Se vayan a realizar obras por parte de la comunidad.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1995",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El montaje de una estación fija de aficionado:",
+    options: [
+      "Requiere autorización previa de la Jefatura Provincial de Inspección de Telecomunicaciones (JPIT).",
+      "Requiere comunicación previa a la JPIT.",
+      "No requiere ni autorización, ni comunicación a la JPIT.",
+      "No está permitida.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1995). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1997",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Defina, estación fija remota de aficionado:",
+    options: [
+      "Estación fija de aficionado que puede ser accionada a distancia.",
+      "Estación móvil de uso intermitente.",
+      "Estación portátil que se utiliza en itinerarios de larga distancia.",
+      "Estación repetidora de gran alcance.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1997). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2010",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "El alfabeto fonético se utiliza para:",
+    options: [
+      "Deletrear el mensaje",
+      "Informar sobre la banda de frecuencias que se está utilizando",
+      "Acceder a un repetidor",
+      "Informar sobre la intensidad de la señal recibida",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2010). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2013",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Los daños y perjuicios originados por la conservación o desmontaje de una antena de radioaficionado correrán por cuenta de:",
+    options: [
+      "La comunidad de propietarios",
+      "El radioaficionado",
+      "El ayuntamiento si autoriza la obra",
+      "El propietario de la vivienda si esta es de alquiler",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2013). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2020",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La licencia CEPT:",
+    options: [
+      "Permite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pais visitado",
+      "Permite operar en cualquier banda del Servicio de Aficionados en cualquier país de Europa",
+      "Permite operar en las bandas autorizadas al Servicio de Aficionados en cualquier país visitado que se haya adherido a la Recomendación T/R61-01 de la CEPT",
+      "Permite operar permanentemente en cualquier país CEPT",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2020). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2057",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Puedo realizar transmisiones desde Andorra si tengo la licencia?",
+    options: [
+      "Si, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el país en el que residen habitualmente, pueden obtener una licencia temporal para usar su estación en territorio andorrano.",
+      "Si",
+      "No, en ningun caso",
+      "Solo en caso de emergencia",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2075",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Para la instalación de antenas de radioaficionados, es obligatorio tener un seguro que cubra:",
+    options: [
+      "La responsabilidad civil del titular.",
+      "Los desperfectos del material empleado.",
+      "Los accidentes del instalador.",
+      "Las posibles pérdidas de radiofrecuencia.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2075). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2092",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La abreviatura XXX, cuando es transmitida tres veces consecutivas, constituye la señal de:",
+    options: [
+      "Urgencia.",
+      "Catástrofe natural.",
+      "Socorro.",
+      "Seguridad.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2092). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2093",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Es obligatorio informar a las Jefatura Provinciales de Inspección de Telecomunicaciones de las modificaciones efectuadas en los sistemas radiantes:",
+    options: [
+      "En todos los casos.",
+      "Siempre y cuando dichas modificaciones sean permanentes.",
+      "Solo si afecta al entorno radioeléctrico.",
+      "Cuando haya que presentar memoria descriptiva.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2093). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1833",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué identifica a un radioaficionado titular de una autorización?:",
+    options: [
+      "La matrícula de su estación.",
+      "Su distintivo de llamada asociado.",
+      "El permiso de instalación de la antena.",
+      "La autorización del Ministerio de Industria, Turismo y Comercio para instalar la antena.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1839",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Al deletrear las letras de su indicativo el radioaficionado debe utilizar:",
+    options: [
+      "El código de deletreo RST.",
+      "Palabras de una sola sílaba.",
+      "Palabras del idioma en que mejor se exprese.",
+      "El código de deletreo ICAO.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1880",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
+    options: [
+      "No existe límite para estas autorizaciones.",
+      "Exclusivamente dos por provincia.",
+      "Se autorizarán en función de las necesidades del servicio.",
+      "Tres en VHF y dos en UHF.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1880). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1897",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Como norma general, la potencia de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podrá exceder de:",
+    options: [
+      "5 W.",
+      "10 W.",
+      "15 W.",
+      "20 W.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1897). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1931",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿En qué bandas de frecuencias se permite emitir si se dispone de la licencia CEPT?:",
+    options: [
+      "Solamente en la banda 1240-1300 MHz.",
+      "Temporalmente en la banda 10,00 a 10,5 GHz",
+      "En todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el país visitado.",
+      "Exclusivamente, en las bandas atribuidas al servicio por Satélite.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1931). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1933",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los distintivos de llamada se podrán reasignar:",
+    options: [
+      "En caso de fallecimiento del titular, a familiares en primer grado.",
+      "Sólo si el radioaficionado piensa utilizarlo temporalmente.",
+      "A Radio Clubs o a Asociaciones con carácter experimental.",
+      "Por periodos, hasta un máximo de 20 días al año.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1937",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "La Ley 19/1986, conocida como Ley de Antenas, regula:",
+    options: [
+      "La obligación de comunicar la instalación de una antena a la Dirección General de Telecomunicaciones.",
+      "El derecho a instalar una antena de cualquier tamaño.",
+      "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.",
+      "La exención de presentar memoria descriptiva de la instalación.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1962",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Si observa que un distintivo de llamada va precedido del prefijo EA seguido de un determinado número (del 1 al 9):",
+    options: [
+      "Se trata de una llamada de estación no autorizada.",
+      "Deberá corregir al que emite, pues envía información redundante.",
+      "Se trata de un radioaficionado de clase A.",
+      "Se trata de un titular de licencia CEPT extranjero emitiendo en España.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1994",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La identificación de emisiones de una estación móvil marítima, se efectuará añadiendo a su distintivo de llamada la expresión:",
+    options: [
+      "/MOMA.",
+      "/M.",
+      "/MA.",
+      "/MM.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2009",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuál de las siguientes acciones está permitida realizar en el tráfico entre estaciones de aficionado?:",
+    options: [
+      "Transmitir mensajes de naturaleza técnica sobre ensayos",
+      "Transmitir propaganda electoral",
+      "Emitir anuncios relacionados con productos a utilizar en la radioafición, siempre y cuando sean con fines lucrativos",
+      "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2009). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2015",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los planes de banda de la IARU:",
+    options: [
+      "Son iguales a nivel mundial",
+      "No proporcionan información sobre el modo preferido de utilización",
+      "Son un instrumento básico para regular el uso de las bandas de frecuencias",
+      "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2015). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2214",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza es",
+    options: [
+      "USB",
+      "AM",
+      "LSB",
+      "LSB y AM",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1819",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Un radioaficionado español que traslade su residencia a un país que aplica la Recomendación de la CEPT T/R 61-02 podrá obtener una licencia de radioaficionado en dicho país si:",
+    options: [
+      "Acredita 10 años de experiencia en la radioafición internacional.",
+      "Supera un examen en el idioma del país.",
+      "Dispone del Certificado HAREC.",
+      "Obtiene la nacionalidad del país donde resida.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1862",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los planes de banda de la IARU para la Región 1 deben ser tenidos en cuenta:",
+    options: [
+      "Unicamente por los radioaficionados principiantes.",
+      "Unicamente en HF.",
+      "Unicamente si se opera en Canarias.",
+      "Por todo radioaficionado que opera en España.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1886",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Un radioaficionado español que utiliza temporalmente su estación en Australia (país que aplica la Recomendación T/R 61-01):",
+    options: [
+      "Puede emitir en las mismas frecuencias que en España.",
+      "Unicamente puede emitir en frecuencias inferiores a 1 GHz.",
+      "No podrá solicitar protección contra interferencias perjudiciales.",
+      "Unicamente puede emitir en frecuencias de HF.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1886). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1964",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:",
+    options: [
+      "El Reglamento actual no contempla el uso de distintivos temporales.",
+      "Sólo para los extranjeros residentes en España.",
+      "Cuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.",
+      "En ningún caso, teniendo en cuenta que la autorización de radioaficionado ya lleva asociado un distintivo de llamada.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2033",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En el extranjero, deberemos respetar la reglamentación del país CEPT donde vayamos:",
+    options: [
+      "Seguiremos siempre la reglamentación española",
+      "Siempre",
+      "Sólo en las bandas VHF/UHF",
+      "Siempre y cuando no esté en contradicción con la nuestra",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2033). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2045",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Qué es la licencia CEPT?:",
+    options: [
+      "Aquella que permite temporalmente su utilización en todos los países acogidos a la Recomendación T/R 61-01.",
+      "La que permite transmitir en cualquier país de Europa.",
+      "La que sólo permite la transmisión en bandas VHF/UHF.",
+      "Aquella que permite su utilización a nivel internacional.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2045). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2072",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Si una estación tiene el indicativo de llamada EF2GGG:",
+    options: [
+      "Pertenece a un radioaficionado de la provincia de Cantabria.",
+      "Se le ha adjudicado al periódico de tirada nacional &quot;GGG&quot;, de ahí el sufijo.",
+      "Es concedido para uso temporal por un evento no especialmente significativo.",
+      "Es de naturaleza indefinida.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2072). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2077",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Según la Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones, retrasar injustificadamente la aportación de datos requeridos por la Administración cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas es considerado como una infracción:",
+    options: [
+      "Leve.",
+      "Muy grave.",
+      "Grave.",
+      "Media.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2077). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2087",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El diploma de operador de estaciones de aficionado:",
+    options: [
+      "Lo hay de diversas clases.",
+      "Lleva implícito la autorización para el uso del espectro radioeléctrico.",
+      "Certifica la capacidad de su titular para operar estaciones radioeléctricas del servicio de aficionados.",
+      "Habilita para hecer uso común del espectro radioeléctrico.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2087). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1828",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con el Artículo 25 del Reglamento de Radiocomunicaciones de la UIT las comunicaciones por radio entre estaciones de aficionado de países distintos:",
+    options: [
+      "Se limitarán exclusivamente a observaciones de carácter personal.",
+      "Se limitarán exclusivamente a estaciones de la misma Región.",
+      "Siempre pueden ser codificadas para ocultar su contenido.",
+      "Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1828). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1892",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Se puede interferir deliberadamente a otra estación de radioaficionado:",
+    options: [
+      "Si está operando ilegalmente.",
+      "Para disminuir la ocupación de la banda.",
+      "Si no ha emitido su indicativo.",
+      "Nunca.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2036",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El sufijo de una letra se reservará para:",
+    options: [
+      "Concursos internacionales de alta competitividad.",
+      "Radioaficionados que exclusivamente practiquen la radioafición internacional.",
+      "Concursos nacionales de alta competitividad.",
+      "Eventos especiales de relevancia internacional.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2036). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2053",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En relación con una estación portátil de aficionado, marque la alternativa errónea:",
+    options: [
+      "Posee una antena incorporada al propio equipo.",
+      "Puede ser utilizada en movimiento.",
+      "Posee una fuente de energía incorporada al propio equipo.",
+      "Es a la vez una estación portable de aficionado.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2058",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuál de las siguientes alternativas es correcta?",
+    options: [
+      "No se precisa una autorización administrativa para la utilización de un distintivo de llamada temporal.",
+      "La autorización especial del uso del espectro radioeléctrico por radioaficionados será nominativa.",
+      "Una autorización de radioaficionado no tiene por qué llevar asociado un distintivo de llamada.",
+      "Una estación portable de aficionado es a la vez estación móvil.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2058). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1810",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Como norma general, y salvo circunstancias especiales debidamente motivadas, las estaciones automáticas desatendidas en las bandas de VHF y UHF fuera del casco urbano, emitirán una potencia de salida máxima de:",
+    options: [
+      "10 W.",
+      "15 W.",
+      "20 W.",
+      "25 W.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1950",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Cada autorización de radioaficionado dispondrá de un distintivo de llamada, cuyo sufijo estará constituido por:",
+    options: [
+      "Una cifra correspondiente al distrito de residencia.",
+      "Dos primeras letras de alguna de las series internacionales atribuidas a España.",
+      "Hasta tres letras que se asignarán ordenadas alfabéticamente por turno riguroso de expedición.",
+      "Tres letras que comiencen por la Q.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1950). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1973",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional las letras S y L se corresponden con las palabras:",
+    options: [
+      "Sierra, Lemon.",
+      "Sierra, Luna.",
+      "Sol, Lima.",
+      "Sierra, Lima.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1973). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2005",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El distintivo de llamada se define como:",
+    options: [
+      "Conjunto de sonidos armónicos",
+      "Documento que certifica la capacitación para operar estacíones",
+      "Grupo de caracteres que constituye la señal de identificación del radioaficionado",
+      "La ganancia isótropa o absoluta",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2017",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La señal de alarma en radiotelefonía consiste en dos señales de audiofrecuencia, aproximadamente sinusoidales, transmitidas alternativamente. ¿Qué frecuencias son?:",
+    options: [
+      "2.220 Hz y 1.300 Hz",
+      "2.220 kHz y 1.300 KHz",
+      "1.100 Hz y 650 Kz",
+      "1.100 kHz y 650KHz",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2063",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF, cuando estén instaladas fuera del casco urbano, será:",
+    options: [
+      "Igual que la permitida en la banda de HF.",
+      "50 W.",
+      "Igual que la permitida a las instaladas en el interior del casco urbano.",
+      "35 W.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2063). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2078",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El sufijo AO se otorgará para eventos temporales:",
+    options: [
+      "De carácter regional.",
+      "Especiales de relevancia nacional.",
+      "Especiales de relevancia internacional.",
+      "No especialmente significativos.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2078). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1824",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Según la nomenclatura de las bandas de frecuencias, el símbolo MF corresponde a:",
+    options: [
+      "Ondas miriamétricas.",
+      "Ondas kilométricas.",
+      "Ondas hectométricas.",
+      "Ondas decamétricas.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1824). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1848",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Las autorizaciones especiales de uso del espectro radioeléctrico por aficionados:",
+    options: [
+      "No están sujetas a ningún procedimiento.",
+      "Habilitan a sus titulares a un uso ilimitado y permanente.",
+      "Son nominativas y sólo habilitarán para la realización de emisiones a su titular.",
+      "No tienen limitaciones geográficas.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1848). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1864",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "A cual de las siguientes localidades puede pertenecer el distintivo de llamada: EA6PDM:",
+    options: [
+      "Lleida.",
+      "Huelva.",
+      "Palma de Mallorca.",
+      "Bilbao.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1876",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con el Apéndice 1 del Reglamento de Radio­comuni­caciones de la UIT la clase de emisión F3E corresponde a una emisión de:",
+    options: [
+      "Telegrafía.",
+      "Televisión.",
+      "Telefonía con dos o más canales.",
+      "Telefonía con un solo canal.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1876). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1882",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Si un radioaficionado se identifica como EA2ABC/R7BHZ:",
+    options: [
+      "Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.",
+      "Se trata de un distintivo temporal reservado a estaciones colectivas.",
+      "Pertenece a un corresponsal de un diario nacional, emitiendo a un país extranjero.",
+      "Se trata de un estación no autorizada.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2012",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "¿Qué abreviatura del código Q indica cual es la ubicación o situación?",
+    options: [
+      "QTH",
+      "QRS",
+      "QTW",
+      "QTR",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2012). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2086",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cómo se deletrea la palabra MERO?",
+    options: [
+      "MADRID, ECHO, ROMA, OSCAR.",
+      "MIKE, ECHO, ROMA, OSCAR.",
+      "MIKE, ECHO, ROMEO, OSCAR.",
+      "MADRID, ECHO, ROMEO, OSCAR.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2086). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1987",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
+    options: [
+      "Málaga, Murcia, Madrid, Vizcaya.",
+      "Cáceres, Cádiz, Cuenca, Ciudad Real.",
+      "Córdoba, Castellón, Cantabria, Burgos.",
+      "Toledo, Teruel, Tarragona, Santa Cruz de Tenerife.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1987). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2019",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Una comunidad de propietarios, ¿puede autorizar la instalación de antenas de radioaficionado?:",
+    options: [
+      "No, solo pronunciarse respecto a la idoneidad de la instalación",
+      "Si, pues ella es la afectada",
+      "Siempre y cuando se tenga el permiso de obra",
+      "Si, siempre que se tenga el proyecto técnico",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2019). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2055",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La licencia CEPT de un radioaficionado español:",
+    options: [
+      "Solamente le permite hacer uso de ella dentro del territorio español.",
+      "No le habilita para utilizar estaciones portables.",
+      "Se la concederá la autoridad competente del país europeo que vaya a visitar.",
+      "Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2055). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2069",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El distintivo de llamada AM3SOS:",
+    options: [
+      "Ha sido asignado para uso temporal.",
+      "Le ha sido otorgado a una Asociación de Radioaficionados, vinculada con Protección Civil.",
+      "No se puede asignar.",
+      "Su titular reside en Cataluña.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1802",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los distintivos de llamada con sufijos de una letra:",
+    options: [
+      "Se reservan para la participación en concursos internacionales de alta competitividad.",
+      "Se reservan para la participación en concursos nacionales de alta competitividad.",
+      "Se reservan para radioaficionados con una antigüedad mínima de 10 años.",
+      "No están permitidos en la reglamentación vigente.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1802). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1825",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La colaboración de los radioaficionados con los servicios de emergencia en caso de catástrofes:",
+    options: [
+      "Es obligatoria en cualquier caso.",
+      "Es obligatoria si es requerida por la autoridad competente.",
+      "Es voluntaria.",
+      "Está expresamente prohibida en la reglamentación vigente.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1825). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1842",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La autorización de aficionados para extranjeros residentes en España se podrá obtener:radioaficionado, cuando:",
+    options: [
+      "Cuando sea titular de un certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.",
+      "Solo si existe Acuerdo o Convenio de reciprocidad en la materia con su país de origen.",
+      "No existen autorizaciones de aficionados para extranjeros residentes, solamente temporales.",
+      "Si se han examinado en España de la Reglamentación Nacional.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1842). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1896",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "¿Qué grupo del código Q indica que perturban los atmosféricos?:",
+    options: [
+      "QRN",
+      "QSB",
+      "QSD",
+      "QRX",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1896). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1972",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
+    options: [
+      "87,5 -107 MHz sin limitación de potencia.",
+      "26,960 - 27,410 MHz.",
+      "144 - 146 y 430-440 MHz.",
+      "87,5 -108 MHz con potencia máxima de 10mW.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1972). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2210",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En España, los Planes de Banda utilizados por los radioaficionados:",
+    options: [
+      "Son establecidos por asociaciones locales de radioaficionados.",
+      "Son aprobados por la Dirección General de Telecomunicaciones.",
+      "Son los planes de la IARU Región 1, utilizados como norma general.",
+      "No tienen ninguna relación con la UIT.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1877",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "La instalación y funcionamiento de una estación de aficionado precisará de una licencia, la cual se considera asociada a:",
+    options: [
+      "Una asociación legalizada de radioaficionados de la provincia correspondiente.",
+      "La estación automática desatendida más cercana.",
+      "La autorización de radioaficionado de su titular.",
+      "Toda la gama de frecuencias que pueda utilizar.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1923",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El radioaficionado debe tener en cuenta que:",
+    options: [
+      "No debe utilizar el código ICAO por no estar reconocido internacionalmente.",
+      "Es muy conveniente dar el indicativo por partes (preferiblemente la parte final).",
+      "No es aconsejable inventar palabras para deletrear el mensaje.",
+      "El código RST se utiliza para deletrear el mensaje.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1923). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1945",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Conforme al Reglamento de Radiocomunicaciones de la Unión Internacional de Telecomunicaciones:",
+    options: [
+      "El Servicio de Aficionados tiene por objeto, entre otros, la realización de emisiones comerciales.",
+      "El Servicio de Aficionados por Satélite utiliza estaciones espaciales situadas en satélites.",
+      "Siempre estarán permitidas las comunicaciones por radio entre radioaficionados de diferentes países.",
+      "Los equipos receptores de radio no forman parte de una estación radioeléctrica.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1945). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1947",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los distritos de los indicativos de llamada son:",
+    options: [
+      "Nueve.",
+      "Ilimitados.",
+      "Todos los que se soliciten.",
+      "Se han suprimido los distritos.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1947). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2024",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "En la instalación de una antena de radioaficionado y sus elementos anejos:",
+    options: [
+      "No es necesario tener en cuenta la proximidad de líneas eléctricas aéreas",
+      "No es necesario señalizar los anclajes y riostras si la antena está situada en un lugar transitable",
+      "Es necesario tener en cuenta las instalaciones y antenas de otros servicios",
+      "Los soportes de la antena se podrán fijar al mástil de conducción aérea de energía eléctrica",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2024). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2080",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Una de las siguientes bandas que se citan a continuación precisa autorización especial de uso. Señálela:",
+    options: [
+      "47,00-47,20 GHz.",
+      "10,00-10,5 GHz.",
+      "14.000-14.250 KHz.",
+      "50,000-51,000 MHz.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2080). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1818",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
+    options: [
+      "Prefijo, sufijo y distrito.",
+      "Prefijo, distrito y sufijo.",
+      "Sufijo, prefijo y distrito.",
+      "Distrito, prefijo y sufijo.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1818). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1859",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En comunicaciones del Servicio de Aficionados, la palabra BOJ se deletrea:",
+    options: [
+      "Bravo, Oscar, Julio.",
+      "Brezo, Oscar, Juliett.",
+      "Bravo, Oscar, Juliett.",
+      "Bravo, Ortega, Julio.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1859). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1922",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "¿Qué grupo del código Q indica \"su frecuencia varía\"?:",
+    options: [
+      "QRG",
+      "QRF",
+      "QRH",
+      "QTH",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1922). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1978",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "La llamada de socorro en radiotelefonía se compone de:",
+    options: [
+      "La palabra &quot;help&quot;, seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
+      "La palabra &quot;mayday&quot;, seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
+      "La palabra &quot;help&quot; (tres veces), seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
+      "La palabra &quot;mayday&quot; (tres veces), seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1978). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2043",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podrán efectuar:",
+    options: [
+      "Desde cualquier punto del territorio nacional.",
+      "Desde las provincias de Barcelona, Valencia y Zaragoza.",
+      "Desde la provincia de Valencia.",
+      "En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2079",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "¿Es la Comunidad de Propietarios la que autoriza la instalación de antenas de radioaficionado?:",
+    options: [
+      "No.",
+      "Si.",
+      "Si, siempre que se le informe con antelación.",
+      "Sólo en caso de que la instalación sea sencilla.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2079). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1928",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El distintivo de llamada de una autorización de radioaficionado estará constituido por:",
+    options: [
+      "Una secuencia numérica de 6 caracteres.",
+      "Un grupo alfanumérico de 6 caracteres como máximo.",
+      "6 letras atribuidas a España por la UIT.",
+      "Las iniciales y fecha de nacimiento del titular.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2016",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "La señal de urgencia en radiotelefonía consiste en la transmisión, repetida tres veces, de:",
+    options: [
+      "PAN PAN",
+      "SOS",
+      "XXX",
+      "URGENCE",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1879",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Qué objetivo se pretende al instalar un repetidor de radioficionado:",
+    options: [
+      "Determinar la ubicación de aparatos radioeléctricos.",
+      "Ampliar el alcance de las comunicaciones.",
+      "Inspeccionar fehacientemente las emisiones fuera de banda.",
+      "Detectar y reducir interferencias dentro de un área determinada.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2001",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "De acuerdo con el artículo 25 del Reglamento de Radiocomunicaciones de la UIT:",
+    options: [
+      "Las estaciones de aficionado nunca transmitirán su indicativo.",
+      "Las estaciones de aficionado nunca transmitirán su indicativo si así lo determina la reglamentación nacional vigente.",
+      "En el transcurso de sus emisiones, las estaciones de aficionado deberán transmitir su indicativo a intervalos cortos.",
+      "Las transmisiones entre estaciones de aficionados de diferentes países deberán codificarse siempre por motivos de seguridad.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2001). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1867",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Cuáles de estas causas será causa específica de revocación de la autorización de radioaficionado?:",
+    options: [
+      "Estar sin utilizar el espectro radioeléctrico durante cinco años seguidos.",
+      "No comunicar fehacientemente a la Administración, cada cinco años, su deseo de continuar utilizando el espectro radioeléctrico.",
+      "Cambiarse de domicilio sin comunicárselo fehacientemente a la Administración en un plazo de cinco años.",
+      "Ninguna de ellas, ya no es necesario comunicarlo.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2000",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Los equipos de radioaficionados de construcción propia:",
+    options: [
+      "No deberán ser presentados en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+      "Solo pueden ser utilizados por radioaficionados con antigüedad mínima de 3 años.",
+      "Se pueden utilizar sin efectuar ningún trámite en la Jefatura Provincial de Inspección de Telecomunícaciones.",
+      "Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2000). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2050",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
+    options: [
+      "En general está permitido la emisión de onda portadora no modulada.",
+      "Puede ser empleada arbitrariamente la señal de socorro &quot;SOS&quot;.",
+      "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
+      "A efectos de ensayos puede emitirse un distintivo de llamada engañoso.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1907",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Cuál de las siguientes proposiciones contiene mayor número de provincias pertenecientes al distrito 1?:",
+    options: [
+      "Soria, Sevilla, Santa Cruz de Tenerife.",
+      "Asturias, Ávila, León.",
+      "Salamanca, Castellón, Cádiz.",
+      "Valencia, Valladolid, Vizcaya.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1907). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1948",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "En la nomenclatura de las bandas de frecuencia, la banda SHF corresponde a las frecuencias comprendidas entre:",
+    options: [
+      "3 y 30 MHz.",
+      "300 y 3.000 kHz.",
+      "3 y 30 GHz.",
+      "300 y 3.000 MHz.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1948). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1821",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El contrato de seguro que cubre la responsabilidad del radioaficionado titular de una licencia de estación:",
+    options: [
+      "Se debe formalizar únicamente si la instalación ha sido autorizada y en un plazo de un mes.",
+      "Sólo debe contratarse si la instalación es técnicamente compleja.",
+      "Debe estar formalizado antes de la expedición de la licencia de estación.",
+      "Debe contratarse cuando se solicita la autorización de radioaficionado.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1821). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1827",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El Reglamento de uso del dominio público radioeléctrico por aficionados:",
+    options: [
+      "Su vigencia se limita a 4 años.",
+      "Es un documento técnico informativo sin carácter vinculante para los radioaficionados.",
+      "Fija las tasas por derecho a examen.",
+      "Constituye el documento fundamental de regulación de la radioafición.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1827). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1843",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "A cual de las siguientes provincias pertenece el distintivo EA5EYR:",
+    options: [
+      "Valencia.",
+      "Almeria",
+      "Zaragoza",
+      "Zamora.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2018",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los distintivos de llamada con sufijos de dos letra; marque la opción falsa:",
+    options: [
+      "Podrán ser asignados a cualquier radioaficionado que cumpla con unas determinadas condiciones",
+      "Se asignarán en función de las disponibilidades existentes",
+      "Se reservan únicamente para estaciones colectivas",
+      "Una de las condiciones para su adjudicación es que el radioaficionado no haya sido sometido a expediente sancionador en los ultimos cinco años",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2047",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Una estación portable de aficionado:",
+    options: [
+      "Puede ser utilizada durante su traslado.",
+      "Es una estación fija, que puede ser utilizada temporalmente en ubicación distinta de la habitual.",
+      "Al ser estación móvil, puede ser utilizada mientras se encuentre detenida en puntos no determinados.",
+      "Posee antena y fuente de energía incorporada al propio equipo, ya que es una estación móvil.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2047). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1939",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "Para la realización de obras que afecten a la instalación de una antena autorizada de radioaficionado, la Comunidad de Propietarios deberá:",
+    options: [
+      "Indemnizar previamente al radioaficionado por los daños y perjuicios ocasionados.",
+      "Solicitar autorización a la Administración competente.",
+      "Informar, con antelación mínima de un mes, al titular de la licencia de estación si fuera necesario desmontar la antena y/o elementos anejos.",
+      "Solicitar permiso al titular de la licencia de estación.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1838",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "El sufijo de un distintivo de llamada de tres letras que comience por \"Y\" o \"Z\", se reservará para:",
+    options: [
+      "Usos temporales de relevancia internacional.",
+      "Usos temporales de relevancia nacional.",
+      "No se contempla dicha reserva en el reglamento vigente.",
+      "Las estaciones automáticas desatendidas analógicas y digitales respectivamente.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1992",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "En relación con los distintivos de llamada, la provincia de Murcia se identifica por la cifra:",
+    options: [
+      "7",
+      "6",
+      "5",
+      "4",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1815",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La autorización de radioaficionado habilita a su titular para:",
+    options: [
+      "Durante el primer año de vigencia de la autorización, el radioaficionado sólo puede emitir en VHF.",
+      "Efectuar emisiones siempre que domine el código MORSE.",
+      "Durante el primer año de vigencia de la autorización sólo podrá efectuar emisiones los fines de semana.",
+      "Efectuar emisiones en las bandas de frecuencias y con las características técnicas establecidas en el Reglamento de Radioaficionados.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1815). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2006",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El acceso a los repetidores analógicos y digitales finales:",
+    options: [
+      "Estará restringido a los miembros de la Asociación titular de la licencia de la estación repetidora",
+      "Será necesariamente libre",
+      "Estará restringido a los titulares de licencia con antigüedad superior a 1 año",
+      "Estará restringido a los titulares de distintivo de llamada con sufijo de 2 letras",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2006). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1930",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "El acceso a los repetidores analógicos y digitales finales será:",
+    options: [
+      "Intermitente.",
+      "Siempre libre.",
+      "Solo en caso de urgencia",
+      "Restringido, si la estación estuviera dotada de código de acceso.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1930). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1884",
+    part: 2,
+    topicId: "instalaciones",
+    stem: "El montaje del sistema radiante de una estación fija de radioaficionado será realizado:",
+    options: [
+      "Como norma general, por un instalador de telecomunica­ciones autorizado.",
+      "Siempre por el propio radioaficionado.",
+      "Utilizando exclusivamente equipos de fabricación española.",
+      "Por cualquier persona.",
+    ],
+    correctIndex: 0,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2090",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "¿Se puede solicitar protección contra interferencias perjudiciales al operar estaciones en otro país con licencia CEPT?:",
+    options: [
+      "Si.",
+      "No.",
+      "Siempre que se informe a la administración del país CEPT.",
+      "Solo en casos muy graves.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2090). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-2060",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emisiones:",
+    options: [
+      "Catódicas.",
+      "Parásitas.",
+      "No deseadas.",
+      "Por conversión de frecuencias.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1881",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
+    options: [
+      "Carecer de los preceptivos cuadros de tarifas o de precios cuando su exhibición se exija por la normativa vigente.",
+      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general, así como la divulgación del contenido.",
+      "La distribución, venta o exposición para la venta de equipos o aparatos cuya conformidad con los requisitos esenciales aplicables no haya sido evaluada de acuerdo con lo dispuesto en el título IV de esta ley o con los acuerdos o convenios internacionales celebrados por el Estado español.",
+      "La alteración, manipulación o la omisión de las características técnicas, de las marcas, de las etiquetas, de los signos de identificación o de la documentación de los equipos o de los aparatos de telecomunicaciones.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1881). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1813",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "La autorización especial de emisiones se otorgará por el periodo que duren las pruebas y, en cualquier caso, por un tiempo máximo de:",
+    options: [
+      "9 meses.",
+      "12 meses.",
+      "18 meses.",
+      "15 meses.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1813). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1990",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "No es un requisito que habrá de constar necesariamente en la licencia de estación de radioaficionado CEPT:",
+    options: [
+      "Nombre y dirección del titular.",
+      "Distintivo de llamada.",
+      "Fecha de superación del examen.",
+      "Autoridad que expide la licencia.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1990). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1975",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "¿Que símbolo le corresponde a la gama de frecuencias de 3 a 30 MHz?:",
+    options: [
+      "VHF.",
+      "HF.",
+      "LF.",
+      "UHF.",
+    ],
+    correctIndex: 1,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-84-1913",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el alfabeto fonético internacional con que palabra se identifica la letra M:",
+    options: [
+      "Miko.",
+      "Mika.",
+      "Mila.",
+      "Mike.",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1913). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-14-0450",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
+    options: [
+      "87,5 - 107 MHz sin limitación de potencia.",
+      "26,960 - 27,410 MHz.",
+      "144 - 146 y 430-440 MHz.",
+      "87,5 - 108 MHz con potencia máxima de 10mW.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 450). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    id: "quijotes-14-0361",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
+    options: [
+      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.",
+      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios por otros operadores.",
+      "La emisión de señales de identificación falsas o engañosas.",
+      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general.",
+    ],
+    correctIndex: 2,
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 361). Puede contener erratas; contrastar con BOE/convocatoria."
   },
 ];

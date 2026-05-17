@@ -1,261 +1,201 @@
 /**
- * Descarga los tests QSM del Radio Club Quijotes (EA3RCQ) y genera
- * `data/quijotes-ea3rcq.js` (solo contenido orientado a España).
+ * Descarga el banco QSM de Radio Club Quijotes (EA3RCQ) con muestreo aleatorio repetido.
  *
- * Uso (desde la raíz del proyecto): node scripts/build-quijotes.mjs
+ * Cada página solo incluye ~30 preguntas del pool; varias rondas descubren cientos por quiz.
+ *
+ * Uso:
+ *   node scripts/build-quijotes.mjs
+ *   node scripts/build-quijotes.mjs --rounds 50
+ *   node scripts/build-quijotes.mjs --dry-run
  */
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import {
+  dedupeKey,
+  discoverExamQuizUrls,
+  detectQuizKey,
+  fetchQuizPool,
+  stableQuijotesId,
+} from "../lib/quijotes-fetch.mjs";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(__dirname, "..", "data", "quijotes-ea3rcq.js");
+const OUT_EXPLAIN = path.join(__dirname, "..", "data", "quijotes-explanations.js");
 
-const SOURCES = [
-  {
-    url: "https://radioclubquijotes.org/qsm_quiz/electricidad-y-radioelectricidad/",
-    key: "1",
-    part: 1,
-    slug: "electricidad-examen",
-  },
-  {
-    url: "https://radioclubquijotes.org/qsm_quiz/radioelectricidad-correccion-inmediata/",
-    key: "83",
-    part: 1,
-    slug: "radioelectricidad-correccion",
-  },
-  {
-    url: "https://radioclubquijotes.org/qsm_quiz/reglamentacion/",
-    key: "14",
-    part: 2,
-    slug: "reglamentacion-examen",
-  },
-  {
-    url: "https://radioclubquijotes.org/qsm_quiz/reglamentacion-correccion-inmediata/",
-    key: "84",
-    part: 2,
-    slug: "reglamentacion-correccion",
-  },
+const args = process.argv.slice(2);
+const dryRun = args.includes("--dry-run");
+const roundsArg = args.find((a) => a.startsWith("--rounds="));
+const ROUNDS = roundsArg ? parseInt(roundsArg.split("=")[1], 10) : 60;
+
+/** IDs de trampa en app.js que deben conservarse tras regenerar (por stem). */
+const TRAP_LEGACY_IDS = [
+  "quijotes-020",
+  "quijotes-039",
+  "quijotes-044",
+  "quijotes-047",
+  "quijotes-051",
+  "quijotes-057",
+  "quijotes-058",
+  "quijotes-062",
+  "quijotes-070",
+  "quijotes-077",
+  "quijotes-087",
+  "quijotes-093",
+  "quijotes-095",
+  "quijotes-106",
+  "quijotes-110",
+  "quijotes-111",
 ];
 
-const SKIP_PATTERNS = [
-  /\bFCC\b/i,
-  /\bARRL\b/i,
-  /\bUnited States\b/i,
-  /\bAmerican\b/i,
-  /\bExtra class\b/i,
-  /\bTechnician\b/i,
-  /\bGeneral license\b/i,
-  /\bNTIA\b/i,
-  /\bPart 97\b/i,
-  /\bVE team\b/i,
-  /\bCanadian\b/i,
-  /\bIndustry Canada\b/i,
-];
-
-/** Errores conocidos en el banco origen (clave = `${quizKey}-${qid}`). */
-const CORRECT_OVERRIDES = {
-  "1-6": 2, // realimentación, no demodulación
-};
-
-function unescapePhpStringInJson(s) {
-  return s
-    .replace(/\\u([0-9a-fA-F]{4})/g, (_, h) => String.fromCharCode(parseInt(h, 16)))
-    .replace(/\\\//g, "/");
+function inferPart(slug) {
+  if (/reglamentacion|comunicaciones|normativa|licencia/i.test(slug)) return 2;
+  return 1;
 }
 
-function extractQuestionTitle(settings) {
-  if (!settings || typeof settings !== "string") return "";
-  const m = settings.match(
-    /"question_title";s:\d+:"([\s\S]*?)";s:\d+:"(?:featureImageID|answerEditor)/,
-  );
-  if (!m) return "";
-  return m[1].replace(/\\"/g, '"').replace(/\\\\/g, "\\").trim();
-}
-
-function shouldSkip(stem, options) {
-  const blob = `${stem}\n${options.join("\n")}`;
-  return SKIP_PATTERNS.some((re) => re.test(blob));
-}
-
-function topicIdPart1(stem) {
-  const s = stem.toLowerCase();
-  if (
-    /antena|dipolo|radial|propagaci|ionosfera|troposfera|estratosfera|mesosfera|coaxial|impedancia.*antena|diagrama.*radiaci/i.test(
-      s,
-    )
-  ) {
-    return "antenas-prop";
-  }
-  if (
-    /receptor|transmis|mezclad|modul|demodul|oscilador|portadora|squelch|selectividad|sensibilidad|estabilidad|sinton|excitad|dds|intermodulaci/i.test(
-      s,
-    )
-  ) {
-    return "receptores-emisores";
-  }
-  if (
-    /transformador|condens|resist|ohm|farad|amper|volt|bobin|circuito resonante|diodo|rectific|campo eléctrico|campo magnético|serie|paralelo/i.test(
-      s,
-    )
-  ) {
-    return "componentes";
-  }
-  if (/onda|polarizaci|frecuencia|hf\b|vhf|uhf|ancho de banda|espectro/i.test(s)) {
-    return "magnetismo-ondas";
-  }
-  return "electricidad-basica";
-}
-
-function topicIdPart2(stem) {
-  const s = stem.toLowerCase();
-  if (/distintivo|indicativo|cept|harec|autorizaci.*radioaficionado|sufijo|prefijo|licencia de estación/i.test(s)) {
-    return "licencias-indicativos";
-  }
-  if (/antena|inmueble|comunidad|instalaci|desmontaje|terraza|seguro.*licencia|sistema radiante/i.test(s)) {
-    return "instalaciones";
-  }
-  if (/código q|rst\b|mayday|fonétic|deletreo|identificaci|pse\b|alfabeto/i.test(s)) {
-    return "operacion-seguridad";
-  }
-  return "marco-normativo";
-}
-
-function parseQuizJson(html, quizKey) {
-  const safeKey = String(quizKey).replace(/[^0-9A-Za-z_-]/g, "");
-  const m = html.match(
-    new RegExp(`window\\.qmn_quiz_data\\["${safeKey}"\\]\\s*=\\s*(\\{)`),
-  );
-  if (!m) throw new Error(`No se encontró qmn_quiz_data["${safeKey}"]`);
-  const startBrace = m.index + m[0].length - 1;
-  let depth = 0;
-  let end = -1;
-  for (let i = startBrace; i < html.length; i += 1) {
-    const c = html[i];
-    if (c === "{") depth += 1;
-    else if (c === "}") {
-      depth -= 1;
-      if (depth === 0) {
-        end = i + 1;
-        break;
-      }
+async function loadLegacyMaps() {
+  const stemToExplain = new Map();
+  const legacyById = new Map();
+  try {
+    const legacy = (await import(`../data/quijotes-ea3rcq.js?${Date.now()}`)).default;
+    const explains = (await import(`../data/quijotes-explanations.js?${Date.now()}`)).default;
+    for (const q of legacy) {
+      legacyById.set(q.id, q);
+      if (explains[q.id]) stemToExplain.set(dedupeKey(q.stem, q.options), explains[q.id]);
     }
+  } catch {
+    /* primera importación */
   }
-  if (end === -1) throw new Error("JSON del cuestionario incompleto");
-  return JSON.parse(html.slice(startBrace, end));
+  return { stemToExplain, legacyById };
 }
 
-function extractItems(html, quizKey, part, sourceSlug) {
-  const data = parseQuizJson(html, quizKey);
-  const qlist = data.question_list;
-  if (!qlist) return { quizId: data.quiz_id, items: [] };
-
-  const sortedIds = Object.keys(qlist).sort((a, b) => parseInt(a, 10) - parseInt(b, 10));
-  const items = [];
-  for (const qid of sortedIds) {
-    const q = qlist[qid];
-    const settings = unescapePhpStringInJson(q.question_settings || "");
-    let stem = extractQuestionTitle(settings).trim();
-    if (!stem) continue;
-    const rawAnswers = q.answers;
-    if (!Array.isArray(rawAnswers) || rawAnswers.length < 2) continue;
-
-    const options = [];
-    let correctIndex = -1;
-    rawAnswers.forEach((row, idx) => {
-      options.push(String(row[0]).trim());
-      if (row[2] === 1 || row[2] === true) correctIndex = idx;
-    });
-
-    const ok = `${quizKey}-${qid}`;
-    if (CORRECT_OVERRIDES[ok] !== undefined) correctIndex = CORRECT_OVERRIDES[ok];
-
-    if (correctIndex < 0 || options.length > 6) continue;
-    if (shouldSkip(stem, options)) continue;
-
-    const topicId = part === 1 ? topicIdPart1(stem) : topicIdPart2(stem);
-    items.push({
-      qid,
-      quizKey,
-      sourceSlug,
-      stem,
-      options,
-      correctIndex,
-      part,
-      topicId,
-    });
-  }
-  return { quizId: data.quiz_id, items };
-}
-
-function dedupeKey(it) {
-  const norm = (s) =>
-    s
-      .toLowerCase()
-      .replace(/\s+/g, " ")
-      .replace(/[¿?¡!.:;]+$/g, "")
-      .trim();
-  return `${norm(it.stem)}|${it.options.map(norm).join("¦")}`;
-}
-
-async function fetchHtml(url) {
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": "radioexam-prep-bot/1.0 (+https://radioclubquijotes.org)",
-      Accept: "text/html,application/xhtml+xml",
-    },
-  });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
-  return res.text();
-}
-
-async function main() {
-  const merged = [];
-  const seen = new Set();
-
-  for (const src of SOURCES) {
-    process.stderr.write(`Descargando ${src.slug}…\n`);
-    const html = await fetchHtml(src.url);
-    const { items } = extractItems(html, src.key, src.part, src.slug);
-    for (const it of items) {
-      const k = dedupeKey(it);
-      if (seen.has(k)) continue;
-      seen.add(k);
-      merged.push(it);
-    }
-  }
-
+function writeQuestionsModule(questions, sources) {
   const lines = [];
   lines.push("/**");
   lines.push(" * Radio Club Quijotes (EA3RCQ) — tests en línea.");
-  lines.push(" * Generado por `node scripts/build-quijotes.mjs` (no editar a mano el bloque masivo).");
+  lines.push(" * Generado por `node scripts/build-quijotes.mjs` (no editar el bloque masivo a mano).");
+  lines.push(` * Rondas de muestreo por quiz: ${ROUNDS} (cada ronda ~30 preguntas aleatorias del pool).`);
   lines.push(" * Fuentes:");
-  for (const s of SOURCES) {
-    lines.push(` *   - ${s.url}`);
+  for (const s of sources) {
+    lines.push(` *   - ${s.url} (quiz ${s.key}, ${s.slug})`);
   }
-  lines.push(" * Se excluyen ítems con referencias claras a normativa estadounidense u otros países (FCC, ARRL, etc.).");
+  lines.push(" * Se excluyen ítems con referencias FCC/ARRL u otros países, y enunciados que exigen figura.");
   lines.push(" */");
   lines.push("export default [");
 
-  merged.forEach((it, idx) => {
-    const id = `quijotes-${String(idx + 1).padStart(3, "0")}`;
-    const explain = `Fuente: Radio Club Quijotes (EA3RCQ) — ${it.sourceSlug}, quiz QSM ${it.quizKey}, pregunta ${it.qid}.`;
+  for (const it of questions) {
+    const id = stableQuijotesId(it.quizKey, it.qid);
     const optStr = it.options.map((o) => JSON.stringify(o)).join(",\n      ");
-    lines.push(`  {`);
+    lines.push("  {");
     lines.push(`    id: ${JSON.stringify(id)},`);
     lines.push(`    part: ${it.part},`);
     lines.push(`    topicId: ${JSON.stringify(it.topicId)},`);
     lines.push(`    stem: ${JSON.stringify(it.stem)},`);
     lines.push(`    options: [\n      ${optStr},\n    ],`);
     lines.push(`    correctIndex: ${it.correctIndex},`);
-    lines.push(`    explain: ${JSON.stringify(explain)},`);
-    lines.push(`  },`);
-  });
-
+    lines.push(
+      `    explain: ${JSON.stringify(`Práctica histórica (Quijotes EA3RCQ · ${it.sourceSlug}, quiz ${it.quizKey}, pregunta ${it.qid}). Puede contener erratas; contrastar con BOE/convocatoria.`)}`,
+    );
+    lines.push("  },");
+  }
   lines.push("];");
   lines.push("");
   fs.writeFileSync(OUT, lines.join("\n"), "utf8");
-  process.stderr.write(`Escrito ${OUT} (${merged.length} preguntas).\n`);
+}
+
+function writeExplanationsModule(questions, stemToExplain) {
+  const entries = [];
+  for (const it of questions) {
+    const id = stableQuijotesId(it.quizKey, it.qid);
+    const text = stemToExplain.get(dedupeKey(it.stem, it.options));
+    if (text) entries.push({ id, text });
+  }
+  const lines = [
+    "/**",
+    " * Explicaciones didácticas para preguntas Quijotes (remapeadas por enunciado al regenerar el banco).",
+    " */",
+    "export default {",
+  ];
+  for (const { id, text } of entries) {
+    lines.push(`  ${JSON.stringify(id)}: ${JSON.stringify(text)},`);
+  }
+  lines.push("};");
+  lines.push("");
+  fs.writeFileSync(OUT_EXPLAIN, lines.join("\n"), "utf8");
+  return entries.length;
+}
+
+async function main() {
+  const { stemToExplain, legacyById } = await loadLegacyMaps();
+  const trapKeys = new Set();
+  for (const id of TRAP_LEGACY_IDS) {
+    const q = legacyById.get(id);
+    if (q) trapKeys.add(dedupeKey(q.stem, q.options));
+  }
+
+  const discovered = await discoverExamQuizUrls();
+  const sources = [];
+
+  for (const { url, slug } of discovered) {
+    process.stderr.write(`Detectando quiz en ${slug}…\n`);
+    const key = await detectQuizKey(url);
+    if (!key) {
+      process.stderr.write(`  omitido (sin qmn_quiz_data)\n`);
+      continue;
+    }
+    sources.push({
+      url,
+      slug,
+      key,
+      part: inferPart(slug),
+    });
+  }
+
+  const merged = [];
+  const seen = new Set();
+
+  for (const src of sources) {
+    process.stderr.write(`Muestreando ${src.slug} (quiz ${src.key}, ${ROUNDS} rondas)…\n`);
+    const items = await fetchQuizPool({
+      ...src,
+      rounds: ROUNDS,
+      slug: src.slug,
+    });
+    for (const it of items) {
+      const k = dedupeKey(it.stem, it.options);
+      if (seen.has(k)) continue;
+      seen.add(k);
+      merged.push({ ...it, sourceSlug: src.slug });
+    }
+    process.stderr.write(`  → ${items.length} del quiz, ${merged.length} acumuladas únicas\n`);
+  }
+
+  process.stderr.write(`\nTotal Quijotes: ${merged.length} preguntas únicas (${sources.length} quizzes).\n`);
+
+  if (dryRun) {
+    process.stderr.write("Modo --dry-run: no se escribieron archivos.\n");
+    return;
+  }
+
+  writeQuestionsModule(merged, sources);
+  const nExplain = writeExplanationsModule(merged, stemToExplain);
+  process.stderr.write(`Escrito ${OUT}\n`);
+  process.stderr.write(`Escrito ${OUT_EXPLAIN} (${nExplain} explicaciones remapeadas).\n`);
+
+  if (trapKeys.size) {
+    const newTraps = [];
+    for (const it of merged) {
+      if (trapKeys.has(dedupeKey(it.stem, it.options))) {
+        newTraps.push(stableQuijotesId(it.quizKey, it.qid));
+      }
+    }
+    process.stderr.write(
+      `\nActualiza TRAP_QUESTION_IDS en app.js con:\n${newTraps.map((id) => `  "${id}",`).join("\n")}\n`,
+    );
+  }
+
+  process.stderr.write("\nSiguiente: node scripts/verify-data.mjs\n");
 }
 
 main().catch((e) => {

@@ -1,0 +1,29 @@
+=== Cribado por antigüedad ===
+Modo activo exportado: normal
+Banco total (con duplicados entre fuentes): 1728
+Enunciados únicos (deduplicados): 1678
+
+Por tier (todas las entradas del banco):
+  A (reciente):     499
+  B (aceptable):    396
+  C (histórico):    833
+
+Pool cribado (único por enunciado, sin obsoletos marcados):
+  Normal (A+B):     850
+  Estricto (solo A): 491
+  Histórico único:  824 enunciados solo en tier C
+  Obsoletos marcados: 4 (revisar manualmente)
+
+Por fuente:
+  quijotes: 597
+  fedi: 532
+  fedi-bloque: 462
+  ure: 79
+  propias: 46
+  base: 12
+
+Muestra IDs con posible normativa antigua (primeros 15):
+  - fedi-l-039
+  - quijotes-84-1905
+  - quijotes-84-2085
+  - quijotes-84-1981

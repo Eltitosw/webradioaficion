@@ -10,6 +10,8 @@
  * - `sourceRef`: trazabilidad breve (documento + sección o URL); obligatorio
  *   en este archivo.
  * - Cuatro opciones, una sola correcta; explicación literal y revisable.
+ * - No copiar enunciados de bancos externos con copyright (p. ej. libro EA5CB /
+ *   EA5RCA): solo redacción propia contrastada con BOE, CEPT y programa HAREC.
  */
 export default [
   {
@@ -358,5 +360,207 @@ export default [
     explain:
       "Es una pregunta trampa habitual: en operación internacional puede verse la forma inglesa November, pero algunos bancos españoles formulan el deletreo con la adaptación usada en castellano: N = Noviembre. No inventes palabras como Norte o Náutico.",
     sourceRef: "FEDI-EA P2 / deletreo de distintivos; práctica española del alfabeto fonético internacional.",
+  },
+  {
+    id: "ofic-032",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "Las capas ionizadas de la atmósfera que condicionan la propagación por reflexión en HF se denominan habitualmente:",
+    options: ["Troposfera, estratosfera y mesosfera", "Capas D, E, F1 y F2", "Solo capa ozono", "Capas AM y FM"],
+    correctIndex: 1,
+    explain:
+      "En HF interesa la ionosfera y sus subcapas (D, E, F1, F2). La troposfera influye más en VHF/UHF; no confundir con capas meteorológicas.",
+    sourceRef: "Programa HAREC / propagación ionosférica; temarios URE y manuales de examen.",
+  },
+  {
+    id: "ofic-033",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "La designación internacional de una clase de emisión consta, en el esquema habitual, de:",
+    options: ["Un solo dígito", "Tres signos: letra, número y letra", "Cuatro letras seguidas del indicativo", "Dos números y un prefijo"],
+    correctIndex: 1,
+    explain:
+      "El formato clásico es letra-número-letra (p. ej. modulación y tipo de señal). En examen suele preguntarse la estructura, no memorizar todas las clases.",
+    sourceRef: "UIT RR Apéndice 1 / clases de emisión; programa reglamentación HAREC.",
+  },
+  {
+    id: "ofic-034",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los prefijos temporales ED, EE y EF en distintivos españoles se asocian, según la práctica habitual del examen, a:",
+    options: [
+      "Eventos de relevancia internacional únicamente",
+      "Usos temporales no atribuidos a nivel nacional ni autonómico",
+      "Solo estaciones de barco",
+      "Distritos 8 y 9",
+    ],
+    correctIndex: 1,
+    explain:
+      "ED/EE/EF suelen reservarse a usos temporales especiales. EG/EH se relacionan con eventos regionales; AM/AN/AO con relevancia nacional o internacional (tablas de estudio españolas).",
+    sourceRef: "Reglamento IET/1311/2013 y tablas de prefijos; guías de indicativos URE.",
+  },
+  {
+    id: "ofic-035",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "Si una interferencia perjudicial afecta a la seguridad de la vida humana, el operador debe:",
+    options: [
+      "Aumentar potencia para superarla",
+      "Dejar de emitir hasta resolver el problema",
+      "Cambiar solo el indicativo",
+      "Ignorarla si la ROE es baja",
+    ],
+    correctIndex: 1,
+    explain:
+      "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución.",
+    sourceRef: "Reglamento de Radiocomunicaciones UIT; buenas prácticas operativas HAREC.",
+  },
+  {
+    id: "ofic-036",
+    part: 1,
+    topicId: "componentes",
+    stem: "En resonancia de un circuito serie LC ideal, la reactancia capacitiva y la inductiva:",
+    options: ["Siempre son nulas", "Se igualan en magnitud y se cancelan", "Suman el doble", "Solo importa la resistencia"],
+    correctIndex: 1,
+    explain: "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente).",
+    sourceRef: "Electricidad y radioelectricidad básica · resonancia LC (programa HAREC).",
+  },
+  {
+    id: "ofic-037",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el ancho de banda B como:",
+    options: ["Q = B / f", "Q = f / B", "Q = f · B", "Q = f + B"],
+    correctIndex: 1,
+    explain: "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos.",
+    sourceRef: "Programa HAREC / circuitos resonantes y selectividad.",
+  },
+  {
+    id: "ofic-038",
+    part: 1,
+    topicId: "magnetismo-ondas",
+    stem: "Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:",
+    options: ["0 dBm", "10 dBm", "30 dBm", "100 dBm"],
+    correctIndex: 2,
+    explain: "1 W = 1000 mW → 10·log10(1000) = 30 dBm. Confundir con 10 dBm (10 mW) es error típico de examen.",
+    sourceRef: "Decibelios y dBm · definición logarítmica (temario radioelectricidad).",
+  },
+  {
+    id: "ofic-039",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "La función principal del silenciador (squelch) en un receptor es:",
+    options: [
+      "Amplificar la antena",
+      "Suprimir el audio cuando no hay señal útil de RF",
+      "Medir la ROE",
+      "Generar la portadora",
+    ],
+    correctIndex: 1,
+    explain: "El squelch corta el audio ante ausencia de señal o ruido de fondo, evitando silbidos constantes en el altavoz.",
+    sourceRef: "Programa HAREC / receptores y controles de audio.",
+  },
+  {
+    id: "ofic-040",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En el código Q, QRX indica normalmente que:",
+    options: [
+      "Se cambia de banda de inmediato",
+      "Se volverá a llamar más tarde",
+      "Se solicita repetición",
+      "Se cierra la estación",
+    ],
+    correctIndex: 1,
+    explain: "QRX ≈ «volveré a llamar» / espera. No confundir con QSL (tarjeta) ni con CL (cierre de estación).",
+    sourceRef: "Código Q · operación de radioaficionado.",
+  },
+  {
+    id: "ofic-041",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Un distintivo que incorpora el prefijo EG suele asociarse en España a:",
+    options: [
+      "Uso temporal internacional exclusivo",
+      "Eventos de carácter regional o autonómico",
+      "Solo repetidores",
+      "Estaciones de barco",
+    ],
+    correctIndex: 1,
+    explain:
+      "EG/EH se vinculan a eventos regionales o locales. AM/AN/AO suelen usarse en eventos de mayor relevancia; ED/EE/EF en otros usos temporales.",
+    sourceRef: "Tablas de prefijos e indicativos · reglamento y guías URE.",
+  },
+  {
+    id: "ofic-042",
+    part: 1,
+    topicId: "receptores-emisores",
+    stem: "Un receptor superheterodino de doble conversión utiliza:",
+    options: [
+      "Una sola frecuencia intermedia",
+      "Dos frecuencias intermedias en cadena",
+      "Solo conversión directa a audio",
+      "Dos antenas obligatoriamente",
+    ],
+    correctIndex: 1,
+    explain:
+      "La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas.",
+    sourceRef: "Programa HAREC / arquitectura de receptores.",
+  },
+  {
+    id: "ofic-043",
+    part: 1,
+    topicId: "antenas-prop",
+    stem: "En el diagrama de radiación de una antena, la relación delante-atrás mide:",
+    options: [
+      "La ROE de la línea",
+      "La diferencia en dB entre radiación frontal y posterior",
+      "La potencia de la batería",
+      "El código Q",
+    ],
+    correctIndex: 1,
+    explain:
+      "Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB).",
+    sourceRef: "Antenas y diagramas · programa HAREC.",
+  },
+  {
+    id: "ofic-044",
+    part: 1,
+    topicId: "componentes",
+    stem: "Un diodo varicap se comporta, en esencia, como:",
+    options: [
+      "Una resistencia fija",
+      "Un condensador variable controlado por tensión",
+      "Un transformador de potencia",
+      "Un altavoz",
+    ],
+    correctIndex: 1,
+    explain: "La capacidad del varicap varía con la tensión inversa; se usa en sintonía de VCO y circuitos de RF.",
+    sourceRef: "Semiconductores y sintonía · temario componentes.",
+  },
+  {
+    id: "ofic-045",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "Antes de transmitir en una frecuencia, escuchar si la frecuencia está libre es:",
+    options: [
+      "Opcional y sin importancia",
+      "Una buena práctica operativa",
+      "Prohibido por el reglamento",
+      "Solo obligatorio en HF",
+    ],
+    correctIndex: 1,
+    explain: "Evita interferir a comunicaciones en curso. Es buena práctica aunque el reglamento también exija identificarse y respetar bandas.",
+    sourceRef: "Buenas prácticas operativas; reglamento de aficionados.",
+  },
+  {
+    id: "ofic-046",
+    part: 2,
+    topicId: "operacion-seguridad",
+    stem: "En tráfico de radioaficionado, la abreviatura «CL» suele significar:",
+    options: ["Cambio de polarización", "Cierre de estación", "Licencia CEPT", "Control de ganancia"],
+    correctIndex: 1,
+    explain: "CL = Closing / cierre de estación. No confundir con QRT (cesar emisión) en todos los contextos, pero CL es cierre habitual.",
+    sourceRef: "Abreviaturas operativas · práctica de examen y manuales URE.",
   },
 ];

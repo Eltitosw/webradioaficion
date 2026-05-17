@@ -1,15 +1,14 @@
 /**
  * Comprueba coherencia de datos (preguntas, temario, topic-study).
- * Ejecutar desde la raíz del proyecto: npm run verify
  */
 import topics from "../data/topics.js";
 import topicStudy from "../data/topics-study.js";
-import questions from "../data/questions.js";
-import ure from "../data/ure-electricidad.js";
-import fedi from "../data/fediea-2011.js";
-import quij from "../data/quijotes-ea3rcq.js";
+import questionsBanco from "../data/questions-banco.js";
+import { BANCO_STATS } from "../data/questions-banco.js";
 import propias from "../data/questions-examen-propias.js";
-import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
+import figures from "../data/questions-figures.js";
+import { EXACT_FIGURE_QUESTION_IDS } from "../data/question-figure-ids.js";
+import { EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
 
 const blockIds = new Set();
 for (const p of topics.parts || []) {
@@ -29,9 +28,10 @@ for (const id of blockIds) {
   if (!topicStudy[id]) fail(`Temario: bloque "${id}" sin entrada en topics-study.js`);
 }
 
-const all = [...questions, ...propias, ...ure, ...fedi, ...quij];
+const all = questionsBanco;
 const active = all.filter(isActiveQuestion);
 const ids = new Set();
+
 for (const q of all) {
   if (!q || typeof q.id !== "string") {
     fail("Ítem sin id válido");
@@ -47,19 +47,39 @@ for (const q of all) {
   }
 }
 
+for (const id of EXACT_FIGURE_QUESTION_IDS) {
+  if (!ids.has(id)) fail(`question-figure-ids: "${id}" no está en questions-banco.js`);
+}
+
+for (const q of all) {
+  if (q.stemFigure && !EXACT_FIGURE_QUESTION_IDS.has(q.id)) {
+    fail(`Pregunta ${q.id}: tiene stemFigure pero falta en EXACT_FIGURE_QUESTION_IDS`);
+  }
+}
+
 for (const q of propias) {
   if (!q.sourceRef || !String(q.sourceRef).trim()) fail(`questions-examen-propias: falta sourceRef en ${q.id}`);
 }
 
-for (const q of all) {
-  if (!q.stemFigure) continue;
-  if (!EXACT_FIGURE_QUESTION_IDS.has(q.id) && !EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id)) {
-    fail(`Pregunta ${q.id}: tiene figura, pero no está certificada como exacta ni excluida hasta tener calco.`);
+for (const fq of figures) {
+  if (!ids.has(fq.id)) {
+    fail(`questions-figures: "${fq.id}" no está en el banco (ejecuta npm run build:banco)`);
   }
 }
 
-console.log("Preguntas totales:", all.length);
-console.log("Preguntas activas:", active.length, `(excluidas por figura exacta pendiente: ${all.length - active.length})`);
+for (const q of all) {
+  if (!q.stemFigure) continue;
+  if (EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id)) continue;
+  if (!EXACT_FIGURE_QUESTION_IDS.has(q.id)) {
+    fail(`Pregunta ${q.id}: figura sin certificar en question-figure-ids.js`);
+  }
+}
+
+const withFig = all.filter((q) => q.stemFigure).length;
+console.log("Banco principal:", all.length);
+console.log("  cribado incluidos:", BANCO_STATS.cribadoIncluded ?? "?");
+console.log("  con figura:", withFig);
+console.log("Preguntas activas:", active.length);
 if (errors) {
   console.error(`\nverify-data: ${errors} error(es).`);
   process.exit(1);

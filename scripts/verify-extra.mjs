@@ -8,25 +8,26 @@ import { fileURLToPath } from "node:url";
 
 import regulatory from "../data/regulatory.js";
 import topics from "../data/topics.js";
+import questionsBanco from "../data/questions-banco.js";
 import questions from "../data/questions.js";
+import propias from "../data/questions-examen-propias.js";
 import ure from "../data/ure-electricidad.js";
+import ureExtra from "../data/ure-electricidad-extra.js";
+import ureReg from "../data/ure-reglamentacion.js";
 import fedi from "../data/fediea-2011.js";
+import fediBloques from "../data/fediea-bloques.js";
 import quij from "../data/quijotes-ea3rcq.js";
 import quijotesExplanations from "../data/quijotes-explanations.js";
-import propias from "../data/questions-examen-propias.js";
-import figureSvgs from "../data/figure-assets.js";
+import { CRIBADO_PREFERRED_IDS } from "../data/question-cribado.js";
 import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS } from "../data/question-policy.js";
 import { checkStemFigures } from "../lib/stem-figure-check.mjs";
+import { FIGURE_REQUIRED_STEM_RE, FIGURE_STEM_EXCLUDE_RE } from "../lib/import-question-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.join(__dirname, "..");
 
-const quijWithExplanations = quij.map((q) => {
-  const text = quijotesExplanations[q.id];
-  return text ? { ...q, explain: `${text} ${q.explain || ""}`.trim() } : q;
-});
-
-const all = [...questions, ...propias, ...ure, ...fedi, ...quijWithExplanations];
+const all = questionsBanco;
+const bancoIds = new Set(all.map((q) => q.id));
 
 let errors = 0;
 function fail(msg) {
@@ -123,15 +124,45 @@ for (const q of all) {
 }
 
 for (const q of quij) {
-  if (!quijotesExplanations[q.id]) {
-    fail(`Pregunta ${q.id}: falta explicación revisada en data/quijotes-explanations.js.`);
+  if (!q.explain || !String(q.explain).trim()) {
+    fail(`Pregunta ${q.id}: falta explain en el banco Quijotes.`);
+  }
+}
+for (const id of Object.keys(quijotesExplanations)) {
+  if (!quij.some((q) => q.id === id)) {
+    fail(`quijotes-explanations: entrada huérfana "${id}" (no existe en quijotes-ea3rcq.js).`);
   }
 }
 
-const figureRequiredRe = /(en el siguiente|la siguiente|el siguiente|ver (diagrama|gr[aá]fico|gr[aá]fica|circuito|figura|esquema)|\(ver)/i;
+const bancoByStem = new Map();
+for (const q of all) {
+  const key = `${String(q.stem || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim()}|${q.options.map((o) => String(o).toLowerCase().trim()).join("¦")}`;
+  bancoByStem.set(key, q);
+}
+
+for (const id of CRIBADO_PREFERRED_IDS) {
+  if (bancoIds.has(id)) continue;
+  const src = [...questions, ...propias, ...ure, ...ureExtra, ...ureReg, ...fedi, ...fediBloques, ...quij].find(
+    (q) => q.id === id,
+  );
+  if (!src) continue;
+  const key = `${String(src.stem || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim()}|${src.options.map((o) => String(o).toLowerCase().trim()).join("¦")}`;
+  const alt = bancoByStem.get(key);
+  if (alt?.stemFigure) continue;
+  fail(`question-cribado: id "${id}" falta en questions-banco.js (sin sustituto con figura).`);
+}
+
 const externalFigureReferenceRe = /(ver|consulta|consultar|consultarla|consultarlas)\s+(la\s+|el\s+|las\s+|los\s+)?(figura|gr[aá]fica|gr[aá]fico|esquema|circuito|forma de onda).{0,80}\b(URE|FEDI|web)\b/i;
 for (const q of all) {
-  if (figureRequiredRe.test(String(q.stem || "")) && !q.stemFigure) {
+  const stem = String(q.stem || "");
+  if (FIGURE_STEM_EXCLUDE_RE.test(stem)) continue;
+  if (FIGURE_REQUIRED_STEM_RE.test(stem) && !q.stemFigure) {
     fail(`Pregunta ${q.id}: el enunciado requiere figura pero no tiene stemFigure.`);
   }
   if (q.stemFigure) {
@@ -139,8 +170,12 @@ for (const q of all) {
     if (externalFigureReferenceRe.test(figureText)) {
       fail(`Pregunta ${q.id}: tiene stemFigure local; no debe derivar la figura a URE/FEDI/web externa.`);
     }
-    if (String(q.stemFigure).endsWith(".svg") && typeof figureSvgs[q.stemFigure] !== "string") {
-      fail(`Pregunta ${q.id}: ${q.stemFigure} debe estar embebida en data/figure-assets.js para evitar imágenes rotas en hosting.`);
+    const figPath = String(q.stemFigure);
+    if (figPath.toLowerCase().endsWith(".svg")) {
+      fail(`Pregunta ${q.id}: el banco activo no admite SVG interpretado (${figPath}); usa *-original.jpg|png.`);
+    }
+    if (!/-original\.(jpg|jpeg|png|webp)$/i.test(figPath)) {
+      fail(`Pregunta ${q.id}: stemFigure debe apuntar a imagen original fiel (*-original.*): ${figPath}`);
     }
     if (!EXACT_FIGURE_QUESTION_IDS.has(q.id) && !EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id)) {
       fail(`Pregunta ${q.id}: figura sin estatus editorial. Debe certificarse como exacta o excluirse del banco activo.`);

@@ -2,14 +2,11 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import regulatory from "../data/regulatory.js";
 import topics from "../data/topics.js";
-import questions from "../data/questions.js";
+import questionsBanco from "../data/questions-banco.js";
 import ownQuestions from "../data/questions-examen-propias.js";
-import ure from "../data/ure-electricidad.js";
-import fedi from "../data/fediea-2011.js";
-import quijotes from "../data/quijotes-ea3rcq.js";
 import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
 
-const allQuestions = [...questions, ...ownQuestions, ...ure, ...fedi, ...quijotes];
+const allQuestions = [...questionsBanco];
 const activeQuestions = allQuestions.filter(isActiveQuestion);
 
 test("regulatory export tiene estructura mínima", () => {

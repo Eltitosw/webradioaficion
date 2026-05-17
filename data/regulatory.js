@@ -159,6 +159,12 @@ export default {
           note: "Guía orientativa sobre trámite y estudio; verifica siempre la normativa y los plazos publicados oficialmente.",
         },
         {
+          label: "Libro de examen EA5CB · Radio Club Utiel (PDF gratuito, descarga oficial)",
+          href: "https://www.ea5rca.es",
+          note:
+            "Más de 1.000 preguntas de estudio en el libro del autor (mayo 2025). No se aloja en RadioExamen ni se copian sus enunciados por copyright; úsalo como apoyo paralelo y contrasta con BOE/CEPT.",
+        },
+        {
           label: "URE · Ejemplos de examen",
           href: "https://www.ure.es/ejemplos-de-examen/",
           note: "Material de apoyo en el sitio de la Unión de Radioaficionados Españoles.",

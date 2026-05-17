@@ -1,13 +1,8 @@
 import topicsData from "./data/topics.js";
 import topicStudy from "./data/topics-study.js";
-import questionsData from "./data/questions.js";
-import ureElectricidad from "./data/ure-electricidad.js";
-import fediea2011 from "./data/fediea-2011.js";
-import quijotesEa3rcq from "./data/quijotes-ea3rcq.js";
-import quijotesExplanations from "./data/quijotes-explanations.js";
-import questionsExamenPropias from "./data/questions-examen-propias.js";
+import questionsBanco from "./data/questions-banco.js";
+import { BANCO_STATS } from "./data/questions-banco.js";
 import regulatory from "./data/regulatory.js";
-import figureSvgs from "./data/figure-assets.js";
 import { isActiveQuestion } from "./data/question-policy.js";
 import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
 import {
@@ -176,21 +171,8 @@ const methods = [
   },
 ];
 
-function withQuijotesExplanation(q) {
-  const text = quijotesExplanations[q.id];
-  if (!text) return q;
-  const source = typeof q.explain === "string" && q.explain.trim() ? ` ${q.explain.trim()}` : "";
-  return { ...q, explain: `${text}${source}` };
-}
-
-/** @type {typeof questionsData} */
-let allQuestions = [
-  ...questionsData,
-  ...questionsExamenPropias,
-  ...ureElectricidad,
-  ...fediea2011,
-  ...quijotesEa3rcq.map(withQuijotesExplanation),
-].filter(isActiveQuestion);
+/** @type {typeof questionsBanco} */
+let allQuestions = [...questionsBanco].filter(isActiveQuestion);
 
 const TRAP_QUESTION_IDS = new Set([
   "q6",
@@ -218,6 +200,10 @@ const TRAP_QUESTION_IDS = new Set([
   "ofic-029",
   "ofic-030",
   "ofic-031",
+  "ofic-034",
+  "ofic-038",
+  "ofic-040",
+  "ofic-041",
   "ure-p1-02",
   "ure-p1-03",
   "ure-p1-04",
@@ -260,22 +246,19 @@ const TRAP_QUESTION_IDS = new Set([
   "fedi-ah-057",
   "fedi-ah-059",
   "fedi-ah-060",
-  "quijotes-020",
-  "quijotes-039",
-  "quijotes-044",
-  "quijotes-047",
-  "quijotes-051",
-  "quijotes-057",
-  "quijotes-058",
-  "quijotes-062",
-  "quijotes-070",
-  "quijotes-077",
-  "quijotes-087",
-  "quijotes-093",
-  "quijotes-095",
-  "quijotes-106",
-  "quijotes-110",
-  "quijotes-111",
+  "quijotes-1-0228",
+  "quijotes-1-0205",
+  "quijotes-84-1812",
+  "quijotes-84-2063",
+  "quijotes-84-2045",
+  "quijotes-84-1988",
+  "quijotes-84-1804",
+  "quijotes-84-1805",
+  "quijotes-84-1915",
+  "quijotes-84-2074",
+  "quijotes-84-1946",
+  "quijotes-84-2048",
+  "quijotes-84-1875",
 ]);
 
 function $(sel, root = document) {
@@ -815,7 +798,7 @@ const TEORICO_COUNT = 30;
 const TEORICO_EXAM_MS = 30 * 60 * 1000;
 
 const quizState = {
-  list: /** @type {typeof questionsData} */ ([]),
+  list: /** @type {typeof questionsBanco} */ ([]),
   index: 0,
   mode: /** @type {"study"|"exam"} */ ("study"),
   /** Solo en estudio: inmediato, confianza (JOL) o panel temario/libro con texto literal del banco. */
@@ -938,6 +921,25 @@ function applyQuizSetupToForm(/** @type {Record<string, unknown>} */ setup) {
   if (trapEl instanceof HTMLInputElement) trapEl.checked = !!setup.trapOnly;
   syncPretestAvailability();
   validateTopicPartConsistency();
+}
+
+/** Combina filtros de falladas y trampa. */
+function buildQuizOnlyPool() {
+  let pool = null;
+  const wrongOnly = !!$("#quiz-wrong-only")?.checked;
+  const trapOnly = !!$("#quiz-trap-only")?.checked;
+
+  if (wrongOnly) {
+    const ids = loadLastWrongIds();
+    if (ids.length) pool = new Set(ids);
+  }
+  if (trapOnly) {
+    pool =
+      pool && pool.size
+        ? new Set([...pool].filter((id) => TRAP_QUESTION_IDS.has(id)))
+        : new Set(TRAP_QUESTION_IDS);
+  }
+  return pool;
 }
 
 function clearQuizDraft() {
@@ -1206,17 +1208,7 @@ async function startQuiz() {
   quizState._statsCounted = new Set();
   const wrongOnly = !!$("#quiz-wrong-only")?.checked;
   const trapOnly = !!$("#quiz-trap-only")?.checked;
-  let onlyPool = null;
-  if (wrongOnly) {
-    const ids = loadLastWrongIds();
-    if (ids.length) onlyPool = new Set(ids);
-  }
-  if (trapOnly) {
-    onlyPool =
-      onlyPool && onlyPool.size
-        ? new Set([...onlyPool].filter((id) => TRAP_QUESTION_IDS.has(id)))
-        : new Set(TRAP_QUESTION_IDS);
-  }
+  const onlyPool = buildQuizOnlyPool();
   quizState.list = buildQuestionList(
     allQuestions,
     part,
@@ -1353,13 +1345,6 @@ function stemFigureBlock(q) {
     typeof rawAlt === "string" && rawAlt.trim()
       ? rawAlt.trim()
       : "Figura asociada al enunciado.";
-  const inlineSvg = typeof figureSvgs[src] === "string" ? figureSvgs[src] : "";
-  if (inlineSvg) {
-    return `<figure class="q-card__figure">
-      <div class="q-card__figure-inline" aria-label="${escapeHtml(alt)}">${inlineSvg}</div>
-      <figcaption class="q-card__figure-caption">${escapeHtml(alt)}</figcaption>
-    </figure>`;
-  }
   return `<figure class="q-card__figure">
     <img class="q-card__figure-img" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" onerror="this.closest('figure').classList.add('is-missing')" />
     <figcaption class="q-card__figure-caption">${escapeHtml(alt)}</figcaption>
@@ -2375,9 +2360,10 @@ function renderQuizPracticeGuide() {
       <div>
         <h2>${escapeHtml(title)}</h2>
         <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test → explicación → refuerzo en Temario → repetición.</p>
+        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura original). Cribado: ${BANCO_STATS.cribadoPreferred ?? "?"} entradas únicas por enunciado.</p>
         ${
           trapOnly
-            ? `<p><strong>Modo preguntas trampa activo:</strong> este filtro prioriza distractores típicos, excepciones y confusiones frecuentes (${trapCount} pregunta(s) con los filtros actuales).</p>`
+            ? `<p><strong>Modo preguntas trampa activo:</strong> distractores típicos (${trapCount} con filtros actuales).</p>`
             : ""
         }
       </div>
@@ -3064,7 +3050,7 @@ function goPrev() {
 
 /* ---------- Flashcards + spacing ---------- */
 const fcState = {
-  deck: /** @type {Array<{ q: (typeof questionsData)[number]; due: number; step: number }>} */ ([]),
+  deck: /** @type {Array<{ q: (typeof questionsBanco)[number]; due: number; step: number }>} */ ([]),
   index: 0,
   flipped: false,
 };

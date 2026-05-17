@@ -385,6 +385,7 @@ export default {
       "Entrena con columnas: organismo/documento, para qué sirve y palabra trampa. Ejemplo: IARU recomienda planes de banda; la Administración fija condiciones legales.",
       "Cuando el test pregunte por HAREC, CEPT o autorización, responde en tres pasos: acredita aptitud, permite reconocimiento temporal o habilita a usar el espectro.",
       "Haz simulacros de 30 preguntas por prueba y marca objetivo mínimo 15 aciertos en cada una; corrige por tema, no solo por porcentaje global.",
+      "Si usas el libro gratuito EA5RCA en paralelo, contrasta prefijos temporales y plazos con el BOE; RadioExamen no copia sus enunciados.",
     ],
     quickSession: [
       "Para no confundir CEPT: T/R 61-01 se asocia a operación temporal en países CEPT; T/R 61-02 se asocia al certificado HAREC y al programa de examen.",
