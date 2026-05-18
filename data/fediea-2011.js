@@ -1,12 +1,6 @@
 /**
- * Tests de práctica FEDI-EA (Federación Digital EA).
- * Fuente índice: https://www.fediea.org/examen/ejercicios/
- * Bloques importados:
- *   - ag: 1.ª prueba 22/10/2011 (preguntas 001–030)
- *   - ah: 2.ª prueba 22/10/2011 (preguntas 031–060)
- * Las preguntas que dependen de figura incluyen un `stemFigure` local y explicación propia.
- * Advertencia de FEDI: pueden contener errores o quedar obsoletas.
- * Revisión aplicada (normativa/técnica): 2026-05-12 — fedi-ag-014, fedi-ah-031, fedi-ah-035, fedi-ah-040 (potencias vs BOE).
+ * FEDI-EA 2011.
+ * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [
   {
@@ -28,7 +22,12 @@ export default [
     part: 1,
     topicId: "componentes",
     stem: "Colocamos 3 condensadores en paralelo; si el valor individual de 2 de ellos es 100 pF y el valor total es 400 pF, ¿cuál será el valor del otro condensador?",
-    options: ["200 pF", "300 pF", "400 pF", "100 pF"],
+    options: [
+      "200 pF",
+      "300 pF",
+      "400 pF",
+      "100 pF",
+    ],
     correctIndex: 0,
     explain: "En paralelo se suman capacidades: 100 + 100 + x = 400 → x = 200 pF. FEDI-EA.",
   },
@@ -36,11 +35,15 @@ export default [
     id: "fedi-ag-003",
     part: 1,
     topicId: "magnetismo-ondas",
-    stem: 'El llamado "detector de envolvente" se implementa en receptores para señales con modulación de:',
-    options: ["Fase (PM)", "Amplitud (AM)", "Frecuencia (FM)", "Banda lateral única"],
+    stem: "El llamado \"detector de envolvente\" se implementa en receptores para señales con modulación de:",
+    options: [
+      "Fase (PM)",
+      "Amplitud (AM)",
+      "Frecuencia (FM)",
+      "Banda lateral única",
+    ],
     correctIndex: 1,
-    explain:
-      "AM significa modulación de amplitud: la información viaja en los cambios de amplitud de la portadora. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio. No sirve como detector principal de FM (modulación de frecuencia), PM (modulación de fase) o SSB (banda lateral única). FEDI-EA.",
+    explain: "AM significa modulación de amplitud: la información viaja en los cambios de amplitud de la portadora. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio. No sirve como detector principal de FM (modulación de frecuencia), PM (modulación de fase) o SSB (banda lateral única). FEDI-EA.",
   },
   {
     id: "fedi-ag-004",
@@ -54,15 +57,19 @@ export default [
       "Ninguna de las anteriores es correcta",
     ],
     correctIndex: 0,
-    explain:
-      "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A–C vacías; aquí se ha normalizado el enunciado. FEDI-EA.",
+    explain: "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A–C vacías; aquí se ha normalizado el enunciado. FEDI-EA.",
   },
   {
     id: "fedi-ag-005",
     part: 1,
     topicId: "receptores-emisores",
     stem: "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?",
-    options: ["Rectificación", "Conversión", "Demodulación", "Realimentación"],
+    options: [
+      "Rectificación",
+      "Conversión",
+      "Demodulación",
+      "Realimentación",
+    ],
     correctIndex: 3,
     explain: "Esa definición corresponde a la realimentación (feedback). FEDI-EA.",
   },
@@ -99,7 +106,12 @@ export default [
     part: 1,
     topicId: "componentes",
     stem: "La capacidad de un condensador se mide en:",
-    options: ["Amperios", "Faradios", "Webers", "Decibelios"],
+    options: [
+      "Amperios",
+      "Faradios",
+      "Webers",
+      "Decibelios",
+    ],
     correctIndex: 1,
     explain: "Unidad SI: faradio (F) y submúltiplos. FEDI-EA.",
   },
@@ -117,8 +129,7 @@ export default [
       "Detector de fase",
     ],
     correctIndex: 1,
-    explain:
-      "AM significa modulación de amplitud. El circuito mostrado es un detector de envolvente: el diodo rectifica la señal de RF y el filtro RC sigue la envolvente para recuperar el audio.",
+    explain: "AM significa modulación de amplitud. El circuito mostrado es un detector de envolvente: el diodo rectifica la señal de RF y el filtro RC sigue la envolvente para recuperar el audio.",
   },
   {
     id: "fedi-ag-010",
@@ -168,12 +179,15 @@ export default [
     topicId: "antenas-prop",
     stem: "En el siguiente gráfico, si la antena emite tres señales en distintas frecuencias, ¿cuál tiene frecuencia superior a la frecuencia crítica?",
     stemFigure: "images/quiz/fedi-ag-013-original.jpg",
-    stemFigureAlt:
-      "Figura original FEDI-EA ag-13: tres señales con distintas trayectorias respecto a la ionosfera.",
-    options: ["Las señales 1 y 2", "La señal 1", "La señal 3", "Las señales 1 y 3"],
+    stemFigureAlt: "Figura original FEDI-EA ag-13: tres señales con distintas trayectorias respecto a la ionosfera.",
+    options: [
+      "Las señales 1 y 2",
+      "La señal 1",
+      "La señal 3",
+      "Las señales 1 y 3",
+    ],
     correctIndex: 2,
-    explain:
-      "La frecuencia crítica es el límite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometría. En el esquema, la señal 3 atraviesa la capa en lugar de regresar: por eso es la que está por encima de la frecuencia crítica. FEDI-EA.",
+    explain: "La frecuencia crítica es el límite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometría. En el esquema, la señal 3 atraviesa la capa en lugar de regresar: por eso es la que está por encima de la frecuencia crítica. FEDI-EA.",
   },
   {
     id: "fedi-ag-014",
@@ -181,12 +195,15 @@ export default [
     topicId: "componentes",
     stem: "En el siguiente circuito, en régimen permanente, ¿qué tensión tiene el condensador C?",
     stemFigure: "images/quiz/fedi-ag-014-original.jpg",
-    stemFigureAlt:
-      "Figura original FEDI-EA ag-14: circuito con condensador C y tensiones indicadas.",
-    options: ["12", "3", "0", "9"],
+    stemFigureAlt: "Figura original FEDI-EA ag-14: circuito con condensador C y tensiones indicadas.",
+    options: [
+      "12",
+      "3",
+      "0",
+      "9",
+    ],
     correctIndex: 3,
-    explain:
-      "En corriente continua y en régimen permanente, el condensador ideal se comporta como circuito abierto: no circula corriente por él, pero queda cargado a la tensión entre sus bornes. Como está en paralelo con la rama inferior del divisor, su tensión es la de esa rama: 9 V. FEDI-EA.",
+    explain: "En corriente continua y en régimen permanente, el condensador ideal se comporta como circuito abierto: no circula corriente por él, pero queda cargado a la tensión entre sus bornes. Como está en paralelo con la rama inferior del divisor, su tensión es la de esa rama: 9 V. FEDI-EA.",
   },
   {
     id: "fedi-ag-015",
@@ -208,12 +225,15 @@ export default [
     topicId: "receptores-emisores",
     stem: "En el diagrama de bloques de un receptor elemental de conversión directa, el bloque con interrogantes representa un:",
     stemFigure: "images/quiz/fedi-ag-016-original.jpg",
-    stemFigureAlt:
-      "Figura original FEDI-EA ag-16: diagrama de bloques de receptor elemental de conversión directa con interrogantes.",
-    options: ["Amplificador RF", "Filtro paso banda", "Oscilador local", "Variador de potencia"],
+    stemFigureAlt: "Figura original FEDI-EA ag-16: diagrama de bloques de receptor elemental de conversión directa con interrogantes.",
+    options: [
+      "Amplificador RF",
+      "Filtro paso banda",
+      "Oscilador local",
+      "Variador de potencia",
+    ],
     correctIndex: 2,
-    explain:
-      "Un receptor de conversión directa mezcla la señal de RF recibida con una señal generada localmente para obtener directamente audio o una frecuencia muy baja. El bloque que alimenta al mezclador debe ser, por tanto, el oscilador local. FEDI-EA.",
+    explain: "Un receptor de conversión directa mezcla la señal de RF recibida con una señal generada localmente para obtener directamente audio o una frecuencia muy baja. El bloque que alimenta al mezclador debe ser, por tanto, el oscilador local. FEDI-EA.",
   },
   {
     id: "fedi-ag-017",
@@ -233,7 +253,7 @@ export default [
     id: "fedi-ag-018",
     part: 1,
     topicId: "electricidad-basica",
-    stem: 'En una instalación eléctrica, el "factor de potencia" o coseno φ es:',
+    stem: "En una instalación eléctrica, el \"factor de potencia\" o coseno φ es:",
     options: [
       "Indicador del desfasaje entre tensión y corriente",
       "Un factor para duplicar la potencia consumida",
@@ -275,7 +295,7 @@ export default [
     id: "fedi-ag-021",
     part: 1,
     topicId: "receptores-emisores",
-    stem: 'La "desensibilización o bloqueo" de un receptor puede producirse por:',
+    stem: "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
     options: [
       "Fallo en la fuente de alimentación",
       "Insuficiente ancho de banda de salida",
@@ -283,18 +303,21 @@ export default [
       "Excesivo nivel de señal en la antena",
     ],
     correctIndex: 3,
-    explain:
-      "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. FEDI-EA.",
+    explain: "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. FEDI-EA.",
   },
   {
     id: "fedi-ag-022",
     part: 1,
     topicId: "electricidad-basica",
     stem: "Indique el valor de la resistencia cuyos colores son, en este orden: violeta, verde, rojo, oro:",
-    options: ["7.500 Ω y 5 %", "75 Ω y 10 %", "570 Ω y 1 %", "No se puede calcular"],
+    options: [
+      "7.500 Ω y 5 %",
+      "75 Ω y 10 %",
+      "570 Ω y 1 %",
+      "No se puede calcular",
+    ],
     correctIndex: 0,
-    explain:
-      "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. FEDI-EA.",
+    explain: "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. FEDI-EA.",
   },
   {
     id: "fedi-ag-023",
@@ -350,15 +373,19 @@ export default [
       "La potencia en ausencia de modulación",
     ],
     correctIndex: 0,
-    explain:
-      "Una radiación armónica aparece en múltiplos enteros de la frecuencia fundamental: 2f₀, 3f₀, 4f₀, etc. Es radiación no esencial y se controla con filtrado para no interferir fuera de la frecuencia principal. FEDI-EA.",
+    explain: "Una radiación armónica aparece en múltiplos enteros de la frecuencia fundamental: 2f₀, 3f₀, 4f₀, etc. Es radiación no esencial y se controla con filtrado para no interferir fuera de la frecuencia principal. FEDI-EA.",
   },
   {
     id: "fedi-ag-027",
     part: 1,
     topicId: "antenas-prop",
     stem: "El tamaño físico de una antena debe ser función de la:",
-    options: ["Conductividad del terreno", "Potencia de emisión", "Altura efectiva", "Frecuencia"],
+    options: [
+      "Conductividad del terreno",
+      "Potencia de emisión",
+      "Altura efectiva",
+      "Frecuencia",
+    ],
     correctIndex: 3,
     explain: "La longitud eléctrica depende de λ, luego de la frecuencia. FEDI-EA.",
   },
@@ -367,7 +394,12 @@ export default [
     part: 1,
     topicId: "antenas-prop",
     stem: "La curvatura que experimenta una onda al encontrar un obstáculo en su trayectoria se denomina:",
-    options: ["Difracción", "Reflexión", "Dispersión", "Refracción"],
+    options: [
+      "Difracción",
+      "Reflexión",
+      "Dispersión",
+      "Refracción",
+    ],
     correctIndex: 0,
     explain: "La difracción permite “rodear” obstáculos en cierta medida. FEDI-EA.",
   },
@@ -390,11 +422,15 @@ export default [
     part: 1,
     topicId: "antenas-prop",
     stem: "La capa de la atmósfera responsable de las variaciones de propagación en HF (<30 MHz) según actividad solar se denomina:",
-    options: ["Reflexosfera", "Estratosfera", "Ionosfera", "Troposfera"],
+    options: [
+      "Reflexosfera",
+      "Estratosfera",
+      "Ionosfera",
+      "Troposfera",
+    ],
     correctIndex: 2,
     explain: "La ionosfera condiciona la propagación por reflexión en HF. FEDI-EA.",
   },
-
   {
     id: "fedi-ah-031",
     part: 2,
@@ -441,9 +477,13 @@ export default [
     id: "fedi-ah-034",
     part: 2,
     topicId: "instalaciones",
-    stem:
-      "Excepto en casos de urgencia, ¿con qué antelación la propiedad del inmueble debe requerir el desmontaje de antenas de radioaficionado por la realización de obras?",
-    options: ["Un mes", "Dos meses", "Tres meses", "Medio año"],
+    stem: "Excepto en casos de urgencia, ¿con qué antelación la propiedad del inmueble debe requerir el desmontaje de antenas de radioaficionado por la realización de obras?",
+    options: [
+      "Un mes",
+      "Dos meses",
+      "Tres meses",
+      "Medio año",
+    ],
     correctIndex: 2,
     explain: "Plazo habitual citado en supuestos de comunidad de propietarios (verificar normativa vigente). FEDI-EA.",
   },
@@ -459,16 +499,19 @@ export default [
       "Solo su titular",
     ],
     correctIndex: 2,
-    explain:
-      "Un titular de autorización puede operar la estación de otro con permiso del titular de esa estación (criterio habitual URE/CEPT). La D omite ese supuesto. FEDI-EA.",
+    explain: "Un titular de autorización puede operar la estación de otro con permiso del titular de esa estación (criterio habitual URE/CEPT). La D omite ese supuesto. FEDI-EA.",
   },
   {
     id: "fedi-ah-036",
     part: 2,
     topicId: "marco-normativo",
-    stem:
-      "¿Con qué anticipación a la fecha prevista para el comienzo de las emisiones se deberá solicitar una autorización especial de uso del espectro radioeléctrico por radioaficionados?",
-    options: ["1 mes", "2 meses", "3 meses", "Ninguno"],
+    stem: "¿Con qué anticipación a la fecha prevista para el comienzo de las emisiones se deberá solicitar una autorización especial de uso del espectro radioeléctrico por radioaficionados?",
+    options: [
+      "1 mes",
+      "2 meses",
+      "3 meses",
+      "Ninguno",
+    ],
     correctIndex: 0,
     explain: "Según el texto del test FEDI (2011); verifica plazos en la normativa y resoluciones actuales. FEDI-EA.",
   },
@@ -505,7 +548,12 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Cuál de estas provincias pertenece al distrito 7?",
-    options: ["Guipúzcoa", "Girona", "Guadalajara", "Granada"],
+    options: [
+      "Guipúzcoa",
+      "Girona",
+      "Guadalajara",
+      "Granada",
+    ],
     correctIndex: 0,
     explain: "En el esquema provincial de distritos del examen español, Guipúzcoa figura en el distrito 7. FEDI-EA.",
   },
@@ -513,19 +561,21 @@ export default [
     id: "fedi-ah-040",
     part: 2,
     topicId: "marco-normativo",
-    stem:
-      "Salvo circunstancias especiales debidamente motivadas, las estaciones automáticas desatendidas en VHF y UHF fuera del casco urbano no podrán exceder de una potencia de salida máxima de (Reglamento IET/1311/2013, art. 25.h):",
-    options: ["10 W", "25 W", "50 W", "100 W"],
+    stem: "Salvo circunstancias especiales debidamente motivadas, las estaciones automáticas desatendidas en VHF y UHF fuera del casco urbano no podrán exceder de una potencia de salida máxima de (Reglamento IET/1311/2013, art. 25.h):",
+    options: [
+      "10 W",
+      "25 W",
+      "50 W",
+      "100 W",
+    ],
     correctIndex: 2,
-    explain:
-      "Art. 25.h: hasta 50 W fuera del casco urbano y hasta 10 W dentro del casco urbano (ganancia del sistema radiante limitada). El test FEDI 2011 planteaba «fuera» con opciones hasta 25 W y respuesta 10 W; eso contradice el texto vigente del BOE. FEDI-EA + BOE-A-2013-7624.",
+    explain: "Art. 25.h: hasta 50 W fuera del casco urbano y hasta 10 W dentro del casco urbano (ganancia del sistema radiante limitada). El test FEDI 2011 planteaba «fuera» con opciones hasta 25 W y respuesta 10 W; eso contradice el texto vigente del BOE. FEDI-EA + BOE-A-2013-7624.",
   },
   {
     id: "fedi-ah-041",
     part: 2,
     topicId: "instalaciones",
-    stem:
-      "Si una antena debidamente autorizada, e instalada en la terraza de una Comunidad de propietarios, impide la realización de obras de conservación del edificio, el radioaficionado titular de la misma:",
+    stem: "Si una antena debidamente autorizada, e instalada en la terraza de una Comunidad de propietarios, impide la realización de obras de conservación del edificio, el radioaficionado titular de la misma:",
     options: [
       "Puede exigir a la Comunidad el pago de los costes de desmontaje",
       "Está obligado a desmontarla temporalmente sin derecho a indemnización",
@@ -554,7 +604,12 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "La autorización especial de emisiones se otorgará por el periodo que duren las pruebas y, como máximo:",
-    options: ["9 meses", "12 meses", "15 meses", "18 meses"],
+    options: [
+      "9 meses",
+      "12 meses",
+      "15 meses",
+      "18 meses",
+    ],
     correctIndex: 1,
     explain: "Plazo del enunciado FEDI; verifica con reglamento vigente. FEDI-EA.",
   },
@@ -591,7 +646,12 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "El significado de la abreviatura PSE es:",
-    options: ["Por si está a la escucha", "Por favor", "Puede seguir emitiendo", "No significa nada"],
+    options: [
+      "Por si está a la escucha",
+      "Por favor",
+      "Puede seguir emitiendo",
+      "No significa nada",
+    ],
     correctIndex: 1,
     explain: "PSE = «por favor» en lenguaje telegráfico de aficionados. FEDI-EA.",
   },
@@ -642,7 +702,12 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "La señal de socorro en radiotelefonía es:",
-    options: ["Mayday", "Socorro", "SOS", "Solo a bordo de barcos"],
+    options: [
+      "Mayday",
+      "Socorro",
+      "SOS",
+      "Solo a bordo de barcos",
+    ],
     correctIndex: 0,
     explain: "Mayday es la señal de socorro en telefonía (voz) en servicio móvil marítimo/aeronáutico; en examen suele priorizarse frente a SOS en HF CW. FEDI-EA.",
   },
@@ -651,10 +716,14 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Qué sufijo puede asignarse a una autorización de radioaficionado?",
-    options: ["DDD", "FFF", "TTT", "XXX"],
+    options: [
+      "DDD",
+      "FFF",
+      "TTT",
+      "XXX",
+    ],
     correctIndex: 2,
-    explain:
-      "TTT es el sufijo que recoge este banco como asignable. XXX se descarta por su asociación a señales especiales o de llamada general en otros contextos; no conviene memorizarlo como sufijo ordinario de autorización.",
+    explain: "TTT es el sufijo que recoge este banco como asignable. XXX se descarta por su asociación a señales especiales o de llamada general en otros contextos; no conviene memorizarlo como sufijo ordinario de autorización.",
   },
   {
     id: "fedi-ah-052",
@@ -730,9 +799,13 @@ export default [
     id: "fedi-ah-057",
     part: 2,
     topicId: "marco-normativo",
-    stem:
-      "¿Con qué potencia máxima de portadora se puede emitir en la banda de frecuencias 50,0–51,0 MHz, de acuerdo con el Reglamento de Radioaficionados?",
-    options: ["50 W", "100 W", "150 W", "200 W"],
+    stem: "¿Con qué potencia máxima de portadora se puede emitir en la banda de frecuencias 50,0–51,0 MHz, de acuerdo con el Reglamento de Radioaficionados?",
+    options: [
+      "50 W",
+      "100 W",
+      "150 W",
+      "200 W",
+    ],
     correctIndex: 0,
     explain: "Valor del test FEDI (2011); revisa cuadro de potencias vigente en el reglamento actual. FEDI-EA.",
   },

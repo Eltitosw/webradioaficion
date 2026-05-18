@@ -3,6 +3,8 @@
  *
  * Uso:
  *   node scripts/cribado-recencia.mjs
+ *   node scripts/cribado-recencia.mjs --ampliado   # tier A+B+C (banco ≥900; por defecto en build:banco)
+ *   node scripts/cribado-recencia.mjs --normal     # solo tier A+B (~780)
  *   node scripts/cribado-recencia.mjs --estricto   # solo tier A
  *   node scripts/cribado-recencia.mjs --report     # escribe data/cribado-report.txt
  */
@@ -18,7 +20,7 @@ import ureReg from "../data/ure-reglamentacion.js";
 import fedi from "../data/fediea-2011.js";
 import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
-import { dedupeKey } from "../lib/import-question-utils.mjs";
+import { dedupeKey, writeUtf8File } from "../lib/import-question-utils.mjs";
 import {
   getRecencyMeta,
   hasObsoleteHint,
@@ -32,7 +34,11 @@ const OUT = path.join(ROOT, "data", "question-cribado.js");
 const REPORT = path.join(ROOT, "data", "cribado-report.txt");
 
 const args = process.argv.slice(2);
-const mode = args.includes("--estricto") ? "estricto" : "normal";
+const mode = args.includes("--estricto")
+  ? "estricto"
+  : args.includes("--normal")
+    ? "normal"
+    : "ampliado";
 const writeReport = args.includes("--report");
 
 const all = [
@@ -67,7 +73,8 @@ for (const q of all) {
   }
 }
 
-const preferredIds = [];
+const preferredNormalIds = [];
+const preferredAmpliadoIds = [];
 const preferredStrictIds = [];
 const droppedHistoric = [];
 
@@ -76,20 +83,31 @@ for (const [key, entry] of byDedupe) {
   if (!q) continue;
   if (hasObsoleteHint(q.stem, q.options)) continue;
 
-  if (tierPassesCribado(entry.tier, "normal")) preferredIds.push(entry.id);
+  if (tierPassesCribado(entry.tier, "normal")) preferredNormalIds.push(entry.id);
+  if (tierPassesCribado(entry.tier, "ampliado")) preferredAmpliadoIds.push(entry.id);
   if (tierPassesCribado(entry.tier, "estricto")) preferredStrictIds.push(entry.id);
   if (entry.tier === "C") droppedHistoric.push(entry.id);
 }
 
-preferredIds.sort();
+preferredNormalIds.sort();
+preferredAmpliadoIds.sort();
 preferredStrictIds.sort();
 
-const activeSet = mode === "estricto" ? preferredStrictIds : preferredIds;
+const activeSet =
+  mode === "estricto" ? preferredStrictIds : mode === "normal" ? preferredNormalIds : preferredAmpliadoIds;
 
 const lines = [];
 lines.push("/**");
 lines.push(" * Cribado por antigüedad de fuente (generado por `node scripts/cribado-recencia.mjs`).");
-lines.push(` * Modo al generar: ${mode === "estricto" ? "estricto (solo tier A)" : "normal (tier A + B)"}.`);
+lines.push(
+  ` * Modo al generar: ${
+    mode === "estricto"
+      ? "estricto (solo tier A)"
+      : mode === "normal"
+        ? "normal (tier A + B)"
+        : "ampliado (tier A + B + C, banco ≥900)"
+  }.`,
+);
 lines.push(` * Generado: ${new Date().toISOString().slice(0, 10)}`);
 lines.push(" *");
 lines.push(" * Tier A: propias 2026, Quijotes qid≥1800, FEDI examen 2011.");
@@ -101,6 +119,8 @@ lines.push("");
 lines.push("/** IDs únicos por enunciado (versión más reciente de cada duplicado). */");
 lines.push(`export const CRIBADO_PREFERRED_IDS = new Set(${JSON.stringify(activeSet, null, 2)});`);
 lines.push("");
+lines.push(`export const CRIBADO_RECENT_IDS = new Set(${JSON.stringify(preferredNormalIds, null, 2)});`);
+lines.push("");
 lines.push(`export const CRIBADO_STRICT_IDS = new Set(${JSON.stringify(preferredStrictIds, null, 2)});`);
 lines.push("");
 lines.push(`export const CRIBADO_STATS = ${JSON.stringify(
@@ -110,7 +130,8 @@ lines.push(`export const CRIBADO_STATS = ${JSON.stringify(
     tierA: tierCounts.A,
     tierB: tierCounts.B,
     tierC: tierCounts.C,
-    preferredNormal: preferredIds.length,
+    preferredNormal: preferredNormalIds.length,
+    preferredAmpliado: preferredAmpliadoIds.length,
     preferredStrict: preferredStrictIds.length,
     obsoleteFlagged: obsoleteIds.length,
     historicUniqueStems: droppedHistoric.length,
@@ -124,7 +145,7 @@ lines.push("  return CRIBADO_PREFERRED_IDS.has(id);");
 lines.push("}");
 lines.push("");
 
-fs.writeFileSync(OUT, lines.join("\n"), "utf8");
+writeUtf8File(OUT, lines.join("\n"));
 
 const report = [];
 report.push("=== Cribado por antigüedad ===");
@@ -138,7 +159,8 @@ report.push(`  B (aceptable):    ${tierCounts.B}`);
 report.push(`  C (histórico):    ${tierCounts.C}`);
 report.push("");
 report.push("Pool cribado (único por enunciado, sin obsoletos marcados):");
-report.push(`  Normal (A+B):     ${preferredIds.length}`);
+report.push(`  Normal (A+B):     ${preferredNormalIds.length}`);
+report.push(`  Ampliado (A+B+C): ${preferredAmpliadoIds.length}`);
 report.push(`  Estricto (solo A): ${preferredStrictIds.length}`);
 report.push(`  Histórico único:  ${droppedHistoric.length} enunciados solo en tier C`);
 report.push(`  Obsoletos marcados: ${obsoleteIds.length} (revisar manualmente)`);
@@ -157,7 +179,7 @@ const reportText = report.join("\n");
 process.stderr.write(`${reportText}\n\nEscrito ${OUT}\n`);
 
 if (writeReport) {
-  fs.writeFileSync(REPORT, `${reportText}\n`, "utf8");
+  writeUtf8File(REPORT, `${reportText}\n`);
   process.stderr.write(`Escrito ${REPORT}\n`);
 }
 

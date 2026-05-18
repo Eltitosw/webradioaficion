@@ -9,6 +9,7 @@ import propias from "../data/questions-examen-propias.js";
 import figures from "../data/questions-figures.js";
 import { EXACT_FIGURE_QUESTION_IDS } from "../data/question-figure-ids.js";
 import { EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
+import { MIN_BANCO_QUESTIONS } from "../lib/question-recency.mjs";
 
 const blockIds = new Set();
 for (const p of topics.parts || []) {
@@ -73,6 +74,10 @@ for (const q of all) {
   if (!EXACT_FIGURE_QUESTION_IDS.has(q.id)) {
     fail(`Pregunta ${q.id}: figura sin certificar en question-figure-ids.js`);
   }
+}
+
+if (all.length < MIN_BANCO_QUESTIONS) {
+  fail(`Banco principal: ${all.length} preguntas (mínimo ${MIN_BANCO_QUESTIONS}; ejecuta pnpm run build:banco)`);
 }
 
 const withFig = all.filter((q) => q.stemFigure).length;

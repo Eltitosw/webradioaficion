@@ -4,6 +4,8 @@ import regulatory from "../data/regulatory.js";
 import topics from "../data/topics.js";
 import questionsBanco from "../data/questions-banco.js";
 import ownQuestions from "../data/questions-examen-propias.js";
+import { BANCO_STATS } from "../data/questions-banco.js";
+import { MIN_BANCO_QUESTIONS } from "../lib/question-recency.mjs";
 import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS, isActiveQuestion } from "../data/question-policy.js";
 
 const allQuestions = [...questionsBanco];
@@ -22,6 +24,11 @@ test("topics tiene partes y bloques", () => {
     assert.ok(Array.isArray(p.blocks));
     assert.ok(p.blocks.length > 0);
   }
+});
+
+test("banco principal tiene al menos el mínimo editorial", () => {
+  assert.ok(activeQuestions.length >= MIN_BANCO_QUESTIONS, `banco ${activeQuestions.length} < ${MIN_BANCO_QUESTIONS}`);
+  assert.ok(BANCO_STATS.count >= MIN_BANCO_QUESTIONS);
 });
 
 test("banco de preguntas mantiene estructura y coherencia por bloque", () => {

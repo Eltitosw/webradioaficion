@@ -18,6 +18,7 @@ import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import { fetchFediBlock } from "../lib/parse-fedi-html.mjs";
 import { extractAriQuizJson, correctIndexFromQuizData } from "../lib/parse-ure-quiz.mjs";
+import { readResponseText } from "../lib/http-text.mjs";
 import {
   buildFediFigureQuestion,
   downloadIfMissing,
@@ -130,7 +131,7 @@ async function importUreFigures() {
     headers: { "User-Agent": "radioexam-import/1.0 (+https://www.ure.es)" },
   });
   if (!res.ok) throw new Error(`URE HTTP ${res.status}`);
-  const html = await res.text();
+  const html = await readResponseText(res);
   const quizData = extractAriQuizJson(html);
   const blocks = parseUreBlocksWithImages(html);
 

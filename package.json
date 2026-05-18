@@ -4,19 +4,25 @@
   "type": "module",
   "scripts": {
     "verify": "node scripts/verify-data.mjs",
-    "test": "node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/stem-needs-figure.test.mjs tests/banco-dedupe.test.mjs tests/learning-coach.test.mjs",
+    "test": "node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/stem-needs-figure.test.mjs tests/text-encoding.test.mjs tests/banco-dedupe.test.mjs tests/banco-fill.test.mjs tests/learning-coach.test.mjs tests/question-recency.test.mjs",
     "verify:figures": "node scripts/verify-figures.mjs",
-    "verify:all": "node scripts/verify-data.mjs && node scripts/verify-extra.mjs && node scripts/verify-figures.mjs && node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/stem-needs-figure.test.mjs tests/banco-dedupe.test.mjs tests/learning-coach.test.mjs",
+    "verify:encoding": "node scripts/verify-encoding.mjs",
+    "verify:all": "node scripts/verify-encoding.mjs && node scripts/verify-data.mjs && node scripts/verify-extra.mjs && node scripts/verify-figures.mjs && node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/stem-needs-figure.test.mjs tests/text-encoding.test.mjs tests/banco-dedupe.test.mjs tests/banco-fill.test.mjs tests/learning-coach.test.mjs tests/question-recency.test.mjs",
     "sync-version": "node scripts/sync-version.mjs",
     "import:banks": "node scripts/import-banks.mjs",
     "import:quijotes": "node scripts/build-quijotes.mjs",
     "import:figures": "node scripts/import-figures.mjs",
     "import:figures:quijotes": "node scripts/import-figures.mjs --quijotes-only",
     "import:figures:ure": "node scripts/import-figures.mjs --ure-only",
-    "cribado": "node scripts/cribado-recencia.mjs --report && node scripts/build-banco-principal.mjs",
-    "build:banco": "node scripts/cribado-recencia.mjs && node scripts/build-banco-principal.mjs",
+    "cribado": "node scripts/cribado-recencia.mjs --ampliado --report && node scripts/build-banco-principal.mjs",
+    "build:banco": "node scripts/cribado-recencia.mjs --ampliado && node scripts/build-banco-principal.mjs",
     "build:banco:full": "node scripts/import-figures.mjs && node scripts/cribado-recencia.mjs --report && node scripts/build-banco-principal.mjs",
     "audit:banco": "node scripts/audit-banco-gaps.mjs",
-    "cleanup:quiz-orphans": "node scripts/cleanup-quiz-raster-orphans.mjs"
+    "cleanup:quiz-orphans": "node scripts/cleanup-quiz-raster-orphans.mjs",
+    "repair:encoding": "node scripts/repair-data-encoding.mjs",
+    "repair:sourceref": "node scripts/repair-propias-sourceref.mjs",
+    "recover:banco": "node scripts/repair-propias-sourceref.mjs && node scripts/import-banks.mjs --fedi && node scripts/import-figures.mjs && node scripts/cribado-recencia.mjs && node scripts/build-banco-principal.mjs",
+    "audit:encoding": "node scripts/audit-encoding.mjs",
+    "import:banks:fedi": "node scripts/import-banks.mjs --fedi"
   }
 }

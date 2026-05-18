@@ -1,20 +1,33 @@
+/**
+ * Banco base.
+ * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
+ */
 export default [
   {
     id: "q1",
     part: 1,
     topicId: "electricidad-basica",
     stem: "En corriente continua, la ley de Ohm relaciona tensión (V), intensidad (I) y resistencia (R) como:",
-    options: ["V = I / R", "V = I · R", "V = R / I", "V = I + R"],
+    options: [
+      "V = I / R",
+      "V = I · R",
+      "V = R / I",
+      "V = I + R",
+    ],
     correctIndex: 1,
-    explain:
-      "La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R.",
+    explain: "La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R.",
   },
   {
     id: "q2",
     part: 1,
     topicId: "electricidad-basica",
     stem: "La unidad del Sistema Internacional para la intensidad de corriente eléctrica es:",
-    options: ["Vatio", "Voltio", "Amperio", "Ohmio"],
+    options: [
+      "Vatio",
+      "Voltio",
+      "Amperio",
+      "Ohmio",
+    ],
     correctIndex: 2,
     explain: "La intensidad se mide en amperios (A); el voltio es tensión y el ohmio es resistencia.",
   },
@@ -23,7 +36,12 @@ export default [
     part: 1,
     topicId: "magnetismo-ondas",
     stem: "La longitud de onda λ (en metros) y la frecuencia f (en hertzios) en el vacío se relacionan aproximadamente con c ≈ 3·10⁸ m/s como:",
-    options: ["λ = c · f", "λ = c / f", "λ = f / c", "λ = c + f"],
+    options: [
+      "λ = c · f",
+      "λ = c / f",
+      "λ = f / c",
+      "λ = c + f",
+    ],
     correctIndex: 1,
     explain: "λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas.",
   },
@@ -32,7 +50,12 @@ export default [
     part: 1,
     topicId: "magnetismo-ondas",
     stem: "En la modulación de amplitud (AM), ¿qué magnitud de la portadora varía principalmente?",
-    options: ["La frecuencia", "La fase", "La amplitud", "La polarización mecánica"],
+    options: [
+      "La frecuencia",
+      "La fase",
+      "La amplitud",
+      "La polarización mecánica",
+    ],
     correctIndex: 2,
     explain: "En AM varía la amplitud de la portadora; la información va asociada a ese cambio.",
   },
@@ -69,7 +92,12 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "En España, los indicativos de radioaficionado suelen comenzar por el prefijo:",
-    options: ["I", "F", "E", "G"],
+    options: [
+      "I",
+      "F",
+      "E",
+      "G",
+    ],
     correctIndex: 2,
     explain: "Los asignados en España comienzan por E (EA, EB, EC, etc.), según el esquema nacional.",
   },
@@ -78,7 +106,12 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "El código Q que tradicionalmente se asocia a interferencias de otras señales es:",
-    options: ["QRP", "QRM", "QRN", "QSB"],
+    options: [
+      "QRP",
+      "QRM",
+      "QRN",
+      "QSB",
+    ],
     correctIndex: 1,
     explain: "QRM: interferencia (a menudo de otras estaciones o servicios). QRN: ruido atmosférico.",
   },
@@ -87,7 +120,12 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "El deletreo fonético internacional de la letra M es:",
-    options: ["Madrid", "Metro", "Mike", "Maestro"],
+    options: [
+      "Madrid",
+      "Metro",
+      "Mike",
+      "Maestro",
+    ],
     correctIndex: 2,
     explain: "En el alfabeto fonético ICAO/NATO, M es «Mike».",
   },
@@ -117,8 +155,7 @@ export default [
       "Está prohibido siempre",
     ],
     correctIndex: 2,
-    explain:
-      "Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente.",
+    explain: "Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente.",
   },
   {
     id: "q12",

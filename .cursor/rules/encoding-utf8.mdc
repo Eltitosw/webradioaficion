@@ -1,0 +1,38 @@
+---
+description: Codificación UTF-8 en datos e importaciones HTTP
+globs:
+  - "**/*.{js,mjs,html}"
+  - "data/**"
+alwaysApply: true
+---
+
+# Texto en español: UTF-8 obligatorio
+
+## Descargas HTTP
+
+- **Nunca** uses `response.text()` directo en fuentes externas.
+- Usa `readResponseText(res)` de `lib/http-text.mjs` (respeta `charset` del servidor, p. ej. FEDI ISO-8859-15).
+
+## Texto importado
+
+- Enunciados y opciones: `cleanStem()` / `repairSpanishText()` de `lib/text-encoding.mjs`.
+- Al materializar banco: `repairQuestionFields()` en `build-banco-principal.mjs`.
+
+## Archivos generados
+
+- Escribir siempre con `{ encoding: "utf8" }` o `writeUtf8File()` / `writeQuestionModule()`.
+- `index.html` debe mantener `<meta charset="UTF-8" />`.
+
+## Verificación antes de cerrar
+
+```bash
+npm run repair:encoding   # si hubo imports viejos
+npm run build:banco
+npm run verify:encoding   # falla con U+FFFD, mojibake o "qu circuito", "grfico", etc.
+```
+
+## Prohibido en datos publicados
+
+- Carácter `` (U+FFFD)
+- Mojibake (`Ã³`, `Ã±`)
+- Tildes omitidas (`qu circuito`, `incluira`, `grfico`, `bsico`)

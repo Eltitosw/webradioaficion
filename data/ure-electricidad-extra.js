@@ -1,6 +1,5 @@
 /**
- * URE — electricidad y radioelectricidad adicionales (no presentes en ure-electricidad.js).
- * https://www.ure.es/examenes/electricidad-y-radioelectricidad/
+ * URE electricidad extra.
  * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [

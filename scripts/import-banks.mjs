@@ -19,6 +19,7 @@ import questions from "../data/questions.js";
 import propias from "../data/questions-examen-propias.js";
 import ure from "../data/ure-electricidad.js";
 import fediea2011 from "../data/fediea-2011.js";
+import fediBloquesExisting from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import { fetchFediBlock } from "../lib/parse-fedi-html.mjs";
 import { fetchUreQuizPage } from "../lib/parse-ure-quiz.mjs";
@@ -127,9 +128,26 @@ function tryAddQuestion(opts) {
   stats.added += 1;
 }
 
-async function importFedi(seenKeys, seenIds) {
-  const out = [];
-  const stats = { added: 0, duplicate: 0, duplicateId: 0, skippedFigure: 0, skippedNoAnswer: 0, fetched: 0 };
+async function importFedi(seenIds) {
+  /** Dedupe solo dentro del archivo FEDI (no frente a Quijotes/URE). */
+  const fediKeys = new Set();
+  const byId = new Map();
+  for (const q of fediBloquesExisting) {
+    if (!q?.id) continue;
+    fediKeys.add(dedupeKey(q.stem, q.options));
+    byId.set(q.id, q);
+    seenIds.add(q.id);
+  }
+
+  const stats = {
+    added: 0,
+    duplicate: 0,
+    duplicateId: 0,
+    skippedFigure: 0,
+    skippedNoAnswer: 0,
+    fetched: 0,
+    keptExisting: byId.size,
+  };
 
   for (const block of FEDI_BLOCKS) {
     process.stderr.write(`FEDI bloque ${block.bloque}…\n`);
@@ -155,6 +173,7 @@ async function importFedi(seenKeys, seenIds) {
         stats.skippedFigure += 1;
         continue;
       }
+      const batch = [];
       tryAddQuestion({
         stem: q.stem,
         options: q.options,
@@ -163,13 +182,16 @@ async function importFedi(seenKeys, seenIds) {
         sourceLabel: label,
         idPrefix: `fedi-${block.bloque}`,
         numKey: num,
-        seenKeys,
+        seenKeys: fediKeys,
         seenIds,
-        out,
+        out: batch,
         stats,
       });
+      for (const item of batch) byId.set(item.id, item);
     }
   }
+
+  const out = [...byId.values()].sort((a, b) => a.id.localeCompare(b.id));
   return { out, stats };
 }
 
@@ -211,10 +233,10 @@ async function main() {
   const report = { fedi: null, ure: null };
 
   if (doFedi) {
-    const { out, stats } = await importFedi(seenKeys, seenIds);
+    const { out, stats } = await importFedi(seenIds);
     report.fedi = stats;
     process.stderr.write(
-      `FEDI: ${stats.added} nuevas, ${stats.duplicate} duplicadas, ${stats.skippedFigure} con figura omitidas, ${stats.skippedNoAnswer} sin respuesta, ${stats.fetched} leídas.\n`,
+      `FEDI: ${stats.added} nuevas, ${stats.duplicate} duplicadas en archivo, ${stats.keptExisting} previas, ${stats.skippedFigure} con figura omitidas, ${stats.skippedNoAnswer} sin respuesta, ${stats.fetched} leídas, total ${out.length}.\n`,
     );
     if (!dryRun) {
       writeQuestionModule(

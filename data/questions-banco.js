@@ -1,34 +1,1449 @@
 /**
- * Banco principal: cribado (tier A+B) + figuras certificadas, un enunciado = una pregunta.
- * Generado: 2026-05-17 · 905 preguntas · npm run build:banco
- * Cribado: 850 · En banco por id: 850 · Sustituidas por versión con figura: 0
- * Duplicados de enunciado eliminados: 25 (23 grupos)
- * Con figura: 70
+ * Banco principal: cribado (tier A+B+C) + figuras certificadas, un enunciado = una pregunta.
+ * Generado: 2026-05-18 · 1394 preguntas · npm run build:banco
+ * Cribado: 1354 · En banco por id: 1351 · Sustituidas por versión con figura: 3
+ * Duplicados de enunciado eliminados: 35 (23 grupos)
+ * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1394)
+ * Con figura: 58
  */
 
-export const BANCO_GENERATED_AT = "2026-05-17";
-export const BANCO_STATS = {"count":905,"cribadoPreferred":850,"cribadoById":850,"cribadoReplacedByFigure":0,"withFigure":70,"dedupeRemoved":25,"dedupeGroups":23,"sourceEntries":1728};
+export const BANCO_GENERATED_AT = "2026-05-18";
+export const BANCO_STATS = {"count":1394,"cribadoPreferred":1354,"cribadoById":1351,"cribadoReplacedByFigure":3,"withFigure":58,"dedupeRemoved":35,"dedupeGroups":23,"fillAdded":0,"sourceEntries":1729};
 
 export default [
   {
-    "id": "fedi-aa-002",
+    "id": "fedi-a-003",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La capacidad de varios condensadores en paralelo es:",
+    "options": [
+      "La suma de las capacidades totales",
+      "Menor que la de uno de ellos",
+      "Igual a la del de mayor capacidad",
+      "Igual a la del de menor capacidad"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-004",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "En los modernos transceptores el uso de procesadores digitales de se�al (DSP) permite entre otras cosas:",
+    "stem": "En un conductor eléctrico a mayor calor:",
     "options": [
-      "Duplicar la potencia de emisi�n.",
-      "Optimizar los filtros del transceptor.",
-      "Disminuir la potencia reflejada en la l�nea de transmisi�n.",
-      "Incrementar el tiempo de transmisi�n sin calentamiento del equipo."
+      "Menor resistencia",
+      "Más intensidad",
+      "Mayor resistencia",
+      "Más capacidad"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-005",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un Megaohmio es:",
+    "options": [
+      "Un millón de ohmios",
+      "Mil gigaohmios",
+      "Mil Kiloohmios",
+      "Mil ohmios"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-006",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un condensador es un dispositivo que almacena:",
+    "options": [
+      "Energía electromagnética",
+      "Dieléctricos",
+      "Cargas eléctricas",
+      "Materia aislante"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-007",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "En un circuito donde se aplica corriente continua se cargarían los condensadores si los hubiese:",
+    "options": [
+      "No porque el condensador presenta una resistencia muy grande a la corriente continua",
+      "Si, todos, al principio",
+      "No, sólo si se aplicase corriente alterna",
+      "Si pero sólo el primero"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-008",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para que un electroimán almacene energía:",
+    "options": [
+      "Es necesario aplicarle solamente corriente alterna",
+      "Necesita una resistencia en paralelo",
+      "Basta con pasar una corriente continúa",
+      "Hay que añadirle un condensador"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-009",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Los autotransformadores son los transformadores:",
+    "options": [
+      "En automotor",
+      "Con bobinas autónomas",
+      "Con bobinas autodevanadas",
+      "Con una sola bobina"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-010",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En caso de accidente personal por quemaduras debe de atenderse a la victima:",
+    "options": [
+      "Limpiando las quemaduras con agua y llamando al médico",
+      "Aplicando aceite o cualquier otra grasa sobre las mismas y llamando a un médico.",
+      "Poniendo lana esterilizada y llamando a un médico.",
+      "Poniendo al accidentado en decúbito supino y llamando a un médico"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-011",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Las conducciones a tierra:",
+    "options": [
+      "Se pueden conectar a una conducción de calefacción.",
+      "No deben protegerse con Fusibles",
+      "No deben ser de cobre",
+      "No deben ser de hierro"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-012",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "En una onda electromagnética el producto de su frecuencia y su longitud de onda es igual al:",
+    "options": [
+      "La velocidad de la luz",
+      "La amplitud de las oscilaciones",
+      "El período",
+      "Su potencia reactiva"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-013",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Debido a la distorsión:",
+    "options": [
+      "La señal de salida disminuye",
+      "La señal de salida no es igual a la de entrada",
+      "La señal viene en decibelios",
+      "El equipo se quema"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-014",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Cuando se dice que una antena esta sintonizada:",
+    "options": [
+      "Cuando se sintonice con condensador",
+      "Si está polarizada respecto a tierra",
+      "Si la señal resuena en frecuencia altas",
+      "Si la antena resuena a la frecuencia de la señal"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-015",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un diodo semiconductor:",
+    "options": [
+      "Se utiliza en la detención",
+      "Sirve para simplificar",
+      "Es la base de los Osciladores",
+      "Aumenta la potencia del Receptor"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-016",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Los transistores son dispositivos:",
+    "options": [
+      "Que tienen tres electrodos",
+      "Que disponen de cátodo y Rejilla",
+      "Que son capaces de dar más potencia que las válvulas",
+      "Que son elementos pasivos"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-017",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra J?:",
+    "options": [
+      "Jonas",
+      "Jerez",
+      "Juliet",
+      "Japón"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-018",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra S?",
+    "options": [
+      "Sierra",
+      "Sorry",
+      "Sevilla",
+      "Salto"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-019",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra Z?",
+    "options": [
+      "Zona",
+      "Zulú",
+      "Zambia",
+      "Zaragoza"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-020",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra P?",
+    "options": [
+      "Potes",
+      "Pure",
+      "Pony",
+      "Papa"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-021",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra G?",
+    "options": [
+      "Gijón",
+      "Golf",
+      "Giro",
+      "Gato"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-022",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra R?",
+    "options": [
+      "Romeo",
+      "Roma",
+      "Rima",
+      "Ronda"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-023",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una estación de aficionado ubicada en la provincia de Huelva se identifica por la cifra:",
+    "options": [
+      "1",
+      "3",
+      "7",
+      "4"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-024",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una estación de aficionado ubicada en la provincia de Zaragoza se identifica por la cifra:",
+    "options": [
+      "8",
+      "2",
+      "5",
+      "4"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-025",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una estación de aficionado ubicada en la provincia de Albacete se identifica por la cifra:",
+    "options": [
+      "7",
+      "6",
+      "2",
+      "5"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-026",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Las estaciones de aficionados deberán estar provistas de:",
+    "options": [
+      "Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables",
+      "De una cámara de insonorización",
+      "De dispositivos reductores de calor en la emisora",
+      "De un conjunto de antenas direccionales y antenas omnidireccionales"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-027",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una estación fija es la:",
+    "options": [
+      "Que sólo se puede utilizar sin mover de un vehículo determinado",
+      "Autorizada para su utilización en una ubicación fija y en un único vehículo",
+      "Autorizada únicamente para su utilización en una ubicación que es fija y que se consigna en la licencia",
+      "Que solamente puede instalarse dentro de los límites de una provincia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-028",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Se puede asignar el sufijo PAN a un distintivo de estación de aficionado clase A?:",
+    "options": [
+      "No, solamente a los distintivos de clase C",
+      "No, solamente a los distintivos de clase B",
+      "Se puede asignar a cualquier clase de licencia",
+      "No se puede asignar en ningún caso"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-031",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "El símbolo HF indica una gama de frecuencia comprendida entre:",
+    "options": [
+      "3 y 30 KHz",
+      "3 y 30 GHz",
+      "300 y 3.000 KHz",
+      "3 y 30 MHz"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-032",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La señal de socorro en Radiotelefonía está constituida por la palabra:",
+    "options": [
+      "Ayuda",
+      "Help",
+      "Mayday",
+      "Danger"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-033",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA ABREVIATURA LF INDICA:",
+    "options": [
+      "Ondas métricas",
+      "Ondas Kilométricas",
+      "Ondas centimétricas",
+      "Ondas Hectométricas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-034",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿Se puede emitir una onda portadora no modulada o no manipulada?",
+    "options": [
+      "Está totalmente prohibido",
+      "Sí, si es de duración corta y solo a efectos de ajustes o ensayos",
+      "Se puede emitir con la duración que se quiera siempre que no interfiera a otras comunicaciones",
+      "Hay que solicitar autorización para hacerlo"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-037",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Cuando actuamos sobre el conmutador de bandas de un transceptor, estamos:",
+    "options": [
+      "Cambiando de UHF a HF",
+      "Situándolo en el margen de frecuencias deseado",
+      "Conectando la unidad de alimentación",
+      "Cambiando de emisión a recepción"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-038",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El dial de presentación digital \"digital display\" nos indica:",
+    "options": [
+      "La interferencia",
+      "Los decibelios",
+      "La frecuencia de trabajo",
+      "El volumen"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-039",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "Cuando en recepción se disminuye el ancho de banda:",
+    "options": [
+      "Aumenta la selectividad",
+      "Aumenta la fidelidad",
+      "Aumenta la potencia",
+      "Disminuye la selectividad"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-040",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El terminal de tierra de un transceptor se conecta a tierra principalmente para evitar:",
+    "options": [
+      "El aumento de autoinducción",
+      "Posibles descargas al operador",
+      "Las interferencias atmosféricas",
+      "Las variaciones de señal"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-041",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Cuando el modo de emisión esta en la posición \"CW\" se puede trabajar en:",
+    "options": [
+      "Fonía",
+      "Frecuencia modulada",
+      "Telegrafía",
+      "Modulación de amplitud"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-042",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Si un operador recibe una descarga cuando trabaja en una instalación eléctrica, la primera medida a tomar por la persona más cercana será:",
+    "options": [
+      "Llamar a un médico",
+      "Pedir socorro",
+      "Hacerle la respiración artificial",
+      "Desconectar la instalación"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-043",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Al sintonizar un emisor que tenga un aparato de medida de corriente de placa del paso final, al estar bien ajustado, este medidor marcará:",
+    "options": [
+      "Un máximo",
+      "Un mínino",
+      "Es indiferente",
+      "No dará ninguna indicación"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-044",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Para transmitir una banda lateral superior, el mando \"MODO DE TRANSMISIÓN\" deberá estar en la posición:",
+    "options": [
+      "USB",
+      "LSB",
+      "AM",
+      "FSK"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-045",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "En un receptor, el \"oscilador local de frecuencia de batido\" se utiliza para recibir señales en:",
+    "options": [
+      "AM",
+      "FM",
+      "CW",
+      "BX"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-046",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En un transceptor, al actuar sobre el mando \"Volumen en RF\" variamos:",
+    "options": [
+      "La potencia de salida",
+      "El volumen en radiofrecuencia",
+      "El volumen en audiofrecuencia",
+      "La Portadora"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-047",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La clase de emisión F3 es:",
+    "options": [
+      "Telegrafía, modulación de frecuencia o de fase",
+      "Telefonía, modulación de frecuencia",
+      "Modulación de frecuencia y fase en general",
+      "Telefonía, modulación de frecuencia o de fase"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-048",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL NUMERO DE VECES POR SEGUNDO QUE UNA CORRIENTE ALTERNA COMPLETA UN CICLO RECIBE EL NOMBRE:",
+    "options": [
+      "Elongación",
+      "Frecuencia",
+      "Longitud de onda",
+      "Periodo"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-049",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA UNIDAD DE POTENCIA eléctrica SE DENOMINA:",
+    "options": [
+      "Amperio",
+      "Ohmio",
+      "Faradio",
+      "Vatio"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-050",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "El producto de un voltio y un amperio es un:",
+    "options": [
+      "Vatio",
+      "Amperio",
+      "Faradio",
+      "Ohmnio"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-051",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La resistencia total de varias resistencias en serie es igual:",
+    "options": [
+      "El producto de las resistencias unitarias",
+      "La resistencia unitaria mayor",
+      "La resistencia unitaria menor",
+      "La suma de las resistencias unitarias"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-052",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La unidad de resistencia es el:",
+    "options": [
+      "Faradio",
+      "Ohmnio",
+      "Voltio",
+      "Vatio"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-053",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La unidad de cantidad de electricidad es el:",
+    "options": [
+      "Amperio",
+      "Ohmnio",
+      "Culombio",
+      "Faradio"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-054",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Al flujo de electrones que circula por un conductor se le llama:",
+    "options": [
+      "Fuerza electromotriz",
+      "Corriente eléctrica",
+      "Diferencia de potencial",
+      "Electricidad estática"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-055",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "El amperímetro se conecta en:",
+    "options": [
+      "Serie",
+      "Paralelo",
+      "Derivación",
+      "Por medio de un transformador"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-056",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Cuando se desea aumentar la capacidad de un circuito, los condensadores disponibles se conectan en:",
+    "options": [
+      "Serie",
+      "Paralelo",
+      "Estrella",
+      "Triángulo"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-057",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "En transformador elevador:",
+    "options": [
+      "El primario tiene las mismas espiras que el secundario",
+      "El secundario tiene menos espiras que el primario",
+      "El secundario tiene mas espiras que el primario",
+      "Es indiferente la relación de espiras"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-058",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La pila eléctrica proporciona energía eléctrica transformada de otra enegía cuya forma es:",
+    "options": [
+      "Mecánica",
+      "Térmica",
+      "Luminosa",
+      "Quimica"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-059",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Los materiales empleados en la fabricación de transistores estan dentro de la categoria de",
+    "options": [
+      "Aislantes",
+      "Semiconductores",
+      "Conductores",
+      "Cuerpos simples"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-060",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un circuto oscilante está en resonancia cuando:",
+    "options": [
+      "Predomina el efecto capacitativo",
+      "Predomina el efecto inductivo",
+      "Se anulan el uno al otro",
+      "Existe un fenómeno histéresis"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-061",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Una antena omnidireccional:",
+    "options": [
+      "Emite por igual en todas las direcciones",
+      "Emite solo en una dirección determinada",
+      "Emite solo en dos direcciones opuestas",
+      "No sirve para emisión"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-062",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Cuando se modula un emisor se está:",
+    "options": [
+      "Emitiendo sin filtros",
+      "Haciendo variar la portadora por medio de otra señal",
+      "Cortando la emisión",
+      "Mezclando dos señales variables"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-063",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La capacidad está dada por:",
+    "options": [
+      "C= I/E",
+      "C= W.V",
+      "C= Q/E",
+      "C= R.I"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-064",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Una propiedad de la inductancia en un circuito consiste en:",
+    "options": [
+      "Oponerse a las variaciones de tensión",
+      "Disminuir la resistencia",
+      "Oponerse a la variaciones de corriente",
+      "Aumentar la capacidad"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-065",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Como se deletrea la letra V:",
+    "options": [
+      "Vaca",
+      "Volta",
+      "Victor",
+      "Vente"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-066",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Como se deletrea la letra L:",
+    "options": [
+      "Land",
+      "Limón",
+      "Luna",
+      "Lima"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-067",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Como se deletrea la letra O:",
+    "options": [
+      "Oscar",
+      "Oton",
+      "Over",
+      "Out"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-068",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Como se deletrea la letra R:",
+    "options": [
+      "Roma",
+      "Rerum",
+      "Romeo",
+      "Radio"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-069",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La señal internacional de seguridad en telefonía es:",
+    "options": [
+      "Alarma",
+      "Security",
+      "Securité",
+      "Mayday"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-070",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La abreviatura correspondiente a las bandas de frecuencia comprendida entre 30 y 300 Mhz es:",
+    "options": [
+      "VLF",
+      "HF",
+      "EHF",
+      "VHF"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-071",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La cifra 5 identifica una estación de aficionado ubicada:",
+    "options": [
+      "Valencia",
+      "Huesca",
+      "Baleares",
+      "Jaén"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-072",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La abreviatura LF indica:",
+    "options": [
+      "Ondas métrica",
+      "Ondas kilométricas",
+      "Ondas centimétricas",
+      "Ondas hectométricas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-074",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Las estaciones de aficionado quedan sometidas a la inspección de:",
+    "options": [
+      "La Delegación de Industria",
+      "El Ministerio de Trabajo",
+      "La Dirección General de Radio y TV",
+      "La Dirección General de Telecomunicaciones"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-075",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La cifra 6 identifica una estación ubicada en:",
+    "options": [
+      "Valencia",
+      "Huesca",
+      "Baleares",
+      "Jaén"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-076",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Está permitido que una estación de aficionado se conecte con otras instalaciones de telecomunicación?",
+    "options": [
+      "Si",
+      "Sí, cumpliendo ciertas condiciones",
+      "Si, limitando la duración del enlace",
+      "No"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-081",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La clase de emisión A3 indica:",
+    "options": [
+      "Telefonía de doble banda lateral, portadora completa",
+      "Telegrafia sin modulación",
+      "Telefonía de banda lateral única, portadora suprimida",
+      "Telefonía, dos bandas laterales independientes"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-083",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La antena estará acoplada al paso final de salida:",
+    "options": [
+      "Directamente",
+      "Por una tierra intermadia",
+      "Por adaptadores y filtros",
+      "No puede emplearse en estaciones españolas"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-084",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En particular, uno de los siguientes aparatos de medida es imprescidible en una estación de radioaficionado:",
+    "options": [
+      "Frecuencímetro",
+      "Vatímetro",
+      "Medidor estacionarias",
+      "Polimetro"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-085",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "En un transceptor a válvulas, la alta frecuencia del paso final se aplica:",
+    "options": [
+      "Al actuar sobre el conmutador emisión/recepción",
+      "Al encender el equipo",
+      "Después de pasar cierto tiempo desde el encendido del equipo",
+      "Al conectar el micrófono"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-086",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Los fusibles sirven para proteger un equipo contra:",
+    "options": [
+      "Sobretensión",
+      "Sobreintensidades",
+      "Sobretensiones y sobreintensidades",
+      "Para que no pueda recibir corriente el operador"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-087",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La toma de tierra:",
+    "options": [
+      "Mejora la emisión",
+      "Está conectada a la carcasa del equipo",
+      "Está conectada a los circuitos de colector de los transistores",
+      "Sirve de contraantena"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-088",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Para alargar la longitud de onda eléctrica de una antena vertical se puede proceder:",
+    "options": [
+      "Elevar su altura sobre el suelo",
+      "Conectar una bobina en la base",
+      "Conectar un condensador en la base",
+      "Poner un plano de tierra"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-089",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La relación de ondas estacionarias para un adecuado funcionamiento debe ser:",
+    "options": [
+      "Mayor que 2,5",
+      "entre 2,5 y 1",
+      "Entre 1 y 0,5",
+      "Menor que 0,5"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-090",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LOS CONDENSADORES ELECTROLITICOS SE USAN GENERALMENTE:",
+    "options": [
+      "En las fuentes de alimentación",
+      "En los circuitos RC de acoplamiento entre etapas amplificadoras",
+      "En los acoplamientos colector-base de los pasos de audiofrecuencia",
+      "En los circuitos de acoplamiento a la antena."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-091",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LOS DIELECTRlCOS SE UTILIZAN EN LOS CONDENSADORES PARA:",
+    "options": [
+      "Para dar mayor solidez a éstos",
+      "Para aumentar su capacidad",
+      "Para aislar sus placas",
+      "Para disminuir su capacidad"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-092",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UN TRANSFORMADOR CON NUCLEO DE AIRE TIENE:",
+    "options": [
+      "Un Q bajo",
+      "Un Q alto",
+      "Se emplea en los acoplamientos de audiofrecuencias",
+      "Se emplea en las fuentes de aislamiento"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-093",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "UN CIRCUITO SE COMPORTA CON RESPECTO A UNA CORRIENTE CON FRECUENCIA IGUAL A LA RESONANCIA DEL MISMO:",
+    "options": [
+      "Como una inductancia",
+      "Como una capacidad",
+      "Resistivo puro",
+      "Como un filtro paso bajo"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-094",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA TENSION DE ALIMENTACIÓN SUMINISTRADA COMUNMENTE ES DE 220 V. QUE ES EL VALOR:",
+    "options": [
+      "Máximo de la tensión",
+      "Medio de la tensión",
+      "Eficaz de la tensión",
+      "Trifásico de la tensión"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-095",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UNA RESISTENCIA FIJA ESTA DETERMINADA POR:",
+    "options": [
+      "El valor de la resistencia",
+      "Los valores de su resistencia y potencia que puede disipar",
+      "Los valores de su resistencia, potencia que puede disipar y tolerancia",
+      "Los valores de su resistencia, potencia que puede disipar, tolerancia y código de colores"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-096",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LA INDUCTANCIA QUE PRESENTA UNA BOBINA AUMENTA:",
+    "options": [
+      "Si aumenta su temperatura",
+      "Si aumenta la amplitud de la corriente que por ella circula",
+      "Si aumenta la frecuencia de la corriente que por ella circula",
+      "Si aumenta el periodo de la corriente que por ella circula"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-097",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "PARA MEDIR LA CORRIENTE QUE PASA POR UNA RESISTENCIA Y LA CAIDA DE TENSIÓN QUE EN ELLA SE PRODUCE, SE CONECTAN CON LA RESISTENCIA UN VOLTIMETRO, V Y UN AMPERIMETRO A, EN LA FORMA SIGUIENTE:",
+    "options": [
+      "V en serie y A en derivación",
+      "V en derivación y A en serie",
+      "V y A en serie",
+      "V y A en derivación"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-098",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA UNIDAD DE POTENCIA eléctrica ES:",
+    "options": [
+      "Culombio",
+      "Vatio",
+      "Voltio",
+      "Amperio"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-099",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EL INDICE DE MODULACIÓN DE AMPLITUD ES:",
+    "options": [
+      "La potencia de salida de las bandas laterales dividida por la portadora",
+      "El porcentaje de la variación de amplitud que experimenta la portadora",
+      "El porcentaje de la variación de amplitud que experimenta la moduladora",
+      "La amplitud máxima de las variaciones de la portadora"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-100",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA TECNICA DE SUPERHETERODINACION SE EMPLEA:",
+    "options": [
+      "Porque se aumenta la seguridad de las comunicaciones",
+      "Porque permiten poner el CAG",
+      "Porque los receptores son más sencillos",
+      "Porque los emisores son más sencillos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-102",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "L0S CIRCUITOS CON \"LAZO ENGANCHADO DE FASE\":",
+    "options": [
+      "Tienen un único cuarzo",
+      "Tienen un cuarzo por canal",
+      "Sirven para estabilizar la frecuencia de un oscilador a cristal",
+      "Sirven para estabilizar la frecuencia de un oscilador controlado por tensión"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-103",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EN LA ETAPA DETECTORA DE UN RECEPTOR SE EFECTUA UN PROCESO DE:",
+    "options": [
+      "Demodulación",
+      "Amplificación",
+      "Neutralización",
+      "Alimentación"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-104",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LOS AMPLlFICADORES A CAVIDADES RESONANTES SE EMPLEAN EN LOS TRANSCEPTORES QUE TRABAJAN EN LAS BANDAS DE:",
+    "options": [
+      "28 MHz. y superiores",
+      "144 MHz. y superiores",
+      "432 MHz. y superiores",
+      "1.215 MHz. y superiores"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-105",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA SELECTIVIDAD DE UN RECEPTOR DEPENDE DE:",
+    "options": [
+      "Los pasos de radiofrecuencia",
+      "El mezclador",
+      "Los pasos de frecuencia intermedia",
+      "Los pasos de audiofrecuencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-106",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL \"BALUM\" SE UTILIZA PARA:",
+    "options": [
+      "Estrechar la banda de recepción",
+      "Transmitir señales telegráficas a alta velocidad",
+      "Adaptar una línea de transmisión coaxial asimétrica a una línea simétrica",
+      "Desacoplar el emisor del receptor en un equipo transceptor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-107",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "UNA ANTENA DIRECTIVA:",
+    "options": [
+      "Solo se usa para ondas hectométricas",
+      "Solo se usa para ondas métricas y decimétricas",
+      "Radia o recibe en dirección preferencial",
+      "Radia o recibe en forma omnidireccional"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-108",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "A CUAL DE ESTOS CIRCUITOS DE LA PARTE RECEPTORA DE UN REPETIDOR DEBE ESTAR CONECTADO EL RELE QUE CONECTA LA PARTE EMISORA:",
+    "options": [
+      "Al paso de radiofrecuencia",
+      "Al paso de baja frecuencia",
+      "Al CAG",
+      "Al silenciador"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-109",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué ABREVIATURA INDICA QUE EL OPERADOR SUFRE UNA INTERFERENCIA?",
+    "options": [
+      "QRL",
+      "QRK",
+      "QRM",
+      "QRN"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-110",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿Qué ABREVIATURA INDICA QUE DEBE AUMENTAR LA POTENCIA DEL TRANSMISOR?",
+    "options": [
+      "QRP",
+      "QRO",
+      "QSB",
+      "QSL"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-111",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACIÓN?",
+    "options": [
+      "QSD",
+      "QRQ",
+      "QRT",
+      "QRZ"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-112",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué ABREVIATURA INDICA CUAL ES LA SITUACIÓN O UBICACIÓN?",
+    "options": [
+      "QUA",
+      "QTR",
+      "QTH",
+      "QRN"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-114",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EA5/EA4EOT/M",
+    "options": [
+      "Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 5",
+      "Es el distintivo de llamada de una estación móvil del distrito 5 operando en el distrito 4",
+      "Es un distintivo temporal para la realización de experimentaciones especiales",
+      "Es el prefijo correspondiente a una clase de licencia"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-120",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA SEÑAL RADIOTELEGRÁFlCA DE SOCORRO CONSISTE EN:",
+    "options": [
+      "La palabra Mayday",
+      "La abreviatura SOS transmitida como un solo signo",
+      "La palabra HELP",
+      "La abreviatura S.O.S. transmitida separando las tres letras"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-a-121",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "CON QUE POTENCIA MAXIMA PODRA EMITIR UNA ESTACIÓN DE AFICIONADO, EN LA BANDA DE FRECUENCIAS 14.000 A 14.350 Kcs:",
+    "options": [
+      "500 vatios",
+      "50 vatios",
+      "2 kilovatios",
+      "250 vatios"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-003",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Un diel�ctrico es:",
+    "stem": "Un dieléctrico es:",
     "options": [
       "Un buen conductor.",
       "Semiconductor.",
@@ -42,7 +1457,7 @@ export default [
     "id": "fedi-aa-004",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "La diferencia de potencial el�ctrico se mide en:",
+    "stem": "La diferencia de potencial eléctrico se mide en:",
     "options": [
       "Vatios.",
       "Faradios.",
@@ -58,10 +1473,10 @@ export default [
     "topicId": "magnetismo-ondas",
     "stem": "Para evitar interferencias en los altavoces de un equipo de baja frecuencia, se debe:",
     "options": [
-      "Utilizar para su conexi�n cable de igual longitud de onda que la se�al interferente.",
+      "Utilizar para su conexión cable de igual longitud de onda que la señal interferente.",
       "Conectar a masa los terminales del altavoz.",
       "Conectar un diodo detector entre los terminales del altavoz.",
-      "Utilizar para su conexi�n cable blindado."
+      "Utilizar para su conexión cable blindado."
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -70,9 +1485,9 @@ export default [
     "id": "fedi-aa-006",
     "part": 1,
     "topicId": "componentes",
-    "stem": "En un circuito con dos resistencias en paralelo, la intensidad total ser�:",
+    "stem": "En un circuito con dos resistencias en paralelo, la intensidad total será:",
     "options": [
-      "La suma de las ca�das de tensi�n.",
+      "La suma de las caídas de tensión.",
       "La misma que la que circule por la rama con la menor resistencia.",
       "La misma que la que circule por la rama con la mayor resistencia.",
       "La suma de las intensidades de cada una de las ramas."
@@ -81,52 +1496,24 @@ export default [
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-aa-007",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Las ondas de radio son de naturaleza:",
-    "options": [
-      "El�ctrica.",
-      "Magn�tica.",
-      "Electromagn�tica.",
-      "Ac�stica."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-aa-008",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Si se reduce la secci�n de un conductor:",
+    "stem": "Si se reduce la sección de un conductor:",
     "options": [
-      "La resistencia el�ctrica aumenta.",
-      "La resistencia el�ctrica disminuye.",
+      "La resistencia eléctrica aumenta.",
+      "La resistencia eléctrica disminuye.",
       "Disminuye la temperatura del conductor.",
-      "Aumenta el n�mero de �tomos por cent�metro cuadrado."
+      "Aumenta el número de átomos por centímetro cuadrado."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-aa-009",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Una etapa de frecuencia intermedia en un receptor superheterodino, b�sicamente, se compone de:",
-    "options": [
-      "Atenuadores y mezcladores.",
-      "Osciladores y conversores de tensi�n.",
-      "Demoduladores y redes inductivas.",
-      "Amplificadores y filtros."
-    ],
-    "correctIndex": 3,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-010",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "En un circuito electr�nico, un transistor no se puede emplear como:",
+    "stem": "En un circuito electrónico, un transistor no se puede emplear como:",
     "options": [
       "Amplificador.",
       "Oscilador.",
@@ -140,12 +1527,12 @@ export default [
     "id": "fedi-aa-011",
     "part": 1,
     "topicId": "componentes",
-    "stem": "Una resistencia en SHUNT ir� colocada:",
+    "stem": "Una resistencia en SHUNT irá colocada:",
     "options": [
       "En serie.",
       "En mixto con otra en serie.",
       "En paralelo.",
-      "Nunca podr� conectarse una resistencia en SHUNT."
+      "Nunca podrá conectarse una resistencia en SHUNT."
     ],
     "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -168,31 +1555,15 @@ export default [
     "id": "fedi-aa-013",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "La etapa de detecci�n de un receptor se emplea para:",
+    "stem": "La etapa de detección de un receptor se emplea para:",
     "options": [
-      "Mezclar la se�al recibida.",
-      "Demodular la se�al recibida.",
-      "Limitar la se�al recibida.",
-      "Amplificar la se�al recibida."
+      "Mezclar la señal recibida.",
+      "Demodular la señal recibida.",
+      "Limitar la señal recibida.",
+      "Amplificar la señal recibida."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-aa-014",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En el siguiente esquema de un receptor, �qu� circuito incluir�a en el cuadro con interrogantes al objeto de obtener un nivel de audio constante en el altavoz, independientemente del nivel de se�al en antena?:",
-    "stemFigure": "images/quiz/fedi-aa-014-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA aa-014 (aa-14.jpg): En el siguiente esquema de un receptor, �qu� circuito incluir�a en el cuadro con interrogantes al objeto de obtener un n",
-    "options": [
-      "Control autom�tico de ganancia.",
-      "Control autom�tico de estabilidad.",
-      "Control autom�tico de frecuencia.",
-      "Control autom�tico de audio."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-014)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-015",
@@ -200,9 +1571,9 @@ export default [
     "topicId": "componentes",
     "stem": "El \"Factor de calidad, Q\" de un circuito resonante es:",
     "options": [
-      "La relaci�n que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.",
+      "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.",
       "Independiente de la frecuencia.",
-      "La relaci�n entre la onda estacionaria y el ancho de banda del circuito.",
+      "La relación entre la onda estacionaria y el ancho de banda del circuito.",
       "Inexistente."
     ],
     "correctIndex": 0,
@@ -214,10 +1585,10 @@ export default [
     "topicId": "electricidad-basica",
     "stem": "La lectura \"10 dBμV\", es un valor de:",
     "options": [
-      "Resistencia el�ctrica.",
-      "Potencia el�ctrica.",
-      "Intensidad de corriente el�ctrica.",
-      "Tensi�n el�ctrica."
+      "Resistencia eléctrica.",
+      "Potencia eléctrica.",
+      "Intensidad de corriente eléctrica.",
+      "Tensión eléctrica."
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -226,7 +1597,7 @@ export default [
     "id": "fedi-aa-017",
     "part": 1,
     "topicId": "magnetismo-ondas",
-    "stem": "Los transceptores con cambio de frecuencia de emisi�n, utilizan:",
+    "stem": "Los transceptores con cambio de frecuencia de emisión, utilizan:",
     "options": [
       "Un oscilador de frecuencia variable.",
       "Un amplificador de clase AB.",
@@ -240,42 +1611,28 @@ export default [
     "id": "fedi-aa-018",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un transmisor de banda lateral �nica, �qu� circuito incluir�a en el cuadro con interrogantes al objeto de evitar la generaci�n de interferencias?:",
+    "stem": "En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de evitar la generación de interferencias?:",
     "stemFigure": "images/quiz/fedi-aa-018-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA aa-018 (aa-18.jpg): En el siguiente esquema de un transmisor de banda lateral �nica, �qu� circuito incluir�a en el cuadro con interrogantes ",
+    "stemFigureAlt": "Figura original FEDI-EA aa-018 (aa-18.jpg): En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes",
     "options": [
-      "Control autom�tico de frecuencia o CAF.",
-      "Control autom�tico de ganancia o CAG.",
-      "Control autom�tico de nivel o ALC.",
-      "Control autom�tico de saturaci�n o CAS."
+      "Control automático de frecuencia o CAF.",
+      "Control automático de ganancia o CAG.",
+      "Control automático de nivel o ALC.",
+      "Control automático de saturación o CAS."
     ],
     "correctIndex": 2,
     "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-018)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-aa-019",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "La sensibilidad de un receptor indica:",
-    "options": [
-      "El ancho de banda del preamplificador de RF.",
-      "Su capacidad para recibir se�ales d�biles.",
-      "El m�ximo nivel de se�al que puede recibir su antena.",
-      "Su capacidad para rechazar se�ales fuertes."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-aa-020",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "En una antena directiva tipo Yagi los elementos par�sitos:",
+    "stem": "En una antena directiva tipo Yagi los elementos parásitos:",
     "options": [
-      "Se conectan al cable de alimentaci�n.",
-      "Necesitan un balun para su adaptaci�n.",
+      "Se conectan al cable de alimentación.",
+      "Necesitan un balun para su adaptación.",
       "Proporcionan directividad.",
-      "Permiten aumentar el ancho de banda de emisi�n."
+      "Permiten aumentar el ancho de banda de emisión."
     ],
     "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -288,7 +1645,7 @@ export default [
     "options": [
       "La ganancia es igual a la directividad.",
       "La ganancia es superior a la directividad.",
-      "Los diagramas de radiaci�n en transmisi�n y en recepci�n son iguales.",
+      "Los diagramas de radiación en transmisión y en recepción son iguales.",
       "La impedancia es constante con la frecuencia."
     ],
     "correctIndex": 2,
@@ -298,7 +1655,7 @@ export default [
     "id": "fedi-aa-022",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "�Qu� banda de frecuencias presenta mejores condiciones para la propagaci�n por reflexi�n ionosf�rica?",
+    "stem": "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
     "options": [
       "HF.",
       "UHF.",
@@ -312,7 +1669,7 @@ export default [
     "id": "fedi-aa-023",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "�Qu� se deber�a encontrar siempre antes de la toma de antena en un emisor?:",
+    "stem": "¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:",
     "options": [
       "Un interruptor.",
       "El mezclador.",
@@ -330,9 +1687,9 @@ export default [
     "stemFigure": "images/quiz/fedi-aa-024-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA aa-024 (aa-24.jpg): Las bobinas conectadas en los extremos del dipolo de la figura permiten:",
     "options": [
-      "Aumentar la potencia de emisi�n.",
-      "Disminuir la longitud el�ctrica de la antena.",
-      "Incrementar la longitud el�ctrica de la antena.",
+      "Aumentar la potencia de emisión.",
+      "Disminuir la longitud eléctrica de la antena.",
+      "Incrementar la longitud eléctrica de la antena.",
       "Evitar el uso del balun."
     ],
     "correctIndex": 2,
@@ -342,9 +1699,9 @@ export default [
     "id": "fedi-aa-025",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "Se�ale el diagrama de radiaci�n correspondiente a una antena Yagi:",
+    "stem": "Señale el diagrama de radiación correspondiente a una antena Yagi:",
     "stemFigure": "images/quiz/fedi-aa-025-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA aa-025 (aa-25a.jpg): Se�ale el diagrama de radiaci�n correspondiente a una antena Yagi:",
+    "stemFigureAlt": "Figura original FEDI-EA aa-025 (aa-25a.jpg): Señale el diagrama de radiación correspondiente a una antena Yagi:",
     "options": [
       "",
       "",
@@ -372,9 +1729,9 @@ export default [
     "id": "fedi-aa-027",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "�Qu� valor de los siguientes corresponde a la \"tensi�n eficaz\" de la se�al representada?:",
+    "stem": "¿Qué valor de los siguientes corresponde a la \"tensión eficaz\" de la señal representada?:",
     "stemFigure": "images/quiz/fedi-aa-027-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA aa-027 (aa-27.jpg): �Qu� valor de los siguientes corresponde a la \"tensi�n eficaz\" de la se�al representada?:",
+    "stemFigureAlt": "Figura original FEDI-EA aa-027 (aa-27.jpg): ¿Qué valor de los siguientes corresponde a la \"tensión eficaz\" de la señal representada?:",
     "options": [
       "20 V.",
       "7,071 V.",
@@ -388,10 +1745,10 @@ export default [
     "id": "fedi-aa-028",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "La capacidad de que un sistema electr�nico no produzca interferencias que comprometan su funcionamiento o que afecten a su entorno, se denomina:",
+    "stem": "La capacidad de que un sistema electrónico no produzca interferencias que comprometan su funcionamiento o que afecten a su entorno, se denomina:",
     "options": [
-      "Fiabilidad y baja distorsi�n interferente.",
-      "Compatibilidad electrom�gnetica.",
+      "Fiabilidad y baja distorsión interferente.",
+      "Compatibilidad electromágnetica.",
       "AMC (Ambiente Medido y Comprobado).",
       "SLI (Sistema Libre de Interferencias)."
     ],
@@ -402,12 +1759,12 @@ export default [
     "id": "fedi-aa-029",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "La emisi�n de se�ales arm�nicas y espurias:",
+    "stem": "La emisión de señales armónicas y espurias:",
     "options": [
-      "Disminuye la posible producci�n de interferencias.",
+      "Disminuye la posible producción de interferencias.",
       "Es necesaria en la bandas de HF.",
-      "Implica la posible producci�n de interferencias.",
-      "S�lo hay que tenerlo en cuenta en las bandas de VHF y superiores."
+      "Implica la posible producción de interferencias.",
+      "Sólo hay que tenerlo en cuenta en las bandas de VHF y superiores."
     ],
     "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -416,149 +1773,21 @@ export default [
     "id": "fedi-aa-030",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "En relaci�n con los fusibles el�ctricos de protecci�n, es correcto afirmar que:",
+    "stem": "En relación con los fusibles eléctricos de protección, es correcto afirmar que:",
     "options": [
       "Es recomendable instalarlos entre la emisora y el acoplador de antena.",
-      "Deben tener un valor nominal superior al m�ximo consumo previsto para el equipo.",
-      "Deben tener un valor nominal inferior al consumo m�ximo previsto para el equipo.",
-      "S�lo se deben instalar los de tipo semiconductor."
+      "Deben tener un valor nominal superior al máximo consumo previsto para el equipo.",
+      "Deben tener un valor nominal inferior al consumo máximo previsto para el equipo.",
+      "Sólo se deben instalar los de tipo semiconductor."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-ab-032",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En telegraf�a, la abreviatura de procedimiento usada para finalizar una transmisi�n es:",
-    "options": [
-      "AS.",
-      "TU.",
-      "FN.",
-      "AR."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-033",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "La se�al de Socorro en radiotelefon�a se compone de:",
-    "options": [
-      "MAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).",
-      "AQUI o DE, el distintivo de llamada (tres veces) y la palabra MAYDAY (tres veces).",
-      "�nicamente MAYDAY (tres veces).",
-      "MAYDAY (una vez), la palabra AQUI o DE y el distintivo de llamada (tres veces)."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-034",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "�Qu� identifica a un radioaficionado titular de una autorizaci�n?:",
-    "options": [
-      "La matr�cula de su estaci�n.",
-      "Su distintivo de llamada asociado.",
-      "El permiso de instalaci�n de la antena.",
-      "La autorizaci�n del Ministerio de Industria, Turismo y Comercio para instalar la antena."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-035",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Sobre los planes de bandas de la IARU es correcto decir que:",
-    "options": [
-      "La IARU no tiene planes de banda para la Regi�n 1.",
-      "Sirven de gu�a a los radioaficionados de todo el mundo.",
-      "Deben ser tenidos en cuenta �nicamente si se opera en Canarias.",
-      "En Espa�a se deben aplicar los planes de banda de la IARU para la Regi�n 2."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-036",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "La obtenci�n de la autorizaci�n de radioaficionado requerir� la obtenci�n previa de:",
-    "options": [
-      "Titulo de operador.",
-      "Carnet de operador.",
-      "Diploma de operador.",
-      "Permiso de un radio club."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-037",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El siguiente gr�fico se corresponde con uno de los distritos geogr�ficos de residencia del titular de una autorizaci�n de radioaficionado, ind�quelo:",
-    "stemFigure": "images/quiz/fedi-ab-037-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ab-037 (ab-37.jpg): El siguiente gr�fico se corresponde con uno de los distritos geogr�ficos de residencia del titular de una autorizaci�n d",
-    "options": [
-      "Distrito 1.",
-      "Distrito 2.",
-      "Distrito 5.",
-      "Distrito 6."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (ab-037)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-038",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "�Qu� abreviatura del c�digo Q se refiere a la inteligib�lidad de las se�ales?:",
-    "options": [
-      "QRV.",
-      "QRK.",
-      "QRA.",
-      "QSW."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-039",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El sufijo de un distintivo de llamada de tres letras que comience por \"Y\" o \"Z\", se reservar� para:",
-    "options": [
-      "Usos temporales de relevancia internacional.",
-      "Usos temporales de relevancia nacional.",
-      "No se contempla dicha reserva en el reglamento vigente.",
-      "Las estaciones autom�ticas desatendidas anal�gicas y digitales respectivamente."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-040",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Al deletrear las letras de su indicativo el radioaficionado debe utilizar:",
-    "options": [
-      "El c�digo de deletreo RST.",
-      "Palabras de una sola s�laba.",
-      "Palabras del idioma en que mejor se exprese.",
-      "El c�digo de deletreo ICAO."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-ab-041",
     "part": 2,
     "topicId": "licencias-indicativos",
-    "stem": "�Qu� sufijos de tres letras est�n reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Clubs respectivamente?:",
+    "stem": "¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Clubs respectivamente?:",
     "options": [
       "Los que comienzan por: DD; TT; XX.",
       "Los que comienzan por: UR y RC o RK.",
@@ -569,27 +1798,13 @@ export default [
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-ab-042",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El plazo de que dispone la Administraci�n para resolver y not�ficar las solic�tudes de autorizaciones de radioaficionado ser� de:",
-    "options": [
-      "Tres semanas.",
-      "Cuatro semanas.",
-      "Cinco semanas.",
-      "Seis semanas."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-ab-043",
     "part": 2,
     "topicId": "licencias-indicativos",
-    "stem": "Los extranjeros que acrediten documentalmente su condici�n de residentes en Espa�a, podr�n obtener autorizaci�n de radioaficionado, cuando:",
+    "stem": "Los extranjeros que acrediten documentalmente su condición de residentes en España, podrán obtener autorización de radioaficionado, cuando:",
     "options": [
-      "Sean titular�s de Licencia de radioaficionado en su pa�s de origen.",
-      "Tengan Diploma de Operador de su pa�s de origen.",
+      "Sean titularés de Licencia de radioaficionado en su país de origen.",
+      "Tengan Diploma de Operador de su país de origen.",
       "Sean titulares del Certificado HAREC.",
       "Nunca."
     ],
@@ -602,8 +1817,8 @@ export default [
     "topicId": "licencias-indicativos",
     "stem": "A cual de las siguientes provincias pertenece el distintivo EB1VZY:",
     "options": [
-      "�lava.",
-      "�vila.",
+      "Álava.",
+      "Ávila.",
       "Zaragoza",
       "Guadalajara."
     ],
@@ -611,112 +1826,28 @@ export default [
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-ab-045",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "�Cual de los siguientes sufijos podr� ser asignado a un distintivo de llamada de la autorizaci�n de radioaficionado?:",
-    "options": [
-      "EEE.",
-      "TTT.",
-      "PAN.",
-      "QRS."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-046",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En la memoria descriptiva, para la obtenci�n de la licencia de una estaci�n de aficionado, no es preciso incluir:",
-    "options": [
-      "Las caracter�sticas y resistencia de la toma de tierra.",
-      "Un plano se�alando la ubicaci�n de la estaci�n.",
-      "Marca, modelo y n�mero de serie de los equipos radioel�ctricos.",
-      "Certificado de empadronamiento."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-047",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En la nomenclatura de las bandas de frecuencia, el s�mbolo LF corresponde a la banda de frecuencias:",
-    "options": [
-      "30 a 300 kHz.",
-      "30 a 300 GHz.",
-      "300 a 3000 GHz.",
-      "30 a 300 MHz."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-048",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Como norma general, la instalaci�n de una estaci�n de aficionado deber� ser efectuada:",
-    "options": [
-      "�nicamente por el propietario de la estaci�n.",
-      "Por un funcionario t�cnico de la Jefatura Provincial de Inspecci�n de Telecomunicaciones correspondiente.",
-      "Exclusivamente por un t�cnico de una asociaci�n legalizada de radioaficionados.",
-      "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicaci�n."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-049",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Las autorizaciones especiales de uso del espectro radioel�ctrico por aficionados:",
-    "options": [
-      "No est�n sujetas a ning�n procedimiento.",
-      "Habilitan a sus titulares a un uso ilimitado y permanente.",
-      "Son nominativas y s�lo habilitar�n para la realizaci�n de emisiones a su titular.",
-      "No tienen limitaciones geogr�ficas."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-ab-050",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "Entre las obligaciones de un gestor de una estaci�n desatendida no se encuentra la de:",
+    "stem": "Entre las obligaciones de un gestor de una estación desatendida no se encuentra la de:",
     "options": [
-      "Actualizar peri�dicamente la informaci�n existente.",
-      "Procurar que el mantenimiento t�cnico d� la estaci�n garantice el servicio continuo de la misma.",
-      "Otorgar la autorizaci�n y conformidad del inicio del funcionamiento de la estaci�n.",
-      "Verificar que el tr�fico de informaci�n se realice conforme a lo previsto por la normativa vigente al respecto."
+      "Actualizar periódicamente la información existente.",
+      "Procurar que el mantenimiento técnico dé la estación garantice el servicio continuo de la misma.",
+      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.",
+      "Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-051",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La banda de frecuencias n�mero 8, cuyo s�mbolo es VHF, corresponde a las ondas:",
-    "options": [
-      "Kilom�tricas.",
-      "M�tricas.",
-      "Decim�tricas.",
-      "Milim�tricas."
-    ],
-    "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-ab-052",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "En caso de que el titular de estaci�n de aficionado tenga constancia de que esta causando interferencias a otros servicios de telecomunicaciones autorizados, �qu� medida deber� adoptar, de las siguientes propuestas?:",
+    "stem": "En caso de que el titular de estación de aficionado tenga constancia de que esta causando interferencias a otros servicios de telecomunicaciones autorizados, ¿qué medida deberá adoptar, de las siguientes propuestas?:",
     "options": [
       "Darse de baja inmediatamente en el servicio de aficionados.",
-      "Cambiar de equipo antes de cualquier inspecci�n por parte de la Direcci�n General de Telecomunicaciones.",
-      "Deber� a su costa, adoptar en su estaci�n todas las medidas razonables de tipo t�cnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspecci�n de Telecomunicaciones las medidas adoptadas.",
+      "Cambiar de equipo antes de cualquier inspección por parte de la Dirección General de Telecomunicaciones.",
+      "Deberá a su costa, adoptar en su estación todas las medidas razonables de tipo técnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspección de Telecomunicaciones las medidas adoptadas.",
       "Seguir emitiendo."
     ],
     "correctIndex": 2,
@@ -726,40 +1857,12 @@ export default [
     "id": "fedi-ab-053",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "�Un radioaficionado podr� ser autorizado a instalar una estaci�n autom�tica desatendida?:",
+    "stem": "¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:",
     "options": [
-      "Si �nicamente realiza emisiones en bandas de HF.",
-      "�nicamente en localidades aisladas.",
-      "En ning�n caso.",
-      "Si dispone de diploma desde hace m�s de 15 a�os."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-054",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "�Un radioaficionado debe tener siempre una estaci�n fija?",
-    "options": [
-      "Si reside en una isla.",
-      "Si ha obtenido el diploma hace m�s de 5 a�os.",
-      "Si emite �nicamente en VHF.",
-      "No es obligatorio disponer de estaci�n fija."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-055",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Un radioaficionado que cambia de residencia no podr� mantener el mismo indicativo si:",
-    "options": [
-      "Su nueva residencia se encuentra en otra provincia.",
-      "Su nueva residencia se encuentra en una provincia a la que corresponde el distrito 0.",
-      "Su nueva provincia de residencia pertenece a un distrito distinto.",
-      "Su nueva provincia de residencia se encuentra en distinta Comunidad Aut�noma."
+      "Si únicamente realiza emisiones en bandas de HF.",
+      "Únicamente en localidades aisladas.",
+      "En ningún caso.",
+      "Si dispone de diploma desde hace más de 15 años."
     ],
     "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -768,54 +1871,26 @@ export default [
     "id": "fedi-ab-056",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "Un radioaficionado est� obligado a ser socio de una asociaci�n de radioaficionados:",
+    "stem": "Un radioaficionado está obligado a ser socio de una asociación de radioaficionados:",
     "options": [
       "Siempre.",
-      "�nicamente si el radioaficionado es menor de 18 a�os.",
+      "Únicamente si el radioaficionado es menor de 18 años.",
       "No.",
-      "�nicamente si efect�a emisiones en frecuencias atribuidas al Servicio de Aficionados por Sat�lite."
+      "Únicamente si efectúa emisiones en frecuencias atribuidas al Servicio de Aficionados por Satélite."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-057",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Un radioaficionado espa�ol que traslade su residencia a Croacia podr� obtener una licencia de radioaficionado en dicho pa�s si:",
-    "options": [
-      "Croacia aplica la Recomendaci�n T/R 61-02 de la CEPT.",
-      "Tiene una antig�edad m�nima de 5 a�os.",
-      "Tiene familiares de nacionalidad croata.",
-      "Se compromete a emitir �nicamente en VHF."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-058",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La clase de emisi�n A3E corresponde a:",
-    "options": [
-      "Doble banda lateral con ausencia de se�al moduladora.",
-      "Doble banda lateral con un solo canal con informaci�n anal�gica.",
-      "Modulaci�n de frecuencia con dos o m�s canales.",
-      "Banda lateral �nica con portadora reducida."
-    ],
-    "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-ab-059",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracci�n grave:",
+    "stem": "La Ley General de Telecomunicaciones tipifica como infracción grave:",
     "options": [
-      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioel�ctricas, en los supuestos de producci�n de interferencias.",
-      "Efectuar emisiones radioel�ctricas que incumplan gravemente los l�mites de exposici�n establecidos en la normativa de desarrollo del art�culo 44 de esta Ley e incumplir gravemente las dem�s medidas de seguridad establecidas en dicha normativa, incluidas las obligaciones de se�alizaci�n o vallado de las instalaciones radioel�ctricas.",
-      "La divulgaci�n del contenido, o de simples existencias, de mensajes no destinados al p�blico en general emitidos o recibidos a trav�s de servicios de telecomunicaciones, a los que se acceda mediante la interceptaci�n voluntaria o involuntaria, su publicaci�n o cualquier otro uso de ellos sin la debida autorizaci�n.",
-      "El incumplimiento reiterado de los requerimientos de informaci�n formulados por el �rgano competente de la Administraci�n del Estado en el ejercicio de sus funciones."
+      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias.",
+      "Efectuar emisiones radioeléctricas que incumplan gravemente los límites de exposición establecidos en la normativa de desarrollo del artículo 44 de esta Ley e incumplir gravemente las demás medidas de seguridad establecidas en dicha normativa, incluidas las obligaciones de señalización o vallado de las instalaciones radioeléctricas.",
+      "La divulgación del contenido, o de simples existencias, de mensajes no destinados al público en general emitidos o recibidos a través de servicios de telecomunicaciones, a los que se acceda mediante la interceptación voluntaria o involuntaria, su publicación o cualquier otro uso de ellos sin la debida autorización.",
+      "El incumplimiento reiterado de los requerimientos de información formulados por el órgano competente de la Administración del Estado en el ejercicio de sus funciones."
     ],
     "correctIndex": 0,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -824,7 +1899,7 @@ export default [
     "id": "fedi-ab-060",
     "part": 2,
     "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fon�tico internacional con que palabra se identifica la letra U:",
+    "stem": "En el alfabeto fonético internacional con que palabra se identifica la letra U:",
     "options": [
       "Uniform.",
       "Unidad.",
@@ -880,9 +1955,9 @@ export default [
     "id": "fedi-ag-004",
     "part": 1,
     "topicId": "componentes",
-    "stem": "En un transformador, si V es la tensi�n y N el n�mero de espiras, podemos decir que:",
+    "stem": "En un transformador, si V es la tensión y N el número de espiras, podemos decir que:",
     "stemFigure": "images/quiz/fedi-ag-004-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-004 (ag-4a.jpg): En un transformador, si V es la tensi�n y N el n�mero de espiras, podemos decir que:",
+    "stemFigureAlt": "Figura original FEDI-EA ag-004 (ag-4a.jpg): En un transformador, si V es la tensión y N el número de espiras, podemos decir que:",
     "options": [
       "",
       "",
@@ -896,14 +1971,14 @@ export default [
     "id": "fedi-ag-005",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "�C�mo se denomina al proceso de tomar parte de la se�al de salida de un circuito para introducirla de nuevo en su entrada?:",
+    "stem": "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?:",
     "stemFigure": "images/quiz/fedi-ag-005-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-005 (ag-5.jpg): �C�mo se denomina al proceso de tomar parte de la se�al de salida de un circuito para introducirla de nuevo en su entrad",
+    "stemFigureAlt": "Figura original FEDI-EA ag-005 (ag-5.jpg): ¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrad",
     "options": [
-      "Rectificaci�n",
-      "Conversi�n",
-      "Demodulaci�n",
-      "Realimentaci�n"
+      "Rectificación",
+      "Conversión",
+      "Demodulación",
+      "Realimentación"
     ],
     "correctIndex": 3,
     "explain": "Esa definición corresponde a la realimentación (feedback). FEDI-EA."
@@ -954,7 +2029,7 @@ export default [
     "id": "fedi-ag-009",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "�C�mo se denomina el siguiente circuito el�ctrico?:",
+    "stem": "¿Cómo se denomina el siguiente circuito eléctrico?:",
     "stemFigure": "images/quiz/fedi-ag-009-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA ag-9: circuito eléctrico de detector de envolvente.",
     "options": [
@@ -984,9 +2059,9 @@ export default [
     "id": "fedi-ag-011",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Indique el orden de los elementos de una fuente de alimentaci�n lineal:",
+    "stem": "Indique el orden de los elementos de una fuente de alimentación lineal:",
     "stemFigure": "images/quiz/fedi-ag-011-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-011 (ag-11.jpg): Indique el orden de los elementos de una fuente de alimentaci�n lineal:",
+    "stemFigureAlt": "Figura original FEDI-EA ag-011 (ag-11.jpg): Indique el orden de los elementos de una fuente de alimentación lineal:",
     "options": [
       "A Transformador, B Rectificador, C Regulador, D Filtro.",
       "A Rectificador, B Transformador, C Filtro, D Regulador.",
@@ -1014,14 +2089,14 @@ export default [
     "id": "fedi-ag-013",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "En el siguiente gr�fico, si la antena emite tres se�ales en distintas frecuencias, �cu�l de ellas tiene una frecuencia superior a la frecuencia cr�tica?:",
+    "stem": "En el siguiente gráfico, si la antena emite tres señales en distintas frecuencias, ¿cuál de ellas tiene una frecuencia superior a la frecuencia crítica?:",
     "stemFigure": "images/quiz/fedi-ag-013-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA ag-13: tres señales con distintas trayectorias respecto a la ionosfera.",
     "options": [
-      "Las se�ales 1 y 2.",
-      "La se�al 1.",
-      "La se�al 3.",
-      "Las se�ales 1 y 3."
+      "Las señales 1 y 2.",
+      "La señal 1.",
+      "La señal 3.",
+      "Las señales 1 y 3."
     ],
     "correctIndex": 2,
     "explain": "La frecuencia crítica es el límite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometría. En el esquema, la señal 3 atraviesa la capa en lugar de regresar: por eso es la que está por encima de la frecuencia crítica. FEDI-EA."
@@ -1030,7 +2105,7 @@ export default [
     "id": "fedi-ag-014",
     "part": 1,
     "topicId": "componentes",
-    "stem": "En el siguiente circuito, en r�gimen permanente, �qu� tensi�n el�ctrica, en voltios, tiene el condensador C?:",
+    "stem": "En el siguiente circuito, en régimen permanente, ¿qué tensión eléctrica, en voltios, tiene el condensador C?:",
     "stemFigure": "images/quiz/fedi-ag-014-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA ag-14: circuito con condensador C y tensiones indicadas.",
     "options": [
@@ -1060,7 +2135,7 @@ export default [
     "id": "fedi-ag-016",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "En el siguiente diagrama de bloques, correspondiente a un receptor elemental de conversi�n directa, el bloque con interrogantes representa un:",
+    "stem": "En el siguiente diagrama de bloques, correspondiente a un receptor elemental de conversión directa, el bloque con interrogantes representa un:",
     "stemFigure": "images/quiz/fedi-ag-016-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA ag-16: diagrama de bloques de receptor elemental de conversión directa con interrogantes.",
     "options": [
@@ -1118,14 +2193,14 @@ export default [
     "id": "fedi-ag-020",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "La inclinaci�n de los radiales en una antena vertical de cuarto de onda, produce:",
+    "stem": "La inclinación de los radiales en una antena vertical de cuarto de onda, produce:",
     "stemFigure": "images/quiz/fedi-ag-020-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-020 (ag-20.jpg): La inclinaci�n de los radiales en una antena vertical de cuarto de onda, produce:",
+    "stemFigureAlt": "Figura original FEDI-EA ag-020 (ag-20.jpg): La inclinación de los radiales en una antena vertical de cuarto de onda, produce:",
     "options": [
-      "Una variaci�n de la polarizaci�n de la se�al emitida.",
+      "Una variación de la polarización de la señal emitida.",
       "Un incremento de la altura efectiva.",
-      "Una variaci�n de la impedancia de entrada.",
-      "Una reducci�n del ruido captado por la antena."
+      "Una variación de la impedancia de entrada.",
+      "Una reducción del ruido captado por la antena."
     ],
     "correctIndex": 2,
     "explain": "Los radiales influyen en la impedancia vista en la base. FEDI-EA."
@@ -1176,14 +2251,14 @@ export default [
     "id": "fedi-ag-024",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "�Qu� ventajas presenta la antena dipolo en V invertida?:",
+    "stem": "¿Qué ventajas presenta la antena dipolo en V invertida?:",
     "stemFigure": "images/quiz/fedi-ag-024-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-024 (ag-24.jpg): �Qu� ventajas presenta la antena dipolo en V invertida?:",
+    "stemFigureAlt": "Figura original FEDI-EA ag-024 (ag-24.jpg): ¿Qué ventajas presenta la antena dipolo en V invertida?:",
     "options": [
-      "Un valor de impedancia pr�ximo a 75&Omega; y polarizaci�n circular.",
-      "Un valor de impedancia pr�ximo a 75&Omega; y un diagrama de radiaci�n muy directivo.",
+      "Un valor de impedancia próximo a 75&Omega; y polarización circular.",
+      "Un valor de impedancia próximo a 75&Omega; y un diagrama de radiación muy directivo.",
       "Un valor de impedancia constante y elevada ganancia.",
-      "Un valor de impedancia pr�ximo a 50&Omega; y un diagrama de radiaci�n pr�cticamente omnidireccional."
+      "Un valor de impedancia próximo a 50&Omega; y un diagrama de radiación prácticamente omnidireccional."
     ],
     "correctIndex": 3,
     "explain": "Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. FEDI-EA."
@@ -1234,14 +2309,14 @@ export default [
     "id": "fedi-ag-028",
     "part": 1,
     "topicId": "magnetismo-ondas",
-    "stem": "La curvatura que experimenta una onda radioel�ctrica al encontrarse un obst�culo en su trayectoria, se denomina:",
+    "stem": "La curvatura que experimenta una onda radioeléctrica al encontrarse un obstáculo en su trayectoria, se denomina:",
     "stemFigure": "images/quiz/fedi-ag-028-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-028 (ag-28.jpg): La curvatura que experimenta una onda radioel�ctrica al encontrarse un obst�culo en su trayectoria, se denomina:",
+    "stemFigureAlt": "Figura original FEDI-EA ag-028 (ag-28.jpg): La curvatura que experimenta una onda radioeléctrica al encontrarse un obstáculo en su trayectoria, se denomina:",
     "options": [
-      "Difracci�n.",
-      "Reflexi�n.",
-      "Dispersi�n.",
-      "Refracci�n."
+      "Difracción.",
+      "Reflexión.",
+      "Dispersión.",
+      "Refracción."
     ],
     "correctIndex": 0,
     "explain": "La difracción permite “rodear” obstáculos en cierta medida. FEDI-EA."
@@ -1695,12 +2770,5878 @@ export default [
     "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. FEDI-EA."
   },
   {
+    "id": "fedi-b-158",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un acumulador almacena energía eléctrica en forma de energía",
+    "options": [
+      "Luminosa",
+      "Química",
+      "Mecánica",
+      "Acústica"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-159",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Entre las siguientes características de un generador eléctrico, la principal es:",
+    "options": [
+      "El tiempo que puede actuar sin calentarse excesivamente",
+      "La fuerza electromotriz que produce",
+      "Si va montado fijo o en un vehículo",
+      "Si es estático o giratorio"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-160",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La fuerza electromotriz de un generador se mide en:",
+    "options": [
+      "Ohmnios",
+      "Watios",
+      "Kilowatios",
+      "Voltios"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-161",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Entre los siguientes materiales, es buen conductor:",
+    "options": [
+      "Papel seco",
+      "Vidrio",
+      "Agua destilada",
+      "Mercurio"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-162",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La resistencia eléctrica de un conductor es la resistencia que ofrece:",
+    "options": [
+      "A dejar pasar la corriente eléctrica",
+      "A doblarse",
+      "A calentarse",
+      "A disponerlo en forma de espiral"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-163",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La resistencia eléctrica de un hilo conductor se expresa en:",
+    "options": [
+      "Kilómetros",
+      "Ohmnios",
+      "Voltios",
+      "Vatios"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-164",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Se define la corriente eléctrica diciendo que es:",
+    "options": [
+      "La circulación de cargas eléctricas",
+      "La iluminación que da una lámpara eléctrica",
+      "La fuerza electromotriz del generador que produce la corriente",
+      "El calor que produce al pasar por una estufa"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-165",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Una de las expresiones de la Ley de Ohm es:",
+    "options": [
+      "I = V x R",
+      "V = R X I",
+      "R = I/V",
+      "1= R x I x V"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-166",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un relevador o relé es un electroimán que se emplea para:",
+    "options": [
+      "Mover grandes pesos",
+      "Separar las sustancias metálicas de las no metálicas",
+      "Separar las sustancias magnéticas de las no magnéticas",
+      "Abrir y cerrar un circuito eléctrico"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-167",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La autoinducción de un circuito representa su:",
+    "options": [
+      "Protección automática",
+      "Inercia u oposición a las variaciones de la corriente",
+      "Propiedad de enfriamiento automático",
+      "Propiedad de calentamiento automático"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-168",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un electroimán atrae al hierro solamente cuando:",
+    "options": [
+      "Se calienta su núcleo",
+      "Se le orienta en la dirección Norte Sur",
+      "Se hace pasar por su bobina una corriente eléctrica",
+      "Cesa de pasar una corriente eléctrica por la bobina"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-169",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "De las siguientes, la característica más importante de una corriente alterna es:",
+    "options": [
+      "Su frecuencia",
+      "Su aplicación, de día o de noche",
+      "Su procedencia, de un alternador o de un oscilador",
+      "Su finalidad, dar calor o mover un motor"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-170",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un transformador sirve para:",
+    "options": [
+      "Transformar un acumulador en un motor",
+      "Transformar una corriente continua en alterna",
+      "Transformar una potencia eléctrica en calor",
+      "Transformar una corriente alterna en otra también alterna"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-171",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "De los diversos procedimientos que a continuación se indican, para aumentar el alcance de una emisora el primero al que hay que recurrir, si es factible, es el siguiente:",
+    "options": [
+      "Aumentar la potencia de emisión",
+      "Aumentar la anchura de banda",
+      "Aumentar la tensión del paso final",
+      "Aumentar la directividad de la antena"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-172",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En términos generales, puede decirse que la anchura de banda de una emisión de radio es:",
+    "options": [
+      "El valor de la frecuencia de la onda portadora",
+      "El valor de la frecuencia de la onda modulada",
+      "La suma de la frecuencia de la señal modulada",
+      "La diferencia entre las frecuencias máxima y mínima que se producen al modular"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-173",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "En un emisor de radio, la modulación consiste en:",
+    "options": [
+      "Aplicar la señal del micrófono directamente a la antena",
+      "Modificar las características de la onda portadora de acuerdo con las de la onda de la señal que se desea transmitir",
+      "Aplicar la señal del oscilador, una vez amplificada, directamente a la antena",
+      "Alimentar al emisor cuando se habla frente al micrófono"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-174",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En un emisor de radio, los amplificadores se emplean para:",
+    "options": [
+      "Multiplicar el valor de frecuencia",
+      "Aumentar la potencia del emisor",
+      "Disminuir el consumo",
+      "Disminuir el calor"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-175",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La estabilidad de la frecuencia de un emisor de radio proporciona la siguiente ventaja:",
+    "options": [
+      "Mayor alcance",
+      "Menores ruidos eléctricos en la recepción",
+      "Mayor potencia de emisión",
+      "Menor interferencia a otras emisiones de frecuencia próxima"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-176",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "La función de un oscilador es:",
+    "options": [
+      "Asegurar un equilibrio eléctrico estable",
+      "Hacer que un equipo de radio pase de emisor a receptor y viceversa",
+      "Producir una corriente alterna",
+      "Hacer que la frecuencia varíe continuamente en un amplio margen"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-177",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra Y?",
+    "options": [
+      "YANKEE",
+      "YOKO",
+      "YES",
+      "YUGO"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-178",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra H?",
+    "options": [
+      "HILO",
+      "HOT",
+      "HOTEL",
+      "HALL"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-179",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra M?",
+    "options": [
+      "MAS",
+      "METRO",
+      "MIKE",
+      "MORE"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-180",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se deletrea la letra D?",
+    "options": [
+      "DIN",
+      "DOOR",
+      "DAY",
+      "DELTA"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-181",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Señal internacional de socorro en telefonía:",
+    "options": [
+      "SECURITE",
+      "HELP",
+      "MAYDAY",
+      "AYUDA"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-182",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Estación movil de aficionado:",
+    "options": [
+      "Estación de aficionado instalada en vehiculo o en segundo domicilio",
+      "Estación que puede ser utilizada en movimiento o mientras está detenida en puntos no determinados",
+      "Estación que se puede transportar para utilizarla solamente en puntos no determinados",
+      "Es toda estación de aficionados destinada a ser utilizada en movimiento"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-183",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La abreviatura correspondiente a las bandas de frecuencias comprendidas entre 3 y 30 MHz:",
+    "options": [
+      "EHF",
+      "LF",
+      "UHF",
+      "HF"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-184",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La abreviatura HF indica:",
+    "options": [
+      "Ondas hectométricas",
+      "Ondas decamétricas",
+      "Ondas centimétricas",
+      "Ondas kilométricas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-185",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La abreviatura MF indica:",
+    "options": [
+      "Ondas hectométricas",
+      "Ondas métricas",
+      "Ondas centimétricas",
+      "Ondas kilométricas"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-186",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La abreviatura QRA indica:",
+    "options": [
+      "¿Qué frecuencia utiliza Vd.?",
+      "¿Está Vd. Ocupado?",
+      "¿Transmito más despacio?",
+      "¿Cómo se llama su estación?"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-187",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La gama de frecuencias comprendidas entre 3 y 30 MHz se llaman:",
+    "options": [
+      "Ondas hectométricas",
+      "Ondas cortas",
+      "Ondas decamétricas",
+      "Ondas VHF"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-188",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LA BANDA DE 430 A 440 MHZ PERTENECE A LAS ONDAS:",
+    "options": [
+      "UHF",
+      "Métricas",
+      "VHF",
+      "SHF"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-189",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA CLASE DE EMISIÓN F3:",
+    "options": [
+      "Telegrafía, modulación de frecuencia o de fase",
+      "Telefonía, modulación de frecuencia",
+      "Modulación de frecuencia y fase en general",
+      "Telefonía, modulación de frecuencia o de fase"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-190",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE ABREVIATURA INDICA QUE EL OPERADOR DE LA ESTACIÓN LLAMARÁ MAS TARDE?",
+    "options": [
+      "QRC",
+      "QTA",
+      "QRX",
+      "QSO"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-191",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LAS PRIMERAS LETRAS DE UN DISTINTIVO DE LLAMADA:",
+    "options": [
+      "Las elige cada país según la inicial francesa de su nombre",
+      "Indican la clase de licencia",
+      "Son elegidas por cada país a partir de las atribuciones internacionales",
+      "Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicación, a cada país"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-192",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LAS SERIES DE DISTINTIVOS DE LLAMADA:",
+    "options": [
+      "Empieza siempre por la inicial en lengua francesa del nombre del país",
+      "Empieza siempre con una combinación de 2 o 3 letras elegidas de una serie secuencial atribuida a un país",
+      "Empieza por la combinación de letras o cifras con una longitud máxima de tres.",
+      "Empiezan por combinaciones de 2 letras o cifras"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-194",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UNA ESTACIÓN DE AFICIONADOS UBICADA EN ALICANTE ES IDENTIFICADA POR LA CIFRA:",
+    "options": [
+      "2",
+      "3",
+      "9",
+      "5"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-198",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "EL AMPERÍMETRO DE ANTENA ES DEL TIPO:",
+    "options": [
+      "De cuadro móvil",
+      "De hierro móvil",
+      "De radiofrecuencia",
+      "De rectificador de selenio"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-199",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "UNA BOBINA CONECTADA EN SERIE EN LA BASE DE UNA ANTENA PRODUCE EL SIGUIENTE EFECTO:",
+    "options": [
+      "Aumenta la frecuencia de resonancia",
+      "Disminuye la frecuencia de resonancia",
+      "No influye en la frecuencia de resonancia",
+      "Mejora el efecto demulación"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-200",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LA INFLUENCIA DE UN CONDENSADOR EN SERIE EN LA BASE DE LA ANTENA ES:",
+    "options": [
+      "Aumentar su frecuencia de resonancia",
+      "Disminuir su frecuencia de resonancia",
+      "No influye en la frecuencia de resonancia",
+      "Mejora la estabilidad de la frecuencia"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-201",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "SE AJUSTAN LOS ELEMENTOS DE RESONANCIA DE LA ANTENA VARIANDOLOS DE MODO QUE LA CORRIENTE EN LA MISMA:",
+    "options": [
+      "Alcance un máximo",
+      "Presente un minino",
+      "Se mantenga invariable",
+      "Haga saltar chispas en el condensador de antena"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-202",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "PARA ALARGAR LA LONGITUD DE ONDA ELÉCTRICA DE UNA ANTENA SE PUEDE PROCEDER A:",
+    "options": [
+      "Acortar el hilo de antena",
+      "Disminuir la corriente de antena",
+      "Aumentar la autoinducción de la base",
+      "Modular más profundamente"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-203",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "PARA ACORTAR LA LONGITUD DE UNA ANTENA SE PUEDE PROCEDER A:",
+    "options": [
+      "Insertar un condensador, en serie, en la base",
+      "Alargar la longitud del hilo de antena",
+      "Aumentar la corriente de antena.",
+      "Modular menos profundamente"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-204",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LOS ELEMENTOS VARIABLES DE QUE GENERALMENTE SE DISPONE, EN SERIE, EN LA BASE DE UNA ANTENA, PARA AJUSTARLA A LA RESONANCIA SON:",
+    "options": [
+      "Un interruptor manual y un fusible",
+      "Una resistencia y una lámpara",
+      "Una resistencia metálica y una bobina",
+      "Una bobina y un condensador"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-205",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "ANTES DEL ENCENDIDO DE UN EMISOR HAY QUE PREPARARLO, PERO DE LOS SIGUIENTES CONTROLES Y ELEMENTOS, EL QUE NO ES NECESARIO ACTUAR PARA DICHA PREPARACIÓN PREVIA ES:",
+    "options": [
+      "El selector de la banda de emisión",
+      "El mando de ajuste aproximado de la frecuencia de emisión",
+      "El conmutador de clase de emisión",
+      "El medidor de sensibilidad de la señal"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-206",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN UN EMISOR DE POTENCIA MEDIA, LA ALTA TENSIÓN DE PLACA DE PASO FINAL SE APLICA:",
+    "options": [
+      "Directamente con el encendido general",
+      "En dos etapas; en la primera se aplica una tensión media; y después del primer ajuste, se aplica toda la tensión",
+      "Al insertar el micrófono",
+      "Al seleccionar la banda de funcionamíento"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-207",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA UTILIZACIÓN DE UN TRANSCEPTOR COMO TRANSMISOR O COMO RECEPTOR DE RADIO REQUIERE:",
+    "options": [
+      "Emplear una antena para emisión y otra para recepción",
+      "Emplear dos unidades de alimentación, independientes, para emisión y para recepción",
+      "Actuar un conmutador de paso de una a otra función",
+      "Desconectar el micrófono y conectar en su lugar un altavoz"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-208",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "AL AUMENTAR LA TEMPERATURA DE UN CONDUCTOR, LA RESISTENCIA DEL MISMO:",
+    "options": [
+      "Disminuye",
+      "No varía",
+      "Aumenta",
+      "Unas veces aumenta y otras disminuye"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-209",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "¿PARA QUE SIRVE Y COMO SE INTERCALA UN AMPERÍMETRO EN UN CIRCUÍTO ELÉCTRICO?",
+    "options": [
+      "Para medir potencia, se intercala en paralelo",
+      "Para medir voltaje, se intercala en serie",
+      "Para medir amperaje, se intercala en paralelo",
+      "Para medir intensidad, se intercala en serie"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-210",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EN LAS DOS PRIMERAS FRANJAS QUE INDICAN EL VALOR DE UNA RESISTENCIA, LA CIFRA CINCO ESTA REPRESENTADA POR EL COLOR:",
+    "options": [
+      "Azul",
+      "Blanco",
+      "Amarillo",
+      "Verde"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-211",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "ALIMENTANDO EL PRIMARIO DE UN TRANSFORMADOR CON CORRIENTE CONTINUA, EN EL CIRCUITO DEL SECUNDARIO, CARGADO CON UNA RESISTENCÍA:",
+    "options": [
+      "Pasa una corriente mayor que por el primario",
+      "Pasa la misma corriente que por el primario",
+      "No hay paso de corriente",
+      "La corriente que pasa es ligeramente inferior que la del primario"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-212",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EL CONJUNTO DE DOS RESISTENCIAS IGUALES CONECTADAS EN SERIE TIENE UN VALOR EN OHMIOS DE:",
+    "options": [
+      "El doble del de cada una de ellas",
+      "Igual que cada una de ellas",
+      "La mitad de una de ellas",
+      "La cuarta parte de una de ellas"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-213",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "EN UNA ONDA ELECTROMAGNETICA EL PRODUCTO DE SU FRECUENCIA Y SU LONGITUD DE ONDA ES IGUAL A:",
+    "options": [
+      "La velocidad de la luz",
+      "La amplitud de las oscilaciones",
+      "El período",
+      "Su potencia reactiva"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-214",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LA FUNCIÓN DE UN RECTIFICADOR DE CORRIENTE CONSISTE EN:",
+    "options": [
+      "Limitar los máximos de corriente",
+      "Transformar la corriente continua en alterna",
+      "Cambiar la polaridad de la corriente",
+      "Transformar la corriente alterna en continua"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-215",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL NUMERO DE VECES POR SEGUNDO QUE UNA CORRIENTE ALTERNA COMPLETA UN CICLO RECIBE EL NOMBRE DE:",
+    "options": [
+      "Elongación",
+      "Frecuencia",
+      "Longitud de onda",
+      "Período"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-216",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA UNIDAD DE CANTIDAD DE ELECTRICIDAD ES EL:",
+    "options": [
+      "Amperio",
+      "Culombio",
+      "Henrio",
+      "Faradio"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-217",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EN VARIAS RESISTENCIAS DE DIFERENTE VALOR, CONECTADAS EN SERIE, LA CAIDA DE TENSIÓN EN CADA UNA DE ELLAS, CUANDO CIRCULA UNA CORRIENTE, ES:",
+    "options": [
+      "Inversamente proporcional al valor de la resistencias",
+      "Directamente proporcional al valor de la resistencia",
+      "Igual en todas",
+      "No hay caída de tensión"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-218",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL TRANSISTOR ES:",
+    "options": [
+      "Una bobina",
+      "Un semiconductor",
+      "Un rectificador de vacío",
+      "Un dispositivo de dos terminales"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-219",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "CUANDO UNA ALTA FRECUENCIA SE MEZCLA CON OTRA ALTA FRECUENCIA, EL FENÓMENO RESULTANTE ES CONOCIDO CON EL NOMBRE DE:",
+    "options": [
+      "Heterodinación",
+      "Histéresis",
+      "Rectificación",
+      "Impedancia"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-220",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL CONTROL AUTOMÁTICO DE GANANCIA:",
+    "options": [
+      "Sirve para mantener constante el nivel de salida del receptor, cuando varía la frecuencia de la señal recibida",
+      "Sirve para mantener constante el nivel de salida del receptor, cuando varia la intensidad del campo recibido",
+      "Solamente se acciona cuando se pulsa el mando VOX",
+      "Mantiene constante el nivel de la señal de salida de un emisor cuando se modula en onda continua o en banda lateral única"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-221",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA DETECCIÓN SIRVE PARA:",
+    "options": [
+      "Convertir las corrientes continuas en corrientes alternas",
+      "Extraer la información de la señal modulada",
+      "Mezclar la información con la portadora",
+      "Para hacer una multiplicación de la frecuencia portadora"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-222",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UNA VALVULA DIODO ESTA COMPUESTA POR:",
+    "options": [
+      "Placa, rejilla y cátodo",
+      "Cátodo",
+      "Rejilla y cátodo",
+      "Placa y cátodo"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-223",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA FUNCIÓN DE UN OSCILADOR ES:",
+    "options": [
+      "Asegurar un equilibrio eléctrico estable",
+      "Hacer que un equipo de radio pase de emisor a receptor y viceversa",
+      "Producir una corriente alterna",
+      "Ser modulado por la portadora"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-224",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN UN EMISOR DE RADIO, LOS AMPLIFICADORES SE EMPLEAN PARA:",
+    "options": [
+      "Multiplicar el valor de la frecuencia",
+      "Aumentar la potencia del emisor",
+      "Disminuir el consumo",
+      "Disminuir el calor"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-225",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EN UN EMISOR DE RADIO LA MODULACIÓN CONSISTE EN:",
+    "options": [
+      "Aplicar la señal del micrófono directamente a la antena",
+      "Modificar las características de la onda portadora de acuerdo con las de la onda de la señal que se desea transmitir",
+      "Aplicar la señal del Oscilador, una vez amplificada, directamente a la antena",
+      "Alimentar el detector cuando se habla frente al micrófono"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-226",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "SE AUMENTA EL ALCANCE DE UNA EMISORA SI SE AUMENTA:",
+    "options": [
+      "Su reactancia",
+      "La polarización negativa de rejilla",
+      "La directividad de la antena",
+      "La corriente inversa de Pico"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-227",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN UNA VÁLVULA ELECTRÓNICA LA FUNCIÓN DEL CÁTODO ES:",
+    "options": [
+      "Emitir electrones",
+      "Bloquear las oscilaciones parásitas",
+      "Mantener la refrigeración de la válvula",
+      "Invertir la polarización"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-228",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UNA ESTACIÓN DE RADIOAFICIONADO SITUADA EN LA PROVINCIA DE CUENCA SE IDENTIFICA POR EL NUMERO:",
+    "options": [
+      "6",
+      "8",
+      "4",
+      "3"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-230",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿COMO SE DELETREA EL NUMERO 9?",
+    "options": [
+      "Novenine",
+      "Novo",
+      "Nonenite",
+      "Nine"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-231",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿COMO SE DELETREA EL NUMERO 6?",
+    "options": [
+      "Six",
+      "Sine",
+      "Soxisix",
+      "Seise"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-232",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿COMO SE DELETREA LA LETRA M?",
+    "options": [
+      "Monde",
+      "Mike",
+      "Morris",
+      "Mina"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-233",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿COMO SE DELETREA LA LETRA L?",
+    "options": [
+      "Lote",
+      "Londres",
+      "Lima",
+      "Lündi"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-234",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿COMO SE DELETREA LA LETRA F?",
+    "options": [
+      "Filo",
+      "Foxtrot",
+      "Fronda",
+      "Fase"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-235",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿COMO SE DELETREA LA LETRA A?",
+    "options": [
+      "Átomo",
+      "Ávila",
+      "Alfa",
+      "Aran"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-236",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LAS FRECUENCIAS COMPRENDIDAS ENTRE 3 y 30 MHz. SE DENOMINAN",
+    "options": [
+      "Ondas hectométricas",
+      "Ondas cortas",
+      "Ondas decamétricas",
+      "Ondas VHF"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-237",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "DENTRO DE LAS CARACTERÍSTICAS TÉCNICAS DE LA GAMA DE FRECUENCIAS INCLUÍDA ENTRE 30 y 300 KHz., CORRESPONDEN CON LAS ONDAS:",
+    "options": [
+      "Ondas decimétricas",
+      "Ondas métricas",
+      "Ondas centimétricas",
+      "Ondas kilométricas"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-241",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LA ANTENA ESTARA ACOPLADA AL PASO FINAL DE SALIDA:",
+    "options": [
+      "Directamente",
+      "Por una tierra intermedia",
+      "Por adaptadores y filtros",
+      "No se acopla"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-242",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "CONSTITUYE UNA FALTA GRAVE:",
+    "options": [
+      "Falsear los documentos de comprobación para obtener la licencia",
+      "Carecer de libro diario",
+      "Emplear las señales de socorro",
+      "Reincidir en una falta leve"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-243",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA POTENCIA DE LA RADIACIÓN PERTURBADORA DE LOS RECEPTORES DE UNA ESTACIÓN DE AFICIONADO, EN LAS BANDAS DE FRECUENCIA DEL SERVICIO DE RADIODIFUSIÓN SONORA, NO DEBE REBASAR:",
+    "options": [
+      "Dos milivátios",
+      "Un microvátio",
+      "Cuatro voltios",
+      "Cuatro Nanovatios"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-245",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿ESTA PERMITIDO QUE UNA ESTACIÓN DE AFICIONADO SE CONECTE CON OTRAS INSTALACIONES DE TELECOMUNICACIÓN?",
+    "options": [
+      "Sí",
+      "Sí, cumpliendo ciertas condiciones",
+      "Sí, limitándola duración del enlace",
+      "No"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-248",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "CUANDO EL MODO DE EMISIÓN ESTA EN LA POSICIÓN CW SE PUEDE TRABAJAR EN:",
+    "options": [
+      "Fonia",
+      "Frecuencia modulada",
+      "Telegrafía",
+      "Modulación de amplitud"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-249",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "AL UTILIZAR UN TRANSCEPTOR COMO EMISOR O RECEPTOR SE TIENE QUE:",
+    "options": [
+      "Desconectar el micrófono y conectar un altavoz",
+      "Actuar un conmutador de paso de una a otra función",
+      "Emplear diferentes antenas",
+      "Emplear diferentes unidades de alimentación"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-250",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN UN TRANSCEPTOR, EL CONMUTADOR DE BANDAS SE UTILIZA PARA:",
+    "options": [
+      "Cambiar el Modo de emisión",
+      "Controlar la señal de recepción",
+      "Emitir/recibir en el margen de frecuencias deseado",
+      "Variar la potencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-251",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "EL CABLE QUE UNE LA ANTENA AL EMISOR DEBE DE:",
+    "options": [
+      "Ser aéreo",
+      "Estar enterrado",
+      "Estar apantallado",
+      "No ser de acero ni estar enterrado"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-252",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN LAS TOMAS DE TIERRA DE LA ESTACIÓN DE UN RADIOAFICIONADO EL CABLE:",
+    "options": [
+      "No debe llevar fusible de protección",
+      "Debe llevar fusible de protección",
+      "Debe llevar interruptor magnetotérmico",
+      "Debe llevar un diferencial"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-256",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "AL SINTONIZAR UN EMISOR QUE TENGA UN APARATO DE MEDIDA DE CORRIENTE DE PLACA DEL PASO FINAL, AL ESTAR BIEN AJUSTADO ESTE MEDIDOR MARCARA:",
+    "options": [
+      "Un máximo",
+      "Un mínimo",
+      "Es indiferente",
+      "No dará ninguna indicación"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-258",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL VALOR EFICAZ DE UNA CORRIENTE ALTERNA SE DEFINE COMO:",
+    "options": [
+      "El numero de periodos por segundo",
+      "Su eficacia para mover un motor",
+      "Un valor que se corresponde con una corriente continua capaz de producir el mismo efecto térmico",
+      "El valor instantáneo máximo dividido por n"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-259",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UNA CARACTERÍSTICA DE LA CORRIENTE ALTERNA ES SU:",
+    "options": [
+      "Frecuencia",
+      "Conductividad",
+      "Valor uniforme",
+      "Velocidad"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-260",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN SHUNT INDICA:",
+    "options": [
+      "Un condensador a tierra",
+      "Una resistencia en paralelo con otro elemento",
+      "Dos resistencias en serie",
+      "Un transistor de efecto campo"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-261",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN MATERIAL DIELÉCTRICO ES:",
+    "options": [
+      "Buen aislante",
+      "Buen conductor",
+      "Un conductor",
+      "Un buen emisor"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-262",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LAS REACTANCIAS INDUCTIVA Y CAPACITIVA TIENEN PROPIEDADES:",
+    "options": [
+      "Similares",
+      "Opuestas",
+      "Alternativas",
+      "Poco fiables"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-263",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "SI EN UN TRANSFORMADOR EL PRIMARIO TIENE MENOS ESPIRAS QUE EL SECUNDARIO, ESTE TRANSFORMADOR ES:",
+    "options": [
+      "levador",
+      "ixto",
+      "eductor",
+      "gualador"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-264",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LAS PROPIEDADES MAGNÉTICAS DE UN ELECTROIMÁN SON:",
+    "options": [
+      "Permanentes",
+      "Temporales",
+      "Híbridas",
+      "No tiene propiedades magnéticas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-265",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "SI QUEREMOS MEDIR CORRIENTES CONTINUAS CON UN AMPERÍMETRO CUYO ALCANCE MÁXIMO ES INFERIOR A LAS CORRIENTES A MEDIR TENDREMOS QUE:",
+    "options": [
+      "Poner una resistencia en serie",
+      "Poner un condensador en serie",
+      "Poner una resistencia en paralelo",
+      "No se puede utilizar"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-266",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "AL AUMENTAR LA TEMPERATURA DE UN METAL LA RESISTENCIA:",
+    "options": [
+      "Disminuye",
+      "Aumenta",
+      "Permanece invariable",
+      "A veces aumenta o disminuye"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-267",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "PARA AUMENTAR LA CAPACIDAD DE LOS CONDENSADORES, SE ASOCIAN EN:",
+    "options": [
+      "Serie",
+      "Paralelo",
+      "Mixto",
+      "En contrafase"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-268",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EN LOS RECEPTORES DE DOBLE CONVERSIÓN:",
+    "options": [
+      "La primera frecuencia intermedia es menor que la segunda",
+      "La primera frecuencia intermedia es mayor que la segunda",
+      "La segunda frecuencia íntermedia es el doble que la primera",
+      "La segunda frecuencia intermedia es la mitad de la primera"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-269",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué ventaja tienen los transistores FET sobre los transistores clásicos?",
+    "options": [
+      "Se pueden usar para señales de frecuencias más altas",
+      "Tiene mayor impedancia de entrada",
+      "Pueden amplificar señales a mayor nivel",
+      "Producen mayor ganancia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-270",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UNA VÁLVULA CONDUCE CORRIENTE:",
+    "options": [
+      "Siempre mientras le sea aplicada una tensión alterna entre cátodo y ánodo",
+      "Si se aplica una tensión positiva a la placa y negativa al cátodo",
+      "Si se aplica una tensión negativa a la placa y positiva al cátodo",
+      "Cuando se aplica una tensión a la placa y tierra al ánodo"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-271",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN AMPLIFICADOR CON TRANSISTOR CONECTADO CON EMISOR COMÚN PRODUCE AMPLIFICACIÓN:",
+    "options": [
+      "Solo de tensión",
+      "Solo de corriente",
+      "De potencia",
+      "Depende que sea del tipo PNP o NPN"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-272",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿PARA QUE SE CONECTAN VÁLVULAS EN PARALELO EN EL PASO DE SALIDA?",
+    "options": [
+      "Para derivar corrientes",
+      "Para obtener mas potencia de salida",
+      "Para los amplificadores excitadores",
+      "Para osciladores calibrados"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-273",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA SELECTIVIDAD DE UN RECEPTOR MIDE:",
+    "options": [
+      "Su posibilidad de detectar señales con cualquier tipo de modulación",
+      "Su posibilidad de detectar señales débiles",
+      "Su posibilidad de distinguir entre señales de frecuencias muy cercanas",
+      "Su posibilidad de detectar fielmente señales con interferencias"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-274",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN AMPLIFICADOR PUEDE OSCILAR INDEBIDAMENTE:",
+    "options": [
+      "Si hay un fuerte acoplamiento entre los circuitos de colector y base",
+      "Si se acoplan débilmente los circuitos de colector y base",
+      "Nunca",
+      "Cuando se usan FET"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-275",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "PARA ESTABILIZAR LA TENSIÓN DE SALIDA DE UNA FUENTE DE ALIMENTACION SE EMPLEA:",
+    "options": [
+      "Un filtro en TL",
+      "Un filtro en L invertida",
+      "Un condensador Electrolítico",
+      "Un diodo zener"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-276",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "PARA QUE UNA ONDA MODULADA SEA LINEAL:",
+    "options": [
+      "El porcentaje de modulación debe ser inferior al 33,3%",
+      "El porcentaje de modulación debe ser inferior al 100%",
+      "El porcentaje de modulación debe ser inferior al 6,6%",
+      "Puede haber sobremodulación pero el porcentaje se debe mantener menor del 150%"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-280",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE ABREVIATURA INDICA LA INTELEGIBILIDAD DE LAS SEÑALES?",
+    "options": [
+      "QRL",
+      "QRM",
+      "QRK",
+      "QRA"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-281",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE ABREVIATURA INDICA QUE PERTURBAN LOS ATMOSFÉRICOS?",
+    "options": [
+      "QSB",
+      "QSD",
+      "QRX",
+      "QRN"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-282",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACIÓN?",
+    "options": [
+      "QSD",
+      "QTR",
+      "QSV",
+      "QUA"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-285",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UTILIZAR COMO PORTABLE UNA ESTACIÓN FIJA, ¿CONSTITUYE INFRACCIÓN?",
+    "options": [
+      "No, si precede autorización de la Dirección General",
+      "No, pues puede utilizarse indistintamente sin autorización",
+      "Constituye una falta muy grave",
+      "Constituye una falta grave"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-286",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE CLASE DE INFRACCIÓN CONSTITUYE LA FALTA DEL LIBRO DIARIO?",
+    "options": [
+      "No es falta",
+      "Muy grave",
+      "Leve",
+      "Grave"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-288",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓN DE:",
+    "options": [
+      "Marina mercante",
+      "Ministerio de Defensa",
+      "Dirección General de Telecomunicaciones",
+      "Dirección General de Seguridad y Orden Público"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-289",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "TODA ESTACIÓN DE AFICIONADO DESTINADA A SER UTILIZADA EN UN VEHICULO EN MOVIMIENTO O MIENTRAS ESTA DETENIDO EN PUNTOS NO DETERMINADOS ES UNA?",
+    "options": [
+      "Estación temporal",
+      "Estación móvil",
+      "Estación fija",
+      "Estación fija/portable"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-290",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL PLAZO DE VALIDEZ DE LA AUTORIZACIÓN PARA QUE UN RADIOAFICIONADO PROCEDA AL MONTAJE DE SU ESTACIÓN SERA, A PARTIR DE SU NOTIFICACIÓN, DE:",
+    "options": [
+      "1 año",
+      "3 meses",
+      "6 meses",
+      "2 años"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-291",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL SERVICIO DE RADIOAFICIONADOS ES:",
+    "options": [
+      "Una empresa interesada en cuestiones comerciales de Electrónica",
+      "Un servicio de instrucción individual, de intercomunicación y de estudios de Radiotecnia, efectuado por personas debidamente autorizadas, con carácter personal y sin fines de lucro",
+      "Un grupo colectivo de estudiantes de Electrónica que se comunican sus experiencias",
+      "Un servicio público de Protección Civil"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-292",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA CIFRA 2 EN EL DISTINTIVO DE LLAMADA IDENTIFICA LA PROVINCIA DE:",
+    "options": [
+      "Huesca",
+      "Granada",
+      "Melilla",
+      "Valencia"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-293",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LA FRECUENCIA DE 144 MHZ. ESTA INCLUIDA EN LAS ONDAS:",
+    "options": [
+      "Milimétricas",
+      "Kilométricas",
+      "Métricas",
+      "Hectométricas"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-295",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA CLASE DE EMISIÓN EN TELEFONÍA, MODULACIÓN DE FRECUENCIA (O FASE) SE INDICA POR EL SÍMBOLO:",
+    "options": [
+      "A3",
+      "A3J",
+      "F3J",
+      "P3D"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-297",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "PARA EMITIR EN FONIA, BANDA LATERAL ÚNICA INFERIOR, SITUAREMOS EL MANDO DE \"MODO DE EMISIÓN\" EN LA POSICION:",
+    "options": [
+      "AM",
+      "FM",
+      "USB",
+      "LSB"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-298",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "SI SE QUIERE CORTAR LA SALIDA DEL RECEPTOR EN AUSENCIA DE SEÑAL HABRÁ DE ACTUARSE SOBRE EL MANDO:",
+    "options": [
+      "Volumen de audio",
+      "Volumen de RF",
+      "Silenciador",
+      "Control de tono"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-299",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "SI EN UN RECEPTOR SE OUlERE DISMINUIR LA SEÑAL DE ENTRADA, ACTUAREMOS SOBRE EL MANDO DE:",
+    "options": [
+      "Volumen de audiofrecuencia",
+      "Volumen de radiofrecuencia",
+      "Silenciador",
+      "Control Automático de Ganancia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-300",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL CONMUTADOR SENDREC. SE UTILIZA PARA:",
+    "options": [
+      "Cambiar de banda",
+      "Encender el transceptor",
+      "Cambiar de modo de emisión",
+      "Cambiar de emisión a recepción o viceversa"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-301",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL MANDO NB EN UN TRANSCEPTOR, SE UTILIZA PARA:",
+    "options": [
+      "Suprimir ruido producido por emisoras de radiofrecuencia",
+      "Suprimir ruido de impulsos",
+      "Suprimir ruidos industriales",
+      "Suprimir señales del canal adyacente"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-302",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LOS CONDUCTORES DE TIERRA DEBEN:",
+    "options": [
+      "Estar aislados",
+      "De baja resistencia",
+      "De alta resistencia",
+      "Se deben proteger con fusible"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-303",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "DEL NUMERO DE ESPIRAS QUE TIENE UNA ANTENA HELICOIDAL DEPENDE:",
+    "options": [
+      "Su ganancia",
+      "La frecuencia a que resuena",
+      "Su ganancia y frecuencia a que resuena",
+      "Su impedancia"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-304",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LAS ANTENAS Y LAS LINEAS DE ALIMENTACIÓN:",
+    "options": [
+      "No pueden ser de distinta impedancia",
+      "Necesitan siempre interconectarse por adaptadores",
+      "Necesitan adaptadores o no según sus impedancias",
+      "Forman un conjunto resonante"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-305",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS MIDE:",
+    "options": [
+      "Tensiones de placa",
+      "Frecuencia de recepción",
+      "Intensidad de la señal recibida",
+      "Porcentaje de modulación"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-306",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA MISIÓN DEL CONMUTADOR \"POWER ON/OFF\" EN UN TRANSCEPTOR, ES:",
+    "options": [
+      "Encender y pagar el Equipo",
+      "Aumentar la potencia de emisión",
+      "Aumentar o disminuir la sensibilidad del receptor",
+      "Reponer el fusible de entrada"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-307",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una pila es:",
+    "options": [
+      "Un dispositivo electromecánico",
+      "Un mecanismo de distorsión",
+      "Un generador óptico",
+      "Un dispositivo electroquímico"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-308",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Se dice que una pila se ha polarizado cuando:",
+    "options": [
+      "Su resistencia interna es muy grande",
+      "Tiene dos polos",
+      "Sus polos se hacen positivos y negativos",
+      "Cambia de polaridad"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-309",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Las pilas se asocian en paralelo para:",
+    "options": [
+      "Aumentar la diferencia de potencial en el circuito",
+      "Aumentar la intensidad que circula por el circuito",
+      "Disminuir su capacidad",
+      "Aumentar su resistencia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-310",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La diferencia entre un acumulador y una pila es:",
+    "options": [
+      "Que el acumulador acumula energía",
+      "Que la pila se descarga",
+      "Que el acumulador se carga",
+      "Que el acumulador no se descarga"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-b-311",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA POTENCIA DE UN TRANSMISOR radioeléctrico DE AFICIONADO PUEDE ESTAR DEFINIDA POR:",
+    "options": [
+      "El número de vatios que consume el emisor",
+      "La máxima posible de disipación anódica del paso final de salida de radiofrecuencia",
+      "La corriente del paso final multiplicada por la tensión de la red",
+      "La consumida en la etapa intermedia del emisor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-332",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "¿CUANDO SE AÑADE LA MENCIÓN /P AL INDICATIVO DE LLAMADA?",
+    "options": [
+      "Cuando se opera una estación Fija/Portable",
+      "Cuando se opera en grafía una estación Fija/Portable",
+      "Cuando se opera en fonía una estación Fija/Portable",
+      "Cuando se realicen ensayos o concursos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-333",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "LOS DISTRITOS DE LA PROVINCIA DE BALEARES Y DE LAS DE SANTA CRUZ DE TENERIFE Y LAS PALMAS ¿A QUE CIFRA DEL DISTINTIVO DE LLAMADA CORRESPONDEN?",
+    "options": [
+      "2 y 5",
+      "6 y 8",
+      "4 y 7",
+      "3 y 5"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-334",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "LA ABREVIATURA UHF INDICA LA SUBDlVISION METRICA CORRESPONDIENTE A ONDAS:",
+    "options": [
+      "Métricas",
+      "Decimétricas",
+      "Milimétricas",
+      "Decamétricas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-335",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "LA ABREVIATURA F3 INDICA:",
+    "options": [
+      "Telefonía en banda lateral única",
+      "Telefonía, modulación de frecuencia",
+      "Telefonía modulación por impulsos de amplitud",
+      "Telefonía, dos bandas laterales independientes"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-336",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "LAS FRECUENCIAS LIMITES PARA UNA DETERMINADA ANCHURA DE BANDA SON AQUELLAS A PARTIR DE LAS CUALES SE RADIA:",
+    "options": [
+      "0,5 % de la potencia media total radiada",
+      "2 % de la potencia media total radiada",
+      "4 % de la potencia media total radiada",
+      "5 % e la potencia media total radiada"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-338",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "LOS CONDUCTORES DE TIERRA DEBEN:",
+    "options": [
+      "Estar aislados",
+      "De baja resistencia",
+      "De alta resistencia",
+      "Se deben proteger con un fusible"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-339",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "PARA ALARGAR Y ACORTAR LA LONGITUD DE UNA ANTENA PARA USARLA COMO MULTIBANDA SE CONECTAN:",
+    "options": [
+      "Circuitos L-C serie a determinadas distancias del centro",
+      "Circuitos L-C paralelos a determinadas distancias del centro",
+      "Circuitos L-C serie en la línea de alimentación de antena",
+      "Circuitos L-C paralelos en la línea de alimentación de antena"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-341",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "SI A LA SALIDA DEL EMISOR A LA ANTENA SE DISPONE DE UN AMPERIMETRO, EL AJUSTE DE MAXIMA EMISIÓN SE DARA CUANDO LA LECTURA SEA:",
+    "options": [
+      "A media escala",
+      "Nula",
+      "Mínima",
+      "Máxima"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-342",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "LAS MEDIDAS DE COMPRESIÓN DE UN TRANSCEPTOR INDICAN:",
+    "options": [
+      "La anchura de banda de las señales de audio",
+      "La ecualización selectiva de las señales de audio",
+      "La amplificación de las señales de audio",
+      "Con la atenuación de las señales de audio"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-343",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS INDICA:",
+    "options": [
+      "Tensión de placa",
+      "Frecuencia de recepción",
+      "Intensidad de la señal recibida",
+      "Porcentaje de modulación"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-344",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "SI EL CONMUTADOR \"MODO DE EMISIÓN\" ESTA EN LA POSICIÓN CW SE TRABAJA EN:",
+    "options": [
+      "A3",
+      "A1",
+      "A3A",
+      "A3J"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-345",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "EL CONMUTADOR \"VOX-MAN\" EN POSICIÓN MAN:",
+    "options": [
+      "Se conecta el conmutador transmisor-receptor del micrófono",
+      "Se conecta el manipulador morse",
+      "Se conecta el mando de ganancia de radiofrecuencia",
+      "Se conmuta automáticamente recepción-transmisión"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-346",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "EL CIRCUITO DE CONTROL AUTOMATICO DE GANANCIA TIENE UN MANDO DE GOBIERNO QUE AFECTA A:",
+    "options": [
+      "Su capacidad de ganancia",
+      "Su capacidad de atenuación",
+      "Su tiempo de respuesta",
+      "Su conexión a la etapa RF o de FI"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-347",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "SI EN UN RECEPTOR SE QUIERE DISMINUIR LA SEÑAL DE ENTRADA, ACTUAREMOS EL MANDO DE:",
+    "options": [
+      "Volumen de audiofrecuencia",
+      "Volumen de radiofrecuencia",
+      "Silenciador",
+      "Control automático de ganancia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-348",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Los transformadores se uti1izan, entre otras aplicaciones, para:",
+    "options": [
+      "La transformación de corriente contínua en alterna.",
+      "Cambiar la potencia de una oscilación",
+      "Suprimir los armónicos pares en emisión",
+      "La adaptación de impedacia"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-349",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En varias resistencias de diferente valor conectadas en serie, la intensidad de la corriente que circula por cada una de ellas será:",
+    "options": [
+      "Inversamente proporcional al valor de la resistencia",
+      "Directamente proporcional al valor de la resistencia",
+      "La misma",
+      "Mayor en la primera y menor en la última"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-350",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El decibelio es una unidad de medida utilizada para:",
+    "options": [
+      "La comparación de niveles de potencia eléctrica",
+      "Medidas de reactancia",
+      "Comparar las frecuencias de dos circuitos",
+      "Comprobar la disipación de placa de una válvula"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-351",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Las pilas se acoplan en serie para obtener:",
+    "options": [
+      "Mayor tensión",
+      "Menor resistencia",
+      "Mayor intensidad",
+      "Menor intensidad"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-352",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Un rectificador en puente, de onda completa tiene:",
+    "options": [
+      "Un diodo",
+      "Dos diodos",
+      "Tres diodos",
+      "Cuatro diodos"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-353",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El menor espesor del dieléctrico se utiliza en los condensadores para:",
+    "options": [
+      "Dar mayor solidez a éstos",
+      "Aumentar su capacidad",
+      "Disminuir su energía",
+      "Disminuir su capacidad"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-354",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Al aumentar la temperatura del cobre su resistencia:",
+    "options": [
+      "Disminuye",
+      "Aumenta",
+      "Permanece invariable",
+      "A veces aumenta o disminuye"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-355",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Una característica de la corriente alterna es su:",
+    "options": [
+      "Frecuencia",
+      "Conductividad",
+      "Valor uniforme",
+      "Velocidad de propagación"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-356",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Las reactancias inductiva y capacitiva, tienen propiedades:",
+    "options": [
+      "Similares",
+      "Opuestas",
+      "Alternativas",
+      "Poco fiables"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-357",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Para estabilizar la tensión de salida de una fuente de alimentación se emplea:",
+    "options": [
+      "Un filtro en PI",
+      "Un filtro en L invertida",
+      "Un condensador variable",
+      "Un diodo zener"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-358",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "¿En que orden de sucesión se encuentran las diversas etapas de un receptor superheterodino?",
+    "options": [
+      "R.F. - mezclador - F.I. - demodulador - audio",
+      "R.F. - F.I. - mezclador - demodulador - audio",
+      "Mezclador - R.F. - F.I. - demodulador - audio",
+      "R.F. - demodulador - F.I. - mezclador - audio"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-359",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La neutralización se utiliza en:",
+    "options": [
+      "Los relés para neutralizarlos",
+      "Las baterías para evitar su polarización",
+      "En los circuitos electrónicos para evitar el elemento neutro",
+      "Los amplificadores para evitar que oscilen"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-360",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En un transistor PNP usado como amplificador:",
+    "options": [
+      "La tensión del colector es positiva respecto a la base",
+      "La tensión del colector es negativa respecto a la base",
+      "La tensión de la base es negativa respecto al colector",
+      "La tensión de la base y del colector son iguales"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-361",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En las emisiones radioelétricas la modulación sirve para:",
+    "options": [
+      "Llevar la información",
+      "Aumentar la potencia",
+      "Aumentar la intensidad",
+      "Disminuir las interferencias"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-362",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Un oscilador transistorizado puede oscilar indebidamente:",
+    "options": [
+      "Si hay un fuerte acoplamiento entre los circuitos de colector y base",
+      "Si se acoplan débilmente los circuitos de colector y base",
+      "Nunca",
+      "Cuando se usan FET"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-363",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Cuando en un amplificador a transistor sea necesario reproducir la señal de entrada sin distorsión, se debe funcionar:",
+    "options": [
+      "En la parte lineal de su característica",
+      "Con polarizaciones muy altas",
+      "Con amplificación clase C",
+      "Eliminando la resistencia de carga"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-364",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Un receptor de radio se llama superheterodino porque:",
+    "options": [
+      "Usa frecuencia intermedia",
+      "Mezcla las frecuencias sintonizadas",
+      "Heterodina los armónicos",
+      "Elimina los armónicos"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-365",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El ruido estático es el producido por:",
+    "options": [
+      "Las altas frecuencias",
+      "Las bajas frecuencias",
+      "Por las capacidades interelectrónicas",
+      "Las descargas eléctricas atmosféricas"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-366",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Los pasos de la etapa de frecuencia intermedia son filtros:",
+    "options": [
+      "Paso bajo",
+      "Paso alto",
+      "Paso banda",
+      "Banda eliminada"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-367",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En una etapa mezcladora:",
+    "options": [
+      "Se producen señales de frecuencias suma o resta de las de entrada",
+      "Se producen señales de frecuencias producto de las de entrada",
+      "Se produce una modulación de frecuencia de las dos señales de entrada",
+      "Salen frecuencias pares solamente"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-368",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En el distrito 7º está incluida la provincia de:",
+    "options": [
+      "Las Palmas",
+      "Lérida",
+      "Sevilla",
+      "Burgos"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-369",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Una estación de radioaficionado instalada en la provincia de Zamora, lleva en el distintivo de llamada la cifra:",
+    "options": [
+      "1",
+      "3",
+      "7",
+      "10"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-372",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Qué abreviatura indica que las señales recibidas estan afectadas por desvanecimientos (fading)?",
+    "options": [
+      "QRJ",
+      "QST",
+      "QSB",
+      "QRM"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-373",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Qué abreviatura indica que se transmita más lentamente?",
+    "options": [
+      "QTR",
+      "QTH",
+      "QSJ",
+      "QRS"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-374",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Mediante qué abreviatura indicaría que está Vd. ocupado?",
+    "options": [
+      "QRX",
+      "QRT",
+      "QRL",
+      "QRX"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-377",
+    "part": 2,
+    "topicId": "operacion-seguridad",
+    "stem": "Emplear las señales de socorro \"SOS\" o \"MAYDAY\" es una falta:",
+    "options": [
+      "Grave",
+      "Muy grave",
+      "Puede hacerse si está justificado",
+      "Leve"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-378",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El operador de estación de aficionado que no emite el distintivo de llamada o lo hace de forma incorrecta al operar su estación incurre en:",
+    "options": [
+      "Una falta leve",
+      "Una falta grave",
+      "Una falta muy grave",
+      "No es falta"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-379",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "De las que se señalan a continuación ¿qué infracción constituye una falta grave?",
+    "options": [
+      "Carecer de libro diario",
+      "No emitir el distintivo de llamada",
+      "Utilizar como portable una estación fija sin autorización",
+      "No abonar los cánones y tasas correspondientes"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-381",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Cuando una estación de aficionado sea operada ocasionalmente por otro radioaficionado distinto del titular el distintivo de llamada será:",
+    "options": [
+      "El del titular",
+      "El del otro radioaficionado",
+      "El del titular seguido del del otro radioaficionado",
+      "Un distintivo temporal"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-382",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Se puede suspender provisionalmente una licencia de aficionado:",
+    "options": [
+      "No se contempla en el Reglamento esta sanción",
+      "Si, por falta grave",
+      "Si, por falta muy grave",
+      "Unicamente en caso de enfermedad"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-383",
+    "part": 2,
+    "topicId": "operacion-seguridad",
+    "stem": "La señal radiotelegráfica de socorro consiste en:",
+    "options": [
+      "La palabra Mayday",
+      "La abreviatura SOS transmitida como un solo signo",
+      "La palabra HELP",
+      "La abreviatura S.O.S. transmitida separando las tres letras"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-384",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Cual es la potencia máxima de emisión, de una estación de radioaficionado, en la banda de frecuencias comprendidas entre 7.030 y 7.100 KHz?:",
+    "options": [
+      "25 watios",
+      "100 watios",
+      "150 watios",
+      "250 watios"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-385",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Durante sus emisiones, ¿cuando deben de transmitir sus distintivos de llamada las estaciones de aficionados?",
+    "options": [
+      "Por lo menos tres veces al comienzo y al final de la emisión",
+      "Cuando lo deseen",
+      "Una vez al comienzo y otra en medio",
+      "Una vez al comienzo, otra en medio y al final de la emisión"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-386",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La abreviatura HF indica la subdivisión métrica correspondiente a ondas:",
+    "options": [
+      "Decamétricas",
+      "Métricas",
+      "Kilométricas",
+      "Hectométricas"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-387",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La estación de aficionado debe estar construida:",
+    "options": [
+      "Siempre con válvulas",
+      "Completamente transistorizada",
+      "De acuerdo con el estado de desarrollo de la técnica radioeléctrica",
+      "Con arreglo a un modelo común"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-388",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Cuando sintonizamos un emisor, es conveniente hacerlo:",
+    "options": [
+      "A potencia máxima",
+      "A potencia reducida",
+      "Sin tensión de filamentos",
+      "Bloqueando sin conectar la antena"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-389",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "En un transceptor, el mando del silenciador (SQUELCH) se emplea:",
+    "options": [
+      "Sólo en emisión",
+      "Para recibir mejor señales interferidas",
+      "Para cortar la salida del receptor en ausencia de señal",
+      "Para bloquear totalmente el ruido recibido con la señal"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-390",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Si, el conmutador \"modo de emisión\" está en la posición CW se trabaja en:",
+    "options": [
+      "Banda lateral superior",
+      "Telegrafía",
+      "Banda lateral inferior",
+      "Duplex"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-391",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El control automático de ganancia:",
+    "options": [
+      "Tiende a mantener constante la fidelidad del receptor",
+      "Tiende a mantener constante el nivel de salida del receptor",
+      "Hace que la frecuencia intermedia sea constante, independientemente de la frecuencia recibída",
+      "Tiende a mantener constante la selectividad del receptor"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-392",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "Cuando se sintoniza un emisor utilizando una antena artificial:",
+    "options": [
+      "La mayor parte de la energía procedente del emisor se disipa en forma de calor",
+      "El emisor radia con el máximo de potencia",
+      "Se producen muchos armónicos pares",
+      "Se obtiene una directividad mayor"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-393",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El mando de ganancia de radiofrecuencia en un transceptor:",
+    "options": [
+      "Controla la potencia de salida de radiofrecuencia del emisor",
+      "Actúa en los pasos de radiofrecuencia de recepción y emisión",
+      "Controla la relación entre la señal entregada por la antena y la que se aplica al mezclador",
+      "Sirve para aumentar el nivel de la señal en recepción y disminuir el nivel del ruido"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-394",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "En un transceptor el conmutador \"VOX-MAN\" en la posición \"MAN\":",
+    "options": [
+      "Conecta el conmutador transmisor-receptor del micrófono",
+      "Conecta el manipulador morse",
+      "Conecta el mando de ganancia de radiofrecuencia",
+      "Conmuta automáticamente recepción-transmisión"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-395",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Un medidor \"S\" típico evalúa la intensidad de señal de entrada a un receptor en:",
+    "options": [
+      "Microamperios",
+      "Milivatios",
+      "Microvoltios",
+      "Microohmios"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-396",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En emisión el mando \"control de carga\" \"LOAD KNOB\" sirve para:",
+    "options": [
+      "Ajustar la sección final a la antena",
+      "Disminuir las interferencias",
+      "Sintonizar el paso oscilador",
+      "Variar la frecuencia"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-c-397",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Se entiende por estabilidad de un receptor de radio:",
+    "options": [
+      "Que es irrompible",
+      "Que no se desintoniza",
+      "Que no se calienta",
+      "Que no envejece"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-402",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UNA CORRIENTE DE INTENSIDAD I, HA CIRCULADO DURANTE UN TIEMPO t SEGUNDOS POR UN CUERPO DE RESISTENCIA eléctrica R, LA POTENCIA P DESARROLLADA TIENE POR EXPRESION:",
+    "options": [
+      "P = R I 2",
+      "P = R I 2 t",
+      "P = I 2 t/R",
+      "P = R t/I 2"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-403",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UNA RELACIÓN DE TRANSFORMACIÓN DE UN TRANSFORMADOR ES EL COCIENTE QUE RESULTA DE DIVIDIR:",
+    "options": [
+      "La tensión en el secundario por la intensidad de corriente en el primario.",
+      "La tensión en el secundario por la tensión en el primario",
+      "El peso de la bobina del primario por el peso de la bobina del secundario",
+      "La potencia eléctrica que se obtiene en el secundario por la que absorbe el primario"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-404",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LA INTRODUCCIÓN DE UN NUCLEO MAGNETICO EN UNA BOBINA PRODUCE EL EFECTO DE:",
+    "options": [
+      "Aumentar su resistencia eléctrica",
+      "Aumentar su resistencia eléctrica",
+      "Mantener constante su temperatura",
+      "Aumentar la autoinducción"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-405",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UN CONDENSADOR DE CAPACIDAD C SE CARGA A UNA TENSIÓN V; LA ENERGIA eléctrica ALMACENADA EN EL CONDENSADOR ES PROPORCIONAL:",
+    "options": [
+      "Al producto CV 2",
+      "Al producto CV",
+      "Al cociente C/V",
+      "Al cociente V/C"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-406",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "PARA DESCARGAR UN CONDENSADOR SE PROCEDE EN LA FORMA SIGUIENTE:",
+    "options": [
+      "Se conectan sus dos armaduras a un acumulador eléctrico",
+      "Se conectan sus dos armaduras a un circuito exterior",
+      "Se perforan las dos armaduras por medio de un vástago aislante",
+      "Se separan entre sí las dos armaduras"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-407",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL PERIODO DE UNA CORRIENTE ALTERNA ES:",
+    "options": [
+      "El tiempo que tarda en empezar a circular la corriente",
+      "El tiempo que está encendida una lámpara",
+      "El cociente del tiempo que está encendida la lámpara dividido por el tiempo que está apagada",
+      "El tiempo que tarda en pasar por dos valores máximos positivos"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-408",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "SE LLAMA INTENSIDAD EFICAZ DE UNA CORRIENTE ALTERNA:",
+    "options": [
+      "Al mayor valor que toma durante en el ciclo",
+      "A la suma de los valores máximos de dos ciclos consecutivos",
+      "A la intensidad de una corriente continua que produjo la misma cantidad de calor",
+      "A la fuerza que produce la corriente cuando hace mover un motor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-409",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "PARA MEDIR LA CORRIENTE QUE PASA POR UNA RESISTENCIA Y LA CAIDA DE TENSIÓN QUE EN ELLA SE PRODUCE, SE CONECTAN CON LA RESISTENCIA UN VOLTIMETRO V Y UN AMPERIMETRO A EN LA FORMA SIGUIENTE:",
+    "options": [
+      "V en serie y A en derivación",
+      "V y A en serie",
+      "V en derivación y A en serie",
+      "V y A en derivación"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-410",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "DE LOS SIGUIENTES ELEMENTOS, LOS QUE CONSTITUYEN MAS PROTECCIONES ESPECIFICAS DE LAS INSTALACIONES SON LOS:",
+    "options": [
+      "Interruptores manuales",
+      "Transformadores",
+      "Contadores",
+      "Fusibles"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-411",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LA ANTENA DE MEDIA ONDA:",
+    "options": [
+      "Parte las ondas por medio",
+      "Es directiva",
+      "Es omnidireccional",
+      "Es una antena para las ondas decamétricas solamente"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-412",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LA FRECUENCIA IMAGEN:",
+    "options": [
+      "Tiene una frecuencia que se relaciona con la recibida por la frecuencia intermedia del receptor",
+      "Tiene una frecuencia que es igual a la recibida más la frecuencia del oscilador local",
+      "Tiene una frecuencia que es igual a la recibida menos la frecuencia del oscilador local",
+      "es el doble de la frecuencia recibida"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-413",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "UN ATENUADOR PARA PROTEGER CONTRA SOBRECARGAS LA ENTRADA DE UN RECEPTOR ESTARA FORMADO POR:",
+    "options": [
+      "R",
+      "L",
+      "C",
+      "R.L.C."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-414",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "SI QUISIERA UTILIZAR UN RECEPTOR DE DECAMETRICAS PARA RECIBIR SEÑALES DE 2 METROS",
+    "options": [
+      "No se puede hacer",
+      "Necesitaría un radio frecuencia seguido de un conversor",
+      "Un conversor",
+      "Amplificador de R.L."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-415",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EN QUE PASO DE LOS TRANSMISORES SE PONEN, OCASIONALMENTE, VALVULAS EN PARALELO",
+    "options": [
+      "Oscilador",
+      "Modulador",
+      "Amplificador de salida",
+      "Amplificador de audio"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-416",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:",
+    "options": [
+      "A la salida de los micrófonos con cable largo",
+      "Antes de etapas en las que se necesitan potencias grandes",
+      "Para recibir señales",
+      "Para conectar con el sistema radiante"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-417",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "CUAL DE ESTAS PROPIEDADES CARACTERIZA A UN AMPLIFICADOR CLASE A:",
+    "options": [
+      "Solamente se puede usar en amplificadores con salida máxima de 250 vatios",
+      "Se tiene que hacer con transistores y no con válvulas",
+      "Tienen polarización de rejilla al corte",
+      "Producen una amplificación lineal"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-418",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA SENSIBILIDAD DE UN RECEPTOR LA DETERMINA:",
+    "options": [
+      "El primer paso de radio frecuencia",
+      "El primer paso de frecuencia intermedia",
+      "El primer paso de audio frecuencia",
+      "El conversor"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-419",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL CONTROL AUTOMATICO DE GANANCIA:",
+    "options": [
+      "Tiende a mantener constante la fidelidad del receptor",
+      "Tiende a mantener constante el nivel de salida del receptor",
+      "Hace que la frecuencia intermedia sea constante, independientemente de la frecuencia recibida",
+      "Tiende a mantener constante la selectividad de receptor"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-420",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿Se puede emitir una onda portadora no modulada?",
+    "options": [
+      "No, ya que es falta grave",
+      "Solamente a efectos de ensayo",
+      "A efectos de ensayo, pero si tal emisión es corta",
+      "Durante los concursos"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-421",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué abreviatura indica que el operador está ocupado?",
+    "options": [
+      "QRF",
+      "QTI",
+      "QRL",
+      "QSJ"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-422",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿Que abreviatura indica que la estación receptora sufre interferencias por atmosféricos?",
+    "options": [
+      "QRS",
+      "QTA",
+      "QRN",
+      "QSV"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-423",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cual es la intensidad de mis señales?",
+    "options": [
+      "QRO",
+      "QSB",
+      "QSA",
+      "QTR"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-424",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EA7/EA4KLM/M",
+    "options": [
+      "Es el distintivo de llamada de una estación móvil del distrito 7 operando en el distrito 4",
+      "Es el distintivo de llamada de una estación a bordo de un buque",
+      "Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 7",
+      "Es el distintivo de llamada de una estación móvil del distrito 4 operada por un aficionado del distrito 7"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-426",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Emitir música es una falta o se puede efectuar?",
+    "options": [
+      "Leve",
+      "Grave",
+      "Muy grave",
+      "Se puede efectuar"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-427",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "¿Utilizar bandas de frecuencias distintas a las autorizadas, es una falta o se puede efectuar?",
+    "options": [
+      "Leve",
+      "Grave",
+      "Muy grave",
+      "Se puede efectuar"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-429",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Durante sus emisiones, las estaciones de aficionados:",
+    "options": [
+      "Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión",
+      "Una vez al comienzo, otra al final y una en medio, o sea, 3 veces como mínimo durante la emisión",
+      "Al comienzo y en medio solamente",
+      "Cuando lo deseen"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-430",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cuando se añade la mención /P al indicativo de llamada?",
+    "options": [
+      "Cuando se opera una estación Fija/Portable",
+      "Cuando se opera en grafía una estación Fija/Portable",
+      "Cuando se opera en fonía una estación Fija/Portable",
+      "Cuando se realizan ensayos o concursos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-431",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:",
+    "options": [
+      "Únicamente si lo autoriza previamente la DGTel.",
+      "Sí. Pero únicamente para las licencias de clase A y B",
+      "Sí, pero sin cambiar el sistema de afianciamento de la misma",
+      "Sí, genéricamente con la obligación de informarlo a la DGTel."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-432",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué edad mínima es necesaria para obtener una licencia de estación de aficionado?",
+    "options": [
+      "20 años",
+      "25 años",
+      "15 años",
+      "18 años"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-433",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Los distritos de Ceuta y Melilla están identificados por la cifra del distrito de llamada:",
+    "options": [
+      "8",
+      "5",
+      "9",
+      "10"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-434",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La abreviatura VHF indica la subdivisión métrica correspondiente a ondas:",
+    "options": [
+      "Métrica",
+      "Decimétrica",
+      "Kilométrica",
+      "Centimétrica"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-435",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La antena estará acoplada al paso final de salida:",
+    "options": [
+      "Directamente",
+      "Por medio de una tierra intermedio",
+      "Por adaptadores y filtros",
+      "No se acopla"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-437",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El termino Radiocomunicación indica:",
+    "options": [
+      "La transmisión de mensajes por cable",
+      "El envío de señales ópticas",
+      "Toda Telecomunicación realizada por medio de ondas radioeléctricas",
+      "El intercambio de mensajes por líneas aéreas"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-439",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La señal radiotelefónica de seguridad está dada por la palabra:",
+    "options": [
+      "Ayuda",
+      "Mayday",
+      "Securité",
+      "Security"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-440",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El conmutador de banda tendrá que estar en la posición correspondiente:",
+    "options": [
+      "La banda deseada",
+      "En cualquier banda",
+      "En ondas decamétricas",
+      "En la frecuencia de W W V"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-441",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para emitir en telegrafía, el conmutador \"Modo de emisión\" estará en la posición:",
+    "options": [
+      "Tun",
+      "USB",
+      "CW",
+      "LSB"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-442",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Al ajustar un emisor el conmutador de \"Alta/Baja Potencia\" estará en la posición:",
+    "options": [
+      "Alta potencia",
+      "Baja potencia",
+      "Entre ambas posiciones",
+      "Indiferente"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-443",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Si se dispone de un amperímetro, en ajuste optimo de emisión la lectura será:",
+    "options": [
+      "Mínima",
+      "Máxima",
+      "Media",
+      "Cero"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-444",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En caso de que el paso final de un emisor sea a válvulas:",
+    "options": [
+      "Es necesario un tiempo de caldeo de filamento",
+      "Se conecta la A.T. directamente",
+      "No es necesario caldeo previo",
+      "Depende la conexión de la A.T. de que sea de caldeo directo o indirecto"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-445",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Cuando se pasa el modo de recepción de USB a LSB se cambia:",
+    "options": [
+      "De recibir en A3 a A3j",
+      "La frecuencia de batido",
+      "El ancho de banda de la F.I.",
+      "La sensibilidad del receptor"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-446",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Con el mando \"VOX\", de un transceptor, conectado:",
+    "options": [
+      "Se recibe en fonía",
+      "Se ajusta automáticamente la ampliación de las frecuencias vocales",
+      "Se conmuta automáticamente recepción-transmisión",
+      "Se conecta el conmutador transmisor-receptor del micrófono"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-447",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El mando NB de un transceptor sirve para:",
+    "options": [
+      "Estrechar la banda en recepción",
+      "Suprimir ruido producido por emisoras de radiofrecuencias",
+      "Suprimir ruidos de impulsos",
+      "Discriminar las señales moduladas en frecuencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-448",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "El Mando del silenciador (Squelch) sirve para:",
+    "options": [
+      "Atenuar el ruido que se recibe con la señal",
+      "Cortar la salida del receptor cuando no hay señal",
+      "Cortar totalmente el ruido que se recibe con la señal",
+      "Cortar la salida del receptor cuando se recibe una señal mezclada con alto nivel de ruido"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-449",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "El mando de selectividad variable se pondrá en mínimo cuando",
+    "options": [
+      "Se recibe A3",
+      "Se recibe CW",
+      "Se recibe LSB o USB",
+      "Se recibe en modulación de frecuencia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-450",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La resistencia eléctrica de un cuerpo es directamente proporcional a las dos magnitudes siguientes:",
+    "options": [
+      "A su densidad y a su resistencia",
+      "A su longitud y a su resistividad",
+      "A su resistividad y a su sección",
+      ""
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-451",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "En un circuito rectificador, un filtro sirve para eliminar la:",
+    "options": [
+      "Potencia",
+      "Componente alterna",
+      "Componente continua",
+      "Los armónicos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-452",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La intensidad de la corriente que pasa por un conductor se mide conectando:",
+    "options": [
+      "Un voltímetro en serie",
+      "Un voltímetro en derivación",
+      "Un amperímetro en serie",
+      "Un amperímetro en derivación"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-453",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "En una bobina la energía eléctrica almacenada es del tipo:",
+    "options": [
+      "Electro óptico",
+      "Electromagnético",
+      "Electroestático",
+      "Electromecánico"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-454",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Cuando la reactancia capacitiva de un circuito es igual a la reactancia inductiva, se dice que el circuito es",
+    "options": [
+      "Capacitivo / inductivo",
+      "Biestable",
+      "Resonante",
+      "Filtrante"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-455",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "De forma convencional se llama \"hueco\" en un semiconductor",
+    "options": [
+      "A un portador de carga negativa",
+      "A un elemento radiante",
+      "A un portador de carga positiva",
+      "A una impureza polarizada"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-456",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "El dieléctrico en los condensadores electrolíticos consiste en:",
+    "options": [
+      "Aire",
+      "Una pasta química",
+      "Aceite",
+      "Agua ionizada"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-457",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Cuando se sobremodula:",
+    "options": [
+      "Se distorsiona la modulación",
+      "Aumenta el nivel de ruido",
+      "Aparece un zumbido de motor en el receptor",
+      "Mejora la modulación"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-458",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "En un condensador, una tolerancia del cinco por ciento está representada por una franja de color:",
+    "options": [
+      "Plata",
+      "Negro",
+      "Oro",
+      "Gris"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-459",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "De los siguientes elementos indicar cuales de ellos se consideran como de protección personal:",
+    "options": [
+      "Guantes de goma",
+      "Fusibles calibrados",
+      "Fusibles sin calibrar",
+      "Interruptores automáticos"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-460",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Se llama intensidad eficaz de una corriente alterna:",
+    "options": [
+      "Al mayor valor que toma durante un ciclo",
+      "A la suma de los valores máximos de dos ciclos consecutivos",
+      "A la intensidad de una corriente continua que produjera la misma cantidad de calor",
+      "A la fuerza que produce la corriente cuando hace mover un motor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-461",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Una resistencia en la que el valor ohmnico depende de la tensión aplicada entre su extremo es:",
+    "options": [
+      "Un termostato",
+      "Un varistor",
+      "Un tiristor",
+      "Un potenciómetro"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-463",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "La etapa de frecuencia intermedia en un receptor está conectada a la salida de:",
+    "options": [
+      "La de radiofrecuencia",
+      "La mezcladora",
+      "La detectora",
+      "La de audiofrecuencia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-464",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Los micrófonos son transductores que convierten:",
+    "options": [
+      "Energía eléctrica en sonora",
+      "Energía sonora en eléctrica",
+      "Energía mecánica en sonora",
+      "Energía sonora en mecánica"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-465",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Cuando la señal de salida es una exacta reproducción de la señal de entrada, el amplificador trabaja en:",
+    "options": [
+      "Clase \"C\"",
+      "Clase \"B\"",
+      "Clase \"A\"",
+      "Clase \"B/C\""
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-466",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Las reflexiones lunares se hacen principalmente en:",
+    "options": [
+      "Ondas decamétricas",
+      "Ondas métricas",
+      "Ondas decimétricas",
+      "Ondas milimétricas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-467",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Si quisiera utilizar un receptor de decamétricas para recibir señales de 2 metros:",
+    "options": [
+      "No se puede hacer",
+      "Necesitaría un radio frecuencia seguido de un conversor",
+      "Un conversor",
+      "Un amplificador de R.L."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-468",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El circuito de acoplamiento entre etapas amplificadoras:",
+    "options": [
+      "Sirve para el paso de las señales y fija la polarización del emisor de la etapa siguiente",
+      "Sirve para el paso de las señales y fija la polarización de la etapa primera",
+      "Permite el paso de las señales y fija las polarizaciones de la primera y segunda",
+      "Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-469",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "En condiciones normales los transceptores de VHF:",
+    "options": [
+      "Se utilizan para comunicaciones de larga distancia",
+      "Se utilizan para comunicaciones de corta distancia",
+      "Pueden hacerse comunicaciones a cualquier distancia",
+      "No se utilizan en las bandas de radioaficionados"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-471",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La cifra 9 en el distintivo de llamada identifica la provincia de:",
+    "options": [
+      "Cuenca",
+      "Granada",
+      "Melilla",
+      "Valencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-474",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "¿Utilizar bandas de frecuencia distinta a las autorizadas, es una falta o se puede efectuar?",
+    "options": [
+      "Leve",
+      "Grave",
+      "Muy grave",
+      "se puede efectuar"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-476",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué clase de infracción constituye la falta de libro diario?",
+    "options": [
+      "No es falta",
+      "Muy grave",
+      "Leve",
+      "Grave"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-479",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cuándo se añade la mención /P al indicador de llamada?",
+    "options": [
+      "Cuando se opera una estación Fija/Portable",
+      "Cuando se opera en grafía una estación Fija/Portable",
+      "Cuando se opera en fonía una estación Fija/Portable",
+      "Cuando se realicen ensayos o concursos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-480",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Carecer de libro diario constituye una falta:",
+    "options": [
+      "Grave",
+      "Leve",
+      "Muy grave",
+      "No es falta"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-481",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Se puede conectar una estación de aficionado con otras instalaciones de radiocomunicación?",
+    "options": [
+      "No esta permitido",
+      "Si, mediante autorización",
+      "Si, siempre que se pasen comunicaciones técnicas",
+      "Sí esta permitido"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-483",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Variando el mando \"RF GAIN\" en un receptor, actuamos sobre:",
+    "options": [
+      "La portadora emitida",
+      "La ganancia de radiofrecuencia del emisor",
+      "La profundidad de modulación",
+      "La ganancia en radiofrecuencia del receptor"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-486",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Con el mando \"VOX\", de un transceptor, conectado:",
+    "options": [
+      "Se recibe en fonía",
+      "Se ajusta automáticamente la amplificación de las frecuencias",
+      "Se conmuta automáticamente recepción-transmisión",
+      "Se conecta el conmutador transmisor-receptor del micrófono"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-487",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El mando \"RIT\" de un transceptor permite:",
+    "options": [
+      "Ajustar la frecuencia de recepción sin variar la de emisión",
+      "Variar la frecuencia de emisión sin cambiar la de recepción",
+      "Aumentar la potencia de emisión",
+      "Eliminar los atmosféricos"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-489",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La misión del conmutador \"POWER ON/OFF\" en un transceptor es:",
+    "options": [
+      "Cambiar el ancho de banda",
+      "Reponer el fusible de entrada",
+      "Encender y apagar el equipo",
+      "Aumentar o disminuir la potencia del emisor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-490",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El conmutador \"SEND-REC\" se utiliza para",
+    "options": [
+      "Cambiar el modo de emisión",
+      "Cambiar la banda",
+      "Cambiar la emisión a recepción y viceversa",
+      "Modificar la sintonía"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-491",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Cuando en un receptor actuamos el conmutador de canales estamos:",
+    "options": [
+      "Variando la sintonía",
+      "Disminuyendo el ancho de banda",
+      "Variando la potencia de emisión",
+      "Aumentando la sensibilidad en recepción"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-492",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El control automático de ganancia \"AGC\" se utiliza:",
+    "options": [
+      "Emisión",
+      "Recepción",
+      "Ambas",
+      "No se utiliza"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-493",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN POLIMETRO ES UN APARATO QUE SE UTILIZA PARA:",
+    "options": [
+      "Medir el calor desarrollado en un circuito",
+      "Medir tensiones, intensidades y resistencias",
+      "Transformar una corriente en otra de mayor frecuencia",
+      "Medir la frecuencia de una corriente"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-494",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN SEMICONDUCTOR TIPO P ES AQUEL EN EL QUE:",
+    "options": [
+      "La cantidad de electrones es mayor que la de huecos",
+      "Las impurezas son nulas",
+      "La cantidad de huecos es mayor que la de electrones",
+      "Las cantidades de huecos y electrones se equilibran"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-495",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UN CONDENSADOR INTERCALADO EN UN CIRCUITO DE CORRIENTE ALTERNA TIENDE A:",
+    "options": [
+      "Oponerse a las variaciones de tensión",
+      "Oponerse a las variaciones de intensidad",
+      "No ejerce ninguna acción sobre tensiones y corrientes",
+      "Bloquea el paso de la corriente"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-497",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UN AUTOTRANSFORMADOR ES UN TRANSFORMADOR:",
+    "options": [
+      "De funcionamiento automático",
+      "De regulación automática de la tensión",
+      "En el que los devanados primario y secundario tienen una parte común",
+      "En el que se abre automáticamente su circuito cuando la corriente es excesiva"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-498",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "DE ENTRE LOS SIGUIENTES MATERIALES, INDIQUE CUAL ES SEMICONDUCTOR:",
+    "options": [
+      "Vidrio",
+      "Cobre",
+      "Germanio",
+      "Mica"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-499",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EN UN CIRCUITO FORMADO POR TRES RESISTENCIAS DE DIFERENTE VALOR CONECTADAS EN PARALELO, LA CORRIENTE QUE PUDIERA PASAR POR CADA RESISTENCIA SERIA:",
+    "options": [
+      "Directamente proporcional a cada R",
+      "Inversamente proporcional a cada R",
+      "La misma en cada rama",
+      "Mayor que la proporcionada por el generador"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-500",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "SI QUEREMOS MEDIR CORRIENTES CONTINUAS CON UN AMPERIMETRO CUYO ALCANCE MAXIMO ES INFERIOR A LAS CORRIENTES A MEDIR, TENDREMOS QUE:",
+    "options": [
+      "Poner una resistencia en serie",
+      "Poner un condensador en serie",
+      "Poner una resistencia en paralelo",
+      "No se puede utilizar"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-501",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EN UN CIRCUITO RESISTIVO PURO RECORRIDO POR UNA CORRIENTE ALTERNA:",
+    "options": [
+      "La tensión y la intensidad están desfasadas 30 grados",
+      "Tensión e intensidad están en Fase",
+      "La tensión está retrasada con respecto a la intensidad",
+      "La intensidad está adelantada con respecto al voltaje"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-502",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LA CAPACIDAD TOTAL DE DOS CONDENSADORES EN SERIE ES:",
+    "options": [
+      "Igual a la suma de ambas capacidades",
+      "Igual a su diferencia",
+      "Menor que la de cada uno de ellos",
+      "Mayor que la capacidad menor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-503",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LOS DIODOS ZENER SE EMPLEAN EN CIRCUITOS:",
+    "options": [
+      "Para rectificar corrientes alternas",
+      "Para estabilizar corrientes alternas",
+      "Para mantener una tensión de referencia en los estabilizadores",
+      "Para evitar el calentamiento de los transistores de potencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-504",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "EN LOS PASOS DE FRECUENCIA INTERMEDIA SE EMPLEAN FILTROS DE:",
+    "options": [
+      "Paso bajo",
+      "Paso alto",
+      "Paso banda",
+      "Banda eliminada"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-505",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "UN RECTIFICADOR DE ONDA COMPLETA TIENE COMO MINIMO:",
+    "options": [
+      "Un diodo",
+      "Dos diodos",
+      "Tres diodos",
+      "Cuatro diodo"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-506",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN AMPLIFICADOR CON TRANSISTOR CONECTADO CON BASE COMUN PRODUCE AMPLIFICACION:",
+    "options": [
+      "Solo de tensión",
+      "Solo de corriente",
+      "De potencia",
+      "Depende de que sea del tipo PNP o NPN"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-507",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LOS EFECTOS DE LOS TRANSITORIOS EN LAS LINEAS DE ALIMENTACION SE EVITAN GENERALMENTE:",
+    "options": [
+      "Con los rectificadores conectados en puente",
+      "Con los fusibles",
+      "Con bobinas térmicas",
+      "Con condensadores"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-508",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "PARA QUE UN OSCILADOR SEA ESTABLE DEBE TENER ENTRE OTRAS CONDICIONES:",
+    "options": [
+      "Fuertemente cargado",
+      "Débilmente cargado",
+      "Una realimentación por condensador",
+      "Una realimentación por bobina"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-509",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "UNA ANTENA HELICOIDAL SE USA:",
+    "options": [
+      "Para poder emplear la misma antena para la banda de 144 y 432 MHz",
+      "Para enlaces por satélites",
+      "Porque permiten orientarlas con más facilidad que las colineales",
+      "Porque son las más efectivas para hacer las ruedas de aficionados"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-510",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LOS FILTROS DE LAS FUENTES DE ENERGIA TIENEN GENERALMENTE:",
+    "options": [
+      "Solamente condensadores",
+      "Solamente bobinas (inductancias)",
+      "Solamente resistencias",
+      "Condensadores y bobinas"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-511",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EN UNA ETAPA MEZCLADORA:",
+    "options": [
+      "Se producen señales de frecuencias suma o resta de las de entrada",
+      "Se producen señales de frecuencias producto de las de entrada",
+      "Se produce una modulación de frecuencia de las dos señales de entrada",
+      "Sale un lío de frecuencias"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-512",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA ESTABILIDAD DE UN RECEPTOR ES FUNCION:",
+    "options": [
+      "Del paso de radiofrecuencia",
+      "Del mezclador",
+      "De la etapa de radiofrecuencia",
+      "Del oscilador local"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-514",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA GAMA DE FRECUENCIÁS COMPRENDIDA ENTRE 300 Y 3.000 MHz CORRESPONDE A LAS:",
+    "options": [
+      "Ondas kilométricas",
+      "Ondas decamétricas",
+      "Ondas decimétricas",
+      "Ondas milimétricas"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-515",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LAS ONDAS CENTIMETRICAS SE DESIGNAN POR ABREVIATURA:",
+    "options": [
+      "VHF",
+      "UHF",
+      "EHF",
+      "SHF"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-516",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA: ¿SUFRE USTED INTERFERENCIA?",
+    "options": [
+      "QRP",
+      "QRO",
+      "QRM",
+      "QRN"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-517",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "A QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE LA PREGUNTA: ¿TENGO OUE PASAR A TRANSMITIR EN OTRA FRECUENCIA?",
+    "options": [
+      "QSV",
+      "QSO",
+      "QSY",
+      "QSB"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-518",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA ABREVIATURA \"QSB\" DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA DE:",
+    "options": [
+      "¿Quien me llama?",
+      "¿Puede acusarmo recibo?",
+      "¿Varia la intensidad de mis señales?",
+      "¿Es defectuosa mi manipulación?"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-521",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA CIFRA DEL DISTINTIVO DE LLAMADA QUE IDENTIFICA EL DISTRITO, SEGUN DISTRIBUCION geográfica, ES PARA VALLADOLID:",
+    "options": [
+      "3º",
+      "1º",
+      "2º",
+      "4º"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-522",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "PODRA AUTORIZARSE A UNA O MAS ESTACIONES DE AFICIONADO LA UTILIZACION TEMPORAL DE PREFIJOS, MANTENIENDO EL RESTO DEL DISTINTIVO ¿CUAL SERA EL AUTORIZADO PARA LAS FRECUENCIAS DE CLASE B?",
+    "options": [
+      "EB",
+      "ED",
+      "EE",
+      "EF"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-523",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL TRAFICO ENTRE ESTACIONES DE AFICIONADOS ESTA AUTORIZADO PARA:",
+    "options": [
+      "Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal",
+      "Transmisión de comunicaciones a terceras personas o con destino a un tercero",
+      "El empleo de señales de socorro \"SOS\" o \"MAYDAY\"",
+      "Emisiones de música, anuncios o propaganda"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-525",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA SEÑAL RADIOTELEFONICA DE SOCORRO ESTA CONSTITUIDA POR:",
+    "options": [
+      "MAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)",
+      "AQUI o DE - MAYDAY (tres veces) Distintivo de llamada (tres veces)",
+      "MAYDAY (una sola vez) - AQUI ó DE Distintivo de llamada (una vez)",
+      "Solamente MAYDAY (tres veces)"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-529",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE ABREVIATURA INDICA QUE SON INTELIGIBLES LAS SEÑALES?",
+    "options": [
+      "QRL",
+      "QRM",
+      "QRK",
+      "QRA"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-530",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EFECTUAR RADIOCOMUNICACIONES CON OTRA ESTACIÓN DE LA QUE SE ES TITULAR, ES FALTA:",
+    "options": [
+      "Ninguna",
+      "Muy grave",
+      "Leve",
+      "Grave"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-531",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "NO ABONAR LOS CANONES y TASAS CORRESPONDIETES, ES FALTA:",
+    "options": [
+      "Leve",
+      "Grave",
+      "Muy grave",
+      "Según los casos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-533",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN CASO DE INCENDIO PRODUCIDO POR ELECTRICIDAD:",
+    "options": [
+      "No se debe aplicar el chorro del extintor a los condudores de alta tensión",
+      "Habrá que utiliza \"espuma\" en vez de agua",
+      "Se cortarán los cables incendiados",
+      "No se tomará ninguna medida hasta la llegada de los bomberos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-534",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL CONTROL DE GANACIA AUTOMATICA \"AGC\" SE UTILIZA EN:",
+    "options": [
+      "Emisión",
+      "Recepción",
+      "Ambas",
+      "No se utiliza"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-535",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LAS ANTENAS Y LAS LINEAS DE ALlMENTACION:",
+    "options": [
+      "No pueden ser de distinta impedancia",
+      "Necesitan siempre interconectarse por adaptadores",
+      "Necesitan adaptadores o no según sus impedancias",
+      "Forman un conjunto resonante"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-536",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "SI SE DISPONE DE UN AMPERIMETRO A LA SALIDA DEL EMISOR A LA ANTENA, EN AJUSTE OPTIMO DE EMISION LA LECTURA SERA:",
+    "options": [
+      "Mínima",
+      "Máxima",
+      "Media",
+      "No dará lectura"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-537",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN RECEPCION EL \"S-METER\" (MEDIDOR-S) MIDE:",
+    "options": [
+      "La clase de emisión recibida",
+      "La intensidad de la señal recibida",
+      "La cantidad de atmosféricos que se reciben",
+      "La tensión del paso modulador"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-538",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "PARA EMITIR EN FONIA, banda lateral única SUPERIOR, SlTUAREMOS EL MANDO DE \"MODO DE EMISIÓN\" EN LA POSICIÓN:",
+    "options": [
+      "AM",
+      "FM",
+      "USB",
+      "LSB"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-540",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL MANDO VOX:",
+    "options": [
+      "Sirve para emitir en fonia",
+      "Conmuta automáticamente transmisión-recepción",
+      "Se transmite en modulación de amplitud",
+      "Se amplifican las señales de baja frecuencia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-541",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "SI EN UN TRANSCEPTOR COLOCAMOS EL MANDO \"MODE\" EN POSICION S.S.B. (BLU) ¿PODREMOS RECIBIR UNA SEÑAL MODULADA EN AMPLITUD (AM)?",
+    "options": [
+      "Se recibira mezclada con un ruido de batido continuo",
+      "Se recibirá perfectamente",
+      "No entrara señal alguna",
+      "Ese mando no influye para nada en la señal recibida"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-542",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "ESTAMOS SOBREMODULANDO CUANDO:",
+    "options": [
+      "Nuestro receptor tiene el volumen al máximo",
+      "El emisor emite una portadora",
+      "La modulación es superior al 100 por ciento",
+      "La modulación es inferior al 100 por ciento"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-543",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LA RESISTENCIA eléctrica DE UN CONDUCTOR:",
+    "options": [
+      "Mayor cuanto mayor es la sección",
+      "Menor cuanto mayor es la longitud",
+      "Menor cuanto mayor es la sección",
+      "Es independiente de su longitud y su sección"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-544",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EN UN AUTOTRANSFORMADOR:",
+    "options": [
+      "Los devanados del primario y secundario están aislados",
+      "Parte del devanado es común al primario y al secundario",
+      "No hay ningún devanado",
+      "Los devanados tienen una conexión polarizada"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-545",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA UNlDAD DE POTENCIA eléctrica ES:",
+    "options": [
+      "Culombio",
+      "Watio",
+      "Voltio",
+      "Amperio"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-546",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "PARA MEDIR LA CORRIENTE QUE PASA POR UNA RESISTENCIA Y LA CAIDA DE TENSION QUE EN ELLA SE PRODUCE, SE CONECTAN CON LA RESISTENCIA UN VOLTIMETRO V, Y UN AMPERIMETRO A, EN LA FORMA SIGUIENTE:",
+    "options": [
+      "V en serie y A en derivación",
+      "V en derivación y A en serie",
+      "V Y A en serie",
+      "V y A en derivación"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-547",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN LAS FUENTES DE ENERGIA SE USAN LOS FILTROS:",
+    "options": [
+      "Para no dejar pasar la c.c.",
+      "Para no dejar pasar la c.a",
+      "Para no dejar pasar las audiofrecuencias",
+      "Para dejar pasar los transitorios"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-548",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UN INCONVENIENTE DE LOS TRANSISTORES ES:",
+    "options": [
+      "Su alta tensión de polarización",
+      "Los problemas microfónicos que presentan",
+      "Su pequeño volumen",
+      "Su sensibilidad al calor"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-549",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EL Q DE UNA BOBINA ES:",
+    "options": [
+      "Directamente proporcional a la resistencia",
+      "Inversamente proporcional a la impedancia",
+      "Inversamente proporcional a la resistencia",
+      "Inversamente proporcional a la autoinducción"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-550",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL PERIODO DE UNA CORRIENTE ALTERNA ES:",
+    "options": [
+      "El tiempo que tarda en empezar a circular",
+      "El tiempo que está encendida una lámpara",
+      "El cociente del tiempo que está encendida una lámpara dividido por el tiempo que está apagada",
+      "El tiempo que tarda en pasar por dos valores máximos positivos"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-551",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "LA INTRODUCCION DE UN NUCLEO MAGNETICO EN UNA BOBINA PRODUCE EL EFECTO DE:",
+    "options": [
+      "Disminuir su resistencia eléctrica",
+      "Aumentar su resistencia eléctrica",
+      "Mantener su temperatura",
+      "Aumentar la autoinducción"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-552",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "EL CONJUNTO DE DOS RESISTENCIAS IGUALES CONECTADAS EN PARALELO TIENEN UN VALOR:",
+    "options": [
+      "Igual que una ellas",
+      "Mitad que una de ellas",
+      "El doble que una de ellas",
+      "La tercera parte que una de ellas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-553",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "SE DICE QUE DOS CIRCUITOS ESTAN ACOPLADOS CUANDO:",
+    "options": [
+      "Las dimensiones de ambos se adaptan perfectamente",
+      "Tienen la misma frecuencia",
+      "Las oscilaciones de ambos están en resonancia",
+      "Las oscilaciones presentes en uno de ellos se transmiten al otro"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-554",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "EN CONDICIONES NORMALES PARA UNA MISMA POTENCIA RADIADA, LAS ONDAS QUE LLEGARIAN CON MAS INTENSIDAD A UN PUNTO ALEJADO SERIA:",
+    "options": [
+      "Cualquiera de las superiores a 144",
+      "Las de 144 MHz",
+      "Las de 430 MHz",
+      "Las superiores a 430 MHz"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-555",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LAS DIFERENTES PARTES DE UN TRANSISTOR SE DENOMINAN",
+    "options": [
+      "Colector, conductor, masa",
+      "Emisor, neutrón, tierra",
+      "Emisor, base, colector",
+      "Electrón, receptor, positrón"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-556",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "¿CUAL ES LA LONGITUD DE ONDA, EXPRESADA EN METROS, DE UNA SEÑAL CUYA FRECUENCIA ES DE 300 MHz?",
+    "options": [
+      "0,3",
+      "1",
+      "3",
+      "10"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-557",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LA PROPAGACION DE SEÑALES EN LAS BANDAS DE 144 MHz y SUPERIORES SE HACE GENERALMENTE POR:",
+    "options": [
+      "Reflexión ionosférica",
+      "Reflexión troposférica",
+      "Dispersión troposférica",
+      "Rayo directo"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-558",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LA FRECUENCIA IMAGEN PUEDE APARECER EN:",
+    "options": [
+      "Un emisor superheterodino",
+      "Una dinamo",
+      "Un receptor superheterodino",
+      "Un amplificador lineal"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-559",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL EFECTO PIEZOELECTRICO SE PRODUCE EN:",
+    "options": [
+      "Los cristales de cuarzo",
+      "Los amplificadores lineales",
+      "Los varistores",
+      "Las piezas eléctricas"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-560",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "EN UN TRANSISTOR N P N USADO COMO AMPLIFICADOR, LA POLARIZACION DEL COLECTOR ES:",
+    "options": [
+      "Negativa",
+      "Positiva",
+      "Neutra",
+      "Alterna"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-561",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA MODULACION DE banda lateral única:",
+    "options": [
+      "Es una variante de la modulación de amplitud",
+      "Es una modulación de frecuencia corregida",
+      "Tiene una subportadora de fase",
+      "Es una intermodulación sui generis"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-563",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODIFUSION O TELEVISION A REQUERIMIENTO DE LA DIRECCION GENERAL DE TELECOMUNICACIONES, CONSTITUYE UNA FALTA:",
+    "options": [
+      "Grave",
+      "Leve",
+      "Muy grave",
+      "Depende de las circunstancias"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-564",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA POTENCIA MAXIMA DE EMISION, EN WATIOS, PERMITIDA AL TITULAR DE UNA LICENCIA DE AFICIONADO AUTORIZADA PARA TRABAJAR EN LA BANDA DE 430 a 440 MHz ES DE:",
+    "options": [
+      "30",
+      "50",
+      "25",
+      "100"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-566",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA SEÑAL DE SOCORRO EN RADIOTELEFONIA ESTA DADA POR LA PALABRA:",
+    "options": [
+      "Ayuda",
+      "Aider",
+      "Help",
+      "Mayday"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-567",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "UTILIZAR COMO PORTABLE UNA ESTACIÓN FIJA SIN AUTORIZACION DE LA DlRECCION GENERAL DE TELECOMUNICACIONES ES FALTA:",
+    "options": [
+      "Grave",
+      "Leve",
+      "Muy grave",
+      "No es falta"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-568",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EMITIR DISTINTIVOS DE LLAMADA FALSOS CONSTITUYE UNA FALTA:",
+    "options": [
+      "Grave",
+      "Muy grave",
+      "Leve",
+      "No es falta"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-570",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿QUE ABREVIATURA INDICA LA INTELIGIBILIDAD DE LAS SEÑALES?",
+    "options": [
+      "QRL",
+      "QRM",
+      "QRK",
+      "QRA"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-571",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA CIFRA 9 EN EL DISTINTIVO DE LLAMADA IDENTIFICA LA PROVINCIA DE:",
+    "options": [
+      "Huesca",
+      "Granada",
+      "Melilla",
+      "Valencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-572",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL PREFIJO EE INDICA DELANTE DE UN DISTINTIVO COMPLETO DE RADIOAFICIONADO:",
+    "options": [
+      "Una estación de servicios especiales",
+      "Un distintivo temporal para estaciones clase B",
+      "Un distintivo temporal para estaciones de clase C",
+      "No puede emplearse en estaciones españolas"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-573",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿SE PUEDEN INTRODUCIR MODIFICACIONES DE SISTEMA RADIANTE DE UNA ESTACION DE AFICIONADO?",
+    "options": [
+      "Únicamente si lo autoriza 1a DGTel",
+      "Si, pero únicamente para las licencias de clase A y B",
+      "Si, pero sin cambiar el sistema de afianzamiento de la antena",
+      "Si, genéricamente con la obligación de informarlo a la DGTel"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-574",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A LA DIRECCION GENERAL DE TELECOMUNICACIONES EL TRASLADO DE DICHA ESTACION A OTRO VEHICULO DE SU PROPIEDAD?",
+    "options": [
+      "TRES meses",
+      "UN año",
+      "DIEZ días",
+      "UN mes"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-576",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿CUANDO SE AÑADE LA MENCIÓN PORTABLE AL INDICATIVA DE LLAMADA?",
+    "options": [
+      "Cuando se opera una estación Fija/Portable",
+      "Cuando se opera en grafía una estación Fija/Portable",
+      "Cuando se opere en fonía una estación Fija/Portable",
+      "Cuando se realicen ensayos o concursos"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-577",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿SE PUEDE UTILIZAR UNA ESTACION MOVIL EN DIFERENTES VEHICULOS?",
+    "options": [
+      "No está permitido",
+      "Si, cuando las matriculas de los vehículos estén consignadas en la licencia",
+      "Solamente se autoriza para dos vehículos consignando las matrículas",
+      "Se autoriza solamente para concursos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-578",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "LA COMUNICACION ENTRE DISTINTAS ESTACIONES DE UN MISMO TITULAR:",
+    "options": [
+      "Está absolutamente prohibido",
+      "Se puede efectuar entre titular y segundo operador",
+      "Se puede efectuar entre titular y otro operador ocasional",
+      "Se autoriza para concursos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-579",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "LA GAMA DE FRECUENCIAS COMPRENDIDA ENTRE 30 Y 300 MHz SE CONOCE POR EL SIMBOLO:",
+    "options": [
+      "VLF",
+      "HF",
+      "VHF",
+      "EHF"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-580",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "LA TELEFONIA POR MODULACION DE FRECUENCIA SE CONOCE POR EL SIMBOLO:",
+    "options": [
+      "AZB",
+      "K1A",
+      "F3E",
+      "F2A"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-581",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "ENTRE OTRAS CONDICIONES LA ANTENA O ANTENAS DE UN TRANSCEPTOR:",
+    "options": [
+      "Tendrá que ser direccional",
+      "Tendrá que estar acoplada directamente al paso final",
+      "Dispondrá de los necesarios filtros supresores de armónicos (paso bajo)",
+      "Deberá estar dispuesta para trabajar en clase KZA"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-583",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "EN UN TRANSCEPTOR, AL CONMUTAR EL \"MODO DE TRANSMISIÓN\" DE LSB A USB SE CAMBIA DE:",
+    "options": [
+      "Banda lateral única, banda inferior a banda superior",
+      "Banda lateral única, banda superior a banda inferior",
+      "Modulación de amplitud a modulación en frecuencia",
+      "Modulación en frecuencia a modulación en amplitud"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-584",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EFECTUAR LA SINTONIZACIÓN DE UN EMISOR A PLENA POTENCIA PUEDE PRODUCIR:",
+    "options": [
+      "Daños en las válvulas del paso final",
+      "Una emisión excesiva",
+      "Daños en la fuente de alimentación",
+      "Daños en la etapa osciladora"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-585",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL ELEMENTO PRINCIPAL PARA ATENUACIÓN DE ARMONICOS EN UN EMISOR CONSISTIRÁ EN LA INSTALACIÓN DE:",
+    "options": [
+      "Un relé de puesta a tierra",
+      "Un filtro de paso alto entre la salida del transmisor y la antena",
+      "Una pantalla alrededor de la etapa de salida",
+      "Un filtro de paso bajo entre la salida del emisor y el sistema de antena"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-586",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL CONTROL DE GANANCIA AUTOMATICA \"AGC\" SE UTILIZA EN:",
+    "options": [
+      "Emisión",
+      "Recepción",
+      "Ambas",
+      "No se utiliza"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-587",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "PARA EVITAR SOBREMODULACIÓN, TENDRIAMOS QUE ACTUAR SOBRE:",
+    "options": [
+      "La potencia de salida del emisor",
+      "El nivel de portadora",
+      "El nivel de la señal de baja frecuencia",
+      "El silenciador"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-588",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EN UN TRANSCEPTOR, EL MANDO VOX SE UTILIZA PARA:",
+    "options": [
+      "Cambiar la sintonía",
+      "Conmutar automáticamente transmisión-recepción",
+      "Transmitir en modulación de amplitud",
+      "Amplificar las señales de baja Frecuencia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-589",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "SI EN UN RECEPTOR SE QUIERE DISMINUIR LA SEÑAL DE ENTRADA ACTUAREMOS EL MANDO DE:",
+    "options": [
+      "Volumen de audiofrecuencia",
+      "Volumen de radiofrecuencia",
+      "Silenciador",
+      "Control automático de ganancia"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-590",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "LOS ELEMENTOS VARIABLES DE QUE, GENERALMENTE, SE DISPONE EN SERIE EN LA BASE DE UNA ANTENA PARA AJUSTAR A LA RESONANCIA SON:",
+    "options": [
+      "Una resistencia y una bobina",
+      "Dos reóstatos",
+      "Una bobina y un condensador",
+      "Un condensador y una resistencia"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-591",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "EL MANDO \"NB\" DE UN TRANSCEPTOR SE EMPLEA PARA:",
+    "options": [
+      "Suprimir interferencias producidas por emisoras de Radiodifusión",
+      "Discriminar las señales moduladas en amplitud de las moduladas en frecuencia",
+      "Suprimir ruidos producidos por impulsos",
+      "Variar la amplificación audio"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-d-592",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "SI SE QUIERE CORTAR LA SALIDA DE RECEPTOR EN AUSENCIA DE SEÑAL, HABRA DE ACTUARSE SOBRE EL MANDO:",
+    "options": [
+      "Volumen de audio",
+      "Volumen de R.F.",
+      "Silenciador",
+      "Control de tono"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-002",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "El filtro de salida de un transmisor:",
+    "options": [
+      "Elimina las frecuencias no deseadas.",
+      "Limita la amplitud de la señal transmitida.",
+      "Permite mantener una relación señal ruido constante.",
+      "Elimina la portadora en los transmisores de banda lateral única."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-003",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "La capacidad de un receptor para separar señales de RF de frecuencias muy próximas se denomina:",
+    "options": [
+      "Figura de ruido.",
+      "Sensibilidad.",
+      "Selectividad.",
+      "Modulación cruzada."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-004",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La toma de tierra de una estación:",
+    "options": [
+      "Debe instalarse si mejora el rendimiento.",
+      "Permite atenuar el ruido que se recibe con la señal.",
+      "Debe conectarse a cada uno de los chasis metálicos de los equipos.",
+      "Debe conectarse siempre a la conducción de agua."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-005",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Si un equipo está marcado con las siglas \"EMC\" significa:",
+    "options": [
+      "Que es un equipo del Mercado Común Europeo.",
+      "Que el equipo cumple las directivas de la Unión Europea respecto de compatibilidad electromágnetica.",
+      "Que no es posible electrocutarse con el equipo.",
+      "Que el equipo es electromecánico."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-006",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "En sistemas de transmisión analógicos, las señales:",
+    "options": [
+      "Pueden tener infinitos valores.",
+      "Sólo pueden tener unos valores discretos.",
+      "No varían con el tiempo.",
+      "No existen."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-008",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Las bandas de colores en un condensador indican:",
+    "options": [
+      "Los materiales de los que está hecho.",
+      "Su precio",
+      "Su garantía.",
+      "Su capacidad, su tolerancia y su tensión máxima de trabajo."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-009",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La R.O.E. de una instalación de una antena de radioaficionado se expresa con la fórmula:",
+    "options": [
+      "Intensidad máxima / intensidad media.",
+      "Intensidad mínima / intensidad máxima.",
+      "Siempre vale 1.",
+      "Intensidad máxima / intensidad mínima."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-010",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un transistor bipolar puede ser de tipo:",
+    "options": [
+      "NPN",
+      "NNP",
+      "PNN",
+      "PPN"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-011",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La energía almacenada en un condensador C se expresa por la fórmula:",
+    "options": [
+      "2C.V",
+      "œC/V",
+      "œV/C",
+      "œC.V"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-012",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "A una potencia de valor 1000 mW le corresponde un valor en dB de:",
+    "options": [
+      "30 dBm",
+      "3 dBw",
+      "-3 dBm",
+      "0 dBm"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-013",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Una antena dipolo doblado, en resonancia, presenta una impedancia respecto de la dipolo simple:",
+    "options": [
+      "Mayor.",
+      "Menor.",
+      "Igual.",
+      "Nula."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-014",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La capacidad de un condensador depende:",
+    "options": [
+      "De la tensión en sus extremos y de la corriente que lo atraviesa.",
+      "De la geometría y disposición de sus placas además de la naturaleza del dieléctrico.",
+      "Del material dieléctrico de los conductores que forman las placas.",
+      "De la potencia que disipa en corriente continua."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-015",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Existen varias clases de amplificadores, A, B, AB y C:",
+    "options": [
+      "El de clase AB, es una combinación de A y B.",
+      "El de clase A amplifica la señal en medio ciclo.",
+      "El de clase B, ya no se utiliza.",
+      "El de clase A tiene una distorsión elevada."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-017",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Las etapas desde la antena hasta el altavoz de un receptor superheterodino son por el siguiente orden:",
+    "options": [
+      "Mezclador, limitador, detector, amplificador de RF, amplificador de audio.",
+      "Amplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio.",
+      "Detector, limitador, amplificador de RF, mesclador, amplificador de audio.",
+      "Amplificador de FI, detector, mezclador, amplificador de audio."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-018",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "El acoplador de antena se emplea para:",
+    "options": [
+      "Adaptar la impedancia de la etapa final de potencia a la línea de transmisión y antena.",
+      "Acoplar la antena a la modulación empleada por el transmisor.",
+      "Limitar el desplazamiento doppler de la señal transmitida.",
+      "Anular las pérdidas de la línea de transmisión entre la etapa final de potencia y la antena."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-019",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:",
+    "options": [
+      "A las frecuencias portadoras de las imágenes.",
+      "A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales.",
+      "A las partes imaginarias de las frecuencias.",
+      "A las simetrías de de cada frecuencia."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-021",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "En una transmisión radioeléctrica, ¿se atenúan las ondas por la propagación?:",
+    "options": [
+      "No, nunca.",
+      "A veces.",
+      "Sí, siempre.",
+      "Sólo se atenúan si hay lluvia."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-022",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "Un generador de señal de radiofrecuencia se utiliza para:",
+    "options": [
+      "Medir la tensión de radiofrecuencia.",
+      "Medir la corriente de radiofrecuencia.",
+      "Caracterizar etapas de radiofrecuencia.",
+      "Recibir en banda lateral única."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-023",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "El silenciador (squelch) de un receptor permite:",
+    "options": [
+      "Mantener constante el nivel de la señal demodulada.",
+      "Mejorar el factor de ruido.",
+      "Suprimir el audio si no hay señal de RF.",
+      "Aumentar la selectividad del receptor."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-024",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un amperio es la intensidad de corriente que corresponde al paso por un conductor, durante un segundo, de una carga de un culombio.",
+    "options": [
+      "No es correcto.",
+      "Es correcto.",
+      "Sólo a 0 grados centígrados.",
+      "Es imposible."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-e-025",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un diodo varicap equivale a:",
+    "options": [
+      "Un rectificador variable.",
+      "Una bobina de inducción ajustable.",
+      "Un condensador variable controlado por tensión.",
+      "Un filtro de frecuencia de corte variable."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-027",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Qué abreviatura indica que el operador sufre una interferencia?:",
+    "options": [
+      "QRM",
+      "QRK",
+      "QRL",
+      "QRA"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-028",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Es erróneo afirmar que:",
+    "options": [
+      "Las transmisiones entre estaciones de radioaficionados se efectuarán en lenguaje claro.",
+      "Podrá hacer uso de una estación cualquier otro operador (distinto de su titular) que se encuentre en posesión de la autorización de radioaficionado.",
+      "En la transmisión entre estaciones de radioaficionado está permitido la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero.",
+      "Las transmisiones entre estaciones de radioaficionado deberá limitarse a mensajes de naturaleza técnica relativos a ensayos y a observaciones de carácter puramente personal."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-032",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El distintivo de llamada AM8SOS:",
+    "options": [
+      "Ha sido asignado para uso temporal.",
+      "Le ha sido otorgado a una Asociación de Radioaficionados, vinculada con Protección Civil.",
+      "Su titular reside en Las Palmas de Gran Canaria.",
+      "No se puede asignar."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-033",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Para utilizar un repetidor de VHF se emitirá en el canal apropiado de la banda:",
+    "options": [
+      "145,0000 - 145,1875 MHz",
+      "430,000 - 440,000 MHz",
+      "144,000 - 144,500 MHz",
+      "431,050 - 431,825 MHz"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-036",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "De acuerdo con la Ley General de Telecomunicaciones, por comisión de infracciones graves se puede imponer al infractor una multa de hasta:",
+    "options": [
+      "50.000 Euros.",
+      "30.000 Euros.",
+      "100.000 Euros.",
+      "500.000 Euros."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-039",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El distintivo de llamada de una estación de radioaficionado, estará constituido por:",
+    "options": [
+      "Ondas decamétricas",
+      "Por un grupo alfanumérico.",
+      "Por un sufijo sin letras.",
+      "Sin sufijo."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-040",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estaciones de radioaficionados?",
+    "options": [
+      "Las sanciones por instalaciones no comunicadas a la Administración.",
+      "La calidad de una buena instalación.",
+      "El derecho a instalar las antenas en el exterior de los inmuebles.",
+      "La obligación de respetar el plan de bandas reservado al servicio de aficionados."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-042",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Según la Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones, retrasar injustificadamente la aportación de datos requeridos por la Administración cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas es considerado como una infracción:",
+    "options": [
+      "Leve.",
+      "Muy grave.",
+      "Grave.",
+      "Menos grave."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-051",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El Reglamento de uso del dominio público radioeléctrico por aficionados:",
+    "options": [
+      "Tiene por objeto la regulación del uso privativo del dominio público radioeléctrico.",
+      "Garantiza el derecho a su mantenimiento en el tiempo.",
+      "Determina que podrá realizarse el uso con fines de lucro y de contenido económico.",
+      "Prevé que el CNAF podrá modificar en algún momento el carácter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribución para otros usos."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-056",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Para operar estaciones en el país visitado temporalmente, el radioaficionado está obligado a:",
+    "options": [
+      "Pedir indicativo en dicho país.",
+      "Presentar copia de su expediente.",
+      "Solicitar permiso de antenas.",
+      "Presentar la autorización de radioaficionado a petición de las autoridades."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-059",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La abreviatura XXX, cuando es transmitida tres veces consecutivas, constituye la señal de:",
+    "options": [
+      "Urgencia.",
+      "Catástrofe natural.",
+      "Seguridad.",
+      "Socorro."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-f-060",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Es obligatorio informar a las Jefatura Provinciales de Inspección de Telecomunicaciones de las modificaciones efectuadas en los sistemas radiantes:",
+    "options": [
+      "En todos los casos.",
+      "Solo si afecta al entorno radioeléctrico.",
+      "Siempre y cuando dichas modificaciones sean permanentes.",
+      "Cuando haya que presentar memoria descriptiva."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-002",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cual es el tipo de conductor más inmune a las interferencias radiadas?:",
+    "options": [
+      "Fibra óptica.",
+      "Cable coaxial.",
+      "Cable paralelo.",
+      "Hilo de cobre desnudo."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-003",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un termistor de tipo NTC es:",
+    "options": [
+      "Un transistor con alto coeficiente de temperatura.",
+      "Un diodo rectificador para circuitos de corriente elevada.",
+      "Una resistencia cuyo valor se reduce a medida que la temperatura aumenta.",
+      "Un divisor de tensión en función de la temperatura externa."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-004",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "¿Qué es un diodo?",
+    "options": [
+      "Elemento que filtra la corriente eléctrica.",
+      "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido.",
+      "Componente eléctrico que elimina espúreas.",
+      "Dispositivo limitador de potencia."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-005",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La velocidad de propagación de las ondas electromágneticas siempre es igual a:",
+    "options": [
+      "La frecuencia dividida por la longitud de onda.",
+      "La longitud de onda dividida por la frecuencia.",
+      "La longitud de onda multiplicada por la frecuencia.",
+      "300.000 Km/seg."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-006",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Se denomina rendimiento de un transmisor:",
+    "options": [
+      "La relación entre la potenca entregada y la reflejada.",
+      "La capacidad de detectar señales cercanas al nivel de ruido.",
+      "La relación entre la potencia entregada al sistema radiante y la consumida.",
+      "Al valor correspondiente al 99% de la potencia emitida por el transmisor."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-007",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+    "options": [
+      "Q=f/B",
+      "Q=f.B 2",
+      "Q=f.B",
+      "Q=B/f"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-008",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Se conoce como \"selectividad\" de un receptor:",
+    "options": [
+      "El grado de selección efectuado en la fabricación.",
+      "El número de bandas de frecuencia que puede seleccionar.",
+      "La capacidad que tiene para separar dos señales de frecuencias próximas.",
+      "La diferencia que existe entre la señal sintonizada y el ruido."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-009",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Una antena YAGI es:",
+    "options": [
+      "Rómbica",
+      "Directiva.",
+      "Vertical con plano de tierra.",
+      "Parabólica."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-011",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "La anchura de banda necesaria de un transmisor:",
+    "options": [
+      "Es la máxima anchura de banda permitida al transmisor.",
+      "Es la necesaria para lograr transmitir a la máxima distancia.",
+      "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas.",
+      "Es aquella que contiene el 99% de la potencia emitida por el transmisor."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-012",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Los condensadores de tipo electrolítico:",
+    "options": [
+      "Deben conectarse respetando la polaridad indicada.",
+      "Varían su capacidad en función de la tensión aplicada.",
+      "Se utilizan en las fuentes de alimentación para rectificar la tensión alterna.",
+      "Funcionan por el principio de electrólisis."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-014",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "El ancho del haz de la antena:",
+    "options": [
+      "Es la separación angular entre dos puntos de potencia radiada la mitad de la máxima.",
+      "Es una unidad que se expresa en dB.",
+      "No existe.",
+      "Suele valer 13 dB."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-015",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+    "options": [
+      "La dirección del campo eléctrico.",
+      "La dirección de propagación.",
+      "La potencia del transmisor.",
+      "La carga atmosférica del camino recorrido por la onda."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-016",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Cuando se produce una interferencia perjudicial que afecta a la seguridad de la vida humana:",
+    "options": [
+      "Se debe bajar el volumen.",
+      "Se debe llamar a la Jefatura Provincial correspondiente solicitando ayuda.",
+      "Se debe dejar de emitir hasta resolver el problema.",
+      "Se debe emitir con menor potencia."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-017",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Si se desea medir la frecuencia de un transmisor no se puede emplear:",
+    "options": [
+      "Un osciloscopio.",
+      "Un voltímetro de radiofrecuencia.",
+      "Un analizador del espectro radioeléctrico.",
+      "Un frecuencímetro."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-020",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El detector de producto se emplea para:",
+    "options": [
+      "Mezclar con mínima distorsión la señal recibida.",
+      "La etapa detectora en los receptores de banda lateral única.",
+      "Obtener la frecuencia intermedia en los receptores de FM.",
+      "Limitar los niveles de la señal antes de su amplificación."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-021",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Se aumenta el riesgo de causar interferencias cuando se emplea:",
+    "options": [
+      "Modulación en FM.",
+      "Un acoplador de antena.",
+      "Un amplificador lineal.",
+      "Cable coaxial de 75Ω."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-022",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La ganancia de una antena se puede expresar en:",
+    "options": [
+      "dBm",
+      "dBW",
+      "dBV",
+      "dB"
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-024",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para medir intensidad del campo eléctrico se utilizan unidades de:",
+    "options": [
+      "dBV",
+      "dBW",
+      "dBV/m",
+      "dBW/m 2"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-g-025",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué es el \"fading\"?:",
+    "options": [
+      "La alimentación del transmisor.",
+      "El desvanecimiento transitorio de una señal electromagnética que se propaga.",
+      "La capacidad del receptor para reconocer señales débiles.",
+      "La acción de sintonizar una determinada estación."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-027",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Las estaciones automáticas desatendidas utilizarán el prefijo:",
+    "options": [
+      "AM y AN",
+      "EC, EB, EA",
+      "ED",
+      "No tienen prefijo."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-030",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La abreviatura TTT cuando es transmitida tres veces consecutivas, constituye la señal de:",
+    "options": [
+      "Socorro.",
+      "Urgencia.",
+      "Repeticion de transmisión.",
+      "Seguridad."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-031",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Si observa que un distintivo de llamada va precedido del prefijo EA seguido de un determinado número (del 1 al 9):",
+    "options": [
+      "No haga caso, ya que se trata de una llamada de estación no autorizada.",
+      "Deberá corregir al que emite, pues lo está haciendo mal.",
+      "Se trata de un radioaficionado de clase A.",
+      "Se trata de un titular de licencia CEPT extranjero que está emitiendo en España."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-032",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Las frecuencias de llamada:",
+    "options": [
+      "Sólo se usan en HF.",
+      "Actualmente ya no se utilizan.",
+      "Permiten contactar con otros operadores que utilizan el mismo modo.",
+      "Nunca se usan en VHF."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-035",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "En la instalación de una antena de radioaficionado y sus elementos anejos:",
+    "options": [
+      "No es necesario tener en cuenta la proximidad de las líneas eléctricas aéreas.",
+      "Es necesario señalizar los anclajes y riostras si la antena está situada en un lugar transitable.",
+      "No es necesario tener en cuenta las instalaciones y antenas de otros servicios.",
+      "Los soportes de la antena se podrán fijar al mástil de un pararrayos."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-038",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podrán efectuar:",
+    "options": [
+      "Desde cualquier punto del territorio nacional.",
+      "Desde las provincias de Madrid, Toledo y Segovia.",
+      "Desde la provincia de Valencia.",
+      "En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-045",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
+    "options": [
+      "3 a 30 KHz.",
+      "300 a 3.000 KHz.",
+      "3 a 30 MHz.",
+      "300 a 3.000 MHz."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-046",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En las comunicaciones del servicio de aficionados, ¿cuál de las siguientes proposiciones es correcta?:",
+    "options": [
+      "En general está permitido la emisión de onda portadora no modulada.",
+      "Puede ser empleada arbitrariamente la señal de socorro \"SOS\".",
+      "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
+      "A efectos de ensayos puede emitirse un distintivo de llamada engañoso."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-047",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "En las comunicaciones del servicio de aficionados, la palabra GOLF se deletreará:",
+    "options": [
+      "Simplemete con la palabra Golf.",
+      "Golfo, oscar, lima, félix.",
+      "Golfo, oscar, lima, foxtrot.",
+      "Golf, oscar, lima, foxtrot."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-048",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o elemento de fijación de las riostras en la obra civil del inmueble, repartiendo los esfuerzos mecánicos, se conoce con el nombre de:",
+    "options": [
+      "Mástil.",
+      "Soporte.",
+      "Plano de paso.",
+      "Anclaje."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-050",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Con autorización de su titular, podrá hacer uso de una estación de aficionado:",
+    "options": [
+      "Cualquier familiar de primer grado de consanguinidad.",
+      "Aquella persona que se encuentre solamente en posesión del diploma de operador de estaciones radioeléctricas de aficionado.",
+      "Cualquier otro titular de autorización de radioaficionado.",
+      "Salvo en casos de emergencia o desastre, nadie."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-053",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Cuál de las siguientes alternativas es correcta?",
+    "options": [
+      "La autorización especial del uso del espectro radioeléctrico por radioaficionados será nominativa.",
+      "Una autorización de radioaficionado no tiene por qué llevar asociado un distintivo de llamada.",
+      "No se precisa una autorización administrativa para la utilización de un distintivo de llamada temporal.",
+      "Una estación portable de aficionado es a la vez estación móvil."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-054",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "La cancelación de la licencia de estación de aficionado se efectuará en el siguiente caso:",
+    "options": [
+      "Cuando no disponga de diploma de operador.",
+      "Si presenta quejas la comunidad de vecinos.",
+      "En cualquier momento a petición del titular.",
+      "Cuando la instalación de la antena sea defectuosa."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-056",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "La autorización administrativa de uso del espectro radioeléctrico por radioaficionados:",
+    "options": [
+      "Puede ser objeto de transferencia.",
+      "Para su obtención se requerirá la posesión previa del diploma de operador.",
+      "Nunca podrá ser objeto de revocación.",
+      "Tiene naturaleza de autorización colectiva."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-h-060",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF, cuando estén instaladas fuera del casco urbano, será:",
+    "options": [
+      "Igual que la permitida en la banda de HF.",
+      "25 W.",
+      "Igual que la permitida a las instaladas en el interior del casco urbano.",
+      "35 W."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-i-004",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Un condensador es un dispositivo que almacena:",
+    "options": [
+      "Energía acústica",
+      "Energía electromágnetica",
+      "Carga eléctrica",
+      "No amacena nada"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
     "id": "fedi-i-007",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "El esquema de un receptor b�sico para banda lateral �nica se corresponde con la figura:",
+    "stem": "El esquema de un receptor básico para banda lateral única se corresponde con la figura:",
     "stemFigure": "images/quiz/fedi-i-007-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA i-007 (i-7a.jpg): El esquema de un receptor b�sico para banda lateral �nica se corresponde con la figura:",
+    "stemFigureAlt": "Figura original FEDI-EA i-007 (i-7a.jpg): El esquema de un receptor básico para banda lateral única se corresponde con la figura:",
     "options": [
       "",
       "",
@@ -1714,9 +8655,9 @@ export default [
     "id": "fedi-i-014",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Se�ale la configuraci�n de conexi�n de equipos correcta:",
+    "stem": "Señale la configuración de conexión de equipos correcta:",
     "stemFigure": "images/quiz/fedi-i-014-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA i-014 (i-14a.jpg): Se�ale la configuraci�n de conexi�n de equipos correcta:",
+    "stemFigureAlt": "Figura original FEDI-EA i-014 (i-14a.jpg): Señale la configuración de conexión de equipos correcta:",
     "options": [
       "",
       "",
@@ -1725,6 +8666,62 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Práctica con figura (FEDI-EA examen 27/10/2007 (i-014)). Contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-i-018",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Relativo a la propagación de las ondas electromágneticas, se llama \"frecuencia crítica\":",
+    "options": [
+      "A la frecuencia más sensible",
+      "A la frecuencia mínima del receptor",
+      "A la frecuencia por encima de la cual no hay reflexiones en la ionosfera",
+      "A la banda del transmisor"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-i-019",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En armónicos producidos por circuitos no lineales:",
+    "options": [
+      "Solo existen los de segundo orden",
+      "La frecuencia de los de segundo orden es doble de la fundamental",
+      "Los de segundo orden siempre son despreciables",
+      "Los equipos modernos nunca producen armónicos"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-i-020",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Para realizar medidas de intensidad de campo radiado por una antena se emplea:",
+    "options": [
+      "Un medidor de ondas estacionarias",
+      "Un frecuencímetro",
+      "Un medidor de campo",
+      "Un acoplador de antenas"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-i-022",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Para que un transformador reduzca la tensión, es necesario que:",
+    "options": [
+      "El secundario tenga menos espiras que el primario",
+      "El secundario tenga más espiras que el primario",
+      "No tenga tensión en el primario",
+      "El transformador sea muy pequeño"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-i-024",
@@ -1743,20 +8740,46 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 27/10/2007 (i-024)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-k-009",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "La siguiente gr�fica de espectro a la salida de un trasmisor corresponde a una se�al con modulaci�n de:",
-    "stemFigure": "images/quiz/fedi-k-009-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA k-009 (k-9.jpg): La siguiente gr�fica de espectro a la salida de un trasmisor corresponde a una se�al con modulaci�n de:",
+    "id": "fedi-j-049",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El radioaficionado esta obligado a comunicar, fehacientemente, su intención de continuar utilizando el dominio público radioeléctrico cada:",
     "options": [
-      "Frecuencia.",
-      "Amplitud.",
-      "Banda lateral �nica.",
-      "Fase por portadora."
+      "Dos años",
+      "Cinco años",
+      "Siete años",
+      "Diez años"
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-009)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque j)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-j-058",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Conforme a la nota 5.141C del Reglamento de Radioaficionados de la Unión Internacional de Radiocomunicaciones:",
+    "options": [
+      "La banda 7100 a 7200 kHz está atribuida a titulo primario al servicio de radiodifusión hasta el 29 de marzo de 2009",
+      "La banda 144 - 146 MHz no está atribuida al Servicio de Aficionados",
+      "La banda 144 - 146 MHz está atribuida al Servicio de Aficionados hasta el 29 de marzo de 2009",
+      "La banda 7100 - 7200 kHz no está atribuida a ningún servicio"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque j)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-j-060",
+    "part": 2,
+    "topicId": "operacion-seguridad",
+    "stem": "La señal internacional de socorro en radiotelefonía es:",
+    "options": [
+      "Help",
+      "Securité",
+      "Mayday",
+      "Pan"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque j)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-k-014",
@@ -1766,10 +8789,10 @@ export default [
     "stemFigure": "images/quiz/fedi-k-014-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA k-014 (k-14.jpg): Dados dos receptores, A y B, con las siguientes curvas de respuesta en amplitud para cada uno de ellos, a una Frecuencia",
     "options": [
-      "El receptor B es m�s selectivo que el receptor A.",
-      "El receptor A es m�s selectivo que el receptor B.",
-      "El receptor A es m�s sensible que el receptor B.",
-      "El receptor B es m�s estable que el receptor A."
+      "El receptor B es más selectivo que el receptor A.",
+      "El receptor A es más selectivo que el receptor B.",
+      "El receptor A es más sensible que el receptor B.",
+      "El receptor B es más estable que el receptor A."
     ],
     "correctIndex": 1,
     "explain": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-014)). Contrastar con BOE y convocatoria vigente."
@@ -1778,73 +8801,221 @@ export default [
     "id": "fedi-k-020",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "El siguiente diagrama de radiaci�n corresponde a una antena tipo:",
+    "stem": "El siguiente diagrama de radiación corresponde a una antena tipo:",
     "stemFigure": "images/quiz/fedi-k-020-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA k-020 (k-20.jpg): El siguiente diagrama de radiaci�n corresponde a una antena tipo:",
+    "stemFigureAlt": "Figura original FEDI-EA k-020 (k-20.jpg): El siguiente diagrama de radiación corresponde a una antena tipo:",
     "options": [
       "Omnidireccional.",
       "Dipolo.",
       "Directiva.",
-      "Isotr�pica."
+      "Isotrópica."
     ],
     "correctIndex": 2,
     "explain": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-020)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-k-028",
+    "id": "fedi-k-026",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "En la siguiente gr�fica de la pantalla de un osciloscopio, se puede afirmar que:",
-    "stemFigure": "images/quiz/fedi-k-028-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA k-028 (k-28.jpg): En la siguiente gr�fica de la pantalla de un osciloscopio, se puede afirmar que:",
+    "stem": "El Control Automático de Nivel conocido como ALC pemite:",
     "options": [
-      "A es la frecuencia y B es la amplitud de la se�al.",
-      "A es el per�odo y B es la amplitud de la se�al.",
-      "A es la amplitud y B es la potencia de la se�al.",
-      "A es la amplitud y B es el periodo de la se�al."
+      "Aumentar el ancho de banda del filtro de frecuencia intermedia.",
+      "Ajustar la ganancia de radiofrecuencia del receptor.",
+      "Evitar emisiones interferentes alrededor de la frecuencia de trabajo.",
+      "Trasmitir modos digitales utilizando el conector de micrófono de la emisora."
     ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-028)). Contrastar con BOE y convocatoria vigente."
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 24/5/2008 (bloque k)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-o-006",
+    "id": "fedi-m-005",
     "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "El siguiente circuito el�ctrico podr�a emplearse:",
-    "stemFigure": "images/quiz/fedi-o-006-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA o-006 (o-6.jpg): El siguiente circuito el�ctrico podr�a emplearse:",
+    "topicId": "antenas-prop",
+    "stem": "Una antena en trasmisión, ¿se puede tocar con las manos?:",
     "options": [
-      "Como receptor de AM a la frecuencia de resonancia del circuito LC.",
-      "Para nada, al no disponer de alimentaci�n el�ctrica.",
-      "Como amplificador a la frecuencia de resonancia del circuito LC.",
-      "Como oscilador a la frecuencia de resonancia del circuito LC."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-006)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-008",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "En el siguiente esquema el�ctrico el diodo est� actuando como:",
-    "stemFigure": "images/quiz/fedi-o-008-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA o-008 (o-8.jpg): En el siguiente esquema el�ctrico el diodo est� actuando como:",
-    "options": [
-      "Amplificador de tensi�n.",
-      "Detector de envolvente.",
-      "Filtro paso banda.",
-      "Rectificador de onda completa."
+      "Sólo si existe una eficaz toma de tierra.",
+      "No se debe tocar una antena trasmitiendo.",
+      "Si, para aumentar su potencia.",
+      "Sólo cuando el suelo este lo suficientemente seco."
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-008)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-m-011",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Los detectores de señal pueden ser asíncronos ó síncronos. A los primeros también se les conoce como:",
+    "options": [
+      "De entrada.",
+      "De salida.",
+      "De envolvente.",
+      "De portadora."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-m-022",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Se conoce con el nombre genérico de \"diodo\" a:",
+    "options": [
+      "Un componente para amplificar señales.",
+      "Un diversificador de corriente.",
+      "Un dispositivo que permite el paso de la comente eléctrica en un único sentido.",
+      "Una antena de TV."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-m-023",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Señale el circuito eléctrico equivalente de una antena en resonancia:",
+    "options": [
+      "R",
+      "L R C",
+      "L C",
+      "R diodo"
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-m-025",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un transistor bipolar esta compuesto por:",
+    "options": [
+      "Base, colector y drenador.",
+      "Emisor, base y colector.",
+      "Fuente, base y emisor.",
+      "Emisor, colector y puerta."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-m-027",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué es un \"resonador de cuarzo\"?:",
+    "options": [
+      "Un dispositivo capaz de presentar un efecto de resonancia basado en una propiedad piezoeléctrica.",
+      "Una envoltura translúcida de un instrumento musical.",
+      "Una caja de reverberación.",
+      "Un altavoz."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-m-028",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Según las leyes básicas de la electricidad ¿Cuál de las siguientes fórmulas es incorrecta?:",
+    "options": [
+      "E = I R",
+      "P = E2R",
+      "P = I2R",
+      "P = E I"
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-n-041",
+    "part": 2,
+    "topicId": "operacion-seguridad",
+    "stem": "El código RST se utiliza para:",
+    "options": [
+      "Identificar el país desde el que se emite.",
+      "Informar sobre el tipo de equipo que se está utilizando.",
+      "Acceder a una radiobaliza.",
+      "Informar sobre la intensidad de la señal recibida."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-n-045",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "La instalación, en el exterior de los edificios, del sistema radiante de una estación de radioaficionado. ¿Puede ser realizada por el propio radioaficionado?:",
+    "options": [
+      "Siempre.",
+      "Solo puede ser realizada por instalador autorizado.",
+      "Solo aquellas que por su simplicidad así lo autorice el Jefe Provincial de Inspección de Telecomunicaciones.",
+      "Nunca."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-n-059",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
+    "options": [
+      "87,5 -107 MHz sin limitación de potencia.",
+      "26,960 - 27,410 MHz.",
+      "144 -146 MHz.",
+      "87,5 -108 MHz con potencia máxima de 10mW."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-002",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "De la batería de un portátil, donde figure la siguiente inscripción \"DC 7.4 v 1500 mAh\", se puede afirmar que podrá proporcionar:",
+    "options": [
+      "7,4 voltios y 1,5 amperios durante una hora.",
+      "1,5 voltios y 7,4 amperios durante una hora.",
+      "7,4 voltios y 1500 amperios durante una hora.",
+      "7,4 voltios y 1500 amperios durante media hora."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-003",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "El amperímetro se debe conectar:",
+    "options": [
+      "En serie.",
+      "En paralelo.",
+      "Por medio de un transformador.",
+      "Con una carga artificial."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-005",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Unidades eléctricas:",
+    "options": [
+      "La intensidad se mide en voltios.",
+      "La tensión se mide en vatios.",
+      "Un culombio es igual al producto de un amperio por segundo.",
+      "La tensión se mide en amperios."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-o-009",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Se�ale la conexi�n correcta entre equipos:",
+    "stem": "Señale la conexión correcta entre equipos:",
     "stemFigure": "images/quiz/fedi-o-009-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA o-009 (o-9a.jpg): Se�ale la conexi�n correcta entre equipos:",
+    "stemFigureAlt": "Figura original FEDI-EA o-009 (o-9a.jpg): Señale la conexión correcta entre equipos:",
     "options": [
       "",
       "",
@@ -1855,12 +9026,82 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-009)). Contrastar con BOE y convocatoria vigente."
   },
   {
+    "id": "fedi-o-011",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "En un equipo transmisor con modulación de frecuencia (FM) la desviación máxima de frecuencia es 25 KHz y la frecuencia moduladora es 10 KHz. ¿Cuál es el valor del \"índice de modulación\" del equipo?:",
+    "options": [
+      "250.",
+      "15.",
+      "2,5.",
+      "35."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-012",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿Cuál es la impedancia de salida típica en los transmisores de radioaficionado?:",
+    "options": [
+      "1000 ohmios.",
+      "12'5 ohmios.",
+      "50 ohmios.",
+      "125 ohmios."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-014",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "El mezclador de un emisor, combina dos frecuencias f 1 y f 2 , de tal manera que a su salida se encuentra, entre otras la frecuencia:",
+    "options": [
+      "f 1 . f 2",
+      "f 1 / f 2",
+      "f 1 + f 2",
+      "(f 1 - f 2 ) / (f 1 + f 2 )"
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-015",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "Un dipolo de media onda, para la banda de 40 metros, debe tener una longitud aproximada de:",
+    "options": [
+      "10 m.",
+      "20 m.",
+      "40 m.",
+      "80 m."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-o-018",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+    "options": [
+      "A frecuencias muy altas se pierden las ondas espaciales.",
+      "La energía de una onda permanece invariable.",
+      "Se evita con una antena omnidireccional.",
+      "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
     "id": "fedi-o-020",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "�Qu� falta en el siguiente diagrama de bloques para que act�e como un receptor de FM?: (Antena-Amplificador RF-Mezclador-Filtro-Amplificador FI-Limitador-Demodulador FM-Amplificador BF-Altavoz)",
+    "stem": "¿Qué falta en el siguiente diagrama de bloques para que actúe como un receptor de FM?: (Antena-Amplificador RF-Mezclador-Filtro-Amplificador FI-Limitador-Demodulador FM-Amplificador BF-Altavoz)",
     "stemFigure": "images/quiz/fedi-o-020-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA o-020 (o-20.jpg): �Qu� falta en el siguiente diagrama de bloques para que act�e como un receptor de FM?: (Antena-Amplificador RF-Mezclador",
+    "stemFigureAlt": "Figura original FEDI-EA o-020 (o-20.jpg): ¿Qué falta en el siguiente diagrama de bloques para que actúe como un receptor de FM?: (Antena-Amplificador RF-Mezclador",
     "options": [
       "Nada.",
       "Un ondulador.",
@@ -1871,44 +9112,138 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-020)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-o-025",
+    "id": "fedi-o-021",
     "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Si en el siguiente esquema el conjunto L-C resuena a la frecuencia del transmisor, se puede afirmar que la potencia medida por el vat�metro sera:",
-    "stemFigure": "images/quiz/fedi-o-025-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA o-025 (o-25.jpg): Si en el siguiente esquema el conjunto L-C resuena a la frecuencia del transmisor, se puede afirmar que la potencia medi",
+    "topicId": "magnetismo-ondas",
+    "stem": "¿Qué bandas de frecuencia son más idóneas para conseguir una comunicación mediante \"rebote lunar\"?",
     "options": [
-      "Igual a la del transmisor.",
-      "La mitad de la disipada en el circuito L-C.",
-      "M�nima.",
-      "El doble de la disipada en el circuito L-C."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-025)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-002",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Para evitar que un campo electromagn�tico externo interfiera al circuito electr�nico de la figura se puede apantallar en una caja:",
-    "stemFigure": "images/quiz/fedi-s-002-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-002 (s-2.jpg): Para evitar que un campo electromagn�tico externo interfiera al circuito electr�nico de la figura se puede apantallar en",
-    "options": [
-      "De cualquier material con conexi�n a tierra.",
-      "Semiconductora a la frecuencia de la se�al.",
-      "Aislante para evitar las corrientes de circulaci�n.",
-      "Met�lica, el�ctricamente estanca y con conexi�n a tierra."
+      "Ninguna.",
+      "Todas.",
+      "VLF.",
+      "VHF y superiores."
     ],
     "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-002)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-p-038",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "¿Qué grupo del código Q indica \"su frecuencia varía\"?:",
+    "options": [
+      "QRG.",
+      "QRF.",
+      "QTH.",
+      "QRH."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-p-041",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "Como norma general las instalaciones en una estacion de radioaficionado deberán ser efectuadas:",
+    "options": [
+      "Directamente por el propietario de la estación.",
+      "Por un funcionario técnico de la Administración competente.",
+      "Exclusivamente por un técnico de una Asociación legalizada de Radioaficionados.",
+      "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-p-042",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra RPT que significa:",
+    "options": [
+      "Repita.",
+      "Corte de transmisión.",
+      "Recibido.",
+      "Transmisor."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-p-046",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El acceso a los repetidores analógicos y digitales finales será:",
+    "options": [
+      "Intermitente.",
+      "Necesariamente libre.",
+      "Obligatorio.",
+      "Restringido, si la estación estuviera dotada de código de acceso."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-p-049",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La Ley General de Telecomunicaciones tipìfica como infracción grave:",
+    "options": [
+      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios.",
+      "La no colaboración con la Inspección de Telecomunicaciones cuando est sea requerida.",
+      "El establecimiento de comunicaciones con estaciones no autorizadas.",
+      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-p-054",
+    "part": 2,
+    "topicId": "instalaciones",
+    "stem": "La Ley 19/1983, conocida como Ley de Antenas, regula:",
+    "options": [
+      "La obligación de comunicar la instalación de una antena a la Dirección General de Telecomunicaciones.",
+      "El derecho a instalar una antena de cualquier tamaño.",
+      "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.",
+      "La exención de presentar memoria descriptiva de la instalación."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-s-003",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El período de una corriente alterna es:",
+    "options": [
+      "El tiempo que tarda en empezar a circular la corriente.",
+      "El tiempo que está encendida una bombilla.",
+      "El tiempo que transcurre entre dos valores máximos consecutivos.",
+      "Siempre vale cero."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-s-004",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "La oposición que presenta una bobina de inductancia L al paso de una corriente alterna se llama reactancia inductiva, y:",
+    "options": [
+      "Se expresa en hertzios.",
+      "Si la frecuencia es 0, su valor es 0.",
+      "Si la frecuencia es f, su valor es 2&pi;/fL.",
+      "Siempre vale 1."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-s-005",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "�Qu� expresi�n es la correcta para indicar la \"Capacidad resultante\" (C), en el siguiente circuito?",
+    "stem": "¿Qué expresión es la correcta para indicar la \"Capacidad resultante\" (C), en el siguiente circuito?",
     "stemFigure": "images/quiz/fedi-s-005-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-005 (s-5.jpg): �Qu� expresi�n es la correcta para indicar la \"Capacidad resultante\" (C), en el siguiente circuito?",
+    "stemFigureAlt": "Figura original FEDI-EA s-005 (s-5.jpg): ¿Qué expresión es la correcta para indicar la \"Capacidad resultante\" (C), en el siguiente circuito?",
     "options": [
       "",
       "",
@@ -1919,12 +9254,26 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-005)). Contrastar con BOE y convocatoria vigente."
   },
   {
+    "id": "fedi-s-010",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué excursión de frecuencia máxima permite?",
+    "options": [
+      "12 KHz.",
+      "50 KHz.",
+      "150 KHz.",
+      "1 MHz."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
     "id": "fedi-s-011",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un receptor, qu� circuito incluir�a en el bloque con interrogantes al objeto de rechazar la frecuencia imagen:",
+    "stem": "En el siguiente esquema de un receptor, qué circuito incluiría en el bloque con interrogantes al objeto de rechazar la frecuencia imagen:",
     "stemFigure": "images/quiz/fedi-s-011-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-011 (s-11.jpg): En el siguiente esquema de un receptor, qu� circuito incluir�a en el bloque con interrogantes al objeto de rechazar la f",
+    "stemFigureAlt": "Figura original FEDI-EA s-011 (s-11.jpg): En el siguiente esquema de un receptor, qué circuito incluiría en el bloque con interrogantes al objeto de rechazar la f",
     "options": [
       "Un discriminador de imagen.",
       "Un detector de video.",
@@ -1935,12 +9284,40 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-011)). Contrastar con BOE y convocatoria vigente."
   },
   {
+    "id": "fedi-s-013",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
+    "options": [
+      "Clase B.",
+      "Clase A.",
+      "Clase C.",
+      "La distorsión es independiente de la clase de amplificador."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-s-015",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La ganancia de una antena de 40 dB equivalen a una relación de:",
+    "options": [
+      "10.000.",
+      "1000.",
+      "100.",
+      "40."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
     "id": "fedi-s-017",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "El esquema de un transmisor b�sico para banda lateral �nica se corresponde con la figura:",
+    "stem": "El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
     "stemFigure": "images/quiz/fedi-s-017-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-017 (s-17a.jpg): El esquema de un transmisor b�sico para banda lateral �nica se corresponde con la figura:",
+    "stemFigureAlt": "Figura original FEDI-EA s-017 (s-17a.jpg): El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
     "options": [
       "",
       "",
@@ -1954,25 +9331,39 @@ export default [
     "id": "fedi-s-018",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "La regi�n angular comprendida entre las dos l�neas gruesas del siguiente diagrama de radiaci�n de una antena, se denomina:",
+    "stem": "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
     "stemFigure": "images/quiz/fedi-s-018-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-018 (s-18.jpg): La regi�n angular comprendida entre las dos l�neas gruesas del siguiente diagrama de radiaci�n de una antena, se denomin",
+    "stemFigureAlt": "Figura original FEDI-EA s-018 (s-18.jpg): La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomin",
     "options": [
-      "Polarizaci�n.",
-      "Relaci�n delante-detr�s.",
-      "Ancho de haz de radiaci�n.",
-      "Regi�n de campo radiado."
+      "Polarización.",
+      "Relación delante-detrás.",
+      "Ancho de haz de radiación.",
+      "Región de campo radiado."
     ],
     "correctIndex": 2,
     "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-018)). Contrastar con BOE y convocatoria vigente."
   },
   {
+    "id": "fedi-s-019",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La forma más común de propagación en VHF y UHF es por:",
+    "options": [
+      "Onda de superficie.",
+      "Onda directa.",
+      "Onda inosférica.",
+      "Onda reflejada."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
     "id": "fedi-s-020",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "Qu� circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
+    "stem": "Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
     "stemFigure": "images/quiz/fedi-s-020-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-020 (s-20.jpg): Qu� circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
+    "stemFigureAlt": "Figura original FEDI-EA s-020 (s-20.jpg): Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
     "options": [
       "Condensador variable.",
       "Filtro paso banda.",
@@ -1986,17 +9377,45 @@ export default [
     "id": "fedi-s-022",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "Si en el vat�metro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia directa y reflejada, se puede afirmar que:",
+    "stem": "Si en el vatímetro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia directa y reflejada, se puede afirmar que:",
     "stemFigure": "images/quiz/fedi-s-022-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-022 (s-22.jpg): Si en el vat�metro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia ",
+    "stemFigureAlt": "Figura original FEDI-EA s-022 (s-22.jpg): Si en el vatímetro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia",
     "options": [
-      "El transmisor est� adaptado a la antena.",
-      "El transmisor no est� adaptado a la antena.",
-      "No existe onda estacionaria en la l�nea.",
+      "El transmisor está adaptado a la antena.",
+      "El transmisor no está adaptado a la antena.",
+      "No existe onda estacionaria en la línea.",
       "El valor de la R.O.E. es 1."
     ],
     "correctIndex": 1,
     "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-022)). Contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-s-028",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un termistor PTC es aquel que:",
+    "options": [
+      "Su resistencia está en función de la corriente que la atraviesa.",
+      "Su valor aumenta con la temperatura.",
+      "Se usa como estabilizadora de corriente.",
+      "Su valor disminuye al aumentar la temperatura."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-s-029",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "¿Qué es el denominado \"squelch\" de un equipo?",
+    "options": [
+      "Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel.",
+      "Un circuto amplificador para oir el sonido con mayor volumen que en la entrada.",
+      "Un circuito atenuador de la señal portadora que mejora la señal/ruido.",
+      "Un oscilador de cuarzo."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-s-030",
@@ -2015,24 +9434,136 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-030)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-w-002",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La unidad de medida de intensidad el�ctrica es el:",
+    "id": "fedi-t-032",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El distintivo de llamada ED1YBD",
     "options": [
-      "Voltio.",
-      "Vatio.",
-      "Ohmio.",
-      "Amperio."
+      "Corresponde a una estación desatendida analógica.",
+      "Corresponde a una estación móvil marítima.",
+      "Tiene carácter temporal.",
+      "La secuencia no se contempla en el reglamento vigente."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-034",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Que está ocurriendo si un radioaficionado se identifica como EA3/OK2HM:",
+    "options": [
+      "Se están realizando pruebas en el distrito 3.",
+      "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
+      "Se están realizando cambios en el reglamento y el distrito 3 es pionero.",
+      "Se trata de una conexión con interferencias."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-037",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Si un radioaficionado emite con el siguiente indicativo: EA7UE.",
+    "options": [
+      "Se trata de un radioaficionado de la Unión Europea temporalmente en España.",
+      "Se trata de un radioaficionado de Segovia.",
+      "Esta emitiendo desde Andalucía.",
+      "Se trata de un distintivo solicitado por una Escuela Universitaria."
+    ],
+    "correctIndex": 2,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-038",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Los Planes de Banda:",
+    "options": [
+      "Son establecidos por las Asociaciones locales de radioaficionados.",
+      "Sirven de guía a los radioafiionados de todo el mundo.",
+      "Son establecidos sin tener en cuenta la división en Regiones de la UIT.",
+      "Deben ser aprobados por la Dirección General de Telecomunicaciones."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-049",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Respecto de la autorización de aficionado para uso del espectro radioeléctrico, señale cual de los siguientes supuestos es erróneo:",
+    "options": [
+      "Tendrá carácter personal y no transferible.",
+      "Habilita para el uso de cualquier banda de frecuencias del Servicio de Aficionados con determinadas características técnicas y restricciones geográficas.",
+      "Requerirá disponer previamente del diploma de operador de estación de aficionado.",
+      "El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-052",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
+    "options": [
+      "Distrito, Sufijo, Prefijo.",
+      "Distrito, Prefijo, Sufijo.",
+      "Prefijo, Sufijo, Distrito.",
+      "Prefijo, Distrito, Sufijo."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-056",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El certificado HAREC:",
+    "options": [
+      "Sirve para obtener autorización de aficionado en cualquier país del mundo.",
+      "En España únicamente se proporciona a ciudadanos no residentes.",
+      "No se expide conjuntamente con el diploma de operador.",
+      "Permite que un ciudadano extranjero residente en España pueda obtener una autorización de radioaficionado sin examinarse de nuevo."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-057",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
+    "options": [
+      "La negativa o la obstrucción a ser inspeccionado, y la no colaboración con la Inspección de Telecomunicaciones cuando esta sea requerida.",
+      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.",
+      "La instalación de estaciones radioeléctricas sin autorización, cuando, de acuerdo con lo dispuesto en la normativa reguladora de las telecomunicaciones, sea necesaria.",
+      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias."
+    ],
+    "correctIndex": 0,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-t-060",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Por la comisión de una infracción grave tipificada en la Ley General de Telecomunicaciones se podrá imponer al infractor una multa por importe de hasta el duplo del beneficio bruto obtenido o, en el caso de que no resulte aplicable este criterio el límite máximo será de:",
+    "options": [
+      "5.000.000 €",
+      "500.000 €",
+      "1.000.000 €",
+      "Ninguna de las anteriores."
+    ],
+    "correctIndex": 1,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-003",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "El riesgo de producir interferencias, al aumentar la potencia de transmisi�n, es:",
+    "stem": "El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:",
     "options": [
       "Mayor.",
       "Menor.",
@@ -2046,7 +9577,7 @@ export default [
     "id": "fedi-w-004",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "La velocidad de propagaci�n de las ondas electromagn�ticas en vac�o es:",
+    "stem": "La velocidad de propagación de las ondas electromagnéticas en vacío es:",
     "options": [
       "Creciente.",
       "Decreciente.",
@@ -2060,9 +9591,9 @@ export default [
     "id": "fedi-w-005",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "El control autom�tico de ganancia (CAG) en un receptor tiene como objetivo:",
+    "stem": "El control automático de ganancia (CAG) en un receptor tiene como objetivo:",
     "options": [
-      "Mantener constante la amplitud de la se�al de salida.",
+      "Mantener constante la amplitud de la señal de salida.",
       "Anular el control de volumen.",
       "Ajustar el nivel de silenciador.",
       "Mantener constante el valor de la frecuencia intermedia."
@@ -2090,10 +9621,10 @@ export default [
     "topicId": "componentes",
     "stem": "El valor de la tolerancia de una resistencia viene indicada por la:",
     "options": [
-      "Primera l�nea de color.",
-      "Segunda l�nea de color.",
-      "Tercera l�nea de color.",
-      "Cuarta l�nea de color."
+      "Primera línea de color.",
+      "Segunda línea de color.",
+      "Tercera línea de color.",
+      "Cuarta línea de color."
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2102,12 +9633,12 @@ export default [
     "id": "fedi-w-008",
     "part": 1,
     "topicId": "componentes",
-    "stem": "En un transformador el�ctrico, �qu� se conoce como \"relaci�n de transformaci�n\"?:",
+    "stem": "En un transformador eléctrico, ¿qué se conoce como \"relación de transformación\"?:",
     "options": [
-      "El tama�o del primario frente al secundario.",
-      "La relaci�n entre las espiras mayores y las menores del primario.",
-      "La separaci�n entre la entrada y la salida.",
-      "La relaci�n entre el n�mero de espiras del primario y el n�mero de espiras del secundario."
+      "El tamaño del primario frente al secundario.",
+      "La relación entre las espiras mayores y las menores del primario.",
+      "La separación entre la entrada y la salida.",
+      "La relación entre el número de espiras del primario y el número de espiras del secundario."
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2116,7 +9647,7 @@ export default [
     "id": "fedi-w-009",
     "part": 1,
     "topicId": "componentes",
-    "stem": "�Cu�l es la \"condici�n de resonancia\" para un circuito resonante?:",
+    "stem": "¿Cuál es la \"condición de resonancia\" para un circuito resonante?:",
     "options": [
       "Que se produzca un buen eco del sonido.",
       "Que tenga dos bobinas iguales.",
@@ -2130,10 +9661,10 @@ export default [
     "id": "fedi-w-010",
     "part": 1,
     "topicId": "magnetismo-ondas",
-    "stem": "La caracter�stica de un filtro denominada como \"frecuencia de corte\" es:",
+    "stem": "La característica de un filtro denominada como \"frecuencia de corte\" es:",
     "options": [
       "La frecuencia central del filtro.",
-      "El primer arm�nico de la frecuencia a la que el filtro deja de funcionar.",
+      "El primer armónico de la frecuencia a la que el filtro deja de funcionar.",
       "La frecuencia que delimita la banda de paso o no paso por el filtro.",
       "Un dato irrelevante para filtro."
     ],
@@ -2144,12 +9675,12 @@ export default [
     "id": "fedi-w-011",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Una bater�a el�ctrica es un dispositivo que convierte:",
+    "stem": "Una batería eléctrica es un dispositivo que convierte:",
     "options": [
-      "Energ�a qu�mica en potencial negativo.",
-      "Energ�a qu�mica en energ�a el�ctrica.",
-      "Energ�a cin�tica en energ�a potencial.",
-      "Ninguna de las anteriores respuestas es v�lida."
+      "Energía química en potencial negativo.",
+      "Energía química en energía eléctrica.",
+      "Energía cinética en energía potencial.",
+      "Ninguna de las anteriores respuestas es válida."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2158,14 +9689,14 @@ export default [
     "id": "fedi-w-012",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "El siguiente esquema el�ctrico corresponde a:",
+    "stem": "El siguiente esquema eléctrico corresponde a:",
     "stemFigure": "images/quiz/fedi-w-012-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-012 (w-12.jpg): El siguiente esquema el�ctrico corresponde a:",
+    "stemFigureAlt": "Figura original FEDI-EA w-012 (w-12.jpg): El siguiente esquema eléctrico corresponde a:",
     "options": [
       "Un atenuador de radiofrecuencia.",
       "Un acoplador de antena.",
       "Un oscilador local.",
-      "Una fuente de alimentaci�n."
+      "Una fuente de alimentación."
     ],
     "correctIndex": 3,
     "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-012)). Contrastar con BOE y convocatoria vigente."
@@ -2188,9 +9719,9 @@ export default [
     "id": "fedi-w-014",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "El siguiente esquema de un receptor, �qu� circuito incluir�a en el cuadro de interrogantes al objeto de rechazar la frecuencia de imagen?",
+    "stem": "El siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro de interrogantes al objeto de rechazar la frecuencia de imagen?",
     "stemFigure": "images/quiz/fedi-w-014-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-014 (w-14.jpg): El siguiente esquema de un receptor, �qu� circuito incluir�a en el cuadro de interrogantes al objeto de rechazar la frec",
+    "stemFigureAlt": "Figura original FEDI-EA w-014 (w-14.jpg): El siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro de interrogantes al objeto de rechazar la frec",
     "options": [
       "Un discriminador de imagen.",
       "Un detector de video.",
@@ -2204,10 +9735,10 @@ export default [
     "id": "fedi-w-015",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "La relaci�n se�al/ruido en un receptor:",
+    "stem": "La relación señal/ruido en un receptor:",
     "options": [
       "Es siempre igual a uno.",
-      "Es una caracter�stica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).",
+      "Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).",
       "No tiene sentido. En los receptores de alta calidad no hay ruido.",
       "Depende de la potencia del equipo y se expresa en dBm."
     ],
@@ -2218,12 +9749,12 @@ export default [
     "id": "fedi-w-016",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "Referido al par�metro de \"ROE\" de una estaci�n transmisora, se�ale la opci�n que es correcta:",
+    "stem": "Referido al parámetro de \"ROE\" de una estación transmisora, señale la opción que es correcta:",
     "options": [
       "Debe ser cero.",
-      "Sirve para indicar el consumo de energ�a de la estaci�n.",
-      "Es un indicador de grado de adaptaci�n de impedancias entre el transmisor y la antena.",
-      "Cuanto mas elevado sea su valor, mayor rendimiento se obtiene en la transmisi�n."
+      "Sirve para indicar el consumo de energía de la estación.",
+      "Es un indicador de grado de adaptación de impedancias entre el transmisor y la antena.",
+      "Cuanto mas elevado sea su valor, mayor rendimiento se obtiene en la transmisión."
     ],
     "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2232,7 +9763,7 @@ export default [
     "id": "fedi-w-017",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Las capas ionizadas de la atm�sfera se denominan:",
+    "stem": "Las capas ionizadas de la atmósfera se denominan:",
     "options": [
       "A, B, C1 y C2.",
       "D, E, F1 y F2.",
@@ -2246,14 +9777,14 @@ export default [
     "id": "fedi-w-018",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un transmisor de banda lateral �nica, �qu� circuito incluir�a en el cuadro con interrogantes al objeto de evitar la generaci�n de interferencias?",
+    "stem": "En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de evitar la generación de interferencias?",
     "stemFigure": "images/quiz/fedi-w-018-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-018 (w-18.jpg): En el siguiente esquema de un transmisor de banda lateral �nica, �qu� circuito incluir�a en el cuadro con interrogantes ",
+    "stemFigureAlt": "Figura original FEDI-EA w-018 (w-18.jpg): En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes",
     "options": [
-      "Control autom�tico de frecuencia o CAF",
-      "Control autom�tico de ganancia CAG",
-      "Control autom�tico de nivel o ALC",
-      "Control automatico de saturaci�n o CAS"
+      "Control automático de frecuencia o CAF",
+      "Control automático de ganancia CAG",
+      "Control automático de nivel o ALC",
+      "Control automatico de saturación o CAS"
     ],
     "correctIndex": 2,
     "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-018)). Contrastar con BOE y convocatoria vigente."
@@ -2262,12 +9793,12 @@ export default [
     "id": "fedi-w-019",
     "part": 1,
     "topicId": "magnetismo-ondas",
-    "stem": "�Hay alguna limitaci�n para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?",
+    "stem": "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?",
     "options": [
       "No hay limitaciones.",
       "Si, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW.",
       "Si, menor de 30 dBm.",
-      "S�lo cuando hay interferencias."
+      "Sólo cuando hay interferencias."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2279,9 +9810,9 @@ export default [
     "stem": "Los llamados \"detectores de envolvente\" tienen la particularidad de:",
     "options": [
       "Funcionar fuera del receptor.",
-      "Estar instalados despu�s de la etapa final de potencia.",
-      "No requerir en el receptor la sincronizaci�n con el transmisor, por ser s�ncronos.",
-      "Realimentar la se�al de salida con parte de la se�al de entrada."
+      "Estar instalados después de la etapa final de potencia.",
+      "No requerir en el receptor la sincronización con el transmisor, por ser síncronos.",
+      "Realimentar la señal de salida con parte de la señal de entrada."
     ],
     "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2290,12 +9821,12 @@ export default [
     "id": "fedi-w-021",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "Decimos que hay sobremodulaci�n, cuando:",
+    "stem": "Decimos que hay sobremodulación, cuando:",
     "options": [
       "Se emiten 2 portadoras.",
-      "El volumen est� al m�ximo.",
-      "El indice de modulaci�n es inferior al 100%.",
-      "El indice de modulaci�n es superior al 100%."
+      "El volumen está al máximo.",
+      "El indice de modulación es inferior al 100%.",
+      "El indice de modulación es superior al 100%."
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2304,10 +9835,10 @@ export default [
     "id": "fedi-w-022",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "El m�ximo de radiaci�n del diagrama de una antena vertical se produce:",
+    "stem": "El máximo de radiación del diagrama de una antena vertical se produce:",
     "options": [
       "Hacia arriba.",
-      "En la direcci�n m�s despejada.",
+      "En la dirección más despejada.",
       "En el plano horizontal.",
       "Hacia tierra."
     ],
@@ -2318,9 +9849,9 @@ export default [
     "id": "fedi-w-023",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "El diagrama de radiaci�n de la figura, corresponde a una antena tipo:",
+    "stem": "El diagrama de radiación de la figura, corresponde a una antena tipo:",
     "stemFigure": "images/quiz/fedi-w-023-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-023 (w-23.jpg): El diagrama de radiaci�n de la figura, corresponde a una antena tipo:",
+    "stemFigureAlt": "Figura original FEDI-EA w-023 (w-23.jpg): El diagrama de radiación de la figura, corresponde a una antena tipo:",
     "options": [
       "Onmidireccional.",
       "Dipolo.",
@@ -2331,26 +9862,10 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-023)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-w-024",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En el siguiente esquema, el transmisor, la l�nea de alimentaci�n y la antena tienen la misma impedancia a la frecuencia de trabajo, por lo que el vat�metro indicar� que:",
-    "stemFigure": "images/quiz/fedi-w-024-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-024 (w-24.jpg): En el siguiente esquema, el transmisor, la l�nea de alimentaci�n y la antena tienen la misma impedancia a la frecuencia ",
-    "options": [
-      "La potencia reflejada es cero",
-      "La potencia directa es cero",
-      "La potencia reflejada es igual a la potencia directa",
-      "La potencia reflejada es superior a la potencia directa"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-024)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-w-025",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "En que bandas de frecuencia predomina el modo de propagaci�n por ondas ionosf�rica:",
+    "stem": "En que bandas de frecuencia predomina el modo de propagación por ondas ionosférica:",
     "options": [
       "VHF",
       "HF",
@@ -2361,15 +9876,29 @@ export default [
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
+    "id": "fedi-w-026",
+    "part": 1,
+    "topicId": "componentes",
+    "stem": "Las resistencias conectadas:",
+    "options": [
+      "En serie, se restan.",
+      "En paralelo, se suman.",
+      "En mixto, no se pueden colocar.",
+      "En serie, la resistencia total siempre es mayor que cualquiera de ellas."
+    ],
+    "correctIndex": 3,
+    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
     "id": "fedi-w-027",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "En el siguiente diagrama de radiaci�n de una antena, la diferencia de decibelios entre los puntos 1 y 2, se denomina:",
+    "stem": "En el siguiente diagrama de radiación de una antena, la diferencia de decibelios entre los puntos 1 y 2, se denomina:",
     "stemFigure": "images/quiz/fedi-w-027-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-027 (w-27.jpg): En el siguiente diagrama de radiaci�n de una antena, la diferencia de decibelios entre los puntos 1 y 2, se denomina:",
+    "stemFigureAlt": "Figura original FEDI-EA w-027 (w-27.jpg): En el siguiente diagrama de radiación de una antena, la diferencia de decibelios entre los puntos 1 y 2, se denomina:",
     "options": [
       "Ganancia.",
-      "Relaci�n delante-atr�s.",
+      "Relación delante-atrás.",
       "Directividad.",
       "Impedancia."
     ],
@@ -2393,26 +9922,12 @@ export default [
     "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-028)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-w-029",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Para medir la potencia de una se�al el�ctrica, se emplea un:",
-    "options": [
-      "Vat�metro.",
-      "Frecuenc�metro",
-      "Puente se resonancia.",
-      "Capac�metro."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-w-030",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Se�ale la conexi�n correcta entre los chasis met�licos de los equipos:",
+    "stem": "Señale la conexión correcta entre los chasis metálicos de los equipos:",
     "stemFigure": "images/quiz/fedi-w-030-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-030 (w-30a.jpg): Se�ale la conexi�n correcta entre los chasis met�licos de los equipos:",
+    "stemFigureAlt": "Figura original FEDI-EA w-030 (w-30a.jpg): Señale la conexión correcta entre los chasis metálicos de los equipos:",
     "options": [
       "",
       "",
@@ -2421,62 +9936,6 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-030)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-032",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "�Qu� grupo del c�digo Q indica que el operador de la estaci�n llamar� m�s tarde?",
-    "options": [
-      "QRZ.",
-      "QRX.",
-      "QRL.",
-      "QSW."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-033",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El distintivo de llamada estar� constituido por un grupo alfanum�rico del modo siguiente:",
-    "options": [
-      "Prefijo + 1 letra.",
-      "UR + RC + RK.",
-      "Prefijo + Distrito + Sufijo.",
-      "EA+EB+EC."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-034",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los planes de banda de la IARU para la Regi�n 1 deben ser tenidos en cuenta:",
-    "options": [
-      "Unicamente por los radioaficionados principiantes.",
-      "Unicamente en HF.",
-      "Unicamente si se opera en Canarias.",
-      "Por todo radioaficionado que opera en Espa�a."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-035",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "�Qu� plazo tiene la Administraci�n para resolver una solicitud de Autorizaci�n de radioaficionado?",
-    "options": [
-      "Cinco semanas.",
-      "Seis semanas.",
-      "Siete semanas.",
-      "Ocho semanas."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-x-036",
@@ -2493,155 +9952,15 @@ export default [
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-x-037",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Comprobar si alguien est� utilizando una frecuencia, antes de iniciar una transmisi�n en la misma, es:",
-    "options": [
-      "Muy perjudicial para el uso eficiente del espectro radioel�ctrico.",
-      "Obligatorio.",
-      "Una pr�ctica de operar adecuada.",
-      "Sancionable seg�n la reglamentaci�n vigente."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-038",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Indica cual de las siguientes series de prefijos internacionales corresponden a las atribuidas a Espa�a, seg�n el Reglamento de Radiocomunicaciones:",
-    "options": [
-      "FM, FN, FA.",
-      "EA, EB, EC.",
-      "KN, KK, KL.",
-      "EPA, EQZ, EAA."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-x-039",
     "part": 2,
     "topicId": "licencias-indicativos",
-    "stem": "�Cuales de estas causas ser� causa espec�fica de revocaci�n de la autorizaci�n de radioaficionado?:",
+    "stem": "¿Cuales de estas causas será causa específica de revocación de la autorización de radioaficionado?:",
     "options": [
-      "Estar sin utilizar el espectro radioel�ctrico durante cinco a�os seguidos.",
-      "No comunicar fehacientemente a la Administraci�n, cada cinco a�os, su deseo de continuar utilizando el espectro radioel�ctrico.",
-      "Cambiarse de domicilio sin comunic�rselo fehacientemente a la Administraci�n en un plazo de cinco a�os.",
-      "Ninguna de ellas, la Autorizaci�n no se revoca."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-040",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El prefijo \"EG\" de un distintivo de llamada se relaciona con:",
-    "options": [
-      "Usos temporales de especial relevancia para eventos de car�cter regional, auton�mico o local.",
-      "Usos temporales de especial relevancia para eventos de car�cter nacional.",
-      "Usos temporales no especialmente significativos.",
-      "Usos temporales de relevancia internacional."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-041",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Entre las abreviaturas m�s usuales en las comunicaciones de radioaficionados se encuentra \"CL\", que significa:",
-    "options": [
-      "Cierre de la estaci�n.",
-      "Repita.",
-      "Interferencia de RF.",
-      "Estaci�n de control."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-042",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "Un mensaje de socorro NO incluir�:",
-    "options": [
-      "La se�al de socorro Mayday.",
-      "Datos relativos a la estaci�n en peligro.",
-      "Indicaciones relativas a su situaci�n y otras informaciones aclaratorias.",
-      "La se�al de seguridad Securite."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-043",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El titular de una licencia CEPT, expedida por una Administraci�n que haya adoptado la recomendaci�n T/R 61-01, estar� obligado a: (indique cual de estas afirmaciones es falsa)",
-    "options": [
-      "Respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci�n vigente en el Pa�s visitado.",
-      "No respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci�n vigente en el pa�s de origen.",
-      "Observar todas las limitaciones que le vengan impuestas en lo concerniente a las condiciones locales de naturaleza t�cnica relativa a los poderes p�blicos.",
-      "Respetar las diferencias de atribuciones de frecuencias en los servicios de aficionados en las tres Regiones de la Uni�n Internacional de Telecomunicaciones."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-044",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Para la instalaci�n de una estaci�n fija de radioaficionado, es necesario:",
-    "options": [
-      "Comunicarlo por escrito a la Jefatura Provincial de Inspecci�n de Telecomunicaciones.",
-      "Presentar, para su aprobaci�n, una memoria descriptiva del conjunto de la estaci�n en la Jefatura Provincial de Inspecci�n de Telecomunicaciones.",
-      "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
-      "Presentar una memoria descriptiva del conjunto de la estaci�n al presidente de la comunidad de propietarios donde se vaya a instalar."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-045",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El acceso a los repetidores anal�gicos y digitales finales ser� necesariamente:",
-    "options": [
-      "Obligatorio.",
-      "Condicionado.",
-      "Libre y si estuvieran dotados de c�digo de acceso, este deber� ser p�blico.",
-      "Intermitente."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-046",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En la nomenclatura de las bandas de frecuencia las ondas m�tricas se relacionan con:",
-    "options": [
-      "La gama de frecuencia de 3 a 30 GHz.",
-      "El s�mbolo MF.",
-      "La banda n� 9.",
-      "La abreviatura m�trica B.m."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-047",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Para no desmontar el sistema radiante de una estaci�n fija, una vez cancelada la licencia, y dejarlo s�lo para recepci�n, su titular deber� obtener:",
-    "options": [
-      "Autorizaci�n por escrito de la Jefatura Provincial de Inspecci�n de Telecomunicaciones.",
-      "Autorizaci�n por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios.",
-      "Comunicarlo por escrito a la Jefatura Provincial de Inspecci�n de Telecomunicaciones.",
-      "Comunicarlo por escrito a la propiedad del inmueble o, en su caso, de la comunidad de propietarios."
+      "Estar sin utilizar el espectro radioeléctrico durante cinco años seguidos.",
+      "No comunicar fehacientemente a la Administración, cada cinco años, su deseo de continuar utilizando el espectro radioeléctrico.",
+      "Cambiarse de domicilio sin comunicárselo fehacientemente a la Administración en un plazo de cinco años.",
+      "Ninguna de ellas, la Autorización no se revoca."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2650,82 +9969,26 @@ export default [
     "id": "fedi-x-048",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "De acuerdo con el Ap�ndice 1 del Reglamento de Radio&shy;comuni&shy;caciones de la UIT la clase de emisi�n F3E corresponde a una emisi�n de:",
+    "stem": "De acuerdo con el Apéndice 1 del Reglamento de Radio&shy;comuni&shy;caciones de la UIT la clase de emisión F3E corresponde a una emisión de:",
     "options": [
-      "Telegraf�a.",
-      "Televisi�n.",
-      "Telefon�a con dos o m�s canales.",
-      "Telefon�a con un solo canal."
+      "Telegrafía.",
+      "Televisión.",
+      "Telefonía con dos o más canales.",
+      "Telefonía con un solo canal."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-049",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "La instalaci�n y funcionamiento de una estaci�n de aficionado precisar� de una licencia, la cual se considera asociada a:",
-    "options": [
-      "Una asociaci�n legalizada de radioaficionados de la provincia correspondiente.",
-      "La estaci�n autom�tica desatendida m�s cercana.",
-      "La autorizaci�n de radioaficionado de su titular.",
-      "Toda la gama de frecuencias que pueda utilizar."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-050",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "No se puede considerar como estaci�n autom�tica desatendida a una estaci�n:",
-    "options": [
-      "Repetidora de portadora.",
-      "Radiobaliza.",
-      "Repetidora digital.",
-      "Colectiva de aficionado."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-051",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Qu� objetivo se pretende al instalar un repetidor de radioficionado:",
-    "options": [
-      "Determinar la ubicaci�n de aparatos radioel�ctricos.",
-      "Ampliar el alcance de las comunicaciones.",
-      "Inspeccionar fehacientemente las emisiones fuera de banda.",
-      "Detectar y reducir interferencias dentro de un �rea determinada."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-052",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "�Cu�ntas estaciones autom�ticas desatendidas podr�n autorizarse en una zona?:",
-    "options": [
-      "No existe l�mite para estas autorizaciones.",
-      "Exclusivamente dos por provincia.",
-      "Se autorizar�n en funci�n de las necesidades del servicio.",
-      "Tres en VHF y dos en UHF."
-    ],
-    "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-x-053",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracci�n muy grave:",
+    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
     "options": [
-      "Carecer de los preceptivos cuadros de tarifas o de precios cuando su exhibici�n se exija por la normativa vigente.",
-      "La interceptaci�n, sin autorizaci�n, de telecomunicaciones no destinadas al p�blico en general.",
-      "La distribuci�n, venta o exposici�n para la venta de equipos o aparatos cuya conformidad con los requisitos esenciales aplicables no haya sido evaluada de acuerdo con lo dispuesto en el t�tulo IV de esta ley o con los acuerdos o convenios internacionales celebrados por el Estado espa�ol.",
-      "La alteraci�n, manipulaci�n o la omisi�n de las caracter�sticas t�cnicas, de las marcas, de las etiquetas, de los signos de identificaci�n o de la documentaci�n de los equipos o de los aparatos de telecomunicaciones."
+      "Carecer de los preceptivos cuadros de tarifas o de precios cuando su exhibición se exija por la normativa vigente.",
+      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general.",
+      "La distribución, venta o exposición para la venta de equipos o aparatos cuya conformidad con los requisitos esenciales aplicables no haya sido evaluada de acuerdo con lo dispuesto en el título IV de esta ley o con los acuerdos o convenios internacionales celebrados por el Estado español.",
+      "La alteración, manipulación o la omisión de las características técnicas, de las marcas, de las etiquetas, de los signos de identificación o de la documentación de los equipos o de los aparatos de telecomunicaciones."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
@@ -2736,96 +9999,26 @@ export default [
     "topicId": "marco-normativo",
     "stem": "Si un radioaficionado se identifica como EA4ABC/M3BVM:",
     "options": [
-      "Se trata de un radioaficionado con licencia expedida en otro pa�s, operando ocasionalmente una estaci�n espa�ola.",
+      "Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente una estación española.",
       "Se trata de un distintivo temporal reservado a estaciones colectivas.",
-      "Pertenece a un corresponsal de un diario nacional, emitiendo a un pa�s extranjero.",
-      "Se trata de un estaci�n no autorizada."
+      "Pertenece a un corresponsal de un diario nacional, emitiendo a un país extranjero.",
+      "Se trata de un estación no autorizada."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-055",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Un radioaficionado podr� ser autorizado a instalar un repetidor:",
-    "options": [
-      "Si la antig�edad de su licencia es superior a 5 a�os.",
-      "En ning�n caso.",
-      "Unicamente en localidades de menos de 5000 habitantes.",
-      "Si la cota de su emplazamiento es inferior a 500 metros."
-    ],
-    "correctIndex": 1,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-x-056",
     "part": 2,
     "topicId": "instalaciones",
-    "stem": "El montaje del sistema radiante de una estaci�n fija de radioaficionado ser� realizado:",
+    "stem": "El montaje del sistema radiante de una estación fija de radioaficionado será realizado:",
     "options": [
       "Como norma general, por un instalador de telecomunica&shy;ciones autorizado.",
       "Siempre por el propio radioaficionado.",
-      "Utilizando exclusivamente equipos de fabricaci�n espa�ola.",
+      "Utilizando exclusivamente equipos de fabricación española.",
       "Por cualquier persona."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-057",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Un radioaficionado podr� instalar la antena de su estaci�n fija en el exterior de un inmueble si:",
-    "options": [
-      "En el inmueble reside un amigo.",
-      "En el inmueble no hay instalada otra antena.",
-      "Se hace cargo de los costes de instalaci�n.",
-      "Est� legitimado para usar la totalidad o parte del mismo y ha obtenido autorizaci�n reglamentaria."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-058",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Un radioaficionado espa�ol que utiliza temporalmente su estaci�n en Australia (pa�s que aplica la Recomendaci�n T/R 61-01):",
-    "options": [
-      "Puede emitir en las mismas frecuencias que en Espa�a.",
-      "Unicamente puede emitir en frecuencias inferiores a 1 GHz.",
-      "No podr� solicitar protecci�n contra interferencias perjudiciales.",
-      "Unicamente puede emitir en frecuencias de HF."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-059",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracci�n grave:",
-    "options": [
-      "No facilitar los datos requeridos por la Administraci�n o retrasar injustificadamente su aportaci�n cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electr�nicas.",
-      "El uso, en condiciones distintas a las autorizadas, del espectro radioel�ctrico que provoque alteraciones que impidan la correcta prestaci�n de otros servicios por otros operadores.",
-      "La emisi�n de se�ales de identificaci�n falsas o enga�osas.",
-      "La interceptaci�n, sin autorizaci�n, de telecomunicaciones no destinadas al p�blico en general."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-060",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fon�tico internacional con que palabra se identifica el n�mero 9:",
-    "options": [
-      "Neuf.",
-      "Nove.",
-      "Nine.",
-      "Neun."
-    ],
-    "correctIndex": 2,
     "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2841,7 +10034,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad.",
-    "sourceRef": "Programa tipo HAREC / electricidad básica; cualquier manual URE de 1.ª parte."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / electricidad básica; contrastar con manuales URE."
   },
   {
     "id": "ofic-002",
@@ -2856,7 +10049,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En serie las resistencias se suman: Req = R1 + R2.",
-    "sourceRef": "Electricidad básica · circuitos en serie (temario y libros de examen)."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / electricidad básica; contrastar con manuales URE."
   },
   {
     "id": "ofic-003",
@@ -2871,7 +10064,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En FM varía la frecuencia instantánea de la portadora alrededor de la frecuencia central.",
-    "sourceRef": "CEPT T/R 61-02 · bloque de modulaciones; resúmenes URE de radioelectricidad."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-004",
@@ -2886,7 +10079,7 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
-    "sourceRef": "Decibelios · definición logarítmica habitual en exámenes de radioelectricidad."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-005",
@@ -2901,7 +10094,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El dipolo clásico «media onda» mide del orden de λ/2 en total (cada brazo ~λ/4).",
-    "sourceRef": "Tema antenas · programas de examen y manuales URE (ondas estacionarias en dipolo)."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
     "id": "ofic-006",
@@ -2916,7 +10109,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En CC estable no circula corriente por el condensador: equivale a circuito abierto (modelo ideal).",
-    "sourceRef": "Electricidad básica · comportamiento de R, L y C en CC (temario 1.ª parte)."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
     "id": "ofic-007",
@@ -2931,7 +10124,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "FI significa frecuencia intermedia. En un receptor superheterodino, el mezclador combina la señal de antena con el oscilador local para trasladarla a una FI fija, donde resulta más fácil filtrar y amplificar.",
-    "sourceRef": "Bloques de receptor · programa HAREC / esquemas tipo en material URE."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
     "id": "ofic-008",
@@ -2946,7 +10139,7 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "El marco habitual es la Orden IET/1311/2013, que aprueba el Reglamento de aficionados publicado en el BOE; el texto vinculante está en el BOE.",
-    "sourceRef": "BOE · Orden IET/1311/2013 (BOE-A-2013-7624), título y preámbulo; PDF consolidado en boe.es."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-009",
@@ -2961,7 +10154,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El esquema habitual es dos pruebas independientes alineadas con el programa (electricidad y reglamentación), reflejado en el reglamento y en la convocatoria.",
-    "sourceRef": "BOE · Reglamento IET/1311/2013 (estructura de la prueba); anexo II programa HAREC."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-010",
@@ -2976,7 +10169,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "T/R 61-01 desarrolla la licencia CEPT; T/R 61-02 es el programa de examen (HAREC).",
-    "sourceRef": "CEPT · ECC T/R 61-01 y T/R 61-02 (cept.org/ecc/ham-radio)."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y CEPT T/R 61-01 (licencia CEPT)."
   },
   {
     "id": "ofic-011",
@@ -2991,7 +10184,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El art. 25.h distingue dentro/fuera del casco urbano; dentro del urbano el límite orientativo citado en el propio texto es 10 W de salida (fuera suele ser mayor; ver tabla y redacción vigente).",
-    "sourceRef": "BOE · Reglamento IET/1311/2013, art. 25.h y anexo I; PDF consolidado BOE-A-2013-7624."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-012",
@@ -3006,7 +10199,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El anexo I desarrolla condiciones técnicas (incluye tablas de potencias por banda, etc.); es referencia obligada ante dudas de enunciados.",
-    "sourceRef": "BOE · Reglamento IET/1311/2013, anexo I (condiciones técnicas)."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-013",
@@ -3021,7 +10214,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "f0 = 1/(2π√(LC)) es la relación estándar en resonancia serie/paralelo ideal LC.",
-    "sourceRef": "Radioelectricidad básica · resonancia LC (programa HAREC / temario URE)."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-014",
@@ -3036,7 +10229,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "QSY: cambiar de frecuencia (o desplazarse en la banda).",
-    "sourceRef": "Código Q · práctica operativa habitual en exámenes y manuales de operación."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-015",
@@ -3051,7 +10244,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La reactancia capacitiva es Xc = 1/(2πfC). Si f aumenta y C permanece constante, Xc disminuye. Por eso los condensadores dejan pasar mejor las componentes de alta frecuencia que la corriente continua.",
-    "sourceRef": "Programa HAREC / componentes RLC; reactancia capacitiva en temarios URE y FEDI-EA."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
     "id": "ofic-016",
@@ -3066,7 +10259,7 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "El Zener trabaja polarizado en inversa dentro de su zona Zener, con corriente limitada, y mantiene aproximadamente una tensión fija. En examen suele asociarse a referencia o regulación de tensión.",
-    "sourceRef": "Programa HAREC / semiconductores; diodos Zener en fuentes y regulación."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
     "id": "ofic-017",
@@ -3081,7 +10274,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Tras la etapa de potencia pueden aparecer armónicos o espurias. El filtro de salida atenúa esas componentes antes de la antena, reduciendo interferencias y manteniendo la emisión dentro del espectro permitido.",
-    "sourceRef": "Programa HAREC / transmisores, filtros y emisiones no esenciales."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
     "id": "ofic-018",
@@ -3096,7 +10289,7 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "El criterio de Nyquist exige muestrear al menos al doble de la frecuencia máxima presente. Si se muestrea por debajo, aparecen componentes falsas por aliasing; por eso también se usan filtros antialias.",
-    "sourceRef": "CEPT T/R 61-02 / procesado digital de señal; criterio de Nyquist."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-019",
@@ -3111,7 +10304,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En una Yagi, el reflector queda detrás del elemento excitado y los directores se sitúan hacia delante. La máxima radiación o recepción se produce en la dirección de los directores.",
-    "sourceRef": "Programa HAREC / antenas directivas y diagramas de radiación."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
     "id": "ofic-020",
@@ -3126,7 +10319,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "dBd expresa ganancia respecto a un dipolo de media onda. dBi expresa ganancia respecto a una antena isotrópica; entre ambas referencias hay aproximadamente 2,15 dB.",
-    "sourceRef": "Programa HAREC / antenas, ganancia y directividad; referencias dBi/dBd."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
     "id": "ofic-021",
@@ -3141,7 +10334,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Mayday se reserva para socorro. Pan Pan indica urgencia, por ejemplo una situación que requiere prioridad pero no implica necesariamente peligro grave e inmediato para la vida. Sécurité/Securite se asocia a avisos de seguridad.",
-    "sourceRef": "Procedimientos internacionales de socorro, urgencia y seguridad; temario de operación."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-022",
@@ -3156,7 +10349,7 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "RST resume Readability, Strength y Tone: legibilidad, intensidad de señal y tono. En telefonía suelen usarse R y S; en telegrafía se añade T para valorar el tono.",
-    "sourceRef": "Procedimientos operativos de radioaficionado; código RST."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-023",
@@ -3171,7 +10364,7 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio.",
-    "sourceRef": "Reglamento de Radiocomunicaciones UIT art. 25; operación del servicio de aficionados."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-024",
@@ -3186,7 +10379,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En transmisión puede haber tensiones y corrientes de radiofrecuencia elevadas en antena, acoplador o línea. La seguridad exige no tocar elementos radiantes, mantener distancias y cuidar tierra y protecciones.",
-    "sourceRef": "Programa HAREC / seguridad eléctrica, RF y estaciones de aficionado."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 / instalaciones, seguridad y EMC."
   },
   {
     "id": "ofic-025",
@@ -3201,7 +10394,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La RF puede entrar por cables, alimentación o falta de apantallamiento. Las soluciones típicas son ferritas, filtros, desacoplos, cables blindados, buena puesta a tierra y revisión de armónicos.",
-    "sourceRef": "Programa HAREC / compatibilidad electromagnética, interferencias e instalaciones."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 / instalaciones, seguridad y EMC."
   },
   {
     "id": "ofic-026",
@@ -3216,7 +10409,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El CNAF organiza qué servicios pueden usar cada banda y con qué condiciones dentro del marco español. Para el radioaficionado se complementa con el reglamento específico y sus anexos.",
-    "sourceRef": "CNAF y Reglamento de radioaficionados; marco nacional de uso del espectro."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-027",
@@ -3231,7 +10424,7 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "Los planes de banda IARU ayudan a convivir en el espectro recomendando segmentos para modos, anchos de banda o actividades. No sustituyen la autorización, el reglamento español ni el CNAF.",
-    "sourceRef": "IARU Región 1 / planes de banda; reglamento español y CNAF como marco legal."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-028",
@@ -3246,7 +10439,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La licencia CEPT facilita operación temporal, pero el operador se somete a las bandas, potencias, prefijos y condiciones del país donde transmite. No basta con aplicar solo la normativa española.",
-    "sourceRef": "CEPT T/R 61-01; operación temporal en países que aplican la recomendación."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y CEPT T/R 61-01 (licencia CEPT)."
   },
   {
     "id": "ofic-029",
@@ -3261,7 +10454,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El S-meter es un indicador de nivel o intensidad relativa de señal recibida. No mide la potencia de salida del transmisor ni sustituye a un vatímetro o medidor de ROE.",
-    "sourceRef": "Programa HAREC / receptores, medidor S y etapas de recepción."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
     "id": "ofic-030",
@@ -3276,7 +10469,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La SSB transmite una sola banda lateral y normalmente suprime la portadora. Así reduce anchura de banda y concentra mejor la potencia útil respecto a una AM con portadora y dos bandas laterales.",
-    "sourceRef": "CEPT T/R 61-02 / modulaciones AM, SSB y anchura de banda."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-031",
@@ -3291,7 +10484,7 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "Es una pregunta trampa habitual: en operación internacional puede verse la forma inglesa November, pero algunos bancos españoles formulan el deletreo con la adaptación usada en castellano: N = Noviembre. No inventes palabras como Norte o Náutico.",
-    "sourceRef": "FEDI-EA P2 / deletreo de distintivos; práctica española del alfabeto fonético internacional."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y CEPT T/R 61-01 (licencia CEPT)."
   },
   {
     "id": "ofic-032",
@@ -3306,7 +10499,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En HF interesa la ionosfera y sus subcapas (D, E, F1, F2). La troposfera influye más en VHF/UHF; no confundir con capas meteorológicas.",
-    "sourceRef": "Programa HAREC / propagación ionosférica; temarios URE y manuales de examen."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
     "id": "ofic-033",
@@ -3321,7 +10514,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El formato clásico es letra-número-letra (p. ej. modulación y tipo de señal). En examen suele preguntarse la estructura, no memorizar todas las clases.",
-    "sourceRef": "UIT RR Apéndice 1 / clases de emisión; programa reglamentación HAREC."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-034",
@@ -3336,7 +10529,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "ED/EE/EF suelen reservarse a usos temporales especiales. EG/EH se relacionan con eventos regionales; AM/AN/AO con relevancia nacional o internacional (tablas de estudio españolas).",
-    "sourceRef": "Reglamento IET/1311/2013 y tablas de prefijos; guías de indicativos URE."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y CEPT T/R 61-01 (licencia CEPT)."
   },
   {
     "id": "ofic-035",
@@ -3351,7 +10544,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución.",
-    "sourceRef": "Reglamento de Radiocomunicaciones UIT; buenas prácticas operativas HAREC."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-036",
@@ -3366,7 +10559,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente).",
-    "sourceRef": "Electricidad y radioelectricidad básica · resonancia LC (programa HAREC)."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
     "id": "ofic-037",
@@ -3381,7 +10574,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos.",
-    "sourceRef": "Programa HAREC / circuitos resonantes y selectividad."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
     "id": "ofic-038",
@@ -3396,7 +10589,7 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "1 W = 1000 mW → 10·log10(1000) = 30 dBm. Confundir con 10 dBm (10 mW) es error típico de examen.",
-    "sourceRef": "Decibelios y dBm · definición logarítmica (temario radioelectricidad)."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-039",
@@ -3411,7 +10604,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El squelch corta el audio ante ausencia de señal o ruido de fondo, evitando silbidos constantes en el altavoz.",
-    "sourceRef": "Programa HAREC / receptores y controles de audio."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
     "id": "ofic-040",
@@ -3426,7 +10619,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "QRX ≈ «volveré a llamar» / espera. No confundir con QSL (tarjeta) ni con CL (cierre de estación).",
-    "sourceRef": "Código Q · operación de radioaficionado."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-041",
@@ -3441,7 +10634,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "EG/EH se vinculan a eventos regionales o locales. AM/AN/AO suelen usarse en eventos de mayor relevancia; ED/EE/EF en otros usos temporales.",
-    "sourceRef": "Tablas de prefijos e indicativos · reglamento y guías URE."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y CEPT T/R 61-01 (licencia CEPT)."
   },
   {
     "id": "ofic-042",
@@ -3456,7 +10649,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas.",
-    "sourceRef": "Programa HAREC / arquitectura de receptores."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
     "id": "ofic-043",
@@ -3471,7 +10664,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB).",
-    "sourceRef": "Antenas y diagramas · programa HAREC."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
     "id": "ofic-044",
@@ -3486,7 +10679,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La capacidad del varicap varía con la tensión inversa; se usa en sintonía de VCO y circuitos de RF.",
-    "sourceRef": "Semiconductores y sintonía · temario componentes."
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
     "id": "ofic-045",
@@ -3501,7 +10694,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Evita interferir a comunicaciones en curso. Es buena práctica aunque el reglamento también exija identificarse y respetar bandas.",
-    "sourceRef": "Buenas prácticas operativas; reglamento de aficionados."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "ofic-046",
@@ -3516,7 +10709,7 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "CL = Closing / cierre de estación. No confundir con QRT (cesar emisión) en todos los contextos, pero CL es cierre habitual.",
-    "sourceRef": "Abreviaturas operativas · práctica de examen y manuales URE."
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
     "id": "q1",
@@ -3812,76 +11005,6 @@ export default [
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0015",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:",
-    "options": [
-      "Mayor",
-      "Menor",
-      "Igual",
-      "No existe"
-    ],
-    "correctIndex": 0,
-    "explain": "Al aumentar la potencia aumenta también la energía radiada y, si la instalación no está bien filtrada o adaptada, crece la posibilidad de afectar a receptores o servicios cercanos. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 15). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0016",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La velocidad de propagación de las ondas electromagnéticas en vacío es",
-    "options": [
-      "Creciente",
-      "Decreciente",
-      "Directamente proporcional a la frecuencia de las ondas",
-      "Constante"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 16). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0017",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El control automático de ganancia (CAG) en un receptor tiene como objetivo:",
-    "options": [
-      "Mantener constante la amplitud de la señal de salida",
-      "Anular el control de volumen",
-      "Ajustar el nivel de silenciador",
-      "Mantener constante el valor de la frecuencia intermedia"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 17). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0019",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "El valor de la tolerancia de una resistencia viene indicada por la:",
-    "options": [
-      "Primera línea de color",
-      "Segunda línea de color",
-      "Tercera línea de color.",
-      "Cuarta línea de color"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 19). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0020",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "En un transformador eléctrico, ¿qué se conoce como \"relación de transformación\"?:",
-    "options": [
-      "El tamaño del primario frente al secundario.",
-      "La relación entre las espiras mayores y las menores del primario.",
-      "La separación entre la entrada y la salida.",
-      "La relación entre el número de espiras del primario y el número de espiras del secundario."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 20). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0044",
     "part": 1,
     "topicId": "electricidad-basica",
@@ -4108,20 +11231,6 @@ export default [
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 62). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0063",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "En un circuito con dos resistencias en paralelo, la intensidad total será:",
-    "options": [
-      "La suma de las caídas de tensión.",
-      "La misma que la que circule por la rama con la menor resistencia.",
-      "La misma que la que circule por la rama con la mayor resistencia.",
-      "La suma de las intensidades de cada una de las ramas."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 63). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0065",
     "part": 1,
     "topicId": "electricidad-basica",
@@ -4150,76 +11259,6 @@ export default [
     "explain": "La frecuencia intermedia de un superheterodino se procesa con filtros y amplificadores para obtener selectividad y ganancia antes de la demodulación. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 66). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0067",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En un circuito electrónico, un transistor no se puede emplear como:",
-    "options": [
-      "Amplificador.",
-      "Oscilador.",
-      "Mezclador.",
-      "Balun."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 67). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0068",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Una resistencia en SHUNT irá colocada:",
-    "options": [
-      "En serie.",
-      "En mixto con otra en serie.",
-      "En paralelo.",
-      "Nunca podrá conectarse una resistencia en SHUNT."
-    ],
-    "correctIndex": 2,
-    "explain": "Una resistencia shunt se coloca en paralelo para derivar parte de la corriente o crear una caída de tensión proporcional a la corriente medida. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 68). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0095",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "El \"Factor de calidad, Q\" de un circuito resonante es:",
-    "options": [
-      "La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.",
-      "Independiente de la frecuencia.",
-      "La relación entre la onda estacionaria y el ancho de banda del circuito.",
-      "Inexistente."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 95). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0096",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La lectura \"10 dBμV\", es un valor de:",
-    "options": [
-      "Resistencia eléctrica.",
-      "Potencia eléctrica.",
-      "Intensidad de corriente eléctrica.",
-      "Tensión eléctrica."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 96). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0097",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Los transceptores con cambio de frecuencia de emisión, utilizan:",
-    "options": [
-      "Un oscilador de frecuencia variable.",
-      "Un amplificador de clase AB.",
-      "Filtros de cristal.",
-      "Redes de desplazamiento de fase."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 97). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0099",
     "part": 1,
     "topicId": "antenas-prop",
@@ -4232,20 +11271,6 @@ export default [
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 99). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0100",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En una antena pasiva, se puede afirmar que",
-    "options": [
-      "La ganancia es igual a la directividad.",
-      "La ganancia es superior a la directividad.",
-      "Los diagramas de radiación en transmisión y en recepción son iguales.",
-      "La impedancia es constante con la frecuencia."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 100). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0101",
@@ -4291,20 +11316,6 @@ export default [
     "explain": "En la clasificación básica por altura, primero está la troposfera, después la estratosfera y por encima la ionosfera, que es relevante para propagación de HF. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 103). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0104",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La capacidad de que un sistema electrónico no produzca interferencias que comprometan su funcionamiento o que afecten a su entorno, se denomina:",
-    "options": [
-      "Fiabilidad y baja distorsión interferente.",
-      "Compatibilidad electromagnética.",
-      "AMC (Ambiente Medido y Comprobado).",
-      "SLI (Sistema Libre de Interferencias)."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 104). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0105",
     "part": 1,
     "topicId": "electricidad-basica",
@@ -4319,20 +11330,6 @@ export default [
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 105). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0106",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En relación con los fusibles eléctricos de protección, es correcto afirmar que:",
-    "options": [
-      "Es recomendable instalarlos entre la emisora y el acoplador de antena.",
-      "Deben tener un valor nominal superior al máximo consumo previsto para el equipo.",
-      "Deben tener un valor nominal inferior al consumo máximo previsto para el equipo.",
-      "Sólo se deben instalar los de tipo semiconductor."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 106). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0108",
     "part": 1,
     "topicId": "componentes",
@@ -4345,20 +11342,6 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 108). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0109",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "La característica de un filtro denominada como \"frecuencia de corte\" es:",
-    "options": [
-      "La frecuencia central del filtro.",
-      "El primer armónico de la frecuencia a la que el filtro deja de funcionar.",
-      "La frecuencia que delimita la banda de paso o no paso por el filtro.",
-      "Un dato irrelevante para filtro."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 109). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0110",
@@ -4417,34 +11400,6 @@ export default [
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 114). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0115",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?",
-    "options": [
-      "No hay limitaciones.",
-      "Si, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW.",
-      "Si, menor de 30 dBm.",
-      "Sólo cuando hay interferencias."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 115). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0116",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Los llamados \"detectores de envolvente\" tienen la particularidad de:",
-    "options": [
-      "Funcionar fuera del receptor.",
-      "Estar instalados después de la etapa final de potencia.",
-      "No requerir en el receptor la sincronización con el transmisor, por ser síncronos.",
-      "Realimentar la señal de salida con parte de la señal de entrada."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 116). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0117",
     "part": 1,
     "topicId": "receptores-emisores",
@@ -4457,48 +11412,6 @@ export default [
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0118",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "El máximo de radiación del diagrama de una antena vertical se produce:",
-    "options": [
-      "Hacia arriba.",
-      "En la dirección más despejada.",
-      "En el plano horizontal.",
-      "Hacia tierra."
-    ],
-    "correctIndex": 2,
-    "explain": "Una vertical ideal de cuarto de onda radia principalmente hacia el horizonte. Por eso su máximo no está hacia arriba, sino en el plano horizontal. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 118). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0120",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En que bandas de frecuencia predomina el modo de propagación por ondas ionosférica:",
-    "options": [
-      "VHF",
-      "HF",
-      "UHF",
-      "LF"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 120). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0121",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Las resistencias conectadas:",
-    "options": [
-      "En serie, se restan.",
-      "En paralelo, se suman.",
-      "En mixto, no se pueden colocar.",
-      "En serie, la resistencia total siempre es mayor que cualquiera de ellas."
-    ],
-    "correctIndex": 3,
-    "explain": "En serie las resistencias se suman directamente, de modo que la resistencia equivalente siempre supera a cada resistencia individual. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 121). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0123",
@@ -4767,20 +11680,6 @@ export default [
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 144). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-1-0147",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "La curvatura que experimenta una onda radioeléctrica al encontrarse un obstáculo en su trayectoria, se denomina:",
-    "options": [
-      "Difracción.",
-      "Reflexión.",
-      "Dispersión.",
-      "Refracción."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 147). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0150",
     "part": 1,
     "topicId": "antenas-prop",
@@ -4793,34 +11692,6 @@ export default [
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 150). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0160",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Indique el orden de los elementos de una fuente de alimentación lineal:",
-    "options": [
-      "A Transformador, B Rectificador, C Regulador, D Filtro.",
-      "A Rectificador, B Transformador, C Filtro, D Regulador.",
-      "A Regulador, B Filtro, C Transformador, D Rectificador.",
-      "A Filtro, B Transformador, C Regulador, D Rectificador."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 160). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0162",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La inclinación de los radiales en una antena vertical de cuarto de onda, produce:",
-    "options": [
-      "Una variación de la polarización de la señal emitida.",
-      "Un incremento de la altura efectiva.",
-      "Una variación de la impedancia de entrada.",
-      "Una reducción del ruido captado por la antena."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 162). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0163",
@@ -6363,22 +13234,6 @@ export default [
     "explain": "Las radiobalizas de aficionado se autorizan en segmentos concretos; en este banco se recogen las bandas VHF/UHF de 144-146 y 430-440 MHz. Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 450). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-83-1641",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "El diagrama de radiación de la figura, corresponde a una antena tipo:",
-    "stemFigure": "images/quiz/quijotes-83-1641-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1641): El diagrama de radiación de la figura, corresponde a una antena tipo:",
-    "options": [
-      "Onmidireccional.",
-      "Dipolo.",
-      "Directiva.",
-      "Vertical de λ/4."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1641). Contrastar con BOE y convocatoria."
-  },
-  {
     "id": "quijotes-83-1667",
     "part": 1,
     "topicId": "antenas-prop",
@@ -6464,7 +13319,7 @@ export default [
     "topicId": "receptores-emisores",
     "stem": "En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de evitar la generación de interferencias?",
     "stemFigure": "images/quiz/quijotes-83-1676-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1676): En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes ",
+    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1676): En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes",
     "options": [
       "Control automático de frecuencia (CAF)",
       "Control automático de ganancia (CAG)",
@@ -6523,22 +13378,6 @@ export default [
     "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1679). Contrastar con BOE y convocatoria."
   },
   {
-    "id": "quijotes-83-1680",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se denomina el siguiente circuito eléctrico?",
-    "stemFigure": "images/quiz/quijotes-83-1680-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1680): ¿Cómo se denomina el siguiente circuito eléctrico?",
-    "options": [
-      "Generador de audiofrecuencia.",
-      "Detector de envolvente.",
-      "Conversor de audiofrecuencia.",
-      "Detector de fase."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1680). Contrastar con BOE y convocatoria."
-  },
-  {
     "id": "quijotes-83-1682",
     "part": 1,
     "topicId": "receptores-emisores",
@@ -6560,7 +13399,7 @@ export default [
     "topicId": "antenas-prop",
     "stem": "En este esquema de un receptor: ¿Qué circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de audio constante en el altavoz, independientemente del nivel de señal en antena?:",
     "stemFigure": "images/quiz/quijotes-83-1685-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1685): En este esquema de un receptor: ¿Qué circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de ",
+    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1685): En este esquema de un receptor: ¿Qué circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de",
     "options": [
       "Control automático de ganancia.",
       "Control automático de estabilidad.",
@@ -6649,22 +13488,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1710). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1736",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Si en el siguiente esquema el transmisor, la línea de alimentación y la antena tienen la misma impedancia a la frecuencia de trabajo, se puede afirmar que:",
-    "stemFigure": "images/quiz/quijotes-83-1736-original.jpg",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1736): Si en el siguiente esquema el transmisor, la línea de alimentación y la antena tienen la misma impedancia a la frecuenci",
-    "options": [
-      "La potencia reflejada es superior a la potencia directa.",
-      "La potencia directa es superior a la potencia reflejada.",
-      "La potencia reflejada es igual a la potencia directa.",
-      "Sólo existe potencia reflejada siendo nula la potencia directa."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1736). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1752",
@@ -8230,9 +15053,9 @@ export default [
     "topicId": "marco-normativo",
     "stem": "La señal de seguridad en radiotelefonía se compone:",
     "options": [
-      "De la palabra &quot;Securité&quot; repetida cinco veces.",
+      "De la palabra \"Securité\" repetida cinco veces.",
       "De la palabra Cuidado repetida cinco veces.",
-      "De la palabra &quot;Securité&quot; repetida tres veces.",
+      "De la palabra \"Securité\" repetida tres veces.",
       "De la palabra Cuidado repetida tres veces."
     ],
     "correctIndex": 2,
@@ -8762,10 +15585,10 @@ export default [
     "topicId": "operacion-seguridad",
     "stem": "La señal de urgencia en radiotelefonía se compone:",
     "options": [
-      "Del grupo &quot;urgence urgente&quot; repetido tres veces.",
-      "Del grupo &quot;pan pan&quot; repetido tres veces.",
-      "De la palabra &quot;urgente&quot; repetido tres veces.",
-      "De la palabra &quot;pan&quot; repetido tres veces."
+      "Del grupo \"urgence urgente\" repetido tres veces.",
+      "Del grupo \"pan pan\" repetido tres veces.",
+      "De la palabra \"urgente\" repetido tres veces.",
+      "De la palabra \"pan\" repetido tres veces."
     ],
     "correctIndex": 1,
     "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
@@ -9042,10 +15865,10 @@ export default [
     "topicId": "operacion-seguridad",
     "stem": "La llamada de socorro en radiotelefonía se compone de:",
     "options": [
-      "La palabra &quot;help&quot;, seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
-      "La palabra &quot;mayday&quot;, seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
-      "La palabra &quot;help&quot; (tres veces), seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
-      "La palabra &quot;mayday&quot; (tres veces), seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces)."
+      "La palabra \"help\", seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
+      "La palabra \"mayday\", seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
+      "La palabra \"help\" (tres veces), seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
+      "La palabra \"mayday\" (tres veces), seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces)."
     ],
     "correctIndex": 3,
     "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1978). Puede contener erratas; contrastar con BOE/convocatoria."
@@ -10037,7 +16860,7 @@ export default [
     "stem": "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     "options": [
       "En general está permitido la emisión de onda portadora no modulada.",
-      "Puede ser empleada arbitrariamente la señal de socorro &quot;SOS&quot;.",
+      "Puede ser empleada arbitrariamente la señal de socorro \"SOS\".",
       "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
       "A efectos de ensayos puede emitirse un distintivo de llamada engañoso."
     ],
@@ -10317,7 +17140,7 @@ export default [
     "stem": "Si una estación tiene el indicativo de llamada EF2GGG:",
     "options": [
       "Pertenece a un radioaficionado de la provincia de Cantabria.",
-      "Se le ha adjudicado al periódico de tirada nacional &quot;GGG&quot;, de ahí el sufijo.",
+      "Se le ha adjudicado al periódico de tirada nacional \"GGG\", de ahí el sufijo.",
       "Es concedido para uso temporal por un evento no especialmente significativo.",
       "Es de naturaleza indefinida."
     ],
@@ -10612,7 +17435,7 @@ export default [
     "options": [
       "Es aceptable dar únicamente la parte final (sufijo) del indicativo.",
       "Es aceptable inventar nuevas palabras para deletrear el indicativo.",
-      "Es recomendable finalizar la emisión con la palabra &quot;cambio&quot;.",
+      "Es recomendable finalizar la emisión con la palabra \"cambio\".",
       "Es aconsejable emitir sin comprobar que la frecuencia se está utilizando."
     ],
     "correctIndex": 2,
@@ -12234,12 +19057,6 @@ export default [
       "Un voltímetro"
     ],
     "correctIndex": 2,
-    "optionExplanations": [
-      "Un ondulador o inversor transforma corriente continua en alterna; no muestra las frecuencias que componen una emisión.",
-      "El osciloscopio muestra la señal en el dominio del tiempo: forma de onda, periodo y amplitud, pero no separa sus componentes por frecuencia.",
-      "El analizador de espectro representa nivel frente a frecuencia, por eso permite ver la portadora, bandas laterales, armónicos y señales no deseadas de una emisión.",
-      "El voltímetro mide tensión eléctrica; no sirve para descomponer una señal de radio en componentes espectrales."
-    ],
     "explain": "Las componentes espectrales son las partes de una emisión vistas por frecuencia: portadora, bandas laterales, armónicos o productos no deseados. Eso se observa con un analizador de espectro, no con un osciloscopio ni con un voltímetro. URE."
   },
   {

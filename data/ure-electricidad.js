@@ -1,13 +1,6 @@
 /**
- * Preguntas de práctica tomadas del listado público de la URE
- * «Electricidad y Radioelectricidad» (orden de aparición en la web).
- * Fuente: https://www.ure.es/examenes/electricidad-y-radioelectricidad/
- *
- * Las preguntas que dependen de esquemas o gráficas incluyen figura local
- * mediante `stemFigure`. Las respuestas marcadas se han contrastado con
- * criterio técnico habitual del temario; ante la duda, verifica con el libro oficial.
- *
- * Opcional: `stemFigure` ruta bajo `images/quiz/` (p. ej. SVG) y `stemFigureAlt` para accesibilidad.
+ * URE electricidad.
+ * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [
   {
@@ -22,8 +15,7 @@ export default [
       "La impedancia en el punto de alimentación es resistiva pura",
     ],
     correctIndex: 3,
-    explain:
-      "En resonancia la reactancia se anula: la impedancia de alimentación es prácticamente resistiva pura. Fuente: URE (práctica web).",
+    explain: "En resonancia la reactancia se anula: la impedancia de alimentación es prácticamente resistiva pura. Fuente: URE (práctica web).",
   },
   {
     id: "ure-p1-02",
@@ -39,25 +31,33 @@ export default [
       "La potencia reflejada es superior a la potencia directa",
     ],
     correctIndex: 0,
-    explain:
-      "Con adaptación de impedancias, transmisor, línea y antena presentan la misma impedancia a la frecuencia de trabajo. En esa situación no hay desadaptación apreciable y la potencia reflejada tiende a cero; por eso el vatímetro indica prácticamente solo potencia directa.",
+    explain: "Con adaptación de impedancias, transmisor, línea y antena presentan la misma impedancia a la frecuencia de trabajo. En esa situación no hay desadaptación apreciable y la potencia reflejada tiende a cero; por eso el vatímetro indica prácticamente solo potencia directa.",
   },
   {
     id: "ure-p1-03",
     part: 1,
     topicId: "receptores-emisores",
     stem: "Si queremos sintonizar una frecuencia de 7 MHz en un receptor que tiene una frecuencia intermedia de 9 MHz, ¿cuál deberá ser la frecuencia del oscilador local?:",
-    options: ["63 MHz", "79 MHz", "16 MHz", "8 MHz"],
+    options: [
+      "63 MHz",
+      "79 MHz",
+      "16 MHz",
+      "8 MHz",
+    ],
     correctIndex: 2,
-    explain:
-      "FI significa frecuencia intermedia: la frecuencia fija a la que el receptor traslada la señal para trabajarla mejor. En un mezclador clásico, |fLO − fRF| = fFI: oscilador local menos radiofrecuencia recibida debe dar 9 MHz. Por tanto, |fLO − 7| = 9 y la solución útil es fLO = 16 MHz.",
+    explain: "FI significa frecuencia intermedia: la frecuencia fija a la que el receptor traslada la señal para trabajarla mejor. En un mezclador clásico, |fLO − fRF| = fFI: oscilador local menos radiofrecuencia recibida debe dar 9 MHz. Por tanto, |fLO − 7| = 9 y la solución útil es fLO = 16 MHz.",
   },
   {
     id: "ure-p1-04",
     part: 1,
     topicId: "receptores-emisores",
     stem: "La lectura “10 dBµV”, es un valor de:",
-    options: ["Resistencia eléctrica", "Potencia eléctrica", "Intensidad de corriente eléctrica", "Tensión eléctrica"],
+    options: [
+      "Resistencia eléctrica",
+      "Potencia eléctrica",
+      "Intensidad de corriente eléctrica",
+      "Tensión eléctrica",
+    ],
     correctIndex: 3,
     explain: "dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente.",
   },
@@ -73,8 +73,7 @@ export default [
       "Incrementar el tiempo de transmisión sin calentamiento del equipo",
     ],
     correctIndex: 1,
-    explain:
-      "DSP significa procesador digital de señal. En un transceptor permite aplicar filtros digitales, reducción de ruido y procesado avanzado de recepción/transmisión; no aumenta por sí mismo la potencia ni elimina la ROE.",
+    explain: "DSP significa procesador digital de señal. En un transceptor permite aplicar filtros digitales, reducción de ruido y procesado avanzado de recepción/transmisión; no aumenta por sí mismo la potencia ni elimina la ROE.",
   },
   {
     id: "ure-p1-06",
@@ -95,10 +94,14 @@ export default [
     part: 1,
     topicId: "magnetismo-ondas",
     stem: "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué excursión de frecuencia máxima permite?:",
-    options: ["12 kHz", "50 kHz", "150 kHz", "La 1 MHz"],
+    options: [
+      "12 kHz",
+      "50 kHz",
+      "150 kHz",
+      "La 1 MHz",
+    ],
     correctIndex: 0,
-    explain:
-      "NBFM significa Narrow Band Frequency Modulation, es decir, modulación de frecuencia de banda estrecha. En el material de examen español suele asociarse a una excursión o desviación máxima de 12 kHz frente a la FM ancha.",
+    explain: "NBFM significa Narrow Band Frequency Modulation, es decir, modulación de frecuencia de banda estrecha. En el material de examen español suele asociarse a una excursión o desviación máxima de 12 kHz frente a la FM ancha.",
   },
   {
     id: "ure-p1-08",
@@ -114,14 +117,7 @@ export default [
       "A es la amplitud y B es el periodo de la señal",
     ],
     correctIndex: 1,
-    optionExplanations: [
-      "A no es frecuencia: en la pantalla del osciloscopio el eje horizontal representa tiempo. La frecuencia se calcula como 1/T a partir del periodo.",
-      "A mide un ciclo completo sobre el eje horizontal, por tanto es el periodo. B mide la separación vertical respecto al eje central, por tanto es la amplitud.",
-      "A no es amplitud porque no mide altura vertical; B tampoco es potencia, el osciloscopio muestra tensión frente a tiempo.",
-      "Esta opción invierte las magnitudes: A está en horizontal y corresponde al periodo; B está en vertical y corresponde a la amplitud.",
-    ],
-    explain:
-      "En un osciloscopio, el eje horizontal es tiempo y el eje vertical es tensión. En la figura incluida, A marca la distancia horizontal entre dos puntos equivalentes de la onda, por eso A es el periodo. B marca la altura vertical de la señal respecto al eje central, por eso B es la amplitud.",
+    explain: "En un osciloscopio, el eje horizontal es tiempo y el eje vertical es tensión. En la figura incluida, A marca la distancia horizontal entre dos puntos equivalentes de la onda, por eso A es el periodo. B marca la altura vertical de la señal respecto al eje central, por eso B es la amplitud.",
   },
   {
     id: "ure-p1-09",
@@ -205,8 +201,7 @@ export default [
       "El amplificador de audiofrecuencia",
     ],
     correctIndex: 0,
-    explain:
-      "RF significa radiofrecuencia. El margen dinámico suele quedar limitado en las primeras etapas de RF y mezcla, donde aparecen compresión e intermodulación. IP3 es el punto de intercepción de tercer orden, una medida usada para valorar esa intermodulación.",
+    explain: "RF significa radiofrecuencia. El margen dinámico suele quedar limitado en las primeras etapas de RF y mezcla, donde aparecen compresión e intermodulación. IP3 es el punto de intercepción de tercer orden, una medida usada para valorar esa intermodulación.",
   },
   {
     id: "ure-p1-15",
@@ -215,17 +210,26 @@ export default [
     stem: "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
     stemFigure: "images/quiz/ure-p1-15-original.jpg",
     stemFigureAlt: "Figura original FEDI-EA s-18: diagrama de radiación con dos líneas gruesas delimitando el ancho de haz.",
-    options: ["Polarización", "Relación delante-atrás", "Ancho de haz de radiación", "Región de campo radiado"],
+    options: [
+      "Polarización",
+      "Relación delante-atrás",
+      "Ancho de haz de radiación",
+      "Región de campo radiado",
+    ],
     correctIndex: 2,
-    explain:
-      "En el diagrama incluido, las dos líneas gruesas delimitan el lóbulo principal en sus puntos de media potencia. La separación angular entre esos puntos se llama ancho de haz de radiación o HPBW.",
+    explain: "En el diagrama incluido, las dos líneas gruesas delimitan el lóbulo principal en sus puntos de media potencia. La separación angular entre esos puntos se llama ancho de haz de radiación o HPBW.",
   },
   {
     id: "ure-p1-16",
     part: 1,
     topicId: "antenas-prop",
     stem: "Para que una antena que resuena en 29.900 kHz resuene en 28.500 kHz, deberemos:",
-    options: ["Acortarla", "Aumentar el ancho de banda", "Alargarla", "Colocarle un plano de tierra"],
+    options: [
+      "Acortarla",
+      "Aumentar el ancho de banda",
+      "Alargarla",
+      "Colocarle un plano de tierra",
+    ],
     correctIndex: 2,
     explain: "Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE.",
   },
@@ -236,10 +240,14 @@ export default [
     stem: "¿Qué valor de los siguientes corresponde a la “tensión eficaz” de la señal representada?:",
     stemFigure: "images/quiz/ure-p1-17-original.jpg",
     stemFigureAlt: "Figura original FEDI-EA aa-27: señal representada para calcular tensión eficaz.",
-    options: ["20 V", "7,071 V", "10 V", "3.14 V"],
+    options: [
+      "20 V",
+      "7,071 V",
+      "10 V",
+      "3.14 V",
+    ],
     correctIndex: 1,
-    explain:
-      "En la figura incluida, la señal sinusoidal tiene 10 V de valor pico. Para una senoide, la tensión eficaz es Vp/√2, por tanto 10/√2 ≈ 7,071 V.",
+    explain: "En la figura incluida, la señal sinusoidal tiene 10 V de valor pico. Para una senoide, la tensión eficaz es Vp/√2, por tanto 10/√2 ≈ 7,071 V.",
   },
   {
     id: "ure-p1-18",
@@ -253,8 +261,7 @@ export default [
       "No existe",
     ],
     correctIndex: 2,
-    explain:
-      "ROE significa relación de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la línea/antena. Si la adaptación es mala, aumenta la potencia reflejada y sube la ROE.",
+    explain: "ROE significa relación de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la línea/antena. Si la adaptación es mala, aumenta la potencia reflejada y sube la ROE.",
   },
   {
     id: "ure-p1-19",
@@ -275,7 +282,12 @@ export default [
     part: 1,
     topicId: "electricidad-basica",
     stem: "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
-    options: ["Corriente eléctrica", "Diferencia de potencial eléctrico", "Potencia eléctrica", "Longitud de onda"],
+    options: [
+      "Corriente eléctrica",
+      "Diferencia de potencial eléctrico",
+      "Potencia eléctrica",
+      "Longitud de onda",
+    ],
     correctIndex: 2,
     explain: "dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica.",
   },
@@ -284,23 +296,26 @@ export default [
     part: 1,
     topicId: "receptores-emisores",
     stem: "Las componentes espectrales de una determinada emisión se ven con:",
-    options: ["Un ondulador", "Un osciloscopio", "Un analizador de espectro", "Un voltímetro"],
-    correctIndex: 2,
-    optionExplanations: [
-      "Un ondulador o inversor transforma corriente continua en alterna; no muestra las frecuencias que componen una emisión.",
-      "El osciloscopio muestra la señal en el dominio del tiempo: forma de onda, periodo y amplitud, pero no separa sus componentes por frecuencia.",
-      "El analizador de espectro representa nivel frente a frecuencia, por eso permite ver la portadora, bandas laterales, armónicos y señales no deseadas de una emisión.",
-      "El voltímetro mide tensión eléctrica; no sirve para descomponer una señal de radio en componentes espectrales.",
+    options: [
+      "Un ondulador",
+      "Un osciloscopio",
+      "Un analizador de espectro",
+      "Un voltímetro",
     ],
-    explain:
-      "Las componentes espectrales son las partes de una emisión vistas por frecuencia: portadora, bandas laterales, armónicos o productos no deseados. Eso se observa con un analizador de espectro, no con un osciloscopio ni con un voltímetro. URE.",
+    correctIndex: 2,
+    explain: "Las componentes espectrales son las partes de una emisión vistas por frecuencia: portadora, bandas laterales, armónicos o productos no deseados. Eso se observa con un analizador de espectro, no con un osciloscopio ni con un voltímetro. URE.",
   },
   {
     id: "ure-p1-22",
     part: 1,
     topicId: "electricidad-basica",
     stem: "La unidad de medida de intensidad eléctrica es el:",
-    options: ["Voltio", "Vatio", "Ohmio", "Amperio"],
+    options: [
+      "Voltio",
+      "Vatio",
+      "Ohmio",
+      "Amperio",
+    ],
     correctIndex: 3,
     explain: "La intensidad de corriente se mide en amperios. URE.",
   },
@@ -337,7 +352,12 @@ export default [
     part: 1,
     topicId: "antenas-prop",
     stem: "La forma más común de propagación en VHF y UHF es por:",
-    options: ["Onda de superficie", "Onda directa", "Onda ionosférica", "Onda reflejada"],
+    options: [
+      "Onda de superficie",
+      "Onda directa",
+      "Onda ionosférica",
+      "Onda reflejada",
+    ],
     correctIndex: 1,
     explain: "En VHF/UHF domina la propagación en espacio libre / línea de visión (onda directa). URE.",
   },
@@ -346,7 +366,12 @@ export default [
     part: 1,
     topicId: "magnetismo-ondas",
     stem: "Las ondas de radio son de naturaleza:",
-    options: ["Eléctrica", "Magnética", "Electromagnética", "Acústica"],
+    options: [
+      "Eléctrica",
+      "Magnética",
+      "Electromagnética",
+      "Acústica",
+    ],
     correctIndex: 2,
     explain: "Las ondas de radio son ondas electromagnéticas. URE.",
   },
@@ -364,8 +389,7 @@ export default [
       "Control automático de audio",
     ],
     correctIndex: 0,
-    explain:
-      "AGC significa control automático de ganancia. En el esquema incluido, el bloque con interrogantes debe compensar variaciones de señal para mantener el audio aproximadamente constante; por eso ajusta la ganancia según el nivel recibido.",
+    explain: "AGC significa control automático de ganancia. En el esquema incluido, el bloque con interrogantes debe compensar variaciones de señal para mantener el audio aproximadamente constante; por eso ajusta la ganancia según el nivel recibido.",
   },
   {
     id: "ure-p1-28",
@@ -386,7 +410,12 @@ export default [
     part: 1,
     topicId: "antenas-prop",
     stem: "De las siguientes bandas de frecuencias la más adecuada para comunicaciones por satélite se corresponde con:",
-    options: ["HF", "MF", "LF", "VHF"],
+    options: [
+      "HF",
+      "MF",
+      "LF",
+      "VHF",
+    ],
     correctIndex: 3,
     explain: "Los satélites de radioafición usan bandas VHF/UHF y superiores; entre las opciones, VHF es la plausible. URE.",
   },

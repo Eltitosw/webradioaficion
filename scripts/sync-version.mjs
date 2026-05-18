@@ -19,5 +19,5 @@ const build = m[1];
 let html = fs.readFileSync(indexPath, "utf8");
 html = html.replace(/href="styles\.css(\?v=[^"]*)?"/, `href="styles.css?v=${build}"`);
 html = html.replace(/src="app\.js(\?v=[^"]*)?"/, `src="app.js?v=${build}"`);
-fs.writeFileSync(indexPath, html);
+fs.writeFileSync(indexPath, html, { encoding: "utf8" });
 console.log(`sync-version: index.html actualizado con v=${build}`);

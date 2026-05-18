@@ -1,14 +1,6 @@
 /**
- * Radio Club Quijotes (EA3RCQ) — tests en línea.
- * Generado por `node scripts/build-quijotes.mjs` (no editar el bloque masivo a mano).
- * Rondas de muestreo por quiz: 60 (cada ronda ~30 preguntas aleatorias del pool).
- * Fuentes:
- *   - https://radioclubquijotes.org/qsm_quiz/comunicaciones/ (quiz 85, comunicaciones)
- *   - https://radioclubquijotes.org/qsm_quiz/electricidad-y-radioelectricidad/ (quiz 1, electricidad-y-radioelectricidad)
- *   - https://radioclubquijotes.org/qsm_quiz/radioelectricidad-correccion-inmediata/ (quiz 83, radioelectricidad-correccion-inmediata)
- *   - https://radioclubquijotes.org/qsm_quiz/reglamentacion-correccion-inmediata/ (quiz 84, reglamentacion-correccion-inmediata)
- *   - https://radioclubquijotes.org/qsm_quiz/reglamentacion/ (quiz 14, reglamentacion)
- * Se excluyen ítems con referencias FCC/ARRL u otros países, y enunciados que exigen figura.
+ * Quijotes EA3RCQ.
+ * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [
   {
@@ -23,7 +15,7 @@ export default [
       "50V",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2113",
@@ -37,7 +29,7 @@ export default [
       "Virtual HF",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2116",
@@ -51,7 +43,7 @@ export default [
       "3-30 GHz",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2118",
@@ -65,7 +57,7 @@ export default [
       "10 W",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2119",
@@ -79,7 +71,7 @@ export default [
       "RC4",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2123",
@@ -93,7 +85,7 @@ export default [
       "4",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2123). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2123). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2126",
@@ -107,7 +99,7 @@ export default [
       "Comunicación cifrada",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2128",
@@ -121,7 +113,7 @@ export default [
       "Modificar la potencia",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2129",
@@ -135,7 +127,7 @@ export default [
       "Una frecuencia",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2137",
@@ -149,7 +141,7 @@ export default [
       "Una llamada de emergencia",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2141",
@@ -163,7 +155,7 @@ export default [
       "Preparar",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2143",
@@ -177,7 +169,7 @@ export default [
       "Sujetar",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2143). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2143). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2154",
@@ -191,7 +183,7 @@ export default [
       "Repetir mensaje",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2158",
@@ -205,7 +197,7 @@ export default [
       "Un equipo de exterior",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2161",
@@ -219,7 +211,7 @@ export default [
       "Solo en UHF",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2162",
@@ -233,7 +225,7 @@ export default [
       "Selector de canal",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2165",
@@ -247,7 +239,7 @@ export default [
       "Reducir interferencias",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2166",
@@ -261,7 +253,7 @@ export default [
       "Poner música",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2168",
@@ -275,7 +267,7 @@ export default [
       "Un repetidor",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2174",
@@ -289,7 +281,7 @@ export default [
       "Informal",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2175",
@@ -303,7 +295,7 @@ export default [
       "Repetir mucho",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2179",
@@ -317,7 +309,7 @@ export default [
       "Numeración de calle",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2181",
@@ -331,7 +323,7 @@ export default [
       "Hacia el mar",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2182",
@@ -345,7 +337,7 @@ export default [
       "Hacia el mar",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2186",
@@ -359,7 +351,7 @@ export default [
       "Que identifica emergencias",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2188",
@@ -373,7 +365,7 @@ export default [
       "Aumentar potencia automaticamente",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2189",
@@ -387,7 +379,7 @@ export default [
       "Micrófono",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2190",
@@ -401,7 +393,7 @@ export default [
       "Grid Power Source",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2197",
@@ -415,7 +407,7 @@ export default [
       "Orientación hacia el mar",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2199",
@@ -429,7 +421,7 @@ export default [
       "Una calle principal",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2111",
@@ -443,7 +435,7 @@ export default [
       "100 ohmios",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2111). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2111). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2120",
@@ -457,7 +449,7 @@ export default [
       "Data Mobile Receiver",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2121",
@@ -471,7 +463,7 @@ export default [
       "APCO25",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2122",
@@ -485,7 +477,7 @@ export default [
       "4",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2122). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2122). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2127",
@@ -499,7 +491,7 @@ export default [
       "Una forma de modulación",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2131",
@@ -513,7 +505,7 @@ export default [
       "Código QR",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2131). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2131). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2132",
@@ -527,7 +519,7 @@ export default [
       "Signal",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2133",
@@ -541,7 +533,7 @@ export default [
       "Neptune",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2133). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2133). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2134",
@@ -555,7 +547,7 @@ export default [
       "Copiado",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2140",
@@ -569,7 +561,7 @@ export default [
       "Una llamada múltiple",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2144",
@@ -583,7 +575,7 @@ export default [
       "911",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2151",
@@ -597,7 +589,7 @@ export default [
       "Time Multiplex Operation",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2155",
@@ -611,7 +603,7 @@ export default [
       "Dirección de tráfico",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2167",
@@ -625,7 +617,7 @@ export default [
       "Con modismos",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2169",
@@ -639,7 +631,7 @@ export default [
       "Un mensaje cifrado",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2172",
@@ -653,7 +645,7 @@ export default [
       "Digital modulada",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2176",
@@ -667,7 +659,7 @@ export default [
       "Hablar rápido",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2178",
@@ -681,7 +673,7 @@ export default [
       "Se mezcla con otras voces",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2180",
@@ -695,7 +687,7 @@ export default [
       "Circular en rotonda",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2110",
@@ -709,7 +701,7 @@ export default [
       "Nada",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2112",
@@ -723,7 +715,7 @@ export default [
       "Upper HF",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2115",
@@ -737,7 +729,7 @@ export default [
       "3-30 GHz",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2115). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2115). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2130",
@@ -751,7 +743,7 @@ export default [
       "Llamada múltiple",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2138",
@@ -765,7 +757,7 @@ export default [
       "Llamada de confirmación",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2139",
@@ -779,7 +771,7 @@ export default [
       "Una llamada múltiple",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2145",
@@ -793,7 +785,7 @@ export default [
       "No moverlo innecesariamente",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2146",
@@ -807,7 +799,7 @@ export default [
       "Punto de luz secundaria",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2148",
@@ -821,7 +813,7 @@ export default [
       "No hablar",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2149",
@@ -835,7 +827,7 @@ export default [
       "No hablarles",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2153",
@@ -849,7 +841,7 @@ export default [
       "Equipo para medir cobertura",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2160",
@@ -863,7 +855,7 @@ export default [
       "Un transmisor fijo",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2173",
@@ -877,7 +869,7 @@ export default [
       "Banda VHF",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2183",
@@ -891,7 +883,7 @@ export default [
       "Calle en obras",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2194",
@@ -905,7 +897,7 @@ export default [
       "Gritar pidiendo ayuda",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2196",
@@ -919,7 +911,7 @@ export default [
       "Orientación hacia el río",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2108",
@@ -933,7 +925,7 @@ export default [
       "Un amplificador de señal",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2108). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2108). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2124",
@@ -947,7 +939,7 @@ export default [
       "Send",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2135",
@@ -961,7 +953,7 @@ export default [
       "En obsoluto",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2147",
@@ -975,7 +967,7 @@ export default [
       "Solo con niños",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2150",
@@ -989,7 +981,7 @@ export default [
       "Direct Mobile Output",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2157",
@@ -1003,7 +995,7 @@ export default [
       "Reiniciar comunicaciones",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2159",
@@ -1017,7 +1009,7 @@ export default [
       "Antena",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2171",
@@ -1031,7 +1023,7 @@ export default [
       "Se pone en analógico",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2177",
@@ -1045,7 +1037,7 @@ export default [
       "Vocalizar",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2184",
@@ -1059,7 +1051,7 @@ export default [
       "Indicación de peligro",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2200",
@@ -1073,7 +1065,7 @@ export default [
       "Reemplazan a las direcciones oficiales",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2117",
@@ -1087,7 +1079,7 @@ export default [
       "100 W",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2125",
@@ -1101,7 +1093,7 @@ export default [
       "Un amplificador",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2142",
@@ -1115,7 +1107,7 @@ export default [
       "Ayudar",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2142). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2142). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2136",
@@ -1129,7 +1121,7 @@ export default [
       "Una llamada de emergencia",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2156",
@@ -1143,7 +1135,7 @@ export default [
       "Avisar de un corte",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2164",
@@ -1157,7 +1149,7 @@ export default [
       "Cambio de antena",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2185",
@@ -1171,7 +1163,7 @@ export default [
       "Que identifica solo vehículos",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2195",
@@ -1185,7 +1177,7 @@ export default [
       "Cambiar de canal para no interrumpir.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2187",
@@ -1199,7 +1191,7 @@ export default [
       "Que identifica emergencias",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2191",
@@ -1213,7 +1205,7 @@ export default [
       "En clave",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2163",
@@ -1227,7 +1219,7 @@ export default [
       "Plomo-ácido",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2192",
@@ -1241,7 +1233,7 @@ export default [
       "Banales",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-85-2152",
@@ -1255,7 +1247,7 @@ export default [
       "18 W",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0004",
@@ -1269,7 +1261,7 @@ export default [
       "Banda lateral única",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 4). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 4). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0052",
@@ -1283,7 +1275,7 @@ export default [
       "Ninguna de las anteriores respuestas es correcta.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 52). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 52). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0057",
@@ -1297,7 +1289,7 @@ export default [
       "La potencia que suministra el transmisor en ausencia de modulación.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 57). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 57). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0063",
@@ -1311,7 +1303,7 @@ export default [
       "La suma de las intensidades de cada una de las ramas.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 63). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 63). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0064",
@@ -1325,7 +1317,7 @@ export default [
       "Acústica.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 64). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 64). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0100",
@@ -1339,7 +1331,7 @@ export default [
       "La impedancia es constante con la frecuencia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 100). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 100). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0102",
@@ -1353,7 +1345,7 @@ export default [
       "La etapa de potencia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 102). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 102). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0112",
@@ -1367,7 +1359,7 @@ export default [
       "Depende de la potencia del equipo y se expresa en dBm.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 112). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 112). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0130",
@@ -1381,7 +1373,7 @@ export default [
       "25 MHz.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 130). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 130). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0133",
@@ -1395,7 +1387,7 @@ export default [
       "Atenuación de espacio libre.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 133). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 133). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0135",
@@ -1409,7 +1401,7 @@ export default [
       "El número de espiras del primario y del secundario.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 135). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 135). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0139",
@@ -1423,7 +1415,7 @@ export default [
       "Ser utilizado para comunicaciones de corta distancia.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 139). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 139). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0181",
@@ -1437,7 +1429,7 @@ export default [
       "Tiene varios elementos denominados parásitos.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 181). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 181). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0190",
@@ -1451,7 +1443,7 @@ export default [
       "Disponen de rejilla.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 190). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 190). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0208",
@@ -1465,7 +1457,7 @@ export default [
       "No se debe tocar una antena en transmisión.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 208). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 208). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0209",
@@ -1479,7 +1471,7 @@ export default [
       "Ninguna de las respuestas anteriores es correcta.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 209). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 209). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0211",
@@ -1493,7 +1485,7 @@ export default [
       "Longitud de onda.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 211). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 211). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0240",
@@ -1507,7 +1499,7 @@ export default [
       "10 MHz.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 240). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 240). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0250",
@@ -1521,7 +1513,7 @@ export default [
       "Evitar emisiones interferentes alrededor de la frecuencia de trabajo.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 250). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 250). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0253",
@@ -1535,7 +1527,7 @@ export default [
       "Transforman la energía eléctrica en magnética.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 253). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 253). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0265",
@@ -1549,7 +1541,7 @@ export default [
       "Nulos",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 265). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 265). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0269",
@@ -1563,7 +1555,7 @@ export default [
       "Facultad para seleccionar una frecuencia eliminando las demás",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 269). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 269). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1558",
@@ -1577,7 +1569,7 @@ export default [
       "Las condiciones de propagación",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1558). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1558). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1571",
@@ -1591,7 +1583,7 @@ export default [
       "Es superior o inferior a la de entrada según los casos.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1571). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1571). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2213",
@@ -1605,7 +1597,7 @@ export default [
       "Amplitud modulada",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0003",
@@ -1619,7 +1611,7 @@ export default [
       "1 amperio / 1 voltio",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 3). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 3). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0009",
@@ -1633,7 +1625,7 @@ export default [
       "Habrá que adaptar con un balun 1:1",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 9). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 9). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0019",
@@ -1647,7 +1639,7 @@ export default [
       "Cuarta línea de color",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 19). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 19). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0049",
@@ -1661,7 +1653,7 @@ export default [
       "Ninguna de las respuestas anteriores es correcta.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 49). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 49). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0060",
@@ -1675,7 +1667,7 @@ export default [
       "Troposfera.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 60). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 60). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0067",
@@ -1689,7 +1681,7 @@ export default [
       "Balun.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 67). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 67). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0096",
@@ -1703,7 +1695,7 @@ export default [
       "Tensión eléctrica.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 96). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 96). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0106",
@@ -1717,7 +1709,7 @@ export default [
       "Sólo se deben instalar los de tipo semiconductor.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 106). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 106). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0111",
@@ -1731,7 +1723,7 @@ export default [
       "Nada de lo anterior.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 111). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 111). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0125",
@@ -1745,7 +1737,7 @@ export default [
       "Siempre vale 1.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 125). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 125). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0131",
@@ -1759,7 +1751,7 @@ export default [
       "Certificado de Alta Garantía.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 131). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 131). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0150",
@@ -1773,7 +1765,7 @@ export default [
       "Balun",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 150). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 150). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0191",
@@ -1787,7 +1779,7 @@ export default [
       "Potencia.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 191). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 191). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0221",
@@ -1801,7 +1793,7 @@ export default [
       "Estabilidad.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 221). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 221). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0226",
@@ -1815,7 +1807,7 @@ export default [
       "Fuente, base y emisor.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 226). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 226). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0233",
@@ -1829,7 +1821,7 @@ export default [
       "Las siglas AM, significan modulación de armónicos.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0242",
@@ -1843,7 +1835,7 @@ export default [
       "Anula la salida del receptor cuando se recibe una señal con ruido muy alto.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 242). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 242). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0244",
@@ -1857,7 +1849,7 @@ export default [
       "La frecuencia con la que debe cortarse la guía para la transmisión.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 244). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 244). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0249",
@@ -1871,7 +1863,7 @@ export default [
       "Hertzio: Frecuencia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 249). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 249). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0251",
@@ -1885,7 +1877,7 @@ export default [
       "Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 251). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 251). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0254",
@@ -1899,7 +1891,7 @@ export default [
       "300.000 m/h.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 254). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 254). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0268",
@@ -1913,7 +1905,7 @@ export default [
       "La ganancia de modulación",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 268). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 268). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1559",
@@ -1927,7 +1919,7 @@ export default [
       "Es aquella que contiene el 99% de la potencia emitida por el transmisor",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1559). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1559). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2101",
@@ -1941,7 +1933,7 @@ export default [
       "Se hace variar la frecuencia portadora por medio una señal de audio.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2101). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2101). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2103",
@@ -1955,7 +1947,7 @@ export default [
       "Su inestabilidad frente a la radiofrecuencia",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2103). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2103). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0018",
@@ -1969,7 +1961,7 @@ export default [
       "Diez mil ohmios",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 18). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 18). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0046",
@@ -1985,7 +1977,7 @@ export default [
       "Condensos",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 46). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 46). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0062",
@@ -1999,7 +1991,7 @@ export default [
       "Utilizar para su conexión cable blindado.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 62). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 62). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0066",
@@ -2013,7 +2005,7 @@ export default [
       "Demoduladores y redes inductivas.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 66). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 66). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0095",
@@ -2027,7 +2019,7 @@ export default [
       "Inexistente.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 95). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 95). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0117",
@@ -2041,7 +2033,7 @@ export default [
       "El índice de modulación es superior al 100%.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0172",
@@ -2055,7 +2047,7 @@ export default [
       "Inexistente.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 172). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 172). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0179",
@@ -2069,7 +2061,7 @@ export default [
       "40 m",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 179). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 179). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0187",
@@ -2083,7 +2075,7 @@ export default [
       "La tensión eléctrica",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 187). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 187). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0198",
@@ -2097,7 +2089,7 @@ export default [
       "Intensidad.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 198). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 198). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0206",
@@ -2111,7 +2103,7 @@ export default [
       "30 Faradios (F)",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 206). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 206). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0214",
@@ -2125,7 +2117,7 @@ export default [
       "8MHz.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 214). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 214). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0224",
@@ -2139,7 +2131,7 @@ export default [
       "Un tipo de antena.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 224). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 224). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0243",
@@ -2153,7 +2145,7 @@ export default [
       "Una varilla con varios tramos.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 243). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 243). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0260",
@@ -2167,7 +2159,7 @@ export default [
       "El número de kiloherzios que ocupa la banda de trabajo del equipo",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 260). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 260). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1562",
@@ -2181,7 +2173,7 @@ export default [
       "Amperio = Culombio / Segundo",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1562). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1562). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2218",
@@ -2195,7 +2187,7 @@ export default [
       "22.000 W",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2218). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2218). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2221",
@@ -2209,7 +2201,7 @@ export default [
       "La tolerancia del ±5 %",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2221). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2221). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0048",
@@ -2223,7 +2215,7 @@ export default [
       "Desconectar las antenas y la toma de tierra.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 48). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 48). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0053",
@@ -2237,7 +2229,7 @@ export default [
       "Excesivo nivel de señal en la antena.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 53). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 53). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0069",
@@ -2251,7 +2243,7 @@ export default [
       "Cero.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 69). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 69). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0108",
@@ -2265,7 +2257,7 @@ export default [
       "Que el circuito sea de corriente continua.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 108). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 108). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0110",
@@ -2279,7 +2271,7 @@ export default [
       "Energía química en potencial negativo.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 110). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 110). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0123",
@@ -2293,7 +2285,7 @@ export default [
       "Es independiente de la frecuencia.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 123). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 123). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0129",
@@ -2307,7 +2299,7 @@ export default [
       "La portadora está desfasada 180º respecto a la única banda lateral.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 129). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 129). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0142",
@@ -2321,7 +2313,7 @@ export default [
       "Es un duplicador de frecuencias digitales.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 142). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 142). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0144",
@@ -2335,7 +2327,7 @@ export default [
       "El oscilador de cuarzo.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 144). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 144). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0204",
@@ -2349,7 +2341,7 @@ export default [
       "Se debe apagar la instalación de ICT.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 204). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 204). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0217",
@@ -2363,7 +2355,7 @@ export default [
       "VHF.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 217). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 217). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0223",
@@ -2377,7 +2369,7 @@ export default [
       "Es el valor indicativo de la diferencia de fase de la sinusoide.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 223). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 223). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0229",
@@ -2391,7 +2383,7 @@ export default [
       "Componentes de campo ajustados a impedancia nula.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 229). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 229). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0239",
@@ -2405,7 +2397,7 @@ export default [
       "No es correcta ninguna de las anteriores respuestas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 239). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 239). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0245",
@@ -2419,7 +2411,7 @@ export default [
       "Todos los anteriores.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 245). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 245). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0270",
@@ -2433,7 +2425,7 @@ export default [
       "Elementos que viven a costa de los demás",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 270). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 270). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1564",
@@ -2447,7 +2439,7 @@ export default [
       "Igual a la potencia media del transmisor.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1564). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1564). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0006",
@@ -2461,7 +2453,7 @@ export default [
       "Conversión",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 6). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 6). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0008",
@@ -2475,7 +2467,7 @@ export default [
       "Un buen conductor",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 8). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 8). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0047",
@@ -2489,7 +2481,7 @@ export default [
       "Parte del transmisor que reduce los ruidos.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 47). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 47). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0104",
@@ -2503,7 +2495,7 @@ export default [
       "SLI (Sistema Libre de Interferencias).",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 104). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 104). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0115",
@@ -2517,7 +2509,7 @@ export default [
       "Sólo cuando hay interferencias.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 115). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 115). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0116",
@@ -2531,7 +2523,7 @@ export default [
       "Realimentar la señal de salida con parte de la señal de entrada.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 116). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 116). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0124",
@@ -2545,7 +2537,7 @@ export default [
       "Siempre es 0.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 124). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 124). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0148",
@@ -2559,7 +2551,7 @@ export default [
       "Realimentación",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 148). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 148). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0162",
@@ -2573,7 +2565,7 @@ export default [
       "Una reducción del ruido captado por la antena.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 162). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 162). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0169",
@@ -2587,7 +2579,7 @@ export default [
       "Es igual al valor de la menor de las resistencias.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 169). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 169). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0174",
@@ -2601,7 +2593,7 @@ export default [
       "La capacidad de rechazar frecuencias superiores a la frecuencia intermedia.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 174). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 174). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0176",
@@ -2615,7 +2607,7 @@ export default [
       "125 ohmios.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 176). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 176). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0177",
@@ -2629,7 +2621,7 @@ export default [
       "AM",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 177). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 177). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0234",
@@ -2643,7 +2635,7 @@ export default [
       "La suma de las capacidades individuales.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 234). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 234). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0248",
@@ -2657,7 +2649,7 @@ export default [
       "Dispersión por propagación.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 248). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 248). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0261",
@@ -2671,7 +2663,7 @@ export default [
       "No amacena nada",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 261). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 261). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1561",
@@ -2685,7 +2677,7 @@ export default [
       "En la etapa de radiofrecuencia",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1561). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1561). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2205",
@@ -2699,7 +2691,7 @@ export default [
       "Tiene garantizada una velocidad mínima real de 2 Mbps en todo momento.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2205). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2205). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0017",
@@ -2713,7 +2705,7 @@ export default [
       "Mantener constante el valor de la frecuencia intermedia",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 17). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 17). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0061",
@@ -2727,7 +2719,7 @@ export default [
       "Incrementar el tiempo de transmisión sin calentamiento del equipo.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 61). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 61). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0097",
@@ -2741,7 +2733,7 @@ export default [
       "Redes de desplazamiento de fase.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 97). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 97). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0113",
@@ -2755,7 +2747,7 @@ export default [
       "Cuanto más elevado sea su valor, mayor rendimiento se obtiene en la transmisión.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 113). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 113). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0122",
@@ -2769,7 +2761,7 @@ export default [
       "Capacímetro.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 122). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 122). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0141",
@@ -2783,7 +2775,7 @@ export default [
       "Las emisiones parásitas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 141). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 141). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0200",
@@ -2797,7 +2789,7 @@ export default [
       "Dos bobinas acopladas.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 200). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 200). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0203",
@@ -2811,7 +2803,7 @@ export default [
       "UHF",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 203). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 203). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0227",
@@ -2825,7 +2817,7 @@ export default [
       "Un altavoz de lujo.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 227). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 227). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0228",
@@ -2839,7 +2831,7 @@ export default [
       "P = E² / R",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 228). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 228). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0246",
@@ -2853,7 +2845,7 @@ export default [
       "Solo tienen dipolo y directores.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 246). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 246). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0262",
@@ -2867,7 +2859,7 @@ export default [
       "100 voltios",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 262). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 262). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0271",
@@ -2881,7 +2873,7 @@ export default [
       "La orientación del campo magnético transmitido",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 271). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 271). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0002",
@@ -2895,7 +2887,7 @@ export default [
       "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0058",
@@ -2909,7 +2901,7 @@ export default [
       "Potencia de emisión.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 58). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 58). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0121",
@@ -2923,7 +2915,7 @@ export default [
       "En serie, la resistencia total siempre es mayor que cualquiera de ellas.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 121). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 121). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0138",
@@ -2937,7 +2929,7 @@ export default [
       "Un polímetro digital.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 138). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 138). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0140",
@@ -2951,7 +2943,7 @@ export default [
       "Receptores convencionales.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 140). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 140). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0170",
@@ -2965,7 +2957,7 @@ export default [
       "La tensión se mide en amperios.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 170). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 170). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0188",
@@ -2979,7 +2971,7 @@ export default [
       "El consumo de potencia de alimentación.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 188). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 188). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0193",
@@ -2993,7 +2985,7 @@ export default [
       "Un receptor de reserva conectado en paralelo con la antena.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 193). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 193). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0199",
@@ -3007,7 +2999,7 @@ export default [
       "Filtro de línea de desacoplo.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 199). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 199). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0267",
@@ -3021,7 +3013,7 @@ export default [
       "Incrementar el margen de sintonía de un amplificador",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 267). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 267). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1565",
@@ -3035,7 +3027,7 @@ export default [
       "Generar la señal, modular y amplificar.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1565). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1565). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1569",
@@ -3049,7 +3041,7 @@ export default [
       "El de la menor de las pilas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1569). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1569). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1570",
@@ -3063,7 +3055,7 @@ export default [
       "Onda de horizonte visto.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1570). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1570). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2207",
@@ -3077,7 +3069,7 @@ export default [
       "La tensión del conjunto es cero.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2207). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2207). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2220",
@@ -3091,7 +3083,7 @@ export default [
       "Mesosfera",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2220). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2220). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0015",
@@ -3105,7 +3097,7 @@ export default [
       "No existe",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 15). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 15). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0098",
@@ -3119,7 +3111,7 @@ export default [
       "Su capacidad para rechazar señales fuertes.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 98). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 98). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0101",
@@ -3134,7 +3126,7 @@ export default [
       "VHF",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 101). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 101). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0120",
@@ -3148,7 +3140,7 @@ export default [
       "LF",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 120). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 120). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0195",
@@ -3162,7 +3154,7 @@ export default [
       "Un voltio no se puede medir nunca.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 195). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 195). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0201",
@@ -3176,7 +3168,7 @@ export default [
       "15 vatios.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 201). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 201). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0216",
@@ -3190,7 +3182,7 @@ export default [
       "Limitar radiaciones indeseadas.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 216). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 216). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0222",
@@ -3204,7 +3196,7 @@ export default [
       "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 222). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 222). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0232",
@@ -3218,7 +3210,7 @@ export default [
       "Para igualar la señal de salida a la de entrada.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 232). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 232). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2100",
@@ -3232,7 +3224,7 @@ export default [
       "Intermodulación",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2100). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2100). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0054",
@@ -3246,7 +3238,7 @@ export default [
       "No se puede calcular.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 54). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 54). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0105",
@@ -3260,7 +3252,7 @@ export default [
       "Sólo hay que tenerlo en cuenta en las bandas de VHF y superiores.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 105). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 105). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0163",
@@ -3274,7 +3266,7 @@ export default [
       "Un valor de impedancia próximo a 50Ω y un diagrama de radiación prácticamente omnidireccional.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 163). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 163). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0183",
@@ -3288,7 +3280,7 @@ export default [
       "Rayos gamma.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 183). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 183). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0196",
@@ -3302,7 +3294,7 @@ export default [
       "Tener un sintonizador muy fino.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 196). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 196). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0272",
@@ -3316,7 +3308,7 @@ export default [
       "Igual a la de la antena y a la del transmisor",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 272). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 272). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0065",
@@ -3330,7 +3322,7 @@ export default [
       "La resistencia eléctrica aumenta.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 65). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 65). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0068",
@@ -3344,7 +3336,7 @@ export default [
       "Nunca podrá conectarse una resistencia en SHUNT.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 68). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 68). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0109",
@@ -3358,7 +3350,7 @@ export default [
       "Un dato irrelevante para filtro.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 109). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 109). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0134",
@@ -3372,7 +3364,7 @@ export default [
       "40",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 134). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 134). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0192",
@@ -3386,7 +3378,7 @@ export default [
       "Comunicárselo al aeropuerto.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 192). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 192). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0197",
@@ -3400,7 +3392,7 @@ export default [
       "No se puede calcular.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 197). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 197). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0212",
@@ -3414,7 +3406,7 @@ export default [
       "Al oscilador local.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 212). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 212). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1566",
@@ -3428,7 +3420,7 @@ export default [
       "Las de bocina.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1566). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1566). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1568",
@@ -3442,7 +3434,7 @@ export default [
       "Sus inducciones se suman.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1568). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1568). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0001",
@@ -3455,7 +3447,7 @@ export default [
       "Receptor con dos entradas de antenas",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0012",
@@ -3469,7 +3461,7 @@ export default [
       "La resistencia eléctrica es inmune a los cambios de temperatura",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0044",
@@ -3483,7 +3475,7 @@ export default [
       "Ninguna de las anteriores respuestas es correcta.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 44). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 44). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0114",
@@ -3497,7 +3489,7 @@ export default [
       "1, 2, 3, 4.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 114). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 114). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0126",
@@ -3511,7 +3503,7 @@ export default [
       "Moduladores de banda lateral.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 126). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 126). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0127",
@@ -3525,7 +3517,7 @@ export default [
       "Modulada en banda lateral única.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 127). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 127). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0258",
@@ -3539,7 +3531,7 @@ export default [
       "Directamente proporcional al producto de las cargas",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 258). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 258). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0005",
@@ -3553,7 +3545,7 @@ export default [
       "100 pF",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 5). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 5). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0007",
@@ -3567,7 +3559,7 @@ export default [
       "Faradios",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 7). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 7). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0128",
@@ -3581,7 +3573,7 @@ export default [
       "Es constante en un determinado medio.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 128). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 128). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0180",
@@ -3595,7 +3587,7 @@ export default [
       "Duplica la potencia que se le entrega",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 180). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 180). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0194",
@@ -3609,7 +3601,7 @@ export default [
       "Colocarle un plano de tierra.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 194). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 194). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0210",
@@ -3623,7 +3615,7 @@ export default [
       "La capacidad del circuito disminuye.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 210). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 210). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0225",
@@ -3637,7 +3629,7 @@ export default [
       "A menor alcance mayor será la polarización de la señal.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 225). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 225). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0263",
@@ -3651,7 +3643,7 @@ export default [
       "No es necesario conectarlo a tierra",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 263). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 263). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0051",
@@ -3665,7 +3657,7 @@ export default [
       "Un factor que sólo se aplica en corriente continua.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 51). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 51). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0055",
@@ -3679,7 +3671,7 @@ export default [
       "Alimenta el transmisor.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 55). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 55). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0147",
@@ -3693,7 +3685,7 @@ export default [
       "Refracción.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 147). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 147). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0178",
@@ -3707,7 +3699,7 @@ export default [
       "(f1 - f2) / (f1 + f2)",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 178). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 178). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0219",
@@ -3721,7 +3713,7 @@ export default [
       "20.2 W",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 219). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 219). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0241",
@@ -3735,7 +3727,7 @@ export default [
       "No se pueden utilizar.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 241). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 241). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0264",
@@ -3749,7 +3741,7 @@ export default [
       "Mayor alcance que el meramente visual entre las antenas transmisora y receptora",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 264). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 264). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2209",
@@ -3763,7 +3755,7 @@ export default [
       "Reactancia.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2209). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2209). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0020",
@@ -3777,7 +3769,7 @@ export default [
       "La relación entre el número de espiras del primario y el número de espiras del secundario.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 20). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 20). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0137",
@@ -3791,7 +3783,7 @@ export default [
       "HF.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 137). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 137). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0213",
@@ -3805,7 +3797,7 @@ export default [
       "De envolvente.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 213). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 213). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0266",
@@ -3819,7 +3811,7 @@ export default [
       "Convierten la señal recibida a una de frecuencia fija denominada frecuencia imagen",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 266). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 266). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0118",
@@ -3833,7 +3825,7 @@ export default [
       "Hacia tierra.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 118). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 118). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0185",
@@ -3847,7 +3839,7 @@ export default [
       "VHF y superiores.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 185). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 185). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0045",
@@ -3861,7 +3853,7 @@ export default [
       "La dependencia del margen de frecuencias que pueda trabajar la antena sin acoplador",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 45). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 45). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0059",
@@ -3875,7 +3867,7 @@ export default [
       "Suprimiendo la portadora.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 59). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 59). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0103",
@@ -3889,7 +3881,7 @@ export default [
       "Troposfera - estratosfera - ionosfera",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 103). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 103). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0132",
@@ -3903,7 +3895,7 @@ export default [
       "La distorsión es independiente de la clase de amplificador.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 132). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 132). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0218",
@@ -3917,7 +3909,7 @@ export default [
       "La salida de un amplificador de potencia, nunca va seguida de filtros destinados a eliminar los armónicos.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 218). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 218). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0016",
@@ -3931,7 +3923,7 @@ export default [
       "Constante",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 16). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 16). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0143",
@@ -3945,7 +3937,7 @@ export default [
       "Su valor disminuye al aumentar la temperatura.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 143). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 143). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0136",
@@ -3959,7 +3951,7 @@ export default [
       "Onda reflejada.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 136). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 136). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0230",
@@ -3973,7 +3965,7 @@ export default [
       "Aisladores para corrientes inversas.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 230). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 230). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0259",
@@ -3987,7 +3979,7 @@ export default [
       "Nada",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 259). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 259). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0175",
@@ -4001,7 +3993,7 @@ export default [
       "1",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 175). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 175). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0207",
@@ -4015,7 +4007,7 @@ export default [
       "Sólo se pueden conectar en paralelo.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 207). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 207). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0056",
@@ -4029,7 +4021,7 @@ export default [
       "Toma a tierra y condensadores.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 56). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 56). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0168",
@@ -4043,7 +4035,7 @@ export default [
       "Con una carga fiticia.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 168). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 168). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0247",
@@ -4057,7 +4049,7 @@ export default [
       "Es el medio de propagación característico en las grandes ciudades.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 247). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 247). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0013",
@@ -4071,7 +4063,7 @@ export default [
       "Amperio",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 13). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 13). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0166",
@@ -4085,7 +4077,7 @@ export default [
       "Eólico.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 166). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 166). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0202",
@@ -4099,7 +4091,7 @@ export default [
       "Haya ondas estacionarias.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 202). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 202). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0160",
@@ -4113,7 +4105,7 @@ export default [
       "A Filtro, B Transformador, C Regulador, D Rectificador.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 160). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 160). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0186",
@@ -4127,7 +4119,7 @@ export default [
       "Clase de emisión.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 186). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 186). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0220",
@@ -4141,7 +4133,7 @@ export default [
       "1",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 220). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 220). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1560",
@@ -4155,7 +4147,7 @@ export default [
       "0 voltios",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1560). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1560). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0182",
@@ -4169,7 +4161,7 @@ export default [
       "A frecuencias muy altas se pierden las ondas espaciales.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 182). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 182). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0099",
@@ -4183,7 +4175,7 @@ export default [
       "Proporcionan directividad.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 99). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 99). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0205",
@@ -4197,7 +4189,7 @@ export default [
       "Se debe apagar la instalación de ICT.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 205). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 205). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-2102",
@@ -4211,7 +4203,7 @@ export default [
       "Colector seguidor.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2102). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2102). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-0050",
@@ -4225,7 +4217,7 @@ export default [
       "Alto nivel de ruido térmico.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 50). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 50). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-1-1567",
@@ -4239,7 +4231,7 @@ export default [
       "Amarillo.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1567). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1567). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1801",
@@ -4253,7 +4245,7 @@ export default [
       "En Europa sólo se exige en España y Portugal.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1801). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1801). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1826",
@@ -4267,7 +4259,7 @@ export default [
       "200W.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1826). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1826). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1841",
@@ -4281,7 +4273,7 @@ export default [
       "Seis semanas.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1841). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1841). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1844",
@@ -4295,7 +4287,7 @@ export default [
       "QRS.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1847",
@@ -4309,7 +4301,7 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1860",
@@ -4323,7 +4315,7 @@ export default [
       "QSW.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1860). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1860). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1868",
@@ -4337,7 +4329,7 @@ export default [
       "Usos temporales de relevancia internacional.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1873",
@@ -4351,7 +4343,7 @@ export default [
       "Intermitente.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1873). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1873). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1885",
@@ -4365,7 +4357,7 @@ export default [
       "Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1887",
@@ -4379,7 +4371,7 @@ export default [
       "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1887). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1887). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1918",
@@ -4387,13 +4379,13 @@ export default [
     topicId: "marco-normativo",
     stem: "La señal de seguridad en radiotelefonía se compone:",
     options: [
-      "De la palabra &quot;Securité&quot; repetida cinco veces.",
+      "De la palabra \"Securité\" repetida cinco veces.",
       "De la palabra Cuidado repetida cinco veces.",
-      "De la palabra &quot;Securité&quot; repetida tres veces.",
+      "De la palabra \"Securité\" repetida tres veces.",
       "De la palabra Cuidado repetida tres veces.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1919",
@@ -4407,7 +4399,7 @@ export default [
       "No pueden ser reutilizados.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1941",
@@ -4421,7 +4413,7 @@ export default [
       "Permite obtener autorización de radioaficionado en cualquier país que aplique la recomendación CEPT T/R 61-02.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1941). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1941). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1954",
@@ -4435,7 +4427,7 @@ export default [
       "Tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1954). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1954). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1956",
@@ -4443,13 +4435,13 @@ export default [
     topicId: "operacion-seguridad",
     stem: "La señal de urgencia en radiotelefonía se compone:",
     options: [
-      "Del grupo &quot;urgence urgente&quot; repetido tres veces.",
-      "Del grupo &quot;pan pan&quot; repetido tres veces.",
-      "De la palabra &quot;urgente&quot; repetido tres veces.",
-      "De la palabra &quot;pan&quot; repetido tres veces.",
+      "Del grupo \"urgence urgente\" repetido tres veces.",
+      "Del grupo \"pan pan\" repetido tres veces.",
+      "De la palabra \"urgente\" repetido tres veces.",
+      "De la palabra \"pan\" repetido tres veces.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1960",
@@ -4463,7 +4455,7 @@ export default [
       "Normas básicas del régimen de prensa, radio y televisión.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1960). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1960). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1961",
@@ -4477,7 +4469,7 @@ export default [
       "Las antenas y elementos anejos, y en particular, soportes, anclajes y riostras deberán ser de materiales endebles y de fácil instalación para facilitar su posterior desmontaje.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1961). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1961). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1971",
@@ -4491,7 +4483,7 @@ export default [
       "Deberá cambiarse siempre el prefijo del distintivo de llamada.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1971). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1971). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1999",
@@ -4505,7 +4497,7 @@ export default [
       "No permiten la utilización de equipos de construcción propia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1999). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1999). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2003",
@@ -4519,7 +4511,7 @@ export default [
       "November",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2003). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2003). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2037",
@@ -4533,7 +4525,7 @@ export default [
       "No hay planes de banda en la Región 3.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2037). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2037). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2044",
@@ -4547,7 +4539,7 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2044). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2044). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2049",
@@ -4561,7 +4553,7 @@ export default [
       "Deberá comunicarlo a la Dirección General de Telecomunicaciones y Tecnología de la Información.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2049). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2049). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2066",
@@ -4575,7 +4567,7 @@ export default [
       "En la transmisión entre estaciones de radioaficionado está permitido la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2066). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2066). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2067",
@@ -4589,7 +4581,7 @@ export default [
       "La utilización para fines distintos de los que se establecen en la resolución de la autorización.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2067). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2067). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2071",
@@ -4603,7 +4595,7 @@ export default [
       "Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2071). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2071). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2074",
@@ -4617,7 +4609,7 @@ export default [
       "No será necesario tener en cuenta las características mecánicas de la misma.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2074). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2074). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2081",
@@ -4631,7 +4623,7 @@ export default [
       "Basa su funcionamiento en la emisión automática de señales de identificación.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2081). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2081). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2082",
@@ -4645,7 +4637,7 @@ export default [
       "Se encuentra dentro de la clasificación de estaciones automáticas desatendidas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2082). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2082). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2104",
@@ -4659,7 +4651,7 @@ export default [
       "1000 w",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1805",
@@ -4673,7 +4665,7 @@ export default [
       "Cualquier titular de autorización de radioaficionado, con permiso de su propietario.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1805). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1805). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1806",
@@ -4687,7 +4679,7 @@ export default [
       "Ninguna.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1806). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1806). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1817",
@@ -4701,7 +4693,7 @@ export default [
       "Periodo de validez.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1823",
@@ -4715,7 +4707,7 @@ export default [
       "No se aplican en países del Hemisferio Sur.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1823). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1823). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1835",
@@ -4729,7 +4721,7 @@ export default [
       "Permiso de un radio club.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1835). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1835). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1837",
@@ -4743,7 +4735,7 @@ export default [
       "QSW.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1837). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1837). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1852",
@@ -4757,7 +4749,7 @@ export default [
       "No es obligatorio disponer de estación fija.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1852). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1852). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1857",
@@ -4771,7 +4763,7 @@ export default [
       "El incumplimiento reiterado de los requerimientos de información formulados por el órgano competente de la Administración del Estado en el ejercicio de sus funciones.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1857). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1857). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1863",
@@ -4785,7 +4777,7 @@ export default [
       "Ocho semanas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1863). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1863). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1875",
@@ -4799,7 +4791,7 @@ export default [
       "Comunicarlo por escrito a la propiedad del inmueble o, en su caso, de la comunidad de propietarios.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1875). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1875). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1900",
@@ -4813,7 +4805,7 @@ export default [
       "Deberán ser previamente autorizadas por el Ayuntamiento de la localidad.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1900). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1900). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1901",
@@ -4827,7 +4819,7 @@ export default [
       "Cuadro Nacional de Atribución de Frecuencias.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1911",
@@ -4841,7 +4833,7 @@ export default [
       "Realizar emisiones si el país visitado ha adoptado la Recomendación CEPT T/R61-01.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1911). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1911). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1912",
@@ -4855,7 +4847,7 @@ export default [
       "La división en Regiones sólo se aplica al continente americano.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1912). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1912). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1935",
@@ -4869,7 +4861,7 @@ export default [
       "Que posee antena y fuente de energía incorporada al propio equipo.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1935). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1935). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1942",
@@ -4883,7 +4875,7 @@ export default [
       "Una estación de aficionado es una estación del Servicio de Aficionados.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1942). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1942). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1944",
@@ -4897,7 +4889,7 @@ export default [
       "Siete.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1944). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1944). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1965",
@@ -4911,7 +4903,7 @@ export default [
       "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1965). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1965). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1984",
@@ -4925,7 +4917,7 @@ export default [
       "Quince días.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1984). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1984). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1989",
@@ -4939,7 +4931,7 @@ export default [
       "Para uso temporal en eventos de carácter autonómico o local.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1989). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1989). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1996",
@@ -4953,7 +4945,7 @@ export default [
       "Nunca se fijarán directamente a la obra civil.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1998",
@@ -4967,7 +4959,7 @@ export default [
       "Siempre y cuando no este en contradicción con la nuestra.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1998). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1998). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2021",
@@ -4981,7 +4973,7 @@ export default [
       "Es la cifra 0 de uso exclusiva para distintivos temporales",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2027",
@@ -4995,7 +4987,7 @@ export default [
       "Es que un titular de licencia CEPT extranjero está emitiendo en España",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2073",
@@ -5009,7 +5001,7 @@ export default [
       "500.000 Euros",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2073). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2073). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2089",
@@ -5023,7 +5015,7 @@ export default [
       "Dos semanas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2089). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2089). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2095",
@@ -5037,7 +5029,7 @@ export default [
       "Deben ser aprobados por la Dirección General de Telecomunicaciones.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2095). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2095). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1811",
@@ -5051,7 +5043,7 @@ export default [
       "Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1811). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1811). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1816",
@@ -5065,7 +5057,7 @@ export default [
       "Esta abreviatura no significa nada.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1816). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1816). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1845",
@@ -5079,7 +5071,7 @@ export default [
       "Certificado de empadronamiento.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1845). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1845). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1866",
@@ -5093,7 +5085,7 @@ export default [
       "EPA, EQZ, EAA.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1866). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1866). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1869",
@@ -5107,7 +5099,7 @@ export default [
       "Estación de control.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1889",
@@ -5121,7 +5113,7 @@ export default [
       "Quebec.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1889). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1889). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1908",
@@ -5135,7 +5127,7 @@ export default [
       "Poseer una walkie.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1908). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1908). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1914",
@@ -5149,7 +5141,7 @@ export default [
       "Ninguna de las anteriores.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1914). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1914). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1924",
@@ -5163,7 +5155,7 @@ export default [
       "Nueve horas.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1932",
@@ -5177,7 +5169,7 @@ export default [
       "Verificar que el tráfco de información se realice conforme a lo previsto por la normativa vigente al respecto.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1932). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1932). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1938",
@@ -5191,7 +5183,7 @@ export default [
       "Las transmisiones entre estaciones de aficionado no deberán limitarse a mensajes de naturaleza técnica relativos a ensayos y a observaciones de carácter puramente personal.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1938). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1938). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1952",
@@ -5205,7 +5197,7 @@ export default [
       "Se le autorizaría uno temporal de periodo ilimitado.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1968",
@@ -5219,7 +5211,7 @@ export default [
       "Disponer de hasta un máximo de cinco distintivos de llamada.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1968). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1968). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1982",
@@ -5233,7 +5225,7 @@ export default [
       "Sancionable según la reglamentación vigente.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1982). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1982). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1985",
@@ -5247,7 +5239,7 @@ export default [
       "Vid.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1985). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1985). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1991",
@@ -5261,7 +5253,7 @@ export default [
       "Radiobaliza.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1993",
@@ -5275,7 +5267,7 @@ export default [
       "Estación de mediciones de potencia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1993). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1993). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2004",
@@ -5289,7 +5281,7 @@ export default [
       "Canarias se encuentra en la Región 2",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2023",
@@ -5303,7 +5295,7 @@ export default [
       "No se puede adjudicar a estación colectiva alguna",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2030",
@@ -5317,7 +5309,7 @@ export default [
       "El Reglamento de Aficionados no contempla tal extremo",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2030). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2030). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2034",
@@ -5331,7 +5323,7 @@ export default [
       "La banda 7100 - 7200 kHz no está atribuida a ningún servicio",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2041",
@@ -5345,7 +5337,7 @@ export default [
       "Acuse recibo.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2041). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2041). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2042",
@@ -5359,7 +5351,7 @@ export default [
       "Al comienzo y final de cada emisión.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2042). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2042). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2048",
@@ -5373,7 +5365,7 @@ export default [
       "La potencia máxima de las estaciones de aficionado será fijada por la Unión Internacional de Telecomunicaciones (ITU).",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2048). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2048). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2052",
@@ -5387,7 +5379,7 @@ export default [
       "Anclaje.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2052). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2052). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2064",
@@ -5401,7 +5393,7 @@ export default [
       "Barco",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2064). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2064). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2203",
@@ -5415,7 +5407,7 @@ export default [
       "156,525 MHz",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1812",
@@ -5429,7 +5421,7 @@ export default [
       "El deletreo de distintivos no está permitido.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1812). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1812). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1820",
@@ -5443,7 +5435,7 @@ export default [
       "Utilizada únicamente a bordo de barcos.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1820). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1820). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1849",
@@ -5457,7 +5449,7 @@ export default [
       "No tienen limitaciones geográficas.Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1849). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1849). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1851",
@@ -5471,7 +5463,7 @@ export default [
       "Seguir emitiendo.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1851). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1851). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1858",
@@ -5485,7 +5477,7 @@ export default [
       "Roma",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1858). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1858). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1872",
@@ -5499,7 +5491,7 @@ export default [
       "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1872). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1872). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1874",
@@ -5513,7 +5505,7 @@ export default [
       "La abreviatura métrica B.m.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1893",
@@ -5527,7 +5519,7 @@ export default [
       "Doce palabras por minuto.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1898",
@@ -5541,7 +5533,7 @@ export default [
       "Documento que acredite estar inscrito en un asociación de Radioaficionado.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1898). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1898). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1902",
@@ -5555,7 +5547,7 @@ export default [
       "No existen.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1905",
@@ -5569,7 +5561,7 @@ export default [
       "Se convocan por Resolución de la Secretaría de Estado de Telecomunicaciones y para la Sociedad de la Información.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1905). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1905). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1916",
@@ -5583,7 +5575,7 @@ export default [
       "12 dB.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1916). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1916). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1917",
@@ -5597,7 +5589,7 @@ export default [
       "Solo puede instalarla la A.E.R. (Agencia Estatal de Radiocomunicaciones).",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1925",
@@ -5611,7 +5603,7 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1966",
@@ -5625,7 +5617,7 @@ export default [
       "Deberá obtener un permiso especial de la Inspección de Telecomunicaciones.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1966). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1966). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2026",
@@ -5639,7 +5631,7 @@ export default [
       "El titular de una licencia de estación fija de aficionado siempre precisa autorización previa administrativa para utilizarla como portable",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2026). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2026). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2032",
@@ -5653,7 +5645,7 @@ export default [
       "La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2032). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2032). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2035",
@@ -5667,7 +5659,7 @@ export default [
       "En duplex",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2035). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2035). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2038",
@@ -5681,7 +5673,7 @@ export default [
       "Nunca se usan en VHF.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2038). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2038). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2051",
@@ -5695,7 +5687,7 @@ export default [
       "Golf, oscar, lima, foxtrot.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2051). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2051). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2061",
@@ -5709,7 +5701,7 @@ export default [
       "Permite obtener licencia en cualquier país del mundo.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2061). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2061). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2094",
@@ -5719,11 +5711,11 @@ export default [
     options: [
       "Es aceptable dar únicamente la parte final (sufijo) del indicativo.",
       "Es aceptable inventar nuevas palabras para deletrear el indicativo.",
-      "Es recomendable finalizar la emisión con la palabra &quot;cambio&quot;.",
+      "Es recomendable finalizar la emisión con la palabra \"cambio\".",
       "Es aconsejable emitir sin comprobar que la frecuencia se está utilizando.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1809",
@@ -5737,7 +5729,7 @@ export default [
       "Granada.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1809). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1809). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1840",
@@ -5751,7 +5743,7 @@ export default [
       "Los que comienzan por: EEE, EDD, EFF.v",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1840). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1840). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1850",
@@ -5765,7 +5757,7 @@ export default [
       "Milimétricas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1850). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1850). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1853",
@@ -5779,7 +5771,7 @@ export default [
       "Su nueva provincia de residencia se encuentra en distinta Comunidad Autónoma.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1854",
@@ -5793,7 +5785,7 @@ export default [
       "Únicamente si efectúa emisiones en frecuencias atribuidas al Servicio de Aficionados por Satélite.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1854). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1854). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1899",
@@ -5807,7 +5799,7 @@ export default [
       "100 W.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1899). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1899). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1906",
@@ -5821,7 +5813,7 @@ export default [
       "El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1909",
@@ -5835,7 +5827,7 @@ export default [
       "Dado que el número de estaciones automáticas desatendidas es limitado, no es posible su acceso si el radioaficionado no pertenece a un Radio Club.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1909). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1909). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1936",
@@ -5849,7 +5841,7 @@ export default [
       "Únicamente requiere ser notificado al Ayuntamiento de la localidad.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1936). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1936). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1946",
@@ -5863,7 +5855,7 @@ export default [
       "QRP.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1946). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1946). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2007",
@@ -5877,7 +5869,7 @@ export default [
       "La participación en concursos internacionales de alta competitividad",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2011",
@@ -5891,7 +5883,7 @@ export default [
       "No existen",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2025",
@@ -5905,7 +5897,7 @@ export default [
       "Diez años",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2028",
@@ -5919,7 +5911,7 @@ export default [
       "Queda inhabilitado a perpetuidad a ser radioaficionado",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2028). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2028). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2040",
@@ -5933,7 +5925,7 @@ export default [
       "Mike, Alfa, Romeo.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2040). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2040). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2054",
@@ -5947,7 +5939,7 @@ export default [
       "Cualquier otro titular de autorización de radioaficionado.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2054). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2054). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2068",
@@ -5961,7 +5953,7 @@ export default [
       "Ávila.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2068). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2068). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2070",
@@ -5975,7 +5967,7 @@ export default [
       "431,050 - 431,825 MHz",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2091",
@@ -5989,7 +5981,7 @@ export default [
       "Murcia.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2091). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2091). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1807",
@@ -6003,7 +5995,7 @@ export default [
       "Únicamente si emite con más de 500 W de potencia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1807). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1807). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1814",
@@ -6017,7 +6009,7 @@ export default [
       "Siempre.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1814). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1814). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1822",
@@ -6031,7 +6023,7 @@ export default [
       "Cualquier comunicación.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1829",
@@ -6045,7 +6037,7 @@ export default [
       "Seguir emitiendo.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1856",
@@ -6059,7 +6051,7 @@ export default [
       "Banda lateral única con portadora reducida.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1856). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1856). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1861",
@@ -6073,7 +6065,7 @@ export default [
       "EA+EB+EC.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1861). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1861). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1865",
@@ -6087,7 +6079,7 @@ export default [
       "Sancionable según la reglamentación vigente.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1865). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1865). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1910",
@@ -6101,7 +6093,7 @@ export default [
       "Los elementos radiantes nunca deben sobrepasar el espacio de los inmuebles donde están situados.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1926",
@@ -6115,7 +6107,7 @@ export default [
       "Transmisor.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1926). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1926). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1934",
@@ -6129,7 +6121,7 @@ export default [
       "Que se haya examinado en España exclusivamente de la Reglamentación Nacional.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1934). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1934). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1940",
@@ -6143,7 +6135,7 @@ export default [
       "Se asignarán para eventos especiales de relevancia internacional.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1940). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1940). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1943",
@@ -6157,7 +6149,7 @@ export default [
       "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1943). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1943). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1953",
@@ -6171,7 +6163,7 @@ export default [
       "Si su titular crea interferencias.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1958",
@@ -6185,7 +6177,7 @@ export default [
       "Acredite documentalmente su condición de residente en España.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1958). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1958). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1976",
@@ -6199,7 +6191,7 @@ export default [
       "Únicamente países de la Comunidad Europea.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1976). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1976). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1979",
@@ -6213,7 +6205,7 @@ export default [
       "AD",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1979). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1979). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1986",
@@ -6227,7 +6219,7 @@ export default [
       "Seis días naturales consecutivos.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1986). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1986). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2014",
@@ -6241,7 +6233,7 @@ export default [
       "Informar sobre la intensidad de la señal recibida",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2014). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2014). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2022",
@@ -6255,7 +6247,7 @@ export default [
       "Se podrá desmontar la antena para realizar obras previo pago de una indemnización al titular de la antena",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2031",
@@ -6269,7 +6261,7 @@ export default [
       "No se exigen requisitos previos para solicitarla",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2031). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2031). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2046",
@@ -6283,7 +6275,7 @@ export default [
       "Sea de un corresponsal extranjero.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2046). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2046). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2084",
@@ -6297,7 +6289,7 @@ export default [
       "A los tres años.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2084). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2084). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1803",
@@ -6311,7 +6303,7 @@ export default [
       "Empieza siempre por la letra Q.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1803). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1803). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1830",
@@ -6325,7 +6317,7 @@ export default [
       "Fox, India, Nada.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1830). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1830). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1846",
@@ -6339,7 +6331,7 @@ export default [
       "30 a 300 MHz.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1846). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1846). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1883",
@@ -6353,7 +6345,7 @@ export default [
       "Si la cota de su emplazamiento es inferior a 500 metros.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1890",
@@ -6367,7 +6359,7 @@ export default [
       "Pan.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1890). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1890). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1915",
@@ -6381,7 +6373,7 @@ export default [
       "Charter, Inca, Delta.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1915). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1915). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1959",
@@ -6395,7 +6387,7 @@ export default [
       "T/R 61-03",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1959). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1959). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1969",
@@ -6409,7 +6401,7 @@ export default [
       "En España, únicamente se puede expedir para ciudadanos extranjeros.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1969). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1969). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1983",
@@ -6423,7 +6415,7 @@ export default [
       "El operador no viene obligado a cumplir el Reglamento sobre perturbaciones parasitas en vigor.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1983). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1983). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1988",
@@ -6437,7 +6429,7 @@ export default [
       "Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1988). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1988). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2002",
@@ -6451,7 +6443,7 @@ export default [
       "QSA.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2002). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2002). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2008",
@@ -6465,7 +6457,7 @@ export default [
       "Romeo, Echo, Yuma",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2008). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2008). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2029",
@@ -6479,7 +6471,7 @@ export default [
       "Se requiere que el interesado sea socio de una Asociación colectiva de Radioaficionados",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2029). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2029). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2056",
@@ -6493,7 +6485,7 @@ export default [
       "Presentar la autorización de radioaficionado, si las autoridades se lo exigen.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2056). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2056). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2076",
@@ -6507,7 +6499,7 @@ export default [
       "Tiene por objeto ampliar el alcance de las comunicaciones.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2076). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2076). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2085",
@@ -6521,7 +6513,7 @@ export default [
       "La Resolución de 20 de septiembre de 2006, de la Secretaría de Estado de Telecomunicaciones y para la Sociedad de la Información, por la que se dictan Instrucciones para el desarrollo y aplicación del Reglamento de uso del dominio público radioeléctrico por aficionados.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2085). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2085). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2088",
@@ -6535,7 +6527,7 @@ export default [
       "En ella ha de constar, entre otros datos, el distintivo de llamada y su periodo de validez.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2088). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2088). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1855",
@@ -6549,7 +6541,7 @@ export default [
       "Se compromete a emitir únicamente en VHF.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1855). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1855). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1888",
@@ -6563,7 +6555,7 @@ export default [
       "Neun.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1888). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1888). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1895",
@@ -6577,7 +6569,7 @@ export default [
       "Sustituyen a la normativa nacional.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1895). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1895). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1929",
@@ -6591,7 +6583,7 @@ export default [
       "En general se permite que entre estaciones se transmitan comunicaciones en nombre de terceras personas.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1929). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1929). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1967",
@@ -6605,7 +6597,7 @@ export default [
       "Cualquier titular de licencia CEPT.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1974",
@@ -6619,7 +6611,7 @@ export default [
       "Tango, Oslo, Pepe.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1974). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1974). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1977",
@@ -6633,7 +6625,7 @@ export default [
       "A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1977). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1977). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1981",
@@ -6647,7 +6639,7 @@ export default [
       "No hay planes de banda de la IARU para la Región 1.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1981). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1981). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2039",
@@ -6661,7 +6653,7 @@ export default [
       "Unicamente los producidos por un mantenimiento defectuoso.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2083",
@@ -6675,7 +6667,7 @@ export default [
       "Únicamente en Europa.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2083). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2083). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1804",
@@ -6689,7 +6681,7 @@ export default [
       "Medio año.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1804). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1804). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1831",
@@ -6703,7 +6695,7 @@ export default [
       "AR.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1831). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1831). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1834",
@@ -6717,7 +6709,7 @@ export default [
       "En España se deben aplicar los planes de banda de la IARU para la Región 2.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1834). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1834). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1878",
@@ -6731,7 +6723,7 @@ export default [
       "Colectiva de aficionado.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1891",
@@ -6745,7 +6737,7 @@ export default [
       "Se trata de una conexión con interferencias.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1891). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1891). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1903",
@@ -6759,7 +6751,7 @@ export default [
       "En el momento de presentar la memoria descriptiva de la estación.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1903). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1903). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1921",
@@ -6773,7 +6765,7 @@ export default [
       "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1921). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1921). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1949",
@@ -6787,7 +6779,7 @@ export default [
       "Cualquier telecomunicación que permita la tolerancia de frecuencias.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1949). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1949). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1951",
@@ -6801,7 +6793,7 @@ export default [
       "Su titular tendrá que superar un examen especial.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1951). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1951). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1963",
@@ -6815,7 +6807,7 @@ export default [
       "Conjunto de emisiones de banda estrecha.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1980",
@@ -6829,7 +6821,7 @@ export default [
       "Solo el Diploma de Operador.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2062",
@@ -6843,7 +6835,7 @@ export default [
       "Radiocomunicación.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2062). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2062). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1808",
@@ -6857,7 +6849,7 @@ export default [
       "Actualmente está prohibida su utilización.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1808). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1808). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1832",
@@ -6871,7 +6863,7 @@ export default [
       "MAYDAY (una vez), la palabra AQUI o DE y el distintivo de llamada (tres veces).",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1870",
@@ -6885,7 +6877,7 @@ export default [
       "La señal de seguridad Securite.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1870). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1870). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1871",
@@ -6899,7 +6891,7 @@ export default [
       "Respetar las diferencias de atribuciones de frecuencias en los servicios de aficionados en las tres Regiones de la Unión Internacional de Telecomunicaciones.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1871). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1871). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1904",
@@ -6913,7 +6905,7 @@ export default [
       "Almería.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1920",
@@ -6927,7 +6919,7 @@ export default [
       "Indicando el distintivo de llamada solicitado.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1927",
@@ -6941,7 +6933,7 @@ export default [
       "VHF.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1927). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1927). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1955",
@@ -6955,7 +6947,7 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1995",
@@ -6969,7 +6961,7 @@ export default [
       "No está permitida.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1995). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1995). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1997",
@@ -6983,7 +6975,7 @@ export default [
       "Estación repetidora de gran alcance.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1997). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1997). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2010",
@@ -6997,7 +6989,7 @@ export default [
       "Informar sobre la intensidad de la señal recibida",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2010). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2010). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2013",
@@ -7011,7 +7003,7 @@ export default [
       "El propietario de la vivienda si esta es de alquiler",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2013). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2013). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2020",
@@ -7025,7 +7017,7 @@ export default [
       "Permite operar permanentemente en cualquier país CEPT",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2020). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2020). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2057",
@@ -7039,7 +7031,7 @@ export default [
       "Solo en caso de emergencia",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2075",
@@ -7053,7 +7045,7 @@ export default [
       "Las posibles pérdidas de radiofrecuencia.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2075). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2075). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2092",
@@ -7067,7 +7059,7 @@ export default [
       "Seguridad.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2092). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2092). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2093",
@@ -7081,7 +7073,7 @@ export default [
       "Cuando haya que presentar memoria descriptiva.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2093). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2093). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1833",
@@ -7095,7 +7087,7 @@ export default [
       "La autorización del Ministerio de Industria, Turismo y Comercio para instalar la antena.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1839",
@@ -7109,7 +7101,7 @@ export default [
       "El código de deletreo ICAO.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1880",
@@ -7123,7 +7115,7 @@ export default [
       "Tres en VHF y dos en UHF.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1880). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1880). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1897",
@@ -7137,7 +7129,7 @@ export default [
       "20 W.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1897). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1897). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1931",
@@ -7151,7 +7143,7 @@ export default [
       "Exclusivamente, en las bandas atribuidas al servicio por Satélite.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1931). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1931). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1933",
@@ -7165,7 +7157,7 @@ export default [
       "Por periodos, hasta un máximo de 20 días al año.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1937",
@@ -7179,7 +7171,7 @@ export default [
       "La exención de presentar memoria descriptiva de la instalación.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1962",
@@ -7193,7 +7185,7 @@ export default [
       "Se trata de un titular de licencia CEPT extranjero emitiendo en España.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1994",
@@ -7207,7 +7199,7 @@ export default [
       "/MM.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2009",
@@ -7221,7 +7213,7 @@ export default [
       "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2009). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2009). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2015",
@@ -7235,7 +7227,7 @@ export default [
       "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2015). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2015). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2214",
@@ -7249,7 +7241,7 @@ export default [
       "LSB y AM",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1819",
@@ -7263,7 +7255,7 @@ export default [
       "Obtiene la nacionalidad del país donde resida.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1862",
@@ -7277,7 +7269,7 @@ export default [
       "Por todo radioaficionado que opera en España.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1886",
@@ -7291,7 +7283,7 @@ export default [
       "Unicamente puede emitir en frecuencias de HF.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1886). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1886). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1964",
@@ -7305,7 +7297,7 @@ export default [
       "En ningún caso, teniendo en cuenta que la autorización de radioaficionado ya lleva asociado un distintivo de llamada.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2033",
@@ -7319,7 +7311,7 @@ export default [
       "Siempre y cuando no esté en contradicción con la nuestra",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2033). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2033). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2045",
@@ -7333,7 +7325,7 @@ export default [
       "Aquella que permite su utilización a nivel internacional.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2045). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2045). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2072",
@@ -7342,12 +7334,12 @@ export default [
     stem: "Si una estación tiene el indicativo de llamada EF2GGG:",
     options: [
       "Pertenece a un radioaficionado de la provincia de Cantabria.",
-      "Se le ha adjudicado al periódico de tirada nacional &quot;GGG&quot;, de ahí el sufijo.",
+      "Se le ha adjudicado al periódico de tirada nacional \"GGG\", de ahí el sufijo.",
       "Es concedido para uso temporal por un evento no especialmente significativo.",
       "Es de naturaleza indefinida.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2072). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2072). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2077",
@@ -7361,7 +7353,7 @@ export default [
       "Media.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2077). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2077). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2087",
@@ -7375,7 +7367,7 @@ export default [
       "Habilita para hecer uso común del espectro radioeléctrico.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2087). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2087). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1828",
@@ -7389,7 +7381,7 @@ export default [
       "Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1828). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1828). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1892",
@@ -7403,7 +7395,7 @@ export default [
       "Nunca.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2036",
@@ -7417,7 +7409,7 @@ export default [
       "Eventos especiales de relevancia internacional.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2036). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2036). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2053",
@@ -7431,7 +7423,7 @@ export default [
       "Es a la vez una estación portable de aficionado.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2058",
@@ -7445,7 +7437,7 @@ export default [
       "Una estación portable de aficionado es a la vez estación móvil.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2058). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2058). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1810",
@@ -7459,7 +7451,7 @@ export default [
       "25 W.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1950",
@@ -7473,7 +7465,7 @@ export default [
       "Tres letras que comiencen por la Q.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1950). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1950). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1973",
@@ -7487,7 +7479,7 @@ export default [
       "Sierra, Lima.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1973). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1973). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2005",
@@ -7501,7 +7493,7 @@ export default [
       "La ganancia isótropa o absoluta",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2017",
@@ -7515,7 +7507,7 @@ export default [
       "1.100 kHz y 650KHz",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2063",
@@ -7529,7 +7521,7 @@ export default [
       "35 W.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2063). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2063). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2078",
@@ -7543,7 +7535,7 @@ export default [
       "No especialmente significativos.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2078). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2078). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1824",
@@ -7557,7 +7549,7 @@ export default [
       "Ondas decamétricas.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1824). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1824). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1848",
@@ -7571,7 +7563,7 @@ export default [
       "No tienen limitaciones geográficas.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1848). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1848). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1864",
@@ -7585,7 +7577,7 @@ export default [
       "Bilbao.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1876",
@@ -7599,7 +7591,7 @@ export default [
       "Telefonía con un solo canal.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1876). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1876). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1882",
@@ -7613,7 +7605,7 @@ export default [
       "Se trata de un estación no autorizada.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2012",
@@ -7627,7 +7619,7 @@ export default [
       "QTR",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2012). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2012). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2086",
@@ -7641,7 +7633,7 @@ export default [
       "MADRID, ECHO, ROMEO, OSCAR.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2086). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2086). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1987",
@@ -7655,7 +7647,7 @@ export default [
       "Toledo, Teruel, Tarragona, Santa Cruz de Tenerife.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1987). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1987). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2019",
@@ -7669,7 +7661,7 @@ export default [
       "Si, siempre que se tenga el proyecto técnico",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2019). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2019). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2055",
@@ -7683,7 +7675,7 @@ export default [
       "Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2055). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2055). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2069",
@@ -7697,7 +7689,7 @@ export default [
       "Su titular reside en Cataluña.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1802",
@@ -7711,7 +7703,7 @@ export default [
       "No están permitidos en la reglamentación vigente.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1802). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1802). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1825",
@@ -7725,7 +7717,7 @@ export default [
       "Está expresamente prohibida en la reglamentación vigente.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1825). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1825). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1842",
@@ -7739,7 +7731,7 @@ export default [
       "Si se han examinado en España de la Reglamentación Nacional.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1842). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1842). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1896",
@@ -7753,7 +7745,7 @@ export default [
       "QRX",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1896). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1896). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1972",
@@ -7767,7 +7759,7 @@ export default [
       "87,5 -108 MHz con potencia máxima de 10mW.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1972). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1972). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2210",
@@ -7781,7 +7773,7 @@ export default [
       "No tienen ninguna relación con la UIT.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1877",
@@ -7795,7 +7787,7 @@ export default [
       "Toda la gama de frecuencias que pueda utilizar.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1923",
@@ -7809,7 +7801,7 @@ export default [
       "El código RST se utiliza para deletrear el mensaje.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1923). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1923). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1945",
@@ -7823,7 +7815,7 @@ export default [
       "Los equipos receptores de radio no forman parte de una estación radioeléctrica.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1945). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1945). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1947",
@@ -7837,7 +7829,7 @@ export default [
       "Se han suprimido los distritos.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1947). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1947). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2024",
@@ -7851,7 +7843,7 @@ export default [
       "Los soportes de la antena se podrán fijar al mástil de conducción aérea de energía eléctrica",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2024). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2024). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2080",
@@ -7865,7 +7857,7 @@ export default [
       "50,000-51,000 MHz.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2080). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2080). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1818",
@@ -7879,7 +7871,7 @@ export default [
       "Distrito, prefijo y sufijo.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1818). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1818). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1859",
@@ -7893,7 +7885,7 @@ export default [
       "Bravo, Ortega, Julio.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1859). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1859). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1922",
@@ -7907,7 +7899,7 @@ export default [
       "QTH",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1922). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1922). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1978",
@@ -7915,13 +7907,13 @@ export default [
     topicId: "operacion-seguridad",
     stem: "La llamada de socorro en radiotelefonía se compone de:",
     options: [
-      "La palabra &quot;help&quot;, seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
-      "La palabra &quot;mayday&quot;, seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
-      "La palabra &quot;help&quot; (tres veces), seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
-      "La palabra &quot;mayday&quot; (tres veces), seguida de la palabra &quot;aquí&quot; o &quot;de&quot; y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
+      "La palabra \"help\", seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
+      "La palabra \"mayday\", seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro.",
+      "La palabra \"help\" (tres veces), seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
+      "La palabra \"mayday\" (tres veces), seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1978). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1978). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2043",
@@ -7935,7 +7927,7 @@ export default [
       "En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2079",
@@ -7949,7 +7941,7 @@ export default [
       "Sólo en caso de que la instalación sea sencilla.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2079). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2079). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1928",
@@ -7963,7 +7955,7 @@ export default [
       "Las iniciales y fecha de nacimiento del titular.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2016",
@@ -7977,7 +7969,7 @@ export default [
       "URGENCE",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1879",
@@ -7991,7 +7983,7 @@ export default [
       "Detectar y reducir interferencias dentro de un área determinada.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2001",
@@ -8005,7 +7997,7 @@ export default [
       "Las transmisiones entre estaciones de aficionados de diferentes países deberán codificarse siempre por motivos de seguridad.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2001). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2001). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1867",
@@ -8019,7 +8011,7 @@ export default [
       "Ninguna de ellas, ya no es necesario comunicarlo.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2000",
@@ -8033,7 +8025,7 @@ export default [
       "Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2000). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2000). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2050",
@@ -8042,12 +8034,12 @@ export default [
     stem: "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     options: [
       "En general está permitido la emisión de onda portadora no modulada.",
-      "Puede ser empleada arbitrariamente la señal de socorro &quot;SOS&quot;.",
+      "Puede ser empleada arbitrariamente la señal de socorro \"SOS\".",
       "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
       "A efectos de ensayos puede emitirse un distintivo de llamada engañoso.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1907",
@@ -8061,7 +8053,7 @@ export default [
       "Valencia, Valladolid, Vizcaya.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1907). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1907). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1948",
@@ -8075,7 +8067,7 @@ export default [
       "300 y 3.000 MHz.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1948). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1948). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1821",
@@ -8089,7 +8081,7 @@ export default [
       "Debe contratarse cuando se solicita la autorización de radioaficionado.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1821). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1821). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1827",
@@ -8103,7 +8095,7 @@ export default [
       "Constituye el documento fundamental de regulación de la radioafición.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1827). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1827). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1843",
@@ -8117,7 +8109,7 @@ export default [
       "Zamora.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2018",
@@ -8131,7 +8123,7 @@ export default [
       "Una de las condiciones para su adjudicación es que el radioaficionado no haya sido sometido a expediente sancionador en los ultimos cinco años",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2047",
@@ -8145,7 +8137,7 @@ export default [
       "Posee antena y fuente de energía incorporada al propio equipo, ya que es una estación móvil.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2047). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2047). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1939",
@@ -8159,7 +8151,7 @@ export default [
       "Solicitar permiso al titular de la licencia de estación.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1838",
@@ -8173,7 +8165,7 @@ export default [
       "Las estaciones automáticas desatendidas analógicas y digitales respectivamente.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1992",
@@ -8187,7 +8179,7 @@ export default [
       "4",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1815",
@@ -8201,7 +8193,7 @@ export default [
       "Efectuar emisiones en las bandas de frecuencias y con las características técnicas establecidas en el Reglamento de Radioaficionados.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1815). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1815). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2006",
@@ -8215,7 +8207,7 @@ export default [
       "Estará restringido a los titulares de distintivo de llamada con sufijo de 2 letras",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2006). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2006). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1930",
@@ -8229,7 +8221,7 @@ export default [
       "Restringido, si la estación estuviera dotada de código de acceso.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1930). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1930). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1884",
@@ -8243,7 +8235,7 @@ export default [
       "Por cualquier persona.",
     ],
     correctIndex: 0,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2090",
@@ -8257,7 +8249,7 @@ export default [
       "Solo en casos muy graves.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2090). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2090). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-2060",
@@ -8271,7 +8263,7 @@ export default [
       "Por conversión de frecuencias.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1881",
@@ -8285,7 +8277,7 @@ export default [
       "La alteración, manipulación o la omisión de las características técnicas, de las marcas, de las etiquetas, de los signos de identificación o de la documentación de los equipos o de los aparatos de telecomunicaciones.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1881). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1881). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1813",
@@ -8299,7 +8291,7 @@ export default [
       "15 meses.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1813). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1813). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1990",
@@ -8313,7 +8305,7 @@ export default [
       "Autoridad que expide la licencia.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1990). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1990). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1975",
@@ -8327,7 +8319,7 @@ export default [
       "UHF.",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-84-1913",
@@ -8341,7 +8333,7 @@ export default [
       "Mike.",
     ],
     correctIndex: 3,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1913). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1913). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-14-0450",
@@ -8355,7 +8347,7 @@ export default [
       "87,5 - 108 MHz con potencia máxima de 10mW.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 450). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 450). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
   {
     id: "quijotes-14-0361",
@@ -8369,6 +8361,6 @@ export default [
       "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general.",
     ],
     correctIndex: 2,
-    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 361). Puede contener erratas; contrastar con BOE/convocatoria."
+    explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 361). Puede contener erratas; contrastar con BOE/convocatoria.",
   },
 ];

@@ -1,6 +1,4 @@
-/**
- * Explicaciones didácticas para preguntas Quijotes (remapeadas por enunciado al regenerar el banco).
- */
+/** Explicaciones Quijotes (UTF-8). */
 export default {
   "quijotes-1-0057": "Una emisión armónica aparece en múltiplos enteros de la frecuencia fundamental, por ejemplo 2f, 3f o 4f. Es una radiación no esencial que debe limitarse con filtrado.",
   "quijotes-1-0112": "La relación señal/ruido compara el nivel de señal útil con el ruido de fondo. Cuanto mayor es el valor en dB, mejor se distingue la señal recibida.",

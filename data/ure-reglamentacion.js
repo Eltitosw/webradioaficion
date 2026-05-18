@@ -1,6 +1,5 @@
 /**
- * URE — prueba de Reglamentación (web pública).
- * https://www.ure.es/examenes/reglamentacion/
+ * URE reglamentación.
  * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [

@@ -1,131 +1,138 @@
-/**
- * Material de estudio por bloque del temario (clave = topicId).
- * Basado en el programa tipo HAREC / anexo II del reglamento de aficionado (BOE IET/1311/2013),
- * recomendaciones CEPT (T/R 61-02, T/R 61-01) y material de práctica URE. Contrasta siempre con el BOE y tu manual.
- */
+/** Temario de estudio (textos reparados UTF-8). */
 export default {
   "electricidad-basica": {
-    memoryHooks: [
+    "memoryHooks": [
       "SI: V voltio, I amperio, R ohmio, P vatio.",
       "Ohm: V = I·R. Potencia CC: P = V·I = I²R = V²/R.",
       "Serie: R suman. Paralelo: 1/R = 1/R1 + 1/R2.",
-      "Condensador en CC estable ≈ circuito abierto; bobina ideal en CC estable ≈ corto.",
+      "Condensador en CC estable ≈ circuito abierto; bobina ideal en CC estable ≈ corto."
     ],
-    expressBullets: [
+    "expressBullets": [
       "La ley de Ohm relaciona tres magnitudes; si te dan dos, despeja la tercera.",
       "Potencia es energía por tiempo: en CC sin armónicos raros, P = V·I es la fórmula base del examen.",
       "RMS vs pico (senoidal): Vp ≈ √2·Vrms (aparece en medidas y seguridad de etapas).",
-      "Unidades coherentes: no confundas vatio (potencia) con voltio (tensión).",
+      "Unidades coherentes: no confundas vatio (potencia) con voltio (tensión)."
     ],
-    readMore: [
+    "readMore": [
       "Corriente alterna: frecuencia es cuántos ciclos hay por segundo; periodo es cuánto tarda un ciclo; valor eficaz es el valor equivalente para potencia/calor.",
       "Divisor de tensión con resistencias: en serie circula la misma corriente, y cada resistencia recibe una parte de la tensión proporcional a su valor.",
-      "Instrumentos básicos: voltímetro en paralelo, amperímetro en serie, óhmetro con el circuito sin tensión, vatímetro para potencia y osciloscopio para forma de onda.",
+      "Instrumentos básicos: voltímetro en paralelo, amperímetro en serie, óhmetro con el circuito sin tensión, vatímetro para potencia y osciloscopio para forma de onda."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P1 sitúa aquí fuentes de electricidad: fuerza electromotriz, diferencia de potencial, resistencia interna, corriente de cortocircuito, tensión en bornes y conexión de fuentes en serie/paralelo.",
       "También entran campo eléctrico, campo magnético y campo electromagnético: intensidad de campo en V/m, campos cerca de conductores con corriente y la idea de onda de radio como onda electromagnética.",
       "Señales sinusoidales: valor instantáneo, máximo, eficaz y medio; periodo, frecuencia en hertzios y diferencia de fase. Es base para entender osciloscopio, potencia y modulaciones.",
       "Potencia y energía: P en señales sinusoidales, rendimiento, máxima transferencia de potencia, relaciones en decibelios y potencia de pico de la envolvente (PEP).",
-      "Medidas: tensiones y corrientes continuas/alternas, resistencia interna del instrumento, forma de onda, errores de medida, osciloscopio, vatímetro, contador de frecuencia y analizador de espectro.",
+      "Medidas: tensiones y corrientes continuas/alternas, resistencia interna del instrumento, forma de onda, errores de medida, osciloscopio, vatímetro, contador de frecuencia y analizador de espectro."
     ],
-    bookGuide: [
+    "bookGuide": [
       "La tensión o diferencia de potencial es la energía disponible para mover carga eléctrica y se mide en voltios. La corriente es el paso de carga por segundo y se mide en amperios. La resistencia se opone al paso de corriente y se mide en ohmios.",
       "La ley de Ohm une las tres magnitudes básicas: V = I·R. De ella salen R = V/I e I = V/R. En un conductor, al disminuir la sección o aumentar la temperatura, normalmente aumenta la resistencia.",
       "La potencia indica energía por unidad de tiempo y se mide en vatios: P = V·I. Combinada con Ohm: P = I²R y P = V²/R. No confundas voltio (tensión) con vatio (potencia).",
       "En corriente alterna sinusoidal importa distinguir valor máximo, valor eficaz y periodo. El valor eficaz es el que equivale térmicamente a una continua; por eso se usa en medidas de red y potencia.",
       "Las fuentes tienen fuerza electromotriz y resistencia interna. En serie se suman tensiones; en paralelo se conserva la tensión si son iguales y aumenta la capacidad de entregar corriente.",
-      "El decibelio expresa relaciones. En potencia, +3 dB equivale aproximadamente al doble, +10 dB a diez veces y +20 dB a cien veces. dBm es potencia absoluta referida a 1 mW.",
+      "El decibelio expresa relaciones. En potencia, +3 dB equivale aproximadamente al doble, +10 dB a diez veces y +20 dB a cien veces. dBm es potencia absoluta referida a 1 mW."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Método test→libro: toma una pregunta de Ohm/potencia, apunta datos, fórmula, unidad y distractor. Ejemplo: 13 V por 1 A son 13 W; si respondes voltios, has cambiado magnitud.",
       "Convierte preguntas frecuentes del libro en mini-casos: kΩ a Ω, amperímetro en serie, resistencia shunt para proteger instrumentos, batería 7,4 V / 1500 mAh y conductor más fino con más resistencia.",
-      "Al corregir, escribe una explicación de una línea: qué principio usa la respuesta correcta y qué palabra hace falsa a cada alternativa.",
+      "Al corregir, escribe una explicación de una línea: qué principio usa la respuesta correcta y qué palabra hace falsa a cada alternativa."
     ],
-    quickSession: [
+    "quickSession": [
       "Para resolver Ohm, identifica primero qué dos datos te dan y qué magnitud falta. Si conoces tensión y resistencia, usa I = V/R; si conoces corriente y resistencia, usa V = I·R; si conoces tensión y corriente, usa R = V/I.",
       "Ejemplo: una resistencia de 100 Ω con 0,1 A produce V = I·R = 0,1·100 = 10 V. Si te preguntan potencia, P = V·I = 10·0,1 = 1 W, o directamente P = I²R = 0,1²·100 = 1 W.",
       "Ejemplo: un equipo de 220 V y 10 A consume P = V·I = 220·10 = 2200 W. La unidad final debe ser vatio, no voltio ni amperio.",
       "En un divisor de tensión con resistencias en serie, la misma corriente pasa por todas. La tensión cae proporcionalmente a cada resistencia: la resistencia mayor tiene mayor caída de tensión.",
       "En corriente alterna, el periodo T es el tiempo de un ciclo y la frecuencia f son ciclos por segundo. Se relacionan como T = 1/f. En el osciloscopio ves forma de onda, amplitud y periodo; el polímetro suele mostrar valor eficaz.",
-      "Mapa rápido: V se mide en voltios con voltímetro en paralelo; I se mide en amperios con amperímetro en serie; R se mide en ohmios con óhmetro; P se calcula o mide con vatímetro.",
+      "Mapa rápido: V se mide en voltios con voltímetro en paralelo; I se mide en amperios con amperímetro en serie; R se mide en ohmios con óhmetro; P se calcula o mide con vatímetro."
     ],
-    examChecklist: [
+    "examChecklist": [
       "No confundas voltio, amperio, ohmio, vatio, faradio y henrio.",
       "En CC estable: condensador ideal abierto; bobina ideal casi cortocircuito.",
       "Si una fórmula de potencia multiplica por R cuando debería dividir, suele ser el distractor.",
       "dB y dBm no son lo mismo: dBm referencia potencia absoluta a 1 mW.",
-      "Antes de calcular, convierte unidades: kΩ a Ω, mA a A y MHz/Hz si aparece frecuencia.",
+      "Antes de calcular, convierte unidades: kΩ a Ω, mA a A y MHz/Hz si aparece frecuencia."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "dBm no es tensión ni corriente: es potencia absoluta referida a 1 mW. dB es relación; dBµV sí apunta a tensión.",
       "Si aparece P = E²R o P = V²·R, sospecha: la fórmula correcta con tensión y resistencia es P = V²/R.",
       "Amperímetro en serie, voltímetro en paralelo y óhmetro sin alimentación. Las opciones que invierten serie/paralelo son trampas clásicas.",
       "En osciloscopio, eje horizontal suele ser tiempo/periodo y vertical amplitud/tensión; no marques frecuencia si la marca mide un ciclo en horizontal.",
       "Código de colores: violeta-verde-rojo-oro = 75 × 100 = 7500 Ω, tolerancia 5 %. El oro suele ser tolerancia, no cifra.",
-      "Factor de potencia/cos φ pertenece a corriente alterna y desfase entre tensión y corriente; no lo trates como fórmula de continua.",
+      "Factor de potencia/cos φ pertenece a corriente alterna y desfase entre tensión y corriente; no lo trates como fórmula de continua."
     ],
-    flashcards: [
-      { front: "Ley de Ohm (CC)", back: "V = I · R" },
-      { front: "Potencia en CC si conoces V e I", back: "P = V · I" },
-      { front: "Dos resistencias iguales en paralelo", back: "Req = R / 2" },
-      { front: "Unidad de intensidad en el SI", back: "Amperio (A)" },
+    "flashcards": [
+      {
+        "front": "Ley de Ohm (CC)",
+        "back": "V = I · R"
+      },
+      {
+        "front": "Potencia en CC si conoces V e I",
+        "back": "P = V · I"
+      },
+      {
+        "front": "Dos resistencias iguales en paralelo",
+        "back": "Req = R / 2"
+      },
+      {
+        "front": "Unidad de intensidad en el SI",
+        "back": "Amperio (A)"
+      }
     ],
-    sources:
-      "Programa HAREC / electricidad básica; manuales URE de 1.ª parte; BOE solo para aspectos reglados de equipos si aplica.",
+    "sources": "Programa HAREC / electricidad básica; manuales URE de 1.ª parte; BOE solo para aspectos reglados de equipos si aplica."
   },
   "magnetismo-ondas": {
-    memoryHooks: [
+    "memoryHooks": [
       "λ = c/f (vacío aprox. c ≈ 3·10⁸ m/s). λ corta ↔ f alta.",
       "AM: varía amplitud. FM: varía frecuencia. SSB: banda lateral (concepto de examen).",
-      "3 dB en potencia ≈ doble; 10 dB ≈ ×10 (orden de magnitud).",
+      "3 dB en potencia ≈ doble; 10 dB ≈ ×10 (orden de magnitud)."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Longitud de onda y frecuencia van inversas: memoriza una pareja numérica de ejemplo (p. ej. 14 MHz ↔ ~21 m en orden de magnitud).",
       "Modulación: identifica qué magnitud de la portadora cambia (AM vs FM) antes de leer distractores largos.",
-      "Impedancia: en examen suele bastar saber que adaptar línea/antena evita ROE alta y reflejos.",
+      "Impedancia: en examen suele bastar saber que adaptar línea/antena evita ROE alta y reflejos."
     ],
-    readMore: [
+    "readMore": [
       "Polarización: describe la orientación del campo eléctrico de la onda. En vertical/horizontal debe coincidir razonablemente entre antenas para evitar pérdidas.",
       "Espectro: una emisión no ocupa solo una línea si está modulada; aparecen bandas laterales y anchura de banda según el modo.",
-      "Ruido: al aumentar el ancho de banda recibido suele entrar más ruido; por eso filtros adecuados mejoran la relación señal/ruido.",
+      "Ruido: al aumentar el ancho de banda recibido suele entrar más ruido; por eso filtros adecuados mejoran la relación señal/ruido."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P1 incluye ondas de radio como ondas electromagnéticas: velocidad de propagación, relación frecuencia-longitud de onda y polarización.",
       "Señales no sinusoidales: audio, onda cuadrada, componente continua, fundamental, armónicos, ruido térmico, ruido de banda, densidad de potencia y potencia de ruido en el ancho de banda del receptor.",
       "Modulación CW, AM, SSB, FM y fase: portadora, bandas laterales, porcentaje de modulación, sobremodulación, desviación, índice de modulación y anchura de banda.",
       "Modulación digital: FSK, 2PSK, 4PSK, QAM, velocidad binaria, velocidad de símbolo, anchura de banda, CRC y FEC.",
-      "Procesado digital de señal: muestreo, cuantificación, frecuencia de Nyquist, filtros antisolapamiento y conversión A/D y D/A.",
+      "Procesado digital de señal: muestreo, cuantificación, frecuencia de Nyquist, filtros antisolapamiento y conversión A/D y D/A."
     ],
-    bookGuide: [
+    "bookGuide": [
       "Una carga eléctrica crea campo eléctrico; una corriente crea campo magnético. Una onda de radio es una onda electromagnética: sus campos eléctrico y magnético se propagan transportando energía.",
       "La velocidad de propagación depende del medio. En el vacío se toma como 300.000 km/s. Frecuencia y longitud de onda son inversas: λ = c/f, o de forma práctica λ(m) ≈ 300/f(MHz).",
       "Una señal sinusoidal se describe por amplitud, frecuencia, periodo y fase. Las señales no sinusoidales contienen una fundamental y armónicos; por eso pueden ocupar más anchura de banda.",
       "Modular es variar una portadora con información. En AM cambia la amplitud; en FM cambia la frecuencia; en fase cambia la fase; en SSB se transmite una sola banda lateral, normalmente sin portadora.",
       "En FM, el índice de modulación relaciona desviación máxima y frecuencia moduladora. La sobremodulación o exceso de desviación ensancha la señal y puede causar interferencias.",
-      "El muestreo digital convierte señales analógicas en datos. Para evitar aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal (criterio de Nyquist).",
+      "El muestreo digital convierte señales analógicas en datos. Para evitar aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal (criterio de Nyquist)."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Antes de mirar opciones, di si el enunciado habla de propagación, modulación o forma de onda. Así separas trampas como velocidad constante, frecuencia crítica, fading y ancho de banda.",
       "Crea una tabla de examen con cuatro filas: AM varía amplitud, FM varía frecuencia, SSB usa una banda lateral, CW es portadora interrumpida. Añade una figura o palabra clave del libro a cada fila.",
-      "Practica cálculos cortos: λ = 300/f(MHz), periodo entre dos máximos, índice FM = desviación/frecuencia moduladora y +40 dB = ×10.000 en potencia.",
+      "Practica cálculos cortos: λ = 300/f(MHz), periodo entre dos máximos, índice FM = desviación/frecuencia moduladora y +40 dB = ×10.000 en potencia."
     ],
-    quickSession: [
+    "quickSession": [
       "Para calcular longitud de onda usa λ(m) ≈ 300/f(MHz). Ejemplo: 14 MHz da λ ≈ 300/14 ≈ 21,4 m; 144 MHz da λ ≈ 2,08 m; 430 MHz da λ ≈ 0,70 m.",
       "Si el examen pregunta por frecuencia y longitud de onda, recuerda la relación inversa: al subir frecuencia, baja longitud de onda. Por eso HF tiene longitudes de onda largas y UHF longitudes cortas.",
       "Para reconocer modulación, busca qué propiedad de la portadora cambia: AM cambia amplitud; FM cambia frecuencia; PM cambia fase; SSB transmite una sola banda lateral.",
       "En AM aparecen portadora y dos bandas laterales. En SSB se elimina una banda lateral y normalmente la portadora, por eso ocupa menos ancho de banda y aprovecha mejor la potencia.",
       "Una onda cuadrada no es una sola frecuencia: contiene fundamental y armónicos. Cuanto más brusca es la forma de onda, más contenido de alta frecuencia necesita.",
-      "Modulación y propagación no son lo mismo: la modulación describe cómo metes información en la señal; la propagación describe cómo viaja esa señal por espacio, ionosfera, troposfera u obstáculos.",
+      "Modulación y propagación no son lo mismo: la modulación describe cómo metes información en la señal; la propagación describe cómo viaja esa señal por espacio, ionosfera, troposfera u obstáculos."
     ],
-    examChecklist: [
+    "examChecklist": [
       "λ y f son inversas; si sube frecuencia baja longitud de onda.",
       "FM: índice de modulación = desviación máxima / frecuencia moduladora.",
       "SSB elimina una banda lateral y normalmente la portadora, por eso ahorra ancho de banda/potencia.",
       "Nyquist: frecuencia de muestreo al menos el doble de la frecuencia máxima de la señal.",
-      "Si la pregunta dice 'velocidad en el vacío', responde valor constante: aproximadamente 300.000 km/s.",
+      "Si la pregunta dice 'velocidad en el vacío', responde valor constante: aproximadamente 300.000 km/s."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "AM varía amplitud; FM varía frecuencia; PM varía fase. Si el enunciado pregunta qué cambia, no respondas por el modo que más uses.",
       "Detector de envolvente = AM. No lo confundas con FM, PM o SSB aunque todas sean modulaciones.",
       "SSB transmite una sola banda lateral y normalmente suprime la portadora; una AM convencional conserva portadora y dos bandas laterales.",
@@ -133,137 +140,158 @@ export default {
       "+3 dB en potencia ≈ doble; +10 dB ≈ diez veces. No apliques esas reglas como si fueran tensión sin mirar el enunciado.",
       "Ruido blanco: independiente de la frecuencia en el modelo de examen, no 'ruido de color' ni ruido del micrófono.",
       "Armónicos = múltiplos enteros de la fundamental; radiación armónica no es la frecuencia de resonancia de la antena.",
-      "Nyquist: muestrear al menos al doble de la frecuencia máxima. La mitad de la frecuencia máxima es una trampa.",
+      "Nyquist: muestrear al menos al doble de la frecuencia máxima. La mitad de la frecuencia máxima es una trampa."
     ],
-    flashcards: [
-      { front: "Relación λ y f en el vacío", back: "λ = c / f" },
-      { front: "¿Qué varía en FM?", back: "La frecuencia instantánea de la portadora" },
-      { front: "¿Qué varía en AM clásica?", back: "La amplitud de la portadora" },
-      { front: "+3 dB en potencia (misma Z)", back: "≈ el doble de potencia" },
+    "flashcards": [
+      {
+        "front": "Relación λ y f en el vacío",
+        "back": "λ = c / f"
+      },
+      {
+        "front": "¿Qué varía en FM?",
+        "back": "La frecuencia instantánea de la portadora"
+      },
+      {
+        "front": "¿Qué varía en AM clásica?",
+        "back": "La amplitud de la portadora"
+      },
+      {
+        "front": "+3 dB en potencia (misma Z)",
+        "back": "≈ el doble de potencia"
+      }
     ],
-    sources: "CEPT T/R 61-02 (programa); resúmenes URE de radioelectricidad.",
+    "sources": "CEPT T/R 61-02 (programa); resúmenes URE de radioelectricidad."
   },
-  componentes: {
-    memoryHooks: [
+  "componentes": {
+    "memoryHooks": [
       "R disipa. L y C almacenan (campo y campo eléctrico). Diodo: rectifica. Transistor: amplifica/conmuta.",
-      "Filtros RC/RLC: frecuencia de corte conceptual según R, L, C.",
+      "Filtros RC/RLC: frecuencia de corte conceptual según R, L, C."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Diodo en directa conduce; en inversa bloquea (modelo ideal del test).",
       "Condensador pasa altas (bloquea DC en coupling); bobina opondráse a cambios bruscos de I.",
-      "Puente rectificador: convierte AC en pulsante DC; después suele ir filtrado.",
+      "Puente rectificador: convierte AC en pulsante DC; después suele ir filtrado."
     ],
-    readMore: [
+    "readMore": [
       "Transistor bipolar: tiene emisor, base y colector; una pequeña señal en base controla una corriente mayor entre colector y emisor.",
       "FET: la compuerta controla el canal con muy poca corriente de entrada; se reconoce como dispositivo controlado por tensión.",
-      "Zener: se usa en inversa como referencia de tensión cuando trabaja por encima de su tensión Zener y con corriente limitada.",
+      "Zener: se usa en inversa como referencia de tensión cuando trabaja por encima de su tensión Zener y con corriente limitada."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P1 agrupa resistencias: ohmio, tipos, código de colores, característica tensión/corriente, disipación y coeficientes PTC/NTC.",
       "Condensadores: capacidad en faradios, dieléctrico, reactancia capacitiva, fase entre tensión y corriente, tipos fijos/variables, fuga y coeficiente de temperatura.",
       "Bobinas: autoinducción en henrios, efecto de espiras, diámetro, longitud y núcleo; reactancia, desfase, factor Q, efecto pelicular y pérdidas.",
       "Transformadores: transformador ideal, relaciones de espiras, tensiones, corrientes e impedancias entre primario y secundario.",
       "Semiconductores y otros: diodos rectificadores, Zener, LED, varicap; transistores bipolares y FET; válvulas, integrados y circuitos digitales básicos.",
-      "Circuitos: combinaciones serie/paralelo de R, L, C, transformadores y diodos; comportamiento real a altas frecuencias.",
+      "Circuitos: combinaciones serie/paralelo de R, L, C, transformadores y diodos; comportamiento real a altas frecuencias."
     ],
-    bookGuide: [
+    "bookGuide": [
       "La resistencia disipa energía en forma de calor y limita corriente. Su valor puede leerse por código de colores; la tolerancia indica el margen de error permitido respecto al valor nominal.",
       "El condensador almacena carga en un campo eléctrico. En continua, una vez cargado, se comporta idealmente como circuito abierto. En alterna presenta reactancia capacitiva, que disminuye al subir la frecuencia.",
       "La bobina almacena energía en un campo magnético. En continua ideal se comporta casi como un cortocircuito; en alterna presenta reactancia inductiva, que aumenta con la frecuencia.",
       "La resonancia aparece cuando reactancia inductiva y capacitiva se compensan. En circuitos sintonizados, el factor Q relaciona frecuencia de resonancia y ancho de banda: Q = f/B.",
       "El diodo conduce principalmente en un sentido. El Zener se usa como referencia o regulación en inversa; el LED emite luz; el varicap se comporta como condensador variable controlado por tensión.",
-      "El transformador acopla energía entre bobinas. La relación de espiras determina la relación de tensiones; si sube tensión en el secundario, idealmente baja la corriente disponible.",
+      "El transformador acopla energía entre bobinas. La relación de espiras determina la relación de tensiones; si sube tensión en el secundario, idealmente baja la corriente disponible."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Haz tarjetas símbolo→función con los componentes que más caen: diodo conduce en un sentido, varicap equivale a capacidad controlada por tensión, Zener regula y electrolítico exige polaridad.",
       "Resuelve tres 'por qué': resonancia cuando reactancia L y C se igualan, PTC sube resistencia con temperatura, NTC la baja. Después busca una pregunta del banco que use cada idea.",
-      "Para transformadores, no memorices una frase suelta: dibuja primario/secundario, cuenta espiras y deduce si sube o baja tensión antes de mirar respuestas.",
+      "Para transformadores, no memorices una frase suelta: dibuja primario/secundario, cuenta espiras y deduce si sube o baja tensión antes de mirar respuestas."
     ],
-    quickSession: [
+    "quickSession": [
       "Para comparar R, L y C: R disipa energía y se mide en ohmios; C almacena carga/campo eléctrico y se mide en faradios; L almacena campo magnético y se mide en henrios.",
       "Si sube la frecuencia, el condensador ofrece menos oposición porque su reactancia capacitiva baja. La bobina ofrece más oposición porque su reactancia inductiva sube.",
       "En resistencias en serie, suma directa: Rtotal = R1 + R2 + R3. En paralelo, el resultado siempre es menor que la resistencia más pequeña; para dos iguales, Req = R/2.",
       "En condensadores sucede al revés que en resistencias: en paralelo se suman capacidades; en serie la capacidad equivalente baja.",
       "Para diodos, piensa en función: rectificador deja pasar semiciclos en una fuente, Zener estabiliza tensión en inversa, LED indica/emite luz y varicap actúa como condensador variable.",
-      "En transformadores, compara espiras. Si el secundario tiene más espiras que el primario, sube tensión; si tiene menos, baja tensión. Idealmente, al subir tensión baja corriente para conservar potencia.",
+      "En transformadores, compara espiras. Si el secundario tiene más espiras que el primario, sube tensión; si tiene menos, baja tensión. Idealmente, al subir tensión baja corriente para conservar potencia."
     ],
-    examChecklist: [
+    "examChecklist": [
       "Faradio = capacidad; henrio = inductancia; ohmio = resistencia.",
       "Diodo ideal conduce en directa y bloquea en inversa.",
       "Zener se usa como referencia/regulación en inversa controlada.",
       "Factor Q aparece en bobinas/circuitos resonantes y selectividad.",
-      "PTC sube resistencia al subir temperatura; NTC baja resistencia al subir temperatura.",
+      "PTC sube resistencia al subir temperatura; NTC baja resistencia al subir temperatura."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "Condensador en continua y régimen permanente = circuito abierto ideal. No lo marques como cortocircuito porque al principio se cargue.",
       "Reactancia capacitiva baja al subir frecuencia; reactancia inductiva sube al subir frecuencia. Es una inversión muy preguntada.",
       "Condensadores en paralelo suman capacidades; resistencias en paralelo no se suman directamente.",
       "Zener se asocia a referencia o estabilización de tensión en inversa; no es solo 'otro diodo rectificador'.",
       "Diodo ideal conduce en directa y bloquea en inversa; si la opción dice que conduce en ambos sentidos, es falsa para el modelo base.",
       "Transformador ideal: V1/V2 = N1/N2. Si sube tensión, la corriente disponible baja idealmente.",
-      "Factor Q = frecuencia de resonancia / ancho de banda. Q alto significa más selectividad, no más carga eléctrica.",
+      "Factor Q = frecuencia de resonancia / ancho de banda. Q alto significa más selectividad, no más carga eléctrica."
     ],
-    flashcards: [
-      { front: "¿Qué hace un condensador en CC en régimen permanente (ideal)?", back: "Equivale a circuito abierto" },
-      { front: "Función típica de diodo en fuente", back: "Rectificar / proteger polaridad (según montaje)" },
-      { front: "Letra griega de constante dieléctrica frecuente", back: "ε (epsilon)" },
+    "flashcards": [
+      {
+        "front": "¿Qué hace un condensador en CC en régimen permanente (ideal)?",
+        "back": "Equivale a circuito abierto"
+      },
+      {
+        "front": "Función típica de diodo en fuente",
+        "back": "Rectificar / proteger polaridad (según montaje)"
+      },
+      {
+        "front": "Letra griega de constante dieléctrica frecuente",
+        "back": "ε (epsilon)"
+      }
     ],
-    sources: "Programa HAREC componentes; esquemas tipo en material URE/FEDI.",
+    "sources": "Programa HAREC componentes; esquemas tipo en material URE/FEDI."
   },
   "receptores-emisores": {
-    memoryHooks: [
+    "memoryHooks": [
       "Superheterodino: mezclador + OL → FI fija; amplificar FI es más estable que a RF variable.",
       "Detector: AM diodo/envelope; SSB product detector; FM discriminador (concepto).",
-      "Medición: vatímetro para potencia; ROE alto → desadaptación.",
+      "Medición: vatímetro para potencia; ROE alto → desadaptación."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Cadena típica RX: entrada → mezclador → FI → detector → AF.",
       "Transmisor: oscilador/mezclador → amplificación → filtrado/armónicos (según pregunta) → acoplo a antena.",
-      "Potencia reflejada alta con adaptación mala: ROE sube; en examen se asocia a desadaptación.",
+      "Potencia reflejada alta con adaptación mala: ROE sube; en examen se asocia a desadaptación."
     ],
-    readMore: [
+    "readMore": [
       "Estabilidad y selectividad: trabajar a FI fija permite filtros más eficaces y ganancia más controlada que intentar hacerlo todo a RF variable.",
       "Control AGC/CAG: reduce o aumenta ganancia automáticamente para que la salida no cambie demasiado cuando cambia la intensidad de señal.",
-      "Emisiones no deseadas: armónicos, espurias e intermodulación se reducen con diseño lineal, filtrado y no sobreexcitar etapas.",
+      "Emisiones no deseadas: armónicos, espurias e intermodulación se reducen con diseño lineal, filtrado y no sobreexcitar etapas."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P1 recoge filtros: circuitos sintonizados serie/paralelo, resonancia, factor Q, ancho de banda, paso bajo/alto/banda, rechazo, filtros en pi/T, cuarzo y digitales.",
       "Fuentes de alimentación: rectificadores de media onda, onda completa y puente; filtrado; estabilización de bajo voltaje; fuentes conmutadas, aislamiento y compatibilidad electromagnética.",
       "Amplificadores: baja frecuencia y RF, ganancia, respuesta amplitud/frecuencia, ancho de banda, clases A, AB, B y C, armónicos, intermodulación y sobrecarga.",
       "Detectores y demoduladores: detector AM con diodo/envolvente, detector de producto y oscilador de batido para CW/SSB, FM con pendiente o discriminador.",
       "Osciladores y sintetizadores: realimentación, estabilidad, LC, cristal, sobretonos, VCO, ruido de fase, PLL y DDS.",
-      "Receptores y transmisores: superheterodino simple/doble, conversión directa, bloques de CW/AM/SSB/FM, FI, CAG, medidor S, silenciador, excitador, PA, filtro de salida y repetidores VHF/UHF.",
+      "Receptores y transmisores: superheterodino simple/doble, conversión directa, bloques de CW/AM/SSB/FM, FI, CAG, medidor S, silenciador, excitador, PA, filtro de salida y repetidores VHF/UHF."
     ],
-    bookGuide: [
+    "bookGuide": [
       "Un receptor transforma una señal de radio muy débil en información útil. En un superheterodino, la señal de RF se mezcla con un oscilador local para obtener una frecuencia intermedia fija.",
       "La frecuencia intermedia permite usar filtros y amplificadores estables. Después llega la detección o demodulación: detector de envolvente para AM, detector de producto para SSB/CW y discriminador para FM.",
       "La selectividad es la capacidad de separar señales próximas; la sensibilidad es la capacidad de recibir señales débiles; la estabilidad es la capacidad de mantenerse en frecuencia.",
       "El CAG/AGC ajusta automáticamente la ganancia para evitar saturación con señales fuertes. El squelch silencia el audio cuando no hay señal suficiente.",
       "Un transmisor genera o procesa la señal, la modula, la amplifica y la filtra antes de enviarla a la antena. El filtro de salida reduce armónicos y emisiones no deseadas.",
-      "Los instrumentos se asocian a magnitudes concretas: vatímetro para potencia, frecuencímetro para frecuencia, osciloscopio para formas de onda y analizador de espectro para componentes espectrales.",
+      "Los instrumentos se asocian a magnitudes concretas: vatímetro para potencia, frecuencímetro para frecuencia, osciloscopio para formas de onda y analizador de espectro para componentes espectrales."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Usa el índice del libro como propone el método de preparación: pregunta de FI → receptor → diagrama de bloques → respuesta. FI va después del mezclador en el superheterodino.",
       "Dibuja dos cadenas y tápales un bloque: RX con RF, mezclador, FI, detector y audio; TX con oscilador/modulador, excitador, PA y filtro de salida. Completa el hueco como si fuera un test.",
-      "Empareja instrumento y magnitud: osciloscopio/formas de onda, frecuencímetro/frecuencia, vatímetro/potencia, S-meter/intensidad recibida, analizador de espectro/componentes espectrales.",
+      "Empareja instrumento y magnitud: osciloscopio/formas de onda, frecuencímetro/frecuencia, vatímetro/potencia, S-meter/intensidad recibida, analizador de espectro/componentes espectrales."
     ],
-    quickSession: [
+    "quickSession": [
       "Un receptor superheterodino se entiende como cadena: antena capta RF, filtro/entrada selecciona, mezclador con oscilador local convierte a FI, amplificador de FI aumenta, detector extrae audio y amplificador de BF lo lleva al altavoz.",
       "La FI va después del mezclador. Si una pregunta pregunta dónde se conecta la etapa de FI, la respuesta esperada es a la salida del mezclador.",
       "Un transmisor básico sigue la cadena inversa: oscilador o generador de señal, modulador, excitador, amplificador de potencia y filtro de salida antes de la antena.",
       "El mezclador produce suma y diferencia de frecuencias. Si entran 14 MHz y 4 MHz, una salida posible es 10 MHz y otra 18 MHz; los filtros seleccionan la útil.",
       "Cada detector depende del modo: AM usa detector de envolvente; SSB y CW usan detector de producto/BFO; FM usa discriminador o detector equivalente de frecuencia.",
-      "Instrumentos: osciloscopio para ver formas de onda; frecuencímetro para medir frecuencia; vatímetro para potencia; medidor de ROE para adaptación; analizador de espectro para armónicos y señales no deseadas.",
+      "Instrumentos: osciloscopio para ver formas de onda; frecuencímetro para medir frecuencia; vatímetro para potencia; medidor de ROE para adaptación; analizador de espectro para armónicos y señales no deseadas."
     ],
-    examChecklist: [
+    "examChecklist": [
       "Mezclador genera suma y diferencia de frecuencias.",
       "FI = frecuencia intermedia; permite filtrado y ganancia estables.",
       "CAG/AGC controla ganancia para señales fuertes o débiles.",
       "Filtro de salida reduce armónicos/espurias antes de la antena.",
       "Clase A baja distorsión; clase C más eficiente pero no lineal para señal de amplitud.",
-      "S-meter indica intensidad relativa de señal recibida, no potencia de salida del transmisor.",
+      "S-meter indica intensidad relativa de señal recibida, no potencia de salida del transmisor."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "Superheterodino: el mezclador con oscilador local genera la FI. No confundas FI con detector, audio o filtro de entrada.",
       "Mezclador: aparecen suma y diferencia. Si entran 14 MHz y 4 MHz, entre las salidas posibles está 10 MHz.",
       "dBµV es nivel de tensión, no potencia. dBm sí es potencia referida a 1 mW.",
@@ -271,68 +299,77 @@ export default {
       "CAG/AGC mantiene nivel de audio más constante variando ganancia; no es control automático de frecuencia.",
       "S-meter indica intensidad relativa de señal recibida; no mide potencia de salida ni ROE.",
       "En preguntas de 'respuesta falsa', la salida de un amplificador de potencia sí puede llevar filtros para eliminar armónicos.",
-      "Antes de una tormenta se desconecta la bajada de antena; no se elimina la toma de tierra de seguridad.",
+      "Antes de una tormenta se desconecta la bajada de antena; no se elimina la toma de tierra de seguridad."
     ],
-    flashcards: [
-      { front: "Etapa que genera la FI en superheterodino", back: "El mezclador (con oscilador local)" },
-      { front: "ROE alta suele indicar…", back: "Desadaptación de impedancias en línea/antena" },
-      { front: "Instrumento para medir potencia en línea", back: "Vatímetro / sensor de potencia (según enunciado)" },
+    "flashcards": [
+      {
+        "front": "Etapa que genera la FI en superheterodino",
+        "back": "El mezclador (con oscilador local)"
+      },
+      {
+        "front": "ROE alta suele indicar…",
+        "back": "Desadaptación de impedancias en línea/antena"
+      },
+      {
+        "front": "Instrumento para medir potencia en línea",
+        "back": "Vatímetro / sensor de potencia (según enunciado)"
+      }
     ],
-    sources: "CEPT programa; bloques de receptor en guías URE y bancos de práctica.",
+    "sources": "CEPT programa; bloques de receptor en guías URE y bancos de práctica."
   },
   "antenas-prop": {
-    memoryHooks: [
+    "memoryHooks": [
       "Dipolo media onda: longitud total ~ λ/2 (brazos ~ λ/4 cada uno, orden de magnitud).",
       "ROE 1:1 ideal con carga adaptada; ROE >1 energía reflejada.",
-      "Línea coaxial: modo TEM; impedancia característica Zo (50/75 Ω típicos).",
+      "Línea coaxial: modo TEM; impedancia característica Zo (50/75 Ω típicos)."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Propagación: HF ionosfera (saltos); VHF/UHF más línea de vista y obstáculos.",
       "Ganancia en dBi vs dBd: diferencia fija 2,15 dB (2,15 dBi = 0 dBd) — suele aparecer como trampa/distractor.",
-      "Altura de antena: más altura suele mejorar horizonte radioeléctrico en VHF.",
+      "Altura de antena: más altura suele mejorar horizonte radioeléctrico en VHF."
     ],
-    readMore: [
+    "readMore": [
       "Ondas estacionarias: aparecen por reflexión en la línea cuando la carga no está adaptada. La ROE compara máximos y mínimos de tensión o corriente.",
       "Yagi: el elemento excitado recibe la energía; el reflector está detrás y los directores delante, formando el lóbulo principal.",
-      "Frecuencia crítica y MUF pertenecen a propagación ionosférica: ayudan a decidir si una señal HF se refleja o atraviesa la ionosfera.",
+      "Frecuencia crítica y MUF pertenecen a propagación ionosférica: ayudan a decidir si una señal HF se refleja o atraviesa la ionosfera."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P1 incluye tipos de antena: dipolo de media onda al centro o extremo, dipolo plegado, vertical de cuarto de onda/plano de tierra, Yagi, aperturas/parabólicas/bocinas y dipolo con trampas.",
       "Características: distribución de tensión y corriente, impedancia en alimentación, reactancia de antenas no resonantes, polarización, ganancia, directividad, eficiencia, área de captura, potencia efectiva radiada y relación delante-atrás.",
       "Diagramas de radiación y polarización vertical/horizontal: se usan para interpretar máxima radiación, lóbulos y comparación delante/atrás.",
       "Líneas de transmisión: paralela, coaxial y guíaondas; impedancia característica, factor de velocidad, ROE, pérdidas, balun, cuarto de onda como transformador y acopladores.",
-      "Propagación: onda de tierra, espacio, visión directa, ionosfera, frecuencia crítica, MUF, frecuencia óptima, distancia de salto, saltos múltiples, desvanecimiento, troposfera, conducto, esporádica, auroras, meteoros, EME y ruido atmosférico/galáctico.",
+      "Propagación: onda de tierra, espacio, visión directa, ionosfera, frecuencia crítica, MUF, frecuencia óptima, distancia de salto, saltos múltiples, desvanecimiento, troposfera, conducto, esporádica, auroras, meteoros, EME y ruido atmosférico/galáctico."
     ],
-    bookGuide: [
+    "bookGuide": [
       "La antena convierte corriente de radiofrecuencia en onda electromagnética y viceversa. Su longitud, forma, altura, polarización e impedancia determinan cómo radia y cómo recibe.",
       "Un dipolo de media onda mide aproximadamente λ/2 en total; cada brazo es cercano a λ/4. Una vertical de cuarto de onda necesita plano de tierra o radiales para funcionar correctamente.",
       "La impedancia de antena debe adaptarse a la línea y al transmisor para transferir potencia. Si hay desadaptación aparece potencia reflejada y aumenta la ROE.",
       "Una línea de transmisión tiene impedancia característica y factor de velocidad. El coaxial típico de radioaficionado suele ser de 50 Ω; el balun adapta sistemas balanceados y no balanceados.",
       "La Yagi es directiva y usa elemento excitado, reflector y directores. La relación delante-atrás compara radiación frontal y posterior; el ancho de haz describe la apertura del lóbulo principal.",
-      "En HF predomina la propagación ionosférica; en VHF/UHF domina la visión directa, aunque pueden aparecer propagación troposférica, esporádica E, meteoros, satélite o rebote lunar.",
+      "En HF predomina la propagación ionosférica; en VHF/UHF domina la visión directa, aunque pueden aparecer propagación troposférica, esporádica E, meteoros, satélite o rebote lunar."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Pasa de la fórmula al caso real: para 40 m, el dipolo ronda 20 m totales; si la antena resuena demasiado alta, alargarla baja la frecuencia de resonancia.",
       "Practica la cadena de adaptación completa: transmisor 50 Ω → medidor ROE → acoplador si procede → coaxial → balun/dipolo. Señala dónde aparece potencia reflejada.",
-      "Relaciona cada diagrama con una palabra: vertical máximo hacia horizonte, Yagi directiva, relación delante-atrás, ancho de haz y ROE 1:1 como adaptación ideal.",
+      "Relaciona cada diagrama con una palabra: vertical máximo hacia horizonte, Yagi directiva, relación delante-atrás, ancho de haz y ROE 1:1 como adaptación ideal."
     ],
-    quickSession: [
+    "quickSession": [
       "Para calcular un dipolo de media onda, primero calcula λ = 300/f(MHz) y después toma aproximadamente la mitad. Ejemplo: para 7 MHz, λ ≈ 42,8 m y el dipolo total ronda 21,4 m antes de ajustes prácticos.",
       "Si una antena resuena por encima de la frecuencia deseada, está corta y hay que alargarla. Si resuena por debajo, está larga y hay que acortarla.",
       "La ROE indica desadaptación entre transmisor, línea y antena. ROE 1:1 es adaptación ideal; cuanto mayor es, más energía se refleja hacia el transmisor.",
       "El balun se usa cuando conectas una línea no balanceada, como coaxial, a una antena balanceada, como un dipolo. Ayuda a reducir corrientes indeseadas por la malla.",
       "La propagación HF suele usar ionosfera para largas distancias. VHF y UHF dependen más de visión directa, altura de antena, obstáculos y repetidores.",
-      "La Yagi concentra energía en una dirección. El reflector va detrás del elemento excitado y los directores delante; por eso aumenta ganancia en el lóbulo frontal.",
+      "La Yagi concentra energía en una dirección. El reflector va detrás del elemento excitado y los directores delante; por eso aumenta ganancia en el lóbulo frontal."
     ],
-    examChecklist: [
+    "examChecklist": [
       "Dipolo media onda: longitud total ≈ λ/2; cada brazo ≈ λ/4.",
       "Vertical cuarto de onda: máximo de radiación hacia el horizonte.",
       "Yagi: antena directiva; relación delante/atrás compara lóbulo frontal y posterior.",
       "ROE alta = desadaptación/reflexión; se corrige con adaptación, acoplador o antena ajustada.",
       "MUF y frecuencia crítica son conceptos de ionosfera, no de línea coaxial.",
-      "Ganancia en dBi y dBd no son iguales: dBi referencia antena isotrópica; dBd referencia dipolo.",
+      "Ganancia en dBi y dBd no son iguales: dBi referencia antena isotrópica; dBd referencia dipolo."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "ROE elevada = desadaptación y potencia reflejada. No significa buen acoplamiento, robustez del equipo ni fallo del oscilador.",
       "Una antena resonante presenta impedancia de alimentación prácticamente resistiva; no basta con que transmisor y línea tengan la misma impedancia.",
       "Si una antena resuena demasiado alta de frecuencia, está corta: hay que alargarla. Para bajar frecuencia, aumenta longitud.",
@@ -341,68 +378,77 @@ export default {
       "Ancho de haz es la región entre puntos de media potencia, no la polarización ni la impedancia.",
       "dBi referencia isotrópica; dBd referencia dipolo. La diferencia aproximada es 2,15 dB.",
       "En VHF/UHF domina visión directa/onda directa; HF se asocia más a ionosfera. No mezcles modo de propagación por costumbre.",
-      "Frecuencia crítica: si la señal atraviesa la ionosfera en el dibujo, está por encima de la crítica para esa geometría.",
+      "Frecuencia crítica: si la señal atraviesa la ionosfera en el dibujo, está por encima de la crítica para esa geometría."
     ],
-    flashcards: [
-      { front: "Longitud total aproximada de dipolo medio onda", back: "Del orden de media longitud de onda (λ/2)" },
-      { front: "¿Qué mide la ROE elevada en la práctica del test?", back: "Desadaptación / reflexión de energía" },
-      { front: "Coaxial típico de laboratorio/RF", back: "50 Ω (a veces 75 Ω en TV; lee el enunciado)" },
+    "flashcards": [
+      {
+        "front": "Longitud total aproximada de dipolo medio onda",
+        "back": "Del orden de media longitud de onda (λ/2)"
+      },
+      {
+        "front": "¿Qué mide la ROE elevada en la práctica del test?",
+        "back": "Desadaptación / reflexión de energía"
+      },
+      {
+        "front": "Coaxial típico de laboratorio/RF",
+        "back": "50 Ω (a veces 75 Ω en TV; lee el enunciado)"
+      }
     ],
-    sources: "Anexo I del reglamento (potencias/bandas); programas de antenas HAREC; URE.",
+    "sources": "Anexo I del reglamento (potencias/bandas); programas de antenas HAREC; URE."
   },
   "marco-normativo": {
-    memoryHooks: [
+    "memoryHooks": [
       "Reglamento aficionado España: Orden IET/1311/2013 (BOE-A-2013-7624).",
       "Prueba: dos partes independientes (técnica + reglamento). HAREC ↔ programa CEPT T/R 61-02.",
-      "CEPT T/R 61-01: licencia CEPT de operador; 61-02: programa de examen.",
+      "CEPT T/R 61-01: licencia CEPT de operador; 61-02: programa de examen."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Siempre que potencias o bandas: mirar anexo I del reglamento y redacción vigente en BOE.",
       "Art. 25.h: límites de potencia en estaciones automáticas desatendidas VHF/UHF (dentro/fuera casco urbano) — memoriza la pareja orientativa del texto.",
-      "Sede ministerial competente en telecomunicaciones: trámites; el BOE es la letra del reglamento.",
+      "Sede ministerial competente en telecomunicaciones: trámites; el BOE es la letra del reglamento."
     ],
-    readMore: [
+    "readMore": [
       "Leyes marco: la Ley General de Telecomunicaciones regula infracciones, inspección y marco general; la normativa de antenas conecta con instalaciones en inmuebles.",
       "CNAF: ordena la atribución de frecuencias en España. Sirve para saber qué bandas están disponibles y con qué condiciones.",
-      "Planes de banda IARU: no son una autorización, pero ayudan a usar correctamente segmentos para CW, fonía, datos, repetidores o satélite.",
+      "Planes de banda IARU: no son una autorización, pero ayudan a usar correctamente segmentos para CW, fonía, datos, repetidores o satélite."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P2 sitúa aquí la reglamentación nacional e internacional: Reglamento de uso del dominio público radioeléctrico por aficionados, instrucciones de aplicación, Ley 19/1983 y RD 2623/1986 sobre antenas.",
       "Incluye reglamentación CEPT: T/R 61-01 para uso temporal de estaciones en países CEPT y adheridos, y T/R 61-02 para HAREC y programa de examen.",
       "UIT: definiciones de Servicio de Aficionados y Aficionados por Satélite, estación de aficionado, condiciones de uso, regiones y zonas UIT.",
       "Inspección y régimen sancionador: órganos competentes, infracciones, sanciones, prescripción y actuación ante interferencias.",
-      "Planes de bandas IARU: objetivos y uso recomendado de cada segmento, especialmente para ordenar modos y anchos de banda.",
+      "Planes de bandas IARU: objetivos y uso recomendado de cada segmento, especialmente para ordenar modos y anchos de banda."
     ],
-    bookGuide: [
+    "bookGuide": [
       "El servicio de aficionados está regulado por normas nacionales e internacionales. En España, la referencia básica es el reglamento de uso del dominio público radioeléctrico por aficionados y sus anexos.",
       "HAREC acredita que se ha superado un examen armonizado según el marco CEPT. No equivale por sí solo a poder transmitir: para operar hace falta autorización administrativa y distintivo.",
       "CEPT T/R 61-01 trata el uso temporal de licencias en países adheridos. CEPT T/R 61-02 define el programa armonizado de examen HAREC.",
       "La UIT define servicios, regiones y conceptos internacionales. España está en Región 1. La IARU propone planes de banda que ordenan usos recomendados, modos y segmentos.",
       "El CNAF atribuye bandas y condiciones de uso en España. Las potencias, restricciones geográficas, estaciones desatendidas y emisiones especiales deben comprobarse en la norma vigente.",
-      "Ante interferencias o incumplimientos, el titular debe actuar con responsabilidad técnica y administrativa. La inspección y el régimen sancionador dependen de la legislación de telecomunicaciones.",
+      "Ante interferencias o incumplimientos, el titular debe actuar con responsabilidad técnica y administrativa. La inspección y el régimen sancionador dependen de la legislación de telecomunicaciones."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Entrena con columnas: organismo/documento, para qué sirve y palabra trampa. Ejemplo: IARU recomienda planes de banda; la Administración fija condiciones legales.",
       "Cuando el test pregunte por HAREC, CEPT o autorización, responde en tres pasos: acredita aptitud, permite reconocimiento temporal o habilita a usar el espectro.",
       "Haz simulacros de 30 preguntas por prueba y marca objetivo mínimo 15 aciertos en cada una; corrige por tema, no solo por porcentaje global.",
-      "Si usas el libro gratuito EA5RCA en paralelo, contrasta prefijos temporales y plazos con el BOE; RadioExamen no copia sus enunciados.",
+      "Si usas el libro gratuito EA5RCA en paralelo, contrasta prefijos temporales y plazos con el BOE; RadioExamen no copia sus enunciados."
     ],
-    quickSession: [
+    "quickSession": [
       "Para no confundir CEPT: T/R 61-01 se asocia a operación temporal en países CEPT; T/R 61-02 se asocia al certificado HAREC y al programa de examen.",
       "Clasifica organismos por función: UIT define marco internacional y regiones; CEPT armoniza reconocimiento y programas; IARU recomienda planes de banda; la Administración española autoriza y regula en España.",
       "HAREC no es transmitir. HAREC demuestra aptitud; la autorización administrativa y el distintivo habilitan el uso del espectro en las condiciones establecidas.",
       "El BOE y el reglamento español mandan sobre potencias, bandas, restricciones, instalaciones y régimen sancionador. Los planes IARU ayudan a operar ordenadamente, pero no sustituyen la norma.",
       "Ante interferencias, la lógica es: detectar, reducir o cesar si procede, aplicar medidas técnicas y atender requerimientos de la Administración o inspección.",
-      "Las infracciones se valoran según la legislación de telecomunicaciones. En examen suelen aparecer palabras clave como interferencia perjudicial, falsa identificación, obstrucción a inspección o uso no autorizado.",
+      "Las infracciones se valoran según la legislación de telecomunicaciones. En examen suelen aparecer palabras clave como interferencia perjudicial, falsa identificación, obstrucción a inspección o uso no autorizado."
     ],
-    examChecklist: [
+    "examChecklist": [
       "No confundas HAREC con licencia CEPT temporal.",
       "IARU propone planes de banda; la administración y el reglamento fijan condiciones legales.",
       "UIT define marco internacional y regiones; España está en Región 1.",
       "Ante interferencia a servicio autorizado, el titular debe adoptar medidas técnicas razonables y comunicar cuando proceda.",
-      "Para cifras de potencia, estaciones desatendidas y bandas restringidas, manda la redacción vigente del reglamento/anexo.",
+      "Para cifras de potencia, estaciones desatendidas y bandas restringidas, manda la redacción vigente del reglamento/anexo."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "HAREC acredita aptitud o examen armonizado; no autoriza por sí solo a transmitir.",
       "CEPT T/R 61-01 = licencia CEPT/operación temporal. CEPT T/R 61-02 = programa HAREC/examen. Son muy fáciles de invertir.",
       "IARU recomienda planes de banda; no sustituye al BOE, al CNAF ni a la autorización administrativa.",
@@ -411,41 +457,53 @@ export default {
       "Estaciones automáticas desatendidas VHF/UHF: dentro de casco urbano y fuera de casco urbano no tienen el mismo límite. Memoriza la pareja 10 W / 50 W cuando el enunciado cite art. 25.h vigente.",
       "Si un banco antiguo contradice el BOE vigente en potencias o plazos, estudia la corrección explicada, no memorices el dato viejo sin contexto.",
       "Ante interferencia perjudicial a radiodifusión, TV o servicios protegidos, la respuesta prudente suele ser suspender/corregir antes de seguir emitiendo.",
-      "UIT permite comunicaciones internacionales de aficionados salvo oposición de la administración afectada; no implica poder cifrar mensajes para ocultarlos.",
+      "UIT permite comunicaciones internacionales de aficionados salvo oposición de la administración afectada; no implica poder cifrar mensajes para ocultarlos."
     ],
-    flashcards: [
-      { front: "Orden que aprueba el reglamento de radioaficionado en España (nombre típico)", back: "Orden IET/1311/2013" },
-      { front: "Programa de examen HAREC (CEPT)", back: "Recomendación CEPT T/R 61-02" },
-      { front: "Licencia CEPT de operador (documento)", back: "CEPT T/R 61-01" },
-      { front: "¿Cuántas partes suele tener la prueba?", back: "Dos (independientes)" },
+    "flashcards": [
+      {
+        "front": "Orden que aprueba el reglamento de radioaficionado en España (nombre típico)",
+        "back": "Orden IET/1311/2013"
+      },
+      {
+        "front": "Programa de examen HAREC (CEPT)",
+        "back": "Recomendación CEPT T/R 61-02"
+      },
+      {
+        "front": "Licencia CEPT de operador (documento)",
+        "back": "CEPT T/R 61-01"
+      },
+      {
+        "front": "¿Cuántas partes suele tener la prueba?",
+        "back": "Dos (independientes)"
+      }
     ],
-    sources: "BOE (texto y PDF consolidado); CEPT ecc/ham-radio; resúmenes en vista Normativa de esta web.",
+    "sources": "BOE (texto y PDF consolidado); CEPT ecc/ham-radio; resúmenes en vista Normativa de esta web."
   },
   "licencias-indicativos": {
-    memoryHooks: [
+    "memoryHooks": [
       "Indicativos en España: prefijo E (EA, EB, EC…).",
       "Identificación periódica y al final de comunicación (requisito operativo habitual).",
-      "Prefijos de país en itinerancia: reglas CEPT + reglamento nacional.",
+      "Prefijos de país en itinerancia: reglas CEPT + reglamento nacional."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Formato de indicativo: no confundas prefijo de país con sufijos de modos especiales del enunciado.",
       "Estación móvil/portátil: mismo titular, reglas de potencia y bandas según clase y anexo I.",
       "Reciprocidad y visitantes: figuran en el reglamento; en test suele ser lectura atenta de opciones legales.",
-      "Pregunta trampa frecuente: N se contesta como Noviembre en bancos españoles; no marques November si el test usa la forma castellana.",
+      "Pregunta trampa frecuente: N se contesta como Noviembre en bancos españoles; no marques November si el test usa la forma castellana."
     ],
-    readMore: [
+    "readMore": [
       "Clases de emisión: combinan tipo de modulación, naturaleza de la señal e información transmitida. F3E identifica telefonía con modulación de frecuencia.",
       "Indicativos temporales: se asocian a concursos, eventos, demostraciones o usos especiales; el prefijo suele dar la pista del tipo de uso.",
       "Uso por terceros: cuando se usa una estación ajena, importan autorización del titular, identificación correcta y responsabilidad del operador.",
-      "Alfabeto fonético de examen: A Alfa, B Bravo, C Charlie, D Delta, E Echo, F Foxtrot, G Golf, H Hotel, I India, J Juliett, K Kilo, L Lima, M Mike, N Noviembre, O Oscar, P Papa, Q Quebec, R Romeo, S Sierra, T Tango, U Uniform, V Victor, W Whiskey, X X-ray, Y Yankee, Z Zulu.",
+      "Alfabeto fonético de examen: A Alfa, B Bravo, C Charlie, D Delta, E Echo, F Foxtrot, G Golf, H Hotel, I India, J Juliett, K Kilo, L Lima, M Mike, N Noviembre, O Oscar, P Papa, Q Quebec, R Romeo, S Sierra, T Tango, U Uniform, V Victor, W Whiskey, X X-ray, Y Yankee, Z Zulu."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P2 incluye distintivos de llamada: identificación de estaciones, uso del indicativo, composición, prefijos nacionales y reglas de llamada.",
       "Dentro de reglamentación nacional se conectan autorización, diploma/certificado, estación fija, portable, móvil, remota y uso por terceros autorizados.",
       "CEPT y HAREC aparecen como vías de reconocimiento y operación temporal para titulares de otros países o españoles en el extranjero.",
-      "El alfabeto fonético internacional también afecta a indicativos: deletrear correctamente EA, EB, EC, sufijos y cifras evita errores de operación.",
+      "El alfabeto fonético internacional también afecta a indicativos: deletrear correctamente EA, EB, EC, sufijos y cifras evita errores de operación."
     ],
-    bookGuide: [
+    "bookGuide": [
       "El distintivo de llamada identifica a la estación u operador autorizado. En España sigue la estructura prefijo + cifra de distrito + sufijo, por ejemplo EA5RCA.",
       "EA, EB y EC son prefijos habituales españoles. ED, EE, EF, EG, EH, AM, AN o AO pueden aparecer en usos temporales, eventos o estaciones especiales según el caso.",
       "La cifra orienta el distrito. Por ejemplo, 5 corresponde a Comunidad Valenciana, Murcia y Albacete; 6 a Baleares; 8 a Canarias; 9 a Ceuta y Melilla.",
@@ -453,30 +511,30 @@ export default {
       "Un visitante CEPT debe cumplir las condiciones del país donde opera. Un extranjero en España o un español en el extranjero se identifica siguiendo las reglas CEPT y nacionales aplicables.",
       "El alfabeto fonético evita confusiones al deletrear indicativos. En bancos españoles puede aparecer la adaptación de examen: Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, Noviembre, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu.",
       "Para las cifras, en el examen español se aceptan formas claras en castellano: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho y nueve. En operación internacional pueden verse formas inglesas como November, pero si el test nacional usa la adaptación castellana suele esperar Noviembre.",
-      "Intensifica el repaso cuando veas distractores muy parecidos: Noviembre/November, Alfa/Alpha, Juliett/Juliet, Quebec/Quebec sin tilde ni traducción, y palabras inventadas como Norte o Madrid. Son fallos de atención, no de cálculo.",
+      "Intensifica el repaso cuando veas distractores muy parecidos: Noviembre/November, Alfa/Alpha, Juliett/Juliet, Quebec/Quebec sin tilde ni traducción, y palabras inventadas como Norte o Madrid. Son fallos de atención, no de cálculo."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Desmonta cada indicativo en prefijo+distrito+sufijo: EA5RCA, ED5ZAA, EG5XXX y EA6/OK2HM. Después explica qué pista da cada parte.",
       "Memoriza distritos con ejemplos propios: 5 Valencia/Alicante/Castellón/Albacete/Murcia, 6 Baleares, 8 Canarias y 9 Ceuta/Melilla; contrasta el resto en el manual.",
-      "Haz dictados cortos con ICAO: deletrea el indicativo, escribe lo oído y revisa letras problemáticas como J/Juliett, N/Noviembre, Q/Quebec, V/Victor y Z/Zulu.",
+      "Haz dictados cortos con ICAO: deletrea el indicativo, escribe lo oído y revisa letras problemáticas como J/Juliett, N/Noviembre, Q/Quebec, V/Victor y Z/Zulu."
     ],
-    quickSession: [
+    "quickSession": [
       "Para analizar un indicativo, sepáralo en prefijo, cifra y sufijo. Ejemplo: EA5RCA tiene prefijo EA, distrito 5 y sufijo RCA.",
       "En España, EA, EB y EC son prefijos ordinarios. ED suele asociarse a estaciones automáticas desatendidas o usos reglados según el caso; otros prefijos temporales se usan para eventos.",
       "Si ves EA6/OK2HM, interpreta que un operador extranjero opera temporalmente desde el distrito 6 español bajo reglas CEPT/nacionales.",
       "HAREC acredita haber superado la prueba armonizada; la autorización española permite usar el espectro; el indicativo identifica la estación u operador autorizado.",
       "Para deletrear en test español, usa la tabla fonética que te da el temario y no palabras inventadas. EA5RCA se diría Echo Alfa Cinco Romeo Charlie Alfa; AN6BL se diría Alfa Noviembre Seis Bravo Lima.",
-      "Los distritos ayudan a ubicar. Distrito 5 incluye Valencia, Alicante, Castellón, Albacete y Murcia; 6 Baleares; 8 Canarias; 9 Ceuta y Melilla.",
+      "Los distritos ayudan a ubicar. Distrito 5 incluye Valencia, Alicante, Castellón, Albacete y Murcia; 6 Baleares; 8 Canarias; 9 Ceuta y Melilla."
     ],
-    examChecklist: [
+    "examChecklist": [
       "Prefijo no es lo mismo que sufijo; la cifra suele indicar distrito o uso especial según caso.",
       "HAREC acredita aptitud; no es exactamente la licencia CEPT temporal.",
       "La operación en otro país se ajusta a condiciones del país visitado.",
       "El distintivo debe identificar la estación al inicio/final y según reglas aplicables.",
       "No inventes palabras al deletrear: usa ICAO para letras y números claros; en test español recuerda N = Noviembre.",
-      "Si fallas una pregunta por confundir una palabra fonética parecida, repasa todo el alfabeto antes de seguir con otro bloque.",
+      "Si fallas una pregunta por confundir una palabra fonética parecida, repasa todo el alfabeto antes de seguir con otro bloque."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "Formato de distintivo: prefijo + distrito + sufijo. Si una opción cambia el orden, descártala.",
       "España usa prefijos de la serie E: EA, EB, EC y otros especiales. No reduzcas todo a una sola combinación.",
       "HAREC no es licencia CEPT. HAREC acredita capacitación; la licencia CEPT temporal se asocia a T/R 61-01.",
@@ -485,68 +543,80 @@ export default {
       "En licencia CEPT, la asociación de radioaficionados a la que pertenece el operador no es un dato obligatorio.",
       "Alfabeto fonético en test español: N = Noviembre. Distractores típicos: November, Norte, Náutico.",
       "Más trampas de deletreo: Alfa/Alpha, Juliett/Juliet, cifras en castellano y palabras inventadas. Si dudas, repasa el alfabeto completo.",
-      "Distrito y sufijo no son lo mismo: la cifra suele ubicar distrito; el sufijo son letras asignadas.",
+      "Distrito y sufijo no son lo mismo: la cifra suele ubicar distrito; el sufijo son letras asignadas."
     ],
-    flashcards: [
-      { front: "Prefijo ITU de España en indicativos de aficionado", back: "Letra E (EA, EB, EC…)" },
-      { front: "¿Qué certifica HAREC en la lógica del examen?", back: "Competencias alineadas con programa CEPT / prueba" },
-      { front: "Buena práctica al acabar una QSO en telefonía", back: "Identificarse al inicio y al final (y según intervalos reglamentarios)" },
-      { front: "Trampa frecuente: letra N en fonético de test español", back: "Noviembre (no November si el test pide forma castellana)" },
+    "flashcards": [
+      {
+        "front": "Prefijo ITU de España en indicativos de aficionado",
+        "back": "Letra E (EA, EB, EC…)"
+      },
+      {
+        "front": "¿Qué certifica HAREC en la lógica del examen?",
+        "back": "Competencias alineadas con programa CEPT / prueba"
+      },
+      {
+        "front": "Buena práctica al acabar una QSO en telefonía",
+        "back": "Identificarse al inicio y al final (y según intervalos reglamentarios)"
+      },
+      {
+        "front": "Trampa frecuente: letra N en fonético de test español",
+        "back": "Noviembre (no November si el test pide forma castellana)"
+      }
     ],
-    sources: "Reglamento IET/1311/2013 (titulares, estaciones); CEPT T/R 61-01.",
+    "sources": "Reglamento IET/1311/2013 (titulares, estaciones); CEPT T/R 61-01."
   },
   "operacion-seguridad": {
-    memoryHooks: [
+    "memoryHooks": [
       "QRM = interferencia de estaciones; QRN = ruido natural (aprox.).",
       "QSY = cambiar de frecuencia. QRT = dejar de emitir.",
-      "Alfabeto fonético ICAO: M = Mike, S = Sierra, etc.",
+      "Alfabeto fonético ICAO: M = Mike, S = Sierra, etc."
     ],
-    expressBullets: [
+    "expressBullets": [
       "Señales de socorro: no uses formatos de emergencia si no es real; en examen se premia el criterio normativo.",
       "Banda ciudadana y servicio de aficionado no son lo mismo: ojo con distractores.",
-      "Filtrado y armónicos: reduce interferencias a otros servicios — conecta con buenas prácticas y potencia legal.",
+      "Filtrado y armónicos: reduce interferencias a otros servicios — conecta con buenas prácticas y potencia legal."
     ],
-    readMore: [
+    "readMore": [
       "Código Q: no es una lista decorativa; sirve para expresar situaciones operativas con brevedad y claridad, especialmente en condiciones difíciles.",
       "Emergencias: claridad, prioridad e identificación pesan más que frases largas. Si no participas en la emergencia, mantén libre la frecuencia.",
-      "Abreviaturas: CQ es llamada general, DX larga distancia, PSE por favor, AR fin de mensaje/transmisión en telegrafía.",
+      "Abreviaturas: CQ es llamada general, DX larga distancia, PSE por favor, AR fin de mensaje/transmisión en telegrafía."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P2 abre con alfabeto fonético internacional: deletreo de letras y cifras en comunicaciones.",
       "Código Q: grupos más utilizados en el servicio de aficionados, especialmente QRM, QRN, QRO, QRP, QSL, QSY, QTH y QRT.",
       "Abreviaturas usuales: procedimiento en telegrafía y comunicaciones, incluidas señales como PSE o AR según contexto.",
       "Señales internacionales de socorro, urgencia y seguridad; tráfico de emergencia y empleo de bandas de aficionado en catástrofes naturales.",
-      "Responsabilidad social del radioaficionado y procedimientos operativos: buenas prácticas, claridad, prioridad, no interferir y respeto a planes de banda.",
+      "Responsabilidad social del radioaficionado y procedimientos operativos: buenas prácticas, claridad, prioridad, no interferir y respeto a planes de banda."
     ],
-    bookGuide: [
+    "bookGuide": [
       "La operación correcta empieza comprobando si la frecuencia está libre, usando el distintivo de llamada y manteniendo comunicaciones claras, breves y relacionadas con el servicio de aficionados.",
       "El código Q abrevia situaciones frecuentes: QRM es interferencia de otras estaciones, QRN ruido atmosférico, QRO aumentar potencia, QRP reducir potencia, QSL confirmar recepción, QSY cambiar de frecuencia y QRT cesar transmisión.",
       "El código RST informa legibilidad, intensidad y tono. En telefonía se usan normalmente R y S; en telegrafía se añade T.",
       "Las señales de prioridad se ordenan por gravedad: Mayday para socorro, Pan Pan para urgencia y Sécurité/Securite para seguridad. El tráfico prioritario debe respetarse sin interferir.",
       "El radioaficionado debe evitar interferencias deliberadas, usar la potencia necesaria, respetar planes de banda y ceder la frecuencia cuando proceda.",
-      "Las transmisiones deben hacerse en lenguaje claro. No se deben ocultar significados ni transmitir contenidos ajenos a la finalidad del servicio de aficionados.",
+      "Las transmisiones deben hacerse en lenguaje claro. No se deben ocultar significados ni transmitir contenidos ajenos a la finalidad del servicio de aficionados."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Agrupa códigos Q por uso: interferencia/ruido (QRM, QRN), potencia (QRO, QRP), contacto (QSO, QSL, QRZ) y movimiento (QSY, QRT, QRX).",
       "Ensaya una llamada de voz de 30 segundos: comprobar frecuencia libre, llamar, deletrear indicativo con ICAO, pasar reporte y cerrar identificándote.",
-      "Ordena señales de prioridad: Mayday para socorro, Pan Pan para urgencia y Sécurité/Securite para seguridad. Si aparece una emergencia real, no compitas por la frecuencia.",
+      "Ordena señales de prioridad: Mayday para socorro, Pan Pan para urgencia y Sécurité/Securite para seguridad. Si aparece una emergencia real, no compitas por la frecuencia."
     ],
-    quickSession: [
+    "quickSession": [
       "Para iniciar una llamada, escucha primero si la frecuencia está libre. Después llama identificándote con tu distintivo y mantén la comunicación clara y breve.",
       "QRM significa interferencia de otras estaciones; QRN ruido atmosférico; QRO aumentar potencia; QRP reducir potencia; QSL confirmar recepción; QSY cambiar frecuencia; QRT dejar de transmitir.",
       "Si escuchas Mayday, es socorro y tiene prioridad absoluta. Pan Pan indica urgencia y Sécurité/Securite seguridad. No se debe interferir ni ocupar la frecuencia innecesariamente.",
       "Una QSO básica contiene llamada, indicativos, reporte, intercambio breve y cierre. En telefonía conviene usar 'cambio' para ceder la palabra y terminar identificándose.",
       "El código RST resume reporte de señal: R legibilidad, S intensidad y T tono. En fonía se usan normalmente R y S; en CW se añade T.",
-      "Buena práctica operativa: no usar más potencia de la necesaria, respetar planes de banda, no transmitir mensajes codificados para ocultar significado y no interferir deliberadamente.",
+      "Buena práctica operativa: no usar más potencia de la necesaria, respetar planes de banda, no transmitir mensajes codificados para ocultar significado y no interferir deliberadamente."
     ],
-    examChecklist: [
+    "examChecklist": [
       "QRO = aumentar potencia; QRP = reducir potencia/baja potencia.",
       "QRM = interferencia de otras estaciones; QRN = ruido natural.",
       "PSE = por favor; AR = fin de transmisión/mensaje en telegrafía.",
       "Nunca interferir deliberadamente; en emergencia prima claridad, identificación y prioridad.",
-      "Mayday, Pan Pan y Sécurité/Securite no significan lo mismo: socorro, urgencia y seguridad.",
+      "Mayday, Pan Pan y Sécurité/Securite no significan lo mismo: socorro, urgencia y seguridad."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "QRM = interferencia de otras estaciones; QRN = ruido natural/atmosférico. Son una pareja trampa.",
       "QRO = aumentar potencia; QRP = reducir potencia o baja potencia. No los inviertas.",
       "QSY = cambiar de frecuencia; QRT = dejar de transmitir. Si el enunciado habla de moverse de canal, piensa QSY.",
@@ -556,66 +626,78 @@ export default {
       "La estación debe identificarse siempre según reglas aplicables; no solo si emite con mucha potencia.",
       "Las comunicaciones deben estar relacionadas con el servicio de aficionados; no son comunicación libre de cualquier contenido.",
       "Cifrar u ocultar deliberadamente el significado es trampa normativa: el servicio de aficionados trabaja en lenguaje claro.",
-      "En emergencia, si no participas, mantén libre la frecuencia. No compitas por transmitir ni hagas llamadas innecesarias.",
+      "En emergencia, si no participas, mantén libre la frecuencia. No compitas por transmitir ni hagas llamadas innecesarias."
     ],
-    flashcards: [
-      { front: "Código Q de interferencia de otras señales", back: "QRM" },
-      { front: "Código Q de ruido atmosférico (uso clásico)", back: "QRN" },
-      { front: "Letra M en fonético ICAO", back: "Mike" },
-      { front: "QSY", back: "Cambiar de frecuencia o desplazarse en la banda" },
+    "flashcards": [
+      {
+        "front": "Código Q de interferencia de otras señales",
+        "back": "QRM"
+      },
+      {
+        "front": "Código Q de ruido atmosférico (uso clásico)",
+        "back": "QRN"
+      },
+      {
+        "front": "Letra M en fonético ICAO",
+        "back": "Mike"
+      },
+      {
+        "front": "QSY",
+        "back": "Cambiar de frecuencia o desplazarse en la banda"
+      }
     ],
-    sources: "Reglamento de operación; práctica URE; códigos Q en manuales de operador.",
+    "sources": "Reglamento de operación; práctica URE; códigos Q en manuales de operador."
   },
-  instalaciones: {
-    memoryHooks: [
+  "instalaciones": {
+    "memoryHooks": [
       "Antenas en comunidades: propiedad horizontal + normativa de antenas (Ley 19/1983 citada en el reglamento).",
-      "Instalador autorizado y seguros pueden aparecer según enunciado y vigencia.",
+      "Instalador autorizado y seguros pueden aparecer según enunciado y vigencia."
     ],
-    expressBullets: [
+    "expressBullets": [
       "No existe “libertad total” ni “prohibido siempre” en opciones extremas: la norma suele exigir procedimientos y acuerdos.",
       "Instalaciones fijas vs móviles: responsabilidad del titular y licencia de estación asociada al marco del reglamento.",
-      "Seguridad eléctrica y puesta a tierra: buenas prácticas técnicas + cumplimiento reglamentario cuando el test lo cite.",
+      "Seguridad eléctrica y puesta a tierra: buenas prácticas técnicas + cumplimiento reglamentario cuando el test lo cite."
     ],
-    readMore: [
+    "readMore": [
       "Antenas en inmuebles: la comunidad no sustituye a la Administración, pero puede intervenir en aspectos de idoneidad, obras, seguridad y convivencia según el procedimiento.",
       "Estaciones desatendidas: repetidores y radiobalizas tienen requisitos propios, gestor responsable, identificación y límites técnicos.",
-      "Compatibilidad electromagnética: la instalación debe minimizar que la RF entre en equipos vecinos o servicios protegidos.",
+      "Compatibilidad electromagnética: la instalación debe minimizar que la RF entre en equipos vecinos o servicios protegidos."
     ],
-    fedieaSyllabus: [
+    "fedieaSyllabus": [
       "FEDI-EA P2 enlaza instalaciones con Ley 19/1983 sobre derecho a instalar antenas de estaciones de aficionado en el exterior de inmuebles.",
       "También incluye el Real Decreto 2623/1986 sobre instalaciones de antenas de estaciones radioeléctricas de aficionado y las instrucciones de aplicación.",
       "En la parte técnica FEDI-EA P1, seguridad pide instalación eléctrica, protecciones generales y de equipos, protección contra contactos, puesta a tierra, líneas de alimentación, descargas atmosféricas y toma de tierra.",
-      "Interferencia e inmunidad conectan con instalaciones: bloqueo, intermodulación, detección en audio, vías de entrada por antena/líneas/radiación directa y medidas de filtrado, desacoplo y apantallamiento.",
+      "Interferencia e inmunidad conectan con instalaciones: bloqueo, intermodulación, detección en audio, vías de entrada por antena/líneas/radiación directa y medidas de filtrado, desacoplo y apantallamiento."
     ],
-    bookGuide: [
+    "bookGuide": [
       "Una instalación fija exterior exige cumplir condiciones técnicas y administrativas: ubicación del sistema radiante, memoria descriptiva cuando proceda, seguridad mecánica, seguro y responsabilidades del titular.",
       "La toma de tierra protege al operador y ayuda a controlar corrientes no deseadas. Los chasis metálicos de los equipos deben conectarse de forma correcta y segura.",
       "Las antenas y riostras no deben crear peligro para personas o bienes. En zonas transitables deben señalizarse anclajes y elementos que puedan suponer riesgo.",
       "Las interferencias pueden entrar por antena, red eléctrica, cables de audio, falta de apantallamiento o emisiones no deseadas. Las soluciones típicas son filtros, desacoplos, ferritas, apantallamiento y buena puesta a tierra.",
       "Una estación portátil lleva antena y alimentación propias; una móvil se usa en movimiento; una fija se instala en una ubicación; una remota se controla a distancia; una desatendida funciona sin intervención directa continua.",
-      "Si una emisión causa interferencia perjudicial a servicios protegidos, especialmente seguridad de la vida humana, debe cesarse o corregirse hasta resolver el problema.",
+      "Si una emisión causa interferencia perjudicial a servicios protegidos, especialmente seguridad de la vida humana, debe cesarse o corregirse hasta resolver el problema."
     ],
-    practiceDrills: [
+    "practiceDrills": [
       "Haz una checklist de estación fija exterior: memoria descriptiva, ubicación/croquis, instalador si procede, seguro de antenas, tierra, riostras señalizadas y comunicación a la comunidad.",
       "Convierte cada riesgo en medida: RF en altavoces→cable blindado/filtro, RF en red eléctrica→filtro de línea, chasis metálicos→tierra común, antena transmitiendo→no tocar.",
-      "Diferencia casos de examen: portátil con antena propia, fija con sistema radiante, portable temporal, estación remota, repetidor/radiobaliza desatendida y estación colectiva.",
+      "Diferencia casos de examen: portátil con antena propia, fija con sistema radiante, portable temporal, estación remota, repetidor/radiobaliza desatendida y estación colectiva."
     ],
-    quickSession: [
+    "quickSession": [
       "Una instalación exterior debe pensarse en tres planos: legal, mecánico y eléctrico. Legal: autorización y documentación. Mecánico: soportes, anclajes y seguridad. Eléctrico: tierra, protecciones e interferencias.",
       "La memoria descriptiva identifica ubicación, equipos, antenas, líneas, toma de tierra y condiciones del sistema radiante. Sirve para que la instalación sea evaluable.",
       "La toma de tierra protege al operador frente a descargas y ayuda a derivar corrientes no deseadas. Los chasis metálicos deben conectarse correctamente.",
       "Si hay RF en altavoces o equipos cercanos, las soluciones típicas son filtros, ferritas, cables blindados, desacoplos y apantallamiento. Si hay armónicos, se revisa filtrado de salida del transmisor.",
       "No se debe tocar una antena en transmisión: puede haber tensión o corriente de RF peligrosa. También deben considerarse líneas eléctricas próximas, caída de elementos y descargas atmosféricas.",
-      "Distingue estaciones: portátil con antena y batería propias; móvil en vehículo o movimiento; fija en ubicación determinada; remota accionada a distancia; desatendida sin operador permanente.",
+      "Distingue estaciones: portátil con antena y batería propias; móvil en vehículo o movimiento; fija en ubicación determinada; remota accionada a distancia; desatendida sin operador permanente."
     ],
-    examChecklist: [
+    "examChecklist": [
       "La instalación exterior no es libertad absoluta ni prohibición total: hay procedimiento legal.",
       "Toma de tierra y protecciones son seguridad, no accesorio opcional.",
       "Filtrado, desacoplo y apantallamiento son medidas contra interferencias.",
       "Si se cancela licencia o hay obras, revisa condiciones de desmontaje o permanencia solo recepción según enunciado.",
-      "Ante interferencia a servicios de seguridad, la respuesta prudente es cesar o corregir antes de seguir emitiendo.",
+      "Ante interferencia a servicios de seguridad, la respuesta prudente es cesar o corregir antes de seguir emitiendo."
     ],
-    trapWarnings: [
+    "trapWarnings": [
       "Antenas en comunidad: evita extremos como 'libre siempre' o 'prohibido siempre'. Normalmente hay procedimiento, comunicación y condiciones.",
       "Si una antena autorizada impide obras de conservación, el titular debe permitir las obras si se garantiza restitución en condiciones iniciales, según el supuesto del banco.",
       "Ante obras, fíjate en la coletilla 'excepto urgencia': los plazos cambian si hay urgencia.",
@@ -624,12 +706,18 @@ export default {
       "RF en altavoces/equipos cercanos: medidas razonables son ferritas, filtros, apantallamiento, tierra y revisión de armónicos; aumentar potencia es justo lo contrario.",
       "Estación fija, portable, móvil, remota y desatendida no son sinónimos. Lee si el enunciado habla de ubicación, movimiento o control a distancia.",
       "Toma de tierra y protecciones no se eliminan para evitar tormentas; se desconectan bajadas/equipos cuando proceda manteniendo seguridad.",
-      "Si hay interferencia perjudicial a servicios protegidos o seguridad de la vida, cesar/corregir suele ser la opción segura.",
+      "Si hay interferencia perjudicial a servicios protegidos o seguridad de la vida, cesar/corregir suele ser la opción segura."
     ],
-    flashcards: [
-      { front: "Tema típico de antenas en edificios compartidos", back: "Normativa de propiedad horizontal + normativa de antenas" },
-      { front: "En test, opción más prudente sobre instalaciones", back: "La que refleja límites y procedimientos según norma vigente (no extremos)" },
+    "flashcards": [
+      {
+        "front": "Tema típico de antenas en edificios compartidos",
+        "back": "Normativa de propiedad horizontal + normativa de antenas"
+      },
+      {
+        "front": "En test, opción más prudente sobre instalaciones",
+        "back": "La que refleja límites y procedimientos según norma vigente (no extremos)"
+      }
     ],
-    sources: "BOE reglamento IET/1311/2013; Ley 19/1983 (antenas); vista Normativa.",
-  },
+    "sources": "BOE reglamento IET/1311/2013; Ley 19/1983 (antenas); vista Normativa."
+  }
 };
