@@ -158,7 +158,7 @@ export default [
       "El equipo se quema"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Debido a la distorsión:»). La opción que responde al criterio del banco es «La señal de salida no es igual a la de entrada».",
+    "explain": "La distorsión altera la forma de la señal: la salida ya no replica fielmente la entrada (armónicos, recorte o saturación). La opción correcta es «La señal de salida no es igual a la de entrada».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -173,7 +173,7 @@ export default [
       "Si la antena resuena a la frecuencia de la señal"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Cuando se dice que una antena esta sintonizada:»). La opción que responde al criterio del banco es «Si la antena resuena a la frecuencia de la señal».",
+    "explain": "Una antena sintonizada resuena a la frecuencia de la señal y acopla mejor la energía radiada. «Si la antena resuena a la frecuencia de la señal».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -398,7 +398,7 @@ export default [
       "El volumen"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El dial de presentación digital \"digital display\" nos indica:»). La opción que responde al criterio del banco es «La frecuencia de trabajo».",
+    "explain": "El display digital del transceptor indica la frecuencia de sintonía o trabajo del equipo. «La frecuencia de trabajo».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -413,7 +413,7 @@ export default [
       "Disminuye la selectividad"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («Cuando en recepción se disminuye el ancho de banda:»). La opción que responde al criterio del banco es «Aumenta la selectividad».",
+    "explain": "Al estrechar el ancho de banda del receptor se filtran más señales fuera del canal deseado; suele aumentar la selectividad. «Aumenta la selectividad».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -488,7 +488,7 @@ export default [
       "FSK"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Para transmitir una banda lateral superior, el mando \"MODO DE TRANSMISIÓN\" deberá estar en la posici…»). La opción que responde al criterio del banco es «USB».",
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulación; el mando de modo debe seleccionar USB. «USB».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -518,7 +518,7 @@ export default [
       "La Portadora"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En un transceptor, al actuar sobre el mando \"Volumen en RF\" variamos:»). La opción que responde al criterio del banco es «El volumen en radiofrecuencia».",
+    "explain": "El control de volumen en RF ajusta el nivel de señal en radiofrecuencia antes de la etapa de audio. «El volumen en radiofrecuencia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -578,7 +578,7 @@ export default [
       "Ohmnio"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos («El producto de un voltio y un amperio es un:»). La opción que responde al criterio del banco es «Vatio».",
+    "explain": "Potencia eléctrica P = V·I; un voltio multiplicado por un amperio es un vatio (W). «Vatio».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -623,7 +623,7 @@ export default [
       "Faradio"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La unidad de cantidad de electricidad es el:»). La opción que responde al criterio del banco es «Culombio».",
+    "explain": "La cantidad de electricidad (carga) se mide en culombios (C), no en amperios ni vatios. «Culombio».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -638,7 +638,7 @@ export default [
       "Electricidad estática"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Al flujo de electrones que circula por un conductor se le llama:»). La opción que responde al criterio del banco es «Corriente eléctrica».",
+    "explain": "La corriente eléctrica es el flujo ordenado de cargas (electrones) por un conductor. «Corriente eléctrica».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -653,7 +653,7 @@ export default [
       "Por medio de un transformador"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos («El amperímetro se conecta en:»). La opción que responde al criterio del banco es «Serie».",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Serie».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -728,7 +728,7 @@ export default [
       "Existe un fenómeno histéresis"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un circuto oscilante está en resonancia cuando:»). La opción que responde al criterio del banco es «Se anulan el uno al otro».",
+    "explain": "En resonancia las reactancias inductiva y capacitiva se compensan y la impedancia del circuito oscilante es mínima (serie) o máxima (paralelo) según el caso. «Se anulan el uno al otro».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -743,7 +743,7 @@ export default [
       "No sirve para emisión"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Una antena omnidireccional:»). La opción que responde al criterio del banco es «Emite por igual en todas las direcciones».",
+    "explain": "Una antena omnidireccional irradia con patrón similar en el plano horizontal (360°). «Emite por igual en todas las direcciones».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -758,7 +758,7 @@ export default [
       "Mezclando dos señales variables"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Cuando se modula un emisor se está:»). La opción que responde al criterio del banco es «Haciendo variar la portadora por medio de otra señal».",
+    "explain": "Modular es variar algún parámetro de la portadora (amplitud, frecuencia o fase) según la señal de información. «Haciendo variar la portadora por medio de otra señal».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -788,7 +788,7 @@ export default [
       "Aumentar la capacidad"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre componentes pasivos y activos («Una propiedad de la inductancia en un circuito consiste en:»). La opción que responde al criterio del banco es «Oponerse a la variaciones de corriente».",
+    "explain": "La inductancia se opone a los cambios de corriente (efecto de autoinducción). «Oponerse a la variaciones de corriente».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -878,7 +878,7 @@ export default [
       "No puede emplearse en estaciones españolas"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («La antena estará acoplada al paso final de salida:»). La opción que responde al criterio del banco es «Por adaptadores y filtros».",
+    "explain": "La etapa de potencia se acopla a la antena mediante filtros y adaptadores de impedancia según el diseño del equipo. «Por adaptadores y filtros».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -968,7 +968,7 @@ export default [
       "Menor que 0,5"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («La relación de ondas estacionarias para un adecuado funcionamiento debe ser:»). La opción que responde al criterio del banco es «entre 2,5 y 1».",
+    "explain": "La ROE (relación de ondas estacionarias) mide el acoplamiento línea–antena; valores cercanos a 1 indican buena adaptación. «entre 2,5 y 1».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1118,7 +1118,7 @@ export default [
       "Porque los emisores son más sencillos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA TECNICA DE SUPERHETERODINACION SE EMPLEA:»). La opción que responde al criterio del banco es «Porque permiten poner el CAG».",
+    "explain": "La superheterodinia traslada la señal a frecuencia intermedia para filtrar y amplificar; facilita el control automático de ganancia. «Porque permiten poner el CAG».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1193,7 +1193,7 @@ export default [
       "Desacoplar el emisor del receptor en un equipo transceptor"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL \"BALUM\" SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Adaptar una línea de transmisión coaxial asimétrica a una línea simétrica».",
+    "explain": "El balun (balum) adapta impedancias y puede pasar de línea balanceada a coaxial (asimétrica). «Adaptar una línea de transmisión coaxial asimétrica a una línea simétrica».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1208,7 +1208,7 @@ export default [
       "Radia o recibe en forma omnidireccional"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («UNA ANTENA DIRECTIVA:»). La opción que responde al criterio del banco es «Radia o recibe en dirección preferencial».",
+    "explain": "Una antena directiva concentra radiación o recepción en una dirección preferente. «Radia o recibe en dirección preferencial».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1238,7 +1238,7 @@ export default [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué ABREVIATURA INDICA QUE EL OPERADOR SUFRE UNA INTERFERENCIA?»). La opción que responde al criterio del banco es «QRM».",
+    "explain": "QRM indica interferencia de origen artificial (otras emisiones o equipos). «QRM».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1268,7 +1268,7 @@ export default [
       "QRZ"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACIÓN?»). La opción que responde al criterio del banco es «QSD».",
+    "explain": "QSD indica manipulación defectuosa o ilegible en telegrafía. «QSD».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1283,7 +1283,7 @@ export default [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué ABREVIATURA INDICA CUAL ES LA SITUACIÓN O UBICACIÓN?»). La opción que responde al criterio del banco es «QTH».",
+    "explain": "QTH es la ubicación o emplazamiento de la estación en tráfico. «QTH».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1298,7 +1298,7 @@ export default [
       "Es el prefijo correspondiente a una clase de licencia"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EA5/EA4EOT/M»). La opción que responde al criterio del banco es «Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 5».",
+    "explain": "En indicativos españoles, la barra y la cifra de distrito indican operación móvil fuera del distrito de la estación base (p. ej. EA5/EA4…). «Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 5».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1358,7 +1358,7 @@ export default [
       "Un condensador con polaridad."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un dieléctrico es:»). La opción que responde al criterio del banco es «Un aislante.».",
+    "explain": "Un dieléctrico es un material aislante que puede almacenar carga en un condensador (constante dieléctrica ε). «Un aislante.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1418,7 +1418,7 @@ export default [
       "Acústica."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («Las ondas de radio son de naturaleza:»). La opción que responde al criterio del banco es «Electromagnética.».",
+    "explain": "Las ondas de radio son ondas electromagnéticas que se propagan en el espacio sin medio material. «Electromagnética.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1677,7 +1677,7 @@ export default [
       "Troposfera - estratosfera - ionosfera."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:»). La opción que responde al criterio del banco es «Troposfera - estratosfera - ionosfera.».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:»). La opción que responde al criterio del banco es «Troposfera - estratosfera - ionosfera.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2730,7 +2730,7 @@ export default [
       "El calor que produce al pasar por una estufa"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se define la corriente eléctrica diciendo que es:»). La opción que responde al criterio del banco es «La circulación de cargas eléctricas».",
+    "explain": "La corriente eléctrica es el flujo ordenado de cargas (electrones) por un conductor. «La circulación de cargas eléctricas».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2865,7 +2865,7 @@ export default [
       "Alimentar al emisor cuando se habla frente al micrófono"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («En un emisor de radio, la modulación consiste en:»). La opción que responde al criterio del banco es «Modificar las características de la onda portadora de acuerdo con las de la onda de la señal que se desea transmitir».",
+    "explain": "Modular es variar algún parámetro de la portadora (amplitud, frecuencia o fase) según la señal de información. «Modificar las características de la onda portadora de acuerdo con las de la onda de la señal que se desea transmitir».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3075,7 +3075,7 @@ export default [
       "De rectificador de selenio"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («EL AMPERÍMETRO DE ANTENA ES DEL TIPO:»). La opción que responde al criterio del banco es «De radiofrecuencia».",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «De radiofrecuencia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3225,7 +3225,7 @@ export default [
       "Para medir intensidad, se intercala en serie"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre componentes pasivos y activos («¿PARA QUE SIRVE Y COMO SE INTERCALA UN AMPERÍMETRO EN UN CIRCUÍTO ELÉCTRICO?»). La opción que responde al criterio del banco es «Para medir intensidad, se intercala en serie».",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Para medir intensidad, se intercala en serie».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3615,7 +3615,7 @@ export default [
       "Un buen emisor"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN MATERIAL DIELÉCTRICO ES:»). La opción que responde al criterio del banco es «Buen aislante».",
+    "explain": "Un dieléctrico es un material aislante que puede almacenar carga en un condensador (constante dieléctrica ε). «Buen aislante».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3675,7 +3675,7 @@ export default [
       "No se puede utilizar"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre componentes pasivos y activos («SI QUEREMOS MEDIR CORRIENTES CONTINUAS CON UN AMPERÍMETRO CUYO ALCANCE MÁXIMO ES INFERIOR A LAS CORR…»). La opción que responde al criterio del banco es «Poner una resistencia en paralelo».",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Poner una resistencia en paralelo».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4275,7 +4275,7 @@ export default [
       "Decamétricas"
     ],
     "correctIndex": 1,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Decimétricas».",
+    "explain": "En la nomenclatura ITU, UHF designa el tramo aproximado de 300–3000 MHz. Para este enunciado la respuesta correcta es «Decimétricas».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4350,7 +4350,7 @@ export default [
       "Máxima"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («SI A LA SALIDA DEL EMISOR A LA ANTENA SE DISPONE DE UN AMPERIMETRO, EL AJUSTE DE MAXIMA EMISIÓN SE D…»). La opción que responde al criterio del banco es «Mínima».",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Mínima».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4950,7 +4950,7 @@ export default [
       "Hectométricas"
     ],
     "correctIndex": 0,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Decamétricas».",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3–30 MHz. Para este enunciado la respuesta correcta es «Decamétricas».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5295,7 +5295,7 @@ export default [
       "Para conectar con el sistema radiante"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:»). La opción que responde al criterio del banco es «Antes de etapas en las que se necesitan potencias grandes».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:»). La opción que responde al criterio del banco es «Antes de etapas en las que se necesitan potencias grandes».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5400,7 +5400,7 @@ export default [
       "Es el distintivo de llamada de una estación móvil del distrito 4 operada por un aficionado del distrito 7"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EA7/EA4KLM/M»). La opción que responde al criterio del banco es «Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 7».",
+    "explain": "En indicativos españoles, la barra y la cifra de distrito indican operación móvil fuera del distrito de la estación base (p. ej. EA5/EA4…). «Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 7».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5610,7 +5610,7 @@ export default [
       "Cero"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos («Si se dispone de un amperímetro, en ajuste optimo de emisión la lectura será:»). La opción que responde al criterio del banco es «Mínima».",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Mínima».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5640,7 +5640,7 @@ export default [
       "La sensibilidad del receptor"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando se pasa el modo de recepción de USB a LSB se cambia:»). La opción que responde al criterio del banco es «La frecuencia de batido».",
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulación; el mando de modo debe seleccionar USB. «La frecuencia de batido».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5925,7 +5925,7 @@ export default [
       "Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El circuito de acoplamiento entre etapas amplificadoras:»). La opción que responde al criterio del banco es «Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («El circuito de acoplamiento entre etapas amplificadoras:»). La opción que responde al criterio del banco es «Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6390,7 +6390,7 @@ export default [
       "¿Es defectuosa mi manipulación?"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA ABREVIATURA \"QSB\" DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA DE:»). La opción que responde al criterio del banco es «¿Varia la intensidad de mis señales?».",
+    "explain": "QSB indica que la señal recibida varía de intensidad (fading). «¿Varia la intensidad de mis señales?».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7065,7 +7065,7 @@ export default [
       "Modulación en frecuencia a modulación en amplitud"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («EN UN TRANSCEPTOR, AL CONMUTAR EL \"MODO DE TRANSMISIÓN\" DE LSB A USB SE CAMBIA DE:»). La opción que responde al criterio del banco es «Banda lateral única, banda inferior a banda superior».",
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulación; el mando de modo debe seleccionar USB. «Banda lateral única, banda inferior a banda superior».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7410,7 +7410,7 @@ export default [
       "Es imposible."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre componentes pasivos y activos («Un amperio es la intensidad de corriente que corresponde al paso por un conductor, durante un segund…»). La opción que responde al criterio del banco es «Es correcto.».",
+    "explain": "La cantidad de electricidad (carga) se mide en culombios (C), no en amperios ni vatios. «Es correcto.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8294,7 +8294,7 @@ export default [
       "1, 2, 3, 4."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las capas ionizadas de la atmósfera se denominan:»). La opción que responde al criterio del banco es «D, E, F1 y F2.».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («Las capas ionizadas de la atmósfera se denominan:»). La opción que responde al criterio del banco es «D, E, F1 y F2.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -10373,7 +10373,7 @@ export default [
       "Las siglas AM, significan modulación de armónicos."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Modulación de señales radioeléctricas:»). La opción que responde al criterio del banco es «La modulación AM, hace variar la amplitud de la portadora.».",
+    "explain": "Modular es variar algún parámetro de la portadora (amplitud, frecuencia o fase) según la señal de información. «La modulación AM, hace variar la amplitud de la portadora.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11033,7 +11033,7 @@ export default [
       "Amplitud modulada"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («Qué tipo de comunicación ocupa un mayor ancho de banda»). La opción que responde al criterio del banco es «Frecuencia modulada».",
+    "explain": "Al estrechar el ancho de banda del receptor se filtran más señales fuera del canal deseado; suele aumentar la selectividad. «Frecuencia modulada».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11919,7 +11919,7 @@ export default [
       "La abreviatura métrica B.m."
     ],
     "correctIndex": 3,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «La abreviatura métrica B.m.».",
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:»). La opción que responde al criterio del banco es «La abreviatura métrica B.m.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12489,7 +12489,7 @@ export default [
       "De la palabra Cuidado repetida tres veces."
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «De la palabra \"Securité\" repetida tres veces.».",
+    "explain": "La señal radiotelefónica internacional de seguridad es la palabra «Securité» (ortografía ITU), repetida tres veces. No confundir con Mayday (socorro) ni con RST. La opción correcta es «De la palabra \"Securité\" repetida tres veces.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13254,7 +13254,7 @@ export default [
       "UHF."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Que símbolo le corresponde a la gama de frecuencias de 3 a 30 MHz?:»). La opción que responde al criterio del banco es «HF.».",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3–30 MHz. Para este enunciado la respuesta correcta es «HF.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14298,13 +14298,13 @@ export default [
     "topicId": "marco-normativo",
     "stem": "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     "options": [
-      "En general está permitido la emisión de onda portadora no modulada.",
-      "Puede ser empleada arbitrariamente la señal de socorro \"SOS\".",
-      "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
-      "A efectos de ensayos puede emitirse un distintivo de llamada engañoso."
+      "300-3000 MHz.",
+      "30-300 MHz.",
+      "3-30 MHz.",
+      "30-300 kHz."
     ],
     "correctIndex": 2,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Puede emitirse información relacionada con la actividad del servicio de aficionados.».",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3–30 MHz. Para este enunciado la respuesta correcta es «3-30 MHz.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14544,7 +14544,7 @@ export default [
       "431,050 - 431,825 MHz"
     ],
     "correctIndex": 0,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «145,0000 - 145,1875 MHz».",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «145,0000 - 145,1875 MHz».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15039,7 +15039,7 @@ export default [
       "Upper HF"
     ],
     "correctIndex": 0,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Ultra High Frequency».",
+    "explain": "En la nomenclatura ITU, UHF designa el tramo aproximado de 300–3000 MHz. Para este enunciado la respuesta correcta es «Ultra High Frequency».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15054,7 +15054,7 @@ export default [
       "Virtual HF"
     ],
     "correctIndex": 1,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Very High Frequency».",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «Very High Frequency».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15069,7 +15069,7 @@ export default [
       "3-30 GHz"
     ],
     "correctIndex": 0,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «30-300 MHz».",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «30-300 MHz».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15414,7 +15414,7 @@ export default [
       "Preparar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa P en el protocolo PAS?»). La opción que responde al criterio del banco es «Proteger».",
+    "explain": "En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos daños antes de actuar. Por eso encaja «Proteger».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15435,7 +15435,7 @@ export default [
   {
     "id": "quijotes-85-2145",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué no debe hacerse a un motorista accidentado?",
     "options": [
       "Aflojar la ropa",
@@ -15444,13 +15444,13 @@ export default [
       "No moverlo innecesariamente"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué no debe hacerse a un motorista accidentado?»). La opción que responde al criterio del banco es «Retirar el casco».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué no debe hacerse a un motorista accidentado?»). La opción que responde al criterio del banco es «Retirar el casco».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2146",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué es la PLS?",
     "options": [
       "Posición lateral de seguridad",
@@ -15459,13 +15459,13 @@ export default [
       "Punto de luz secundaria"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es la PLS?»). La opción que responde al criterio del banco es «Posición lateral de seguridad».",
+    "explain": "La PLS (posición lateral de seguridad) es una maniobra de primeros auxilios para mantener la vía aérea en personas inconscientes que respiran. Aparece en material de formación de operadores y emergencias; la respuesta es «Posición lateral de seguridad».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2147",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Cuándo se debe aplicar la PLS?",
     "options": [
       "Inconsciente y respira",
@@ -15474,13 +15474,13 @@ export default [
       "Solo con niños"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cuándo se debe aplicar la PLS?»). La opción que responde al criterio del banco es «Inconsciente y respira».",
+    "explain": "La PLS (posición lateral de seguridad) es una maniobra de primeros auxilios para mantener la vía aérea en personas inconscientes que respiran. Aparece en material de formación de operadores y emergencias; la respuesta es «Inconsciente y respira».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2148",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué debe hacerse al comunicarse con un accidentado?",
     "options": [
       "Hablar rápido y fuerte",
@@ -15489,13 +15489,13 @@ export default [
       "No hablar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué debe hacerse al comunicarse con un accidentado?»). La opción que responde al criterio del banco es «Hablar calmado y cercano».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué debe hacerse al comunicarse con un accidentado?»). La opción que responde al criterio del banco es «Hablar calmado y cercano».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2149",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué trato se recomienda con accidentados adultos?",
     "options": [
       "Tutear",
@@ -15504,7 +15504,7 @@ export default [
       "No hablarles"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué trato se recomienda con accidentados adultos?»). La opción que responde al criterio del banco es «Trato de usted».",
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué trato se recomienda con accidentados adultos?»). La opción que responde al criterio del banco es «Trato de usted».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15885,7 +15885,7 @@ export default [
   {
     "id": "quijotes-85-2176",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué significa “breve” en comunicación por radio?",
     "options": [
       "Lo más corto posible",
@@ -15894,7 +15894,7 @@ export default [
       "Hablar rápido"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “breve” en comunicación por radio?»). La opción que responde al criterio del banco es «Lo más corto posible».",
+    "explain": "En operación por radio, «breve» significa ser claro con el mínimo de palabras necesarias (buena práctica y códigos Q). La respuesta es «Lo más corto posible».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15990,7 +15990,7 @@ export default [
   {
     "id": "quijotes-85-2183",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué significa “creciente”?",
     "options": [
       "Numeración que baja",
@@ -15999,13 +15999,13 @@ export default [
       "Calle en obras"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “creciente”?»). La opción que responde al criterio del banco es «Numeración que aumenta».",
+    "explain": "En señalización vial y mapas, «creciente» indica que la numeración de la calle aumenta en esa dirección (frente a decreciente). «Numeración que aumenta».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2184",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué significa “decreciente”?",
     "options": [
       "Numeración que disminuye",
@@ -16014,7 +16014,7 @@ export default [
       "Indicación de peligro"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “decreciente”?»). La opción que responde al criterio del banco es «Numeración que disminuye».",
+    "explain": "En señalización vial y mapas, «creciente» indica que la numeración de la calle aumenta en esa dirección (frente a decreciente). «Numeración que disminuye».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16140,7 +16140,7 @@ export default [
   {
     "id": "quijotes-85-2194",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?",
     "options": [
       "Llamar a emergencias",
@@ -16149,7 +16149,7 @@ export default [
       "Gritar pidiendo ayuda"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?»). La opción que responde al criterio del banco es «Proteger la zona».",
+    "explain": "En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos daños antes de actuar. Por eso encaja «Proteger la zona».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16705,7 +16705,7 @@ export default [
       "Uno"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («¿Qué valor indicará un medidor de ondas estacionarias, en el caso de un acoplamiento óptimo entre un…»). La opción que responde al criterio del banco es «Uno».",
+    "explain": "La ROE (relación de ondas estacionarias) mide el acoplamiento línea–antena; valores cercanos a 1 indican buena adaptación. «Uno».",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16735,7 +16735,7 @@ export default [
       "13 faradios"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos («El producto de 13 voltios por 1 amperio son:»). La opción que responde al criterio del banco es «13 vatios».",
+    "explain": "Potencia eléctrica P = V·I; un voltio multiplicado por un amperio es un vatio (W). «13 vatios».",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16795,7 +16795,7 @@ export default [
       "El número de kilohercios que ocupa la banda de trabajo del equipo"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («El ancho de banda ocupado es:»). La opción que responde al criterio del banco es «El comprendido entre los límites superior e inferior de la señal modulada».",
+    "explain": "Al estrechar el ancho de banda del receptor se filtran más señales fuera del canal deseado; suele aumentar la selectividad. «El comprendido entre los límites superior e inferior de la señal modulada».",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {

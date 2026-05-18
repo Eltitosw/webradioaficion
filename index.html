@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2026.05.18h" />
+  <link rel="stylesheet" href="styles.css?v=2026.05.18k" />
   <script>
     (function () {
       try {
@@ -73,6 +73,7 @@
         <a href="#cuaderno" data-nav="cuaderno">Cuaderno</a>
         <a href="#metodologia" data-nav="metodologia">Método</a>
         <a href="#tarjetas" data-nav="tarjetas">Tarjetas</a>
+        <a href="#utilidades" data-nav="utilidades">Utilidades</a>
         <a href="#ayuda" data-nav="ayuda">Ayuda</a>
       </nav>
       <div id="header-status" class="header-status" aria-live="polite"></div>
@@ -211,6 +212,10 @@
               <a href="#cuaderno" data-nav="cuaderno"><strong>Cuaderno</strong></a>
               y <a href="#tarjetas" data-nav="tarjetas"><strong>Tarjetas</strong></a>
               — errores activos, repaso inteligente y repaso espaciado.
+            </li>
+            <li>
+              <a href="#utilidades" data-nav="utilidades"><strong>Utilidades</strong></a>
+              — alfabeto fonético, códigos Q y mapa de distritos EA.
             </li>
             <li>
               <a href="#ayuda" data-nav="ayuda"><strong>Ayuda</strong></a>
@@ -606,7 +611,7 @@
           <article class="week-plan__card week-plan__card--calm">
             <strong>Día 1</strong>
             <h3>Descanso activo</h3>
-            <p>Repasa alfabeto, códigos Q, CEPT/HAREC y fórmulas básicas. Nada de sesiones largas ni bancos nuevos.</p>
+            <p>Repasa <a href="#utilidades" data-nav="utilidades">alfabeto, códigos Q y distritos EA</a>, CEPT/HAREC y fórmulas básicas. Nada de sesiones largas ni bancos nuevos.</p>
           </article>
         </div>
         <div class="final-kit__actions">
@@ -702,6 +707,22 @@
       </div>
     </section>
 
+    <section id="view-utilidades" class="view" hidden aria-labelledby="titulo-utilidades" aria-hidden="true">
+      <div class="section-head">
+        <p class="section-path">Estás aquí: Inicio → Utilidades</p>
+        <h1 id="titulo-utilidades">Utilidades de consulta</h1>
+        <p class="section-head__sub">
+          Alfabeto fonético, códigos Q, mapa de distritos EA y otras tablas rápidas. Material de apoyo; el examen prioriza electricidad, radio y normativa del servicio.
+        </p>
+      </div>
+      <aside class="next-step" aria-label="Siguiente paso recomendado">
+        <strong>Para estudiar en profundidad</strong>
+        <span>Usa Temario y Practicar por bloques. Aquí solo consultas sin hacer test.</span>
+        <a class="btn btn--ghost btn--sm" href="#temario" data-nav="temario">Ir al temario</a>
+      </aside>
+      <div id="utilidades-root" class="utilidades-root" aria-live="polite"></div>
+    </section>
+
     <section id="view-ayuda" class="view" hidden aria-labelledby="titulo-ayuda" aria-hidden="true">
       <div class="section-head">
         <p class="section-path">Estás aquí: Inicio → Ayuda</p>
@@ -731,6 +752,12 @@
             <li><strong>Corrige fallos.</strong> Abre Cuaderno antes de hacer otro simulacro.</li>
             <li><strong>Mide preparación.</strong> Usa Examen cuando ya tengas varios bloques practicados.</li>
           </ol>
+        </section>
+
+        <section class="help-panel panel" aria-labelledby="help-util-title">
+          <h2 id="help-util-title">Tablas de consulta</h2>
+          <p class="muted">Alfabeto fonético ICAO, códigos Q y mapa de distritos EA en una sola pestaña.</p>
+          <a class="btn btn--primary btn--sm" href="#utilidades" data-nav="utilidades">Abrir Utilidades</a>
         </section>
 
         <section class="help-panel panel" aria-labelledby="help-glossary-title">
@@ -936,6 +963,7 @@
         "examen",
         "cuaderno",
         "tarjetas",
+        "utilidades",
         "ayuda",
       ];
       var DOC_TITLES = {
@@ -947,6 +975,7 @@
         examen: "RadioExamen · Simulacro de examen",
         cuaderno: "RadioExamen · Cuaderno de errores",
         tarjetas: "RadioExamen · Tarjetas",
+        utilidades: "RadioExamen · Utilidades",
         ayuda: "RadioExamen · Ayuda",
       };
       function resolveViewId(raw) {
@@ -1021,6 +1050,6 @@
       });
     })();
   </script>
-  <script src="app.bundle.js?v=2026.05.18h" type="module"></script>
+  <script src="app.bundle.js?v=2026.05.18k" type="module"></script>
 </body>
 </html>

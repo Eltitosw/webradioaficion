@@ -3,6 +3,8 @@ import { test } from "node:test";
 import {
   auditQuestionExplain,
   explainMentionsCorrect,
+  isMisassignedPedagogicalExplain,
+  isStemExplainTopicConflict,
   normalizeForMatch,
 } from "../lib/explain-faithfulness.mjs";
 
@@ -48,4 +50,26 @@ test("auditQuestionExplain: ok si cita la correcta", () => {
   };
   const issues = auditQuestionExplain(q).filter((i) => i.level === "fail");
   assert.equal(issues.length, 0);
+});
+
+test("isStemExplainTopicConflict: Securité no puede explicarse con RST", () => {
+  assert.equal(
+    isStemExplainTopicConflict(
+      "RST resume legibilidad, intensidad y tono.",
+      "La señal de seguridad en radiotelefonía se compone:",
+    ),
+    true,
+  );
+});
+
+test("isMisassignedPedagogicalExplain detecta banda LF mal asignada", () => {
+  const q = {
+    stem: "¿Qué información puede emitir un aficionado?",
+    topicId: "marco-normativo",
+    options: ["LF 30-300 kHz", "Información del servicio de aficionados"],
+    correctIndex: 1,
+    explain:
+      "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz). La respuesta es «Información del servicio de aficionados.»",
+  };
+  assert.equal(isMisassignedPedagogicalExplain(q), true);
 });

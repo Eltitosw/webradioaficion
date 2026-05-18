@@ -49,7 +49,7 @@ var topics_default = {
         {
           id: "operacion-seguridad",
           title: "Operaci\xF3n, emergencias y buenas pr\xE1cticas",
-          hint: "C\xF3digo Q, fon\xE9tico ICAO, se\xF1ales de urgencia, interferencias."
+          hint: "C\xF3digo Q, fon\xE9tico ICAO, Mayday/Securit\xE9, interferencias. Incluye auxilios del banco hist\xF3rico (ver Utilidades)."
         },
         {
           id: "instalaciones",
@@ -1007,7 +1007,7 @@ var questions_banco_default = [
       "El equipo se quema"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABDebido a la distorsi\xF3n:\xBB). La opci\xF3n que responde al criterio del banco es \xABLa se\xF1al de salida no es igual a la de entrada\xBB.",
+    "explain": "La distorsi\xF3n altera la forma de la se\xF1al: la salida ya no replica fielmente la entrada (arm\xF3nicos, recorte o saturaci\xF3n). La opci\xF3n correcta es \xABLa se\xF1al de salida no es igual a la de entrada\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1022,7 +1022,7 @@ var questions_banco_default = [
       "Si la antena resuena a la frecuencia de la se\xF1al"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xABCuando se dice que una antena esta sintonizada:\xBB). La opci\xF3n que responde al criterio del banco es \xABSi la antena resuena a la frecuencia de la se\xF1al\xBB.",
+    "explain": "Una antena sintonizada resuena a la frecuencia de la se\xF1al y acopla mejor la energ\xEDa radiada. \xABSi la antena resuena a la frecuencia de la se\xF1al\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1247,7 +1247,7 @@ var questions_banco_default = [
       "El volumen"
     ],
     "correctIndex": 2,
-    "explain": 'Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABEl dial de presentaci\xF3n digital "digital display" nos indica:\xBB). La opci\xF3n que responde al criterio del banco es \xABLa frecuencia de trabajo\xBB.',
+    "explain": "El display digital del transceptor indica la frecuencia de sinton\xEDa o trabajo del equipo. \xABLa frecuencia de trabajo\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1262,7 +1262,7 @@ var questions_banco_default = [
       "Disminuye la selectividad"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre campos, ondas y par\xE1metros \u03BB\u2013f\u2013v (\xABCuando en recepci\xF3n se disminuye el ancho de banda:\xBB). La opci\xF3n que responde al criterio del banco es \xABAumenta la selectividad\xBB.",
+    "explain": "Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xABAumenta la selectividad\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1337,7 +1337,7 @@ var questions_banco_default = [
       "FSK"
     ],
     "correctIndex": 0,
-    "explain": 'Pregunta sobre cadenas de receptor y transmisor (\xABPara transmitir una banda lateral superior, el mando "MODO DE TRANSMISI\xD3N" deber\xE1 estar en la posici\u2026\xBB). La opci\xF3n que responde al criterio del banco es \xABUSB\xBB.',
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulaci\xF3n; el mando de modo debe seleccionar USB. \xABUSB\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1367,7 +1367,7 @@ var questions_banco_default = [
       "La Portadora"
     ],
     "correctIndex": 1,
-    "explain": 'Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABEn un transceptor, al actuar sobre el mando "Volumen en RF" variamos:\xBB). La opci\xF3n que responde al criterio del banco es \xABEl volumen en radiofrecuencia\xBB.',
+    "explain": "El control de volumen en RF ajusta el nivel de se\xF1al en radiofrecuencia antes de la etapa de audio. \xABEl volumen en radiofrecuencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1427,7 +1427,7 @@ var questions_banco_default = [
       "Ohmnio"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABEl producto de un voltio y un amperio es un:\xBB). La opci\xF3n que responde al criterio del banco es \xABVatio\xBB.",
+    "explain": "Potencia el\xE9ctrica P = V\xB7I; un voltio multiplicado por un amperio es un vatio (W). \xABVatio\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1472,7 +1472,7 @@ var questions_banco_default = [
       "Faradio"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABLa unidad de cantidad de electricidad es el:\xBB). La opci\xF3n que responde al criterio del banco es \xABCulombio\xBB.",
+    "explain": "La cantidad de electricidad (carga) se mide en culombios (C), no en amperios ni vatios. \xABCulombio\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1487,7 +1487,7 @@ var questions_banco_default = [
       "Electricidad est\xE1tica"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABAl flujo de electrones que circula por un conductor se le llama:\xBB). La opci\xF3n que responde al criterio del banco es \xABCorriente el\xE9ctrica\xBB.",
+    "explain": "La corriente el\xE9ctrica es el flujo ordenado de cargas (electrones) por un conductor. \xABCorriente el\xE9ctrica\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1502,7 +1502,7 @@ var questions_banco_default = [
       "Por medio de un transformador"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABEl amper\xEDmetro se conecta en:\xBB). La opci\xF3n que responde al criterio del banco es \xABSerie\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABSerie\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1577,7 +1577,7 @@ var questions_banco_default = [
       "Existe un fen\xF3meno hist\xE9resis"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABUn circuto oscilante est\xE1 en resonancia cuando:\xBB). La opci\xF3n que responde al criterio del banco es \xABSe anulan el uno al otro\xBB.",
+    "explain": "En resonancia las reactancias inductiva y capacitiva se compensan y la impedancia del circuito oscilante es m\xEDnima (serie) o m\xE1xima (paralelo) seg\xFAn el caso. \xABSe anulan el uno al otro\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1592,7 +1592,7 @@ var questions_banco_default = [
       "No sirve para emisi\xF3n"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xABUna antena omnidireccional:\xBB). La opci\xF3n que responde al criterio del banco es \xABEmite por igual en todas las direcciones\xBB.",
+    "explain": "Una antena omnidireccional irradia con patr\xF3n similar en el plano horizontal (360\xB0). \xABEmite por igual en todas las direcciones\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1607,7 +1607,7 @@ var questions_banco_default = [
       "Mezclando dos se\xF1ales variables"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor (\xABCuando se modula un emisor se est\xE1:\xBB). La opci\xF3n que responde al criterio del banco es \xABHaciendo variar la portadora por medio de otra se\xF1al\xBB.",
+    "explain": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABHaciendo variar la portadora por medio de otra se\xF1al\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1637,7 +1637,7 @@ var questions_banco_default = [
       "Aumentar la capacidad"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABUna propiedad de la inductancia en un circuito consiste en:\xBB). La opci\xF3n que responde al criterio del banco es \xABOponerse a la variaciones de corriente\xBB.",
+    "explain": "La inductancia se opone a los cambios de corriente (efecto de autoinducci\xF3n). \xABOponerse a la variaciones de corriente\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1727,7 +1727,7 @@ var questions_banco_default = [
       "No puede emplearse en estaciones espa\xF1olas"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xABLa antena estar\xE1 acoplada al paso final de salida:\xBB). La opci\xF3n que responde al criterio del banco es \xABPor adaptadores y filtros\xBB.",
+    "explain": "La etapa de potencia se acopla a la antena mediante filtros y adaptadores de impedancia seg\xFAn el dise\xF1o del equipo. \xABPor adaptadores y filtros\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1817,7 +1817,7 @@ var questions_banco_default = [
       "Menor que 0,5"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre campos, ondas y par\xE1metros \u03BB\u2013f\u2013v (\xABLa relaci\xF3n de ondas estacionarias para un adecuado funcionamiento debe ser:\xBB). La opci\xF3n que responde al criterio del banco es \xABentre 2,5 y 1\xBB.",
+    "explain": "La ROE (relaci\xF3n de ondas estacionarias) mide el acoplamiento l\xEDnea\u2013antena; valores cercanos a 1 indican buena adaptaci\xF3n. \xABentre 2,5 y 1\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1967,7 +1967,7 @@ var questions_banco_default = [
       "Porque los emisores son m\xE1s sencillos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor (\xABLA TECNICA DE SUPERHETERODINACION SE EMPLEA:\xBB). La opci\xF3n que responde al criterio del banco es \xABPorque permiten poner el CAG\xBB.",
+    "explain": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABPorque permiten poner el CAG\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2042,7 +2042,7 @@ var questions_banco_default = [
       "Desacoplar el emisor del receptor en un equipo transceptor"
     ],
     "correctIndex": 2,
-    "explain": 'Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABEL "BALUM" SE UTILIZA PARA:\xBB). La opci\xF3n que responde al criterio del banco es \xABAdaptar una l\xEDnea de transmisi\xF3n coaxial asim\xE9trica a una l\xEDnea sim\xE9trica\xBB.',
+    "explain": "El balun (balum) adapta impedancias y puede pasar de l\xEDnea balanceada a coaxial (asim\xE9trica). \xABAdaptar una l\xEDnea de transmisi\xF3n coaxial asim\xE9trica a una l\xEDnea sim\xE9trica\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2057,7 +2057,7 @@ var questions_banco_default = [
       "Radia o recibe en forma omnidireccional"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xABUNA ANTENA DIRECTIVA:\xBB). La opci\xF3n que responde al criterio del banco es \xABRadia o recibe en direcci\xF3n preferencial\xBB.",
+    "explain": "Una antena directiva concentra radiaci\xF3n o recepci\xF3n en una direcci\xF3n preferente. \xABRadia o recibe en direcci\xF3n preferencial\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2087,7 +2087,7 @@ var questions_banco_default = [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xAB\xBFQu\xE9 ABREVIATURA INDICA QUE EL OPERADOR SUFRE UNA INTERFERENCIA?\xBB). La opci\xF3n que responde al criterio del banco es \xABQRM\xBB.",
+    "explain": "QRM indica interferencia de origen artificial (otras emisiones o equipos). \xABQRM\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2117,7 +2117,7 @@ var questions_banco_default = [
       "QRZ"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xAB\xBFQu\xE9 ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACI\xD3N?\xBB). La opci\xF3n que responde al criterio del banco es \xABQSD\xBB.",
+    "explain": "QSD indica manipulaci\xF3n defectuosa o ilegible en telegraf\xEDa. \xABQSD\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2132,7 +2132,7 @@ var questions_banco_default = [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xAB\xBFQu\xE9 ABREVIATURA INDICA CUAL ES LA SITUACI\xD3N O UBICACI\xD3N?\xBB). La opci\xF3n que responde al criterio del banco es \xABQTH\xBB.",
+    "explain": "QTH es la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. \xABQTH\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2147,7 +2147,7 @@ var questions_banco_default = [
       "Es el prefijo correspondiente a una clase de licencia"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABEA5/EA4EOT/M\xBB). La opci\xF3n que responde al criterio del banco es \xABEs el distintivo de llamada de una estaci\xF3n m\xF3vil del distrito 4 operando en el distrito 5\xBB.",
+    "explain": "En indicativos espa\xF1oles, la barra y la cifra de distrito indican operaci\xF3n m\xF3vil fuera del distrito de la estaci\xF3n base (p. ej. EA5/EA4\u2026). \xABEs el distintivo de llamada de una estaci\xF3n m\xF3vil del distrito 4 operando en el distrito 5\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2207,7 +2207,7 @@ var questions_banco_default = [
       "Un condensador con polaridad."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABUn diel\xE9ctrico es:\xBB). La opci\xF3n que responde al criterio del banco es \xABUn aislante.\xBB.",
+    "explain": "Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xABUn aislante.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2267,7 +2267,7 @@ var questions_banco_default = [
       "Ac\xFAstica."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre campos, ondas y par\xE1metros \u03BB\u2013f\u2013v (\xABLas ondas de radio son de naturaleza:\xBB). La opci\xF3n que responde al criterio del banco es \xABElectromagn\xE9tica.\xBB.",
+    "explain": "Las ondas de radio son ondas electromagn\xE9ticas que se propagan en el espacio sin medio material. \xABElectromagn\xE9tica.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2526,7 +2526,7 @@ var questions_banco_default = [
       "Troposfera - estratosfera - ionosfera."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABDe menor a mayor altura, indique el orden correcto de la capas de la atmosfera:\xBB). La opci\xF3n que responde al criterio del banco es \xABTroposfera - estratosfera - ionosfera.\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xABDe menor a mayor altura, indique el orden correcto de la capas de la atmosfera:\xBB). La opci\xF3n que responde al criterio del banco es \xABTroposfera - estratosfera - ionosfera.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3579,7 +3579,7 @@ var questions_banco_default = [
       "El calor que produce al pasar por una estufa"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABSe define la corriente el\xE9ctrica diciendo que es:\xBB). La opci\xF3n que responde al criterio del banco es \xABLa circulaci\xF3n de cargas el\xE9ctricas\xBB.",
+    "explain": "La corriente el\xE9ctrica es el flujo ordenado de cargas (electrones) por un conductor. \xABLa circulaci\xF3n de cargas el\xE9ctricas\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3714,7 +3714,7 @@ var questions_banco_default = [
       "Alimentar al emisor cuando se habla frente al micr\xF3fono"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor (\xABEn un emisor de radio, la modulaci\xF3n consiste en:\xBB). La opci\xF3n que responde al criterio del banco es \xABModificar las caracter\xEDsticas de la onda portadora de acuerdo con las de la onda de la se\xF1al que se desea transmitir\xBB.",
+    "explain": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABModificar las caracter\xEDsticas de la onda portadora de acuerdo con las de la onda de la se\xF1al que se desea transmitir\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3924,7 +3924,7 @@ var questions_banco_default = [
       "De rectificador de selenio"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xABEL AMPER\xCDMETRO DE ANTENA ES DEL TIPO:\xBB). La opci\xF3n que responde al criterio del banco es \xABDe radiofrecuencia\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABDe radiofrecuencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4074,7 +4074,7 @@ var questions_banco_default = [
       "Para medir intensidad, se intercala en serie"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xAB\xBFPARA QUE SIRVE Y COMO SE INTERCALA UN AMPER\xCDMETRO EN UN CIRCU\xCDTO EL\xC9CTRICO?\xBB). La opci\xF3n que responde al criterio del banco es \xABPara medir intensidad, se intercala en serie\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABPara medir intensidad, se intercala en serie\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4464,7 +4464,7 @@ var questions_banco_default = [
       "Un buen emisor"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABUN MATERIAL DIEL\xC9CTRICO ES:\xBB). La opci\xF3n que responde al criterio del banco es \xABBuen aislante\xBB.",
+    "explain": "Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xABBuen aislante\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4524,7 +4524,7 @@ var questions_banco_default = [
       "No se puede utilizar"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABSI QUEREMOS MEDIR CORRIENTES CONTINUAS CON UN AMPER\xCDMETRO CUYO ALCANCE M\xC1XIMO ES INFERIOR A LAS CORR\u2026\xBB). La opci\xF3n que responde al criterio del banco es \xABPoner una resistencia en paralelo\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABPoner una resistencia en paralelo\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5124,7 +5124,7 @@ var questions_banco_default = [
       "Decam\xE9tricas"
     ],
     "correctIndex": 1,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xABDecim\xE9tricas\xBB.",
+    "explain": "En la nomenclatura ITU, UHF designa el tramo aproximado de 300\u20133000 MHz. Para este enunciado la respuesta correcta es \xABDecim\xE9tricas\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5199,7 +5199,7 @@ var questions_banco_default = [
       "M\xE1xima"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xABSI A LA SALIDA DEL EMISOR A LA ANTENA SE DISPONE DE UN AMPERIMETRO, EL AJUSTE DE MAXIMA EMISI\xD3N SE D\u2026\xBB). La opci\xF3n que responde al criterio del banco es \xABM\xEDnima\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABM\xEDnima\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5799,7 +5799,7 @@ var questions_banco_default = [
       "Hectom\xE9tricas"
     ],
     "correctIndex": 0,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xABDecam\xE9tricas\xBB.",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xABDecam\xE9tricas\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6144,7 +6144,7 @@ var questions_banco_default = [
       "Para conectar con el sistema radiante"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABLAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:\xBB). La opci\xF3n que responde al criterio del banco es \xABAntes de etapas en las que se necesitan potencias grandes\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xABLAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:\xBB). La opci\xF3n que responde al criterio del banco es \xABAntes de etapas en las que se necesitan potencias grandes\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6249,7 +6249,7 @@ var questions_banco_default = [
       "Es el distintivo de llamada de una estaci\xF3n m\xF3vil del distrito 4 operada por un aficionado del distrito 7"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABEA7/EA4KLM/M\xBB). La opci\xF3n que responde al criterio del banco es \xABEs el distintivo de llamada de una estaci\xF3n m\xF3vil del distrito 4 operando en el distrito 7\xBB.",
+    "explain": "En indicativos espa\xF1oles, la barra y la cifra de distrito indican operaci\xF3n m\xF3vil fuera del distrito de la estaci\xF3n base (p. ej. EA5/EA4\u2026). \xABEs el distintivo de llamada de una estaci\xF3n m\xF3vil del distrito 4 operando en el distrito 7\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6459,7 +6459,7 @@ var questions_banco_default = [
       "Cero"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABSi se dispone de un amper\xEDmetro, en ajuste optimo de emisi\xF3n la lectura ser\xE1:\xBB). La opci\xF3n que responde al criterio del banco es \xABM\xEDnima\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABM\xEDnima\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6489,7 +6489,7 @@ var questions_banco_default = [
       "La sensibilidad del receptor"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABCuando se pasa el modo de recepci\xF3n de USB a LSB se cambia:\xBB). La opci\xF3n que responde al criterio del banco es \xABLa frecuencia de batido\xBB.",
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulaci\xF3n; el mando de modo debe seleccionar USB. \xABLa frecuencia de batido\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6774,7 +6774,7 @@ var questions_banco_default = [
       "Permite el paso de las se\xF1ales e independiza las polarizaciones de la primera y segunda etapa"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABEl circuito de acoplamiento entre etapas amplificadoras:\xBB). La opci\xF3n que responde al criterio del banco es \xABPermite el paso de las se\xF1ales e independiza las polarizaciones de la primera y segunda etapa\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xABEl circuito de acoplamiento entre etapas amplificadoras:\xBB). La opci\xF3n que responde al criterio del banco es \xABPermite el paso de las se\xF1ales e independiza las polarizaciones de la primera y segunda etapa\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7239,7 +7239,7 @@ var questions_banco_default = [
       "\xBFEs defectuosa mi manipulaci\xF3n?"
     ],
     "correctIndex": 2,
-    "explain": 'Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABLA ABREVIATURA "QSB" DEL CODIGO "Q" CORRESPONDE A LA PREGUNTA DE:\xBB). La opci\xF3n que responde al criterio del banco es \xAB\xBFVaria la intensidad de mis se\xF1ales?\xBB.',
+    "explain": "QSB indica que la se\xF1al recibida var\xEDa de intensidad (fading). \xAB\xBFVaria la intensidad de mis se\xF1ales?\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7914,7 +7914,7 @@ var questions_banco_default = [
       "Modulaci\xF3n en frecuencia a modulaci\xF3n en amplitud"
     ],
     "correctIndex": 0,
-    "explain": 'Pregunta sobre cadenas de receptor y transmisor (\xABEN UN TRANSCEPTOR, AL CONMUTAR EL "MODO DE TRANSMISI\xD3N" DE LSB A USB SE CAMBIA DE:\xBB). La opci\xF3n que responde al criterio del banco es \xABBanda lateral \xFAnica, banda inferior a banda superior\xBB.',
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulaci\xF3n; el mando de modo debe seleccionar USB. \xABBanda lateral \xFAnica, banda inferior a banda superior\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8259,7 +8259,7 @@ var questions_banco_default = [
       "Es imposible."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABUn amperio es la intensidad de corriente que corresponde al paso por un conductor, durante un segund\u2026\xBB). La opci\xF3n que responde al criterio del banco es \xABEs correcto.\xBB.",
+    "explain": "La cantidad de electricidad (carga) se mide en culombios (C), no en amperios ni vatios. \xABEs correcto.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -9143,7 +9143,7 @@ var questions_banco_default = [
       "1, 2, 3, 4."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA (\xABLas capas ionizadas de la atm\xF3sfera se denominan:\xBB). La opci\xF3n que responde al criterio del banco es \xABD, E, F1 y F2.\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xABLas capas ionizadas de la atm\xF3sfera se denominan:\xBB). La opci\xF3n que responde al criterio del banco es \xABD, E, F1 y F2.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -11222,7 +11222,7 @@ var questions_banco_default = [
       "Las siglas AM, significan modulaci\xF3n de arm\xF3nicos."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor (\xABModulaci\xF3n de se\xF1ales radioel\xE9ctricas:\xBB). La opci\xF3n que responde al criterio del banco es \xABLa modulaci\xF3n AM, hace variar la amplitud de la portadora.\xBB.",
+    "explain": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABLa modulaci\xF3n AM, hace variar la amplitud de la portadora.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11882,7 +11882,7 @@ var questions_banco_default = [
       "Amplitud modulada"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre campos, ondas y par\xE1metros \u03BB\u2013f\u2013v (\xABQu\xE9 tipo de comunicaci\xF3n ocupa un mayor ancho de banda\xBB). La opci\xF3n que responde al criterio del banco es \xABFrecuencia modulada\xBB.",
+    "explain": "Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xABFrecuencia modulada\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12768,7 +12768,7 @@ var questions_banco_default = [
       "La abreviatura m\xE9trica B.m."
     ],
     "correctIndex": 3,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xABLa abreviatura m\xE9trica B.m.\xBB.",
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xABEn la nomenclatura de las bandas de frecuencia las ondas m\xE9tricas se relacionan con:\xBB). La opci\xF3n que responde al criterio del banco es \xABLa abreviatura m\xE9trica B.m.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13338,7 +13338,7 @@ var questions_banco_default = [
       "De la palabra Cuidado repetida tres veces."
     ],
     "correctIndex": 2,
-    "explain": 'RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABDe la palabra "Securit\xE9" repetida tres veces.\xBB.',
+    "explain": 'La se\xF1al radiotelef\xF3nica internacional de seguridad es la palabra \xABSecurit\xE9\xBB (ortograf\xEDa ITU), repetida tres veces. No confundir con Mayday (socorro) ni con RST. La opci\xF3n correcta es \xABDe la palabra "Securit\xE9" repetida tres veces.\xBB.',
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14103,7 +14103,7 @@ var questions_banco_default = [
       "UHF."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQue s\xEDmbolo le corresponde a la gama de frecuencias de 3 a 30 MHz?:\xBB). La opci\xF3n que responde al criterio del banco es \xABHF.\xBB.",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xABHF.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15147,13 +15147,13 @@ var questions_banco_default = [
     "topicId": "marco-normativo",
     "stem": "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     "options": [
-      "En general est\xE1 permitido la emisi\xF3n de onda portadora no modulada.",
-      'Puede ser empleada arbitrariamente la se\xF1al de socorro "SOS".',
-      "Puede emitirse informaci\xF3n relacionada con la actividad del servicio de aficionados.",
-      "A efectos de ensayos puede emitirse un distintivo de llamada enga\xF1oso."
+      "300-3000 MHz.",
+      "30-300 MHz.",
+      "3-30 MHz.",
+      "30-300 kHz."
     ],
     "correctIndex": 2,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xABPuede emitirse informaci\xF3n relacionada con la actividad del servicio de aficionados.\xBB.",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xAB3-30 MHz.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15393,7 +15393,7 @@ var questions_banco_default = [
       "431,050 - 431,825 MHz"
     ],
     "correctIndex": 0,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xAB145,0000 - 145,1875 MHz\xBB.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB145,0000 - 145,1875 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15888,7 +15888,7 @@ var questions_banco_default = [
       "Upper HF"
     ],
     "correctIndex": 0,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xABUltra High Frequency\xBB.",
+    "explain": "En la nomenclatura ITU, UHF designa el tramo aproximado de 300\u20133000 MHz. Para este enunciado la respuesta correcta es \xABUltra High Frequency\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15903,7 +15903,7 @@ var questions_banco_default = [
       "Virtual HF"
     ],
     "correctIndex": 1,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xABVery High Frequency\xBB.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xABVery High Frequency\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15918,7 +15918,7 @@ var questions_banco_default = [
       "3-30 GHz"
     ],
     "correctIndex": 0,
-    "explain": "Cada s\xEDmbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30\u2013300 kHz en la tabla habitual del examen). La respuesta es \xAB30-300 MHz\xBB.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB30-300 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16263,7 +16263,7 @@ var questions_banco_default = [
       "Preparar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 significa P en el protocolo PAS?\xBB). La opci\xF3n que responde al criterio del banco es \xABProteger\xBB.",
+    "explain": "En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos da\xF1os antes de actuar. Por eso encaja \xABProteger\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16284,7 +16284,7 @@ var questions_banco_default = [
   {
     "id": "quijotes-85-2145",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 no debe hacerse a un motorista accidentado?",
     "options": [
       "Aflojar la ropa",
@@ -16293,13 +16293,13 @@ var questions_banco_default = [
       "No moverlo innecesariamente"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 no debe hacerse a un motorista accidentado?\xBB). La opci\xF3n que responde al criterio del banco es \xABRetirar el casco\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xAB\xBFQu\xE9 no debe hacerse a un motorista accidentado?\xBB). La opci\xF3n que responde al criterio del banco es \xABRetirar el casco\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2146",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 es la PLS?",
     "options": [
       "Posici\xF3n lateral de seguridad",
@@ -16308,13 +16308,13 @@ var questions_banco_default = [
       "Punto de luz secundaria"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 es la PLS?\xBB). La opci\xF3n que responde al criterio del banco es \xABPosici\xF3n lateral de seguridad\xBB.",
+    "explain": "La PLS (posici\xF3n lateral de seguridad) es una maniobra de primeros auxilios para mantener la v\xEDa a\xE9rea en personas inconscientes que respiran. Aparece en material de formaci\xF3n de operadores y emergencias; la respuesta es \xABPosici\xF3n lateral de seguridad\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2147",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFCu\xE1ndo se debe aplicar la PLS?",
     "options": [
       "Inconsciente y respira",
@@ -16323,13 +16323,13 @@ var questions_banco_default = [
       "Solo con ni\xF1os"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFCu\xE1ndo se debe aplicar la PLS?\xBB). La opci\xF3n que responde al criterio del banco es \xABInconsciente y respira\xBB.",
+    "explain": "La PLS (posici\xF3n lateral de seguridad) es una maniobra de primeros auxilios para mantener la v\xEDa a\xE9rea en personas inconscientes que respiran. Aparece en material de formaci\xF3n de operadores y emergencias; la respuesta es \xABInconsciente y respira\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2148",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 debe hacerse al comunicarse con un accidentado?",
     "options": [
       "Hablar r\xE1pido y fuerte",
@@ -16338,13 +16338,13 @@ var questions_banco_default = [
       "No hablar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 debe hacerse al comunicarse con un accidentado?\xBB). La opci\xF3n que responde al criterio del banco es \xABHablar calmado y cercano\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xAB\xBFQu\xE9 debe hacerse al comunicarse con un accidentado?\xBB). La opci\xF3n que responde al criterio del banco es \xABHablar calmado y cercano\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2149",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 trato se recomienda con accidentados adultos?",
     "options": [
       "Tutear",
@@ -16353,7 +16353,7 @@ var questions_banco_default = [
       "No hablarles"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 trato se recomienda con accidentados adultos?\xBB). La opci\xF3n que responde al criterio del banco es \xABTrato de usted\xBB.",
+    "explain": "Pregunta sobre operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas (\xAB\xBFQu\xE9 trato se recomienda con accidentados adultos?\xBB). La opci\xF3n que responde al criterio del banco es \xABTrato de usted\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16734,7 +16734,7 @@ var questions_banco_default = [
   {
     "id": "quijotes-85-2176",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 significa \u201Cbreve\u201D en comunicaci\xF3n por radio?",
     "options": [
       "Lo m\xE1s corto posible",
@@ -16743,7 +16743,7 @@ var questions_banco_default = [
       "Hablar r\xE1pido"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 significa \u201Cbreve\u201D en comunicaci\xF3n por radio?\xBB). La opci\xF3n que responde al criterio del banco es \xABLo m\xE1s corto posible\xBB.",
+    "explain": "En operaci\xF3n por radio, \xABbreve\xBB significa ser claro con el m\xEDnimo de palabras necesarias (buena pr\xE1ctica y c\xF3digos Q). La respuesta es \xABLo m\xE1s corto posible\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16839,7 +16839,7 @@ var questions_banco_default = [
   {
     "id": "quijotes-85-2183",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 significa \u201Ccreciente\u201D?",
     "options": [
       "Numeraci\xF3n que baja",
@@ -16848,13 +16848,13 @@ var questions_banco_default = [
       "Calle en obras"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 significa \u201Ccreciente\u201D?\xBB). La opci\xF3n que responde al criterio del banco es \xABNumeraci\xF3n que aumenta\xBB.",
+    "explain": "En se\xF1alizaci\xF3n vial y mapas, \xABcreciente\xBB indica que la numeraci\xF3n de la calle aumenta en esa direcci\xF3n (frente a decreciente). \xABNumeraci\xF3n que aumenta\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2184",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 significa \u201Cdecreciente\u201D?",
     "options": [
       "Numeraci\xF3n que disminuye",
@@ -16863,7 +16863,7 @@ var questions_banco_default = [
       "Indicaci\xF3n de peligro"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 significa \u201Cdecreciente\u201D?\xBB). La opci\xF3n que responde al criterio del banco es \xABNumeraci\xF3n que disminuye\xBB.",
+    "explain": "En se\xF1alizaci\xF3n vial y mapas, \xABcreciente\xBB indica que la numeraci\xF3n de la calle aumenta en esa direcci\xF3n (frente a decreciente). \xABNumeraci\xF3n que disminuye\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16989,7 +16989,7 @@ var questions_banco_default = [
   {
     "id": "quijotes-85-2194",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "\xBFQu\xE9 es lo primero que hay que hacer al encontrar un accidente de tr\xE1fico?",
     "options": [
       "Llamar a emergencias",
@@ -16998,7 +16998,7 @@ var questions_banco_default = [
       "Gritar pidiendo ayuda"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente (\xAB\xBFQu\xE9 es lo primero que hay que hacer al encontrar un accidente de tr\xE1fico?\xBB). La opci\xF3n que responde al criterio del banco es \xABProteger la zona\xBB.",
+    "explain": "En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos da\xF1os antes de actuar. Por eso encaja \xABProteger la zona\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -17554,7 +17554,7 @@ var questions_banco_default = [
       "Uno"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, l\xEDneas y propagaci\xF3n (\xAB\xBFQu\xE9 valor indicar\xE1 un medidor de ondas estacionarias, en el caso de un acoplamiento \xF3ptimo entre un\u2026\xBB). La opci\xF3n que responde al criterio del banco es \xABUno\xBB.",
+    "explain": "La ROE (relaci\xF3n de ondas estacionarias) mide el acoplamiento l\xEDnea\u2013antena; valores cercanos a 1 indican buena adaptaci\xF3n. \xABUno\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -17584,7 +17584,7 @@ var questions_banco_default = [
       "13 faradios"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos (\xABEl producto de 13 voltios por 1 amperio son:\xBB). La opci\xF3n que responde al criterio del banco es \xAB13 vatios\xBB.",
+    "explain": "Potencia el\xE9ctrica P = V\xB7I; un voltio multiplicado por un amperio es un vatio (W). \xAB13 vatios\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -17644,7 +17644,7 @@ var questions_banco_default = [
       "El n\xFAmero de kilohercios que ocupa la banda de trabajo del equipo"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre campos, ondas y par\xE1metros \u03BB\u2013f\u2013v (\xABEl ancho de banda ocupado es:\xBB). La opci\xF3n que responde al criterio del banco es \xABEl comprendido entre los l\xEDmites superior e inferior de la se\xF1al modulada\xBB.",
+    "explain": "Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xABEl comprendido entre los l\xEDmites superior e inferior de la se\xF1al modulada\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -17963,11 +17963,166 @@ var regulatory_default = {
   ]
 };
 
+// data/emergencia-auxilio-ids.js
+var EMERGENCIA_AUXILIO_IDS = /* @__PURE__ */ new Set([
+  "quijotes-85-2145",
+  "quijotes-85-2146",
+  "quijotes-85-2147",
+  "quijotes-85-2148",
+  "quijotes-85-2149",
+  "quijotes-85-2183",
+  "quijotes-85-2184",
+  "quijotes-85-2194"
+]);
+
+// lib/question-pool.mjs
+function isEmergenciaAuxilioQuestion(q) {
+  return !!q?.id && EMERGENCIA_AUXILIO_IDS.has(q.id);
+}
+function filterQuestionsForSession(questions, { topicFilter = "all", sessionType = "libre", mode = "study" } = {}) {
+  if (topicFilter === "operacion-seguridad") return questions;
+  const examLike = sessionType === "teorico" || mode === "exam";
+  const broad = !topicFilter || topicFilter === "all";
+  if (!examLike && !broad) return questions;
+  return questions.filter((q) => !isEmergenciaAuxilioQuestion(q));
+}
+
 // data/question-policy.js
 var EXCLUDED_UNTIL_EXACT_FIGURE_IDS = /* @__PURE__ */ new Set([]);
 function isActiveQuestion(q) {
   return !!q && !EXCLUDED_UNTIL_EXACT_FIGURE_IDS.has(q.id);
 }
+
+// data/utilidades.js
+var PHONETIC_ALPHABET = [
+  { letter: "A", word: "Alfa" },
+  { letter: "B", word: "Bravo" },
+  { letter: "C", word: "Charlie" },
+  { letter: "D", word: "Delta" },
+  { letter: "E", word: "Echo" },
+  { letter: "F", word: "Foxtrot" },
+  { letter: "G", word: "Golf" },
+  { letter: "H", word: "Hotel" },
+  { letter: "I", word: "India" },
+  { letter: "J", word: "Juliett" },
+  { letter: "K", word: "Kilo" },
+  { letter: "L", word: "Lima" },
+  { letter: "M", word: "Mike" },
+  { letter: "N", word: "November" },
+  { letter: "O", word: "Oscar" },
+  { letter: "P", word: "Papa" },
+  { letter: "Q", word: "Quebec" },
+  { letter: "R", word: "Romeo" },
+  { letter: "S", word: "Sierra" },
+  { letter: "T", word: "Tango" },
+  { letter: "U", word: "Uniform" },
+  { letter: "V", word: "Victor" },
+  { letter: "W", word: "Whiskey" },
+  { letter: "X", word: "X-ray" },
+  { letter: "Y", word: "Yankee" },
+  { letter: "Z", word: "Zulu" }
+];
+var Q_CODES = [
+  { code: "QRA", meaning: "\xBFCu\xE1l es el nombre de su estaci\xF3n? / Mi nombre es\u2026" },
+  { code: "QRB", meaning: "\xBFA qu\xE9 distancia est\xE1 usted de mi estaci\xF3n?" },
+  { code: "QRG", meaning: "\xBFCu\xE1l es mi frecuencia exacta? / Su frecuencia exacta es\u2026" },
+  { code: "QRK", meaning: "La legibilidad de sus se\xF1ales es\u2026 (1\u20135)" },
+  { code: "QRM", meaning: "Estoy sufriendo interferencia" },
+  { code: "QRN", meaning: "Estoy sufriendo ruido atmosf\xE9rico" },
+  { code: "QRO", meaning: "Aumente potencia" },
+  { code: "QRP", meaning: "Disminuya potencia / operaci\xF3n de baja potencia" },
+  { code: "QRU", meaning: "\xBFTiene algo para m\xED? / No tengo nada para usted" },
+  { code: "QRV", meaning: "Estoy listo / \xBFEst\xE1 usted listo?" },
+  { code: "QRZ", meaning: "\xBFQui\xE9n me llama? / Le llamo\u2026" },
+  { code: "QSB", meaning: "Sus se\xF1ales se debilitan y fortalecen (fading)" },
+  { code: "QSL", meaning: "Recibo su transmisi\xF3n / tarjeta de confirmaci\xF3n de contacto" },
+  { code: "QSO", meaning: "Puedo comunicar con\u2026 directamente / contacto en curso" },
+  { code: "QSY", meaning: "Cambie de frecuencia a\u2026 kHz" },
+  { code: "QTH", meaning: "\xBFCu\xE1l es su ubicaci\xF3n? / Mi ubicaci\xF3n es\u2026" },
+  { code: "QTR", meaning: "\xBFCu\xE1l es la hora correcta? / La hora correcta es\u2026" }
+];
+var EA_DISTRICTS = [
+  {
+    id: "1",
+    label: "EA1",
+    title: "Noroeste y norte interior",
+    provinces: "Galicia (A Coru\xF1a, Lugo, Ourense, Pontevedra), Asturias, Cantabria, La Rioja y Castilla y Le\xF3n (Le\xF3n, Zamora, Salamanca, Palencia, Valladolid, \xC1vila, Burgos, Segovia, Soria)."
+  },
+  {
+    id: "2",
+    label: "EA2",
+    title: "Norte y Arag\xF3n",
+    provinces: "Pa\xEDs Vasco (Vizcaya, \xC1lava, Guip\xFAzcoa), Navarra y Arag\xF3n (Huesca, Zaragoza, Teruel)."
+  },
+  {
+    id: "3",
+    label: "EA3",
+    title: "Catalu\xF1a",
+    provinces: "Lleida, Girona, Barcelona y Tarragona."
+  },
+  {
+    id: "4",
+    label: "EA4",
+    title: "Centro y Extremadura",
+    provinces: "Madrid, Castilla-La Mancha (Guadalajara, Cuenca, Toledo, Ciudad Real) y Extremadura (C\xE1ceres, Badajoz)."
+  },
+  {
+    id: "5",
+    label: "EA5",
+    title: "Levante y sureste peninsular",
+    provinces: "Comunidad Valenciana (Castell\xF3n, Valencia, Alicante), Albacete y Regi\xF3n de Murcia."
+  },
+  { id: "6", label: "EA6", title: "Baleares", provinces: "Illes Balears (Mallorca, Menorca, Ibiza/Formentera)." },
+  {
+    id: "7",
+    label: "EA7",
+    title: "Andaluc\xEDa",
+    provinces: "Huelva, Sevilla, C\xF3rdoba, Ja\xE9n, C\xE1diz, M\xE1laga, Granada y Almer\xEDa."
+  },
+  {
+    id: "8",
+    label: "EA8",
+    title: "Canarias",
+    provinces: "La Palma, La Gomera, El Hierro, Tenerife, Gran Canaria, Fuerteventura y Lanzarote."
+  },
+  { id: "9", label: "EA9", title: "Ceuta y Melilla", provinces: "Ciudades aut\xF3nomas de Ceuta y Melilla." }
+];
+var EMERGENCY_SIGNALS = [
+  {
+    signal: "Mayday",
+    type: "Socorro",
+    meaning: "Peligro grave e inminente para personas, embarcaci\xF3n o aeronave.",
+    procedure: "Pronunciar \xABMayday\xBB tres veces antes del mensaje.",
+    note: "Uso indebido es infracci\xF3n. Reservado a emergencias reales."
+  },
+  {
+    signal: "Pan-pan",
+    type: "Urgencia",
+    meaning: "Situaci\xF3n urgente sin peligro inmediato (aver\xEDa, fallo m\xE9dico estable, etc.).",
+    procedure: "Pronunciar \xABPan-pan\xBB tres veces antes del mensaje.",
+    note: "No sustituye a Mayday cuando hay peligro grave."
+  },
+  {
+    signal: "Securit\xE9",
+    type: "Seguridad",
+    meaning: "Aviso de seguridad: meteorolog\xEDa, deriva, obst\xE1culos, informaci\xF3n que afecte a la navegaci\xF3n u operaci\xF3n.",
+    procedure: "Pronunciar \xABSecurit\xE9\xBB tres veces (ortograf\xEDa ITU).",
+    note: "No es socorro ni urgencia; no confundir con Mayday ni con RST."
+  },
+  {
+    signal: "RST",
+    type: "Informe de se\xF1al",
+    meaning: "Calidad de la se\xF1al recibida en fon\xEDa: R legibilidad, S intensidad, T tono (a veces T imparcial).",
+    procedure: "Ejemplo: \xABRST 59\xBB \u2014 lectura habitual en tr\xE1fico.",
+    note: "No es palabra de emergencia; no se repite tres veces como Mayday/Securit\xE9."
+  }
+];
+var UTILIDADES_NOTES = [
+  "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas en fon\xEDa (B/P, M/N, etc.).",
+  "Los c\xF3digos Q empiezan por Q; en examen suelen preguntar significado de QRM, QRN, QSB, QSL, QSY, QTH\u2026",
+  "Mayday = socorro \xB7 Pan-pan = urgencia \xB7 Securit\xE9 = seguridad \xB7 RST = informe de calidad (R-S-T).",
+  "La cifra del indicativo (EA4ABC \u2192 4) indica el distrito de residencia seg\xFAn la tabla oficial vigente."
+];
 
 // lib/quiz-session.js
 function shuffle(arr, random = Math.random) {
@@ -18024,6 +18179,7 @@ function buildQuestionList(allQuestions2, partValue, sessionType, topicFilter = 
 }
 
 // lib/explain-quality.mjs
+var GENERIC_BANK_RE = /^Pregunta sobre .+ La opción que responde al criterio del banco es «/i;
 function isTemplateOnlyExplain(explain) {
   const s = String(explain || "").trim();
   if (!s) return true;
@@ -18039,7 +18195,753 @@ function pedagogicalExplain(q) {
   const cut = raw.search(/\s+Práctica (histórica|con figura)\s*\(/i);
   const core = cut > 0 ? raw.slice(0, cut).trim() : raw;
   if (!core || isTemplateOnlyExplain(core)) return "";
+  if (GENERIC_BANK_RE.test(core) && core.length < 220) return "";
   return core;
+}
+
+// lib/explain-faithfulness.mjs
+var GENERIC_FALLBACK_RE = /^(En (reglamentación|electricidad básica|componentes|receptores y emisores|antenas y propagación|magnetismo y ondas|instalaciones|operación)|La opción correcta es «|Contrastar con el temario)/i;
+var TOPIC_FALLBACK_RE = /Repasa el bloque correspondiente en el temario si el distractor te confundió/i;
+function isGenericExplainText(text) {
+  const ped = String(text || "").trim();
+  if (!ped) return true;
+  if (TOPIC_FALLBACK_RE.test(ped)) return true;
+  if (GENERIC_FALLBACK_RE.test(ped) && ped.length < 220) return true;
+  if (/conviene identificar magnitud, unidad y fórmula antes de elegir distractor/i.test(ped)) return true;
+  if (/asocia símbolo, función y comportamiento en CC frente a CA\. La respuesta correcta es/i.test(ped)) {
+    return true;
+  }
+  if (/sigue la cadena RF → mezcla\/FI → detección → audio\. La respuesta correcta es/i.test(ped)) {
+    return true;
+  }
+  if (/^Pregunta sobre .+ La opción que responde al criterio del banco es «/i.test(ped)) {
+    return true;
+  }
+  return false;
+}
+function isMisassignedBandExplain(text, stem, correct) {
+  const t = String(text || "");
+  if (!/LF son frecuencias muy bajas|Cada símbolo ITU agrupa un tramo espectral/i.test(t)) {
+    return false;
+  }
+  const s = String(stem || "").toLowerCase();
+  const c = String(correct || "").toLowerCase();
+  const looksLikeBandAnswer = /\b(lf|mf|hf|vhf|uhf|ehf|shf)\b/i.test(c) || /\d+\s*(a|-|–)\s*\d+\s*(mhz|khz)/i.test(c) || /megahercio|kilometr|ondas\s+(kilom|hectom|decam)/i.test(c);
+  const stemAboutBands = /bandas de frecuencia|nomenclatura|gama de frecuencias|símbolo.*mhz|tramo espectral|\b(lf|mf|hf|vhf|uhf)\b.*corresponde/i.test(
+    s
+  );
+  if (stemAboutBands && looksLikeBandAnswer) return false;
+  const quoted = t.match(/(?:respuesta|opción) (?:correcta )?es «([^»]+)»/i)?.[1];
+  if (quoted && correct) {
+    const qn = normalizeForMatch(quoted);
+    const cn = normalizeForMatch(correct);
+    if (qn && cn && qn !== cn && !qn.includes(cn) && !cn.includes(qn)) return true;
+  }
+  return true;
+}
+function isStemExplainTopicConflict(ped, stem) {
+  const p = String(ped || "").toLowerCase();
+  const s = String(stem || "").toLowerCase();
+  if (!p || !s) return false;
+  if (/securit[eé]|señal de seguridad|seguridad en radiotelefon/i.test(s) && /\brst\b|legibilidad.*intensidad.*tono/i.test(p)) {
+    if (/no confundir|ni con rst|no es rst|frente a rst/i.test(p)) return false;
+    if (/^\s*rst\b|resume.*\brst\b|en fon[ií]a.*\brst\b/i.test(p)) return true;
+    return false;
+  }
+  if (/(mayday|socorro inminente|peligro grave)/i.test(s) && /securit[eé]/i.test(p) && !/mayday|socorro/i.test(p)) {
+    return true;
+  }
+  if (/\brst\b|informe de señal|legibilidad.*intensidad/i.test(s) && /securit[eé].*tres veces|mayday.*tres veces/i.test(p)) {
+    return true;
+  }
+  if (/bandas de frecuencia|nomenclatura|gama de frecuencias|\bhf\b.*corresponde|\blf\b.*corresponde/i.test(s)) {
+    if (/primeros auxilios|accidente de tr[aá]fico|\bpls\b|proteger la zona/i.test(p)) return true;
+  }
+  if (/distorsi[oó]n/i.test(s) && /lf son frecuencias|símbolo itu|30.?300\s*khz/i.test(p)) return true;
+  if (/distorsi[oó]n/i.test(s) && /indicativo|distrito ea|cept\b/i.test(p) && !/distorsi|señal de salida|arm[oó]nico/i.test(p)) {
+    return true;
+  }
+  return false;
+}
+function isMisassignedPedagogicalExplain(q) {
+  const ped = pedagogicalExplain(q);
+  if (!ped) return false;
+  const correct = String(q?.options?.[q.correctIndex] ?? "");
+  if (isMisassignedBandExplain(ped, q?.stem, correct)) return true;
+  if (isStemExplainTopicConflict(ped, q?.stem)) return true;
+  return false;
+}
+function normalizeForMatch(s) {
+  return String(s || "").toLowerCase().normalize("NFD").replace(/\p{M}/gu, "").replace(/\s+/g, " ").replace(/[«»"']/g, "").trim();
+}
+function explainMentionsCorrect(explain, correct) {
+  const e = normalizeForMatch(explain);
+  const c = normalizeForMatch(correct);
+  const cBare = normalizeForMatch(String(correct).replace(/\s*\([^)]*\)/g, " ").trim());
+  if (!c) return false;
+  if (c.length === 1) {
+    return e.includes(c) || explain.includes(`\xAB${correct}\xBB`) || explain.includes(`"${correct}"`);
+  }
+  if (c.length < 2) return false;
+  if (e.includes(c)) return true;
+  if (cBare.length >= 4 && e.includes(cBare)) return true;
+  if (explain.includes(`\xAB${correct}\xBB`) || explain.includes(`"${correct}"`)) return true;
+  if (c.length >= 12) {
+    const core = c.slice(0, Math.min(24, c.length));
+    if (core.length >= 8 && e.includes(core)) return true;
+  }
+  if (c.length <= 24 && /\d/.test(c)) {
+    const nums = c.match(/\d+([.,]\d+)?/g);
+    if (nums?.length && nums.every((n) => e.includes(n.replace(",", ".")) || e.includes(n))) return true;
+  }
+  const words = c.split(/\s+/).filter((w) => w.length >= 4);
+  if (words.length) {
+    const hit = words.filter((w) => {
+      if (e.includes(w)) return true;
+      const stem = w.slice(0, Math.min(5, w.length));
+      return stem.length >= 4 && e.includes(stem);
+    }).length;
+    if (hit >= Math.min(2, words.length) || words.length === 1 && hit === 1) return true;
+  }
+  return false;
+}
+
+// lib/text-encoding.mjs
+var REPLACEMENT = "\uFFFD";
+var HTML_NAMED = {
+  nbsp: " ",
+  amp: "&",
+  lt: "<",
+  gt: ">",
+  quot: '"',
+  apos: "'",
+  aacute: "\xE1",
+  eacute: "\xE9",
+  iacute: "\xED",
+  oacute: "\xF3",
+  uacute: "\xFA",
+  Aacute: "\xC1",
+  Eacute: "\xC9",
+  Iacute: "\xCD",
+  Oacute: "\xD3",
+  Uacute: "\xDA",
+  ntilde: "\xF1",
+  Ntilde: "\xD1",
+  iquest: "\xBF",
+  iexcl: "\xA1",
+  uuml: "\xFC",
+  Uuml: "\xDC",
+  auml: "\xE4",
+  Auml: "\xC4",
+  ouml: "\xF6",
+  Ouml: "\xD6",
+  ccedil: "\xE7",
+  Ccedil: "\xC7",
+  ordm: "\xBA",
+  ordf: "\xAA",
+  euro: "\u20AC"
+};
+function decodeHtmlEntities(text) {
+  let t = String(text || "");
+  t = t.replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)));
+  t = t.replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)));
+  t = t.replace(/&([a-z]+);/gi, (m, name) => HTML_NAMED[name.toLowerCase()] ?? HTML_NAMED[name] ?? m);
+  return t;
+}
+function fixMojibake(text) {
+  if (!text || !/[ÃÂ]/.test(text)) return text;
+  try {
+    return Buffer.from(text, "latin1").toString("utf8");
+  } catch {
+    return text;
+  }
+}
+function repairReplacementChar(text) {
+  if (!text || !text.includes(REPLACEMENT)) return text;
+  let t = text;
+  t = t.replace(/ci\uFFFdn/gi, "ci\xF3n");
+  t = t.replace(/si\uFFFdn/gi, "si\xF3n");
+  t = t.replace(/cci\uFFFdn/gi, "cci\xF3n");
+  t = t.replace(/ge\uFFFDn/gi, "ge\xF3n");
+  t = t.replace(/Se\uFFFDale/gi, "Se\xF1ale");
+  t = t.replace(/se\uFFFDal/gi, "se\xF1al");
+  t = t.replace(/se\uFFFDales/gi, "se\xF1ales");
+  t = t.replace(/ioel\uFFFDctri/gi, "ioel\xE9ctri");
+  t = t.replace(/el\uFFFDctr/gi, "el\xE9ctr");
+  t = t.replace(/energ\uFFFDa/gi, "energ\xEDa");
+  t = t.replace(/micr\uFFFDo/gi, "micr\xF3fono");
+  t = t.replace(/autom\uFFFDt/gi, "autom\xE1t");
+  t = t.replace(/m\uFFFDvil/gi, "m\xF3vil");
+  t = t.replace(/car\uFFFDcter/gi, "car\xE1cter");
+  t = t.replace(/caracter\uFFFDstic/gi, "caracter\xEDstic");
+  t = t.replace(/p\uFFFDblic/gi, "p\xFAblic");
+  t = t.replace(/arm\uFFFDn/gi, "arm\xF3n");
+  t = t.replace(/t\uFFFDpic/gi, "t\xF3pic");
+  t = t.replace(/t\uFFFDcnic/gi, "t\xE9cnic");
+  t = t.replace(/f\uFFFDsic/gi, "f\xEDsic");
+  t = t.replace(/m\uFFFDs /gi, "m\xE1s ");
+  t = t.replace(/m\uFFFDs\./gi, "m\xE1s.");
+  t = t.replace(/ \uFFFDnica/gi, " \xFAnica");
+  t = t.replace(/ \uFFFDnico/gi, " \xFAnico");
+  t = t.replace(/"\uFFFDC\uFFFDo/gi, '"\xBFC\xF3mo');
+  t = t.replace(/"\uFFFDQu\uFFFD/gi, '"\xBFQu\xE9');
+  t = t.replace(/"\uFFFD/g, '"\xBF');
+  t = t.replace(/\uFFFDnica/gi, "\xFAnica");
+  t = t.replace(/\uFFFD/g, "");
+  return t;
+}
+function repairLostAccents(text) {
+  if (!text || typeof text !== "string") return text;
+  let t = text;
+  t = t.replace(/\bqu (circuito|valor|tipo|esquema|funci[oó]n)/gi, "qu\xE9 $1");
+  t = t.replace(/\bQu valor\b/g, "Qu\xE9 valor");
+  t = t.replace(/grfico/gi, "gr\xE1fico");
+  t = t.replace(/geogrf/gi, "geogr\xE1f");
+  t = t.replace(/indquelo/gi, "ind\xEDquelo");
+  t = t.replace(/\bincluira\b/gi, "incluir\xE1");
+  t = t.replace(/\bbsico\b/gi, "b\xE1sico");
+  t = t.replace(/banda lateral unica\b/gi, "banda lateral \xFAnica");
+  t = t.replace(/lateral unica\b/gi, "lateral \xFAnica");
+  t = t.replace(/\bunica\b/gi, "\xFAnica");
+  t = t.replace(/\bunico\b/gi, "\xFAnico");
+  t = t.replace(/\belectrico\b/gi, "el\xE9ctrico");
+  t = t.replace(/\belectrica\b/gi, "el\xE9ctrica");
+  t = t.replace(/\bradioelectrico\b/gi, "radioel\xE9ctrico");
+  t = t.replace(/\bradioelectrica\b/gi, "radioel\xE9ctrica");
+  t = t.replace(/\bgeografico\b/gi, "geogr\xE1fico");
+  t = t.replace(/\bgeografica\b/gi, "geogr\xE1fica");
+  t = t.replace(/\bgeograficos\b/gi, "geogr\xE1ficos");
+  return t;
+}
+function repairSpanishText(text) {
+  if (!text || typeof text !== "string") return text;
+  let t = decodeHtmlEntities(text);
+  t = fixMojibake(t);
+  if (t.includes(REPLACEMENT)) t = repairReplacementChar(t);
+  t = repairLostAccents(t);
+  return t.replace(/\s+/g, " ").trim();
+}
+
+// lib/contextual-explain.mjs
+function inferExplainTopic(stem, topicId) {
+  const s = stem.toLowerCase();
+  if (/provincia|distrito|cifra.*identifica|indicativo|distintivo|prefijo\s*e\b|sufijo\s*pan|empadron|licencia cept|harec|cept\b|prefijo de pa[ií]s/i.test(
+    s
+  )) {
+    return "licencias-indicativos";
+  }
+  if (/\bpls\b|accidente de tr[aá]fico|primeros auxilios|creciente|decreciente|proteger la zona|pas\b|inconsciente y respira|breve.*comunicaci/i.test(
+    s
+  )) {
+    return "operacion-seguridad";
+  }
+  if (/deletrea|alfabeto fon|c[oó]digo q\b|qsy|qrt|qrl|mayday|socorro|\brst\b|securit[eé]|fon[ií]a/i.test(s)) {
+    return "operacion-seguridad";
+  }
+  if (/reglamento|boe\b|infracci|sanci|inspecci|potencia.*\bw\b|estaci[oó]n desatend|iaru|clase de emisi|organismo|telecomunicaciones/i.test(
+    s
+  )) {
+    return "marco-normativo";
+  }
+  if (/dipolo|antena\b|roe\b|yagi|propagaci|ionosfera|balun|acoplador|diagrama de radiaci|vat[ií]metro.*antena/i.test(s)) {
+    return "antenas-prop";
+  }
+  if (/receptor|transmisor|superheterodino|mezclador|detector|demodul|\bfi\b|cag\b|agc\b|arm[oó]nico|selectividad|sensibilidad|pol[ií]metro|oscilador|ssb|cw\b/i.test(
+    s
+  )) {
+    return "receptores-emisores";
+  }
+  if (/condensador|resistencia|faradio|ohmio|ohm\b|vatios|transformador|diodo|transistor|megaohm|kiloohm/i.test(s)) {
+    return "componentes";
+  }
+  if (/campo magn|inducci|onda electrom|polarizaci|longitud de onda|frecuencia cr[ií]tica|muf\b/i.test(s)) {
+    return "magnetismo-ondas";
+  }
+  if (/instalaci[oó]n|puesta a tierra|seguro de antena|comunidad de propiet|apantall/i.test(s)) {
+    return "instalaciones";
+  }
+  return topicId;
+}
+function explainItuBandRange(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  const hay = `${s} ${c.toLowerCase()}`;
+  const bands = [
+    { keys: /\blf\b|30.*300\s*khz/i, label: "LF (Low Frequency)", range: "30\u2013300 kHz" },
+    { keys: /\bmf\b|300.*3000\s*khz/i, label: "MF (Medium Frequency)", range: "300\u20133000 kHz" },
+    { keys: /\bhf\b|3.*30\s*mhz|3-30\s*mhz/i, label: "HF (High Frequency)", range: "3\u201330 MHz" },
+    { keys: /\bvhf\b|30.*300\s*mhz|30-300\s*mhz/i, label: "VHF", range: "30\u2013300 MHz" },
+    { keys: /\buhf\b|300.*3000\s*mhz/i, label: "UHF", range: "300\u20133000 MHz" },
+    { keys: /\bshf\b/i, label: "SHF", range: "3\u201330 GHz (tabla ITU)" }
+  ];
+  for (const b of bands) {
+    if (b.keys.test(hay) || /\bhf\b/i.test(s) && b.label.startsWith("HF")) {
+      return `En la nomenclatura ITU, ${b.label} designa el tramo aproximado de ${b.range}. Para este enunciado la respuesta correcta es \xAB${c}\xBB.`;
+    }
+  }
+  if (/\bhf\b/i.test(s) && /^hf\.?$/i.test(c)) {
+    return `El s\xEDmbolo HF corresponde al tramo de 3\u201330 MHz en la tabla ITU del examen. La respuesta es \xAB${c}\xBB.`;
+  }
+  return null;
+}
+function synthesizeReason(stem, correct, topicId) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/siguiente|figura|esquema|diagrama|gr[aá]fica|pantalla/i.test(s)) {
+    return `Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xAB${c}\xBB.`;
+  }
+  if (/ninguna de las (respuestas|anteriores)/i.test(c) || /ninguna de las anteriores/i.test(s)) {
+    return `Las dem\xE1s opciones no satisfacen todas las condiciones del enunciado a la vez; por eso la formulaci\xF3n v\xE1lida es \xAB${c}\xBB.`;
+  }
+  if (/provincia|ubicada en la provincia|cifra:/i.test(s) && /^\d+$/.test(c)) {
+    return `La cifra del indicativo espa\xF1ol identifica el distrito geogr\xE1fico de la estaci\xF3n seg\xFAn la tabla oficial. Para este enunciado corresponde \xAB${c}\xBB.`;
+  }
+  if (/deletrea|deletrear/i.test(s)) {
+    return `El alfabeto fon\xE9tico ICAO evita confusiones en fon\xEDa; deletrea letra a letra. La secuencia correcta es \xAB${c}\xBB.`;
+  }
+  if (/c[oó]digo de colores|colores son/i.test(s)) {
+    return `En el c\xF3digo de colores de resistencias, cada banda aporta cifras o tolerancia; calcula el valor antes de elegir. La respuesta es \xAB${c}\xBB.`;
+  }
+  if (/detector de envolvente|modulaci[oó]n de amplitud|\bam\b/i.test(s) && /amplitud/i.test(c + s)) {
+    return `En AM la informaci\xF3n va en la amplitud de la portadora; el detector de envolvente recupera esa envolvente. La opci\xF3n correcta es \xAB${c}\xBB.`;
+  }
+  if (/portadora|sin modulaci/i.test(s)) {
+    return `Sin modulaci\xF3n de informaci\xF3n solo se transmite la portadora (potencia de portadora). La respuesta es \xAB${c}\xBB.`;
+  }
+  if (/pol[ií]metro|mult[ií]metro/i.test(s)) {
+    return `Tensi\xF3n en paralelo, intensidad en serie; resistencia sin tensi\xF3n de trabajo en el circuito. Para esta pregunta: \xAB${c}\xBB.`;
+  }
+  if (/factor de potencia|coseno\s*φ|coseno\s*φ/i.test(s)) {
+    return `El factor de potencia (coseno \u03C6) relaciona potencia activa y aparente en CA y refleja el desfase entre tensi\xF3n y corriente. \xAB${c}\xBB.`;
+  }
+  if (/diodo/i.test(s) && /direcci[oó]n|sentido/i.test(s)) {
+    return `El diodo conduce preferentemente en un sentido y bloquea en el inverso en el modelo ideal. \xAB${c}\xBB.`;
+  }
+  if (/intermodulaci|no lineal|bloqueo|desensibiliz/i.test(s)) {
+    return `Sistemas no lineales mezclan frecuencias y pueden bloquear el receptor con se\xF1ales muy fuertes. \xAB${c}\xBB.`;
+  }
+  if (/impedancia|radiales|cuarto de onda/i.test(s)) {
+    return `La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB${c}\xBB.`;
+  }
+  if (/mayday|socorro|sos\b/i.test(s)) {
+    return `Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xAB${c}\xBB.`;
+  }
+  if (/securit[eé]|señal de seguridad|seguridad en radiotelefon/i.test(s)) {
+    return `La se\xF1al radiotelef\xF3nica internacional de seguridad es la palabra \xABSecurit\xE9\xBB (ortograf\xEDa ITU), repetida tres veces. No confundir con Mayday (socorro) ni con RST. La opci\xF3n correcta es \xAB${c}\xBB.`;
+  }
+  if (/\bpls\b|posición lateral de seguridad/i.test(s)) {
+    return `La PLS (posici\xF3n lateral de seguridad) es una maniobra de primeros auxilios para mantener la v\xEDa a\xE9rea en personas inconscientes que respiran. Aparece en material de formaci\xF3n de operadores y emergencias; la respuesta es \xAB${c}\xBB.`;
+  }
+  if (/accidente de tr[aá]fico|proteger la zona|pas\b/i.test(s) && /proteger|avisar|socorrer|llamar/i.test(c + s)) {
+    return `En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos da\xF1os antes de actuar. Por eso encaja \xAB${c}\xBB.`;
+  }
+  if (/creciente|decreciente/i.test(s) && /numeraci/i.test(c)) {
+    return `En se\xF1alizaci\xF3n vial y mapas, \xABcreciente\xBB indica que la numeraci\xF3n de la calle aumenta en esa direcci\xF3n (frente a decreciente). \xAB${c}\xBB.`;
+  }
+  if (/breve.*comunicaci|comunicaci.*breve|significa.*breve/i.test(s)) {
+    return `En operaci\xF3n por radio, \xABbreve\xBB significa ser claro con el m\xEDnimo de palabras necesarias (buena pr\xE1ctica y c\xF3digos Q). La respuesta es \xAB${c}\xBB.`;
+  }
+  if (/informaci[oó]n relacionada.*servicio de aficionados|actividad del servicio de aficionados/i.test(c)) {
+    return `El reglamento limita las emisiones del servicio de aficionados a ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio; no tr\xE1fico ajeno ni comercial. \xAB${c}\xBB.`;
+  }
+  if (/lf\b|mf\b|hf\b|vhf|uhf|ondas kilom|ondas hectom|bandas de frecuencia|nomenclatura|gama de frecuencias/i.test(s)) {
+    const band = explainItuBandRange(s, c);
+    if (band) return band;
+  }
+  if (/acoplada al paso final|adaptadores y filtros/i.test(s + c)) {
+    return `La etapa de potencia se acopla a la antena mediante filtros y adaptadores de impedancia seg\xFAn el dise\xF1o del equipo. \xAB${c}\xBB.`;
+  }
+  if (/ea\d+\/ea\d|distintivo.*m[oó]vil|estaci[oó]n m[oó]vil del distrito/i.test(s + c)) {
+    return `En indicativos espa\xF1oles, la barra y la cifra de distrito indican operaci\xF3n m\xF3vil fuera del distrito de la estaci\xF3n base (p. ej. EA5/EA4\u2026). \xAB${c}\xBB.`;
+  }
+  if (/diel[eé]ctrico/i.test(s)) {
+    return `Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xAB${c}\xBB.`;
+  }
+  if (/ondas de radio|naturaleza.*electromagn/i.test(s)) {
+    return `Las ondas de radio son ondas electromagn\xE9ticas que se propagan en el espacio sin medio material. \xAB${c}\xBB.`;
+  }
+  if (/sintonizada|sintonizaci[oó]n|resuena a la frecuencia/i.test(s)) {
+    return `Una antena sintonizada resuena a la frecuencia de la se\xF1al y acopla mejor la energ\xEDa radiada. \xAB${c}\xBB.`;
+  }
+  if (/ancho de banda|selectividad/i.test(s)) {
+    return `Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xAB${c}\xBB.`;
+  }
+  if (/volumen en rf|volumen.*radiofrecuencia/i.test(s)) {
+    return `El control de volumen en RF ajusta el nivel de se\xF1al en radiofrecuencia antes de la etapa de audio. \xAB${c}\xBB.`;
+  }
+  if (/digital display|dial de presentaci[oó]n|frecuencia de trabajo/i.test(s)) {
+    return `El display digital del transceptor indica la frecuencia de sinton\xEDa o trabajo del equipo. \xAB${c}\xBB.`;
+  }
+  if (/voltio.*amperio|producto de un voltio/i.test(s)) {
+    return `Potencia el\xE9ctrica P = V\xB7I; un voltio multiplicado por un amperio es un vatio (W). \xAB${c}\xBB.`;
+  }
+  if (/cantidad de electricidad|culombio/i.test(s)) {
+    return `La cantidad de electricidad (carga) se mide en culombios (C), no en amperios ni vatios. \xAB${c}\xBB.`;
+  }
+  if (/flujo de electrones|corriente el[eé]ctrica/i.test(s)) {
+    return `La corriente el\xE9ctrica es el flujo ordenado de cargas (electrones) por un conductor. \xAB${c}\xBB.`;
+  }
+  if (/amper[ií]metro|conecta en serie/i.test(s)) {
+    return `El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xAB${c}\xBB.`;
+  }
+  if (/circuito oscilante|resonancia cuando/i.test(s)) {
+    return `En resonancia las reactancias inductiva y capacitiva se compensan y la impedancia del circuito oscilante es m\xEDnima (serie) o m\xE1xima (paralelo) seg\xFAn el caso. \xAB${c}\xBB.`;
+  }
+  if (/omnidireccional/i.test(s)) {
+    return `Una antena omnidireccional irradia con patr\xF3n similar en el plano horizontal (360\xB0). \xAB${c}\xBB.`;
+  }
+  if (/modula un emisor|modulaci[oó]n/i.test(s) && /portadora/i.test(c + s)) {
+    return `Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xAB${c}\xBB.`;
+  }
+  if (/banda lateral superior|usb\b/i.test(s)) {
+    return `USB (Upper Side Band) transmite la banda lateral superior de la modulaci\xF3n; el mando de modo debe seleccionar USB. \xAB${c}\xBB.`;
+  }
+  if (/inductancia|autoinducci[oó]n|oponerse a la variaci[oó]n de corriente/i.test(s)) {
+    return `La inductancia se opone a los cambios de corriente (efecto de autoinducci\xF3n). \xAB${c}\xBB.`;
+  }
+  if (/ondas estacionarias|roe\b|relaci[oó]n de ondas/i.test(s)) {
+    return `La ROE (relaci\xF3n de ondas estacionarias) mide el acoplamiento l\xEDnea\u2013antena; valores cercanos a 1 indican buena adaptaci\xF3n. \xAB${c}\xBB.`;
+  }
+  if (/\bbalun\b|\bbalum\b/i.test(s)) {
+    return `El balun (balum) adapta impedancias y puede pasar de l\xEDnea balanceada a coaxial (asim\xE9trica). \xAB${c}\xBB.`;
+  }
+  if (/superheterodin|superheterodyne|cag\b|\bfi\b/i.test(s) && /fi|cag|frecuencia intermedia/i.test(c + s)) {
+    return `La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xAB${c}\xBB.`;
+  }
+  if (/antena directiva|direcci[oó]n preferencial/i.test(s)) {
+    return `Una antena directiva concentra radiaci\xF3n o recepci\xF3n en una direcci\xF3n preferente. \xAB${c}\xBB.`;
+  }
+  if (/\bqrm\b|sufre una interferencia|interferencia.*c[oó]digo q|c[oó]digo q.*interferencia/i.test(s)) {
+    return `QRM indica interferencia de origen artificial (otras emisiones o equipos). \xAB${c}\xBB.`;
+  }
+  if (/\bqsd\b|manipulaci[oó]n defectuosa|defectuosa la manipulaci/i.test(s)) {
+    return `QSD indica manipulaci\xF3n defectuosa o ilegible en telegraf\xEDa. \xAB${c}\xBB.`;
+  }
+  if (/\bqrn\b|ruido atmosf/i.test(s)) {
+    return `QRN indica ruido atmosf\xE9rico o natural que afecta la recepci\xF3n. \xAB${c}\xBB.`;
+  }
+  if (/\bqsb\b|debilitan y fortalecen/i.test(s)) {
+    return `QSB indica que la se\xF1al recibida var\xEDa de intensidad (fading). \xAB${c}\xBB.`;
+  }
+  if (/\bqsy\b|cambio de frecuencia/i.test(s)) {
+    return `QSY solicita o indica cambio de frecuencia de operaci\xF3n. \xAB${c}\xBB.`;
+  }
+  if (/\bqth\b|ubicaci[oó]n/i.test(s) && /\bqth\b/i.test(c)) {
+    return `QTH es la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. \xAB${c}\xBB.`;
+  }
+  if (/megaohm|kiloohm|ohmio|faradio|henrio/i.test(s)) {
+    return `Identifica la magnitud y su unidad SI antes de comparar opciones. \xAB${c}\xBB.`;
+  }
+  if (/transistor|electrodos/i.test(s)) {
+    return `Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xAB${c}\xBB.`;
+  }
+  if (/tierra|fusible|conducci[oó]n a tierra/i.test(s)) {
+    return `La protecci\xF3n y la toma de tierra siguen reglas de seguridad el\xE9ctrica; no confundas con fusibles de l\xEDnea. \xAB${c}\xBB.`;
+  }
+  const topicHint = {
+    "marco-normativo": "la normativa de aficionados y el BOE vigente",
+    "licencias-indicativos": "licencias, indicativos y procedimientos CEPT",
+    "electricidad-basica": "ley de Ohm, potencia y circuitos en CC/CA",
+    "magnetismo-ondas": "campos, ondas y par\xE1metros \u03BB\u2013f\u2013v",
+    componentes: "componentes pasivos y activos",
+    "receptores-emisores": "cadenas de receptor y transmisor",
+    "antenas-prop": "antenas, l\xEDneas y propagaci\xF3n",
+    instalaciones: "instalaciones, seguridad y normativa de antenas",
+    "operacion-seguridad": "operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas"
+  }[topicId] || "el temario del bloque";
+  const stemBrief = stem.replace(/\s+/g, " ").trim().slice(0, 100);
+  return `Pregunta sobre ${topicHint} (\xAB${stemBrief}${stem.length > 100 ? "\u2026" : ""}\xBB). La opci\xF3n que responde al criterio del banco es \xAB${c}\xBB.`;
+}
+function finalizeExplain(stem, correct, text) {
+  let out = String(text || "").trim();
+  if (!out) {
+    out = synthesizeReason(stem, correct, "electricidad-basica");
+  }
+  if (!explainMentionsCorrect(out, correct)) {
+    const core = out.replace(/\s*FEDI-EA\.?\s*$/i, "").trim();
+    out = core ? `${core} La respuesta correcta es \xAB${correct}\xBB.` : synthesizeReason(stem, correct, "electricidad-basica");
+  }
+  return repairSpanishText(out);
+}
+
+// lib/generate-pedagogical-explain.mjs
+function explainMarcoNormativo(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/estaciones autom[aá]ticas|desatendid/.test(s) && /potencia|w\b/i.test(s + c)) {
+    return `El art. 25.h del reglamento distingue l\xEDmites dentro y fuera del casco urbano; en el banco la pareja habitual es 10 W en urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. La opci\xF3n correcta es \xAB${c}\xBB.`;
+  }
+  if (/transmisiones|comunicaciones/.test(s) && /limit/.test(s)) {
+    return `El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xAB${c}\xBB.`;
+  }
+  if (/planes de banda|iaru/.test(s)) {
+    return `Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xAB${c}\xBB.`;
+  }
+  if (/deletrea|fon[eé]tico|alfabeto/.test(s)) {
+    return `El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas en fon\xEDa. La secuencia correcta del enunciado es \xAB${c}\xBB.`;
+  }
+  if (/memoria descriptiva|licencia de una estaci[oó]n|estaci[oó]n fija/.test(s)) {
+    return `La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xAB${c}\xBB.`;
+  }
+  if (/bandas de frecuencia|nomenclatura|gama de frecuencias|tramo espectral/i.test(s)) {
+    const band = explainItuBandRange(stem, c);
+    if (band) return band;
+  }
+  if (/asociaci[oó]n|socio/.test(s)) {
+    return `Pertenecer a una asociaci\xF3n puede ser \xFAtil, pero no es requisito legal para operar con autorizaci\xF3n vigente. Por eso \xAB${c}\xBB.`;
+  }
+  if (/croacia|cept|harec|residencia|licencia/.test(s)) {
+    return `HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xAB${c}\xBB.`;
+  }
+  if (/clase de emisi[oó]n|a3e|j3e|f3e/.test(s)) {
+    return `Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xAB${c}\xBB.`;
+  }
+  if (/inspecci[oó]n|telecomunicaciones|mitco|secretar[ií]a/.test(s)) {
+    return `La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB${c}\xBB es la formulaci\xF3n del banco.`;
+  }
+  if (/examen|prueba de capacitaci[oó]n/.test(s)) {
+    return `La convocatoria oficial define dos pruebas independientes (t\xE9cnica y reglamentaci\xF3n), alineadas con el programa de examen. La respuesta es \xAB${c}\xBB.`;
+  }
+  if (/plazo|anticipaci[oó]n|mes|d[ií]as/.test(s)) {
+    return `Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xAB${c}\xBB para este enunciado.`;
+  }
+  if (/interferencia|ict|servicio autorizado/.test(s)) {
+    return `Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xAB${c}\xBB.`;
+  }
+  if (/infracci[oó]n|sanci[oó]n|multa/.test(s)) {
+    return `El r\xE9gimen sancionador de telecomunicaciones clasifica infracciones seg\xFAn gravedad; la opci\xF3n del banco refleja la redacci\xF3n del supuesto. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "marco-normativo");
+}
+function explainLicencias(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/indicativo|distintivo|llamada/.test(s)) {
+    return `El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB${c}\xBB.`;
+  }
+  if (/cept|licencia cept|pa[ií]s visitado|temporal/.test(s)) {
+    return `La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xAB${c}\xBB.`;
+  }
+  if (/harec|certificado|diploma/.test(s)) {
+    return `HAREC (T/R 61-02) acredita el programa de examen armonizado; facilita obtener autorizaci\xF3n en pa\xEDses que lo reconocen. \xAB${c}\xBB.`;
+  }
+  if (/prefijo|sufijo|distrito|cifra/.test(s)) {
+    return `El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xAB${c}\xBB.`;
+  }
+  if (/antena|comunidad|propiedad|instalaci[oó]n/.test(s)) {
+    return `Instalar antenas en elementos comunes exige informaci\xF3n y acuerdos con la comunidad seg\xFAn la normativa de antenas y propiedad horizontal. \xAB${c}\xBB.`;
+  }
+  return `La autorizaci\xF3n y el indicativo condicionan qui\xE9n puede operar, d\xF3nde y con qu\xE9 requisitos. Para este enunciado, la respuesta correcta es \xAB${c}\xBB.`;
+}
+function explainElectricidad(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/distorsi[oó]n/.test(s)) {
+    return `La distorsi\xF3n altera la forma de la se\xF1al: la salida ya no replica fielmente la entrada (arm\xF3nicos, recorte o saturaci\xF3n). La opci\xF3n correcta es \xAB${c}\xBB.`;
+  }
+  if (/ohm|ley de ohm|v\s*=\s*i|intensidad|tensi[oó]n|resistencia/.test(s)) {
+    return `En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xAB${c}\xBB.`;
+  }
+  if (/resistencias en serie|resistencias en paralelo|equivalente|paralelo|serie/.test(s)) {
+    return `En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es \xAB${c}\xBB.`;
+  }
+  if (/condensador|capacidad|faradio|microfaradio/.test(s)) {
+    return `En condensadores en paralelo se suman capacidades; en serie la capacidad equivalente baja. En CC estable el condensador ideal equivale a circuito abierto. \xAB${c}\xBB.`;
+  }
+  if (/bobina|henrio|inductancia/.test(s)) {
+    return `La bobina almacena energ\xEDa en campo magn\xE9tico; en CC estable se comporta como cortocircuito ideal tras el transitorio. \xAB${c}\xBB.`;
+  }
+  if (/alterna|eficaz|rms|senoidal|periodo|frecuencia|ciclo/.test(s)) {
+    return `En CA sinusoidal distinguimos valor m\xE1ximo, eficaz y periodo; el eficaz es el que equivale t\xE9rmicamente a una continua. \xAB${c}\xBB.`;
+  }
+  if (/db|decibelio|dbm|dbµv/.test(s)) {
+    return `Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB${c}\xBB.`;
+  }
+  if (/potencia|vatios|watt|kilovat/.test(s)) {
+    return `Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xAB${c}\xBB.`;
+  }
+  if (/carga el[eé]ctrica|coulomb|amperio-hora/.test(s)) {
+    return `La carga se mide en culombios; intensidad es carga por segundo. La opci\xF3n correcta es \xAB${c}\xBB.`;
+  }
+  if (/resistividad|conductividad|secci[oó]n|longitud/.test(s)) {
+    return `La resistencia depende de resistividad, longitud y secci\xF3n: R = \u03C1\xB7L/S. La pareja proporcional del enunciado es \xAB${c}\xBB.`;
+  }
+  if (/energ[ií]a|julio|calor/.test(s)) {
+    return `Energ\xEDa en un condensador o resistencia se relaciona con V, I y tiempo seg\xFAn el elemento; revisa la f\xF3rmula del temario. \xAB${c}\xBB.`;
+  }
+  if (/fuente|generador|bater[ií]a|alimentaci[oó]n/.test(s)) {
+    return `Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "electricidad-basica");
+}
+function explainMagnetismo(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/campo magn[eé]tico|im[aá]n|polo norte|polo sur/.test(s)) {
+    return `El campo magn\xE9tico orienta fuerzas sobre cargas en movimiento; las l\xEDneas van de norte a sur fuera del im\xE1n. \xAB${c}\xBB.`;
+  }
+  if (/inducci[oó]n|faraday|lenz|flujo/.test(s)) {
+    return `La inducci\xF3n aparece cuando var\xEDa el flujo magn\xE9tico; la ley de Lenz indica que la corriente inducida se opone a la causa. \xAB${c}\xBB.`;
+  }
+  if (/onda electromagn[eé]tica|espectro|radiofrecuencia/.test(s)) {
+    return `Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xAB${c}\xBB.`;
+  }
+  if (/longitud de onda|lambda|λ|frecuencia|periodo|velocidad/.test(s)) {
+    return `Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xAB${c}\xBB.`;
+  }
+  if (/polarizaci[oó]n|vertical|horizontal|circular/.test(s)) {
+    return `La polarizaci\xF3n describe la orientaci\xF3n del campo el\xE9ctrico de la onda; debe coincidir con la antena para m\xE1xima transferencia. \xAB${c}\xBB.`;
+  }
+  if (/atenuaci[oó]n|absorci[oó]n|reflexi[oó]n|refracci[oó]n/.test(s)) {
+    return `En propagaci\xF3n, la se\xF1al puede reflejarse, refractarse o atenuarse seg\xFAn medio y frecuencia. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "magnetismo-ondas");
+}
+function explainComponentes(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/diodo|rectific|zener|led|varicap/.test(s)) {
+    return `Cada diodo tiene funci\xF3n distinta: rectificar, estabilizar tensi\xF3n (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es \xAB${c}\xBB.`;
+  }
+  if (/transformador|espiras|primario|secundario|n[uú]cleo/.test(s)) {
+    return `En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xAB${c}\xBB.`;
+  }
+  if (/condensador|bobina|reactancia|resonancia|factor q|filtro/.test(s)) {
+    return `La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB${c}\xBB.`;
+  }
+  if (/transistor|bjt|fet|mosfet|amplific/.test(s)) {
+    return `Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xAB${c}\xBB.`;
+  }
+  if (/resistencia|potenci[oó]metro|termistor|ptc|ntc/.test(s)) {
+    return `R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xAB${c}\xBB.`;
+  }
+  if (/fuente|rectificador|filtro|estabiliz/.test(s)) {
+    return `Una fuente rectifica CA, filtra rizado y puede estabilizar tensi\xF3n con Zener o regulador. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "componentes");
+}
+function explainReceptores(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/superheterodino|mezclador|frecuencia intermedia|\bfi\b/.test(s)) {
+    return `En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xAB${c}\xBB.`;
+  }
+  if (/detector|demodul|am\b|fm\b|ssb|cw|envolvente/.test(s)) {
+    return `AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. \xAB${c}\xBB.`;
+  }
+  if (/cag|agc|ganancia|squelch|silenciador/.test(s)) {
+    return `El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xAB${c}\xBB.`;
+  }
+  if (/roe|vat[ií]metro|osciloscopio|espectro|frecuenc[ií]metro/.test(s)) {
+    return `Cada instrumento mide una magnitud: potencia (vat\xEDmetro), forma de onda (osciloscopio), frecuencia (frecuenc\xEDmetro) o espectro (analizador). \xAB${c}\xBB.`;
+  }
+  if (/oscilador|pll|dds|cristal|vco/.test(s)) {
+    return `Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xAB${c}\xBB.`;
+  }
+  if (/transmisor|amplificador de potencia|clase [abc]|arm[oó]nico/.test(s)) {
+    return `La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xAB${c}\xBB.`;
+  }
+  if (/selectividad|sensibilidad|ruido|figura de ruido/.test(s)) {
+    return `Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "receptores-emisores");
+}
+function explainAntenas(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/dipolo|longitud de onda|lambda|λ|cuarto de onda/.test(s)) {
+    return `Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xAB${c}\xBB.`;
+  }
+  if (/roe|adaptaci[oó]n|impedancia|l[ií]nea|balun/.test(s)) {
+    return `ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xAB${c}\xBB.`;
+  }
+  if (/yagi|director|reflector|ganancia|parab[oó]lica|bocina/.test(s)) {
+    return `Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xAB${c}\xBB.`;
+  }
+  if (/propagaci[oó]n|ionosfera|visi[oó]n directa|hf|vhf|muf|cr[ií]tica/.test(s)) {
+    return `HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xAB${c}\xBB.`;
+  }
+  if (/polarizaci[oó]n|vertical|horizontal/.test(s)) {
+    return `La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "antenas-prop");
+}
+function explainInstalaciones(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/comunidad|propiedad|terraza|desmontaje|obra/.test(s)) {
+    return `Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xAB${c}\xBB.`;
+  }
+  if (/seguro|responsabilidad/.test(s)) {
+    return `El seguro de antenas cubre da\xF1os a terceros por la instalaci\xF3n; es parte de la responsabilidad del titular. \xAB${c}\xBB.`;
+  }
+  if (/tierra|puesta a tierra|descarga|tormenta/.test(s)) {
+    return `La toma de tierra protege personas y equipos; ante tormenta se desconecta la bajada, no se elimina la protecci\xF3n de tierra. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "instalaciones");
+}
+function explainOperacion(stem, correct) {
+  const s = stem.toLowerCase();
+  const c = correct.trim();
+  if (/c[oó]digo q|qrm|qrn|qsy|qrt|qro|qrp|qrl|qrx/.test(s)) {
+    return `Los c\xF3digos Q abrevian situaciones: QRL ocupado, QRX esperando, QSY cambio de frecuencia, QRT cese. \xAB${c}\xBB.`;
+  }
+  if (/fon[eé]tico|deletrea|icao/.test(s)) {
+    return `El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xAB${c}\xBB.`;
+  }
+  if (/securit[eé]|señal de seguridad|seguridad en radiotelefon/i.test(s)) {
+    return `La se\xF1al radiotelef\xF3nica internacional de seguridad es la palabra \xABSecurit\xE9\xBB repetida tres veces (ITU). No confundir con Mayday ni con RST. \xAB${c}\xBB.`;
+  }
+  if (/\brst\b|reporte de señal/i.test(s) && !/securit[eé]/i.test(s)) {
+    return `RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xAB${c}\xBB.`;
+  }
+  if (/socorro|sos|mayday|emergencia/.test(s)) {
+    return `Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xAB${c}\xBB.`;
+  }
+  return synthesizeReason(stem, correct, "operacion-seguridad");
+}
+function generatePedagogicalExplain(q) {
+  const stem = repairSpanishText(String(q.stem || ""));
+  const options = Array.isArray(q.options) ? q.options : [];
+  const correct = repairSpanishText(String(options[q.correctIndex] ?? ""));
+  if (!correct) {
+    return "No se pudo determinar la opci\xF3n correcta en el banco; contrasta con el temario del bloque.";
+  }
+  const topic = inferExplainTopic(stem, q.topicId);
+  let draft;
+  switch (topic) {
+    case "marco-normativo":
+      draft = explainMarcoNormativo(stem, correct);
+      break;
+    case "licencias-indicativos":
+      draft = explainLicencias(stem, correct);
+      break;
+    case "electricidad-basica":
+      draft = explainElectricidad(stem, correct);
+      break;
+    case "magnetismo-ondas":
+      draft = explainMagnetismo(stem, correct);
+      break;
+    case "componentes":
+      draft = explainComponentes(stem, correct);
+      break;
+    case "receptores-emisores":
+      draft = explainReceptores(stem, correct);
+      break;
+    case "antenas-prop":
+      draft = explainAntenas(stem, correct);
+      break;
+    case "instalaciones":
+      draft = explainInstalaciones(stem, correct);
+      break;
+    case "operacion-seguridad":
+      draft = explainOperacion(stem, correct);
+      break;
+    default: {
+      draft = synthesizeReason(stem, correct, topic);
+    }
+  }
+  return finalizeExplain(stem, correct, draft);
 }
 
 // lib/learning-coach.js
@@ -18574,6 +19476,7 @@ var VIEW_HEADINGS = {
   examen: "titulo-examen",
   cuaderno: "titulo-cuaderno",
   tarjetas: "titulo-tarjetas",
+  utilidades: "titulo-utilidades",
   ayuda: "titulo-ayuda"
 };
 var DOC_TITLES = {
@@ -18585,6 +19488,7 @@ var DOC_TITLES = {
   examen: "RadioExamen \xB7 Simulacro de examen",
   cuaderno: "RadioExamen \xB7 Cuaderno de errores",
   tarjetas: "RadioExamen \xB7 Tarjetas",
+  utilidades: "RadioExamen \xB7 Utilidades",
   ayuda: "RadioExamen \xB7 Ayuda"
 };
 var ROUTE_ANNOUNCE = {
@@ -18596,6 +19500,7 @@ var ROUTE_ANNOUNCE = {
   examen: "Examen",
   cuaderno: "Cuaderno de errores",
   tarjetas: "Tarjetas",
+  utilidades: "Utilidades",
   ayuda: "Ayuda"
 };
 var ABBREVIATION_GLOSSARY = [
@@ -18892,9 +19797,18 @@ var quizLeaveGuardReverting = false;
 function resolveViewIdFromHash(raw) {
   if (raw.startsWith("temario--")) return "temario";
   if (raw.startsWith("normativa--")) return "normativa";
-  if (["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(
-    raw
-  )) {
+  if ([
+    "inicio",
+    "temario",
+    "normativa",
+    "metodologia",
+    "practicar",
+    "examen",
+    "cuaderno",
+    "tarjetas",
+    "utilidades",
+    "ayuda"
+  ].includes(raw)) {
     return raw;
   }
   return "inicio";
@@ -18967,7 +19881,18 @@ async function onRoute() {
     const sub = raw.slice("normativa--".length);
     id = "normativa";
     if (sub) scrollTargetId = sub;
-  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(raw)) {
+  } else if (![
+    "inicio",
+    "temario",
+    "normativa",
+    "metodologia",
+    "practicar",
+    "examen",
+    "cuaderno",
+    "tarjetas",
+    "utilidades",
+    "ayuda"
+  ].includes(raw)) {
     id = "inicio";
   }
   if (id !== "practicar") clearExamTimer();
@@ -18998,6 +19923,7 @@ async function onRoute() {
   }
   if (id === "inicio") renderUserProgress();
   if (id === "examen" || id === "cuaderno") renderExamCoach();
+  if (id === "utilidades") renderUtilidades();
   if (scrollTargetId) {
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -19918,8 +20844,13 @@ async function startQuiz() {
   const wrongOnly = !!$("#quiz-wrong-only")?.checked;
   const trapOnly = !!$("#quiz-trap-only")?.checked;
   const onlyPool = buildQuizOnlyPool();
+  const sessionPool = filterQuestionsForSession(allQuestions, {
+    topicFilter,
+    sessionType: quizState.sessionType,
+    mode: quizState.mode
+  });
   quizState.list = buildQuestionList(
-    allQuestions,
+    sessionPool,
     part,
     quizState.sessionType,
     topicFilter,
@@ -20802,6 +21733,106 @@ function startExamSimulation(partValue) {
     $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 }
+function renderUtilidades() {
+  const root = $("#utilidades-root");
+  if (!root) return;
+  const phoneticRows = PHONETIC_ALPHABET.map(
+    (row) => `<tr><th scope="row">${escapeHtml(row.letter)}</th><td><strong>${escapeHtml(row.word)}</strong></td></tr>`
+  ).join("");
+  const qRows = Q_CODES.map(
+    (row) => `<tr><th scope="row"><code>${escapeHtml(row.code)}</code></th><td>${escapeHtml(row.meaning)}</td></tr>`
+  ).join("");
+  const signalRows = EMERGENCY_SIGNALS.map(
+    (row) => `<tr>
+        <th scope="row"><strong>${escapeHtml(row.signal)}</strong><br><span class="util-signal-type">${escapeHtml(row.type)}</span></th>
+        <td>${escapeHtml(row.meaning)}</td>
+        <td>${escapeHtml(row.procedure)}</td>
+        <td class="util-signal-note">${escapeHtml(row.note)}</td>
+      </tr>`
+  ).join("");
+  const districtCards = EA_DISTRICTS.map(
+    (d) => `
+      <article class="util-district">
+        <h3><span class="util-district__badge">${escapeHtml(d.label)}</span> ${escapeHtml(d.title)}</h3>
+        <p>${escapeHtml(d.provinces)}</p>
+      </article>`
+  ).join("");
+  const notes = UTILIDADES_NOTES.map((n) => `<li>${escapeHtml(n)}</li>`).join("");
+  root.innerHTML = `
+    <ul class="util-notes">${notes}</ul>
+    <div class="util-grid">
+      <section class="panel util-panel" aria-labelledby="util-phonetic-title">
+        <h2 id="util-phonetic-title">Alfabeto fon\xE9tico ICAO</h2>
+        <p class="muted">Para deletrear indicativos, nombres y mensajes en fon\xEDa sin confundir letras.</p>
+        <div class="util-table-wrap">
+          <table class="util-table">
+            <thead><tr><th scope="col">Letra</th><th scope="col">Palabra</th></tr></thead>
+            <tbody>${phoneticRows}</tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel util-panel" aria-labelledby="util-q-title">
+        <h2 id="util-q-title">C\xF3digos Q habituales</h2>
+        <p class="muted">Los m\xE1s usados en examen y en QSO. Todos empiezan por Q.</p>
+        <div class="util-table-wrap">
+          <table class="util-table util-table--q">
+            <thead><tr><th scope="col">C\xF3digo</th><th scope="col">Significado</th></tr></thead>
+            <tbody>${qRows}</tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <section class="panel util-panel util-panel--signals" aria-labelledby="util-signals-title">
+      <h2 id="util-signals-title">Mayday, Pan-pan, Securit\xE9 y RST</h2>
+      <p class="muted">Cuatro conceptos que el examen mezcla a menudo. No son intercambiables.</p>
+      <div class="util-table-wrap">
+        <table class="util-table util-table--signals">
+          <thead>
+            <tr>
+              <th scope="col">Se\xF1al</th>
+              <th scope="col">Para qu\xE9 sirve</th>
+              <th scope="col">C\xF3mo se usa</th>
+              <th scope="col">Trampa habitual</th>
+            </tr>
+          </thead>
+          <tbody>${signalRows}</tbody>
+        </table>
+      </div>
+    </section>
+    <section class="panel util-panel util-panel--map" aria-labelledby="util-ea-title">
+      <h2 id="util-ea-title">Distritos EA (indicativos espa\xF1oles)</h2>
+      <p class="muted">
+        La cifra del indicativo (por ejemplo <strong>EA4ABC</strong>) indica el distrito seg\xFAn la divisi\xF3n geogr\xE1fica oficial.
+        Mapa orientativo URE; contrasta con el reglamento vigente.
+      </p>
+      <figure class="util-map-figure">
+        <img
+          src="images/utilidades/distritos-ea.png"
+          width="960"
+          height="720"
+          alt="Mapa de Espa\xF1a con los nueve distritos de indicativos EA1 a EA9, incluyendo Baleares, Canarias, Ceuta y Melilla"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Distritos EA \xB7 referencia URE</figcaption>
+      </figure>
+      <div class="util-district-grid">${districtCards}</div>
+    </section>
+    <aside class="panel util-panel util-panel--aside" aria-labelledby="util-practice-title">
+      <h2 id="util-practice-title">Relaci\xF3n con el examen</h2>
+      <p>
+        Estas tablas son material de consulta r\xE1pida. En <strong>Practicar</strong> y <strong>Examen</strong> priorizamos
+        preguntas de electricidad, radio y normativa del servicio de aficionados.
+      </p>
+      <p class="muted">
+        Las preguntas de primeros auxilios o se\xF1alizaci\xF3n del banco hist\xF3rico solo aparecen si practicas el bloque
+        <strong>Operaci\xF3n, emergencias y buenas pr\xE1cticas</strong>.
+      </p>
+      <a class="btn btn--primary btn--sm" href="#practicar" data-nav="practicar">Ir a practicar</a>
+      <a class="btn btn--ghost btn--sm" href="#temario--operacion-seguridad" data-nav="temario">Temario \xB7 operaci\xF3n</a>
+    </aside>
+  `;
+}
 function renderExamReadiness() {
   const root = $("#exam-readiness-root");
   if (!root) return;
@@ -20941,7 +21972,7 @@ function renderQuizPracticeGuide() {
       <div>
         <h2>${escapeHtml(title)}</h2>
         <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test \u2192 explicaci\xF3n \u2192 refuerzo en Temario \u2192 repetici\xF3n.</p>
-        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura original). Cribado: ${BANCO_STATS.cribadoPreferred ?? "?"} entradas \xFAnicas por enunciado.</p>
+        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura original). Cribado: ${BANCO_STATS.cribadoPreferred ?? "?"} entradas \xFAnicas por enunciado. Las de primeros auxilios del banco hist\xF3rico solo entran si eliges el tema <strong>Operaci\xF3n, emergencias y buenas pr\xE1cticas</strong> (<a href="#utilidades" data-nav="utilidades">consulta en Utilidades</a>).</p>
         ${trapOnly ? `<p><strong>Modo preguntas trampa activo:</strong> distractores t\xEDpicos (${trapCount} con filtros actuales).</p>` : ""}
       </div>
       ${topicLink}
@@ -21092,27 +22123,44 @@ function quizFeedbackTemarioHint(q) {
   const label = topicBlockLabel(q.topicId);
   return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> ampl\xEDa en el bloque \xAB${escapeHtml(label)}\xBB del <a href="${href}">temario</a> (ganchos y vi\xF1etas de estudio).</p>`;
 }
-function renderDeepenPanel(q) {
+function usablePedagogy(q) {
+  const p = pedagogicalExplain(q);
+  if (!p || isMisassignedPedagogicalExplain(q)) return "";
+  return p;
+}
+function fallbackReasoningForQuestion(q, sel) {
+  const ok = sel === q.correctIndex;
+  const correct = Array.isArray(q.options) && q.options[q.correctIndex] !== void 0 ? String(q.options[q.correctIndex]) : "";
+  if (ok && correct) {
+    return `La opci\xF3n \xAB${correct}\xBB responde al enunciado. Revisa el temario del bloque \xAB${topicBlockLabel(q.topicId)}\xBB para fijar la regla o el dato que la justifica.`;
+  }
+  if (correct) {
+    return `La opci\xF3n correcta es \xAB${correct}\xBB. Contrasta con el temario del bloque \xAB${topicBlockLabel(q.topicId)}\xBB y con la normativa oficial si el enunciado es reglamentario.`;
+  }
+  return "Revisa el temario del bloque y la normativa oficial para fijar la regla que resuelve este enunciado.";
+}
+function renderDeepenPanel(q, reasoningPlain = "") {
   const blockTitle = topicBlockLabel(q.topicId);
   const temarioHref = `#temario--${encodeURIComponent(q.topicId)}`;
   const ureHref = q.part === 1 ? "https://www.ure.es/examenes/electricidad-y-radioelectricidad/" : "https://www.ure.es/legislacion-y-reglamentacion/";
   const ureLinkText = q.part === 1 ? "URE \xB7 Material de pr\xE1ctica (electricidad y radioelectricidad)" : "URE \xB7 Legislaci\xF3n y reglamentaci\xF3n";
   const normativaHref = "#normativa--normativa-boe";
-  const pedagogy = pedagogicalExplain(q) || String(q.explain || "").trim();
+  const pedagogy = usablePedagogy(q);
   const historical = typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-  return `<div class="quiz-deepen">
-    <h3 class="quiz-deepen__title">Ampliaci\xF3n \xB7 temario y libro</h3>
-    <p class="quiz-deepen__note">Explicaci\xF3n did\xE1ctica registrada en el banco (modo profundizar).</p>
-    <blockquote class="quiz-deepen__exact"><p>${escapeHtml(pedagogy)}</p></blockquote>
-    ${historical ? `<p class="quiz-deepen__note muted"><strong>Origen hist\xF3rico de importaci\xF3n:</strong></p><blockquote class="quiz-deepen__exact quiz-deepen__exact--hist"><p>${escapeHtml(historical)}</p></blockquote>` : ""}
-    ${"sourceRef" in q && q.sourceRef ? `<p class="quiz-deepen__source"><strong>Fuente al redactar el \xEDtem:</strong> ${escapeHtml(String(q.sourceRef))}</p>` : ""}
-    <p class="quiz-deepen__note">Relaci\xF3n con tu estudio y fuentes oficiales:</p>
-    <ul class="quiz-deepen__links">
-      <li><a href="${temarioHref}">Temario de examen \xB7 ${escapeHtml(blockTitle)}</a></li>
+  const norm = (t) => String(t || "").toLowerCase().replace(/\s+/g, " ").trim();
+  const showPedagogy = pedagogy && norm(pedagogy) !== norm(reasoningPlain);
+  const links = `<ul class="quiz-deepen__links">
+      <li><a href="${temarioHref}">Temario \xB7 ${escapeHtml(blockTitle)}</a></li>
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
-      <li><a href="${normativaHref}">Normativa \xB7 BOE y administraci\xF3n</a></li>
-      <li><a href="https://docdb.cept.org/document/926" rel="noopener noreferrer">ECO/CEPT \xB7 HAREC T/R 61-02</a></li>
-    </ul>
+      <li><a href="${normativaHref}">Normativa BOE</a></li>
+    </ul>`;
+  if (!showPedagogy && !historical) {
+    return `<div class="quiz-deepen quiz-deepen--links-only"><p class="quiz-deepen__note">Ampl\xEDa en el temario y contrasta con fuentes oficiales:</p>${links}</div>`;
+  }
+  return `<div class="quiz-deepen">
+    ${showPedagogy ? `<p class="quiz-deepen__note"><strong>Ampliaci\xF3n:</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(pedagogy)}</p></blockquote>` : ""}
+    ${historical ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco hist\xF3rico)</summary><p class="muted">${escapeHtml(historical)}</p></details>` : ""}
+    <p class="quiz-deepen__note">Fuentes para contrastar:</p>${links}
   </div>`;
 }
 function focusConfidencePicker() {
@@ -21155,19 +22203,28 @@ function selectedAnswerParagraph(q, sel) {
   if (!t) return "";
   return `<p class="quiz-fb-selected"><strong>Tu respuesta:</strong> ${escapeHtml(t)}</p>`;
 }
-function answerReasoningPanel(q, sel) {
+function buildAnswerReasoningDetail(q, sel) {
   const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
   const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
   const correctExplanation = typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
-  const pedagogy = pedagogicalExplain(q);
-  const selectedText = Array.isArray(q.options) && q.options[sel] !== void 0 ? String(q.options[sel]) : "";
+  const pedagogy = usablePedagogy(q);
   const correctText = Array.isArray(q.options) && q.options[q.correctIndex] !== void 0 ? String(q.options[q.correctIndex]) : "";
   if (sel === q.correctIndex) {
-    const detail = correctExplanation || pedagogy || "Encaja con el concepto que pide el enunciado. Lee la explicaci\xF3n y el temario del bloque para fijar la regla, f\xF3rmula o criterio de examen que la justifica.";
+    return correctExplanation || pedagogy || fallbackReasoningForQuestion(q, sel);
+  }
+  const whyCorrect = correctExplanation || pedagogy || (correctText ? `La opci\xF3n correcta es \xAB${correctText}\xBB. Revisa el temario del bloque para la regla que la distingue del distractor marcado.` : "Revisa el temario del bloque para la regla que distingue la opci\xF3n correcta del distractor marcado.");
+  return whyCorrect;
+}
+function answerReasoningPanel(q, sel) {
+  const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
+  const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
+  const selectedText = Array.isArray(q.options) && q.options[sel] !== void 0 ? String(q.options[sel]) : "";
+  if (sel === q.correctIndex) {
+    const detail = buildAnswerReasoningDetail(q, sel);
     return `<div class="quiz-fb-reasoning"><p><strong>Por qu\xE9 encaja:</strong> ${escapeHtml(detail)}</p></div>`;
   }
   const whyWrong = selectedExplanation || "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relaci\xF3n, un organismo, una etapa del circuito o el sentido de la definici\xF3n.";
-  const whyCorrect = correctExplanation || pedagogy || (correctText ? `La opci\xF3n correcta es \xAB${correctText}\xBB. Revisa el temario del bloque para la regla que la distingue del distractor marcado.` : "Revisa el temario del bloque para la regla que distingue la opci\xF3n correcta del distractor marcado.");
+  const whyCorrect = buildAnswerReasoningDetail(q, q.correctIndex);
   return `<div class="quiz-fb-reasoning">
     ${selectedText ? `<p><strong>Por qu\xE9 no encaja tu opci\xF3n:</strong> ${escapeHtml(whyWrong)}</p>` : ""}
     <p><strong>Por qu\xE9 encaja la correcta:</strong> ${escapeHtml(whyCorrect)}</p>
@@ -21175,15 +22232,19 @@ function answerReasoningPanel(q, sel) {
 }
 function quizFeedbackExplainParagraph(q) {
   const raw = typeof q.explain === "string" ? q.explain.trim() : "";
-  const pedagogy = pedagogicalExplain(q);
+  const pedagogy = usablePedagogy(q);
   if (pedagogy) {
-    const sourceNote = typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-    const hist = sourceNote || (raw.length > pedagogy.length ? raw.slice(pedagogy.length).trim() : "");
-    const histBlock = hist ? `<p class="quiz-fb-explain muted"><em>Origen:</em> ${escapeHtml(hist)}</p>` : "";
-    return `<p class="quiz-fb-explain"><strong>Explicaci\xF3n:</strong> ${escapeHtml(pedagogy)}</p>${histBlock}${quizFeedbackTemarioHint(q)}`;
+    return `<p class="quiz-fb-explain"><strong>Explicaci\xF3n:</strong> ${escapeHtml(pedagogy)}</p>${quizFeedbackTemarioHint(q)}`;
   }
   if (!raw) {
     return `<p class="quiz-fb-explain muted"><strong>Explicaci\xF3n:</strong> No hay texto de explicaci\xF3n registrado en el banco para este \xEDtem.</p>${quizFeedbackTemarioHint(q)}`;
+  }
+  if (isGenericExplainText(raw) || isMisassignedPedagogicalExplain(q)) {
+    const gen = generatePedagogicalExplain(q);
+    if (gen && !isGenericExplainText(gen)) {
+      return `<p class="quiz-fb-explain"><strong>Explicaci\xF3n:</strong> ${escapeHtml(gen)}</p>${quizFeedbackTemarioHint(q)}`;
+    }
+    return `<p class="quiz-fb-explain"><strong>Explicaci\xF3n:</strong> ${escapeHtml(fallbackReasoningForQuestion(q, q.correctIndex))}</p>${quizFeedbackTemarioHint(q)}`;
   }
   if (isTemplateOnlyExplain(raw)) {
     return `<p class="quiz-fb-explain muted"><strong>Explicaci\xF3n:</strong> Pregunta de banco hist\xF3rico (FEDI/Quijotes) sin desarrollo did\xE1ctico en el original. Contrasta la respuesta correcta con el temario del bloque \xAB${escapeHtml(topicBlockLabel(q.topicId))}\xBB.</p>${quizFeedbackTemarioHint(q)}`;
@@ -21251,7 +22312,7 @@ function showStudyFeedback(q) {
   const abbr = questionAbbreviationPanel(q, visibleForAbbr);
   if (quizState.studyFeedback === "deepen") {
     const lead = ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q) + abbr + cal;
+    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q, buildAnswerReasoningDetail(q, sel)) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${reasoning}${explainBlock}${abbr}` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${reasoning}${explainBlock}${abbr}`) + cal;

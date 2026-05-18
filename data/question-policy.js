@@ -1,7 +1,8 @@
 import { isCribadoPreferred as isCribadoPreferredId } from "./question-cribado.js";
 import { EXACT_FIGURE_QUESTION_IDS } from "./question-figure-ids.js";
+import { isEmergenciaAuxilioQuestion } from "../lib/question-pool.mjs";
 
-export { EXACT_FIGURE_QUESTION_IDS };
+export { EXACT_FIGURE_QUESTION_IDS, isEmergenciaAuxilioQuestion };
 
 export const EXCLUDED_UNTIL_EXACT_FIGURE_IDS = new Set([]);
 

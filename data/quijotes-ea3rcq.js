@@ -650,7 +650,7 @@ export default [
   {
     id: "quijotes-85-2176",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué significa “breve” en comunicación por radio?",
     options: [
       "Lo más corto posible",
@@ -776,7 +776,7 @@ export default [
   {
     id: "quijotes-85-2145",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué no debe hacerse a un motorista accidentado?",
     options: [
       "Aflojar la ropa",
@@ -790,7 +790,7 @@ export default [
   {
     id: "quijotes-85-2146",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué es la PLS?",
     options: [
       "Posición lateral de seguridad",
@@ -804,7 +804,7 @@ export default [
   {
     id: "quijotes-85-2148",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué debe hacerse al comunicarse con un accidentado?",
     options: [
       "Hablar rápido y fuerte",
@@ -818,7 +818,7 @@ export default [
   {
     id: "quijotes-85-2149",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué trato se recomienda con accidentados adultos?",
     options: [
       "Tutear",
@@ -874,7 +874,7 @@ export default [
   {
     id: "quijotes-85-2183",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué significa “creciente”?",
     options: [
       "Numeración que baja",
@@ -888,7 +888,7 @@ export default [
   {
     id: "quijotes-85-2194",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?",
     options: [
       "Llamar a emergencias",
@@ -958,7 +958,7 @@ export default [
   {
     id: "quijotes-85-2147",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Cuándo se debe aplicar la PLS?",
     options: [
       "Inconsciente y respira",
@@ -1042,7 +1042,7 @@ export default [
   {
     id: "quijotes-85-2184",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "¿Qué significa “decreciente”?",
     options: [
       "Numeración que disminuye",
@@ -8033,10 +8033,10 @@ export default [
     topicId: "marco-normativo",
     stem: "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     options: [
-      "En general está permitido la emisión de onda portadora no modulada.",
-      "Puede ser empleada arbitrariamente la señal de socorro \"SOS\".",
-      "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
-      "A efectos de ensayos puede emitirse un distintivo de llamada engañoso.",
+      "300-3000 MHz.",
+      "30-300 MHz.",
+      "3-30 MHz.",
+      "30-300 kHz.",
     ],
     correctIndex: 2,
     explain: "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria.",

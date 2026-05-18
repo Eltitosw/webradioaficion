@@ -48,7 +48,7 @@ export default {
         {
           id: "operacion-seguridad",
           title: "Operación, emergencias y buenas prácticas",
-          hint: "Código Q, fonético ICAO, señales de urgencia, interferencias.",
+          hint: "Código Q, fonético ICAO, Mayday/Securité, interferencias. Incluye auxilios del banco histórico (ver Utilidades).",
         },
         {
           id: "instalaciones",

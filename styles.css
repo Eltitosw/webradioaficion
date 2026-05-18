@@ -2247,6 +2247,20 @@ body.quiz-focus-active #save-toast {
   margin: 0;
 }
 
+.quiz-deepen__hist {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 0.88rem;
+}
+
+.quiz-deepen__hist summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.quiz-deepen--links-only {
+  margin-top: 0.75rem;
+}
+
 .quiz-deepen__links {
   margin: 0;
   padding-left: 1.15rem;
@@ -4059,5 +4073,152 @@ html[data-theme="light"] .week-plan__card {
 
 html.a11y-light .week-plan__card p,
 html[data-theme="light"] .week-plan__card p {
+  color: var(--text-secondary);
+}
+
+/* —— Utilidades —— */
+.utilidades-root {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.util-notes {
+  margin: 0;
+  padding: 0.85rem 1rem 0.85rem 1.35rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.util-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.util-panel h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.util-table-wrap {
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+
+.util-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.util-table th,
+.util-table td {
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.util-table th {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.util-table tbody tr:last-child th,
+.util-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.util-table code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+.util-map-figure {
+  margin: 1rem 0 0;
+}
+
+.util-map-figure img {
+  display: block;
+  width: 100%;
+  max-width: 52rem;
+  height: auto;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-strong);
+  background: #fff;
+}
+
+.util-map-figure figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.util-district-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+
+.util-district {
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+}
+
+.util-district h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.98rem;
+}
+
+.util-district p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.util-district__badge {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.util-panel--aside p {
+  margin: 0 0 0.65rem;
+}
+
+.util-panel--aside .btn {
+  margin: 0.35rem 0.5rem 0 0;
+}
+
+.util-table--signals th,
+.util-table--signals td {
+  vertical-align: top;
+}
+
+.util-signal-type {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.util-signal-note {
+  font-size: 0.86rem;
   color: var(--text-secondary);
 }

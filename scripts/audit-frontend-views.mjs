@@ -22,6 +22,7 @@ const VIEWS = [
   "examen",
   "cuaderno",
   "tarjetas",
+  "utilidades",
   "ayuda",
 ];
 
@@ -47,6 +48,7 @@ const REQUIRED_IDS = [
   "fc-load",
   "fc-topic",
   "fc-area",
+  "utilidades-root",
   "a11y-light",
   "a11y-font-scale",
   "app.bundle.js",
@@ -124,6 +126,7 @@ const renderFns = [
   "renderMethods",
   "renderUserProgress",
   "renderExamCoach",
+  "renderUtilidades",
   "renderFlashcard",
   "renderQuestion",
   "initNav",

@@ -4,8 +4,18 @@ import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
 import regulatory from "./data/regulatory.js";
 import { isActiveQuestion } from "./data/question-policy.js";
+import {
+  PHONETIC_ALPHABET,
+  Q_CODES,
+  EA_DISTRICTS,
+  EMERGENCY_SIGNALS,
+  UTILIDADES_NOTES,
+} from "./data/utilidades.js";
 import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
+import { filterQuestionsForSession } from "./lib/question-pool.mjs";
 import { isTemplateOnlyExplain, pedagogicalExplain } from "./lib/explain-quality.mjs";
+import { isGenericExplainText, isMisassignedPedagogicalExplain } from "./lib/explain-faithfulness.mjs";
+import { generatePedagogicalExplain } from "./lib/generate-pedagogical-explain.mjs";
 import {
   buildExamReadiness,
   buildRecommendedPlan,
@@ -54,6 +64,7 @@ const VIEW_HEADINGS = {
   examen: "titulo-examen",
   cuaderno: "titulo-cuaderno",
   tarjetas: "titulo-tarjetas",
+  utilidades: "titulo-utilidades",
   ayuda: "titulo-ayuda",
 };
 
@@ -66,6 +77,7 @@ const DOC_TITLES = {
   examen: "RadioExamen · Simulacro de examen",
   cuaderno: "RadioExamen · Cuaderno de errores",
   tarjetas: "RadioExamen · Tarjetas",
+  utilidades: "RadioExamen · Utilidades",
   ayuda: "RadioExamen · Ayuda",
 };
 
@@ -78,6 +90,7 @@ const ROUTE_ANNOUNCE = {
   examen: "Examen",
   cuaderno: "Cuaderno de errores",
   tarjetas: "Tarjetas",
+  utilidades: "Utilidades",
   ayuda: "Ayuda",
 };
 
@@ -409,9 +422,18 @@ function resolveViewIdFromHash(raw) {
   if (raw.startsWith("temario--")) return "temario";
   if (raw.startsWith("normativa--")) return "normativa";
   if (
-    ["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(
-      raw,
-    )
+    [
+      "inicio",
+      "temario",
+      "normativa",
+      "metodologia",
+      "practicar",
+      "examen",
+      "cuaderno",
+      "tarjetas",
+      "utilidades",
+      "ayuda",
+    ].includes(raw)
   ) {
     return raw;
   }
@@ -494,7 +516,20 @@ async function onRoute() {
     const sub = raw.slice("normativa--".length);
     id = "normativa";
     if (sub) scrollTargetId = sub;
-  } else if (!["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"].includes(raw)) {
+  } else if (
+    ![
+      "inicio",
+      "temario",
+      "normativa",
+      "metodologia",
+      "practicar",
+      "examen",
+      "cuaderno",
+      "tarjetas",
+      "utilidades",
+      "ayuda",
+    ].includes(raw)
+  ) {
     id = "inicio";
   }
   if (id !== "practicar") clearExamTimer();
@@ -525,6 +560,7 @@ async function onRoute() {
   }
   if (id === "inicio") renderUserProgress();
   if (id === "examen" || id === "cuaderno") renderExamCoach();
+  if (id === "utilidades") renderUtilidades();
   if (scrollTargetId) {
     requestAnimationFrame(() => {
       setTimeout(() => {
@@ -1537,8 +1573,13 @@ async function startQuiz() {
   const wrongOnly = !!$("#quiz-wrong-only")?.checked;
   const trapOnly = !!$("#quiz-trap-only")?.checked;
   const onlyPool = buildQuizOnlyPool();
+  const sessionPool = filterQuestionsForSession(allQuestions, {
+    topicFilter,
+    sessionType: quizState.sessionType,
+    mode: quizState.mode,
+  });
   quizState.list = buildQuestionList(
-    allQuestions,
+    sessionPool,
     part,
     quizState.sessionType,
     topicFilter,
@@ -2519,6 +2560,116 @@ function startExamSimulation(partValue) {
   });
 }
 
+function renderUtilidades() {
+  const root = $("#utilidades-root");
+  if (!root) return;
+
+  const phoneticRows = PHONETIC_ALPHABET.map(
+    (row) =>
+      `<tr><th scope="row">${escapeHtml(row.letter)}</th><td><strong>${escapeHtml(row.word)}</strong></td></tr>`,
+  ).join("");
+
+  const qRows = Q_CODES.map(
+    (row) =>
+      `<tr><th scope="row"><code>${escapeHtml(row.code)}</code></th><td>${escapeHtml(row.meaning)}</td></tr>`,
+  ).join("");
+
+  const signalRows = EMERGENCY_SIGNALS.map(
+    (row) =>
+      `<tr>
+        <th scope="row"><strong>${escapeHtml(row.signal)}</strong><br><span class="util-signal-type">${escapeHtml(row.type)}</span></th>
+        <td>${escapeHtml(row.meaning)}</td>
+        <td>${escapeHtml(row.procedure)}</td>
+        <td class="util-signal-note">${escapeHtml(row.note)}</td>
+      </tr>`,
+  ).join("");
+
+  const districtCards = EA_DISTRICTS.map(
+    (d) => `
+      <article class="util-district">
+        <h3><span class="util-district__badge">${escapeHtml(d.label)}</span> ${escapeHtml(d.title)}</h3>
+        <p>${escapeHtml(d.provinces)}</p>
+      </article>`,
+  ).join("");
+
+  const notes = UTILIDADES_NOTES.map((n) => `<li>${escapeHtml(n)}</li>`).join("");
+
+  root.innerHTML = `
+    <ul class="util-notes">${notes}</ul>
+    <div class="util-grid">
+      <section class="panel util-panel" aria-labelledby="util-phonetic-title">
+        <h2 id="util-phonetic-title">Alfabeto fonético ICAO</h2>
+        <p class="muted">Para deletrear indicativos, nombres y mensajes en fonía sin confundir letras.</p>
+        <div class="util-table-wrap">
+          <table class="util-table">
+            <thead><tr><th scope="col">Letra</th><th scope="col">Palabra</th></tr></thead>
+            <tbody>${phoneticRows}</tbody>
+          </table>
+        </div>
+      </section>
+      <section class="panel util-panel" aria-labelledby="util-q-title">
+        <h2 id="util-q-title">Códigos Q habituales</h2>
+        <p class="muted">Los más usados en examen y en QSO. Todos empiezan por Q.</p>
+        <div class="util-table-wrap">
+          <table class="util-table util-table--q">
+            <thead><tr><th scope="col">Código</th><th scope="col">Significado</th></tr></thead>
+            <tbody>${qRows}</tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+    <section class="panel util-panel util-panel--signals" aria-labelledby="util-signals-title">
+      <h2 id="util-signals-title">Mayday, Pan-pan, Securité y RST</h2>
+      <p class="muted">Cuatro conceptos que el examen mezcla a menudo. No son intercambiables.</p>
+      <div class="util-table-wrap">
+        <table class="util-table util-table--signals">
+          <thead>
+            <tr>
+              <th scope="col">Señal</th>
+              <th scope="col">Para qué sirve</th>
+              <th scope="col">Cómo se usa</th>
+              <th scope="col">Trampa habitual</th>
+            </tr>
+          </thead>
+          <tbody>${signalRows}</tbody>
+        </table>
+      </div>
+    </section>
+    <section class="panel util-panel util-panel--map" aria-labelledby="util-ea-title">
+      <h2 id="util-ea-title">Distritos EA (indicativos españoles)</h2>
+      <p class="muted">
+        La cifra del indicativo (por ejemplo <strong>EA4ABC</strong>) indica el distrito según la división geográfica oficial.
+        Mapa orientativo URE; contrasta con el reglamento vigente.
+      </p>
+      <figure class="util-map-figure">
+        <img
+          src="images/utilidades/distritos-ea.png"
+          width="960"
+          height="720"
+          alt="Mapa de España con los nueve distritos de indicativos EA1 a EA9, incluyendo Baleares, Canarias, Ceuta y Melilla"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>Distritos EA · referencia URE</figcaption>
+      </figure>
+      <div class="util-district-grid">${districtCards}</div>
+    </section>
+    <aside class="panel util-panel util-panel--aside" aria-labelledby="util-practice-title">
+      <h2 id="util-practice-title">Relación con el examen</h2>
+      <p>
+        Estas tablas son material de consulta rápida. En <strong>Practicar</strong> y <strong>Examen</strong> priorizamos
+        preguntas de electricidad, radio y normativa del servicio de aficionados.
+      </p>
+      <p class="muted">
+        Las preguntas de primeros auxilios o señalización del banco histórico solo aparecen si practicas el bloque
+        <strong>Operación, emergencias y buenas prácticas</strong>.
+      </p>
+      <a class="btn btn--primary btn--sm" href="#practicar" data-nav="practicar">Ir a practicar</a>
+      <a class="btn btn--ghost btn--sm" href="#temario--operacion-seguridad" data-nav="temario">Temario · operación</a>
+    </aside>
+  `;
+}
+
 function renderExamReadiness() {
   const root = $("#exam-readiness-root");
   if (!root) return;
@@ -2688,7 +2839,7 @@ function renderQuizPracticeGuide() {
       <div>
         <h2>${escapeHtml(title)}</h2>
         <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test → explicación → refuerzo en Temario → repetición.</p>
-        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura original). Cribado: ${BANCO_STATS.cribadoPreferred ?? "?"} entradas únicas por enunciado.</p>
+        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura original). Cribado: ${BANCO_STATS.cribadoPreferred ?? "?"} entradas únicas por enunciado. Las de primeros auxilios del banco histórico solo entran si eliges el tema <strong>Operación, emergencias y buenas prácticas</strong> (<a href="#utilidades" data-nav="utilidades">consulta en Utilidades</a>).</p>
         ${
           trapOnly
             ? `<p><strong>Modo preguntas trampa activo:</strong> distractores típicos (${trapCount} con filtros actuales).</p>`
@@ -2860,8 +3011,30 @@ function quizFeedbackTemarioHint(q) {
   return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> amplía en el bloque «${escapeHtml(label)}» del <a href="${href}">temario</a> (ganchos y viñetas de estudio).</p>`;
 }
 
+/** Explicación didáctica usable (sin plantillas genéricas ni LF/RST mal asignados). */
+function usablePedagogy(q) {
+  const p = pedagogicalExplain(q);
+  if (!p || isMisassignedPedagogicalExplain(q)) return "";
+  return p;
+}
+
+function fallbackReasoningForQuestion(q, sel) {
+  const ok = sel === q.correctIndex;
+  const correct =
+    Array.isArray(q.options) && q.options[q.correctIndex] !== undefined
+      ? String(q.options[q.correctIndex])
+      : "";
+  if (ok && correct) {
+    return `La opción «${correct}» responde al enunciado. Revisa el temario del bloque «${topicBlockLabel(q.topicId)}» para fijar la regla o el dato que la justifica.`;
+  }
+  if (correct) {
+    return `La opción correcta es «${correct}». Contrasta con el temario del bloque «${topicBlockLabel(q.topicId)}» y con la normativa oficial si el enunciado es reglamentario.`;
+  }
+  return "Revisa el temario del bloque y la normativa oficial para fijar la regla que resuelve este enunciado.";
+}
+
 /** Panel post-respuesta: explicación didáctica + nota histórica (si existe) + enlaces a temario. */
-function renderDeepenPanel(q) {
+function renderDeepenPanel(q, reasoningPlain = "") {
   const blockTitle = topicBlockLabel(q.topicId);
   const temarioHref = `#temario--${encodeURIComponent(q.topicId)}`;
   const ureHref =
@@ -2871,30 +3044,31 @@ function renderDeepenPanel(q) {
   const ureLinkText =
     q.part === 1 ? "URE · Material de práctica (electricidad y radioelectricidad)" : "URE · Legislación y reglamentación";
   const normativaHref = "#normativa--normativa-boe";
-  const pedagogy = pedagogicalExplain(q) || String(q.explain || "").trim();
+  const pedagogy = usablePedagogy(q);
   const historical =
     typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
+  const norm = (t) =>
+    String(t || "")
+      .toLowerCase()
+      .replace(/\s+/g, " ")
+      .trim();
+  const showPedagogy = pedagogy && norm(pedagogy) !== norm(reasoningPlain);
+  const links = `<ul class="quiz-deepen__links">
+      <li><a href="${temarioHref}">Temario · ${escapeHtml(blockTitle)}</a></li>
+      <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
+      <li><a href="${normativaHref}">Normativa BOE</a></li>
+    </ul>`;
+  if (!showPedagogy && !historical) {
+    return `<div class="quiz-deepen quiz-deepen--links-only"><p class="quiz-deepen__note">Amplía en el temario y contrasta con fuentes oficiales:</p>${links}</div>`;
+  }
   return `<div class="quiz-deepen">
-    <h3 class="quiz-deepen__title">Ampliación · temario y libro</h3>
-    <p class="quiz-deepen__note">Explicación didáctica registrada en el banco (modo profundizar).</p>
-    <blockquote class="quiz-deepen__exact"><p>${escapeHtml(pedagogy)}</p></blockquote>
+    ${showPedagogy ? `<p class="quiz-deepen__note"><strong>Ampliación:</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(pedagogy)}</p></blockquote>` : ""}
     ${
       historical
-        ? `<p class="quiz-deepen__note muted"><strong>Origen histórico de importación:</strong></p><blockquote class="quiz-deepen__exact quiz-deepen__exact--hist"><p>${escapeHtml(historical)}</p></blockquote>`
+        ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco histórico)</summary><p class="muted">${escapeHtml(historical)}</p></details>`
         : ""
     }
-    ${
-      "sourceRef" in q && q.sourceRef
-        ? `<p class="quiz-deepen__source"><strong>Fuente al redactar el ítem:</strong> ${escapeHtml(String(q.sourceRef))}</p>`
-        : ""
-    }
-    <p class="quiz-deepen__note">Relación con tu estudio y fuentes oficiales:</p>
-    <ul class="quiz-deepen__links">
-      <li><a href="${temarioHref}">Temario de examen · ${escapeHtml(blockTitle)}</a></li>
-      <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
-      <li><a href="${normativaHref}">Normativa · BOE y administración</a></li>
-      <li><a href="https://docdb.cept.org/document/926" rel="noopener noreferrer">ECO/CEPT · HAREC T/R 61-02</a></li>
-    </ul>
+    <p class="quiz-deepen__note">Fuentes para contrastar:</p>${links}
   </div>`;
 }
 
@@ -2945,31 +3119,38 @@ function selectedAnswerParagraph(q, sel) {
   return `<p class="quiz-fb-selected"><strong>Tu respuesta:</strong> ${escapeHtml(t)}</p>`;
 }
 
-function answerReasoningPanel(q, sel) {
+function buildAnswerReasoningDetail(q, sel) {
   const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
   const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
   const correctExplanation =
     typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
-  const pedagogy = pedagogicalExplain(q);
-  const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  const pedagogy = usablePedagogy(q);
   const correctText =
     Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
   if (sel === q.correctIndex) {
-    const detail =
-      correctExplanation ||
-      pedagogy ||
-      "Encaja con el concepto que pide el enunciado. Lee la explicación y el temario del bloque para fijar la regla, fórmula o criterio de examen que la justifica.";
-    return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
+    return correctExplanation || pedagogy || fallbackReasoningForQuestion(q, sel);
   }
-  const whyWrong =
-    selectedExplanation ||
-    "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
   const whyCorrect =
     correctExplanation ||
     pedagogy ||
     (correctText
       ? `La opción correcta es «${correctText}». Revisa el temario del bloque para la regla que la distingue del distractor marcado.`
       : "Revisa el temario del bloque para la regla que distingue la opción correcta del distractor marcado.");
+  return whyCorrect;
+}
+
+function answerReasoningPanel(q, sel) {
+  const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
+  const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
+  const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  if (sel === q.correctIndex) {
+    const detail = buildAnswerReasoningDetail(q, sel);
+    return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
+  }
+  const whyWrong =
+    selectedExplanation ||
+    "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
+  const whyCorrect = buildAnswerReasoningDetail(q, q.correctIndex);
   return `<div class="quiz-fb-reasoning">
     ${selectedText ? `<p><strong>Por qué no encaja tu opción:</strong> ${escapeHtml(whyWrong)}</p>` : ""}
     <p><strong>Por qué encaja la correcta:</strong> ${escapeHtml(whyCorrect)}</p>
@@ -2979,20 +3160,19 @@ function answerReasoningPanel(q, sel) {
 /** Texto `explain` del banco, siempre en bloque etiquetado (acierto o error). */
 function quizFeedbackExplainParagraph(q) {
   const raw = typeof q.explain === "string" ? q.explain.trim() : "";
-  const pedagogy = pedagogicalExplain(q);
+  const pedagogy = usablePedagogy(q);
   if (pedagogy) {
-    const sourceNote =
-      typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-    const hist =
-      sourceNote ||
-      (raw.length > pedagogy.length ? raw.slice(pedagogy.length).trim() : "");
-    const histBlock = hist
-      ? `<p class="quiz-fb-explain muted"><em>Origen:</em> ${escapeHtml(hist)}</p>`
-      : "";
-    return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(pedagogy)}</p>${histBlock}${quizFeedbackTemarioHint(q)}`;
+    return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(pedagogy)}</p>${quizFeedbackTemarioHint(q)}`;
   }
   if (!raw) {
     return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> No hay texto de explicación registrado en el banco para este ítem.</p>${quizFeedbackTemarioHint(q)}`;
+  }
+  if (isGenericExplainText(raw) || isMisassignedPedagogicalExplain(q)) {
+    const gen = generatePedagogicalExplain(q);
+    if (gen && !isGenericExplainText(gen)) {
+      return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(gen)}</p>${quizFeedbackTemarioHint(q)}`;
+    }
+    return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(fallbackReasoningForQuestion(q, q.correctIndex))}</p>${quizFeedbackTemarioHint(q)}`;
   }
   if (isTemplateOnlyExplain(raw)) {
     return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> Pregunta de banco histórico (FEDI/Quijotes) sin desarrollo didáctico en el original. Contrasta la respuesta correcta con el temario del bloque «${escapeHtml(topicBlockLabel(q.topicId))}».</p>${quizFeedbackTemarioHint(q)}`;
@@ -3081,7 +3261,7 @@ function showStudyFeedback(q) {
     const lead = ok
       ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
       : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q) + abbr + cal;
+    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q, buildAnswerReasoningDetail(q, sel)) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok
