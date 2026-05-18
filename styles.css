@@ -2998,9 +2998,9 @@ html[data-theme="light"] {
   --bg-card-hover: #f8fafc;
   --line: rgba(15, 23, 42, 0.1);
   --line-strong: rgba(15, 23, 42, 0.16);
-  --text: #152033;
-  --text-secondary: #334155;
-  --muted: #5b677a;
+  --text: #0f172a;
+  --text-secondary: #1e293b;
+  --muted: #475569;
   --accent: #b8780f;
   --accent-hover: #9a6509;
   --accent-dim: #7a5208;
@@ -3405,7 +3405,8 @@ html.a11y-reduce-motion .flashcard__inner {
 .temario-study-group__title {
   margin: 0.65rem 0 0.35rem;
   font-size: 0.92rem;
-  color: var(--text-secondary);
+  font-weight: 600;
+  color: var(--text);
 }
 
 .temario-fc-hint {
@@ -3696,7 +3697,15 @@ html.a11y-reduce-motion .flashcard__inner {
   margin-bottom: 0.5rem;
 }
 
-.temario-details .temario-list {
+.temario-study,
+.temario-section,
+.temario-study-group {
+  color: var(--text);
+}
+
+.temario-list,
+.temario-details .temario-list,
+.temario-study-group .temario-list {
   margin: 0 0 0.65rem;
   padding-left: 1.15rem;
   color: var(--text);
@@ -3704,8 +3713,11 @@ html.a11y-reduce-motion .flashcard__inner {
   line-height: 1.5;
 }
 
-.temario-details .temario-list li {
+.temario-list li,
+.temario-details .temario-list li,
+.temario-study-group .temario-list li {
   margin-bottom: 0.35rem;
+  color: var(--text);
 }
 
 .temario-study-group {
@@ -3926,4 +3938,126 @@ html.a11y-reduce-motion .temario-flipcard__inner {
 .week-plan__card--calm {
   border-color: rgba(46, 184, 122, 0.35);
   background: rgba(46, 184, 122, 0.075);
+}
+
+/* —— Modo claro: texto de lectura siempre oscuro (WCAG) —— */
+html.a11y-light .part-card,
+html[data-theme="light"] .part-card {
+  background: var(--bg-card);
+}
+
+html.a11y-light .panel,
+html[data-theme="light"] .panel {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+html.a11y-light .block-list li,
+html[data-theme="light"] .block-list li {
+  color: var(--text);
+}
+
+html.a11y-light .block-list span,
+html[data-theme="light"] .block-list span {
+  color: var(--text-secondary);
+}
+
+html.a11y-light .temario-block,
+html.a11y-light .temario-study,
+html.a11y-light .temario-details,
+html.a11y-light .temario-section,
+html.a11y-light .temario-study-group,
+html[data-theme="light"] .temario-block,
+html[data-theme="light"] .temario-study,
+html[data-theme="light"] .temario-details,
+html[data-theme="light"] .temario-section,
+html[data-theme="light"] .temario-study-group {
+  color: var(--text);
+}
+
+html.a11y-light .temario-method-tip,
+html.a11y-light .temario-method-tip strong,
+html[data-theme="light"] .temario-method-tip,
+html[data-theme="light"] .temario-method-tip strong {
+  color: var(--text);
+}
+
+html.a11y-light .temario-list,
+html.a11y-light .temario-list li,
+html.a11y-light .temario-details .temario-list,
+html.a11y-light .temario-details .temario-list li,
+html.a11y-light .temario-study-group .temario-list,
+html.a11y-light .temario-study-group .temario-list li,
+html[data-theme="light"] .temario-list,
+html[data-theme="light"] .temario-list li,
+html[data-theme="light"] .temario-details .temario-list,
+html[data-theme="light"] .temario-details .temario-list li,
+html[data-theme="light"] .temario-study-group .temario-list,
+html[data-theme="light"] .temario-study-group .temario-list li {
+  color: var(--text);
+}
+
+html.a11y-light .temario-study-group__title,
+html.a11y-light .temario-details summary,
+html.a11y-light .temario-details__label,
+html[data-theme="light"] .temario-study-group__title,
+html[data-theme="light"] .temario-details summary,
+html[data-theme="light"] .temario-details__label {
+  color: var(--text);
+}
+
+html.a11y-light .temario-block__meta,
+html.a11y-light .temario-fc-hint,
+html.a11y-light .muted,
+html[data-theme="light"] .temario-block__meta,
+html[data-theme="light"] .temario-fc-hint,
+html[data-theme="light"] .muted {
+  color: var(--muted);
+}
+
+html.a11y-light .temario-toc__item-hint,
+html[data-theme="light"] .temario-toc__item-hint {
+  color: var(--text-secondary);
+}
+
+html.a11y-light .feedback,
+html.a11y-light .quiz-deepen,
+html.a11y-light .quiz-fb-reasoning,
+html[data-theme="light"] .feedback,
+html[data-theme="light"] .quiz-deepen,
+html[data-theme="light"] .quiz-fb-reasoning {
+  background: var(--bg-card);
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+html.a11y-light .feedback p,
+html.a11y-light .quiz-fb-reasoning p,
+html.a11y-light .quiz-fb-explain,
+html.a11y-light .quiz-deepen p,
+html[data-theme="light"] .feedback p,
+html[data-theme="light"] .quiz-fb-reasoning p,
+html[data-theme="light"] .quiz-fb-explain,
+html[data-theme="light"] .quiz-deepen p {
+  color: var(--text);
+}
+
+html.a11y-light .source-hierarchy li,
+html.a11y-light .normativa-stack,
+html.a11y-light .help-panel,
+html[data-theme="light"] .source-hierarchy li,
+html[data-theme="light"] .normativa-stack,
+html[data-theme="light"] .help-panel {
+  color: var(--text);
+}
+
+html.a11y-light .week-plan__card,
+html[data-theme="light"] .week-plan__card {
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+html.a11y-light .week-plan__card p,
+html[data-theme="light"] .week-plan__card p {
+  color: var(--text-secondary);
 }
