@@ -1,0 +1,25 @@
+Verificación fechas BOE · 2026-05-18T21:11:28
+Catálogo revisado internamente: 2026-05-18
+
+OK   BOE-A-2013-7624: consolidado 10/04/2015
+OK   BOE-A-2006-10286: consolidado 12/07/2013
+OK   BOE-A-2022-10757: consolidado 27/12/2025
+OK   BOE-A-1983-25445: disposición aislada / sin fecha consolidado (página sin texto consolidado)
+OK   BOE-A-1986-33766: consolidado sin fecha de actualización en HTML
+OK   BOE-A-2017-2460: consolidado 18/01/2023
+OK   BOE-A-2023-1192: disposición aislada / sin fecha consolidado (no consolidado HTML)
+OK   BOE-A-2016-4444: consolidado 13/03/2026
+OK   BOE-A-2026-5878: disposición aislada / sin fecha consolidado (no consolidado HTML)
+OK   BOE-A-2026-552: disposición aislada / sin fecha consolidado (no consolidado HTML)
+
+=== Resumen por norma ===
+- BOE-A-2013-7624 | publicación: Orden de 9 de julio de 2013 · BOE núm. 166, de 12 de julio de 2013 | consolidado catálogo: 10/04/2015 | OK
+- BOE-A-2006-10286 | publicación: BOE núm. 140, de 13 de junio de 2006 | consolidado catálogo: 12/07/2013 | OK
+- BOE-A-2022-10757 | publicación: BOE núm. 154, de 29 de junio de 2022 | consolidado catálogo: 27/12/2025 | OK
+- BOE-A-1983-25445 | publicación: Orden de 16 de septiembre de 1983 (desarrollo de la Ley 19/1983) | consolidado catálogo: N/A | OK
+- BOE-A-1986-33766 | publicación: BOE núm. 312, de 30 de diciembre de 1986 | consolidado catálogo: N/A | OK
+- BOE-A-2017-2460 | publicación: BOE núm. 57, de 8 de marzo de 2017 | consolidado catálogo: 18/01/2023 | OK
+- BOE-A-2023-1192 | publicación: BOE núm. 15, de 18 de enero de 2023 · vigencia 19/01/2023 | consolidado catálogo: N/A | OK
+- BOE-A-2016-4444 | publicación: BOE núm. 113, de 10 de mayo de 2016 · vigencia 13/06/2016 | consolidado catálogo: 13/03/2026 | OK
+- BOE-A-2026-5878 | publicación: BOE núm. 64, de 13 de marzo de 2026 | consolidado catálogo: N/A | OK
+- BOE-A-2026-552 | publicación: Resolución de 19/02/2025 · BOE núm. 8, de 9 de enero de 2026 | consolidado catálogo: N/A | OK

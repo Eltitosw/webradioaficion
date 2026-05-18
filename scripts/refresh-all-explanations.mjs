@@ -8,8 +8,10 @@ import banco from "../data/questions-banco.js";
 import generated from "../data/generated-explanations.js";
 import quijotesExp from "../data/quijotes-explanations.js";
 import { isExplainAcceptable } from "../lib/explain-verify.mjs";
+import { isGenericExplainText, isRespectoTemplateExplain } from "../lib/explain-faithfulness.mjs";
 import { pedagogicalExplain } from "../lib/explain-quality.mjs";
 import { buildBestExplain } from "../lib/build-best-explain.mjs";
+import { isWeakBankExplain } from "../lib/learn-while-test.mjs";
 import { writeUtf8File } from "../lib/import-question-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -35,13 +37,20 @@ function currentText(q) {
   return nextQuij[q.id] || nextGen[q.id] || pedagogicalExplain(q) || String(q.explain || "");
 }
 
+function needsExplainRefresh(q) {
+  const text = currentText(q);
+  if (!text) return true;
+  if (isWeakBankExplain(text)) return true;
+  const probe = { ...q, explain: text };
+  return !isExplainAcceptable(probe, text);
+}
+
 let totalUpdated = 0;
 
 for (let pass = 1; pass <= MAX_PASSES; pass += 1) {
   let passUpdated = 0;
   for (const q of banco) {
-    const probe = { ...q, explain: currentText(q) };
-    if (isExplainAcceptable(probe, currentText(q))) continue;
+    if (!needsExplainRefresh(q)) continue;
 
     const text = buildBestExplain(q);
     if (!isExplainAcceptable(q, text)) continue;
@@ -60,8 +69,7 @@ for (let pass = 1; pass <= MAX_PASSES; pass += 1) {
 let forced = 0;
 let stillBad = 0;
 for (const q of banco) {
-  const probe = { ...q, explain: currentText(q) };
-  if (isExplainAcceptable(probe, currentText(q))) continue;
+  if (!needsExplainRefresh(q)) continue;
   const text = buildBestExplain(q);
   if (!isExplainAcceptable(q, text)) {
     stillBad += 1;
@@ -73,6 +81,22 @@ for (const q of banco) {
 if (stillBad) {
   process.stderr.write(`AVISO: ${stillBad} pregunta(s) sin explicación aceptable tras regenerar\n`);
 }
+
+const bankIds = new Set(banco.map((q) => q.id));
+
+function pruneOrphans(map, label) {
+  let n = 0;
+  for (const id of Object.keys(map)) {
+    if (!bankIds.has(id)) {
+      delete map[id];
+      n += 1;
+    }
+  }
+  if (n) process.stderr.write(`refresh: ${n} entrada(s) huérfana(s) eliminada(s) de ${label}\n`);
+}
+
+pruneOrphans(nextGen, "generated-explanations");
+pruneOrphans(nextQuij, "quijotes-explanations");
 
 function writeMap(outPath, header, map) {
   const keys = Object.keys(map).sort();

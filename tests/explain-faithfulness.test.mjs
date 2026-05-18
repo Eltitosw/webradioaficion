@@ -3,6 +3,7 @@ import { test } from "node:test";
 import {
   auditQuestionExplain,
   explainMentionsCorrect,
+  isGenericExplainText,
   isMisassignedPedagogicalExplain,
   isStemExplainTopicConflict,
   normalizeForMatch,
@@ -10,6 +11,12 @@ import {
 
 test("normalizeForMatch ignora tildes", () => {
   assert.equal(normalizeForMatch("Resistividad"), normalizeForMatch("resistividad"));
+});
+
+test("isGenericExplainText rechaza plantilla En este enunciado Repasa temario", () => {
+  const t =
+    "En este enunciado («Un diodo:»), el criterio de examen apunta a «X». Repasa componentes en el temario y fija qué regla distingue la opción correcta.";
+  assert.equal(isGenericExplainText(t), true);
 });
 
 test("explainMentionsCorrect detecta cita entrecomillada", () => {

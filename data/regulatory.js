@@ -2,10 +2,12 @@
  * Enlaces y notas orientativas. El texto legal completo solo en el BOE.
  * Texto consolidado: informativo; para fines jurídicos, publicación oficial.
  */
+import { boeLinksForRegulatory, boeMarcoLinksForRegulatory, BOE_CATALOG_REVIEWED_AT } from "./boe-normativa.mjs";
+
 export default {
   headline: "Normativa principal (España)",
   intro:
-    "La prueba de radioaficionado y la autorización se encuadran en el uso especial del espectro. La base del reglamento del servicio es la Orden IET/1311/2013, que aprueba el Reglamento de uso del dominio público radioeléctrico por radioaficionados.",
+    "La prueba de radioaficionado y la autorización se encuadran en el uso especial del espectro. La norma del servicio de aficionados es la Orden IET/1311/2013 (BOE-A-2013-7624). El marco general del dominio público radioeléctrico es el RD 123/2017 (BOE-A-2017-2460 consolidado; mod. BOE-A-2023-1192). El BOE-A-2006-10286 quedó derogado. Equipos e interfaces (2016/2026) complementan pero no sustituyen el anexo I del reglamento de aficionados.",
   trustNote:
     "Las asociaciones y los bancos de tests enlazan aquí como apoyo didáctico. Si hay discrepancia con un artículo o anexo del BOE, prevalece siempre el texto oficial y las resoluciones de la Administración competente.",
   /** Saltos dentro de la vista Normativa (scroll suave). */
@@ -24,28 +26,9 @@ export default {
       id: "normativa-boe",
       title: "1. BOE y administración (fuente vinculante)",
       blurb:
-        "Para potencias, bandas, trámites o sanciones, acude al texto publicado y a la sede electrónica vigente del departamento que gestione telecomunicaciones.",
+        "Para potencias, bandas, trámites o sanciones del servicio de aficionados, usa BOE-A-2013-7624. Los PDF locales (2013, 2006 derogado, 2026 equipos) deben coincidir con estos enlaces oficiales del BOE.",
       links: [
-        {
-          label: "Texto publicado en el BOE (original)",
-          href: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2013-7624",
-          note: "Referencia BOE-A-2013-7624 · BOE núm. 166, de 12 de julio de 2013.",
-        },
-        {
-          label: "Texto consolidado (BOE)",
-          href: "https://www.boe.es/buscar/act.php?id=BOE-A-2013-7624",
-          note: "Integra modificaciones hasta la última actualización indicada por el BOE. Aviso del propio BOE: es informativo; para actos jurídicos consulta la publicación oficial.",
-        },
-        {
-          label: "Identificador ELI (consolidado)",
-          href: "https://www.boe.es/eli/es/o/2013/07/09/iet1311/con",
-          note: "Permalink europeo Law Identifier (ELI) con redacción consolidada.",
-        },
-        {
-          label: "PDF consolidado del Reglamento (BOE)",
-          href: "https://www.boe.es/buscar/pdf/2013/BOE-A-2013-7624-consolidado.pdf",
-          note: "Misma norma que el HTML consolidado; útil para buscar artículos (p. ej. 25.h potencias repetidores) y anexo I (tabla de potencias por banda).",
-        },
+        ...boeLinksForRegulatory(),
         {
           label: "Autorización de radioaficionado · Secretaría de Estado competente",
           href: "https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx",
@@ -59,20 +42,11 @@ export default {
       blurb:
         "El reglamento de aficionado remite con frecuencia a la Ley General de Telecomunicaciones, a la ley de antenas en fachadas y al RD de instalaciones de antenas. Complétalo con el anexo I del propio reglamento.",
       links: [
+        ...boeMarcoLinksForRegulatory(),
         {
-          label: "Ley 9/2014, General de Telecomunicaciones (BOE)",
+          label: "Ley 9/2014, General de Telecomunicaciones (BOE) — sustituida en lo esencial",
           href: "https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950",
-          note: "Marco sectorial; parte de su articulado ha sido sustituida por la Ley 11/2022, pero sigue citándose en formación y textos consolidados.",
-        },
-        {
-          label: "Ley 11/2022, General de Telecomunicaciones (BOE)",
-          href: "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2022-10757",
-          note: "Texto vigente que desarrolla y actualiza el marco de telecomunicaciones en España.",
-        },
-        {
-          label: "Ley 19/1983 — antenas en el exterior de inmuebles (BOE)",
-          href: "https://www.boe.es/buscar/act.php?id=BOE-A-1983-25445",
-          note: "Base habitual de preguntas sobre comunidades de propietarios y desmontajes; el reglamento IET/1311/2013 la cita al regular estaciones fijas.",
+          note: "Marco histórico; consolidado BOE últ. 29/06/2022. Para estudio vigente usar Ley 11/2022 (BOE-A-2022-10757).",
         },
         {
           label: "Normativa en telecomunicaciones · CNMC",
@@ -202,7 +176,7 @@ export default {
     "Bancos históricos o de terceros: FEDI-EA, Quijotes y otros tests. Se usan para entrenar redacción tipo test; si contradicen BOE, se estudia la explicación corregida y no el dato antiguo.",
   ],
   lastReviewNote:
-    "Última revisión interna de fuentes y avisos críticos: 14/05/2026. Antes de presentarse, revisa BOE consolidado, convocatoria abierta y sede administrativa por si hubiera cambios posteriores.",
+    `Última revisión interna de fuentes y avisos críticos: 18/05/2026 (catálogo BOE ${BOE_CATALOG_REVIEWED_AT}; fechas consolidado contrastadas con boe.es). Antes de presentarse, revisa BOE consolidado, convocatoria abierta y sede administrativa por si hubiera cambios posteriores.`,
   /** Puntos útiles para estudiar la 2.ª prueba; no sustituyen la lectura del artículo. */
   studyAnchors: [
     {

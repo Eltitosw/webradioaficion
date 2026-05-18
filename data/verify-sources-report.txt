@@ -1,0 +1,44 @@
+Verificación de fuentes · 2026-05-18T21:11:30
+
+=== Catálogo (data/verification-sources.mjs) ===
+Entradas: 24
+- binding: Vinculante (BOE, convocatoria, sede administrativa)
+- harmonization: Armonización CEPT/UIT (HAREC, licencia CEPT)
+- didactic: Didáctico (URE, manuales, guías, PDFs editoriales)
+- historical: Banco histórico (FEDI-EA, Quijotes; contrastar con BOE)
+- project: Proyecto (preguntas propias con sourceRef)
+
+=== Preguntas del banco por nivel de fuente ===
+- didactic: 56
+- historical: 1024
+- project: 46
+
+=== Enlaces vinculantes (comprobación HTTP) ===
+- OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-2013-7624
+- OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-2022-10757
+- OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-1983-25445
+- OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-1986-33766
+- OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-2017-2460
+- OK 200 https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-1192
+- OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-2016-4444
+- OK 200 https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-5878
+- OK 200 https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-552
+- OK 200 https://www.boe.es/buscar/pdf/2013/BOE-A-2013-7624-consolidado.pdf
+- FALLO — https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx
+
+=== regulatory.js ===
+OK: grupos y jerarquía presentes
+
+=== Explicaciones vs fuentes ===
+Fallos: 0
+Avisos: 0
+
+=== Por origen de pregunta ===
+- FEDI-EA: 0 fallos, 0 avisos
+- Propias RadioExamen: 0 fallos, 0 avisos
+- Otro/importado: 0 fallos, 0 avisos
+- Quijotes EA3RCQ: 0 fallos, 0 avisos
+- URE: 0 fallos, 0 avisos
+
+PDF/libros en repo: ninguno (solo enlaces en regulatory.js y verification-sources.mjs).
+Contraste manual: FUENTES_VERIFICACION.md + vista Normativa de la app.

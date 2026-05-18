@@ -1,0 +1,46 @@
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import {
+  buildStructuredFeedbackHtml,
+  buildWhyCorrect,
+  buildWhyWrong,
+  isWeakBankExplain,
+} from "../lib/learn-while-test.mjs";
+
+const RECTIFIER_Q = {
+  id: "fedi-b-214",
+  part: 1,
+  topicId: "componentes",
+  stem: "LA FUNCIÓN DE UN RECTIFICADOR DE CORRIENTE CONSISTE EN:",
+  options: [
+    "Limitar los máximos de corriente",
+    "Transformar la corriente continua en alterna",
+    "Cambiar la polaridad de la corriente",
+    "Transformar la corriente alterna en continua",
+  ],
+  correctIndex: 3,
+  explain: "plantilla vieja",
+};
+
+test("buildWhyCorrect para rectificador", () => {
+  const t = buildWhyCorrect(RECTIFIER_Q);
+  assert.match(t, /alterna.*continua/i);
+  assert.equal(isWeakBankExplain(t), false);
+});
+
+test("buildWhyWrong detecta limitador de corriente", () => {
+  const w = buildWhyWrong(
+    RECTIFIER_Q.stem,
+    RECTIFIER_Q.options[0],
+    RECTIFIER_Q.options[3],
+    RECTIFIER_Q.topicId,
+  );
+  assert.match(w, /fusibles|limitador/i);
+});
+
+test("buildStructuredFeedbackHtml para todo el banco (rectificador)", () => {
+  const html = buildStructuredFeedbackHtml(RECTIFIER_Q, 0);
+  assert.match(html, /quiz-fb-reasoning--structured/);
+  assert.match(html, /Por qué no encaja/);
+  assert.match(html, /Por qué la correcta/);
+});

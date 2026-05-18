@@ -4406,6 +4406,18 @@ html[data-theme="light"] .week-plan__card p {
 }
 
 /* —— Utilidades —— */
+.quiz-fb-reasoning--structured p + p {
+  margin-top: 0.75rem;
+}
+
+.quiz-fb-bridge {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.94rem;
+  line-height: 1.55;
+}
+
 .utilidades-root {
   display: flex;
   flex-direction: column;

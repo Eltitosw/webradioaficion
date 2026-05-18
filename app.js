@@ -17,10 +17,19 @@ import { isTemplateOnlyExplain, pedagogicalExplain } from "./lib/explain-quality
 import {
   isGenericExplainText,
   isMisassignedPedagogicalExplain,
+  isRespectoTemplateExplain,
   isStemExplainTopicConflict,
 } from "./lib/explain-faithfulness.mjs";
 import { generatePedagogicalExplain } from "./lib/generate-pedagogical-explain.mjs";
 import { buildBestExplain } from "./lib/build-best-explain.mjs";
+import {
+  bestPedagogyForQuestion,
+  buildStructuredFeedbackHtml,
+  buildWhyCorrect,
+  explainWrongOptionForStem,
+  isLazyDiodeListExplain,
+  isWeakBankExplain,
+} from "./lib/learn-while-test.mjs";
 import {
   buildExamReadiness,
   buildRecommendedPlan,
@@ -3026,10 +3035,28 @@ function quizFeedbackTemarioHint(q) {
 
 /** Explicación didáctica usable (sin plantillas genéricas ni LF/RST mal asignados). */
 function usablePedagogy(q) {
-  const p = pedagogicalExplain(q);
-  if (!p || isGenericExplainText(p) || isMisassignedPedagogicalExplain(q)) return "";
-  if (isStemExplainTopicConflict(p, q.stem)) return "";
-  return p;
+  const live = buildWhyCorrect(q);
+  if (live && !isWeakBankExplain(live) && !isMisassignedPedagogicalExplain(q)) {
+    if (!isStemExplainTopicConflict(live, q.stem)) return live;
+  }
+  const fromBank = pedagogicalExplain(q);
+  if (
+    fromBank &&
+    !isWeakBankExplain(fromBank) &&
+    !isMisassignedPedagogicalExplain(q) &&
+    !isStemExplainTopicConflict(fromBank, q.stem)
+  ) {
+    return fromBank;
+  }
+  return live || "";
+}
+
+function normFeedbackText(t) {
+  return String(t || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/[«»"']/g, "")
+    .trim();
 }
 
 function fallbackReasoningForQuestion(q, sel) {
@@ -3138,7 +3165,7 @@ function buildAnswerReasoningDetail(q, sel) {
   const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
   const correctExplanation =
     typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
-  const pedagogy = usablePedagogy(q);
+  const pedagogy = usablePedagogy(q) || buildWhyCorrect(q);
   const correctText =
     Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
   if (sel === q.correctIndex) {
@@ -3154,16 +3181,24 @@ function buildAnswerReasoningDetail(q, sel) {
 }
 
 function answerReasoningPanel(q, sel) {
+  const structured = buildStructuredFeedbackHtml(q, sel);
+  if (structured) return structured;
+
   const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
   const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
   const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
+  const correctText =
+    Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
   if (sel === q.correctIndex) {
     const detail = buildAnswerReasoningDetail(q, sel);
     return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
   }
+  const tailoredWrong =
+    selectedText && correctText ? explainWrongOptionForStem(q.stem, selectedText, correctText) : "";
   const whyWrong =
     selectedExplanation ||
-    "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
+    tailoredWrong ||
+    "No encaja con el criterio del enunciado. Revisa si el distractor cambia la función, el sentido CA/CC, la unidad o el componente.";
   const whyCorrect = buildAnswerReasoningDetail(q, q.correctIndex);
   return `<div class="quiz-fb-reasoning">
     ${selectedText ? `<p><strong>Por qué no encaja tu opción:</strong> ${escapeHtml(whyWrong)}</p>` : ""}
@@ -3171,17 +3206,29 @@ function answerReasoningPanel(q, sel) {
   </div>`;
 }
 
-/** Texto `explain` del banco, siempre en bloque etiquetado (acierto o error). */
-function quizFeedbackExplainParagraph(q) {
+/** Texto `explain` del banco; se omite si ya está en el razonamiento estructurado. */
+function quizFeedbackExplainParagraph(q, reasoningHtml = "") {
+  if (String(reasoningHtml).includes("quiz-fb-reasoning--structured")) {
+    return quizFeedbackTemarioHint(q);
+  }
   const raw = typeof q.explain === "string" ? q.explain.trim() : "";
   const pedagogy = usablePedagogy(q);
   if (pedagogy) {
+    const reasoningPlain = String(reasoningHtml)
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (reasoningPlain && normFeedbackText(reasoningPlain).includes(normFeedbackText(pedagogy).slice(0, 72))) {
+      return quizFeedbackTemarioHint(q);
+    }
     return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(pedagogy)}</p>${quizFeedbackTemarioHint(q)}`;
   }
   if (!raw) {
     return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> No hay texto de explicación registrado en el banco para este ítem.</p>${quizFeedbackTemarioHint(q)}`;
   }
   if (
+    isLazyDiodeListExplain(raw) ||
+    isRespectoTemplateExplain(raw) ||
     isGenericExplainText(raw) ||
     isMisassignedPedagogicalExplain(q) ||
     (raw && isStemExplainTopicConflict(raw, q.stem))
@@ -3274,7 +3321,7 @@ function showStudyFeedback(q) {
       : "";
   const label = `<p class="feedback__eyebrow">Corrección</p>`;
   const reasoning = answerReasoningPanel(q, sel);
-  const explainBlock = quizFeedbackExplainParagraph(q);
+  const explainBlock = quizFeedbackExplainParagraph(q, reasoning);
   const visibleForAbbr = [reasoning, explainBlock, quizState.studyFeedback === "deepen" ? String(q.explain || "") : ""]
     .filter(Boolean)
     .join(" ");
