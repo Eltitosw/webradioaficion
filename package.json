@@ -25,6 +25,7 @@
     "expand:generated-explanations": "node scripts/expand-generated-explanations.mjs",
     "expand:explanations": "node scripts/expand-quijotes-explanations.mjs && node scripts/expand-generated-explanations.mjs",
     "refresh:explanations": "node scripts/refresh-all-explanations.mjs",
+    "build:web": "node scripts/build-frontend.mjs",
     "repair:encoding": "node scripts/repair-data-encoding.mjs",
     "repair:sourceref": "node scripts/repair-propias-sourceref.mjs",
     "recover:banco": "node scripts/repair-propias-sourceref.mjs && node scripts/import-banks.mjs --fedi && node scripts/import-figures.mjs && node scripts/cribado-recencia.mjs && node scripts/build-banco-principal.mjs",

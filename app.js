@@ -504,20 +504,25 @@ async function onRoute() {
   renderHeaderStatus();
   requestAnimationFrame(() => focusViewHeading(id));
   if (id === "tarjetas") {
+    const fcSel = $("#fc-topic");
+    if (fcSel instanceof HTMLSelectElement && fcSel.options.length <= 1) {
+      fillTopicSelect(fcSel);
+    }
     syncFcTopicFromSession();
     updateDueBadge();
   }
-  if (id === "practicar") syncTopicFromSession();
+  if (id === "practicar") {
+    ensureTopicSelectFilled();
+    syncTopicFromSession();
+    renderQuizProgressSummary();
+    renderQuizPracticeGuide();
+    renderQuizResumePanel();
+  }
   if (id === "temario") {
     renderTemario();
     initTemarioInteractions();
   }
   if (id === "inicio") renderUserProgress();
-  if (id === "practicar") {
-    renderQuizProgressSummary();
-    renderQuizPracticeGuide();
-    renderQuizResumePanel();
-  }
   if (id === "examen" || id === "cuaderno") renderExamCoach();
   if (scrollTargetId) {
     requestAnimationFrame(() => {
@@ -772,14 +777,27 @@ function fillTemarioJumpSelect() {
       .join("");
 }
 
+function ensureTopicSelectFilled() {
+  const sel = $("#quiz-topic");
+  if (sel instanceof HTMLSelectElement && sel.options.length <= 1) {
+    fillTopicSelect(sel);
+  }
+}
+
 function renderTemario() {
   const root = $("#temario-root");
   if (!root) return;
-  const counts = questionCountByTopic();
-  const topicStats = loadTopicQuizStats();
-  root.innerHTML =
-    renderTemarioToc() +
-    topicsData.parts
+  try {
+    if (!topicsData?.parts?.length) {
+      root.innerHTML =
+        '<p class="app-error" style="display:block">No se cargó el índice de temas. Recarga la página; si persiste, ejecuta <code>npm run build:web</code> y sube <code>app.bundle.js</code>.</p>';
+      return;
+    }
+    const counts = questionCountByTopic();
+    const topicStats = loadTopicQuizStats();
+    root.innerHTML =
+      renderTemarioToc() +
+      topicsData.parts
     .map(
       (p) => `
     <article class="part-card">
@@ -811,9 +829,13 @@ function renderTemario() {
       </ul>
     </article>`,
     )
-    .join("");
-  fillTemarioJumpSelect();
-  applyTemarioReadingMode(loadTemarioReadingOpts());
+      .join("");
+    fillTemarioJumpSelect();
+    applyTemarioReadingMode(loadTemarioReadingOpts());
+  } catch (err) {
+    console.error("renderTemario", err);
+    root.innerHTML = `<p class="app-error" style="display:block">Error al cargar el temario: ${escapeHtml(String(err?.message || err))}. Recarga la página.</p>`;
+  }
 }
 
 function loadTemarioReadingOpts() {
@@ -3753,7 +3775,6 @@ function initA11y() {
 document.addEventListener("DOMContentLoaded", () => {
   try {
     initNav();
-    void onRoute();
 
     initA11y();
     initAppDialog();

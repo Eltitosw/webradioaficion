@@ -1002,8 +1002,8 @@
         var mime = /MIME|javascript|module/i.test(r);
         show(
           mime
-            ? "El servidor no está sirviendo los .js como JavaScript (MIME). Sube todos los archivos del proyecto y revisa la configuración del hosting."
-            : "Error al cargar módulos (import). Sirve la carpeta del proyecto por HTTP/HTTPS, no abras el archivo desde el disco; revisa la consola (F12).",
+            ? "El servidor no está sirviendo los .js como JavaScript (MIME). Sube app.bundle.js, index.html y styles.css."
+            : "Error al cargar la app. Sube app.bundle.js (npm run build:web), index.html y styles.css; revisa la consola (F12).",
         );
       });
       window.addEventListener("error", function (e) {
@@ -1011,12 +1011,12 @@
         var msg = e && e.message ? String(e.message) : "";
         if (/app\.js|failed to load module|import|MIME/i.test(fn + " " + msg)) {
           show(
-            "No se pudo cargar el código de la app. Sube app.js, lib/, data/ y styles.css junto al index; sirve por HTTP/HTTPS.",
+            "No se pudo cargar la app. Sube app.bundle.js, index.html y styles.css (genera el bundle con npm run build:web).",
           );
         }
       });
     })();
   </script>
-  <script src="app.js?v=2026.05.18d" type="module"></script>
+  <script src="app.bundle.js?v=2026.05.18e" type="module"></script>
 </body>
 </html>
