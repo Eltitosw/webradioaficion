@@ -16,6 +16,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=2026.05.18c" />
+  <script>
+    (function () {
+      try {
+        var raw = localStorage.getItem("radioexam_a11y_v1");
+        if (!raw) return;
+        var o = JSON.parse(raw);
+        var root = document.documentElement;
+        if (o.theme === "light") {
+          root.classList.add("a11y-light");
+          root.dataset.theme = "light";
+        } else {
+          root.dataset.theme = "dark";
+        }
+        if (o.fontScale && o.fontScale !== 1) {
+          root.style.setProperty("--a11y-font-scale", String(o.fontScale));
+        }
+        if (o.spacing) root.classList.add("a11y-wide-lines");
+        if (o.reduceMotion) root.classList.add("a11y-reduce-motion");
+        if (o.contrast) root.classList.add("a11y-high-contrast");
+        var meta = document.getElementById("meta-theme-color");
+        if (meta && o.theme === "light") meta.setAttribute("content", "#eef2f7");
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <noscript>
@@ -899,6 +923,74 @@
 
   <script>
     (function () {
+      var VIEW_IDS = [
+        "inicio",
+        "temario",
+        "normativa",
+        "metodologia",
+        "practicar",
+        "examen",
+        "cuaderno",
+        "tarjetas",
+        "ayuda",
+      ];
+      var DOC_TITLES = {
+        inicio: "RadioExamen · Inicio",
+        temario: "RadioExamen · Temario y repaso",
+        normativa: "RadioExamen · Normativa BOE y enlaces",
+        metodologia: "RadioExamen · Método de estudio",
+        practicar: "RadioExamen · Practicar test",
+        examen: "RadioExamen · Simulacro de examen",
+        cuaderno: "RadioExamen · Cuaderno de errores",
+        tarjetas: "RadioExamen · Tarjetas",
+        ayuda: "RadioExamen · Ayuda",
+      };
+      function resolveViewId(raw) {
+        if (!raw) return "inicio";
+        if (raw.indexOf("temario") === 0) return "temario";
+        if (raw.indexOf("normativa") === 0) return "normativa";
+        return VIEW_IDS.indexOf(raw) >= 0 ? raw : "inicio";
+      }
+      function applyRoute() {
+        var id = resolveViewId((location.hash || "#inicio").slice(1));
+        document.querySelectorAll(".view").forEach(function (v) {
+          var on = v.id === "view-" + id;
+          v.hidden = !on;
+          v.classList.toggle("view--active", on);
+          v.setAttribute("aria-hidden", on ? "false" : "true");
+        });
+        document.querySelectorAll("[data-nav]").forEach(function (a) {
+          var on = a.getAttribute("data-nav") === id;
+          if (on) a.setAttribute("aria-current", "page");
+          else a.removeAttribute("aria-current");
+        });
+        if (DOC_TITLES[id]) document.title = DOC_TITLES[id];
+        var ann = document.getElementById("route-announce");
+        if (ann) ann.textContent = id.charAt(0).toUpperCase() + id.slice(1);
+      }
+      window.__radioexamApplyRoute = applyRoute;
+      window.addEventListener("hashchange", applyRoute);
+      document.addEventListener("DOMContentLoaded", applyRoute);
+      document.addEventListener(
+        "click",
+        function (e) {
+          if (window.__radioexamAppReady) return;
+          var el = e.target.closest("[data-nav]");
+          if (!el || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+          var id = el.getAttribute("data-nav");
+          if (!id) return;
+          var href = el.getAttribute("href") || "";
+          var hash = href.indexOf("#") === 0 ? href.slice(1) : id;
+          e.preventDefault();
+          if (location.hash.replace(/^#/, "") !== hash) location.hash = hash;
+          else applyRoute();
+          var nav = document.getElementById("site-nav");
+          if (nav) nav.classList.remove("is-open");
+          var toggle = document.getElementById("nav-toggle");
+          if (toggle) toggle.setAttribute("aria-expanded", "false");
+        },
+        true,
+      );
       function show(msg) {
         var el = document.getElementById("app-error");
         if (!el) return;
@@ -925,6 +1017,6 @@
       });
     })();
   </script>
-  <script src="app.js?v=2026.05.15b" type="module"></script>
+  <script src="app.js?v=2026.05.18d" type="module"></script>
 </body>
 </html>

@@ -3606,14 +3606,13 @@ function initNav() {
         if (fcTopic) sessionStorage.setItem(FC_TOPIC_PRESELECT_KEY, fcTopic);
         else sessionStorage.removeItem(FC_TOPIC_PRESELECT_KEY);
       }
-      if (el.tagName === "A") {
-        const href = el.getAttribute("href") || "";
-        if (href.startsWith("#")) {
-          e.preventDefault();
-          location.hash = href.slice(1) || id;
-        }
+      const href = el.getAttribute("href") || "";
+      const targetHash = href.startsWith("#") ? href.slice(1) || id : id;
+      e.preventDefault();
+      if (location.hash.replace(/^#/, "") !== targetHash) {
+        location.hash = targetHash;
       } else {
-        location.hash = id;
+        void onRoute();
       }
       $("#site-nav")?.classList.remove("is-open");
       $("#nav-toggle")?.setAttribute("aria-expanded", "false");
@@ -3676,13 +3675,15 @@ function saveA11yOpts(/** @type {ReturnType<typeof normalizeA11yOpts>} */ opts) 
 
 function applyA11yOpts(/** @type {ReturnType<typeof normalizeA11yOpts>} */ opts) {
   const root = document.documentElement;
+  const isLight = opts.theme === "light";
   root.style.setProperty("--a11y-font-scale", String(opts.fontScale));
   root.classList.toggle("a11y-wide-lines", !!opts.spacing);
   root.classList.toggle("a11y-reduce-motion", !!opts.reduceMotion);
   root.classList.toggle("a11y-high-contrast", !!opts.contrast);
-  root.classList.toggle("a11y-light", opts.theme === "light");
+  root.classList.toggle("a11y-light", isLight);
+  root.dataset.theme = isLight ? "light" : "dark";
   const meta = document.getElementById("meta-theme-color");
-  if (meta) meta.setAttribute("content", opts.theme === "light" ? "#eef2f7" : "#090c11");
+  if (meta) meta.setAttribute("content", isLight ? "#eef2f7" : "#090c11");
 }
 
 function initA11y() {
@@ -3751,13 +3752,28 @@ function initA11y() {
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
+    initNav();
+    void onRoute();
+
     initA11y();
     initAppDialog();
     renderAppVersion();
-    renderTemario();
-    initTemarioInteractions();
-    renderNormativa();
-    renderMethods();
+    try {
+      renderTemario();
+      initTemarioInteractions();
+    } catch (err) {
+      console.error("renderTemario", err);
+    }
+    try {
+      renderNormativa();
+    } catch (err) {
+      console.error("renderNormativa", err);
+    }
+    try {
+      renderMethods();
+    } catch (err) {
+      console.error("renderMethods", err);
+    }
     initQuizTopicSelect();
     initFcTopicSelect();
     applyQuizPrefsToForm();
@@ -3766,7 +3782,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initTemarioFilter();
     initTemarioReading();
     updateWrongOnlyCheckboxVisibility();
-    initNav();
     initQuizLeaveGuard();
     initQuizDraftPersistence();
     initProgressBackup();
@@ -3779,7 +3794,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     $("#quiz-topic")?.addEventListener("change", renderQuizPracticeGuide);
     $("#quiz-trap-only")?.addEventListener("change", renderQuizPracticeGuide);
-    onRoute();
+    void onRoute();
     renderUserProgress();
     renderQuizProgressSummary();
     renderExamCoach();
@@ -3848,6 +3863,8 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#fc-hard")?.addEventListener("click", () => advanceCard(false));
 
     updateDueBadge();
+
+    window.__radioexamAppReady = true;
   } catch (err) {
     console.error(err);
     const el = $("#app-error");
@@ -3856,5 +3873,6 @@ document.addEventListener("DOMContentLoaded", () => {
       el.textContent =
         "No se pudo inicializar la aplicación. Recarga la página; si persiste, abre la consola (F12) y comprueba que sirves la carpeta del proyecto por HTTP.";
     }
+    void onRoute();
   }
 });
