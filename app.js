@@ -4000,6 +4000,11 @@ function isMobileNavViewport() {
   return window.matchMedia("(max-width: 900px)").matches;
 }
 
+function closeA11yPanel() {
+  const a11y = $("#a11y-panel");
+  if (a11y instanceof HTMLDetailsElement && a11y.open) a11y.removeAttribute("open");
+}
+
 function closeMobileNav() {
   const nav = $("#site-nav");
   const btn = $("#nav-toggle");
@@ -4023,6 +4028,7 @@ function initMobileNav() {
     e.stopPropagation();
     const willOpen = !nav.classList.contains("is-open");
     if (willOpen && isMobileNavViewport()) {
+      closeA11yPanel();
       nav.classList.add("is-open");
       btn.setAttribute("aria-expanded", "true");
       if (backdrop) backdrop.hidden = false;
@@ -4051,7 +4057,22 @@ function initMobileNav() {
     if (a11y instanceof HTMLDetailsElement && a11y.open && !t.closest("#a11y-panel")) {
       a11y.removeAttribute("open");
     }
+    if (
+      isMobileNavViewport() &&
+      nav.classList.contains("is-open") &&
+      !t.closest("#site-nav") &&
+      !t.closest("#nav-toggle")
+    ) {
+      closeMobileNav();
+    }
   });
+
+  const a11y = $("#a11y-panel");
+  if (a11y instanceof HTMLDetailsElement) {
+    a11y.addEventListener("toggle", () => {
+      if (a11y.open && isMobileNavViewport()) closeMobileNav();
+    });
+  }
 }
 
 const A11Y_FONT_SCALE_MIN = 0.85;
@@ -4103,7 +4124,7 @@ function applyA11yOpts(/** @type {ReturnType<typeof normalizeA11yOpts>} */ opts)
   root.classList.toggle("a11y-light", isLight);
   root.dataset.theme = isLight ? "light" : "dark";
   const meta = document.getElementById("meta-theme-color");
-  if (meta) meta.setAttribute("content", isLight ? "#eef2f7" : "#090c11");
+  if (meta) meta.setAttribute("content", isLight ? "#eef2f7" : "#0a0d13");
 }
 
 function initA11y() {

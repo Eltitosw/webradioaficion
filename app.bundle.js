@@ -19336,8 +19336,8 @@ function buildExamReadiness(topicParts = [], diagnostics = [], userStats = {}) {
 
 // data/version.js
 var version_default = {
-  build: "2026.05.15b",
-  label: "2026.05.15b"
+  build: "2026.05.18q",
+  label: "2026.05.18q"
 };
 
 // lib/app-dialog.js
@@ -23122,6 +23122,10 @@ function initNav() {
 function isMobileNavViewport() {
   return window.matchMedia("(max-width: 900px)").matches;
 }
+function closeA11yPanel() {
+  const a11y = $("#a11y-panel");
+  if (a11y instanceof HTMLDetailsElement && a11y.open) a11y.removeAttribute("open");
+}
 function closeMobileNav() {
   const nav = $("#site-nav");
   const btn = $("#nav-toggle");
@@ -23143,6 +23147,7 @@ function initMobileNav() {
     e.stopPropagation();
     const willOpen = !nav.classList.contains("is-open");
     if (willOpen && isMobileNavViewport()) {
+      closeA11yPanel();
       nav.classList.add("is-open");
       btn.setAttribute("aria-expanded", "true");
       if (backdrop) backdrop.hidden = false;
@@ -23163,11 +23168,20 @@ function initMobileNav() {
   document.addEventListener("click", (e) => {
     const t = e.target;
     if (!(t instanceof Element)) return;
-    const a11y = $("#a11y-panel");
-    if (a11y instanceof HTMLDetailsElement && a11y.open && !t.closest("#a11y-panel")) {
-      a11y.removeAttribute("open");
+    const a11y2 = $("#a11y-panel");
+    if (a11y2 instanceof HTMLDetailsElement && a11y2.open && !t.closest("#a11y-panel")) {
+      a11y2.removeAttribute("open");
+    }
+    if (isMobileNavViewport() && nav.classList.contains("is-open") && !t.closest("#site-nav") && !t.closest("#nav-toggle")) {
+      closeMobileNav();
     }
   });
+  const a11y = $("#a11y-panel");
+  if (a11y instanceof HTMLDetailsElement) {
+    a11y.addEventListener("toggle", () => {
+      if (a11y.open && isMobileNavViewport()) closeMobileNav();
+    });
+  }
 }
 var A11Y_FONT_SCALE_MIN = 0.85;
 var A11Y_FONT_SCALE_MAX = 1.5;
@@ -23212,7 +23226,7 @@ function applyA11yOpts(opts) {
   root.classList.toggle("a11y-light", isLight);
   root.dataset.theme = isLight ? "light" : "dark";
   const meta = document.getElementById("meta-theme-color");
-  if (meta) meta.setAttribute("content", isLight ? "#eef2f7" : "#090c11");
+  if (meta) meta.setAttribute("content", isLight ? "#eef2f7" : "#0a0d13");
 }
 function initA11y() {
   const opts = loadA11yOpts();
