@@ -6,6 +6,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 import banco from "../data/questions-banco.js";
+import { bannedExplainPhraseHits } from "../lib/explain-faithfulness.mjs";
 import { strictAuditExplainBank } from "../lib/explain-verify.mjs";
 import { pedagogicalExplain } from "../lib/explain-quality.mjs";
 import { buildBestExplain } from "../lib/build-best-explain.mjs";
@@ -13,28 +14,14 @@ import { isExplainAcceptable } from "../lib/explain-verify.mjs";
 
 const OUT = join(import.meta.dirname, "..", "data", "explain-strict-failures.txt");
 
-const BAD_PHRASES = [
-  {
-    re: /identifica la estaci[oó]n y debe usarse al inicio/i,
-    unlessStem: /distintivo.*(inicio|final|comunicaci)|debe usarse al inicio/i,
-  },
-  { re: /lf son frecuencias muy bajas/i, unlessStem: /\blf\b|30.?300\s*khz|bandas de frecuencia/i },
-  {
-    re: /\brst\b.*legibilidad.*intensidad/i,
-    unlessStem: /\brst\b|informe de señal|legibilidad.*intensidad.*tono/i,
-  },
-];
-
 /** @type {string[]} */
 const phraseHits = [];
 
 for (const q of banco) {
   const ped = pedagogicalExplain(q);
   if (!ped) continue;
-  for (const rule of BAD_PHRASES) {
-    if (!rule.re.test(ped)) continue;
-    if (rule.unlessStem && rule.unlessStem.test(String(q.stem))) continue;
-    phraseHits.push(`${q.id}: ${rule.re.source}`);
+  for (const code of bannedExplainPhraseHits(ped, String(q.stem || ""))) {
+    phraseHits.push(`${q.id}: ${code}`);
   }
 }
 
@@ -83,7 +70,7 @@ if (phraseHits.length) {
 
 writeFileSync(OUT, lines.join("\n"));
 
-const fail = pass1.unacceptable.length > 0 || pass2StillBad > 0;
+const fail = pass1.unacceptable.length > 0 || pass2StillBad > 0 || phraseHits.length > 0;
 
 console.log(lines.slice(0, 8).join("\n"));
 console.log(`Informe: ${OUT}`);

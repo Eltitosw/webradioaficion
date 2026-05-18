@@ -629,6 +629,31 @@ kbd {
   outline-offset: 2px;
 }
 
+.site-nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: rgba(4, 6, 10, 0.55);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-nav-backdrop:not([hidden]) {
+  display: block;
+}
+
+body.nav-menu-open {
+  overflow: hidden;
+}
+
+body.nav-menu-open .site-header {
+  z-index: 50;
+}
+
 @media (max-width: 900px) {
   .site-header__inner {
     grid-template-columns: 1fr auto auto;

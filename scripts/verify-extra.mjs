@@ -52,7 +52,18 @@ const sourceDocPath = path.join(webRoot, "FUENTES_VERIFICACION.md");
 const htmlIds = new Set();
 for (const m of html.matchAll(/\bid\s*=\s*"([^"]+)"/gi)) htmlIds.add(m[1]);
 
-const expectedViews = ["inicio", "temario", "normativa", "metodologia", "practicar", "examen", "cuaderno", "tarjetas", "ayuda"];
+const expectedViews = [
+  "inicio",
+  "temario",
+  "normativa",
+  "metodologia",
+  "practicar",
+  "examen",
+  "cuaderno",
+  "tarjetas",
+  "utilidades",
+  "ayuda",
+];
 for (const id of expectedViews) {
   if (!htmlIds.has(`view-${id}`)) fail(`Falta sección principal id="view-${id}" en index.html`);
   if (!app.includes(`${id}: "RadioExamen`)) fail(`Falta título de documento para ruta "${id}" en DOC_TITLES`);

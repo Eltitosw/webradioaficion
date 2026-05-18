@@ -62,6 +62,26 @@ test("isStemExplainTopicConflict: Securité no puede explicarse con RST", () => 
   );
 });
 
+test("isStemExplainTopicConflict: Mayday no puede explicarse con RST", () => {
+  assert.equal(
+    isStemExplainTopicConflict(
+      "RST resume legibilidad, intensidad y tono; en fonía se usan R y S.",
+      "La señal de socorro en Radiotelefonía está constituida por la palabra:",
+    ),
+    true,
+  );
+});
+
+test("isStemExplainTopicConflict: sufijo PAN no usa plantilla de distintivo genérico", () => {
+  assert.equal(
+    isStemExplainTopicConflict(
+      "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación.",
+      "¿Se puede asignar el sufijo PAN a un distintivo de estación de aficionado clase A?:",
+    ),
+    true,
+  );
+});
+
 test("isMisassignedPedagogicalExplain detecta banda LF mal asignada", () => {
   const q = {
     stem: "¿Qué información puede emitir un aficionado?",

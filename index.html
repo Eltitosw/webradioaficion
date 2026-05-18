@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2026.05.18n" />
+  <link rel="stylesheet" href="styles.css?v=2026.05.18o" />
   <script>
     (function () {
       try {
@@ -150,6 +150,7 @@
       </details>
     </div>
   </header>
+  <button type="button" class="site-nav-backdrop" id="site-nav-backdrop" hidden aria-label="Cerrar menú"></button>
 
   <main id="main">
     <div id="app-error" class="app-error" role="alert" hidden></div>
@@ -1048,6 +1049,9 @@
           if (nav) nav.classList.remove("is-open");
           var toggle = document.getElementById("nav-toggle");
           if (toggle) toggle.setAttribute("aria-expanded", "false");
+          var backdrop = document.getElementById("site-nav-backdrop");
+          if (backdrop) backdrop.hidden = true;
+          document.body.classList.remove("nav-menu-open");
         },
         true,
       );
@@ -1077,6 +1081,6 @@
       });
     })();
   </script>
-  <script src="app.bundle.js?v=2026.05.18n" type="module"></script>
+  <script src="app.bundle.js?v=2026.05.18o" type="module"></script>
 </body>
 </html>

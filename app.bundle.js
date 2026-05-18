@@ -1157,7 +1157,7 @@ var questions_banco_default = [
       "No se puede asignar en ning\xFAn caso"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABNo se puede asignar en ning\xFAn caso\xBB.",
+    "explain": "Respecto a \xAB\xBFSe puede asignar el sufijo PAN a un distintivo de estaci\xF3n de aficionado clase A?:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABNo se puede asignar en ning\xFAn caso\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1187,7 +1187,7 @@ var questions_banco_default = [
       "Danger"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABMayday\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1652,7 +1652,7 @@ var questions_banco_default = [
       "Mayday"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABSecurit\xE9\xBB.",
+    "explain": "Respecto a \xABLa se\xF1al internacional de seguridad en telefon\xEDa es:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABSecurit\xE9\xBB. Repasa operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2162,7 +2162,7 @@ var questions_banco_default = [
       "La abreviatura S.O.S. transmitida separando las tres letras"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABLa abreviatura S.O.S. transmitida separando las tres letras\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABLa abreviatura S.O.S. transmitida separando las tres letras\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2601,7 +2601,7 @@ var questions_banco_default = [
       "Guadalajara."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB\xC1vila.\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xAB\xC1vila.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3774,7 +3774,7 @@ var questions_banco_default = [
       "AYUDA"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABMAYDAY\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMAYDAY\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3879,7 +3879,7 @@ var questions_banco_default = [
       "Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicaci\xF3n, a cada pa\xEDs"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABSe atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicaci\xF3n, a cada pa\xEDs\xBB.",
+    "explain": "Respecto a \xABLAS PRIMERAS LETRAS DE UN DISTINTIVO DE LLAMADA:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABSe atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicaci\xF3n, a cada pa\xEDs\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4824,7 +4824,7 @@ var questions_banco_default = [
       "Valencia"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABHuesca\xBB.",
+    "explain": "Respecto a \xABLA CIFRA 2 EN EL DISTINTIVO DE LLAMADA IDENTIFICA LA PROVINCIA DE:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABHuesca\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5094,7 +5094,7 @@ var questions_banco_default = [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABCuando se opera en graf\xEDa una estaci\xF3n Fija/Portable\xBB.",
+    "explain": "Respecto a \xAB\xBFCUANDO SE A\xD1ADE LA MENCI\xD3N /P AL INDICATIVO DE LLAMADA?\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABCuando se opera en graf\xEDa una estaci\xF3n Fija/Portable\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5109,7 +5109,7 @@ var questions_banco_default = [
       "3 y 5"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB6 y 8\xBB.",
+    "explain": "Respecto a \xABLOS DISTRITOS DE LA PROVINCIA DE BALEARES Y DE LAS DE SANTA CRUZ DE TENERIFE Y LAS PA\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xAB6 y 8\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5619,7 +5619,7 @@ var questions_banco_default = [
       "10"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB1\xBB.",
+    "explain": "La cifra del indicativo espa\xF1ol identifica el distrito geogr\xE1fico de la estaci\xF3n seg\xFAn la tabla oficial. Para este enunciado corresponde \xAB1\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5679,7 +5679,7 @@ var questions_banco_default = [
       "Leve"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABGrave\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABGrave\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5694,7 +5694,7 @@ var questions_banco_default = [
       "No es falta"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABUna falta leve\xBB.",
+    "explain": "Respecto a \xABEl operador de estaci\xF3n de aficionado que no emite el distintivo de llamada o lo hace\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABUna falta leve\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5724,7 +5724,7 @@ var questions_banco_default = [
       "Un distintivo temporal"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEl del titular seguido del del otro radioaficionado\xBB.",
+    "explain": "Respecto a \xABCuando una estaci\xF3n de aficionado sea operada ocasionalmente por otro radioaficionado\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEl del titular seguido del del otro radioaficionado\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5754,7 +5754,7 @@ var questions_banco_default = [
       "La abreviatura S.O.S. transmitida separando las tres letras"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABLa abreviatura S.O.S. transmitida separando las tres letras\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABLa abreviatura S.O.S. transmitida separando las tres letras\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5784,7 +5784,7 @@ var questions_banco_default = [
       "Una vez al comienzo, otra en medio y al final de la emisi\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABUna vez al comienzo, otra en medio y al final de la emisi\xF3n\xBB.",
+    "explain": "Respecto a \xABDurante sus emisiones, \xBFcuando deben de transmitir sus distintivos de llamada las est\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABUna vez al comienzo, otra en medio y al final de la emisi\xF3n\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6309,7 +6309,7 @@ var questions_banco_default = [
       "Cuando se realizan ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABCuando se opera en graf\xEDa una estaci\xF3n Fija/Portable\xBB.",
+    "explain": "Respecto a \xAB\xBFCuando se a\xF1ade la menci\xF3n /P al indicativo de llamada?\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABCuando se opera en graf\xEDa una estaci\xF3n Fija/Portable\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6354,7 +6354,7 @@ var questions_banco_default = [
       "10"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB9\xBB.",
+    "explain": "Respecto a \xABLos distritos de Ceuta y Melilla est\xE1n identificados por la cifra del distrito de lla\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xAB9\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7254,7 +7254,7 @@ var questions_banco_default = [
       "4\xBA"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB1\xBA\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xAB1\xBA\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7299,7 +7299,7 @@ var questions_banco_default = [
       "Solamente MAYDAY (tres veces)"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABMAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7734,7 +7734,7 @@ var questions_banco_default = [
       "Mayday"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABMayday\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7764,7 +7764,7 @@ var questions_banco_default = [
       "No es falta"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABMuy grave\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMuy grave\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7794,7 +7794,7 @@ var questions_banco_default = [
       "No puede emplearse en estaciones espa\xF1olas"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABUn distintivo temporal para estaciones clase B\xBB.",
+    "explain": "Respecto a \xABEL PREFIJO EE INDICA DELANTE DE UN DISTINTIVO COMPLETO DE RADIOAFICIONADO:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABUn distintivo temporal para estaciones clase B\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8304,7 +8304,7 @@ var questions_banco_default = [
       "No se puede asignar."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABNo se puede asignar.\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABNo se puede asignar.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8319,7 +8319,7 @@ var questions_banco_default = [
       "Sin sufijo."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABPor un grupo alfanum\xE9rico.\xBB.",
+    "explain": "Respecto a \xABEl distintivo de llamada de una estaci\xF3n de radioaficionado, estar\xE1 constituido por:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABPor un grupo alfanum\xE9rico.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8869,7 +8869,7 @@ var questions_banco_default = [
       "La secuencia no se contempla en el reglamento vigente."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica.\xBB.",
+    "explain": "Respecto a \xABEl distintivo de llamada ED1YBD\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -12196,7 +12196,7 @@ var questions_banco_default = [
       "MAYDAY (una vez), la palabra AQUI o DE y el distintivo de llamada (tres veces)."
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABMAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12288,7 +12288,7 @@ var questions_banco_default = [
       "Las estaciones autom\xE1ticas desatendidas anal\xF3gicas y digitales respectivamente."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABLas estaciones autom\xE1ticas desatendidas anal\xF3gicas y digitales respectivamente.\xBB.",
+    "explain": 'Respecto a \xABEl sufijo de un distintivo de llamada de tres letras que comience por "Y" o "Z", se r\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABLas estaciones autom\xE1ticas desatendidas anal\xF3gicas y digitales respectivamente.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.',
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12363,7 +12363,7 @@ var questions_banco_default = [
       "Zamora."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABValencia.\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABValencia.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12378,7 +12378,7 @@ var questions_banco_default = [
       "QRS."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEEE.\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABEEE.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12498,7 +12498,7 @@ var questions_banco_default = [
       "Su nueva provincia de residencia se encuentra en distinta Comunidad Aut\xF3noma."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABSu nueva provincia de residencia pertenece a un distrito distinto.\xBB.",
+    "explain": "Respecto a \xABUn radioaficionado que cambia de residencia no podr\xE1 mantener el mismo indicativo si:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABSu nueva provincia de residencia pertenece a un distrito distinto.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12618,7 +12618,7 @@ var questions_banco_default = [
       "Bilbao."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABPalma de Mallorca.\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABPalma de Mallorca.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12678,7 +12678,7 @@ var questions_banco_default = [
       "Usos temporales de relevancia internacional."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local.\xBB.",
+    "explain": 'Respecto a \xABEl prefijo "EG" de un distintivo de llamada se relaciona con:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.',
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13023,7 +13023,7 @@ var questions_banco_default = [
       "Doce palabras por minuto."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABDiez palabras por minuto.\xBB.",
+    "explain": "Respecto a \xABLos repetidores anal\xF3gicos, \xBFa que velocidad deber\xE1n emitir, de forma autom\xE1tica, su \u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABDiez palabras por minuto.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13128,7 +13128,7 @@ var questions_banco_default = [
       "No existen."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEA, EB, EC.\xBB.",
+    "explain": "Respecto a \xABLos prefijos de los distintivos de llamada correspondientes a Espa\xF1a son, entre otros\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEA, EB, EC.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13353,7 +13353,7 @@ var questions_banco_default = [
       "No pueden ser reutilizados."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.\xBB.",
+    "explain": "Respecto a \xABLos distintivos de llamada con sufijo de 2 letras:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13368,7 +13368,7 @@ var questions_banco_default = [
       "Indicando el distintivo de llamada solicitado."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABDirigida a la Asociaci\xF3n o Radio Club de aficionados correspondiente, que ser\xE1 la que autorice.\xBB.",
+    "explain": "Respecto a \xABLa utilizaci\xF3n de distintivos temporales requerir\xE1 la presentaci\xF3n de una solicitud; \u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABDirigida a la Asociaci\xF3n o Radio Club de aficionados correspondiente, que ser\xE1 la que autorice.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13458,7 +13458,7 @@ var questions_banco_default = [
       "Las iniciales y fecha de nacimiento del titular."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo.\xBB.",
+    "explain": "Respecto a \xABEl distintivo de llamada de una autorizaci\xF3n de radioaficionado estar\xE1 constituido po\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13518,7 +13518,7 @@ var questions_banco_default = [
       "Por periodos, hasta un m\xE1ximo de 20 d\xEDas al a\xF1o."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEn caso de fallecimiento del titular, a familiares en primer grado.\xBB.",
+    "explain": "Respecto a \xABLos distintivos de llamada se podr\xE1n reasignar:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEn caso de fallecimiento del titular, a familiares en primer grado.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13818,7 +13818,7 @@ var questions_banco_default = [
       "Si su titular crea interferencias."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABSi se cancela la autorizaci\xF3n correspondiente.\xBB.",
+    "explain": "Respecto a \xAB\xBFEn qu\xE9 caso se reasignar\xE1 un distintivo ya utilizado?:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABSi se cancela la autorizaci\xF3n correspondiente.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13863,7 +13863,7 @@ var questions_banco_default = [
       'De la palabra "pan" repetido tres veces.'
     ],
     "correctIndex": 1,
-    "explain": 'RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABDel grupo "pan pan" repetido tres veces.\xBB.',
+    "explain": 'Respecto a \xABLa se\xF1al de urgencia en radiotelefon\xEDa se compone:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABDel grupo "pan pan" repetido tres veces.\xBB. Repasa operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas en el temario si el distractor te confundi\xF3.',
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13938,7 +13938,7 @@ var questions_banco_default = [
       "Se trata de un titular de licencia CEPT extranjero emitiendo en Espa\xF1a."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABSe trata de un titular de licencia CEPT extranjero emitiendo en Espa\xF1a.\xBB.",
+    "explain": "Respecto a \xABSi observa que un distintivo de llamada va precedido del prefijo EA seguido de un det\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABSe trata de un titular de licencia CEPT extranjero emitiendo en Espa\xF1a.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13968,7 +13968,7 @@ var questions_banco_default = [
       "En ning\xFAn caso, teniendo en cuenta que la autorizaci\xF3n de radioaficionado ya lleva asociado un distintivo de llamada."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.\xBB.",
+    "explain": "Respecto a \xAB\xBFCu\xE1ndo se puede solicitar a la Direcci\xF3n General de Telecomunicaciones un distintivo\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14313,7 +14313,7 @@ var questions_banco_default = [
       "Radiobaliza."
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABRadiobaliza.\xBB.",
+    "explain": "Respecto a \xABToda estaci\xF3n colectiva fija de aficionado destinada a realizar estudios de propagaci\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABRadiobaliza.\xBB. Repasa antenas, l\xEDneas y propagaci\xF3n en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14328,7 +14328,7 @@ var questions_banco_default = [
       "4"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB5\xBB.",
+    "explain": "La cifra del indicativo espa\xF1ol identifica el distrito geogr\xE1fico de la estaci\xF3n seg\xFAn la tabla oficial. Para este enunciado corresponde \xAB5\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14358,7 +14358,7 @@ var questions_banco_default = [
       "/MM."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xAB/MM.\xBB.",
+    "explain": "Respecto a \xABLa identificaci\xF3n de emisiones de una estaci\xF3n m\xF3vil mar\xEDtima, se efectuar\xE1 a\xF1adiendo\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xAB/MM.\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14523,7 +14523,7 @@ var questions_banco_default = [
       "La ganancia is\xF3tropa o absoluta"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABGrupo de caracteres que constituye la se\xF1al de identificaci\xF3n del radioaficionado\xBB.",
+    "explain": "Respecto a \xABEl distintivo de llamada se define como:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABGrupo de caracteres que constituye la se\xF1al de identificaci\xF3n del radioaficionado\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14538,7 +14538,7 @@ var questions_banco_default = [
       "La participaci\xF3n en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+    "explain": "Respecto a \xABLos distintivos de uso temporal con sufijo de una sola letra est\xE1n reservados para:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14598,7 +14598,7 @@ var questions_banco_default = [
       "No existen"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEA, EB, EC\xBB.",
+    "explain": "Respecto a \xABLos prefijos de los distitivos de llamada correspondientes a Espa\xF1a son, entre otros:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEA, EB, EC\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14658,7 +14658,7 @@ var questions_banco_default = [
       "URGENCE"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABPAN PAN\xBB.",
+    "explain": "Respecto a \xABLa se\xF1al de urgencia en radiotelefon\xEDa consiste en la transmisi\xF3n, repetida tres vece\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABPAN PAN\xBB. Repasa operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14673,7 +14673,7 @@ var questions_banco_default = [
       "1.100 kHz y 650KHz"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xAB2.220 Hz y 1.300 Hz\xBB.",
+    "explain": "Respecto a \xABLa se\xF1al de alarma en radiotelefon\xEDa consiste en dos se\xF1ales de audiofrecuencia, apro\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xAB2.220 Hz y 1.300 Hz\xBB. Repasa operaci\xF3n, c\xF3digos Q y buenas pr\xE1cticas en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14688,7 +14688,7 @@ var questions_banco_default = [
       "Una de las condiciones para su adjudicaci\xF3n es que el radioaficionado no haya sido sometido a expediente sancionador en los ultimos cinco a\xF1os"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABSe reservan \xFAnicamente para estaciones colectivas\xBB.",
+    "explain": "Respecto a \xABLos distintivos de llamada con sufijos de dos letra; marque la opci\xF3n falsa:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABSe reservan \xFAnicamente para estaciones colectivas\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14733,7 +14733,7 @@ var questions_banco_default = [
       "Es la cifra 0 de uso exclusiva para distintivos temporales"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEs la cifra coincidente con el n\xFAmero de distrito de residencia del titular, con arreglo a la divisi\xF3n geogr\xE1fica que se especifica en el Reglamento de Aficionados en vigor\xBB.",
+    "explain": 'Respecto a \xABEl "distrito", que compone el distintivo de llamada de un radioaficionado:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEs la cifra coincidente con el n\xFAmero de distrito de residencia del titular, con arreglo a la divisi\xF3n geogr\xE1fica que se especifica en el Reglamento de Aficionados en vigor\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.',
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14763,7 +14763,7 @@ var questions_banco_default = [
       "No se puede adjudicar a estaci\xF3n colectiva alguna"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB.",
+    "explain": "Respecto a \xABEl indicativo de llamada ED3ZHO:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14823,7 +14823,7 @@ var questions_banco_default = [
       "Es que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB.",
+    "explain": "Respecto a \xABSi observa que un distitivo de llamada va precedido del prefijo EA seguido de un dete\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15378,7 +15378,7 @@ var questions_banco_default = [
       "Su titular reside en Catalu\xF1a."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABNo se puede asignar.\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABNo se puede asignar.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16098,7 +16098,7 @@ var questions_banco_default = [
       "Una frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABUn apodo o nombre identificador\xBB.",
+    "explain": "Respecto a \xAB\xBFQu\xE9 es un indicativo de radio?\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABUn apodo o nombre identificador\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -17013,7 +17013,7 @@ var questions_banco_default = [
       "Cambiar de canal para no interrumpir."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABGuardar silencio inmediatamente y escuchar el comunicado\xBB.",
+    "explain": "Respecto a \xAB\xBFQu\xE9 debemos hacer cuando un indicativo inicia su transmisi\xF3n con \u201CATENCI\xD3N ATENCI\xD3N\u201D\u2026\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABGuardar silencio inmediatamente y escuchar el comunicado\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -17689,7 +17689,7 @@ var questions_banco_default = [
       "Sabadell (Barcelona)"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABCeuta\xBB.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABCeuta\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (URE (reglamentaci\xF3n)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -17704,7 +17704,7 @@ var questions_banco_default = [
       "Es de naturaleza indefinida"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n y debe usarse al inicio y al final de cada comunicaci\xF3n. La respuesta correcta es \xABEs concedido para uso temporal por un evento no especialmente significado\xBB.",
+    "explain": "Respecto a \xABSi una estaci\xF3n tiene el indicativo de llamada EF6ABC:\xBB, la opci\xF3n que cumple el enunciado en el banco es \xABEs concedido para uso temporal por un evento no especialmente significado\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (URE (reglamentaci\xF3n)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -17719,7 +17719,7 @@ var questions_banco_default = [
       "Auxilio"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABMayday\xBB.",
+    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n. \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (URE (reglamentaci\xF3n)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   }
 ];
@@ -18293,7 +18293,50 @@ function isStemExplainTopicConflict(ped, stem) {
   if (/\brst\b/i.test(s) && /securit[eé].*tres veces/i.test(p) && !/no confundir/i.test(p)) {
     return true;
   }
+  if (/(mayday|socorro|señal de socorro|señal de peligro|peligro grave)/i.test(s) && /\brst\b|legibilidad.*intensidad.*tono/i.test(p)) {
+    if (!/no confundir.*rst|rst no/i.test(p)) return true;
+  }
+  if (/asignar (el )?sufijo|sufijo\s+(pan|mm|mo)\b/i.test(s) && /identifica la estaci[oó]n y debe usarse/i.test(p)) {
+    return true;
+  }
+  if (/identifica la estaci[oó]n y debe usarse al inicio/i.test(p)) {
+    const stemAboutEtiquette = /(inicio y (al )?final|al principio y al final|debe usarse al inicio|obligatorio.*identificar|identificaci[oó]n.*(inicio|final|comunicaci))/i.test(
+      s
+    );
+    if (!stemAboutEtiquette && /(sufijo|asignar|clase\s+[abc]|prefijo\s+ed|especializaci|formato del indicativo)/i.test(s)) {
+      return true;
+    }
+  }
   return false;
+}
+var BANNED_EXPLAIN_PHRASES = [
+  {
+    code: "generic_callsign",
+    re: /identifica la estaci[oó]n y debe usarse al inicio/i,
+    unlessStem: /distintivo.*(inicio|final|comunicaci)|debe usarse al inicio|al principio y al final/i
+  },
+  {
+    code: "lf_band_template",
+    re: /lf son frecuencias muy bajas/i,
+    unlessStem: /\blf\b|30.?300\s*khz|bandas de frecuencia/i
+  },
+  {
+    code: "rst_template",
+    re: /\brst\b.*legibilidad.*intensidad/i,
+    unlessStem: /\brst\b|informe de señal|legibilidad.*intensidad.*tono/i
+  }
+];
+function bannedExplainPhraseHits(ped, stem) {
+  const hits = [];
+  const s = String(stem || "");
+  const p = String(ped || "");
+  if (!p) return hits;
+  for (const rule of BANNED_EXPLAIN_PHRASES) {
+    if (!rule.re.test(p)) continue;
+    if (rule.unlessStem && rule.unlessStem.test(s)) continue;
+    hits.push(rule.code);
+  }
+  return hits;
 }
 function isMisassignedPedagogicalExplain(q) {
   const ped = pedagogicalExplain(q);
@@ -19021,6 +19064,7 @@ function isExplainAcceptable(q, text) {
   const probe = { ...q, explain: ped };
   if (isMisassignedPedagogicalExplain(probe)) return false;
   if (isStemExplainTopicConflict(ped, stem)) return false;
+  if (bannedExplainPhraseHits(ped, stem).length) return false;
   return true;
 }
 
@@ -23067,11 +23111,7 @@ function initNav() {
       } else {
         void onRoute();
       }
-      $("#site-nav")?.classList.remove("is-open");
-      $("#nav-toggle")?.setAttribute("aria-expanded", "false");
-      $("#site-nav")?.querySelectorAll(".nav-group[open]").forEach((d) => {
-        d.removeAttribute("open");
-      });
+      closeMobileNav();
     });
   }
   if (!hashChangeBound) {
@@ -23079,13 +23119,54 @@ function initNav() {
     window.addEventListener("hashchange", onRoute);
   }
 }
+function isMobileNavViewport() {
+  return window.matchMedia("(max-width: 900px)").matches;
+}
+function closeMobileNav() {
+  const nav = $("#site-nav");
+  const btn = $("#nav-toggle");
+  const backdrop = $("#site-nav-backdrop");
+  if (nav) nav.classList.remove("is-open");
+  if (btn) btn.setAttribute("aria-expanded", "false");
+  nav?.querySelectorAll(".nav-group[open]").forEach((d) => {
+    d.removeAttribute("open");
+  });
+  if (backdrop) backdrop.hidden = true;
+  document.body.classList.remove("nav-menu-open");
+}
 function initMobileNav() {
   const btn = $("#nav-toggle");
   const nav = $("#site-nav");
+  const backdrop = $("#site-nav-backdrop");
   if (!btn || !nav) return;
-  btn.addEventListener("click", () => {
-    const open = nav.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", String(open));
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !nav.classList.contains("is-open");
+    if (willOpen && isMobileNavViewport()) {
+      nav.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
+      if (backdrop) backdrop.hidden = false;
+      document.body.classList.add("nav-menu-open");
+    } else {
+      closeMobileNav();
+    }
+  });
+  backdrop?.addEventListener("click", () => {
+    closeMobileNav();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileNav();
+  });
+  window.addEventListener("resize", () => {
+    if (!isMobileNavViewport()) closeMobileNav();
+  });
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!(t instanceof Element)) return;
+    const a11y = $("#a11y-panel");
+    if (a11y instanceof HTMLDetailsElement && a11y.open && !t.closest("#a11y-panel")) {
+      a11y.removeAttribute("open");
+    }
   });
 }
 var A11Y_FONT_SCALE_MIN = 0.85;

@@ -308,7 +308,7 @@ export default [
       "No se puede asignar en ningún caso"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «No se puede asignar en ningún caso».",
+    "explain": "Respecto a «¿Se puede asignar el sufijo PAN a un distintivo de estación de aficionado clase A?:», la opción que cumple el enunciado en el banco es «No se puede asignar en ningún caso». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -338,7 +338,7 @@ export default [
       "Danger"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Mayday».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Mayday».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -803,7 +803,7 @@ export default [
       "Mayday"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Securité».",
+    "explain": "Respecto a «La señal internacional de seguridad en telefonía es:», la opción que cumple el enunciado en el banco es «Securité». Repasa operación, códigos Q y buenas prácticas en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1313,7 +1313,7 @@ export default [
       "La abreviatura S.O.S. transmitida separando las tres letras"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «La abreviatura S.O.S. transmitida separando las tres letras».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «La abreviatura S.O.S. transmitida separando las tres letras».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1752,7 +1752,7 @@ export default [
       "Guadalajara."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Ávila.».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Ávila.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2925,7 +2925,7 @@ export default [
       "AYUDA"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «MAYDAY».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «MAYDAY».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3030,7 +3030,7 @@ export default [
       "Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicación, a cada país"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicación, a cada país».",
+    "explain": "Respecto a «LAS PRIMERAS LETRAS DE UN DISTINTIVO DE LLAMADA:», la opción que cumple el enunciado en el banco es «Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicación, a cada país». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3975,7 +3975,7 @@ export default [
       "Valencia"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Huesca».",
+    "explain": "Respecto a «LA CIFRA 2 EN EL DISTINTIVO DE LLAMADA IDENTIFICA LA PROVINCIA DE:», la opción que cumple el enunciado en el banco es «Huesca». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4245,7 +4245,7 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Cuando se opera en grafía una estación Fija/Portable».",
+    "explain": "Respecto a «¿CUANDO SE AÑADE LA MENCIÓN /P AL INDICATIVO DE LLAMADA?», la opción que cumple el enunciado en el banco es «Cuando se opera en grafía una estación Fija/Portable». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4260,7 +4260,7 @@ export default [
       "3 y 5"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «6 y 8».",
+    "explain": "Respecto a «LOS DISTRITOS DE LA PROVINCIA DE BALEARES Y DE LAS DE SANTA CRUZ DE TENERIFE Y LAS PA…», la opción que cumple el enunciado en el banco es «6 y 8». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4770,7 +4770,7 @@ export default [
       "10"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «1».",
+    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «1».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4830,7 +4830,7 @@ export default [
       "Leve"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Grave».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Grave».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4845,7 +4845,7 @@ export default [
       "No es falta"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Una falta leve».",
+    "explain": "Respecto a «El operador de estación de aficionado que no emite el distintivo de llamada o lo hace…», la opción que cumple el enunciado en el banco es «Una falta leve». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4875,7 +4875,7 @@ export default [
       "Un distintivo temporal"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «El del titular seguido del del otro radioaficionado».",
+    "explain": "Respecto a «Cuando una estación de aficionado sea operada ocasionalmente por otro radioaficionado…», la opción que cumple el enunciado en el banco es «El del titular seguido del del otro radioaficionado». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4905,7 +4905,7 @@ export default [
       "La abreviatura S.O.S. transmitida separando las tres letras"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «La abreviatura S.O.S. transmitida separando las tres letras».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «La abreviatura S.O.S. transmitida separando las tres letras».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4935,7 +4935,7 @@ export default [
       "Una vez al comienzo, otra en medio y al final de la emisión"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Una vez al comienzo, otra en medio y al final de la emisión».",
+    "explain": "Respecto a «Durante sus emisiones, ¿cuando deben de transmitir sus distintivos de llamada las est…», la opción que cumple el enunciado en el banco es «Una vez al comienzo, otra en medio y al final de la emisión». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5460,7 +5460,7 @@ export default [
       "Cuando se realizan ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Cuando se opera en grafía una estación Fija/Portable».",
+    "explain": "Respecto a «¿Cuando se añade la mención /P al indicativo de llamada?», la opción que cumple el enunciado en el banco es «Cuando se opera en grafía una estación Fija/Portable». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5505,7 +5505,7 @@ export default [
       "10"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «9».",
+    "explain": "Respecto a «Los distritos de Ceuta y Melilla están identificados por la cifra del distrito de lla…», la opción que cumple el enunciado en el banco es «9». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6405,7 +6405,7 @@ export default [
       "4º"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «1º».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «1º».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6450,7 +6450,7 @@ export default [
       "Solamente MAYDAY (tres veces)"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «MAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «MAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6885,7 +6885,7 @@ export default [
       "Mayday"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Mayday».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Mayday».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6915,7 +6915,7 @@ export default [
       "No es falta"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Muy grave».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Muy grave».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6945,7 +6945,7 @@ export default [
       "No puede emplearse en estaciones españolas"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Un distintivo temporal para estaciones clase B».",
+    "explain": "Respecto a «EL PREFIJO EE INDICA DELANTE DE UN DISTINTIVO COMPLETO DE RADIOAFICIONADO:», la opción que cumple el enunciado en el banco es «Un distintivo temporal para estaciones clase B». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7455,7 +7455,7 @@ export default [
       "No se puede asignar."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «No se puede asignar.».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «No se puede asignar.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7470,7 +7470,7 @@ export default [
       "Sin sufijo."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Por un grupo alfanumérico.».",
+    "explain": "Respecto a «El distintivo de llamada de una estación de radioaficionado, estará constituido por:», la opción que cumple el enunciado en el banco es «Por un grupo alfanumérico.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8020,7 +8020,7 @@ export default [
       "La secuencia no se contempla en el reglamento vigente."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Corresponde a una estación desatendida analógica.».",
+    "explain": "Respecto a «El distintivo de llamada ED1YBD», la opción que cumple el enunciado en el banco es «Corresponde a una estación desatendida analógica.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -11347,7 +11347,7 @@ export default [
       "MAYDAY (una vez), la palabra AQUI o DE y el distintivo de llamada (tres veces)."
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «MAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «MAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11439,7 +11439,7 @@ export default [
       "Las estaciones automáticas desatendidas analógicas y digitales respectivamente."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Las estaciones automáticas desatendidas analógicas y digitales respectivamente.».",
+    "explain": "Respecto a «El sufijo de un distintivo de llamada de tres letras que comience por \"Y\" o \"Z\", se r…», la opción que cumple el enunciado en el banco es «Las estaciones automáticas desatendidas analógicas y digitales respectivamente.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11514,7 +11514,7 @@ export default [
       "Zamora."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Valencia.».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Valencia.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11529,7 +11529,7 @@ export default [
       "QRS."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «EEE.».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «EEE.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11649,7 +11649,7 @@ export default [
       "Su nueva provincia de residencia se encuentra en distinta Comunidad Autónoma."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Su nueva provincia de residencia pertenece a un distrito distinto.».",
+    "explain": "Respecto a «Un radioaficionado que cambia de residencia no podrá mantener el mismo indicativo si:», la opción que cumple el enunciado en el banco es «Su nueva provincia de residencia pertenece a un distrito distinto.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11769,7 +11769,7 @@ export default [
       "Bilbao."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Palma de Mallorca.».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Palma de Mallorca.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11829,7 +11829,7 @@ export default [
       "Usos temporales de relevancia internacional."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Usos temporales de especial relevancia para eventos de carácter regional, autonómico o local.».",
+    "explain": "Respecto a «El prefijo \"EG\" de un distintivo de llamada se relaciona con:», la opción que cumple el enunciado en el banco es «Usos temporales de especial relevancia para eventos de carácter regional, autonómico o local.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12174,7 +12174,7 @@ export default [
       "Doce palabras por minuto."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Diez palabras por minuto.».",
+    "explain": "Respecto a «Los repetidores analógicos, ¿a que velocidad deberán emitir, de forma automática, su …», la opción que cumple el enunciado en el banco es «Diez palabras por minuto.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12279,7 +12279,7 @@ export default [
       "No existen."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «EA, EB, EC.».",
+    "explain": "Respecto a «Los prefijos de los distintivos de llamada correspondientes a España son, entre otros…», la opción que cumple el enunciado en el banco es «EA, EB, EC.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12504,7 +12504,7 @@ export default [
       "No pueden ser reutilizados."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.».",
+    "explain": "Respecto a «Los distintivos de llamada con sufijo de 2 letras:», la opción que cumple el enunciado en el banco es «Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12519,7 +12519,7 @@ export default [
       "Indicando el distintivo de llamada solicitado."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Dirigida a la Asociación o Radio Club de aficionados correspondiente, que será la que autorice.».",
+    "explain": "Respecto a «La utilización de distintivos temporales requerirá la presentación de una solicitud; …», la opción que cumple el enunciado en el banco es «Dirigida a la Asociación o Radio Club de aficionados correspondiente, que será la que autorice.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12609,7 +12609,7 @@ export default [
       "Las iniciales y fecha de nacimiento del titular."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Un grupo alfanumérico de 6 caracteres como máximo.».",
+    "explain": "Respecto a «El distintivo de llamada de una autorización de radioaficionado estará constituido po…», la opción que cumple el enunciado en el banco es «Un grupo alfanumérico de 6 caracteres como máximo.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12669,7 +12669,7 @@ export default [
       "Por periodos, hasta un máximo de 20 días al año."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «En caso de fallecimiento del titular, a familiares en primer grado.».",
+    "explain": "Respecto a «Los distintivos de llamada se podrán reasignar:», la opción que cumple el enunciado en el banco es «En caso de fallecimiento del titular, a familiares en primer grado.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12969,7 +12969,7 @@ export default [
       "Si su titular crea interferencias."
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Si se cancela la autorización correspondiente.».",
+    "explain": "Respecto a «¿En qué caso se reasignará un distintivo ya utilizado?:», la opción que cumple el enunciado en el banco es «Si se cancela la autorización correspondiente.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13014,7 +13014,7 @@ export default [
       "De la palabra \"pan\" repetido tres veces."
     ],
     "correctIndex": 1,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Del grupo \"pan pan\" repetido tres veces.».",
+    "explain": "Respecto a «La señal de urgencia en radiotelefonía se compone:», la opción que cumple el enunciado en el banco es «Del grupo \"pan pan\" repetido tres veces.». Repasa operación, códigos Q y buenas prácticas en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13089,7 +13089,7 @@ export default [
       "Se trata de un titular de licencia CEPT extranjero emitiendo en España."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Se trata de un titular de licencia CEPT extranjero emitiendo en España.».",
+    "explain": "Respecto a «Si observa que un distintivo de llamada va precedido del prefijo EA seguido de un det…», la opción que cumple el enunciado en el banco es «Se trata de un titular de licencia CEPT extranjero emitiendo en España.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13119,7 +13119,7 @@ export default [
       "En ningún caso, teniendo en cuenta que la autorización de radioaficionado ya lleva asociado un distintivo de llamada."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Cuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.».",
+    "explain": "Respecto a «¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo…», la opción que cumple el enunciado en el banco es «Cuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13464,7 +13464,7 @@ export default [
       "Radiobaliza."
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Radiobaliza.».",
+    "explain": "Respecto a «Toda estación colectiva fija de aficionado destinada a realizar estudios de propagaci…», la opción que cumple el enunciado en el banco es «Radiobaliza.». Repasa antenas, líneas y propagación en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13479,7 +13479,7 @@ export default [
       "4"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «5».",
+    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «5».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13509,7 +13509,7 @@ export default [
       "/MM."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «/MM.».",
+    "explain": "Respecto a «La identificación de emisiones de una estación móvil marítima, se efectuará añadiendo…», la opción que cumple el enunciado en el banco es «/MM.». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13674,7 +13674,7 @@ export default [
       "La ganancia isótropa o absoluta"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Grupo de caracteres que constituye la señal de identificación del radioaficionado».",
+    "explain": "Respecto a «El distintivo de llamada se define como:», la opción que cumple el enunciado en el banco es «Grupo de caracteres que constituye la señal de identificación del radioaficionado». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13689,7 +13689,7 @@ export default [
       "La participación en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «La participación en concursos internacionales de alta competitividad».",
+    "explain": "Respecto a «Los distintivos de uso temporal con sufijo de una sola letra están reservados para:», la opción que cumple el enunciado en el banco es «La participación en concursos internacionales de alta competitividad». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13749,7 +13749,7 @@ export default [
       "No existen"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «EA, EB, EC».",
+    "explain": "Respecto a «Los prefijos de los distitivos de llamada correspondientes a España son, entre otros:», la opción que cumple el enunciado en el banco es «EA, EB, EC». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13809,7 +13809,7 @@ export default [
       "URGENCE"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «PAN PAN».",
+    "explain": "Respecto a «La señal de urgencia en radiotelefonía consiste en la transmisión, repetida tres vece…», la opción que cumple el enunciado en el banco es «PAN PAN». Repasa operación, códigos Q y buenas prácticas en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13824,7 +13824,7 @@ export default [
       "1.100 kHz y 650KHz"
     ],
     "correctIndex": 0,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «2.220 Hz y 1.300 Hz».",
+    "explain": "Respecto a «La señal de alarma en radiotelefonía consiste en dos señales de audiofrecuencia, apro…», la opción que cumple el enunciado en el banco es «2.220 Hz y 1.300 Hz». Repasa operación, códigos Q y buenas prácticas en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13839,7 +13839,7 @@ export default [
       "Una de las condiciones para su adjudicación es que el radioaficionado no haya sido sometido a expediente sancionador en los ultimos cinco años"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Se reservan únicamente para estaciones colectivas».",
+    "explain": "Respecto a «Los distintivos de llamada con sufijos de dos letra; marque la opción falsa:», la opción que cumple el enunciado en el banco es «Se reservan únicamente para estaciones colectivas». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13884,7 +13884,7 @@ export default [
       "Es la cifra 0 de uso exclusiva para distintivos temporales"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Es la cifra coincidente con el número de distrito de residencia del titular, con arreglo a la división geográfica que se especifica en el Reglamento de Aficionados en vigor».",
+    "explain": "Respecto a «El \"distrito\", que compone el distintivo de llamada de un radioaficionado:», la opción que cumple el enunciado en el banco es «Es la cifra coincidente con el número de distrito de residencia del titular, con arreglo a la división geográfica que se especifica en el Reglamento de Aficionados en vigor». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13914,7 +13914,7 @@ export default [
       "No se puede adjudicar a estación colectiva alguna"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Corresponde a una estación automática desatendida».",
+    "explain": "Respecto a «El indicativo de llamada ED3ZHO:», la opción que cumple el enunciado en el banco es «Corresponde a una estación automática desatendida». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13974,7 +13974,7 @@ export default [
       "Es que un titular de licencia CEPT extranjero está emitiendo en España"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Es que un titular de licencia CEPT extranjero está emitiendo en España».",
+    "explain": "Respecto a «Si observa que un distitivo de llamada va precedido del prefijo EA seguido de un dete…», la opción que cumple el enunciado en el banco es «Es que un titular de licencia CEPT extranjero está emitiendo en España». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14529,7 +14529,7 @@ export default [
       "Su titular reside en Cataluña."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «No se puede asignar.».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «No se puede asignar.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15249,7 +15249,7 @@ export default [
       "Una frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Un apodo o nombre identificador».",
+    "explain": "Respecto a «¿Qué es un indicativo de radio?», la opción que cumple el enunciado en el banco es «Un apodo o nombre identificador». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16164,7 +16164,7 @@ export default [
       "Cambiar de canal para no interrumpir."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Guardar silencio inmediatamente y escuchar el comunicado».",
+    "explain": "Respecto a «¿Qué debemos hacer cuando un indicativo inicia su transmisión con “ATENCIÓN ATENCIÓN”…», la opción que cumple el enunciado en el banco es «Guardar silencio inmediatamente y escuchar el comunicado». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16840,7 +16840,7 @@ export default [
       "Sabadell (Barcelona)"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Ceuta».",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Ceuta».",
     "explainSourceNote": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16855,7 +16855,7 @@ export default [
       "Es de naturaleza indefinida"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Es concedido para uso temporal por un evento no especialmente significado».",
+    "explain": "Respecto a «Si una estación tiene el indicativo de llamada EF6ABC:», la opción que cumple el enunciado en el banco es «Es concedido para uso temporal por un evento no especialmente significado». Repasa licencias, indicativos y procedimientos CEPT en el temario si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16870,7 +16870,7 @@ export default [
       "Auxilio"
     ],
     "correctIndex": 2,
-    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Mayday».",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Mayday».",
     "explainSourceNote": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   }
 ];

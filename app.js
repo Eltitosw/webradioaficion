@@ -3987,11 +3987,7 @@ function initNav() {
       } else {
         void onRoute();
       }
-      $("#site-nav")?.classList.remove("is-open");
-      $("#nav-toggle")?.setAttribute("aria-expanded", "false");
-      $("#site-nav")?.querySelectorAll(".nav-group[open]").forEach((d) => {
-        d.removeAttribute("open");
-      });
+      closeMobileNav();
     });
   }
   if (!hashChangeBound) {
@@ -4000,13 +3996,61 @@ function initNav() {
   }
 }
 
+function isMobileNavViewport() {
+  return window.matchMedia("(max-width: 900px)").matches;
+}
+
+function closeMobileNav() {
+  const nav = $("#site-nav");
+  const btn = $("#nav-toggle");
+  const backdrop = $("#site-nav-backdrop");
+  if (nav) nav.classList.remove("is-open");
+  if (btn) btn.setAttribute("aria-expanded", "false");
+  nav?.querySelectorAll(".nav-group[open]").forEach((d) => {
+    d.removeAttribute("open");
+  });
+  if (backdrop) backdrop.hidden = true;
+  document.body.classList.remove("nav-menu-open");
+}
+
 function initMobileNav() {
   const btn = $("#nav-toggle");
   const nav = $("#site-nav");
+  const backdrop = $("#site-nav-backdrop");
   if (!btn || !nav) return;
-  btn.addEventListener("click", () => {
-    const open = nav.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", String(open));
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !nav.classList.contains("is-open");
+    if (willOpen && isMobileNavViewport()) {
+      nav.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
+      if (backdrop) backdrop.hidden = false;
+      document.body.classList.add("nav-menu-open");
+    } else {
+      closeMobileNav();
+    }
+  });
+
+  backdrop?.addEventListener("click", () => {
+    closeMobileNav();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileNav();
+  });
+
+  window.addEventListener("resize", () => {
+    if (!isMobileNavViewport()) closeMobileNav();
+  });
+
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!(t instanceof Element)) return;
+    const a11y = $("#a11y-panel");
+    if (a11y instanceof HTMLDetailsElement && a11y.open && !t.closest("#a11y-panel")) {
+      a11y.removeAttribute("open");
+    }
   });
 }
 
