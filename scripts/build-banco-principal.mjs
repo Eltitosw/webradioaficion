@@ -14,12 +14,15 @@ import fedi from "../data/fediea-2011.js";
 import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import quijotesExplanations from "../data/quijotes-explanations.js";
+import generatedExplanations from "../data/generated-explanations.js";
 import figures from "../data/questions-figures.js";
 import { CRIBADO_PREFERRED_IDS, CRIBADO_STATS } from "../data/question-cribado.js";
 import { dedupeKey, writeQuestionModule, writeUtf8File } from "../lib/import-question-utils.mjs";
 import { dedupeBankByStem } from "../lib/banco-dedupe.mjs";
 import { fillBankToMinimum } from "../lib/banco-fill.mjs";
 import { MIN_BANCO_QUESTIONS } from "../lib/question-recency.mjs";
+import { enrichFromExisting } from "../lib/figure-import.mjs";
+import { hasPedagogicalExplain, isTemplateOnlyExplain } from "../lib/explain-quality.mjs";
 import { repairQuestionFields } from "../lib/text-encoding.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -44,13 +47,36 @@ for (const q of all) {
   if (q?.id) byId.set(q.id, q);
 }
 
-function withQuijotesExplain(q) {
+/**
+ * Fusiona explicación didáctica sin mezclar modos de feedback de Practicar:
+ * - Estudio inmediato / confianza: `pedagogicalExplain(q)` lee `explain`.
+ * - Estudio profundizar: `explain` didáctico + `explainSourceNote` (plantilla FEDI/Quijotes).
+ */
+function withPedagogicalExplain(q) {
   const repaired = repairQuestionFields(q);
-  const text = quijotesExplanations[repaired.id];
+  const text = quijotesExplanations[repaired.id] || generatedExplanations[repaired.id];
   if (!text) return repaired;
-  const source =
-    typeof repaired.explain === "string" && repaired.explain.trim() ? ` ${repaired.explain.trim()}` : "";
-  return repairQuestionFields({ ...repaired, explain: `${text}${source}` });
+  const prev = typeof repaired.explain === "string" ? repaired.explain.trim() : "";
+  /** @type {Record<string, unknown>} */
+  const out = { ...repaired, explain: text };
+  if (prev && isTemplateOnlyExplain(prev)) {
+    out.explainSourceNote = prev;
+  } else if (prev && !isTemplateOnlyExplain(prev)) {
+    out.explain = `${text} ${prev}`;
+  }
+  return repairQuestionFields(out);
+}
+
+function mergeFigureWithTextSource(fq, byId) {
+  let merged = repairQuestionFields(fq);
+  const text = byId.get(merged.id);
+  if (text) merged = repairQuestionFields(enrichFromExisting(merged, byId));
+  return withPedagogicalExplain(merged);
+}
+
+function hasValidOptions(q) {
+  if (!Array.isArray(q?.options) || q.options.length < 2) return false;
+  return q.options.filter((o) => String(o ?? "").trim().length > 0).length >= 2;
 }
 
 const figureIdSet = new Set(figures.map((f) => f.id).filter(Boolean));
@@ -64,7 +90,9 @@ for (const id of CRIBADO_PREFERRED_IDS) {
     missing.push(id);
     continue;
   }
-  bankById.set(id, withQuijotesExplain(q));
+  const merged = withPedagogicalExplain(q);
+  if (!hasValidOptions(merged)) continue;
+  bankById.set(id, merged);
 }
 
 const stemToId = new Map();
@@ -74,7 +102,8 @@ for (const [id, q] of bankById) {
 
 for (const fq of figures) {
   if (!fq?.id) continue;
-  const merged = withQuijotesExplain(fq);
+  const merged = mergeFigureWithTextSource(fq, byId);
+  if (!hasValidOptions(merged)) continue;
   const key = dedupeKey(merged.stem, merged.options);
   const dupId = stemToId.get(key);
   if (dupId && dupId !== merged.id && !figureIdSet.has(dupId)) {
@@ -84,7 +113,10 @@ for (const fq of figures) {
   stemToId.set(key, merged.id);
 }
 
-const { bankById: deduped, removed, duplicateGroups } = dedupeBankByStem(bankById, CRIBADO_PREFERRED_IDS);
+const { bankById: deduped, removed, duplicateGroups, paraphraseRemoved } = dedupeBankByStem(
+  bankById,
+  CRIBADO_PREFERRED_IDS,
+);
 bankById.clear();
 for (const [id, q] of deduped) bankById.set(id, q);
 
@@ -126,7 +158,9 @@ lines.push("/**");
 lines.push(" * Banco principal: cribado (tier A+B+C) + figuras certificadas, un enunciado = una pregunta.");
 lines.push(` * Generado: ${generated} · ${bank.length} preguntas · npm run build:banco`);
 lines.push(` * Cribado: ${CRIBADO_PREFERRED_IDS.size} · En banco por id: ${cribadoInBank} · Sustituidas por versión con figura: ${cribadoReplacedByFigure}`);
-lines.push(` * Duplicados de enunciado eliminados: ${removed.length} (${duplicateGroups} grupos)`);
+lines.push(
+  ` * Duplicados eliminados: ${removed.length} (${duplicateGroups} exactos, ${paraphraseRemoved ?? 0} parafraseados)`,
+);
 lines.push(` * Relleno hasta ≥${MIN_BANCO_QUESTIONS}: ${fillAdded.length} añadidas (total tras relleno: ${countAfterFill})`);
 lines.push(` * Con figura: ${figureIds.length}`);
 lines.push(" */");
@@ -141,6 +175,7 @@ lines.push(
     withFigure: figureIds.length,
     dedupeRemoved: removed.length,
     dedupeGroups: duplicateGroups,
+    paraphraseRemoved: paraphraseRemoved ?? 0,
     fillAdded: fillAdded.length,
     sourceEntries: CRIBADO_STATS.totalBank,
   })};`,

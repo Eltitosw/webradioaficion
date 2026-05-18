@@ -96,6 +96,21 @@ Un tema sube de prioridad cuando:
 
 La prioridad no sustituye al criterio oficial del examen; sirve para decidir qué repasar primero.
 
+## Modos de estudio en Practicar
+
+Tres ejes que no deben mezclarse al editar el banco:
+
+1. **Sesión:** `libre` (pool completo, preprueba opcional) o `teorico` (30 preguntas, temporizador en examen).
+2. **Modo:** `study` (feedback al responder) o `exam` (resultado al final).
+3. **Feedback en estudio:** `immediate`, `confidence` (seguridad antes de corregir) o `deepen` (panel temario/libro).
+
+Explicaciones en el banco:
+
+- `explain` — texto didáctico (`pedagogicalExplain` en inmediato/confianza).
+- `explainSourceNote` — plantilla histórica FEDI/Quijotes, visible en profundizar y como «Origen» en otros modos.
+
+Ver `.cursor/rules/study-modes.mdc` antes de ampliar `*-explanations.js` o `build-banco-principal.mjs`.
+
 ## Precauciones
 
 - No borrar ni mutar el banco original de preguntas: el cuaderno guarda copias resumidas.

@@ -5,6 +5,7 @@ import { BANCO_STATS } from "./data/questions-banco.js";
 import regulatory from "./data/regulatory.js";
 import { isActiveQuestion } from "./data/question-policy.js";
 import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
+import { isTemplateOnlyExplain, pedagogicalExplain } from "./lib/explain-quality.mjs";
 import {
   buildExamReadiness,
   buildRecommendedPlan,
@@ -31,6 +32,7 @@ const USER_STATS_KEY = "radioexam_user_stats_v1";
 const QUIZ_DRAFT_KEY = "radioexam_quiz_draft_v1";
 const QUIZ_DRAFT_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 const A11Y_STORAGE_KEY = "radioexam_a11y_v1";
+const TEMARIO_READING_KEY = "radioexam_temario_reading_v1";
 
 const PROGRESS_STORE_KEYS = {
   userStats: USER_STATS_KEY,
@@ -171,8 +173,14 @@ const methods = [
   },
 ];
 
+function questionIsPlayable(q) {
+  if (!isActiveQuestion(q)) return false;
+  if (!Array.isArray(q.options) || q.options.length < 2) return false;
+  return q.options.filter((o) => String(o ?? "").trim().length > 0).length >= 2;
+}
+
 /** @type {typeof questionsBanco} */
-let allQuestions = [...questionsBanco].filter(isActiveQuestion);
+let allQuestions = [...questionsBanco].filter(questionIsPlayable);
 
 const TRAP_QUESTION_IDS = new Set([
   "q6",
@@ -608,15 +616,40 @@ function renderNormativa() {
   });
 }
 
+/** Sección plegable del temario con título accesible para lectura en voz alta. */
+function temarioDetailsSection(blockId, num, title, bodyHtml, openDefault = false) {
+  const sid = `temario-${blockId}-sec-${num}`;
+  const openAttr = openDefault ? " open" : "";
+  return `
+          <details class="temario-details"${openAttr}>
+            <summary class="temario-details__summary">
+              <span class="temario-details__num" aria-hidden="true">${num}.</span>
+              <span class="temario-details__label">${escapeHtml(title)}</span>
+            </summary>
+            <div class="temario-section" role="region" aria-labelledby="${sid}">
+              <h4 class="sr-only" id="${sid}">${num}. ${escapeHtml(title)}</h4>
+              ${bodyHtml}
+            </div>
+          </details>`;
+}
+
 function renderBlockStudy(blockId) {
   const study = topicStudy[blockId];
   if (!study) return "";
-  const hooks = (study.memoryHooks || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
-  const express = (study.expressBullets || []).map((x) => `<li>${escapeHtml(x)}</li>`).join("");
+  const listItems = (items) =>
+    items?.length
+      ? `<ul class="temario-list">${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`
+      : "";
+  const hooks = listItems(study.memoryHooks || []);
+  const express = study.expressBullets?.length
+    ? `<ul class="temario-list temario-list--compact">${study.expressBullets
+        .map((x) => `<li>${escapeHtml(x)}</li>`)
+        .join("")}</ul>`
+    : "";
   const detailGroup = (title, items) =>
     items?.length
-      ? `<section class="temario-study-group">
-          <h4>${escapeHtml(title)}</h4>
+      ? `<section class="temario-study-group" aria-label="${escapeHtml(title)}">
+          <h5 class="temario-study-group__title">${escapeHtml(title)}</h5>
           <ul class="temario-list">${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
         </section>`
       : "";
@@ -627,60 +660,116 @@ function renderBlockStudy(blockId) {
     detailGroup("D. Programa de examen que cubre", study.fedieaSyllabus || []),
   ].join("");
   const readMore = detailHtml
-    ? `<details class="temario-details"><summary>3. Aprender el tema: teoría + ejemplos + programa</summary>${detailHtml}</details>`
+    ? temarioDetailsSection(blockId, 3, "Aprender el tema: teoría, ejemplos y programa", detailHtml)
     : "";
   const trapWarnings = study.trapWarnings?.length
-    ? `<details class="temario-details"><summary>4. Preguntas trampa para estudiar a fondo</summary><ul class="temario-list">${study.trapWarnings
-        .map((x) => `<li>${escapeHtml(x)}</li>`)
-        .join("")}</ul></details>`
+    ? temarioDetailsSection(blockId, 4, "Preguntas trampa para estudiar a fondo", listItems(study.trapWarnings))
     : "";
   const examChecklist = study.examChecklist?.length
-    ? `<details class="temario-details"><summary>5. Errores típicos y puntos de examen</summary><ul class="temario-list">${study.examChecklist
-        .map((x) => `<li>${escapeHtml(x)}</li>`)
-        .join("")}</ul></details>`
+    ? temarioDetailsSection(
+        blockId,
+        5,
+        "Errores típicos y puntos de examen",
+        listItems(study.examChecklist),
+      )
     : "";
   const cards = (study.flashcards || [])
     .map(
       (fc, i) => `
-        <div class="temario-flipcard" tabindex="0" role="button" aria-label="Tarjeta ${i + 1} del bloque. Activar para voltear.">
-          <div class="temario-flipcard__inner">
+        <div class="temario-flipcard" tabindex="0" role="button" aria-label="${escapeHtml(`Tarjeta ${i + 1}. Pregunta: ${fc.front}. Respuesta: ${fc.back}`)}">
+          <div class="temario-flipcard__inner" aria-hidden="true">
             <div class="temario-flipcard__face temario-flipcard__face--front">${escapeHtml(fc.front)}</div>
             <div class="temario-flipcard__face temario-flipcard__face--back">${escapeHtml(fc.back)}</div>
           </div>
         </div>`,
     )
     .join("");
+  const flashcards = study.flashcards || [];
+  const cardsRead = flashcards.length
+    ? `<dl class="temario-fc-read">
+        ${flashcards
+          .map(
+            (fc, i) => `
+          <div class="temario-fc-read__pair">
+            <dt>Tarjeta ${i + 1} · pregunta</dt>
+            <dd>${escapeHtml(fc.front)}</dd>
+            <dt>Respuesta</dt>
+            <dd>${escapeHtml(fc.back)}</dd>
+          </div>`,
+          )
+          .join("")}
+      </dl>`
+    : "";
   const sources = study.sources
     ? `<p class="temario-sources"><strong>Contrastar con:</strong> ${escapeHtml(study.sources)}</p>`
     : "";
   return `
-        <div class="temario-study">
+        <div class="temario-study" lang="es">
           <p class="temario-method-tip"><strong>Ruta teórica:</strong> ${escapeHtml(
-            "lee en este orden: idea clave, resumen, teoría explicada, ejemplos guiados, errores típicos y tarjetas conceptuales. Así no saltas al test sin entender el tema.",
+            "lee en este orden: idea clave, resumen express, teoría explicada, ejemplos guiados, errores típicos y tarjetas conceptuales. Así no saltas al test sin entender el tema.",
           )}</p>
-          <details class="temario-details" open>
-            <summary>1. Idea clave para memorizar</summary>
-            <ul class="temario-list">${hooks}</ul>
-          </details>
-          <details class="temario-details">
-            <summary>2. Repaso express (≈1–3 min)</summary>
-            <ul class="temario-list temario-list--compact">${express}</ul>
-          </details>
+          ${temarioDetailsSection(blockId, 1, "Idea clave para memorizar", hooks, true)}
+          ${temarioDetailsSection(blockId, 2, "Repaso express, uno a tres minutos", express)}
           ${readMore}
           ${trapWarnings}
           ${examChecklist}
-          <div class="temario-fc-block">
-            <p class="temario-fc-head">6. Autoevaluación conceptual (volteo en esta página; distinta de «Tarjetas del banco»)</p>
-            <div class="temario-fc-grid">${cards}</div>
-          </div>
+          <section class="temario-fc-block" aria-labelledby="temario-${escapeHtml(blockId)}-fc-title">
+            <h4 class="temario-fc-head" id="temario-${escapeHtml(blockId)}-fc-title">Autoevaluación conceptual del bloque</h4>
+            <p class="temario-fc-hint muted">En modo lectura lineal las tarjetas se leen como pregunta y respuesta seguidas.</p>
+            <div class="temario-fc-grid" aria-hidden="true">${cards}</div>
+            ${cardsRead}
+          </section>
           ${sources}
-          <p class="temario-cta">
+          <nav class="temario-cta" aria-label="Acciones tras estudiar este bloque">
             <a href="#practicar" data-nav="practicar" data-practicar-topic="${escapeHtml(blockId)}" class="btn btn--primary btn--sm temario-cta__main">Practicar este bloque</a>
             <a href="#tarjetas" data-nav="tarjetas" data-tarjetas-topic="${escapeHtml(blockId)}" class="btn btn--ghost btn--sm">Tarjetas del banco (este bloque)</a>
             <a href="#tarjetas" data-nav="tarjetas" class="btn btn--ghost btn--sm">Tarjetas (todo el banco)</a>
             <a href="#normativa" data-nav="normativa" class="btn btn--ghost btn--sm">Normativa BOE</a>
-          </p>
+          </nav>
         </div>`;
+}
+
+function renderTemarioToc() {
+  const parts = topicsData.parts || [];
+  return `
+    <nav class="temario-toc panel" aria-label="Índice de bloques del temario">
+      <h2 class="temario-toc__title">Índice por bloques</h2>
+      <p class="temario-toc__hint muted">Usa los enlaces o «Ir al bloque». Activa <strong>modo lectura lineal</strong> para escuchar con la voz del sistema.</p>
+      ${parts
+        .map(
+          (p) => `
+        <section class="temario-toc__part" aria-labelledby="temario-toc-part-${escapeHtml(p.id)}">
+          <h3 class="temario-toc__part-title" id="temario-toc-part-${escapeHtml(p.id)}">${escapeHtml(p.title)}</h3>
+          <ol class="temario-toc__list">
+            ${(p.blocks || [])
+              .map(
+                (b) =>
+                  `<li><a href="#temario-${escapeHtml(b.id)}">${escapeHtml(b.title)}</a><span class="temario-toc__item-hint">${escapeHtml(b.hint)}</span></li>`,
+              )
+              .join("")}
+          </ol>
+        </section>`,
+        )
+        .join("")}
+    </nav>`;
+}
+
+function fillTemarioJumpSelect() {
+  const sel = $("#temario-jump");
+  if (!(sel instanceof HTMLSelectElement)) return;
+  const parts = topicsData.parts || [];
+  sel.innerHTML =
+    '<option value="">Ir a un bloque…</option>' +
+    parts
+      .map((part) => {
+        const label =
+          part.id === "p1" ? "1.ª prueba" : part.id === "p2" ? "2.ª prueba" : part.title || part.id;
+        const opts = (part.blocks || [])
+          .map((b) => `<option value="temario-${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`)
+          .join("");
+        return `<optgroup label="${escapeHtml(label)}">${opts}</optgroup>`;
+      })
+      .join("");
 }
 
 function renderTemario() {
@@ -688,7 +777,9 @@ function renderTemario() {
   if (!root) return;
   const counts = questionCountByTopic();
   const topicStats = loadTopicQuizStats();
-  root.innerHTML = topicsData.parts
+  root.innerHTML =
+    renderTemarioToc() +
+    topicsData.parts
     .map(
       (p) => `
     <article class="part-card">
@@ -702,10 +793,10 @@ function renderTemario() {
             const searchRaw = buildTemarioSearchIndex(b.id, b, topicStudy[b.id]).toLowerCase();
             return `
           <li id="temario-${escapeHtml(b.id)}" class="temario-block" data-progress-state="${escapeHtml(progress.cls)}" data-temario-search="${escapeHtml(searchRaw)}">
-            <div class="temario-block__head">
-              <strong class="temario-block__title">${escapeHtml(b.title)}</strong>
-              <span class="temario-block__hint">${escapeHtml(b.hint)}</span>
-            </div>
+            <header class="temario-block__head">
+              <h3 class="temario-block__title">${escapeHtml(b.title)}</h3>
+              <p class="temario-block__hint">${escapeHtml(b.hint)}</p>
+            </header>
             <div class="temario-block__meta">
               <span class="temario-block__count">${nq} preguntas en el banco</span>
               <span class="temario-block__progress temario-block__progress--${escapeHtml(progress.cls)}" title="Modo estudio en esta app (este navegador)">
@@ -721,6 +812,68 @@ function renderTemario() {
     </article>`,
     )
     .join("");
+  fillTemarioJumpSelect();
+  applyTemarioReadingMode(loadTemarioReadingOpts());
+}
+
+function loadTemarioReadingOpts() {
+  try {
+    const raw = localStorage.getItem(TEMARIO_READING_KEY);
+    if (!raw) return { linear: false };
+    const o = JSON.parse(raw);
+    return { linear: !!o.linear };
+  } catch {
+    return { linear: false };
+  }
+}
+
+function saveTemarioReadingOpts(/** @type {{ linear: boolean }} */ opts) {
+  localStorage.setItem(TEMARIO_READING_KEY, JSON.stringify(opts));
+}
+
+function setTemarioDetailsOpen(root, open) {
+  root?.querySelectorAll(".temario-details").forEach((el) => {
+    if (el instanceof HTMLDetailsElement) el.open = open;
+  });
+}
+
+function applyTemarioReadingMode(/** @type {{ linear: boolean }} */ opts) {
+  const view = $("#view-temario");
+  const root = $("#temario-root");
+  const chk = $("#temario-reading-mode");
+  if (view) view.classList.toggle("temario--reading", !!opts.linear);
+  if (chk instanceof HTMLInputElement) chk.checked = !!opts.linear;
+  if (opts.linear) setTemarioDetailsOpen(root, true);
+}
+
+function initTemarioReading() {
+  const expandBtn = $("#temario-expand-all");
+  const collapseBtn = $("#temario-collapse-all");
+  const readingChk = $("#temario-reading-mode");
+  const jumpSel = $("#temario-jump");
+  const root = $("#temario-root");
+
+  expandBtn?.addEventListener("click", () => setTemarioDetailsOpen(root, true));
+  collapseBtn?.addEventListener("click", () => setTemarioDetailsOpen(root, false));
+
+  if (readingChk instanceof HTMLInputElement) {
+    const opts = loadTemarioReadingOpts();
+    readingChk.checked = opts.linear;
+    applyTemarioReadingMode(opts);
+    readingChk.addEventListener("change", () => {
+      const next = { linear: readingChk.checked };
+      saveTemarioReadingOpts(next);
+      applyTemarioReadingMode(next);
+    });
+  }
+
+  jumpSel?.addEventListener("change", () => {
+    const id = jumpSel instanceof HTMLSelectElement ? jumpSel.value : "";
+    if (!id) return;
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (jumpSel instanceof HTMLSelectElement) jumpSel.value = "";
+  });
 }
 
 function initTemarioInteractions() {
@@ -728,11 +881,15 @@ function initTemarioInteractions() {
   if (!root || root.dataset.temarioBound === "1") return;
   root.dataset.temarioBound = "1";
   root.addEventListener("click", (e) => {
+    const view = $("#view-temario");
+    if (view?.classList.contains("temario--reading")) return;
     const card = e.target.closest(".temario-flipcard");
     if (!card || !root.contains(card)) return;
     card.classList.toggle("is-flipped");
   });
   root.addEventListener("keydown", (e) => {
+    const view = $("#view-temario");
+    if (view?.classList.contains("temario--reading")) return;
     if (e.key !== " " && e.key !== "Enter") return;
     const card = e.target.closest(".temario-flipcard");
     if (!card || !root.contains(card)) return;
@@ -2532,7 +2689,7 @@ function quizFeedbackTemarioHint(q) {
   return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> amplía en el bloque «${escapeHtml(label)}» del <a href="${href}">temario</a> (ganchos y viñetas de estudio).</p>`;
 }
 
-/** Panel post-respuesta: texto literal `explain` del banco + enlaces a temario y material de estudio. */
+/** Panel post-respuesta: explicación didáctica + nota histórica (si existe) + enlaces a temario. */
 function renderDeepenPanel(q) {
   const blockTitle = topicBlockLabel(q.topicId);
   const temarioHref = `#temario--${encodeURIComponent(q.topicId)}`;
@@ -2543,10 +2700,18 @@ function renderDeepenPanel(q) {
   const ureLinkText =
     q.part === 1 ? "URE · Material de práctica (electricidad y radioelectricidad)" : "URE · Legislación y reglamentación";
   const normativaHref = "#normativa--normativa-boe";
+  const pedagogy = pedagogicalExplain(q) || String(q.explain || "").trim();
+  const historical =
+    typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
   return `<div class="quiz-deepen">
     <h3 class="quiz-deepen__title">Ampliación · temario y libro</h3>
-    <p class="quiz-deepen__note">Explicación <strong>exacta</strong> registrada en el banco para esta pregunta (no es un resumen generado).</p>
-    <blockquote class="quiz-deepen__exact"><p>${escapeHtml(q.explain)}</p></blockquote>
+    <p class="quiz-deepen__note">Explicación didáctica registrada en el banco (modo profundizar).</p>
+    <blockquote class="quiz-deepen__exact"><p>${escapeHtml(pedagogy)}</p></blockquote>
+    ${
+      historical
+        ? `<p class="quiz-deepen__note muted"><strong>Origen histórico de importación:</strong></p><blockquote class="quiz-deepen__exact quiz-deepen__exact--hist"><p>${escapeHtml(historical)}</p></blockquote>`
+        : ""
+    }
     ${
       "sourceRef" in q && q.sourceRef
         ? `<p class="quiz-deepen__source"><strong>Fuente al redactar el ítem:</strong> ${escapeHtml(String(q.sourceRef))}</p>`
@@ -2609,25 +2774,20 @@ function selectedAnswerParagraph(q, sel) {
   return `<p class="quiz-fb-selected"><strong>Tu respuesta:</strong> ${escapeHtml(t)}</p>`;
 }
 
-function hasBankExplainParagraph(q) {
-  return typeof q.explain === "string" && q.explain.trim().length > 0;
-}
-
 function answerReasoningPanel(q, sel) {
   const optionExplanations = Array.isArray(q.optionExplanations) ? q.optionExplanations : [];
   const selectedExplanation = typeof optionExplanations[sel] === "string" ? optionExplanations[sel].trim() : "";
   const correctExplanation =
     typeof optionExplanations[q.correctIndex] === "string" ? optionExplanations[q.correctIndex].trim() : "";
-  const generalExplanation = typeof q.explain === "string" ? q.explain.trim() : "";
-  const bankExplainShownElsewhere = hasBankExplainParagraph(q);
+  const pedagogy = pedagogicalExplain(q);
   const selectedText = Array.isArray(q.options) && q.options[sel] !== undefined ? String(q.options[sel]) : "";
   const correctText =
     Array.isArray(q.options) && q.options[q.correctIndex] !== undefined ? String(q.options[q.correctIndex]) : "";
   if (sel === q.correctIndex) {
     const detail =
       correctExplanation ||
-      (!bankExplainShownElsewhere ? generalExplanation : "") ||
-      "Encaja con el concepto que pide el enunciado. Lee la explicación para fijar la regla, fórmula o criterio de examen que la justifica.";
+      pedagogy ||
+      "Encaja con el concepto que pide el enunciado. Lee la explicación y el temario del bloque para fijar la regla, fórmula o criterio de examen que la justifica.";
     return `<div class="quiz-fb-reasoning"><p><strong>Por qué encaja:</strong> ${escapeHtml(detail)}</p></div>`;
   }
   const whyWrong =
@@ -2635,10 +2795,10 @@ function answerReasoningPanel(q, sel) {
     "No encaja con el criterio del enunciado. En las preguntas tipo test, el distractor suele cambiar una unidad, una relación, un organismo, una etapa del circuito o el sentido de la definición.";
   const whyCorrect =
     correctExplanation ||
-    (!bankExplainShownElsewhere ? generalExplanation : "") ||
+    pedagogy ||
     (correctText
-      ? `La opción correcta es «${correctText}»; la explicación desarrolla la regla que permite distinguirla del distractor marcado.`
-      : "La explicación desarrolla la regla que permite distinguir la opción correcta del distractor marcado.");
+      ? `La opción correcta es «${correctText}». Revisa el temario del bloque para la regla que la distingue del distractor marcado.`
+      : "Revisa el temario del bloque para la regla que distingue la opción correcta del distractor marcado.");
   return `<div class="quiz-fb-reasoning">
     ${selectedText ? `<p><strong>Por qué no encaja tu opción:</strong> ${escapeHtml(whyWrong)}</p>` : ""}
     <p><strong>Por qué encaja la correcta:</strong> ${escapeHtml(whyCorrect)}</p>
@@ -2647,14 +2807,30 @@ function answerReasoningPanel(q, sel) {
 
 /** Texto `explain` del banco, siempre en bloque etiquetado (acierto o error). */
 function quizFeedbackExplainParagraph(q) {
-  const raw = q.explain;
-  const ex = typeof raw === "string" ? raw.trim() : "";
-  if (!ex) {
+  const raw = typeof q.explain === "string" ? q.explain.trim() : "";
+  const pedagogy = pedagogicalExplain(q);
+  if (pedagogy) {
+    const sourceNote =
+      typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
+    const hist =
+      sourceNote ||
+      (raw.length > pedagogy.length ? raw.slice(pedagogy.length).trim() : "");
+    const histBlock = hist
+      ? `<p class="quiz-fb-explain muted"><em>Origen:</em> ${escapeHtml(hist)}</p>`
+      : "";
+    return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(pedagogy)}</p>${histBlock}${quizFeedbackTemarioHint(q)}`;
+  }
+  if (!raw) {
     return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> No hay texto de explicación registrado en el banco para este ítem.</p>${quizFeedbackTemarioHint(q)}`;
   }
-  const base = `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(ex)}</p>`;
-  const sourceOnly = /^fuente\s*:/i.test(ex) && ex.length < 360;
-  return base + (sourceOnly ? quizFeedbackTemarioHint(q) : "");
+  if (isTemplateOnlyExplain(raw)) {
+    return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> Pregunta de banco histórico (FEDI/Quijotes) sin desarrollo didáctico en el original. Contrasta la respuesta correcta con el temario del bloque «${escapeHtml(topicBlockLabel(q.topicId))}».</p>${quizFeedbackTemarioHint(q)}`;
+  }
+  const sourceOnly = /^fuente\s*:/i.test(raw) && raw.length < 360;
+  return (
+    `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(raw)}</p>` +
+    (sourceOnly ? quizFeedbackTemarioHint(q) : "")
+  );
 }
 
 function abbreviationTextForQuestion(q) {
@@ -2956,6 +3132,19 @@ function finishQuiz() {
   showSaveToast("Resultado y progreso guardados.");
 }
 
+function quizScrollBehavior() {
+  return document.documentElement.classList.contains("a11y-reduce-motion") ? "auto" : "smooth";
+}
+
+/** Muestra el enunciado bajo la cabecera fija (útil en móvil/tablet tras Siguiente/Anterior). */
+function scrollQuizToQuestion() {
+  const run = () => {
+    const el = $("#quiz-question") || $("#quiz-area");
+    el?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
+  };
+  requestAnimationFrame(() => requestAnimationFrame(run));
+}
+
 function goNext() {
   const total = quizState.list.length;
   if (quizState.index >= total - 1) return;
@@ -2964,6 +3153,7 @@ function goNext() {
   $("#quiz-pretext").value = "";
   $("#quiz-feedback").textContent = "";
   renderQuestion();
+  scrollQuizToQuestion();
   scheduleSaveQuizDraft();
 }
 
@@ -3045,6 +3235,7 @@ function goPrev() {
   quizState.index -= 1;
   quizState.optionsVisible = true;
   renderQuestion();
+  scrollQuizToQuestion();
   scheduleSaveQuizDraft();
 }
 
@@ -3444,37 +3635,63 @@ function initMobileNav() {
   });
 }
 
+const A11Y_FONT_SCALE_MIN = 0.85;
+const A11Y_FONT_SCALE_MAX = 1.5;
+const A11Y_FONT_SCALE_STEP = 0.05;
+
+function normalizeA11yOpts(raw) {
+  const defaults = {
+    spacing: false,
+    reduceMotion: false,
+    contrast: false,
+    fontScale: 1,
+    theme: "dark",
+  };
+  const o = { ...defaults, ...(raw && typeof raw === "object" ? raw : {}) };
+  if (o.large === true && (!raw || raw.fontScale === undefined)) {
+    o.fontScale = 1.125;
+  }
+  const scale = Number(o.fontScale);
+  o.fontScale = Number.isFinite(scale)
+    ? Math.min(A11Y_FONT_SCALE_MAX, Math.max(A11Y_FONT_SCALE_MIN, scale))
+    : 1;
+  o.theme = o.theme === "light" ? "light" : "dark";
+  delete o.large;
+  return o;
+}
+
 function loadA11yOpts() {
   try {
     const raw = localStorage.getItem(A11Y_STORAGE_KEY);
-    if (!raw) return {};
-    const o = JSON.parse(raw);
-    return typeof o === "object" && o ? o : {};
+    if (!raw) return normalizeA11yOpts({});
+    return normalizeA11yOpts(JSON.parse(raw));
   } catch {
-    return {};
+    return normalizeA11yOpts({});
   }
 }
 
-function saveA11yOpts(/** @type {Record<string, boolean>} */ opts) {
+function saveA11yOpts(/** @type {ReturnType<typeof normalizeA11yOpts>} */ opts) {
   localStorage.setItem(A11Y_STORAGE_KEY, JSON.stringify(opts));
 }
 
-function applyA11yOpts(/** @type {Record<string, boolean>} */ opts) {
+function applyA11yOpts(/** @type {ReturnType<typeof normalizeA11yOpts>} */ opts) {
   const root = document.documentElement;
-  root.classList.toggle("a11y-large-text", !!opts.large);
+  root.style.setProperty("--a11y-font-scale", String(opts.fontScale));
   root.classList.toggle("a11y-wide-lines", !!opts.spacing);
   root.classList.toggle("a11y-reduce-motion", !!opts.reduceMotion);
   root.classList.toggle("a11y-high-contrast", !!opts.contrast);
+  root.classList.toggle("a11y-light", opts.theme === "light");
+  const meta = document.getElementById("meta-theme-color");
+  if (meta) meta.setAttribute("content", opts.theme === "light" ? "#eef2f7" : "#090c11");
 }
 
 function initA11y() {
-  const defaults = { large: false, spacing: false, reduceMotion: false, contrast: false };
-  const opts = { ...defaults, ...loadA11yOpts() };
+  const opts = loadA11yOpts();
   applyA11yOpts(opts);
 
-  const bind = (id, key) => {
+  const bindCheck = (id, key) => {
     const el = document.getElementById(id);
-    if (!(el instanceof HTMLInputElement)) return;
+    if (!(el instanceof HTMLInputElement) || el.type !== "checkbox") return;
     el.checked = !!opts[key];
     el.addEventListener("change", () => {
       opts[key] = el.checked;
@@ -3483,10 +3700,53 @@ function initA11y() {
     });
   };
 
-  bind("a11y-large", "large");
-  bind("a11y-spacing", "spacing");
-  bind("a11y-reduce-motion", "reduceMotion");
-  bind("a11y-contrast", "contrast");
+  bindCheck("a11y-spacing", "spacing");
+  bindCheck("a11y-reduce-motion", "reduceMotion");
+  bindCheck("a11y-contrast", "contrast");
+
+  const lightEl = document.getElementById("a11y-light");
+  if (lightEl instanceof HTMLInputElement) {
+    lightEl.checked = opts.theme === "light";
+    lightEl.addEventListener("change", () => {
+      opts.theme = lightEl.checked ? "light" : "dark";
+      saveA11yOpts(opts);
+      applyA11yOpts(opts);
+    });
+  }
+
+  const scaleEl = document.getElementById("a11y-font-scale");
+  const scaleOut = document.getElementById("a11y-font-scale-out");
+  const decBtn = document.getElementById("a11y-font-dec");
+  const incBtn = document.getElementById("a11y-font-inc");
+
+  const syncFontScaleUi = () => {
+    const pct = Math.round(opts.fontScale * 100);
+    if (scaleEl instanceof HTMLInputElement) {
+      scaleEl.value = String(pct);
+      scaleEl.setAttribute("aria-valuenow", String(pct));
+    }
+    if (scaleOut) scaleOut.textContent = `${pct}%`;
+  };
+
+  const setFontScale = (scale) => {
+    opts.fontScale = Math.min(
+      A11Y_FONT_SCALE_MAX,
+      Math.max(A11Y_FONT_SCALE_MIN, Math.round(scale / A11Y_FONT_SCALE_STEP) * A11Y_FONT_SCALE_STEP),
+    );
+    saveA11yOpts(opts);
+    applyA11yOpts(opts);
+    syncFontScaleUi();
+  };
+
+  syncFontScaleUi();
+
+  if (scaleEl instanceof HTMLInputElement) {
+    scaleEl.addEventListener("input", () => {
+      setFontScale(Number(scaleEl.value) / 100);
+    });
+  }
+  decBtn?.addEventListener("click", () => setFontScale(opts.fontScale - A11Y_FONT_SCALE_STEP));
+  incBtn?.addEventListener("click", () => setFontScale(opts.fontScale + A11Y_FONT_SCALE_STEP));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -3504,6 +3764,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initQuizPrefsAutosave();
     initQuizKeyboard();
     initTemarioFilter();
+    initTemarioReading();
     updateWrongOnlyCheckboxVisibility();
     initNav();
     initQuizLeaveGuard();

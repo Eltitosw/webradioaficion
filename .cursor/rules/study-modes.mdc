@@ -1,0 +1,57 @@
+---
+description: Modos de estudio y feedback en Practicar — respetar al ampliar preguntas o explicaciones
+globs:
+  - app.js
+  - lib/quiz-session.js
+  - lib/learning-coach.js
+  - lib/explain-quality.mjs
+  - scripts/build-banco-principal.mjs
+  - data/questions-banco.js
+  - data/*-explanations.js
+  - data/generated-explanations.js
+---
+
+# Modos de estudio (Practicar)
+
+Al tocar preguntas, `explain` o el build del banco, **no romper** esta matriz:
+
+## Sesión (`sessionType`)
+
+| Valor | Comportamiento |
+|-------|----------------|
+| `libre` | Pool completo del filtro; preprueba opcional |
+| `teorico` | Máx. 30 preguntas (`TEORICO_COUNT`); sin preprueba; en modo examen, temporizador 30 min |
+
+`buildQuestionList()` en `lib/quiz-session.js` aplica el tope en `teorico`.
+
+## Modo (`mode`)
+
+| Valor | Feedback durante la sesión |
+|-------|----------------------------|
+| `study` | Corrección al responder (según `studyFeedback`) |
+| `exam` | Sin feedback hasta finalizar; registro al cierre |
+
+## Feedback en estudio (`studyFeedback`)
+
+| Valor | UI |
+|-------|-----|
+| `immediate` | «Por qué encaja» + bloque Explicación (`pedagogicalExplain`) |
+| `confidence` | Obliga marcar seguridad (baja/media/alta) antes de corregir; luego mismo feedback + calibración |
+| `deepen` | «Por qué encaja» + panel Ampliación (didáctica + `explainSourceNote` si hay plantilla histórica) + enlaces temario/URE |
+
+## Campos de explicación en el banco
+
+- `explain`: texto didáctico principal (generado o manual). Lo usa `pedagogicalExplain()`.
+- `explainSourceNote` (opcional): plantilla «Práctica histórica/con figura…»; solo para origen en profundizar y línea «Origen» en inmediato/confianza.
+- **No** concatenar plantilla histórica dentro de `explain` al fusionar `quijotes-explanations` / `generated-explanations` (`withPedagogicalExplain` en `build-banco-principal.mjs`).
+
+## Repaso inteligente
+
+Usa sesión `libre` + `studyFeedback: confidence` + hasta 15 ítems (`buildSmartReviewQuestionIds`).
+
+## Otras vistas
+
+- **Tarjetas**: `topics-study.js` flashcards; independiente del quiz.
+- **Examen (vista)**: simulacros y preparación; no sustituye feedback de Practicar.
+
+Al generar explicaciones automáticas: priorizar sustituir plantilla FEDI/Quijotes, no sobrescribir explicaciones manuales (`!isTemplateOnlyExplain`), y re-ejecutar `npm run build:banco` tras cambiar `*-explanations.js`.

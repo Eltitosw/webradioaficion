@@ -22,7 +22,7 @@ Abre `http://localhost:3000` (o el puerto que indique el servidor).
 npm run verify:all
 ```
 
-Incluye integridad del banco (244 preguntas activas), comprobaciones extra y tests.
+Incluye integridad del banco (más de 1100 preguntas activas tras cribado ampliado), comprobaciones extra y tests.
 
 ## Publicar una nueva versión
 

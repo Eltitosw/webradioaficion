@@ -234,6 +234,22 @@ export default {
       {
         "front": "Letra griega de constante dieléctrica frecuente",
         "back": "ε (epsilon)"
+      },
+      {
+        "front": "Diodo Zener en inversa controlada",
+        "back": "Referencia o estabilización de tensión"
+      },
+      {
+        "front": "Al subir frecuencia, reactancia capacitiva…",
+        "back": "Baja (menos oposición del condensador)"
+      },
+      {
+        "front": "Transformador ideal: relación de tensiones",
+        "back": "V1/V2 = N1/N2 (espiras)"
+      },
+      {
+        "front": "Resonancia en circuito LC",
+        "back": "Reactancias L y C se igualan; impedancia según montaje serie/paralelo"
       }
     ],
     "sources": "Programa HAREC componentes; esquemas tipo en material URE/FEDI."
@@ -313,6 +329,22 @@ export default {
       {
         "front": "Instrumento para medir potencia en línea",
         "back": "Vatímetro / sensor de potencia (según enunciado)"
+      },
+      {
+        "front": "Detector típico de AM",
+        "back": "Detector de envolvente (diodo)"
+      },
+      {
+        "front": "CAG/AGC en receptor",
+        "back": "Ajusta ganancia automáticamente; no es control de frecuencia"
+      },
+      {
+        "front": "Salidas del mezclador (14 MHz + 4 MHz)",
+        "back": "Suma y diferencia (p. ej. 18 MHz y 10 MHz)"
+      },
+      {
+        "front": "SSB/CW frente a AM en demodulación",
+        "back": "Detector de producto / BFO (no envolvente)"
       }
     ],
     "sources": "CEPT programa; bloques de receptor en guías URE y bancos de práctica."
@@ -392,6 +424,22 @@ export default {
       {
         "front": "Coaxial típico de laboratorio/RF",
         "back": "50 Ω (a veces 75 Ω en TV; lee el enunciado)"
+      },
+      {
+        "front": "Yagi: orden de elementos",
+        "back": "Reflector detrás, excitado central, directores delante"
+      },
+      {
+        "front": "Antena resuena por encima de la frecuencia deseada",
+        "back": "Está corta → alargar para bajar frecuencia de resonancia"
+      },
+      {
+        "front": "HF vs VHF/UHF en propagación (idea de examen)",
+        "back": "HF más ionosfera; VHF/UHF más visión directa y obstáculos"
+      },
+      {
+        "front": "Balun coaxial → dipolo",
+        "back": "Adapta línea no balanceada a antena balanceada; reduce corrientes por malla"
       }
     ],
     "sources": "Anexo I del reglamento (potencias/bandas); programas de antenas HAREC; URE."
@@ -716,6 +764,30 @@ export default {
       {
         "front": "En test, opción más prudente sobre instalaciones",
         "back": "La que refleja límites y procedimientos según norma vigente (no extremos)"
+      },
+      {
+        "front": "Seguro de antenas (titular)",
+        "back": "Cubre responsabilidad civil por daños a terceros de la instalación"
+      },
+      {
+        "front": "Antena en transmisión",
+        "back": "No tocar: puede haber RF peligrosa aunque la ROE sea buena"
+      },
+      {
+        "front": "Tormenta eléctrica",
+        "back": "Desconectar bajada/equipos; no eliminar la toma de tierra de protección"
+      },
+      {
+        "front": "RF en altavoces o equipos cercanos",
+        "back": "Filtros, ferritas, blindaje, tierra; no subir potencia"
+      },
+      {
+        "front": "Estación fija vs desatendida",
+        "back": "Fija en ubicación; desatendida (repetidor/baliza) sin operador permanente y con requisitos propios"
+      },
+      {
+        "front": "Tras cancelar licencia, antena solo recepción",
+        "back": "Puede exigir autorización escrita de propiedad/comunidad (lee el enunciado)"
       }
     ],
     "sources": "BOE reglamento IET/1311/2013; Ley 19/1983 (antenas); vista Normativa."

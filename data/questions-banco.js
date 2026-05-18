@@ -1,14 +1,14 @@
 /**
  * Banco principal: cribado (tier A+B+C) + figuras certificadas, un enunciado = una pregunta.
- * Generado: 2026-05-18 · 1394 preguntas · npm run build:banco
- * Cribado: 1354 · En banco por id: 1351 · Sustituidas por versión con figura: 3
- * Duplicados de enunciado eliminados: 35 (23 grupos)
- * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1394)
- * Con figura: 58
+ * Generado: 2026-05-18 · 1126 preguntas · npm run build:banco
+ * Cribado: 1106 · En banco por id: 1106 · Sustituidas por versión con figura: 0
+ * Duplicados eliminados: 0 (0 exactos, 0 parafraseados)
+ * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1126)
+ * Con figura: 34
  */
 
 export const BANCO_GENERATED_AT = "2026-05-18";
-export const BANCO_STATS = {"count":1394,"cribadoPreferred":1354,"cribadoById":1351,"cribadoReplacedByFigure":3,"withFigure":58,"dedupeRemoved":35,"dedupeGroups":23,"fillAdded":0,"sourceEntries":1729};
+export const BANCO_STATS = {"count":1126,"cribadoPreferred":1106,"cribadoById":1106,"cribadoReplacedByFigure":0,"withFigure":34,"dedupeRemoved":0,"dedupeGroups":0,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1729};
 
 export default [
   {
@@ -23,7 +23,8 @@ export default [
       "Igual a la del de menor capacidad"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «La suma de las capacidades totales».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-004",
@@ -37,7 +38,8 @@ export default [
       "Más capacidad"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Mayor resistencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-005",
@@ -51,21 +53,8 @@ export default [
       "Mil ohmios"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-006",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Un condensador es un dispositivo que almacena:",
-    "options": [
-      "Energía electromagnética",
-      "Dieléctricos",
-      "Cargas eléctricas",
-      "Materia aislante"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Identifica la magnitud y su unidad SI antes de comparar opciones. «Un millón de ohmios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-007",
@@ -79,7 +68,8 @@ export default [
       "Si pero sólo el primero"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Si, todos, al principio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-008",
@@ -93,7 +83,8 @@ export default [
       "Hay que añadirle un condensador"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Basta con pasar una corriente continúa».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-009",
@@ -107,7 +98,8 @@ export default [
       "Con una sola bobina"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Con una sola bobina».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-010",
@@ -121,7 +113,8 @@ export default [
       "Poniendo al accidentado en decúbito supino y llamando a un médico"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En caso de accidente personal por quemaduras debe de atenderse a la victima:»). La opción que responde al criterio del banco es «Limpiando las quemaduras con agua y llamando al médico».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-011",
@@ -135,7 +128,8 @@ export default [
       "No deben ser de hierro"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «No deben protegerse con Fusibles».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-012",
@@ -149,7 +143,8 @@ export default [
       "Su potencia reactiva"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Las ondas EM combinan campo eléctrico y magnético; la luz y la RF son el mismo fenómeno a distinta frecuencia. «La velocidad de la luz».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-013",
@@ -163,7 +158,8 @@ export default [
       "El equipo se quema"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Debido a la distorsión:»). La opción que responde al criterio del banco es «La señal de salida no es igual a la de entrada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-014",
@@ -177,7 +173,8 @@ export default [
       "Si la antena resuena a la frecuencia de la señal"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Cuando se dice que una antena esta sintonizada:»). La opción que responde al criterio del banco es «Si la antena resuena a la frecuencia de la señal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-015",
@@ -191,7 +188,8 @@ export default [
       "Aumenta la potencia del Receptor"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Se utiliza en la detención».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-016",
@@ -205,7 +203,8 @@ export default [
       "Que son elementos pasivos"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Que tienen tres electrodos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-017",
@@ -219,77 +218,8 @@ export default [
       "Japón"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-018",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra S?",
-    "options": [
-      "Sierra",
-      "Sorry",
-      "Sevilla",
-      "Salto"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-019",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra Z?",
-    "options": [
-      "Zona",
-      "Zulú",
-      "Zambia",
-      "Zaragoza"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-020",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra P?",
-    "options": [
-      "Potes",
-      "Pure",
-      "Pony",
-      "Papa"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-021",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra G?",
-    "options": [
-      "Gijón",
-      "Golf",
-      "Giro",
-      "Gato"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-022",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra R?",
-    "options": [
-      "Romeo",
-      "Roma",
-      "Rima",
-      "Ronda"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Juliet».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-023",
@@ -303,7 +233,8 @@ export default [
       "4"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «7».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-024",
@@ -317,7 +248,8 @@ export default [
       "4"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «2».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-025",
@@ -331,7 +263,8 @@ export default [
       "5"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «5».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-026",
@@ -345,7 +278,8 @@ export default [
       "De un conjunto de antenas direccionales y antenas omnidireccionales"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las estaciones de aficionados deberán estar provistas de:»). La opción que responde al criterio del banco es «Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-027",
@@ -359,7 +293,8 @@ export default [
       "Que solamente puede instalarse dentro de los límites de una provincia"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una estación fija es la:»). La opción que responde al criterio del banco es «Autorizada únicamente para su utilización en una ubicación que es fija y que se consigna en la licencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-028",
@@ -373,7 +308,8 @@ export default [
       "No se puede asignar en ningún caso"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «No se puede asignar en ningún caso».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-031",
@@ -387,7 +323,8 @@ export default [
       "3 y 30 MHz"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «3 y 30 MHz».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-032",
@@ -401,7 +338,8 @@ export default [
       "Danger"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Mayday».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-033",
@@ -415,7 +353,8 @@ export default [
       "Ondas Hectométricas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Ondas Kilométricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-034",
@@ -429,7 +368,8 @@ export default [
       "Hay que solicitar autorización para hacerlo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Sin modulación de información solo se transmite la portadora (potencia de portadora). La respuesta es «Sí, si es de duración corta y solo a efectos de ajustes o ensayos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-037",
@@ -443,7 +383,8 @@ export default [
       "Cambiando de emisión a recepción"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando actuamos sobre el conmutador de bandas de un transceptor, estamos:»). La opción que responde al criterio del banco es «Situándolo en el margen de frecuencias deseado».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-038",
@@ -457,7 +398,8 @@ export default [
       "El volumen"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El dial de presentación digital \"digital display\" nos indica:»). La opción que responde al criterio del banco es «La frecuencia de trabajo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-039",
@@ -471,7 +413,8 @@ export default [
       "Disminuye la selectividad"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («Cuando en recepción se disminuye el ancho de banda:»). La opción que responde al criterio del banco es «Aumenta la selectividad».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-040",
@@ -485,7 +428,8 @@ export default [
       "Las variaciones de señal"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Posibles descargas al operador».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-041",
@@ -499,7 +443,8 @@ export default [
       "Modulación de amplitud"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Telegrafía».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-042",
@@ -513,7 +458,8 @@ export default [
       "Desconectar la instalación"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La toma de tierra protege personas y equipos; ante tormenta se desconecta la bajada, no se elimina la protección de tierra. «Desconectar la instalación».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-043",
@@ -527,7 +473,8 @@ export default [
       "No dará ninguna indicación"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Al sintonizar un emisor que tenga un aparato de medida de corriente de placa del paso final, al esta…»). La opción que responde al criterio del banco es «Un mínino».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-044",
@@ -541,7 +488,8 @@ export default [
       "FSK"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Para transmitir una banda lateral superior, el mando \"MODO DE TRANSMISIÓN\" deberá estar en la posici…»). La opción que responde al criterio del banco es «USB».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-045",
@@ -555,7 +503,8 @@ export default [
       "BX"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resolución de frecuencia. «CW».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-046",
@@ -569,7 +518,8 @@ export default [
       "La Portadora"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En un transceptor, al actuar sobre el mando \"Volumen en RF\" variamos:»). La opción que responde al criterio del banco es «El volumen en radiofrecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-047",
@@ -583,7 +533,8 @@ export default [
       "Telefonía, modulación de frecuencia o de fase"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Telefonía, modulación de frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-048",
@@ -597,7 +548,8 @@ export default [
       "Periodo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En CA sinusoidal distinguimos valor máximo, eficaz y periodo; el eficaz es el que equivale térmicamente a una continua. «Frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-049",
@@ -611,7 +563,8 @@ export default [
       "Vatio"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-050",
@@ -625,7 +578,8 @@ export default [
       "Ohmnio"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («El producto de un voltio y un amperio es un:»). La opción que responde al criterio del banco es «Vatio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-051",
@@ -639,7 +593,8 @@ export default [
       "La suma de las resistencias unitarias"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La suma de las resistencias unitarias».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-052",
@@ -653,7 +608,8 @@ export default [
       "Vatio"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Ohmnio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-053",
@@ -667,7 +623,8 @@ export default [
       "Faradio"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La unidad de cantidad de electricidad es el:»). La opción que responde al criterio del banco es «Culombio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-054",
@@ -681,7 +638,8 @@ export default [
       "Electricidad estática"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Al flujo de electrones que circula por un conductor se le llama:»). La opción que responde al criterio del banco es «Corriente eléctrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-055",
@@ -695,7 +653,8 @@ export default [
       "Por medio de un transformador"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («El amperímetro se conecta en:»). La opción que responde al criterio del banco es «Serie».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-056",
@@ -709,7 +668,8 @@ export default [
       "Triángulo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Paralelo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-057",
@@ -723,7 +683,8 @@ export default [
       "Es indiferente la relación de espiras"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «El secundario tiene mas espiras que el primario».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-058",
@@ -737,7 +698,8 @@ export default [
       "Quimica"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Quimica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-059",
@@ -751,7 +713,8 @@ export default [
       "Cuerpos simples"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Semiconductores».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-060",
@@ -765,7 +728,8 @@ export default [
       "Existe un fenómeno histéresis"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un circuto oscilante está en resonancia cuando:»). La opción que responde al criterio del banco es «Se anulan el uno al otro».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-061",
@@ -779,7 +743,8 @@ export default [
       "No sirve para emisión"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Una antena omnidireccional:»). La opción que responde al criterio del banco es «Emite por igual en todas las direcciones».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-062",
@@ -793,7 +758,8 @@ export default [
       "Mezclando dos señales variables"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Cuando se modula un emisor se está:»). La opción que responde al criterio del banco es «Haciendo variar la portadora por medio de otra señal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-063",
@@ -807,7 +773,8 @@ export default [
       "C= R.I"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En condensadores en paralelo se suman capacidades; en serie la capacidad equivalente baja. En CC estable el condensador ideal equivale a circuito abierto. «C= Q/E».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-064",
@@ -821,63 +788,8 @@ export default [
       "Aumentar la capacidad"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-065",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Como se deletrea la letra V:",
-    "options": [
-      "Vaca",
-      "Volta",
-      "Victor",
-      "Vente"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-066",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Como se deletrea la letra L:",
-    "options": [
-      "Land",
-      "Limón",
-      "Luna",
-      "Lima"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-067",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Como se deletrea la letra O:",
-    "options": [
-      "Oscar",
-      "Oton",
-      "Over",
-      "Out"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-068",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Como se deletrea la letra R:",
-    "options": [
-      "Roma",
-      "Rerum",
-      "Romeo",
-      "Radio"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («Una propiedad de la inductancia en un circuito consiste en:»). La opción que responde al criterio del banco es «Oponerse a la variaciones de corriente».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-069",
@@ -891,7 +803,8 @@ export default [
       "Mayday"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Securité».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-070",
@@ -905,7 +818,8 @@ export default [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «VHF».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-071",
@@ -919,21 +833,8 @@ export default [
       "Jaén"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-072",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La abreviatura LF indica:",
-    "options": [
-      "Ondas métrica",
-      "Ondas kilométricas",
-      "Ondas centimétricas",
-      "Ondas hectométricas"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Valencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-074",
@@ -947,21 +848,8 @@ export default [
       "La Dirección General de Telecomunicaciones"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-075",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La cifra 6 identifica una estación ubicada en:",
-    "options": [
-      "Valencia",
-      "Huesca",
-      "Baleares",
-      "Jaén"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La Dirección General de Telecomunicaciones» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-076",
@@ -975,21 +863,8 @@ export default [
       "No"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-081",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La clase de emisión A3 indica:",
-    "options": [
-      "Telefonía de doble banda lateral, portadora completa",
-      "Telegrafia sin modulación",
-      "Telefonía de banda lateral única, portadora suprimida",
-      "Telefonía, dos bandas laterales independientes"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿Está permitido que una estación de aficionado se conecte con otras instalaciones de telecomunicació…»). La opción que responde al criterio del banco es «Sí, cumpliendo ciertas condiciones».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-083",
@@ -1003,7 +878,8 @@ export default [
       "No puede emplearse en estaciones españolas"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («La antena estará acoplada al paso final de salida:»). La opción que responde al criterio del banco es «Por adaptadores y filtros».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-084",
@@ -1017,7 +893,8 @@ export default [
       "Polimetro"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Medidor estacionarias».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-085",
@@ -1031,7 +908,8 @@ export default [
       "Al conectar el micrófono"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Al actuar sobre el conmutador emisión/recepción».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-086",
@@ -1045,7 +923,8 @@ export default [
       "Para que no pueda recibir corriente el operador"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Sobreintensidades».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-087",
@@ -1059,7 +938,8 @@ export default [
       "Sirve de contraantena"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Está conectada a la carcasa del equipo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-088",
@@ -1073,7 +953,8 @@ export default [
       "Poner un plano de tierra"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; vertical de λ/4 necesita plano de tierra o radiales. «Conectar una bobina en la base».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-089",
@@ -1087,7 +968,8 @@ export default [
       "Menor que 0,5"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («La relación de ondas estacionarias para un adecuado funcionamiento debe ser:»). La opción que responde al criterio del banco es «entre 2,5 y 1».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-090",
@@ -1101,7 +983,8 @@ export default [
       "En los circuitos de acoplamiento a la antena."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «En las fuentes de alimentación».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-091",
@@ -1115,7 +998,8 @@ export default [
       "Para disminuir su capacidad"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Para aislar sus placas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-092",
@@ -1129,7 +1013,8 @@ export default [
       "Se emplea en las fuentes de aislamiento"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Un Q bajo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-093",
@@ -1143,7 +1028,8 @@ export default [
       "Como un filtro paso bajo"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Resistivo puro».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-094",
@@ -1157,7 +1043,8 @@ export default [
       "Trifásico de la tensión"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Eficaz de la tensión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-095",
@@ -1171,7 +1058,8 @@ export default [
       "Los valores de su resistencia, potencia que puede disipar, tolerancia y código de colores"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Los valores de su resistencia, potencia que puede disipar y tolerancia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-096",
@@ -1185,7 +1073,8 @@ export default [
       "Si aumenta el periodo de la corriente que por ella circula"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Si aumenta su temperatura».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-097",
@@ -1199,21 +1088,8 @@ export default [
       "V y A en derivación"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-098",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "LA UNIDAD DE POTENCIA eléctrica ES:",
-    "options": [
-      "Culombio",
-      "Vatio",
-      "Voltio",
-      "Amperio"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «V en derivación y A en serie».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-099",
@@ -1227,7 +1103,8 @@ export default [
       "La amplitud máxima de las variaciones de la portadora"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En AM la información va en la amplitud de la portadora; el detector de envolvente recupera esa envolvente. La opción correcta es «El porcentaje de la variación de amplitud que experimenta la portadora».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-100",
@@ -1241,7 +1118,8 @@ export default [
       "Porque los emisores son más sencillos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA TECNICA DE SUPERHETERODINACION SE EMPLEA:»). La opción que responde al criterio del banco es «Porque permiten poner el CAG».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-102",
@@ -1255,7 +1133,8 @@ export default [
       "Sirven para estabilizar la frecuencia de un oscilador controlado por tensión"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («L0S CIRCUITOS CON \"LAZO ENGANCHADO DE FASE\":»). La opción que responde al criterio del banco es «Sirven para estabilizar la frecuencia de un oscilador controlado por tensión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-103",
@@ -1269,7 +1148,8 @@ export default [
       "Alimentación"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Demodulación».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-104",
@@ -1283,7 +1163,8 @@ export default [
       "1.215 MHz. y superiores"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LOS AMPLlFICADORES A CAVIDADES RESONANTES SE EMPLEAN EN LOS TRANSCEPTORES QUE TRABAJAN EN LAS BANDAS…»). La opción que responde al criterio del banco es «144 MHz. y superiores».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-105",
@@ -1297,7 +1178,8 @@ export default [
       "Los pasos de audiofrecuencia"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Los pasos de frecuencia intermedia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-106",
@@ -1311,7 +1193,8 @@ export default [
       "Desacoplar el emisor del receptor en un equipo transceptor"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL \"BALUM\" SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Adaptar una línea de transmisión coaxial asimétrica a una línea simétrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-107",
@@ -1325,7 +1208,8 @@ export default [
       "Radia o recibe en forma omnidireccional"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («UNA ANTENA DIRECTIVA:»). La opción que responde al criterio del banco es «Radia o recibe en dirección preferencial».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-108",
@@ -1339,7 +1223,8 @@ export default [
       "Al silenciador"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («A CUAL DE ESTOS CIRCUITOS DE LA PARTE RECEPTORA DE UN REPETIDOR DEBE ESTAR CONECTADO EL RELE QUE CON…»). La opción que responde al criterio del banco es «Al silenciador».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-109",
@@ -1353,7 +1238,8 @@ export default [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué ABREVIATURA INDICA QUE EL OPERADOR SUFRE UNA INTERFERENCIA?»). La opción que responde al criterio del banco es «QRM».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-110",
@@ -1367,7 +1253,8 @@ export default [
       "QSL"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «QRO».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-111",
@@ -1381,7 +1268,8 @@ export default [
       "QRZ"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACIÓN?»). La opción que responde al criterio del banco es «QSD».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-112",
@@ -1395,7 +1283,8 @@ export default [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué ABREVIATURA INDICA CUAL ES LA SITUACIÓN O UBICACIÓN?»). La opción que responde al criterio del banco es «QTH».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-114",
@@ -1409,7 +1298,8 @@ export default [
       "Es el prefijo correspondiente a una clase de licencia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EA5/EA4EOT/M»). La opción que responde al criterio del banco es «Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 5».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-120",
@@ -1423,7 +1313,8 @@ export default [
       "La abreviatura S.O.S. transmitida separando las tres letras"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «La abreviatura S.O.S. transmitida separando las tres letras».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-a-121",
@@ -1437,7 +1328,23 @@ export default [
       "250 vatios"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «250 vatios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-aa-002",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
+    "options": [
+      "Duplicar la potencia de emisión.",
+      "Optimizar los filtros del transceptor.",
+      "Disminuir la potencia reflejada en la línea de transmisión.",
+      "Incrementar el tiempo de transmisión sin calentamiento del equipo."
+    ],
+    "correctIndex": 1,
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras co…»). La opción que responde al criterio del banco es «Optimizar los filtros del transceptor.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-003",
@@ -1451,7 +1358,8 @@ export default [
       "Un condensador con polaridad."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un dieléctrico es:»). La opción que responde al criterio del banco es «Un aislante.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-004",
@@ -1465,7 +1373,8 @@ export default [
       "Voltios."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Voltios.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-005",
@@ -1479,7 +1388,8 @@ export default [
       "Utilizar para su conexión cable blindado."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Utilizar para su conexión cable blindado.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-006",
@@ -1493,7 +1403,23 @@ export default [
       "La suma de las intensidades de cada una de las ramas."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La suma de las intensidades de cada una de las ramas.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-aa-007",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "Las ondas de radio son de naturaleza:",
+    "options": [
+      "Eléctrica.",
+      "Magnética.",
+      "Electromagnética.",
+      "Acústica."
+    ],
+    "correctIndex": 2,
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («Las ondas de radio son de naturaleza:»). La opción que responde al criterio del banco es «Electromagnética.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-008",
@@ -1507,7 +1433,23 @@ export default [
       "Aumenta el número de átomos por centímetro cuadrado."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La resistencia depende de resistividad, longitud y sección: R = ρ·L/S. La pareja proporcional del enunciado es «La resistencia eléctrica aumenta.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-aa-009",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Una etapa de frecuencia intermedia en un receptor superheterodino, básicamente, se compone de:",
+    "options": [
+      "Atenuadores y mezcladores.",
+      "Osciladores y conversores de tensión.",
+      "Demoduladores y redes inductivas.",
+      "Amplificadores y filtros."
+    ],
+    "correctIndex": 3,
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Amplificadores y filtros.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-010",
@@ -1521,7 +1463,8 @@ export default [
       "Balun."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Balun.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-011",
@@ -1535,7 +1478,8 @@ export default [
       "Nunca podrá conectarse una resistencia en SHUNT."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «En paralelo.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-012",
@@ -1549,7 +1493,8 @@ export default [
       "Cero."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-013",
@@ -1563,7 +1508,8 @@ export default [
       "Amplificar la señal recibida."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («La etapa de detección de un receptor se emplea para:»). La opción que responde al criterio del banco es «Demodular la señal recibida.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-015",
@@ -1577,7 +1523,8 @@ export default [
       "Inexistente."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («El \"Factor de calidad, Q\" de un circuito resonante es:»). La opción que responde al criterio del banco es «La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-016",
@@ -1591,7 +1538,8 @@ export default [
       "Tensión eléctrica."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Los decibelios expresan relaciones logarítmicas; dBm referencia potencia a 1 mW. La respuesta es «Tensión eléctrica.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-017",
@@ -1605,7 +1553,8 @@ export default [
       "Redes de desplazamiento de fase."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Un oscilador de frecuencia variable.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-018",
@@ -1621,7 +1570,23 @@ export default [
       "Control automático de saturación o CAS."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-018)). Contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Control automático de nivel o ALC.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-018)). Contrastar con BOE y convocatoria vigente."
+  },
+  {
+    "id": "fedi-aa-019",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "La sensibilidad de un receptor indica:",
+    "options": [
+      "El ancho de banda del preamplificador de RF.",
+      "Su capacidad para recibir señales débiles.",
+      "El máximo nivel de señal que puede recibir su antena.",
+      "Su capacidad para rechazar señales fuertes."
+    ],
+    "correctIndex": 1,
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su capacidad para recibir señales débiles.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-020",
@@ -1635,7 +1600,8 @@ export default [
       "Permiten aumentar el ancho de banda de emisión."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «Proporcionan directividad.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-021",
@@ -1649,7 +1615,8 @@ export default [
       "La impedancia es constante con la frecuencia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («En una antena pasiva, se puede afirmar que:»). La opción que responde al criterio del banco es «Los diagramas de radiación en transmisión y en recepción son iguales.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-022",
@@ -1663,7 +1630,8 @@ export default [
       "EHF."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «HF.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-023",
@@ -1677,7 +1645,8 @@ export default [
       "Un filtro paso bajo o paso banda."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:»). La opción que responde al criterio del banco es «Un filtro paso bajo o paso banda.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-024",
@@ -1693,23 +1662,8 @@ export default [
       "Evitar el uso del balun."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-024)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-aa-025",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Señale el diagrama de radiación correspondiente a una antena Yagi:",
-    "stemFigure": "images/quiz/fedi-aa-025-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA aa-025 (aa-25a.jpg): Señale el diagrama de radiación correspondiente a una antena Yagi:",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-025)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; vertical de λ/4 necesita plano de tierra o radiales. «Incrementar la longitud eléctrica de la antena.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-024)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-026",
@@ -1723,23 +1677,8 @@ export default [
       "Troposfera - estratosfera - ionosfera."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-aa-027",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Qué valor de los siguientes corresponde a la \"tensión eficaz\" de la señal representada?:",
-    "stemFigure": "images/quiz/fedi-aa-027-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA aa-027 (aa-27.jpg): ¿Qué valor de los siguientes corresponde a la \"tensión eficaz\" de la señal representada?:",
-    "options": [
-      "20 V.",
-      "7,071 V.",
-      "10 V.",
-      "3,14 V."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 23/10/2010 (aa-027)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:»). La opción que responde al criterio del banco es «Troposfera - estratosfera - ionosfera.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-028",
@@ -1753,7 +1692,8 @@ export default [
       "SLI (Sistema Libre de Interferencias)."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En condensadores en paralelo se suman capacidades; en serie la capacidad equivalente baja. En CC estable el condensador ideal equivale a circuito abierto. «Compatibilidad electromágnetica.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-029",
@@ -1767,7 +1707,8 @@ export default [
       "Sólo hay que tenerlo en cuenta en las bandas de VHF y superiores."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La emisión de señales armónicas y espurias:»). La opción que responde al criterio del banco es «Implica la posible producción de interferencias.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-aa-030",
@@ -1781,21 +1722,8 @@ export default [
       "Sólo se deben instalar los de tipo semiconductor."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-041",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Clubs respectivamente?:",
-    "options": [
-      "Los que comienzan por: DD; TT; XX.",
-      "Los que comienzan por: UR y RC o RK.",
-      "Los que comienzan por: MMA, MAM, PAN.",
-      "Los que comienzan por: EEE, EDD, EFF."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Deben tener un valor nominal superior al máximo consumo previsto para el equipo.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-ab-043",
@@ -1809,7 +1737,8 @@ export default [
       "Nunca."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Sean titulares del Certificado HAREC.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-ab-044",
@@ -1823,35 +1752,8 @@ export default [
       "Guadalajara."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-050",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Entre las obligaciones de un gestor de una estación desatendida no se encuentra la de:",
-    "options": [
-      "Actualizar periódicamente la información existente.",
-      "Procurar que el mantenimiento técnico dé la estación garantice el servicio continuo de la misma.",
-      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.",
-      "Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-052",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En caso de que el titular de estación de aficionado tenga constancia de que esta causando interferencias a otros servicios de telecomunicaciones autorizados, ¿qué medida deberá adoptar, de las siguientes propuestas?:",
-    "options": [
-      "Darse de baja inmediatamente en el servicio de aficionados.",
-      "Cambiar de equipo antes de cualquier inspección por parte de la Dirección General de Telecomunicaciones.",
-      "Deberá a su costa, adoptar en su estación todas las medidas razonables de tipo técnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspección de Telecomunicaciones las medidas adoptadas.",
-      "Seguir emitiendo."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Ávila.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-ab-053",
@@ -1865,49 +1767,8 @@ export default [
       "Si dispone de diploma desde hace más de 15 años."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-056",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Un radioaficionado está obligado a ser socio de una asociación de radioaficionados:",
-    "options": [
-      "Siempre.",
-      "Únicamente si el radioaficionado es menor de 18 años.",
-      "No.",
-      "Únicamente si efectúa emisiones en frecuencias atribuidas al Servicio de Aficionados por Satélite."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-059",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción grave:",
-    "options": [
-      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias.",
-      "Efectuar emisiones radioeléctricas que incumplan gravemente los límites de exposición establecidos en la normativa de desarrollo del artículo 44 de esta Ley e incumplir gravemente las demás medidas de seguridad establecidas en dicha normativa, incluidas las obligaciones de señalización o vallado de las instalaciones radioeléctricas.",
-      "La divulgación del contenido, o de simples existencias, de mensajes no destinados al público en general emitidos o recibidos a través de servicios de telecomunicaciones, a los que se acceda mediante la interceptación voluntaria o involuntaria, su publicación o cualquier otro uso de ellos sin la debida autorización.",
-      "El incumplimiento reiterado de los requerimientos de información formulados por el órgano competente de la Administración del Estado en el ejercicio de sus funciones."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-ab-060",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fonético internacional con que palabra se identifica la letra U:",
-    "options": [
-      "Uniform.",
-      "Unidad.",
-      "Universal.",
-      "Ungir."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:»). La opción que responde al criterio del banco es «En ningún caso.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-ag-001",
@@ -1955,14 +1816,12 @@ export default [
     "id": "fedi-ag-004",
     "part": 1,
     "topicId": "componentes",
-    "stem": "En un transformador, si V es la tensión y N el número de espiras, podemos decir que:",
-    "stemFigure": "images/quiz/fedi-ag-004-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA ag-004 (ag-4a.jpg): En un transformador, si V es la tensión y N el número de espiras, podemos decir que:",
+    "stem": "En un transformador ideal, si V es la tensión y N el número de espiras, se cumple:",
     "options": [
-      "",
-      "",
-      "",
-      "Ninguna de las anteriores es correcta."
+      "V1 / V2 = N1 / N2",
+      "V1 · N1 = V2 · N2",
+      "La tensión es inversamente proporcional al cuadrado de N",
+      "Ninguna de las anteriores es correcta"
     ],
     "correctIndex": 0,
     "explain": "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A–C vacías; aquí se ha normalizado el enunciado. FEDI-EA."
@@ -1995,7 +1854,7 @@ export default [
       "Ninguna de las respuestas anteriores es correcta"
     ],
     "correctIndex": 3,
-    "explain": "Tensión en paralelo, intensidad en serie; la resistencia se mide sin alimentación en circuito. FEDI-EA."
+    "explain": "Tensión en paralelo, intensidad en serie; la resistencia se mide sin alimentación en circuito. La respuesta que marca el banco es «Ninguna de las respuestas anteriores es correcta». Tensión en paralelo, intensidad en serie; la resistencia se mide sin alimentación en circuito. FEDI-EA."
   },
   {
     "id": "fedi-ag-007",
@@ -2129,7 +1988,7 @@ export default [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 2,
-    "explain": "Sin modulación solo se transmite la portadora no modulada. FEDI-EA."
+    "explain": "Sin modulación solo se transmite la portadora no modulada. La respuesta que marca el banco es «Potencia de portadora». Sin modulación solo se transmite la portadora no modulada. FEDI-EA."
   },
   {
     "id": "fedi-ag-016",
@@ -2159,7 +2018,7 @@ export default [
       "Alto nivel de ruido térmico"
     ],
     "correctIndex": 2,
-    "explain": "Las no linealidades mezclan frecuencias y crean productos de intermodulación. FEDI-EA."
+    "explain": "Las no linealidades mezclan frecuencias y crean productos de intermodulación. La respuesta que marca el banco es «Distorsión por intermodulación». Las no linealidades mezclan frecuencias y crean productos de intermodulación. FEDI-EA."
   },
   {
     "id": "fedi-ag-018",
@@ -2173,7 +2032,7 @@ export default [
       "Un factor que solo se aplica en corriente continua"
     ],
     "correctIndex": 0,
-    "explain": "cos φ relaciona potencia activa y aparente en CA. FEDI-EA."
+    "explain": "cos φ relaciona potencia activa y aparente en CA. La respuesta que marca el banco es «Indicador del desfasaje entre tensión y corriente». cos φ relaciona potencia activa y aparente en CA. FEDI-EA."
   },
   {
     "id": "fedi-ag-019",
@@ -2187,7 +2046,7 @@ export default [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 0,
-    "explain": "Diodo: conducción preferente en un sentido. FEDI-EA."
+    "explain": "Diodo: conducción preferente en un sentido. La respuesta que marca el banco es «Permiten el paso de la corriente en una única dirección». Diodo: conducción preferente en un sentido. FEDI-EA."
   },
   {
     "id": "fedi-ag-020",
@@ -2203,7 +2062,7 @@ export default [
       "Una reducción del ruido captado por la antena."
     ],
     "correctIndex": 2,
-    "explain": "Los radiales influyen en la impedancia vista en la base. FEDI-EA."
+    "explain": "Los radiales influyen en la impedancia vista en la base. La respuesta que marca el banco es «Una variación de la impedancia de entrada.». Los radiales influyen en la impedancia vista en la base. FEDI-EA."
   },
   {
     "id": "fedi-ag-021",
@@ -2217,7 +2076,7 @@ export default [
       "Excesivo nivel de señal en la antena"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. FEDI-EA."
+    "explain": "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. La respuesta que marca el banco es «Excesivo nivel de señal en la antena». RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. FEDI-EA."
   },
   {
     "id": "fedi-ag-022",
@@ -2231,7 +2090,7 @@ export default [
       "No se puede calcular"
     ],
     "correctIndex": 0,
-    "explain": "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. FEDI-EA."
+    "explain": "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. La respuesta que marca el banco es «7.500 Ω y 5 %». En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. FEDI-EA."
   },
   {
     "id": "fedi-ag-023",
@@ -2261,7 +2120,7 @@ export default [
       "Un valor de impedancia próximo a 50&Omega; y un diagrama de radiación prácticamente omnidireccional."
     ],
     "correctIndex": 3,
-    "explain": "Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. FEDI-EA."
+    "explain": "Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. La respuesta que marca el banco es «Un valor de impedancia próximo a 50&Omega; y un diagrama de radiación prácticamente omnidireccional.». Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. FEDI-EA."
   },
   {
     "id": "fedi-ag-025",
@@ -2275,7 +2134,7 @@ export default [
       "Tomas de tierra y condensadores"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y líneas donde no debe. FEDI-EA."
+    "explain": "RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y líneas donde no debe. La respuesta que marca el banco es «Tomas de tierra y condensadores». RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y líneas donde no debe. FEDI-EA."
   },
   {
     "id": "fedi-ag-026",
@@ -2333,7 +2192,7 @@ export default [
       "Suprimiendo la portadora"
     ],
     "correctIndex": 1,
-    "explain": "EMI significa interferencia electromagnética y RF significa radiofrecuencia. Los filtros de línea en la alimentación reducen interferencias conducidas. FEDI-EA."
+    "explain": "EMI significa interferencia electromagnética y RF significa radiofrecuencia. Los filtros de línea en la alimentación reducen interferencias conducidas. La respuesta que marca el banco es «Colocando un filtro apropiado». EMI significa interferencia electromagnética y RF significa radiofrecuencia. Los filtros de línea en la alimentación reducen interferencias conducidas. FEDI-EA."
   },
   {
     "id": "fedi-ag-030",
@@ -2361,7 +2220,7 @@ export default [
       "En Europa sólo se exige en España y Portugal"
     ],
     "correctIndex": 0,
-    "explain": "Evalúa competencias; aún hay autorización y trámites. FEDI-EA bloque ah (22/10/2011)."
+    "explain": "Evalúa competencias; aún hay autorización y trámites. FEDI-EA bloque ah (22/10/2011). La respuesta que marca el banco es «Evalúa la capacidad de la persona para operar estaciones radioeléctricas del Servicio de Aficionados y Servicio de Aficionados por Satélite». Evalúa competencias; aún hay autorización y trámites. FEDI-EA bloque ah (22/10/2011)."
   },
   {
     "id": "fedi-ah-032",
@@ -2375,7 +2234,7 @@ export default [
       "No están permitidos en la reglamentación vigente"
     ],
     "correctIndex": 0,
-    "explain": "Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignación. FEDI-EA."
+    "explain": "Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignación. La respuesta que marca el banco es «Se reservan para concursos internacionales de alta competitividad». Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignación. FEDI-EA."
   },
   {
     "id": "fedi-ah-033",
@@ -2389,7 +2248,7 @@ export default [
       "Empieza siempre por la letra Q"
     ],
     "correctIndex": 3,
-    "explain": "Los códigos Q son grupos de tres letras empezando por Q. FEDI-EA."
+    "explain": "Los códigos Q son grupos de tres letras empezando por Q. La respuesta que marca el banco es «Empieza siempre por la letra Q». Los códigos Q son grupos de tres letras empezando por Q. FEDI-EA."
   },
   {
     "id": "fedi-ah-034",
@@ -2403,7 +2262,7 @@ export default [
       "Medio año"
     ],
     "correctIndex": 2,
-    "explain": "Plazo habitual citado en supuestos de comunidad de propietarios (verificar normativa vigente). FEDI-EA."
+    "explain": "Plazo habitual citado en supuestos de comunidad de propietarios (verificar normativa vigente). La respuesta que marca el banco es «Tres meses». Plazo habitual citado en supuestos de comunidad de propietarios (verificar normativa vigente). FEDI-EA."
   },
   {
     "id": "fedi-ah-035",
@@ -2445,7 +2304,7 @@ export default [
       "Únicamente si emite con más de 500 W de potencia"
     ],
     "correctIndex": 2,
-    "explain": "La Administración puede inspeccionar el cumplimiento normativo. FEDI-EA."
+    "explain": "La Administración puede inspeccionar el cumplimiento normativo. La respuesta que marca el banco es «Siempre». La Administración puede inspeccionar el cumplimiento normativo. FEDI-EA."
   },
   {
     "id": "fedi-ah-038",
@@ -2501,7 +2360,7 @@ export default [
       "Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales"
     ],
     "correctIndex": 3,
-    "explain": "Equilibrio entre obras y restitución; contrasta con Ley de propiedad horizontal vigente. FEDI-EA."
+    "explain": "Equilibrio entre obras y restitución; contrasta con Ley de propiedad horizontal vigente. La respuesta que marca el banco es «Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales». Equilibrio entre obras y restitución; contrasta con Ley de propiedad horizontal vigente. FEDI-EA."
   },
   {
     "id": "fedi-ah-042",
@@ -2515,7 +2374,7 @@ export default [
       "El deletreo no está permitido"
     ],
     "correctIndex": 0,
-    "explain": "En español se usan nombres ICAO en castellano (Noviembre, no November). FEDI-EA."
+    "explain": "En español se usan nombres ICAO en castellano (Noviembre, no November). La respuesta que marca el banco es «Alfa, Noviembre, Seis, Bravo, Lima». En español se usan nombres ICAO en castellano (Noviembre, no November). FEDI-EA."
   },
   {
     "id": "fedi-ah-043",
@@ -2529,7 +2388,7 @@ export default [
       "18 meses"
     ],
     "correctIndex": 1,
-    "explain": "Plazo del enunciado FEDI; verifica con reglamento vigente. FEDI-EA."
+    "explain": "Plazo del enunciado FEDI; verifica con reglamento vigente. La respuesta que marca el banco es «12 meses». Plazo del enunciado FEDI; verifica con reglamento vigente. FEDI-EA."
   },
   {
     "id": "fedi-ah-044",
@@ -2543,7 +2402,7 @@ export default [
       "Siempre"
     ],
     "correctIndex": 3,
-    "explain": "Identificación obligatoria según servicio. FEDI-EA."
+    "explain": "Identificación obligatoria según servicio. La respuesta que marca el banco es «Siempre». Identificación obligatoria según servicio. FEDI-EA."
   },
   {
     "id": "fedi-ah-045",
@@ -2557,7 +2416,7 @@ export default [
       "Emitir en las bandas y con las características del reglamento"
     ],
     "correctIndex": 3,
-    "explain": "La autorización delimita bandas y condiciones técnicas según normativa. FEDI-EA."
+    "explain": "La autorización delimita bandas y condiciones técnicas según normativa. La respuesta que marca el banco es «Emitir en las bandas y con las características del reglamento». La autorización delimita bandas y condiciones técnicas según normativa. FEDI-EA."
   },
   {
     "id": "fedi-ah-046",
@@ -2585,7 +2444,7 @@ export default [
       "Periodo de validez"
     ],
     "correctIndex": 2,
-    "explain": "No es requisito CEPT listar la asociación del titular. FEDI-EA."
+    "explain": "No es requisito CEPT listar la asociación del titular. La respuesta que marca el banco es «Asociación de radioaficionados a la que pertenece». No es requisito CEPT listar la asociación del titular. FEDI-EA."
   },
   {
     "id": "fedi-ah-048",
@@ -2613,7 +2472,7 @@ export default [
       "Obtiene la nacionalidad del país"
     ],
     "correctIndex": 2,
-    "explain": "El HAREC acredita el examen armonizado CEPT. FEDI-EA."
+    "explain": "El HAREC acredita el examen armonizado CEPT. La respuesta que marca el banco es «Dispone del certificado HAREC». El HAREC acredita el examen armonizado CEPT. FEDI-EA."
   },
   {
     "id": "fedi-ah-050",
@@ -2683,7 +2542,7 @@ export default [
       "No se aplican en el hemisferio sur"
     ],
     "correctIndex": 1,
-    "explain": "La banda de 70 cm es típica de repetidores en planes IARU Región 1. FEDI-EA."
+    "explain": "La banda de 70 cm es típica de repetidores en planes IARU Región 1. La respuesta que marca el banco es «Prevén repetidores en 433–433,375 MHz». La banda de 70 cm es típica de repetidores en planes IARU Región 1. FEDI-EA."
   },
   {
     "id": "fedi-ah-055",
@@ -2725,7 +2584,7 @@ export default [
       "200 W"
     ],
     "correctIndex": 0,
-    "explain": "Valor del test FEDI (2011); revisa cuadro de potencias vigente en el reglamento actual. FEDI-EA."
+    "explain": "Valor del test FEDI (2011); revisa cuadro de potencias vigente en el reglamento actual. La respuesta que marca el banco es «50 W». Valor del test FEDI (2011); revisa cuadro de potencias vigente en el reglamento actual. FEDI-EA."
   },
   {
     "id": "fedi-ah-058",
@@ -2739,7 +2598,7 @@ export default [
       "Constituye el documento fundamental de regulación de la radioafición"
     ],
     "correctIndex": 3,
-    "explain": "Es la norma principal del servicio (junto a ley y reglamentos de desarrollo). FEDI-EA."
+    "explain": "Es la norma principal del servicio (junto a ley y reglamentos de desarrollo). La respuesta que marca el banco es «Constituye el documento fundamental de regulación de la radioafición». Es la norma principal del servicio (junto a ley y reglamentos de desarrollo). FEDI-EA."
   },
   {
     "id": "fedi-ah-059",
@@ -2753,7 +2612,7 @@ export default [
       "Se permiten salvo que una Administración notifique oposición"
     ],
     "correctIndex": 3,
-    "explain": "Criterio habitual del temario sobre comunicaciones internacionales. FEDI-EA."
+    "explain": "Criterio habitual del temario sobre comunicaciones internacionales. La respuesta que marca el banco es «Se permiten salvo que una Administración notifique oposición». Criterio habitual del temario sobre comunicaciones internacionales. FEDI-EA."
   },
   {
     "id": "fedi-ah-060",
@@ -2767,7 +2626,7 @@ export default [
       "Seguir emitiendo"
     ],
     "correctIndex": 1,
-    "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. FEDI-EA."
+    "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. La respuesta que marca el banco es «Suspender de inmediato las emisiones». Ante interferencias perjudiciales, cesar emisiones hasta resolver. FEDI-EA."
   },
   {
     "id": "fedi-b-158",
@@ -2781,7 +2640,8 @@ export default [
       "Acústica"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Química».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-159",
@@ -2795,7 +2655,8 @@ export default [
       "Si es estático o giratorio"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «La fuerza electromotriz que produce».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-160",
@@ -2809,7 +2670,8 @@ export default [
       "Voltios"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «Voltios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-161",
@@ -2823,7 +2685,8 @@ export default [
       "Mercurio"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Mercurio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-162",
@@ -2837,7 +2700,8 @@ export default [
       "A disponerlo en forma de espiral"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «A dejar pasar la corriente eléctrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-163",
@@ -2851,7 +2715,8 @@ export default [
       "Vatios"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Ohmnios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-164",
@@ -2865,7 +2730,8 @@ export default [
       "El calor que produce al pasar por una estufa"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se define la corriente eléctrica diciendo que es:»). La opción que responde al criterio del banco es «La circulación de cargas eléctricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-165",
@@ -2879,7 +2745,8 @@ export default [
       "1= R x I x V"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («Una de las expresiones de la Ley de Ohm es:»). La opción que responde al criterio del banco es «V = R X I».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-166",
@@ -2893,7 +2760,8 @@ export default [
       "Abrir y cerrar un circuito eléctrico"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un relevador o relé es un electroimán que se emplea para:»). La opción que responde al criterio del banco es «Abrir y cerrar un circuito eléctrico».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-167",
@@ -2907,7 +2775,8 @@ export default [
       "Propiedad de calentamiento automático"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La inducción aparece cuando varía el flujo magnético; la ley de Lenz indica que la corriente inducida se opone a la causa. «Inercia u oposición a las variaciones de la corriente».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-168",
@@ -2921,7 +2790,8 @@ export default [
       "Cesa de pasar una corriente eléctrica por la bobina"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un electroimán atrae al hierro solamente cuando:»). La opción que responde al criterio del banco es «Se hace pasar por su bobina una corriente eléctrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-169",
@@ -2935,7 +2805,8 @@ export default [
       "Su finalidad, dar calor o mover un motor"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En CA sinusoidal distinguimos valor máximo, eficaz y periodo; el eficaz es el que equivale térmicamente a una continua. «Su frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-170",
@@ -2949,7 +2820,8 @@ export default [
       "Transformar una corriente alterna en otra también alterna"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Transformar una corriente alterna en otra también alterna».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-171",
@@ -2963,7 +2835,8 @@ export default [
       "Aumentar la directividad de la antena"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Aumentar la directividad de la antena».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-172",
@@ -2977,7 +2850,8 @@ export default [
       "La diferencia entre las frecuencias máxima y mínima que se producen al modular"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En términos generales, puede decirse que la anchura de banda de una emisión de radio es:»). La opción que responde al criterio del banco es «La diferencia entre las frecuencias máxima y mínima que se producen al modular».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-173",
@@ -2991,7 +2865,8 @@ export default [
       "Alimentar al emisor cuando se habla frente al micrófono"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («En un emisor de radio, la modulación consiste en:»). La opción que responde al criterio del banco es «Modificar las características de la onda portadora de acuerdo con las de la onda de la señal que se desea transmitir».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-174",
@@ -3005,7 +2880,8 @@ export default [
       "Disminuir el calor"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En un emisor de radio, los amplificadores se emplean para:»). La opción que responde al criterio del banco es «Aumentar la potencia del emisor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-175",
@@ -3019,7 +2895,8 @@ export default [
       "Menor interferencia a otras emisiones de frecuencia próxima"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Menor interferencia a otras emisiones de frecuencia próxima».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-176",
@@ -3033,63 +2910,8 @@ export default [
       "Hacer que la frecuencia varíe continuamente en un amplio margen"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-177",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra Y?",
-    "options": [
-      "YANKEE",
-      "YOKO",
-      "YES",
-      "YUGO"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-178",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra H?",
-    "options": [
-      "HILO",
-      "HOT",
-      "HOTEL",
-      "HALL"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-179",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra M?",
-    "options": [
-      "MAS",
-      "METRO",
-      "MIKE",
-      "MORE"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-180",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se deletrea la letra D?",
-    "options": [
-      "DIN",
-      "DOOR",
-      "DAY",
-      "DELTA"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resolución de frecuencia. «Producir una corriente alterna».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-181",
@@ -3103,7 +2925,8 @@ export default [
       "AYUDA"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «MAYDAY».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-182",
@@ -3117,7 +2940,8 @@ export default [
       "Es toda estación de aficionados destinada a ser utilizada en movimiento"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Estación movil de aficionado:»). La opción que responde al criterio del banco es «Estación que puede ser utilizada en movimiento o mientras está detenida en puntos no determinados».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-183",
@@ -3131,35 +2955,8 @@ export default [
       "HF"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-184",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "La abreviatura HF indica:",
-    "options": [
-      "Ondas hectométricas",
-      "Ondas decamétricas",
-      "Ondas centimétricas",
-      "Ondas kilométricas"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-185",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La abreviatura MF indica:",
-    "options": [
-      "Ondas hectométricas",
-      "Ondas métricas",
-      "Ondas centimétricas",
-      "Ondas kilométricas"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «HF».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-186",
@@ -3173,7 +2970,8 @@ export default [
       "¿Cómo se llama su estación?"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La abreviatura QRA indica:»). La opción que responde al criterio del banco es «¿Cómo se llama su estación?».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-187",
@@ -3187,7 +2985,8 @@ export default [
       "Ondas VHF"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Ondas decamétricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-188",
@@ -3201,21 +3000,8 @@ export default [
       "SHF"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-189",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "LA CLASE DE EMISIÓN F3:",
-    "options": [
-      "Telegrafía, modulación de frecuencia o de fase",
-      "Telefonía, modulación de frecuencia",
-      "Modulación de frecuencia y fase en general",
-      "Telefonía, modulación de frecuencia o de fase"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («LA BANDA DE 430 A 440 MHZ PERTENECE A LAS ONDAS:»). La opción que responde al criterio del banco es «UHF».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-190",
@@ -3229,7 +3015,8 @@ export default [
       "QSO"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA QUE EL OPERADOR DE LA ESTACIÓN LLAMARÁ MAS TARDE?»). La opción que responde al criterio del banco es «QRX».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-191",
@@ -3243,7 +3030,8 @@ export default [
       "Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicación, a cada país"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Se atribuyen, en la Conferencia Europea de Administraciones postales y de Telecomunicación, a cada país».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-192",
@@ -3257,7 +3045,8 @@ export default [
       "Empiezan por combinaciones de 2 letras o cifras"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «Empieza por la combinación de letras o cifras con una longitud máxima de tres.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-194",
@@ -3271,7 +3060,8 @@ export default [
       "5"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «5».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-198",
@@ -3285,7 +3075,8 @@ export default [
       "De rectificador de selenio"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («EL AMPERÍMETRO DE ANTENA ES DEL TIPO:»). La opción que responde al criterio del banco es «De radiofrecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-199",
@@ -3299,7 +3090,8 @@ export default [
       "Mejora el efecto demulación"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Disminuye la frecuencia de resonancia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-200",
@@ -3313,7 +3105,8 @@ export default [
       "Mejora la estabilidad de la frecuencia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («LA INFLUENCIA DE UN CONDENSADOR EN SERIE EN LA BASE DE LA ANTENA ES:»). La opción que responde al criterio del banco es «Aumentar su frecuencia de resonancia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-201",
@@ -3327,21 +3120,8 @@ export default [
       "Haga saltar chispas en el condensador de antena"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-202",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "PARA ALARGAR LA LONGITUD DE ONDA ELÉCTRICA DE UNA ANTENA SE PUEDE PROCEDER A:",
-    "options": [
-      "Acortar el hilo de antena",
-      "Disminuir la corriente de antena",
-      "Aumentar la autoinducción de la base",
-      "Modular más profundamente"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («SE AJUSTAN LOS ELEMENTOS DE RESONANCIA DE LA ANTENA VARIANDOLOS DE MODO QUE LA CORRIENTE EN LA MISMA…»). La opción que responde al criterio del banco es «Alcance un máximo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-203",
@@ -3355,7 +3135,8 @@ export default [
       "Modular menos profundamente"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («PARA ACORTAR LA LONGITUD DE UNA ANTENA SE PUEDE PROCEDER A:»). La opción que responde al criterio del banco es «Insertar un condensador, en serie, en la base».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-204",
@@ -3369,7 +3150,8 @@ export default [
       "Una bobina y un condensador"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («LOS ELEMENTOS VARIABLES DE QUE GENERALMENTE SE DISPONE, EN SERIE, EN LA BASE DE UNA ANTENA, PARA AJU…»). La opción que responde al criterio del banco es «Una bobina y un condensador».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-205",
@@ -3383,7 +3165,8 @@ export default [
       "El medidor de sensibilidad de la señal"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «El medidor de sensibilidad de la señal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-206",
@@ -3397,7 +3180,8 @@ export default [
       "Al seleccionar la banda de funcionamíento"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En dos etapas; en la primera se aplica una tensión media; y después del primer ajuste, se aplica toda la tensión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-207",
@@ -3411,7 +3195,8 @@ export default [
       "Desconectar el micrófono y conectar en su lugar un altavoz"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Actuar un conmutador de paso de una a otra función».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-208",
@@ -3425,7 +3210,8 @@ export default [
       "Unas veces aumenta y otras disminuye"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Aumenta».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-209",
@@ -3439,7 +3225,8 @@ export default [
       "Para medir intensidad, se intercala en serie"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («¿PARA QUE SIRVE Y COMO SE INTERCALA UN AMPERÍMETRO EN UN CIRCUÍTO ELÉCTRICO?»). La opción que responde al criterio del banco es «Para medir intensidad, se intercala en serie».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-210",
@@ -3453,7 +3240,8 @@ export default [
       "Verde"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Verde».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-211",
@@ -3467,7 +3255,8 @@ export default [
       "La corriente que pasa es ligeramente inferior que la del primario"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «No hay paso de corriente».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-212",
@@ -3481,21 +3270,8 @@ export default [
       "La cuarta parte de una de ellas"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-213",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "EN UNA ONDA ELECTROMAGNETICA EL PRODUCTO DE SU FRECUENCIA Y SU LONGITUD DE ONDA ES IGUAL A:",
-    "options": [
-      "La velocidad de la luz",
-      "La amplitud de las oscilaciones",
-      "El período",
-      "Su potencia reactiva"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «El doble del de cada una de ellas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-214",
@@ -3509,35 +3285,8 @@ export default [
       "Transformar la corriente alterna en continua"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-215",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "EL NUMERO DE VECES POR SEGUNDO QUE UNA CORRIENTE ALTERNA COMPLETA UN CICLO RECIBE EL NOMBRE DE:",
-    "options": [
-      "Elongación",
-      "Frecuencia",
-      "Longitud de onda",
-      "Período"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-216",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "LA UNIDAD DE CANTIDAD DE ELECTRICIDAD ES EL:",
-    "options": [
-      "Amperio",
-      "Culombio",
-      "Henrio",
-      "Faradio"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Transformar la corriente alterna en continua».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-217",
@@ -3551,7 +3300,8 @@ export default [
       "No hay caída de tensión"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Directamente proporcional al valor de la resistencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-218",
@@ -3565,7 +3315,8 @@ export default [
       "Un dispositivo de dos terminales"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Un semiconductor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-219",
@@ -3579,7 +3330,8 @@ export default [
       "Impedancia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Heterodinación».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-220",
@@ -3593,7 +3345,8 @@ export default [
       "Mantiene constante el nivel de la señal de salida de un emisor cuando se modula en onda continua o en banda lateral única"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL CONTROL AUTOMÁTICO DE GANANCIA:»). La opción que responde al criterio del banco es «Sirve para mantener constante el nivel de salida del receptor, cuando varia la intensidad del campo recibido».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-221",
@@ -3607,7 +3360,8 @@ export default [
       "Para hacer una multiplicación de la frecuencia portadora"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA DETECCIÓN SIRVE PARA:»). La opción que responde al criterio del banco es «Extraer la información de la señal modulada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-222",
@@ -3621,49 +3375,8 @@ export default [
       "Placa y cátodo"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-223",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "LA FUNCIÓN DE UN OSCILADOR ES:",
-    "options": [
-      "Asegurar un equilibrio eléctrico estable",
-      "Hacer que un equipo de radio pase de emisor a receptor y viceversa",
-      "Producir una corriente alterna",
-      "Ser modulado por la portadora"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-224",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "EN UN EMISOR DE RADIO, LOS AMPLIFICADORES SE EMPLEAN PARA:",
-    "options": [
-      "Multiplicar el valor de la frecuencia",
-      "Aumentar la potencia del emisor",
-      "Disminuir el consumo",
-      "Disminuir el calor"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-225",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "EN UN EMISOR DE RADIO LA MODULACIÓN CONSISTE EN:",
-    "options": [
-      "Aplicar la señal del micrófono directamente a la antena",
-      "Modificar las características de la onda portadora de acuerdo con las de la onda de la señal que se desea transmitir",
-      "Aplicar la señal del Oscilador, una vez amplificada, directamente a la antena",
-      "Alimentar el detector cuando se habla frente al micrófono"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Placa y cátodo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-226",
@@ -3677,7 +3390,8 @@ export default [
       "La corriente inversa de Pico"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («SE AUMENTA EL ALCANCE DE UNA EMISORA SI SE AUMENTA:»). La opción que responde al criterio del banco es «La directividad de la antena».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-227",
@@ -3691,7 +3405,8 @@ export default [
       "Invertir la polarización"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN UNA VÁLVULA ELECTRÓNICA LA FUNCIÓN DEL CÁTODO ES:»). La opción que responde al criterio del banco es «Emitir electrones».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-228",
@@ -3705,7 +3420,8 @@ export default [
       "3"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «4».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-230",
@@ -3719,77 +3435,8 @@ export default [
       "Nine"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-231",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿COMO SE DELETREA EL NUMERO 6?",
-    "options": [
-      "Six",
-      "Sine",
-      "Soxisix",
-      "Seise"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-232",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿COMO SE DELETREA LA LETRA M?",
-    "options": [
-      "Monde",
-      "Mike",
-      "Morris",
-      "Mina"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-233",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿COMO SE DELETREA LA LETRA L?",
-    "options": [
-      "Lote",
-      "Londres",
-      "Lima",
-      "Lündi"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-234",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿COMO SE DELETREA LA LETRA F?",
-    "options": [
-      "Filo",
-      "Foxtrot",
-      "Fronda",
-      "Fase"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-235",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿COMO SE DELETREA LA LETRA A?",
-    "options": [
-      "Átomo",
-      "Ávila",
-      "Alfa",
-      "Aran"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Nine».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-236",
@@ -3803,7 +3450,8 @@ export default [
       "Ondas VHF"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Ondas decamétricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-237",
@@ -3817,21 +3465,8 @@ export default [
       "Ondas kilométricas"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-241",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "LA ANTENA ESTARA ACOPLADA AL PASO FINAL DE SALIDA:",
-    "options": [
-      "Directamente",
-      "Por una tierra intermedia",
-      "Por adaptadores y filtros",
-      "No se acopla"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Ondas kilométricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-242",
@@ -3845,7 +3480,8 @@ export default [
       "Reincidir en una falta leve"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («CONSTITUYE UNA FALTA GRAVE:»). La opción que responde al criterio del banco es «Reincidir en una falta leve».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-243",
@@ -3859,35 +3495,8 @@ export default [
       "Cuatro Nanovatios"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-245",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿ESTA PERMITIDO QUE UNA ESTACIÓN DE AFICIONADO SE CONECTE CON OTRAS INSTALACIONES DE TELECOMUNICACIÓN?",
-    "options": [
-      "Sí",
-      "Sí, cumpliendo ciertas condiciones",
-      "Sí, limitándola duración del enlace",
-      "No"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-248",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "CUANDO EL MODO DE EMISIÓN ESTA EN LA POSICIÓN CW SE PUEDE TRABAJAR EN:",
-    "options": [
-      "Fonia",
-      "Frecuencia modulada",
-      "Telegrafía",
-      "Modulación de amplitud"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA POTENCIA DE LA RADIACIÓN PERTURBADORA DE LOS RECEPTORES DE UNA ESTACIÓN DE AFICIONADO, EN LAS BAN…»). La opción que responde al criterio del banco es «Cuatro Nanovatios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-249",
@@ -3901,7 +3510,8 @@ export default [
       "Emplear diferentes unidades de alimentación"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («AL UTILIZAR UN TRANSCEPTOR COMO EMISOR O RECEPTOR SE TIENE QUE:»). La opción que responde al criterio del banco es «Actuar un conmutador de paso de una a otra función».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-250",
@@ -3915,7 +3525,8 @@ export default [
       "Variar la potencia"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN UN TRANSCEPTOR, EL CONMUTADOR DE BANDAS SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Emitir/recibir en el margen de frecuencias deseado».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-251",
@@ -3929,7 +3540,8 @@ export default [
       "No ser de acero ni estar enterrado"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («EL CABLE QUE UNE LA ANTENA AL EMISOR DEBE DE:»). La opción que responde al criterio del banco es «Estar apantallado».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-252",
@@ -3943,21 +3555,8 @@ export default [
       "Debe llevar un diferencial"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-256",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "AL SINTONIZAR UN EMISOR QUE TENGA UN APARATO DE MEDIDA DE CORRIENTE DE PLACA DEL PASO FINAL, AL ESTAR BIEN AJUSTADO ESTE MEDIDOR MARCARA:",
-    "options": [
-      "Un máximo",
-      "Un mínimo",
-      "Es indiferente",
-      "No dará ninguna indicación"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «No debe llevar fusible de protección».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-258",
@@ -3971,7 +3570,8 @@ export default [
       "El valor instantáneo máximo dividido por n"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En CA sinusoidal distinguimos valor máximo, eficaz y periodo; el eficaz es el que equivale térmicamente a una continua. «Un valor que se corresponde con una corriente continua capaz de producir el mismo efecto térmico».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-259",
@@ -3985,7 +3585,8 @@ export default [
       "Velocidad"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En CA sinusoidal distinguimos valor máximo, eficaz y periodo; el eficaz es el que equivale térmicamente a una continua. «Frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-260",
@@ -3999,7 +3600,8 @@ export default [
       "Un transistor de efecto campo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN SHUNT INDICA:»). La opción que responde al criterio del banco es «Una resistencia en paralelo con otro elemento».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-261",
@@ -4013,7 +3615,8 @@ export default [
       "Un buen emisor"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN MATERIAL DIELÉCTRICO ES:»). La opción que responde al criterio del banco es «Buen aislante».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-262",
@@ -4027,7 +3630,8 @@ export default [
       "Poco fiables"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Opuestas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-263",
@@ -4041,7 +3645,8 @@ export default [
       "gualador"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «levador».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-264",
@@ -4055,7 +3660,8 @@ export default [
       "No tiene propiedades magnéticas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LAS PROPIEDADES MAGNÉTICAS DE UN ELECTROIMÁN SON:»). La opción que responde al criterio del banco es «Temporales».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-265",
@@ -4069,7 +3675,8 @@ export default [
       "No se puede utilizar"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («SI QUEREMOS MEDIR CORRIENTES CONTINUAS CON UN AMPERÍMETRO CUYO ALCANCE MÁXIMO ES INFERIOR A LAS CORR…»). La opción que responde al criterio del banco es «Poner una resistencia en paralelo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-266",
@@ -4083,7 +3690,8 @@ export default [
       "A veces aumenta o disminuye"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Aumenta».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-267",
@@ -4097,7 +3705,8 @@ export default [
       "En contrafase"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Paralelo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-268",
@@ -4111,7 +3720,8 @@ export default [
       "La segunda frecuencia intermedia es la mitad de la primera"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («EN LOS RECEPTORES DE DOBLE CONVERSIÓN:»). La opción que responde al criterio del banco es «La primera frecuencia intermedia es mayor que la segunda».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-269",
@@ -4125,7 +3735,8 @@ export default [
       "Producen mayor ganancia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Tiene mayor impedancia de entrada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-270",
@@ -4139,7 +3750,8 @@ export default [
       "Cuando se aplica una tensión a la placa y tierra al ánodo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UNA VÁLVULA CONDUCE CORRIENTE:»). La opción que responde al criterio del banco es «Si se aplica una tensión positiva a la placa y negativa al cátodo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-271",
@@ -4153,7 +3765,8 @@ export default [
       "Depende que sea del tipo PNP o NPN"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «De potencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-272",
@@ -4167,7 +3780,8 @@ export default [
       "Para osciladores calibrados"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «Para obtener mas potencia de salida».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-273",
@@ -4181,7 +3795,8 @@ export default [
       "Su posibilidad de detectar fielmente señales con interferencias"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su posibilidad de distinguir entre señales de frecuencias muy cercanas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-274",
@@ -4195,7 +3810,8 @@ export default [
       "Cuando se usan FET"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN AMPLIFICADOR PUEDE OSCILAR INDEBIDAMENTE:»). La opción que responde al criterio del banco es «Si hay un fuerte acoplamiento entre los circuitos de colector y base».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-275",
@@ -4209,7 +3825,8 @@ export default [
       "Un diodo zener"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Un diodo zener».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-276",
@@ -4223,7 +3840,8 @@ export default [
       "Puede haber sobremodulación pero el porcentaje se debe mantener menor del 150%"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («PARA QUE UNA ONDA MODULADA SEA LINEAL:»). La opción que responde al criterio del banco es «El porcentaje de modulación debe ser inferior al 100%».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-280",
@@ -4237,7 +3855,8 @@ export default [
       "QRA"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA LA INTELEGIBILIDAD DE LAS SEÑALES?»). La opción que responde al criterio del banco es «QRK».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-281",
@@ -4251,21 +3870,8 @@ export default [
       "QRN"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-282",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿QUE ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACIÓN?",
-    "options": [
-      "QSD",
-      "QTR",
-      "QSV",
-      "QUA"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA QUE PERTURBAN LOS ATMOSFÉRICOS?»). La opción que responde al criterio del banco es «QRN».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-285",
@@ -4279,7 +3885,8 @@ export default [
       "Constituye una falta grave"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «No, si precede autorización de la Dirección General».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-286",
@@ -4293,7 +3900,8 @@ export default [
       "Grave"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «No es falta».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-288",
@@ -4307,7 +3915,8 @@ export default [
       "Dirección General de Seguridad y Orden Público"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓ…»). La opción que responde al criterio del banco es «Dirección General de Telecomunicaciones».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-289",
@@ -4321,7 +3930,8 @@ export default [
       "Estación fija/portable"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («TODA ESTACIÓN DE AFICIONADO DESTINADA A SER UTILIZADA EN UN VEHICULO EN MOVIMIENTO O MIENTRAS ESTA D…»). La opción que responde al criterio del banco es «Estación móvil».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-290",
@@ -4335,7 +3945,8 @@ export default [
       "2 años"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL PLAZO DE VALIDEZ DE LA AUTORIZACIÓN PARA QUE UN RADIOAFICIONADO PROCEDA AL MONTAJE DE SU ESTACIÓN…»). La opción que responde al criterio del banco es «3 meses».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-291",
@@ -4349,7 +3960,8 @@ export default [
       "Un servicio público de Protección Civil"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL SERVICIO DE RADIOAFICIONADOS ES:»). La opción que responde al criterio del banco es «Un servicio de instrucción individual, de intercomunicación y de estudios de Radiotecnia, efectuado por personas debidamente autorizadas, con carácter personal y sin fines de lucro».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-292",
@@ -4363,7 +3975,8 @@ export default [
       "Valencia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Huesca».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-293",
@@ -4377,7 +3990,8 @@ export default [
       "Hectométricas"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Métricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-295",
@@ -4391,7 +4005,8 @@ export default [
       "P3D"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («LA CLASE DE EMISIÓN EN TELEFONÍA, MODULACIÓN DE FRECUENCIA (O FASE) SE INDICA POR EL SÍMBOLO:»). La opción que responde al criterio del banco es «F3J».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-297",
@@ -4405,7 +4020,8 @@ export default [
       "LSB"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («PARA EMITIR EN FONIA, BANDA LATERAL ÚNICA INFERIOR, SITUAREMOS EL MANDO DE \"MODO DE EMISIÓN\" EN LA P…»). La opción que responde al criterio del banco es «LSB».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-298",
@@ -4419,7 +4035,8 @@ export default [
       "Control de tono"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («SI SE QUIERE CORTAR LA SALIDA DEL RECEPTOR EN AUSENCIA DE SEÑAL HABRÁ DE ACTUARSE SOBRE EL MANDO:»). La opción que responde al criterio del banco es «Silenciador».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-299",
@@ -4433,7 +4050,8 @@ export default [
       "Control Automático de Ganancia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («SI EN UN RECEPTOR SE OUlERE DISMINUIR LA SEÑAL DE ENTRADA, ACTUAREMOS SOBRE EL MANDO DE:»). La opción que responde al criterio del banco es «Volumen de radiofrecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-300",
@@ -4447,7 +4065,8 @@ export default [
       "Cambiar de emisión a recepción o viceversa"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL CONMUTADOR SENDREC. SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Cambiar de emisión a recepción o viceversa».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-301",
@@ -4461,7 +4080,8 @@ export default [
       "Suprimir señales del canal adyacente"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL MANDO NB EN UN TRANSCEPTOR, SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Suprimir ruido de impulsos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-302",
@@ -4475,7 +4095,8 @@ export default [
       "Se deben proteger con fusible"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «De baja resistencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-303",
@@ -4489,7 +4110,8 @@ export default [
       "Su impedancia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («DEL NUMERO DE ESPIRAS QUE TIENE UNA ANTENA HELICOIDAL DEPENDE:»). La opción que responde al criterio del banco es «Su ganancia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-304",
@@ -4503,7 +4125,8 @@ export default [
       "Forman un conjunto resonante"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "ROE alta indica energía reflejada por desadaptación; el balun adapta sistemas balanceados y no balanceados. «Necesitan adaptadores o no según sus impedancias».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-305",
@@ -4517,7 +4140,8 @@ export default [
       "Porcentaje de modulación"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS MIDE:»). La opción que responde al criterio del banco es «Intensidad de la señal recibida».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-306",
@@ -4531,7 +4155,8 @@ export default [
       "Reponer el fusible de entrada"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA MISIÓN DEL CONMUTADOR \"POWER ON/OFF\" EN UN TRANSCEPTOR, ES:»). La opción que responde al criterio del banco es «Encender y pagar el Equipo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-307",
@@ -4545,7 +4170,8 @@ export default [
       "Un dispositivo electroquímico"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una pila es:»). La opción que responde al criterio del banco es «Un dispositivo electroquímico».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-308",
@@ -4559,7 +4185,8 @@ export default [
       "Cambia de polaridad"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se dice que una pila se ha polarizado cuando:»). La opción que responde al criterio del banco es «Tiene dos polos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-309",
@@ -4573,7 +4200,8 @@ export default [
       "Aumentar su resistencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «Aumentar la intensidad que circula por el circuito».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-310",
@@ -4587,7 +4215,8 @@ export default [
       "Que el acumulador no se descarga"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La diferencia entre un acumulador y una pila es:»). La opción que responde al criterio del banco es «Que el acumulador se carga».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-b-311",
@@ -4601,7 +4230,8 @@ export default [
       "La consumida en la etapa intermedia del emisor"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La corriente del paso final multiplicada por la tensión de la red».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-332",
@@ -4615,7 +4245,8 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Cuando se opera en grafía una estación Fija/Portable».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-333",
@@ -4629,7 +4260,8 @@ export default [
       "3 y 5"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «6 y 8».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-334",
@@ -4643,7 +4275,8 @@ export default [
       "Decamétricas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Decimétricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-335",
@@ -4657,7 +4290,8 @@ export default [
       "Telefonía, dos bandas laterales independientes"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («LA ABREVIATURA F3 INDICA:»). La opción que responde al criterio del banco es «Telefonía, modulación de frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-336",
@@ -4671,7 +4305,8 @@ export default [
       "5 % e la potencia media total radiada"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («LAS FRECUENCIAS LIMITES PARA UNA DETERMINADA ANCHURA DE BANDA SON AQUELLAS A PARTIR DE LAS CUALES SE…»). La opción que responde al criterio del banco es «0,5 % de la potencia media total radiada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-338",
@@ -4685,7 +4320,8 @@ export default [
       "Se deben proteger con un fusible"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «De baja resistencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-339",
@@ -4699,7 +4335,8 @@ export default [
       "Circuitos L-C paralelos en la línea de alimentación de antena"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («PARA ALARGAR Y ACORTAR LA LONGITUD DE UNA ANTENA PARA USARLA COMO MULTIBANDA SE CONECTAN:»). La opción que responde al criterio del banco es «Circuitos L-C serie a determinadas distancias del centro».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-341",
@@ -4713,7 +4350,8 @@ export default [
       "Máxima"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («SI A LA SALIDA DEL EMISOR A LA ANTENA SE DISPONE DE UN AMPERIMETRO, EL AJUSTE DE MAXIMA EMISIÓN SE D…»). La opción que responde al criterio del banco es «Mínima».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-342",
@@ -4727,7 +4365,8 @@ export default [
       "Con la atenuación de las señales de audio"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «La amplificación de las señales de audio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-343",
@@ -4741,7 +4380,8 @@ export default [
       "Porcentaje de modulación"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Intensidad de la señal recibida».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-344",
@@ -4755,7 +4395,8 @@ export default [
       "A3J"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «A1».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-345",
@@ -4769,7 +4410,8 @@ export default [
       "Se conmuta automáticamente recepción-transmisión"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se conecta el conmutador transmisor-receptor del micrófono».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-346",
@@ -4783,7 +4425,8 @@ export default [
       "Su conexión a la etapa RF o de FI"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («EL CIRCUITO DE CONTROL AUTOMATICO DE GANANCIA TIENE UN MANDO DE GOBIERNO QUE AFECTA A:»). La opción que responde al criterio del banco es «Su tiempo de respuesta».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-347",
@@ -4797,7 +4440,8 @@ export default [
       "Control automático de ganancia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Volumen de radiofrecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-348",
@@ -4811,7 +4455,8 @@ export default [
       "La adaptación de impedacia"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «La adaptación de impedacia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-349",
@@ -4825,7 +4470,8 @@ export default [
       "Mayor en la primera y menor en la última"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La misma».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-350",
@@ -4839,7 +4485,8 @@ export default [
       "Comprobar la disipación de placa de una válvula"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («El decibelio es una unidad de medida utilizada para:»). La opción que responde al criterio del banco es «La comparación de niveles de potencia eléctrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-351",
@@ -4853,7 +4500,8 @@ export default [
       "Menor intensidad"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Las pilas se acoplan en serie para obtener:»). La opción que responde al criterio del banco es «Mayor tensión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-352",
@@ -4867,7 +4515,8 @@ export default [
       "Cuatro diodos"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Un rectificador en puente, de onda completa tiene:»). La opción que responde al criterio del banco es «Cuatro diodos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-353",
@@ -4881,7 +4530,8 @@ export default [
       "Disminuir su capacidad"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Aumentar su capacidad».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-354",
@@ -4895,7 +4545,8 @@ export default [
       "A veces aumenta o disminuye"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Aumenta».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-355",
@@ -4909,7 +4560,8 @@ export default [
       "Velocidad de propagación"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Una característica de la corriente alterna es su:»). La opción que responde al criterio del banco es «Frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-356",
@@ -4923,7 +4575,8 @@ export default [
       "Poco fiables"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Las reactancias inductiva y capacitiva, tienen propiedades:»). La opción que responde al criterio del banco es «Opuestas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-357",
@@ -4937,7 +4590,8 @@ export default [
       "Un diodo zener"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Para estabilizar la tensión de salida de una fuente de alimentación se emplea:»). La opción que responde al criterio del banco es «Un diodo zener».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-358",
@@ -4951,7 +4605,8 @@ export default [
       "R.F. - demodulador - F.I. - mezclador - audio"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «R.F. - mezclador - F.I. - demodulador - audio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-359",
@@ -4965,7 +4620,8 @@ export default [
       "Los amplificadores para evitar que oscilen"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La neutralización se utiliza en:»). La opción que responde al criterio del banco es «Los amplificadores para evitar que oscilen».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-360",
@@ -4979,7 +4635,8 @@ export default [
       "La tensión de la base y del colector son iguales"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «La tensión del colector es negativa respecto a la base».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-361",
@@ -4993,7 +4650,8 @@ export default [
       "Disminuir las interferencias"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En las emisiones radioelétricas la modulación sirve para:»). La opción que responde al criterio del banco es «Llevar la información».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-362",
@@ -5007,7 +4665,8 @@ export default [
       "Cuando se usan FET"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Si hay un fuerte acoplamiento entre los circuitos de colector y base».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-363",
@@ -5021,7 +4680,8 @@ export default [
       "Eliminando la resistencia de carga"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «En la parte lineal de su característica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-364",
@@ -5035,7 +4695,8 @@ export default [
       "Elimina los armónicos"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Usa frecuencia intermedia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-365",
@@ -5049,7 +4710,8 @@ export default [
       "Las descargas eléctricas atmosféricas"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («El ruido estático es el producido por:»). La opción que responde al criterio del banco es «Las descargas eléctricas atmosféricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-366",
@@ -5063,7 +4725,8 @@ export default [
       "Banda eliminada"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Paso banda».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-367",
@@ -5077,7 +4740,8 @@ export default [
       "Salen frecuencias pares solamente"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se producen señales de frecuencias suma o resta de las de entrada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-368",
@@ -5091,7 +4755,8 @@ export default [
       "Burgos"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Sevilla».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-369",
@@ -5105,7 +4770,8 @@ export default [
       "10"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «1».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-372",
@@ -5119,7 +4785,8 @@ export default [
       "QRM"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué abreviatura indica que las señales recibidas estan afectadas por desvanecimientos (fading)?»). La opción que responde al criterio del banco es «QSB».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-373",
@@ -5133,7 +4800,8 @@ export default [
       "QRS"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué abreviatura indica que se transmita más lentamente?»). La opción que responde al criterio del banco es «QRS».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-374",
@@ -5147,7 +4815,8 @@ export default [
       "QRX"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Mediante qué abreviatura indicaría que está Vd. ocupado?»). La opción que responde al criterio del banco es «QRL».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-377",
@@ -5161,7 +4830,8 @@ export default [
       "Leve"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-378",
@@ -5175,7 +4845,8 @@ export default [
       "No es falta"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Una falta leve».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-379",
@@ -5189,7 +4860,8 @@ export default [
       "No abonar los cánones y tasas correspondientes"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «No abonar los cánones y tasas correspondientes».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-381",
@@ -5203,7 +4875,8 @@ export default [
       "Un distintivo temporal"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «El del titular seguido del del otro radioaficionado».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-382",
@@ -5217,7 +4890,8 @@ export default [
       "Unicamente en caso de enfermedad"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Si, por falta grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-383",
@@ -5231,7 +4905,8 @@ export default [
       "La abreviatura S.O.S. transmitida separando las tres letras"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «La abreviatura S.O.S. transmitida separando las tres letras».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-384",
@@ -5245,7 +4920,8 @@ export default [
       "250 watios"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cual es la potencia máxima de emisión, de una estación de radioaficionado, en la banda de frecuenci…»). La opción que responde al criterio del banco es «250 watios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-385",
@@ -5259,7 +4935,8 @@ export default [
       "Una vez al comienzo, otra en medio y al final de la emisión"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Una vez al comienzo, otra en medio y al final de la emisión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-386",
@@ -5273,7 +4950,8 @@ export default [
       "Hectométricas"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Decamétricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-387",
@@ -5287,7 +4965,8 @@ export default [
       "Con arreglo a un modelo común"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «De acuerdo con el estado de desarrollo de la técnica radioeléctrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-388",
@@ -5301,7 +4980,8 @@ export default [
       "Bloqueando sin conectar la antena"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Cuando sintonizamos un emisor, es conveniente hacerlo:»). La opción que responde al criterio del banco es «A potencia reducida».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-389",
@@ -5315,21 +4995,8 @@ export default [
       "Para bloquear totalmente el ruido recibido con la señal"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-c-390",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Si, el conmutador \"modo de emisión\" está en la posición CW se trabaja en:",
-    "options": [
-      "Banda lateral superior",
-      "Telegrafía",
-      "Banda lateral inferior",
-      "Duplex"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Para cortar la salida del receptor en ausencia de señal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-391",
@@ -5343,7 +5010,8 @@ export default [
       "Tiende a mantener constante la selectividad del receptor"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Tiende a mantener constante el nivel de salida del receptor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-392",
@@ -5357,7 +5025,8 @@ export default [
       "Se obtiene una directividad mayor"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Cuando se sintoniza un emisor utilizando una antena artificial:»). La opción que responde al criterio del banco es «La mayor parte de la energía procedente del emisor se disipa en forma de calor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-393",
@@ -5371,7 +5040,8 @@ export default [
       "Sirve para aumentar el nivel de la señal en recepción y disminuir el nivel del ruido"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Sirve para aumentar el nivel de la señal en recepción y disminuir el nivel del ruido».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-394",
@@ -5385,7 +5055,8 @@ export default [
       "Conmuta automáticamente recepción-transmisión"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Conecta el conmutador transmisor-receptor del micrófono».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-395",
@@ -5399,7 +5070,8 @@ export default [
       "Microohmios"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Microvoltios».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-396",
@@ -5413,7 +5085,8 @@ export default [
       "Variar la frecuencia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En emisión el mando \"control de carga\" \"LOAD KNOB\" sirve para:»). La opción que responde al criterio del banco es «Ajustar la sección final a la antena».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-c-397",
@@ -5427,7 +5100,8 @@ export default [
       "Que no envejece"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Que no se desintoniza».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-402",
@@ -5441,7 +5115,8 @@ export default [
       "P = R t/I 2"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «P = R I 2».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-403",
@@ -5455,7 +5130,8 @@ export default [
       "La potencia eléctrica que se obtiene en el secundario por la que absorbe el primario"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «La tensión en el secundario por la tensión en el primario».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-404",
@@ -5469,7 +5145,8 @@ export default [
       "Aumentar la autoinducción"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Aumentar la autoinducción».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-405",
@@ -5483,7 +5160,8 @@ export default [
       "Al cociente V/C"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Al producto CV 2».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-406",
@@ -5497,21 +5175,8 @@ export default [
       "Se separan entre sí las dos armaduras"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-407",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "EL PERIODO DE UNA CORRIENTE ALTERNA ES:",
-    "options": [
-      "El tiempo que tarda en empezar a circular la corriente",
-      "El tiempo que está encendida una lámpara",
-      "El cociente del tiempo que está encendida la lámpara dividido por el tiempo que está apagada",
-      "El tiempo que tarda en pasar por dos valores máximos positivos"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Se conectan sus dos armaduras a un circuito exterior».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-408",
@@ -5525,21 +5190,8 @@ export default [
       "A la fuerza que produce la corriente cuando hace mover un motor"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-409",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "PARA MEDIR LA CORRIENTE QUE PASA POR UNA RESISTENCIA Y LA CAIDA DE TENSIÓN QUE EN ELLA SE PRODUCE, SE CONECTAN CON LA RESISTENCIA UN VOLTIMETRO V Y UN AMPERIMETRO A EN LA FORMA SIGUIENTE:",
-    "options": [
-      "V en serie y A en derivación",
-      "V y A en serie",
-      "V en derivación y A en serie",
-      "V y A en derivación"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «A la intensidad de una corriente continua que produjo la misma cantidad de calor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-410",
@@ -5553,7 +5205,8 @@ export default [
       "Fusibles"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Fusibles».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-411",
@@ -5567,7 +5220,8 @@ export default [
       "Es una antena para las ondas decamétricas solamente"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («LA ANTENA DE MEDIA ONDA:»). La opción que responde al criterio del banco es «Es omnidireccional».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-412",
@@ -5581,7 +5235,8 @@ export default [
       "es el doble de la frecuencia recibida"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Tiene una frecuencia que se relaciona con la recibida por la frecuencia intermedia del receptor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-413",
@@ -5595,7 +5250,8 @@ export default [
       "R.L.C."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («UN ATENUADOR PARA PROTEGER CONTRA SOBRECARGAS LA ENTRADA DE UN RECEPTOR ESTARA FORMADO POR:»). La opción que responde al criterio del banco es «R».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-414",
@@ -5609,7 +5265,8 @@ export default [
       "Amplificador de R.L."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («SI QUISIERA UTILIZAR UN RECEPTOR DE DECAMETRICAS PARA RECIBIR SEÑALES DE 2 METROS»). La opción que responde al criterio del banco es «Un conversor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-415",
@@ -5623,7 +5280,8 @@ export default [
       "Amplificador de audio"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Amplificador de salida».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-416",
@@ -5637,7 +5295,8 @@ export default [
       "Para conectar con el sistema radiante"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:»). La opción que responde al criterio del banco es «Antes de etapas en las que se necesitan potencias grandes».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-417",
@@ -5651,7 +5310,8 @@ export default [
       "Producen una amplificación lineal"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («CUAL DE ESTAS PROPIEDADES CARACTERIZA A UN AMPLIFICADOR CLASE A:»). La opción que responde al criterio del banco es «Producen una amplificación lineal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-418",
@@ -5665,21 +5325,8 @@ export default [
       "El conversor"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-419",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "EL CONTROL AUTOMATICO DE GANANCIA:",
-    "options": [
-      "Tiende a mantener constante la fidelidad del receptor",
-      "Tiende a mantener constante el nivel de salida del receptor",
-      "Hace que la frecuencia intermedia sea constante, independientemente de la frecuencia recibida",
-      "Tiende a mantener constante la selectividad de receptor"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «El primer paso de radio frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-420",
@@ -5693,7 +5340,8 @@ export default [
       "Durante los concursos"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Sin modulación de información solo se transmite la portadora (potencia de portadora). La respuesta es «A efectos de ensayo, pero si tal emisión es corta».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-421",
@@ -5707,7 +5355,8 @@ export default [
       "QSJ"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué abreviatura indica que el operador está ocupado?»). La opción que responde al criterio del banco es «QRL».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-422",
@@ -5721,7 +5370,8 @@ export default [
       "QSV"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («¿Que abreviatura indica que la estación receptora sufre interferencias por atmosféricos?»). La opción que responde al criterio del banco es «QRN».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-423",
@@ -5735,7 +5385,8 @@ export default [
       "QTR"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «QSA».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-424",
@@ -5749,7 +5400,8 @@ export default [
       "Es el distintivo de llamada de una estación móvil del distrito 4 operada por un aficionado del distrito 7"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EA7/EA4KLM/M»). La opción que responde al criterio del banco es «Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 7».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-426",
@@ -5763,7 +5415,8 @@ export default [
       "Se puede efectuar"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Emitir música es una falta o se puede efectuar?»). La opción que responde al criterio del banco es «Muy grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-427",
@@ -5777,7 +5430,8 @@ export default [
       "Se puede efectuar"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-429",
@@ -5791,7 +5445,8 @@ export default [
       "Cuando lo deseen"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Durante sus emisiones, las estaciones de aficionados:»). La opción que responde al criterio del banco es «Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-430",
@@ -5805,7 +5460,8 @@ export default [
       "Cuando se realizan ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Cuando se opera en grafía una estación Fija/Portable».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-431",
@@ -5819,7 +5475,8 @@ export default [
       "Sí, genéricamente con la obligación de informarlo a la DGTel."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:»). La opción que responde al criterio del banco es «Sí, genéricamente con la obligación de informarlo a la DGTel.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-432",
@@ -5833,7 +5490,8 @@ export default [
       "18 años"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué edad mínima es necesaria para obtener una licencia de estación de aficionado?»). La opción que responde al criterio del banco es «15 años».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-433",
@@ -5847,7 +5505,8 @@ export default [
       "10"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «9».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-434",
@@ -5861,21 +5520,8 @@ export default [
       "Centimétrica"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-435",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La antena estará acoplada al paso final de salida:",
-    "options": [
-      "Directamente",
-      "Por medio de una tierra intermedio",
-      "Por adaptadores y filtros",
-      "No se acopla"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Métrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-437",
@@ -5889,7 +5535,8 @@ export default [
       "El intercambio de mensajes por líneas aéreas"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El termino Radiocomunicación indica:»). La opción que responde al criterio del banco es «Toda Telecomunicación realizada por medio de ondas radioeléctricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-439",
@@ -5903,7 +5550,8 @@ export default [
       "Security"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La señal radiotelefónica de seguridad está dada por la palabra:»). La opción que responde al criterio del banco es «Securité».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-440",
@@ -5917,7 +5565,8 @@ export default [
       "En la frecuencia de W W V"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El conmutador de banda tendrá que estar en la posición correspondiente:»). La opción que responde al criterio del banco es «La banda deseada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-441",
@@ -5931,7 +5580,8 @@ export default [
       "LSB"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Para emitir en telegrafía, el conmutador \"Modo de emisión\" estará en la posición:»). La opción que responde al criterio del banco es «CW».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-442",
@@ -5945,7 +5595,8 @@ export default [
       "Indiferente"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Baja potencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-443",
@@ -5959,7 +5610,8 @@ export default [
       "Cero"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («Si se dispone de un amperímetro, en ajuste optimo de emisión la lectura será:»). La opción que responde al criterio del banco es «Mínima».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-444",
@@ -5973,7 +5625,8 @@ export default [
       "Depende la conexión de la A.T. de que sea de caldeo directo o indirecto"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En caso de que el paso final de un emisor sea a válvulas:»). La opción que responde al criterio del banco es «Es necesario un tiempo de caldeo de filamento».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-445",
@@ -5987,7 +5640,8 @@ export default [
       "La sensibilidad del receptor"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando se pasa el modo de recepción de USB a LSB se cambia:»). La opción que responde al criterio del banco es «La frecuencia de batido».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-446",
@@ -6001,21 +5655,8 @@ export default [
       "Se conecta el conmutador transmisor-receptor del micrófono"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-447",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "El mando NB de un transceptor sirve para:",
-    "options": [
-      "Estrechar la banda en recepción",
-      "Suprimir ruido producido por emisoras de radiofrecuencias",
-      "Suprimir ruidos de impulsos",
-      "Discriminar las señales moduladas en frecuencia"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Con el mando \"VOX\", de un transceptor, conectado:»). La opción que responde al criterio del banco es «Se conmuta automáticamente recepción-transmisión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-448",
@@ -6029,7 +5670,8 @@ export default [
       "Cortar la salida del receptor cuando se recibe una señal mezclada con alto nivel de ruido"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Cortar la salida del receptor cuando no hay señal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-449",
@@ -6043,7 +5685,8 @@ export default [
       "Se recibe en modulación de frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Se recibe CW».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-450",
@@ -6057,7 +5700,8 @@ export default [
       ""
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «A su longitud y a su resistividad».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-451",
@@ -6071,7 +5715,8 @@ export default [
       "Los armónicos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Componente alterna».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-452",
@@ -6085,7 +5730,8 @@ export default [
       "Un amperímetro en derivación"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Un amperímetro en serie».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-453",
@@ -6099,7 +5745,8 @@ export default [
       "Electromecánico"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Electromagnético».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-454",
@@ -6113,7 +5760,8 @@ export default [
       "Filtrante"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Resonante».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-455",
@@ -6127,7 +5775,8 @@ export default [
       "A una impureza polarizada"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («De forma convencional se llama \"hueco\" en un semiconductor»). La opción que responde al criterio del banco es «A un portador de carga positiva».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-456",
@@ -6141,7 +5790,8 @@ export default [
       "Agua ionizada"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Una pasta química».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-457",
@@ -6155,7 +5805,8 @@ export default [
       "Mejora la modulación"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Cuando se sobremodula:»). La opción que responde al criterio del banco es «Se distorsiona la modulación».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-458",
@@ -6169,7 +5820,8 @@ export default [
       "Gris"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Oro».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-459",
@@ -6183,21 +5835,8 @@ export default [
       "Interruptores automáticos"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-460",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Se llama intensidad eficaz de una corriente alterna:",
-    "options": [
-      "Al mayor valor que toma durante un ciclo",
-      "A la suma de los valores máximos de dos ciclos consecutivos",
-      "A la intensidad de una corriente continua que produjera la misma cantidad de calor",
-      "A la fuerza que produce la corriente cuando hace mover un motor"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Interruptores automáticos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-461",
@@ -6211,7 +5850,8 @@ export default [
       "Un potenciómetro"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Un varistor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-463",
@@ -6225,7 +5865,8 @@ export default [
       "La de audiofrecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «La mezcladora».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-464",
@@ -6239,7 +5880,8 @@ export default [
       "Energía sonora en mecánica"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Los micrófonos son transductores que convierten:»). La opción que responde al criterio del banco es «Energía sonora en eléctrica».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-465",
@@ -6253,7 +5895,8 @@ export default [
       "Clase \"B/C\""
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando la señal de salida es una exacta reproducción de la señal de entrada, el amplificador trabaja…»). La opción que responde al criterio del banco es «Clase \"A\"».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-466",
@@ -6267,21 +5910,8 @@ export default [
       "Ondas milimétricas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-467",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Si quisiera utilizar un receptor de decamétricas para recibir señales de 2 metros:",
-    "options": [
-      "No se puede hacer",
-      "Necesitaría un radio frecuencia seguido de un conversor",
-      "Un conversor",
-      "Un amplificador de R.L."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las reflexiones lunares se hacen principalmente en:»). La opción que responde al criterio del banco es «Ondas métricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-468",
@@ -6295,7 +5925,8 @@ export default [
       "Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El circuito de acoplamiento entre etapas amplificadoras:»). La opción que responde al criterio del banco es «Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-469",
@@ -6309,49 +5940,8 @@ export default [
       "No se utilizan en las bandas de radioaficionados"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-471",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La cifra 9 en el distintivo de llamada identifica la provincia de:",
-    "options": [
-      "Cuenca",
-      "Granada",
-      "Melilla",
-      "Valencia"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-474",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "¿Utilizar bandas de frecuencia distinta a las autorizadas, es una falta o se puede efectuar?",
-    "options": [
-      "Leve",
-      "Grave",
-      "Muy grave",
-      "se puede efectuar"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-476",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Qué clase de infracción constituye la falta de libro diario?",
-    "options": [
-      "No es falta",
-      "Muy grave",
-      "Leve",
-      "Grave"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Se utilizan para comunicaciones de corta distancia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-479",
@@ -6365,21 +5955,8 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-480",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Carecer de libro diario constituye una falta:",
-    "options": [
-      "Grave",
-      "Leve",
-      "Muy grave",
-      "No es falta"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Cuándo se añade la mención /P al indicador de llamada?»). La opción que responde al criterio del banco es «Cuando se opera en grafía una estación Fija/Portable».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-481",
@@ -6393,7 +5970,8 @@ export default [
       "Sí esta permitido"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿Se puede conectar una estación de aficionado con otras instalaciones de radiocomunicación?»). La opción que responde al criterio del banco es «Sí esta permitido».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-483",
@@ -6407,21 +5985,8 @@ export default [
       "La ganancia en radiofrecuencia del receptor"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-486",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Con el mando \"VOX\", de un transceptor, conectado:",
-    "options": [
-      "Se recibe en fonía",
-      "Se ajusta automáticamente la amplificación de las frecuencias",
-      "Se conmuta automáticamente recepción-transmisión",
-      "Se conecta el conmutador transmisor-receptor del micrófono"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Variando el mando \"RF GAIN\" en un receptor, actuamos sobre:»). La opción que responde al criterio del banco es «La ganancia en radiofrecuencia del receptor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-487",
@@ -6435,21 +6000,8 @@ export default [
       "Eliminar los atmosféricos"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-489",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La misión del conmutador \"POWER ON/OFF\" en un transceptor es:",
-    "options": [
-      "Cambiar el ancho de banda",
-      "Reponer el fusible de entrada",
-      "Encender y apagar el equipo",
-      "Aumentar o disminuir la potencia del emisor"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El mando \"RIT\" de un transceptor permite:»). La opción que responde al criterio del banco es «Ajustar la frecuencia de recepción sin variar la de emisión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-490",
@@ -6463,7 +6015,8 @@ export default [
       "Modificar la sintonía"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El conmutador \"SEND-REC\" se utiliza para»). La opción que responde al criterio del banco es «Cambiar la emisión a recepción y viceversa».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-491",
@@ -6477,7 +6030,8 @@ export default [
       "Aumentando la sensibilidad en recepción"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Cuando en un receptor actuamos el conmutador de canales estamos:»). La opción que responde al criterio del banco es «Variando la sintonía».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-492",
@@ -6491,7 +6045,8 @@ export default [
       "No se utiliza"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Recepción».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-493",
@@ -6505,7 +6060,8 @@ export default [
       "Medir la frecuencia de una corriente"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Tensión en paralelo, intensidad en serie; resistencia sin tensión de trabajo en el circuito. Para esta pregunta: «Medir tensiones, intensidades y resistencias».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-494",
@@ -6519,7 +6075,8 @@ export default [
       "Las cantidades de huecos y electrones se equilibran"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN SEMICONDUCTOR TIPO P ES AQUEL EN EL QUE:»). La opción que responde al criterio del banco es «La cantidad de huecos es mayor que la de electrones».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-495",
@@ -6533,7 +6090,8 @@ export default [
       "Bloquea el paso de la corriente"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Oponerse a las variaciones de tensión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-497",
@@ -6547,7 +6105,8 @@ export default [
       "En el que se abre automáticamente su circuito cuando la corriente es excesiva"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «En el que los devanados primario y secundario tienen una parte común».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-498",
@@ -6561,7 +6120,8 @@ export default [
       "Mica"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Germanio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-499",
@@ -6575,21 +6135,8 @@ export default [
       "Mayor que la proporcionada por el generador"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-500",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "SI QUEREMOS MEDIR CORRIENTES CONTINUAS CON UN AMPERIMETRO CUYO ALCANCE MAXIMO ES INFERIOR A LAS CORRIENTES A MEDIR, TENDREMOS QUE:",
-    "options": [
-      "Poner una resistencia en serie",
-      "Poner un condensador en serie",
-      "Poner una resistencia en paralelo",
-      "No se puede utilizar"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Inversamente proporcional a cada R».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-501",
@@ -6603,7 +6150,8 @@ export default [
       "La intensidad está adelantada con respecto al voltaje"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («EN UN CIRCUITO RESISTIVO PURO RECORRIDO POR UNA CORRIENTE ALTERNA:»). La opción que responde al criterio del banco es «Tensión e intensidad están en Fase».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-502",
@@ -6617,7 +6165,8 @@ export default [
       "Mayor que la capacidad menor"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Menor que la de cada uno de ellos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-503",
@@ -6631,7 +6180,8 @@ export default [
       "Para evitar el calentamiento de los transistores de potencia"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Para mantener una tensión de referencia en los estabilizadores».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-504",
@@ -6645,7 +6195,8 @@ export default [
       "Banda eliminada"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Paso banda».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-505",
@@ -6659,7 +6210,8 @@ export default [
       "Cuatro diodo"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Cuatro diodo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-506",
@@ -6673,7 +6225,8 @@ export default [
       "Depende de que sea del tipo PNP o NPN"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Solo de tensión».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-507",
@@ -6687,7 +6240,8 @@ export default [
       "Con condensadores"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «Con condensadores».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-508",
@@ -6701,7 +6255,8 @@ export default [
       "Una realimentación por bobina"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resolución de frecuencia. «Fuertemente cargado».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-509",
@@ -6715,7 +6270,8 @@ export default [
       "Porque son las más efectivas para hacer las ruedas de aficionados"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («UNA ANTENA HELICOIDAL SE USA:»). La opción que responde al criterio del banco es «Para enlaces por satélites».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-510",
@@ -6729,7 +6285,8 @@ export default [
       "Condensadores y bobinas"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Solamente condensadores».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-511",
@@ -6743,7 +6300,8 @@ export default [
       "Sale un lío de frecuencias"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Se producen señales de frecuencias suma o resta de las de entrada».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-512",
@@ -6757,7 +6315,8 @@ export default [
       "Del oscilador local"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA ESTABILIDAD DE UN RECEPTOR ES FUNCION:»). La opción que responde al criterio del banco es «Del oscilador local».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-514",
@@ -6771,7 +6330,8 @@ export default [
       "Ondas milimétricas"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA GAMA DE FRECUENCIÁS COMPRENDIDA ENTRE 300 Y 3.000 MHz CORRESPONDE A LAS:»). La opción que responde al criterio del banco es «Ondas decimétricas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-515",
@@ -6785,7 +6345,8 @@ export default [
       "SHF"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («LAS ONDAS CENTIMETRICAS SE DESIGNAN POR ABREVIATURA:»). La opción que responde al criterio del banco es «SHF».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-516",
@@ -6799,7 +6360,8 @@ export default [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA: ¿SUFRE USTED INTERFERENCIA?»). La opción que responde al criterio del banco es «QRM».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-517",
@@ -6813,7 +6375,8 @@ export default [
       "QSB"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «QSY».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-518",
@@ -6827,7 +6390,8 @@ export default [
       "¿Es defectuosa mi manipulación?"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA ABREVIATURA \"QSB\" DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA DE:»). La opción que responde al criterio del banco es «¿Varia la intensidad de mis señales?».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-521",
@@ -6841,7 +6405,8 @@ export default [
       "4º"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «1º».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-522",
@@ -6855,7 +6420,8 @@ export default [
       "EF"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «EE».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-523",
@@ -6869,7 +6435,8 @@ export default [
       "Emisiones de música, anuncios o propaganda"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL TRAFICO ENTRE ESTACIONES DE AFICIONADOS ESTA AUTORIZADO PARA:»). La opción que responde al criterio del banco es «Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-525",
@@ -6883,7 +6450,8 @@ export default [
       "Solamente MAYDAY (tres veces)"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «MAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-529",
@@ -6897,7 +6465,8 @@ export default [
       "QRA"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA QUE SON INTELIGIBLES LAS SEÑALES?»). La opción que responde al criterio del banco es «QRK».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-530",
@@ -6911,7 +6480,8 @@ export default [
       "Grave"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EFECTUAR RADIOCOMUNICACIONES CON OTRA ESTACIÓN DE LA QUE SE ES TITULAR, ES FALTA:»). La opción que responde al criterio del banco es «Ninguna».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-531",
@@ -6925,7 +6495,8 @@ export default [
       "Según los casos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («NO ABONAR LOS CANONES y TASAS CORRESPONDIETES, ES FALTA:»). La opción que responde al criterio del banco es «Grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-533",
@@ -6939,7 +6510,8 @@ export default [
       "No se tomará ninguna medida hasta la llegada de los bomberos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN CASO DE INCENDIO PRODUCIDO POR ELECTRICIDAD:»). La opción que responde al criterio del banco es «Habrá que utiliza \"espuma\" en vez de agua».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-534",
@@ -6953,7 +6525,8 @@ export default [
       "No se utiliza"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Recepción».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-535",
@@ -6967,21 +6540,8 @@ export default [
       "Forman un conjunto resonante"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-536",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "SI SE DISPONE DE UN AMPERIMETRO A LA SALIDA DEL EMISOR A LA ANTENA, EN AJUSTE OPTIMO DE EMISION LA LECTURA SERA:",
-    "options": [
-      "Mínima",
-      "Máxima",
-      "Media",
-      "No dará lectura"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "ROE alta indica energía reflejada por desadaptación; el balun adapta sistemas balanceados y no balanceados. «Necesitan adaptadores o no según sus impedancias».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-537",
@@ -6995,21 +6555,8 @@ export default [
       "La tensión del paso modulador"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-538",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "PARA EMITIR EN FONIA, banda lateral única SUPERIOR, SlTUAREMOS EL MANDO DE \"MODO DE EMISIÓN\" EN LA POSICIÓN:",
-    "options": [
-      "AM",
-      "FM",
-      "USB",
-      "LSB"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN RECEPCION EL \"S-METER\" (MEDIDOR-S) MIDE:»). La opción que responde al criterio del banco es «La intensidad de la señal recibida».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-540",
@@ -7023,7 +6570,8 @@ export default [
       "Se amplifican las señales de baja frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL MANDO VOX:»). La opción que responde al criterio del banco es «Conmuta automáticamente transmisión-recepción».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-541",
@@ -7037,7 +6585,8 @@ export default [
       "Ese mando no influye para nada en la señal recibida"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Se recibirá perfectamente».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-542",
@@ -7051,7 +6600,8 @@ export default [
       "La modulación es inferior al 100 por ciento"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («ESTAMOS SOBREMODULANDO CUANDO:»). La opción que responde al criterio del banco es «La modulación es superior al 100 por ciento».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-543",
@@ -7065,7 +6615,8 @@ export default [
       "Es independiente de su longitud y su sección"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Menor cuanto mayor es la sección».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-544",
@@ -7079,7 +6630,8 @@ export default [
       "Los devanados tienen una conexión polarizada"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Parte del devanado es común al primario y al secundario».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-545",
@@ -7093,21 +6645,8 @@ export default [
       "Amperio"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-546",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "PARA MEDIR LA CORRIENTE QUE PASA POR UNA RESISTENCIA Y LA CAIDA DE TENSION QUE EN ELLA SE PRODUCE, SE CONECTAN CON LA RESISTENCIA UN VOLTIMETRO V, Y UN AMPERIMETRO A, EN LA FORMA SIGUIENTE:",
-    "options": [
-      "V en serie y A en derivación",
-      "V en derivación y A en serie",
-      "V Y A en serie",
-      "V y A en derivación"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Watio».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-547",
@@ -7121,7 +6660,8 @@ export default [
       "Para dejar pasar los transitorios"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Para no dejar pasar la c.a».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-548",
@@ -7135,7 +6675,8 @@ export default [
       "Su sensibilidad al calor"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Su sensibilidad al calor».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-549",
@@ -7149,35 +6690,8 @@ export default [
       "Inversamente proporcional a la autoinducción"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-550",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "EL PERIODO DE UNA CORRIENTE ALTERNA ES:",
-    "options": [
-      "El tiempo que tarda en empezar a circular",
-      "El tiempo que está encendida una lámpara",
-      "El cociente del tiempo que está encendida una lámpara dividido por el tiempo que está apagada",
-      "El tiempo que tarda en pasar por dos valores máximos positivos"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-551",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "LA INTRODUCCION DE UN NUCLEO MAGNETICO EN UNA BOBINA PRODUCE EL EFECTO DE:",
-    "options": [
-      "Disminuir su resistencia eléctrica",
-      "Aumentar su resistencia eléctrica",
-      "Mantener su temperatura",
-      "Aumentar la autoinducción"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Inversamente proporcional a la resistencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-552",
@@ -7191,7 +6705,8 @@ export default [
       "La tercera parte que una de ellas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Mitad que una de ellas».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-553",
@@ -7205,7 +6720,8 @@ export default [
       "Las oscilaciones presentes en uno de ellos se transmiten al otro"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («SE DICE QUE DOS CIRCUITOS ESTAN ACOPLADOS CUANDO:»). La opción que responde al criterio del banco es «Las oscilaciones presentes en uno de ellos se transmiten al otro».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-554",
@@ -7219,7 +6735,8 @@ export default [
       "Las superiores a 430 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («EN CONDICIONES NORMALES PARA UNA MISMA POTENCIA RADIADA, LAS ONDAS QUE LLEGARIAN CON MAS INTENSIDAD …»). La opción que responde al criterio del banco es «Las de 144 MHz».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-555",
@@ -7233,7 +6750,8 @@ export default [
       "Electrón, receptor, positrón"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Emisor, base, colector».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-556",
@@ -7247,7 +6765,8 @@ export default [
       "10"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «1».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-557",
@@ -7261,7 +6780,8 @@ export default [
       "Rayo directo"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Rayo directo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-558",
@@ -7275,7 +6795,8 @@ export default [
       "Un amplificador lineal"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Un receptor superheterodino».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-559",
@@ -7289,7 +6810,8 @@ export default [
       "Las piezas eléctricas"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL EFECTO PIEZOELECTRICO SE PRODUCE EN:»). La opción que responde al criterio del banco es «Los cristales de cuarzo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-560",
@@ -7303,7 +6825,8 @@ export default [
       "Alterna"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La polarización describe la orientación del campo eléctrico de la onda; debe coincidir con la antena para máxima transferencia. «Positiva».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-561",
@@ -7317,7 +6840,8 @@ export default [
       "Es una intermodulación sui generis"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA MODULACION DE banda lateral única:»). La opción que responde al criterio del banco es «Es una variante de la modulación de amplitud».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-563",
@@ -7331,7 +6855,8 @@ export default [
       "Depende de las circunstancias"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-564",
@@ -7345,7 +6870,8 @@ export default [
       "100"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «50».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-566",
@@ -7359,7 +6885,8 @@ export default [
       "Mayday"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Mayday».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-567",
@@ -7373,7 +6900,8 @@ export default [
       "No es falta"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Leve».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-568",
@@ -7387,7 +6915,8 @@ export default [
       "No es falta"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Muy grave».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-570",
@@ -7401,21 +6930,8 @@ export default [
       "QRA"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-571",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "LA CIFRA 9 EN EL DISTINTIVO DE LLAMADA IDENTIFICA LA PROVINCIA DE:",
-    "options": [
-      "Huesca",
-      "Granada",
-      "Melilla",
-      "Valencia"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA LA INTELIGIBILIDAD DE LAS SEÑALES?»). La opción que responde al criterio del banco es «QRK».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-572",
@@ -7429,21 +6945,8 @@ export default [
       "No puede emplearse en estaciones españolas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-573",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿SE PUEDEN INTRODUCIR MODIFICACIONES DE SISTEMA RADIANTE DE UNA ESTACION DE AFICIONADO?",
-    "options": [
-      "Únicamente si lo autoriza 1a DGTel",
-      "Si, pero únicamente para las licencias de clase A y B",
-      "Si, pero sin cambiar el sistema de afianzamiento de la antena",
-      "Si, genéricamente con la obligación de informarlo a la DGTel"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Un distintivo temporal para estaciones clase B».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-574",
@@ -7457,7 +6960,8 @@ export default [
       "UN mes"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «DIEZ días».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-576",
@@ -7471,7 +6975,8 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿CUANDO SE AÑADE LA MENCIÓN PORTABLE AL INDICATIVA DE LLAMADA?»). La opción que responde al criterio del banco es «Cuando se opera una estación Fija/Portable».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-577",
@@ -7485,7 +6990,8 @@ export default [
       "Se autoriza solamente para concursos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿SE PUEDE UTILIZAR UNA ESTACION MOVIL EN DIFERENTES VEHICULOS?»). La opción que responde al criterio del banco es «Si, cuando las matriculas de los vehículos estén consignadas en la licencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-578",
@@ -7499,7 +7005,8 @@ export default [
       "Se autoriza para concursos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA COMUNICACION ENTRE DISTINTAS ESTACIONES DE UN MISMO TITULAR:»). La opción que responde al criterio del banco es «Se puede efectuar entre titular y segundo operador».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-579",
@@ -7513,7 +7020,8 @@ export default [
       "EHF"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «VHF».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-580",
@@ -7527,7 +7035,8 @@ export default [
       "F2A"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («LA TELEFONIA POR MODULACION DE FRECUENCIA SE CONOCE POR EL SIMBOLO:»). La opción que responde al criterio del banco es «F3E».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-581",
@@ -7541,7 +7050,8 @@ export default [
       "Deberá estar dispuesta para trabajar en clase KZA"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («ENTRE OTRAS CONDICIONES LA ANTENA O ANTENAS DE UN TRANSCEPTOR:»). La opción que responde al criterio del banco es «Dispondrá de los necesarios filtros supresores de armónicos (paso bajo)».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-583",
@@ -7555,7 +7065,8 @@ export default [
       "Modulación en frecuencia a modulación en amplitud"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («EN UN TRANSCEPTOR, AL CONMUTAR EL \"MODO DE TRANSMISIÓN\" DE LSB A USB SE CAMBIA DE:»). La opción que responde al criterio del banco es «Banda lateral única, banda inferior a banda superior».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-584",
@@ -7569,7 +7080,8 @@ export default [
       "Daños en la etapa osciladora"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Daños en las válvulas del paso final».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-585",
@@ -7583,21 +7095,8 @@ export default [
       "Un filtro de paso bajo entre la salida del emisor y el sistema de antena"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-586",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "EL CONTROL DE GANANCIA AUTOMATICA \"AGC\" SE UTILIZA EN:",
-    "options": [
-      "Emisión",
-      "Recepción",
-      "Ambas",
-      "No se utiliza"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Un filtro de paso bajo entre la salida del emisor y el sistema de antena».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-587",
@@ -7611,7 +7110,8 @@ export default [
       "El silenciador"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («PARA EVITAR SOBREMODULACIÓN, TENDRIAMOS QUE ACTUAR SOBRE:»). La opción que responde al criterio del banco es «El nivel de la señal de baja frecuencia».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-588",
@@ -7625,35 +7125,8 @@ export default [
       "Amplificar las señales de baja Frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-589",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "SI EN UN RECEPTOR SE QUIERE DISMINUIR LA SEÑAL DE ENTRADA ACTUAREMOS EL MANDO DE:",
-    "options": [
-      "Volumen de audiofrecuencia",
-      "Volumen de radiofrecuencia",
-      "Silenciador",
-      "Control automático de ganancia"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-590",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "LOS ELEMENTOS VARIABLES DE QUE, GENERALMENTE, SE DISPONE EN SERIE EN LA BASE DE UNA ANTENA PARA AJUSTAR A LA RESONANCIA SON:",
-    "options": [
-      "Una resistencia y una bobina",
-      "Dos reóstatos",
-      "Una bobina y un condensador",
-      "Un condensador y una resistencia"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN UN TRANSCEPTOR, EL MANDO VOX SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Conmutar automáticamente transmisión-recepción».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-591",
@@ -7667,21 +7140,8 @@ export default [
       "Variar la amplificación audio"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-592",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "SI SE QUIERE CORTAR LA SALIDA DE RECEPTOR EN AUSENCIA DE SEÑAL, HABRA DE ACTUARSE SOBRE EL MANDO:",
-    "options": [
-      "Volumen de audio",
-      "Volumen de R.F.",
-      "Silenciador",
-      "Control de tono"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL MANDO \"NB\" DE UN TRANSCEPTOR SE EMPLEA PARA:»). La opción que responde al criterio del banco es «Suprimir ruidos producidos por impulsos».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-002",
@@ -7695,7 +7155,8 @@ export default [
       "Elimina la portadora en los transmisores de banda lateral única."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Elimina las frecuencias no deseadas.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-003",
@@ -7709,7 +7170,8 @@ export default [
       "Modulación cruzada."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («La capacidad de un receptor para separar señales de RF de frecuencias muy próximas se denomina:»). La opción que responde al criterio del banco es «Selectividad.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-004",
@@ -7723,7 +7185,8 @@ export default [
       "Debe conectarse siempre a la conducción de agua."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Debe conectarse a cada uno de los chasis metálicos de los equipos.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-005",
@@ -7737,7 +7200,8 @@ export default [
       "Que el equipo es electromecánico."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si un equipo está marcado con las siglas \"EMC\" significa:»). La opción que responde al criterio del banco es «Que el equipo cumple las directivas de la Unión Europea respecto de compatibilidad electromágnetica.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-006",
@@ -7751,7 +7215,8 @@ export default [
       "No existen."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («En sistemas de transmisión analógicos, las señales:»). La opción que responde al criterio del banco es «Pueden tener infinitos valores.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-008",
@@ -7765,7 +7230,8 @@ export default [
       "Su capacidad, su tolerancia y su tensión máxima de trabajo."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Su capacidad, su tolerancia y su tensión máxima de trabajo.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-009",
@@ -7779,7 +7245,8 @@ export default [
       "Intensidad máxima / intensidad mínima."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («La R.O.E. de una instalación de una antena de radioaficionado se expresa con la fórmula:»). La opción que responde al criterio del banco es «Intensidad máxima / intensidad mínima.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-010",
@@ -7793,7 +7260,8 @@ export default [
       "PPN"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «NPN».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-011",
@@ -7807,21 +7275,8 @@ export default [
       "œC.V"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-e-012",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "A una potencia de valor 1000 mW le corresponde un valor en dB de:",
-    "options": [
-      "30 dBm",
-      "3 dBw",
-      "-3 dBm",
-      "0 dBm"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «œC.V».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-013",
@@ -7835,7 +7290,8 @@ export default [
       "Nula."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; vertical de λ/4 necesita plano de tierra o radiales. «Mayor.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-014",
@@ -7849,21 +7305,8 @@ export default [
       "De la potencia que disipa en corriente continua."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-e-015",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Existen varias clases de amplificadores, A, B, AB y C:",
-    "options": [
-      "El de clase AB, es una combinación de A y B.",
-      "El de clase A amplifica la señal en medio ciclo.",
-      "El de clase B, ya no se utiliza.",
-      "El de clase A tiene una distorsión elevada."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «De la geometría y disposición de sus placas además de la naturaleza del dieléctrico.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-017",
@@ -7877,7 +7320,8 @@ export default [
       "Amplificador de FI, detector, mezclador, amplificador de audio."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Amplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-018",
@@ -7891,7 +7335,8 @@ export default [
       "Anular las pérdidas de la línea de transmisión entre la etapa final de potencia y la antena."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («El acoplador de antena se emplea para:»). La opción que responde al criterio del banco es «Adaptar la impedancia de la etapa final de potencia a la línea de transmisión y antena.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-019",
@@ -7905,7 +7350,8 @@ export default [
       "A las simetrías de de cada frecuencia."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:»). La opción que responde al criterio del banco es «A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-021",
@@ -7919,7 +7365,8 @@ export default [
       "Sólo se atenúan si hay lluvia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Sí, siempre.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-022",
@@ -7933,7 +7380,8 @@ export default [
       "Recibir en banda lateral única."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Las ondas EM combinan campo eléctrico y magnético; la luz y la RF son el mismo fenómeno a distinta frecuencia. «Caracterizar etapas de radiofrecuencia.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-023",
@@ -7947,7 +7395,8 @@ export default [
       "Aumentar la selectividad del receptor."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Suprimir el audio si no hay señal de RF.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-024",
@@ -7961,7 +7410,8 @@ export default [
       "Es imposible."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («Un amperio es la intensidad de corriente que corresponde al paso por un conductor, durante un segund…»). La opción que responde al criterio del banco es «Es correcto.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-e-025",
@@ -7975,7 +7425,8 @@ export default [
       "Un filtro de frecuencia de corte variable."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Un condensador variable controlado por tensión.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-f-027",
@@ -7989,21 +7440,8 @@ export default [
       "QRA"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-028",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Es erróneo afirmar que:",
-    "options": [
-      "Las transmisiones entre estaciones de radioaficionados se efectuarán en lenguaje claro.",
-      "Podrá hacer uso de una estación cualquier otro operador (distinto de su titular) que se encuentre en posesión de la autorización de radioaficionado.",
-      "En la transmisión entre estaciones de radioaficionado está permitido la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero.",
-      "Las transmisiones entre estaciones de radioaficionado deberá limitarse a mensajes de naturaleza técnica relativos a ensayos y a observaciones de carácter puramente personal."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «QRM».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-f-032",
@@ -8017,35 +7455,8 @@ export default [
       "No se puede asignar."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-033",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Para utilizar un repetidor de VHF se emitirá en el canal apropiado de la banda:",
-    "options": [
-      "145,0000 - 145,1875 MHz",
-      "430,000 - 440,000 MHz",
-      "144,000 - 144,500 MHz",
-      "431,050 - 431,825 MHz"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-036",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "De acuerdo con la Ley General de Telecomunicaciones, por comisión de infracciones graves se puede imponer al infractor una multa de hasta:",
-    "options": [
-      "50.000 Euros.",
-      "30.000 Euros.",
-      "100.000 Euros.",
-      "500.000 Euros."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «No se puede asignar.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-f-039",
@@ -8059,7 +7470,8 @@ export default [
       "Sin sufijo."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Por un grupo alfanumérico.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-f-040",
@@ -8073,35 +7485,8 @@ export default [
       "La obligación de respetar el plan de bandas reservado al servicio de aficionados."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-042",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Según la Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones, retrasar injustificadamente la aportación de datos requeridos por la Administración cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas es considerado como una infracción:",
-    "options": [
-      "Leve.",
-      "Muy grave.",
-      "Grave.",
-      "Menos grave."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-051",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El Reglamento de uso del dominio público radioeléctrico por aficionados:",
-    "options": [
-      "Tiene por objeto la regulación del uso privativo del dominio público radioeléctrico.",
-      "Garantiza el derecho a su mantenimiento en el tiempo.",
-      "Determina que podrá realizarse el uso con fines de lucro y de contenido económico.",
-      "Prevé que el CNAF podrá modificar en algún momento el carácter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribución para otros usos."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estaciones de radioaficionados?»). La opción que responde al criterio del banco es «El derecho a instalar las antenas en el exterior de los inmuebles.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-f-056",
@@ -8115,35 +7500,8 @@ export default [
       "Presentar la autorización de radioaficionado a petición de las autoridades."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-059",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La abreviatura XXX, cuando es transmitida tres veces consecutivas, constituye la señal de:",
-    "options": [
-      "Urgencia.",
-      "Catástrofe natural.",
-      "Seguridad.",
-      "Socorro."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-f-060",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Es obligatorio informar a las Jefatura Provinciales de Inspección de Telecomunicaciones de las modificaciones efectuadas en los sistemas radiantes:",
-    "options": [
-      "En todos los casos.",
-      "Solo si afecta al entorno radioeléctrico.",
-      "Siempre y cuando dichas modificaciones sean permanentes.",
-      "Cuando haya que presentar memoria descriptiva."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Presentar la autorización de radioaficionado a petición de las autoridades.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-002",
@@ -8157,7 +7515,8 @@ export default [
       "Hilo de cobre desnudo."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Cual es el tipo de conductor más inmune a las interferencias radiadas?:»). La opción que responde al criterio del banco es «Fibra óptica.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-003",
@@ -8171,7 +7530,8 @@ export default [
       "Un divisor de tensión en función de la temperatura externa."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un termistor de tipo NTC es:»). La opción que responde al criterio del banco es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-004",
@@ -8185,7 +7545,8 @@ export default [
       "Dispositivo limitador de potencia."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-005",
@@ -8199,7 +7560,8 @@ export default [
       "300.000 Km/seg."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «La longitud de onda multiplicada por la frecuencia.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-006",
@@ -8213,7 +7575,8 @@ export default [
       "Al valor correspondiente al 99% de la potencia emitida por el transmisor."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La relación entre la potencia entregada al sistema radiante y la consumida.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-007",
@@ -8227,7 +7590,8 @@ export default [
       "Q=B/f"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Q=f/B».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-008",
@@ -8241,7 +7605,8 @@ export default [
       "La diferencia que existe entre la señal sintonizada y el ruido."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene para separar dos señales de frecuencias próximas.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-009",
@@ -8255,21 +7620,8 @@ export default [
       "Parabólica."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-g-011",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "La anchura de banda necesaria de un transmisor:",
-    "options": [
-      "Es la máxima anchura de banda permitida al transmisor.",
-      "Es la necesaria para lograr transmitir a la máxima distancia.",
-      "Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas.",
-      "Es aquella que contiene el 99% de la potencia emitida por el transmisor."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «Directiva.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-012",
@@ -8283,7 +7635,8 @@ export default [
       "Funcionan por el principio de electrólisis."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Deben conectarse respetando la polaridad indicada.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-014",
@@ -8297,7 +7650,8 @@ export default [
       "Suele valer 13 dB."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («El ancho del haz de la antena:»). La opción que responde al criterio del banco es «Es la separación angular entre dos puntos de potencia radiada la mitad de la máxima.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-015",
@@ -8311,7 +7665,8 @@ export default [
       "La carga atmosférica del camino recorrido por la onda."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La polarización describe la orientación del campo eléctrico de la onda; debe coincidir con la antena para máxima transferencia. «La dirección del campo eléctrico.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-016",
@@ -8325,7 +7680,8 @@ export default [
       "Se debe emitir con menor potencia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando se produce una interferencia perjudicial que afecta a la seguridad de la vida humana:»). La opción que responde al criterio del banco es «Se debe dejar de emitir hasta resolver el problema.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-017",
@@ -8339,7 +7695,8 @@ export default [
       "Un frecuencímetro."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Un voltímetro de radiofrecuencia.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-020",
@@ -8353,7 +7710,8 @@ export default [
       "Limitar los niveles de la señal antes de su amplificación."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «La etapa detectora en los receptores de banda lateral única.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-021",
@@ -8367,7 +7725,8 @@ export default [
       "Cable coaxial de 75Ω."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se aumenta el riesgo de causar interferencias cuando se emplea:»). La opción que responde al criterio del banco es «Un amplificador lineal.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-022",
@@ -8381,7 +7740,8 @@ export default [
       "dB"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «dB».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-024",
@@ -8395,7 +7755,8 @@ export default [
       "dBW/m 2"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «dBV/m».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-g-025",
@@ -8409,21 +7770,8 @@ export default [
       "La acción de sintonizar una determinada estación."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-027",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Las estaciones automáticas desatendidas utilizarán el prefijo:",
-    "options": [
-      "AM y AN",
-      "EC, EB, EA",
-      "ED",
-      "No tienen prefijo."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué es el \"fading\"?:»). La opción que responde al criterio del banco es «El desvanecimiento transitorio de una señal electromagnética que se propaga.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-h-030",
@@ -8437,147 +7785,8 @@ export default [
       "Seguridad."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-031",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Si observa que un distintivo de llamada va precedido del prefijo EA seguido de un determinado número (del 1 al 9):",
-    "options": [
-      "No haga caso, ya que se trata de una llamada de estación no autorizada.",
-      "Deberá corregir al que emite, pues lo está haciendo mal.",
-      "Se trata de un radioaficionado de clase A.",
-      "Se trata de un titular de licencia CEPT extranjero que está emitiendo en España."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-032",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Las frecuencias de llamada:",
-    "options": [
-      "Sólo se usan en HF.",
-      "Actualmente ya no se utilizan.",
-      "Permiten contactar con otros operadores que utilizan el mismo modo.",
-      "Nunca se usan en VHF."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-035",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "En la instalación de una antena de radioaficionado y sus elementos anejos:",
-    "options": [
-      "No es necesario tener en cuenta la proximidad de las líneas eléctricas aéreas.",
-      "Es necesario señalizar los anclajes y riostras si la antena está situada en un lugar transitable.",
-      "No es necesario tener en cuenta las instalaciones y antenas de otros servicios.",
-      "Los soportes de la antena se podrán fijar al mástil de un pararrayos."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-038",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podrán efectuar:",
-    "options": [
-      "Desde cualquier punto del territorio nacional.",
-      "Desde las provincias de Madrid, Toledo y Segovia.",
-      "Desde la provincia de Valencia.",
-      "En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-045",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
-    "options": [
-      "3 a 30 KHz.",
-      "300 a 3.000 KHz.",
-      "3 a 30 MHz.",
-      "300 a 3.000 MHz."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-046",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En las comunicaciones del servicio de aficionados, ¿cuál de las siguientes proposiciones es correcta?:",
-    "options": [
-      "En general está permitido la emisión de onda portadora no modulada.",
-      "Puede ser empleada arbitrariamente la señal de socorro \"SOS\".",
-      "Puede emitirse información relacionada con la actividad del servicio de aficionados.",
-      "A efectos de ensayos puede emitirse un distintivo de llamada engañoso."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-047",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En las comunicaciones del servicio de aficionados, la palabra GOLF se deletreará:",
-    "options": [
-      "Simplemete con la palabra Golf.",
-      "Golfo, oscar, lima, félix.",
-      "Golfo, oscar, lima, foxtrot.",
-      "Golf, oscar, lima, foxtrot."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-048",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o elemento de fijación de las riostras en la obra civil del inmueble, repartiendo los esfuerzos mecánicos, se conoce con el nombre de:",
-    "options": [
-      "Mástil.",
-      "Soporte.",
-      "Plano de paso.",
-      "Anclaje."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-050",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Con autorización de su titular, podrá hacer uso de una estación de aficionado:",
-    "options": [
-      "Cualquier familiar de primer grado de consanguinidad.",
-      "Aquella persona que se encuentre solamente en posesión del diploma de operador de estaciones radioeléctricas de aficionado.",
-      "Cualquier otro titular de autorización de radioaficionado.",
-      "Salvo en casos de emergencia o desastre, nadie."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-053",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cuál de las siguientes alternativas es correcta?",
-    "options": [
-      "La autorización especial del uso del espectro radioeléctrico por radioaficionados será nominativa.",
-      "Una autorización de radioaficionado no tiene por qué llevar asociado un distintivo de llamada.",
-      "No se precisa una autorización administrativa para la utilización de un distintivo de llamada temporal.",
-      "Una estación portable de aficionado es a la vez estación móvil."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La abreviatura TTT cuando es transmitida tres veces consecutivas, constituye la señal de:»). La opción que responde al criterio del banco es «Seguridad.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-h-054",
@@ -8591,7 +7800,8 @@ export default [
       "Cuando la instalación de la antena sea defectuosa."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «En cualquier momento a petición del titular.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-h-056",
@@ -8605,67 +7815,8 @@ export default [
       "Tiene naturaleza de autorización colectiva."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-h-060",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF, cuando estén instaladas fuera del casco urbano, será:",
-    "options": [
-      "Igual que la permitida en la banda de HF.",
-      "25 W.",
-      "Igual que la permitida a las instaladas en el interior del casco urbano.",
-      "35 W."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-i-004",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Un condensador es un dispositivo que almacena:",
-    "options": [
-      "Energía acústica",
-      "Energía electromágnetica",
-      "Carga eléctrica",
-      "No amacena nada"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-i-007",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El esquema de un receptor básico para banda lateral única se corresponde con la figura:",
-    "stemFigure": "images/quiz/fedi-i-007-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA i-007 (i-7a.jpg): El esquema de un receptor básico para banda lateral única se corresponde con la figura:",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica con figura (FEDI-EA examen 27/10/2007 (i-007)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-i-014",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Señale la configuración de conexión de equipos correcta:",
-    "stemFigure": "images/quiz/fedi-i-014-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA i-014 (i-14a.jpg): Señale la configuración de conexión de equipos correcta:",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 27/10/2007 (i-014)). Contrastar con BOE y convocatoria vigente."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Para su obtención se requerirá la posesión previa del diploma de operador.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-i-018",
@@ -8679,7 +7830,8 @@ export default [
       "A la banda del transmisor"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «A la frecuencia por encima de la cual no hay reflexiones en la ionosfera».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-i-019",
@@ -8693,7 +7845,8 @@ export default [
       "Los equipos modernos nunca producen armónicos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La frecuencia de los de segundo orden es doble de la fundamental».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-i-020",
@@ -8707,7 +7860,8 @@ export default [
       "Un acoplador de antenas"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Para realizar medidas de intensidad de campo radiado por una antena se emplea:»). La opción que responde al criterio del banco es «Un medidor de campo».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-i-022",
@@ -8721,7 +7875,8 @@ export default [
       "El transformador sea muy pequeño"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «El secundario tenga menos espiras que el primario».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-i-024",
@@ -8737,49 +7892,8 @@ export default [
       "F=13,5 MHz"
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 27/10/2007 (i-024)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-j-049",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El radioaficionado esta obligado a comunicar, fehacientemente, su intención de continuar utilizando el dominio público radioeléctrico cada:",
-    "options": [
-      "Dos años",
-      "Cinco años",
-      "Siete años",
-      "Diez años"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque j)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-j-058",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Conforme a la nota 5.141C del Reglamento de Radioaficionados de la Unión Internacional de Radiocomunicaciones:",
-    "options": [
-      "La banda 7100 a 7200 kHz está atribuida a titulo primario al servicio de radiodifusión hasta el 29 de marzo de 2009",
-      "La banda 144 - 146 MHz no está atribuida al Servicio de Aficionados",
-      "La banda 144 - 146 MHz está atribuida al Servicio de Aficionados hasta el 29 de marzo de 2009",
-      "La banda 7100 - 7200 kHz no está atribuida a ningún servicio"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque j)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-j-060",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "La señal internacional de socorro en radiotelefonía es:",
-    "options": [
-      "Help",
-      "Securité",
-      "Mayday",
-      "Pan"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque j)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «F=14,2 MHz».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 27/10/2007 (i-024)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-k-014",
@@ -8795,79 +7909,8 @@ export default [
       "El receptor B es más estable que el receptor A."
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-014)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-k-020",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "El siguiente diagrama de radiación corresponde a una antena tipo:",
-    "stemFigure": "images/quiz/fedi-k-020-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA k-020 (k-20.jpg): El siguiente diagrama de radiación corresponde a una antena tipo:",
-    "options": [
-      "Omnidireccional.",
-      "Dipolo.",
-      "Directiva.",
-      "Isotrópica."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-020)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-k-026",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "El Control Automático de Nivel conocido como ALC pemite:",
-    "options": [
-      "Aumentar el ancho de banda del filtro de frecuencia intermedia.",
-      "Ajustar la ganancia de radiofrecuencia del receptor.",
-      "Evitar emisiones interferentes alrededor de la frecuencia de trabajo.",
-      "Trasmitir modos digitales utilizando el conector de micrófono de la emisora."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 24/5/2008 (bloque k)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-m-005",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Una antena en trasmisión, ¿se puede tocar con las manos?:",
-    "options": [
-      "Sólo si existe una eficaz toma de tierra.",
-      "No se debe tocar una antena trasmitiendo.",
-      "Si, para aumentar su potencia.",
-      "Sólo cuando el suelo este lo suficientemente seco."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-m-011",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Los detectores de señal pueden ser asíncronos ó síncronos. A los primeros también se les conoce como:",
-    "options": [
-      "De entrada.",
-      "De salida.",
-      "De envolvente.",
-      "De portadora."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-m-022",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Se conoce con el nombre genérico de \"diodo\" a:",
-    "options": [
-      "Un componente para amplificar señales.",
-      "Un diversificador de corriente.",
-      "Un dispositivo que permite el paso de la comente eléctrica en un único sentido.",
-      "Una antena de TV."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «El receptor A es más selectivo que el receptor B.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 24/5/2008 (k-014)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-m-023",
@@ -8881,63 +7924,8 @@ export default [
       "R diodo"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-m-025",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Un transistor bipolar esta compuesto por:",
-    "options": [
-      "Base, colector y drenador.",
-      "Emisor, base y colector.",
-      "Fuente, base y emisor.",
-      "Emisor, colector y puerta."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-m-027",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Qué es un \"resonador de cuarzo\"?:",
-    "options": [
-      "Un dispositivo capaz de presentar un efecto de resonancia basado en una propiedad piezoeléctrica.",
-      "Una envoltura translúcida de un instrumento musical.",
-      "Una caja de reverberación.",
-      "Un altavoz."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-m-028",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Según las leyes básicas de la electricidad ¿Cuál de las siguientes fórmulas es incorrecta?:",
-    "options": [
-      "E = I R",
-      "P = E2R",
-      "P = I2R",
-      "P = E I"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-n-041",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "El código RST se utiliza para:",
-    "options": [
-      "Identificar el país desde el que se emite.",
-      "Informar sobre el tipo de equipo que se está utilizando.",
-      "Acceder a una radiobaliza.",
-      "Informar sobre la intensidad de la señal recibida."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Señale el circuito eléctrico equivalente de una antena en resonancia:»). La opción que responde al criterio del banco es «R».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-n-045",
@@ -8951,21 +7939,8 @@ export default [
       "Nunca."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-n-059",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
-    "options": [
-      "87,5 -107 MHz sin limitación de potencia.",
-      "26,960 - 27,410 MHz.",
-      "144 -146 MHz.",
-      "87,5 -108 MHz con potencia máxima de 10mW."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («La instalación, en el exterior de los edificios, del sistema radiante de una estación de radioaficio…»). La opción que responde al criterio del banco es «Solo aquellas que por su simplicidad así lo autorice el Jefe Provincial de Inspección de Telecomunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-o-002",
@@ -8979,121 +7954,8 @@ export default [
       "7,4 voltios y 1500 amperios durante media hora."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-003",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "El amperímetro se debe conectar:",
-    "options": [
-      "En serie.",
-      "En paralelo.",
-      "Por medio de un transformador.",
-      "Con una carga artificial."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-005",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Unidades eléctricas:",
-    "options": [
-      "La intensidad se mide en voltios.",
-      "La tensión se mide en vatios.",
-      "Un culombio es igual al producto de un amperio por segundo.",
-      "La tensión se mide en amperios."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-009",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Señale la conexión correcta entre equipos:",
-    "stemFigure": "images/quiz/fedi-o-009-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA o-009 (o-9a.jpg): Señale la conexión correcta entre equipos:",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-009)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-011",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En un equipo transmisor con modulación de frecuencia (FM) la desviación máxima de frecuencia es 25 KHz y la frecuencia moduladora es 10 KHz. ¿Cuál es el valor del \"índice de modulación\" del equipo?:",
-    "options": [
-      "250.",
-      "15.",
-      "2,5.",
-      "35."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-012",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "¿Cuál es la impedancia de salida típica en los transmisores de radioaficionado?:",
-    "options": [
-      "1000 ohmios.",
-      "12'5 ohmios.",
-      "50 ohmios.",
-      "125 ohmios."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-014",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El mezclador de un emisor, combina dos frecuencias f 1 y f 2 , de tal manera que a su salida se encuentra, entre otras la frecuencia:",
-    "options": [
-      "f 1 . f 2",
-      "f 1 / f 2",
-      "f 1 + f 2",
-      "(f 1 - f 2 ) / (f 1 + f 2 )"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-015",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Un dipolo de media onda, para la banda de 40 metros, debe tener una longitud aproximada de:",
-    "options": [
-      "10 m.",
-      "20 m.",
-      "40 m.",
-      "80 m."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-018",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
-    "options": [
-      "A frecuencias muy altas se pierden las ondas espaciales.",
-      "La energía de una onda permanece invariable.",
-      "Se evita con una antena omnidireccional.",
-      "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «7,4 voltios y 1,5 amperios durante una hora.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-o-020",
@@ -9109,133 +7971,8 @@ export default [
       "Un detector de envolvente."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-020)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-o-021",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "¿Qué bandas de frecuencia son más idóneas para conseguir una comunicación mediante \"rebote lunar\"?",
-    "options": [
-      "Ninguna.",
-      "Todas.",
-      "VLF.",
-      "VHF y superiores."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque o)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-p-038",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué grupo del código Q indica \"su frecuencia varía\"?:",
-    "options": [
-      "QRG.",
-      "QRF.",
-      "QTH.",
-      "QRH."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-p-041",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Como norma general las instalaciones en una estacion de radioaficionado deberán ser efectuadas:",
-    "options": [
-      "Directamente por el propietario de la estación.",
-      "Por un funcionario técnico de la Administración competente.",
-      "Exclusivamente por un técnico de una Asociación legalizada de Radioaficionados.",
-      "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-p-042",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra RPT que significa:",
-    "options": [
-      "Repita.",
-      "Corte de transmisión.",
-      "Recibido.",
-      "Transmisor."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-p-046",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El acceso a los repetidores analógicos y digitales finales será:",
-    "options": [
-      "Intermitente.",
-      "Necesariamente libre.",
-      "Obligatorio.",
-      "Restringido, si la estación estuviera dotada de código de acceso."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-p-049",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipìfica como infracción grave:",
-    "options": [
-      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios.",
-      "La no colaboración con la Inspección de Telecomunicaciones cuando est sea requerida.",
-      "El establecimiento de comunicaciones con estaciones no autorizadas.",
-      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-p-054",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "La Ley 19/1983, conocida como Ley de Antenas, regula:",
-    "options": [
-      "La obligación de comunicar la instalación de una antena a la Dirección General de Telecomunicaciones.",
-      "El derecho a instalar una antena de cualquier tamaño.",
-      "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.",
-      "La exención de presentar memoria descriptiva de la instalación."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 23/5/2009 (bloque p)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-003",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "El período de una corriente alterna es:",
-    "options": [
-      "El tiempo que tarda en empezar a circular la corriente.",
-      "El tiempo que está encendida una bombilla.",
-      "El tiempo que transcurre entre dos valores máximos consecutivos.",
-      "Siempre vale cero."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-004",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "La oposición que presenta una bobina de inductancia L al paso de una corriente alterna se llama reactancia inductiva, y:",
-    "options": [
-      "Se expresa en hertzios.",
-      "Si la frecuencia es 0, su valor es 0.",
-      "Si la frecuencia es f, su valor es 2&pi;/fL.",
-      "Siempre vale 1."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Un oscilador.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 23/5/2009 (o-020)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-s-005",
@@ -9251,171 +7988,8 @@ export default [
       "Ninguna de las anteriores."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-005)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-010",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué excursión de frecuencia máxima permite?",
-    "options": [
-      "12 KHz.",
-      "50 KHz.",
-      "150 KHz.",
-      "1 MHz."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-011",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un receptor, qué circuito incluiría en el bloque con interrogantes al objeto de rechazar la frecuencia imagen:",
-    "stemFigure": "images/quiz/fedi-s-011-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-011 (s-11.jpg): En el siguiente esquema de un receptor, qué circuito incluiría en el bloque con interrogantes al objeto de rechazar la f",
-    "options": [
-      "Un discriminador de imagen.",
-      "Un detector de video.",
-      "Un amplificador de banda ancha.",
-      "Un filtro."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-011)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-013",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
-    "options": [
-      "Clase B.",
-      "Clase A.",
-      "Clase C.",
-      "La distorsión es independiente de la clase de amplificador."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-015",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La ganancia de una antena de 40 dB equivalen a una relación de:",
-    "options": [
-      "10.000.",
-      "1000.",
-      "100.",
-      "40."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-017",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
-    "stemFigure": "images/quiz/fedi-s-017-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-017 (s-17a.jpg): El esquema de un transmisor básico para banda lateral única se corresponde con la figura:",
-    "options": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-017)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-018",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
-    "stemFigure": "images/quiz/fedi-s-018-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-018 (s-18.jpg): La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomin",
-    "options": [
-      "Polarización.",
-      "Relación delante-detrás.",
-      "Ancho de haz de radiación.",
-      "Región de campo radiado."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-018)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-019",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La forma más común de propagación en VHF y UHF es por:",
-    "options": [
-      "Onda de superficie.",
-      "Onda directa.",
-      "Onda inosférica.",
-      "Onda reflejada."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-020",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
-    "stemFigure": "images/quiz/fedi-s-020-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-020 (s-20.jpg): Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
-    "options": [
-      "Condensador variable.",
-      "Filtro paso banda.",
-      "Aislante de porcelana.",
-      "Balun."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-020)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-022",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Si en el vatímetro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia directa y reflejada, se puede afirmar que:",
-    "stemFigure": "images/quiz/fedi-s-022-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA s-022 (s-22.jpg): Si en el vatímetro de la figura conectado entre un transmisor y una antena, se observa la siguiente lectura de potencia",
-    "options": [
-      "El transmisor está adaptado a la antena.",
-      "El transmisor no está adaptado a la antena.",
-      "No existe onda estacionaria en la línea.",
-      "El valor de la R.O.E. es 1."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-022)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-028",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Un termistor PTC es aquel que:",
-    "options": [
-      "Su resistencia está en función de la corriente que la atraviesa.",
-      "Su valor aumenta con la temperatura.",
-      "Se usa como estabilizadora de corriente.",
-      "Su valor disminuye al aumentar la temperatura."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-s-029",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "¿Qué es el denominado \"squelch\" de un equipo?",
-    "options": [
-      "Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel.",
-      "Un circuto amplificador para oir el sonido con mayor volumen que en la entrada.",
-      "Un circuito atenuador de la señal portadora que mejora la señal/ruido.",
-      "Un oscilador de cuarzo."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque s)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En condensadores en paralelo se suman capacidades; en serie la capacidad equivalente baja. En CC estable el condensador ideal equivale a circuito abierto. «C = C 1 + C 2 + C 3».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-005)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-s-030",
@@ -9431,7 +8005,8 @@ export default [
       "No se puede utilizar como receptor, al no disponer de etapa de frecuencia intermedia."
     ],
     "correctIndex": 0,
-    "explain": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-030)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «SSB y CW.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 17/10/2009 (s-030)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-t-032",
@@ -9445,21 +8020,8 @@ export default [
       "La secuencia no se contempla en el reglamento vigente."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-t-034",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Que está ocurriendo si un radioaficionado se identifica como EA3/OK2HM:",
-    "options": [
-      "Se están realizando pruebas en el distrito 3.",
-      "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
-      "Se están realizando cambios en el reglamento y el distrito 3 es pionero.",
-      "Se trata de una conexión con interferencias."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Corresponde a una estación desatendida analógica.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-t-037",
@@ -9473,21 +8035,8 @@ export default [
       "Se trata de un distintivo solicitado por una Escuela Universitaria."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-t-038",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los Planes de Banda:",
-    "options": [
-      "Son establecidos por las Asociaciones locales de radioaficionados.",
-      "Sirven de guía a los radioafiionados de todo el mundo.",
-      "Son establecidos sin tener en cuenta la división en Regiones de la UIT.",
-      "Deben ser aprobados por la Dirección General de Telecomunicaciones."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Esta emitiendo desde Andalucía.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-t-049",
@@ -9501,63 +8050,23 @@ export default [
       "El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-t-052",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
+    "id": "fedi-w-002",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La unidad de medida de intensidad eléctrica es el:",
     "options": [
-      "Distrito, Sufijo, Prefijo.",
-      "Distrito, Prefijo, Sufijo.",
-      "Prefijo, Sufijo, Distrito.",
-      "Prefijo, Distrito, Sufijo."
+      "Voltio.",
+      "Vatio.",
+      "Ohmio.",
+      "Amperio."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-t-056",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El certificado HAREC:",
-    "options": [
-      "Sirve para obtener autorización de aficionado en cualquier país del mundo.",
-      "En España únicamente se proporciona a ciudadanos no residentes.",
-      "No se expide conjuntamente con el diploma de operador.",
-      "Permite que un ciudadano extranjero residente en España pueda obtener una autorización de radioaficionado sin examinarse de nuevo."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-t-057",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
-    "options": [
-      "La negativa o la obstrucción a ser inspeccionado, y la no colaboración con la Inspección de Telecomunicaciones cuando esta sea requerida.",
-      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.",
-      "La instalación de estaciones radioeléctricas sin autorización, cuando, de acuerdo con lo dispuesto en la normativa reguladora de las telecomunicaciones, sea necesaria.",
-      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-t-060",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Por la comisión de una infracción grave tipificada en la Ley General de Telecomunicaciones se podrá imponer al infractor una multa por importe de hasta el duplo del beneficio bruto obtenido o, en el caso de que no resulte aplicable este criterio el límite máximo será de:",
-    "options": [
-      "5.000.000 €",
-      "500.000 €",
-      "1.000.000 €",
-      "Ninguna de las anteriores."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Amperio.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-003",
@@ -9571,7 +8080,8 @@ export default [
       "No existe."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:»). La opción que responde al criterio del banco es «Mayor.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-004",
@@ -9585,7 +8095,8 @@ export default [
       "Constante."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Constante.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-005",
@@ -9599,7 +8110,8 @@ export default [
       "Mantener constante el valor de la frecuencia intermedia."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Mantener constante la amplitud de la señal de salida.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-006",
@@ -9613,7 +8125,8 @@ export default [
       "Diez mil ohmios."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Identifica la magnitud y su unidad SI antes de comparar opciones. «Mil ohmios.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-007",
@@ -9627,7 +8140,8 @@ export default [
       "Cuarta línea de color."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Cuarta línea de color.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-008",
@@ -9641,7 +8155,8 @@ export default [
       "La relación entre el número de espiras del primario y el número de espiras del secundario."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «La relación entre el número de espiras del primario y el número de espiras del secundario.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-009",
@@ -9655,7 +8170,8 @@ export default [
       "Que el circuito sea de corriente continua."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Que las impedancias capacitivas e inductivas se igualen.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-010",
@@ -9669,7 +8185,8 @@ export default [
       "Un dato irrelevante para filtro."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La frecuencia que delimita la banda de paso o no paso por el filtro.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-011",
@@ -9683,7 +8200,8 @@ export default [
       "Ninguna de las anteriores respuestas es válida."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «Energía química en energía eléctrica.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-012",
@@ -9699,7 +8217,8 @@ export default [
       "Una fuente de alimentación."
     ],
     "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-012)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Una fuente de alimentación.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-012)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-013",
@@ -9713,7 +8232,8 @@ export default [
       "Nada de lo anterior."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Proteger aparatos de medida.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-014",
@@ -9729,7 +8249,8 @@ export default [
       "Un filtro."
     ],
     "correctIndex": 3,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-014)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Un filtro.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-014)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-015",
@@ -9743,7 +8264,8 @@ export default [
       "Depende de la potencia del equipo y se expresa en dBm."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-016",
@@ -9757,7 +8279,8 @@ export default [
       "Cuanto mas elevado sea su valor, mayor rendimiento se obtiene en la transmisión."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada instrumento mide una magnitud: potencia (vatímetro), forma de onda (osciloscopio), frecuencia (frecuencímetro) o espectro (analizador). «Es un indicador de grado de adaptación de impedancias entre el transmisor y la antena.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-017",
@@ -9771,23 +8294,8 @@ export default [
       "1, 2, 3, 4."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-w-018",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de evitar la generación de interferencias?",
-    "stemFigure": "images/quiz/fedi-w-018-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-018 (w-18.jpg): En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes",
-    "options": [
-      "Control automático de frecuencia o CAF",
-      "Control automático de ganancia CAG",
-      "Control automático de nivel o ALC",
-      "Control automatico de saturación o CAS"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-018)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las capas ionizadas de la atmósfera se denominan:»). La opción que responde al criterio del banco es «D, E, F1 y F2.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-019",
@@ -9801,7 +8309,8 @@ export default [
       "Sólo cuando hay interferencias."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Si, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-020",
@@ -9815,7 +8324,8 @@ export default [
       "Realimentar la señal de salida con parte de la señal de entrada."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «No requerir en el receptor la sincronización con el transmisor, por ser síncronos.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-021",
@@ -9829,7 +8339,8 @@ export default [
       "El indice de modulación es superior al 100%."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Decimos que hay sobremodulación, cuando:»). La opción que responde al criterio del banco es «El indice de modulación es superior al 100%.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-022",
@@ -9843,7 +8354,8 @@ export default [
       "Hacia tierra."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "La polarización de la antena debe alinearse con la de la onda para máxima transferencia. «En el plano horizontal.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-023",
@@ -9859,7 +8371,8 @@ export default [
       "Vertical de λ/4."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-023)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Directiva.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-023)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-025",
@@ -9873,7 +8386,8 @@ export default [
       "LF"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «HF».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-026",
@@ -9887,7 +8401,8 @@ export default [
       "En serie, la resistencia total siempre es mayor que cualquiera de ellas."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «En serie, la resistencia total siempre es mayor que cualquiera de ellas.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-027",
@@ -9903,7 +8418,8 @@ export default [
       "Impedancia."
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-027)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Relación delante-atrás.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-027)). Contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-w-028",
@@ -9919,79 +8435,23 @@ export default [
       "Atenuador."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-028)). Contrastar con BOE y convocatoria vigente."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Acoplador de antena.».",
+    "explainSourceNote": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-028)). Contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-w-030",
+    "id": "fedi-w-029",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "Señale la conexión correcta entre los chasis metálicos de los equipos:",
-    "stemFigure": "images/quiz/fedi-w-030-original.jpg",
-    "stemFigureAlt": "Figura original FEDI-EA w-030 (w-30a.jpg): Señale la conexión correcta entre los chasis metálicos de los equipos:",
+    "stem": "Para medir la potencia de una señal eléctrica, se emplea un:",
     "options": [
-      "",
-      "",
-      "",
-      ""
+      "Vatímetro.",
+      "Frecuencímetro",
+      "Puente se resonancia.",
+      "Capacímetro."
     ],
     "correctIndex": 0,
-    "explain": "Práctica con figura (FEDI-EA examen 8/5/2010 (w-030)). Contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-036",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "A cual de las siguientes localidades puede pertenecer el distintivo de llamada: EA6VYX:",
-    "options": [
-      "Lleida.",
-      "Huelva.",
-      "Palma de Mallorca.",
-      "Bilbao."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-039",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Cuales de estas causas será causa específica de revocación de la autorización de radioaficionado?:",
-    "options": [
-      "Estar sin utilizar el espectro radioeléctrico durante cinco años seguidos.",
-      "No comunicar fehacientemente a la Administración, cada cinco años, su deseo de continuar utilizando el espectro radioeléctrico.",
-      "Cambiarse de domicilio sin comunicárselo fehacientemente a la Administración en un plazo de cinco años.",
-      "Ninguna de ellas, la Autorización no se revoca."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-048",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "De acuerdo con el Apéndice 1 del Reglamento de Radio&shy;comuni&shy;caciones de la UIT la clase de emisión F3E corresponde a una emisión de:",
-    "options": [
-      "Telegrafía.",
-      "Televisión.",
-      "Telefonía con dos o más canales.",
-      "Telefonía con un solo canal."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-053",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
-    "options": [
-      "Carecer de los preceptivos cuadros de tarifas o de precios cuando su exhibición se exija por la normativa vigente.",
-      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general.",
-      "La distribución, venta o exposición para la venta de equipos o aparatos cuya conformidad con los requisitos esenciales aplicables no haya sido evaluada de acuerdo con lo dispuesto en el título IV de esta ley o con los acuerdos o convenios internacionales celebrados por el Estado español.",
-      "La alteración, manipulación o la omisión de las características técnicas, de las marcas, de las etiquetas, de los signos de identificación o de la documentación de los equipos o de los aparatos de telecomunicaciones."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatímetro.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-x-054",
@@ -10005,21 +8465,8 @@ export default [
       "Se trata de un estación no autorizada."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-x-056",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "El montaje del sistema radiante de una estación fija de radioaficionado será realizado:",
-    "options": [
-      "Como norma general, por un instalador de telecomunica&shy;ciones autorizado.",
-      "Siempre por el propio radioaficionado.",
-      "Utilizando exclusivamente equipos de fabricación española.",
-      "Por cualquier persona."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente una estación española.».",
+    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "ofic-001",
@@ -10033,7 +8480,7 @@ export default [
       "P = V + I"
     ],
     "correctIndex": 1,
-    "explain": "Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad.",
+    "explain": "Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad. La respuesta que marca el banco es «P = V · I». Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad.",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / electricidad básica; contrastar con manuales URE."
   },
   {
@@ -10078,7 +8525,7 @@ export default [
       "Igual de potencia"
     ],
     "correctIndex": 0,
-    "explain": "3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
+    "explain": "3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10. La respuesta que marca el banco es «Doblar la potencia». 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
@@ -10363,7 +8810,7 @@ export default [
       "Son obligatorias en DX"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio.",
+    "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio. La respuesta que marca el banco es «No son propias del servicio y deben evitarse». El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio.",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
@@ -10543,7 +8990,7 @@ export default [
       "Ignorarla si la ROE es baja"
     ],
     "correctIndex": 1,
-    "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución.",
+    "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución. La respuesta que marca el banco es «Dejar de emitir hasta resolver el problema». La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución.",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
@@ -10558,7 +9005,7 @@ export default [
       "Solo importa la resistencia"
     ],
     "correctIndex": 1,
-    "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente).",
+    "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente). La respuesta que marca el banco es «Se igualan en magnitud y se cancelan». En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente).",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
@@ -10573,7 +9020,7 @@ export default [
       "Q = f + B"
     ],
     "correctIndex": 1,
-    "explain": "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos.",
+    "explain": "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos. La respuesta que marca el banco es «Q = f / B». Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos.",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
@@ -10648,7 +9095,7 @@ export default [
       "Dos antenas obligatoriamente"
     ],
     "correctIndex": 1,
-    "explain": "La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas.",
+    "explain": "La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas. La respuesta que marca el banco es «Dos frecuencias intermedias en cadena». La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas.",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
@@ -10663,7 +9110,7 @@ export default [
       "El código Q"
     ],
     "correctIndex": 1,
-    "explain": "Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB).",
+    "explain": "Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB). La respuesta que marca el banco es «La diferencia en dB entre radiación frontal y posterior». Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB).",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
@@ -10723,7 +9170,7 @@ export default [
       "V = I + R"
     ],
     "correctIndex": 1,
-    "explain": "La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R."
+    "explain": "La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R. La respuesta que marca el banco es «V = I · R». La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R."
   },
   {
     "id": "q10",
@@ -10751,7 +9198,7 @@ export default [
       "Está prohibido siempre"
     ],
     "correctIndex": 2,
-    "explain": "Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente."
+    "explain": "Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente. La respuesta que marca el banco es «Pueden existir límites y requisitos de comunicación/acuerdos según normativa y estatutos». Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente."
   },
   {
     "id": "q12",
@@ -10765,7 +9212,7 @@ export default [
       "Usar potencia máxima siempre"
     ],
     "correctIndex": 1,
-    "explain": "La identificación periódica y al cierre es requisito operativo habitual en el servicio de aficionado."
+    "explain": "La identificación periódica y al cierre es requisito operativo habitual en el servicio de aficionado. La respuesta que marca el banco es «Identificarse al inicio y al final (y según intervalos reglamentarios)». La identificación periódica y al cierre es requisito operativo habitual en el servicio de aficionado."
   },
   {
     "id": "q2",
@@ -10793,7 +9240,7 @@ export default [
       "λ = c + f"
     ],
     "correctIndex": 1,
-    "explain": "λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas."
+    "explain": "λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas. La respuesta que marca el banco es «λ = c / f». λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas."
   },
   {
     "id": "q4",
@@ -10835,7 +9282,7 @@ export default [
       "Modulación excesiva"
     ],
     "correctIndex": 1,
-    "explain": "ROE alta implica energía reflejada: desadaptación entre línea/antena y etapa de RF."
+    "explain": "ROE alta implica energía reflejada: desadaptación entre línea/antena y etapa de RF. La respuesta que marca el banco es «Desadaptación de impedancias». ROE alta implica energía reflejada: desadaptación entre línea/antena y etapa de RF."
   },
   {
     "id": "q7",
@@ -10880,19 +9327,6 @@ export default [
     "explain": "En el alfabeto fonético ICAO/NATO, M es «Mike»."
   },
   {
-    "id": "quijotes-1-0001",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Se denomina receptor superheterodino de doble conversión al:",
-    "options": [
-      "Receptor con dos frecuencias intermedias independientes",
-      "Receptor con dos amplificadores de RF",
-      "Receptor con dos entradas de antenas"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-1-0002",
     "part": 1,
     "topicId": "componentes",
@@ -10904,77 +9338,8 @@ export default [
       "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0004",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El llamado \"detector de envolvente\" es implementado en receptores para señales con modulación de:",
-    "options": [
-      "Fase (PM)",
-      "Frecuencia (FM)",
-      "Amplitud (AM)",
-      "Banda lateral única"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 4). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0005",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Colocamos 3 Condensadores en paralelo, si el valor individual de 2 de ellos es 100 pF, y el valor total es de 400 pF, ¿Cuál serà el valor del otro condensador?:",
-    "options": [
-      "800 pF",
-      "100 pF",
-      "200 pF",
-      "100 pF"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 5). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0006",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?:",
-    "options": [
-      "Rectificación",
-      "Demodulación",
-      "Realimentación",
-      "Conversión"
-    ],
-    "correctIndex": 2,
-    "explain": "La realimentación consiste precisamente en devolver una parte de la señal de salida a la entrada del circuito. Puede ser útil para estabilizar o controlar una etapa, o problemática si provoca oscilaciones. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 6). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0007",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La diferencia de potencial eléctrico se mide en:",
-    "options": [
-      "Vatios",
-      "Microfaradios",
-      "Voltios",
-      "Faradios"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 7). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0008",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Un dieléctrico es:",
-    "options": [
-      "Un aislante",
-      "Un condensador con polaridad",
-      "Semiconductor",
-      "Un buen conductor"
-    ],
-    "correctIndex": 0,
-    "explain": "Un dieléctrico es un material aislante que no conduce corriente de forma apreciable y que puede polarizarse dentro de un campo eléctrico. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 8). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre componentes pasivos y activos («Un elevado nivel de intensidad de campo eléctrico puede producir:»). La opción que responde al criterio del banco es «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0009",
@@ -10988,7 +9353,8 @@ export default [
       "Habrá que adaptar con un balun 1:1"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 9). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "ROE alta indica energía reflejada por desadaptación entre transmisor, línea y antena; se mejora con acoplador o ajuste. «Se transfiere la máxima energía a la antena».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 9). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0012",
@@ -11002,121 +9368,8 @@ export default [
       "La resistencia eléctrica es inmune a los cambios de temperatura"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0044",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En la realización de medidas, usando un polímetro, indique la respuesta correcta",
-    "options": [
-      "Para medidas de tensión, se conectan las puntas de prueba en serie con el elemento en el que deseamos medir la tensión.",
-      "Para medidas de corriente, se conectan las puntas de prueba en paralelo con el elemento a través del cual circula la corriente que deseamos medir.",
-      "Para medidas de resistencia, se conectan las puntas de prueba en serie con la resistencia que deseamos medir.",
-      "Ninguna de las anteriores respuestas es correcta."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 44). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0045",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El ancho de banda necesario de un transmisor es:",
-    "options": [
-      "La anchura de banda de frecuencias estrictamente suficiente para asegurar la transmisión de la información en condiciones adecuadas.",
-      "El conjunto de frecuencias que puede trabajar un transmisor.",
-      "La relación entre la ganancia de antena y la impedancia del transmisor.",
-      "La dependencia del margen de frecuencias que pueda trabajar la antena sin acoplador"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 45). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0046",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "La capacidad de un condensador se mide en:",
-    "options": [
-      "Amperios",
-      "Faradios",
-      "Webers",
-      "Decibelios.",
-      "Voltios",
-      "Condensos"
-    ],
-    "correctIndex": 1,
-    "explain": "La capacidad eléctrica mide cuánta carga puede almacenar un condensador por cada voltio aplicado; su unidad del Sistema Internacional es el faradio. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 46). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0049",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La potencia suministrada a la línea de alimentación de la antena, por un transmisor, durante un ciclo de frecuencia en ausencia de modulación, se denomina:",
-    "options": [
-      "Potencia reflejada.",
-      "Potencia de pico de la envolvente.",
-      "Potencia de portadora.",
-      "Ninguna de las respuestas anteriores es correcta."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 49). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0050",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Cuando dos o más señales atraviesan simultáneamente un sistema no lineal, existe el riesgo de que se genere",
-    "options": [
-      "Realimentación excesiva en las etapas amplificadoras.",
-      "Disminución del volumen.",
-      "Distorsión por intermodulación.",
-      "Alto nivel de ruido térmico."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 50). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0051",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En una instalación eléctrica, el llamado \"factor de potencia\" o \"Coseno de φ\" es:",
-    "options": [
-      "Un valor indicador del desfasaje entre la tensión y la corriente en un determinado componente de la instalación.",
-      "Un factor para duplicar la potencia consumida en un determinado componente.",
-      "Una magnitud relacionada con la potencia que varía entre 1 y 3.",
-      "Un factor que sólo se aplica en corriente continua."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 51). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0052",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "En general los diodos se caracterizan por ser dispositivos que:",
-    "options": [
-      "Permiten el paso de la corriente en una única dirección.",
-      "Permiten el paso de la corriente en las dos direcciones.",
-      "No permiten el paso de la corriente.",
-      "Ninguna de las anteriores respuestas es correcta."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 52). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0053",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
-    "options": [
-      "Fallo en la fuente de alimentación.",
-      "Insuficiente ancho de banda de la señal de salida.",
-      "Escaso nivel de Squelch.",
-      "Excesivo nivel de señal en la antena."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 53). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si aumenta la temperatura en un conductor»). La opción que responde al criterio del banco es «Aumenta su resistencia eléctrica.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0054",
@@ -11130,274 +9383,8 @@ export default [
       "No se puede calcular."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 54). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0056",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Los medios más comunes para proteger de interferencias a un receptor son:",
-    "options": [
-      "Sobremodular la señal de entrada.",
-      "Transformadores de tensión.",
-      "Altavoces de alta impedancia.",
-      "Toma a tierra y condensadores."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 56). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0057",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La radiación armónica es:",
-    "options": [
-      "La radiación no esencial en múltiplos enteros de la frecuencia principal.",
-      "La frecuencia a la que resuena la antena.",
-      "La emisión del oscilador de batido.",
-      "La potencia que suministra el transmisor en ausencia de modulación."
-    ],
-    "correctIndex": 0,
-    "explain": "Una emisión armónica aparece en múltiplos enteros de la frecuencia fundamental, por ejemplo 2f, 3f o 4f. Es una radiación no esencial que debe limitarse con filtrado. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 57). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0058",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "El tamaño físico de una antena debe ser función de la:",
-    "options": [
-      "Frecuencia.",
-      "Altura efectiva.",
-      "Conductividad del terreno.",
-      "Potencia de emisión."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 58). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0059",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "¿Cómo se puede eliminar una interferencia generada por la fuente de alimentación de un transmisor?",
-    "options": [
-      "Elevando el nivel de Squelch.",
-      "Colocando un filtro apropiado.",
-      "Poniendo una etapa adicional de potencia.",
-      "Suprimiendo la portadora."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 59). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0060",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En función de la actividad solar, la capa de la atmósfera responsable de las variaciones de propagación radioeléctrica en frecuencias inferiores a 30 MHz, se denomina:",
-    "options": [
-      "Reflexosfera.",
-      "Estratosfera.",
-      "Ionosfera.",
-      "Troposfera."
-    ],
-    "correctIndex": 2,
-    "explain": "La ionosfera cambia con la actividad solar y afecta especialmente a la propagación por debajo de 30 MHz, por eso es clave en HF. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 60). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0061",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
-    "options": [
-      "Emitir con más potencia.",
-      "Optimizar los filtros del transceptor.",
-      "Disminuir la potencia reflejada en la línea de transmisión.",
-      "Incrementar el tiempo de transmisión sin calentamiento del equipo."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 61). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0062",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Para evitar interferencias en los altavoces de un equipo de baja frecuencia, se debe:",
-    "options": [
-      "Conectar un diodo detector entre los terminales de las bombillas.",
-      "Conectar a masa los terminales del microondas.",
-      "Utilizar para su conexión cable de igual longitud de onda que la señal interferente.",
-      "Utilizar para su conexión cable blindado."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 62). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0065",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Si se reduce la sección de un conductor:",
-    "options": [
-      "Aumenta el número de átomos por centímetro cuadrado.",
-      "Disminuye la temperatura del conductor.",
-      "La resistencia eléctrica disminuye.",
-      "La resistencia eléctrica aumenta."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 65). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0066",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Una etapa de frecuencia intermedia en un receptor superheterodino, básicamente, se compone de:",
-    "options": [
-      "Amplificadores y filtros.",
-      "Atenuadores y mezcladores.",
-      "Osciladores y conversores de tensión.",
-      "Demoduladores y redes inductivas."
-    ],
-    "correctIndex": 0,
-    "explain": "La frecuencia intermedia de un superheterodino se procesa con filtros y amplificadores para obtener selectividad y ganancia antes de la demodulación. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 66). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0099",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En una antena directiva tipo Yagi los elementos parásitos:",
-    "options": [
-      "Se conectan al cable de alimentación.",
-      "Necesitan un balun para su adaptación.",
-      "Permiten aumentar el ancho de banda de emisión.",
-      "Proporcionan directividad."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 99). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0101",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
-    "options": [
-      "HF",
-      "UHF",
-      "SHF",
-      "EHF",
-      "VHF"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 101). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0102",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?",
-    "options": [
-      "Un interruptor.",
-      "El mezclador.",
-      "Un filtro paso bajo o paso banda.",
-      "La etapa de potencia."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 102). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0103",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:",
-    "options": [
-      "Ionósfera - mesosfera - estratosfera",
-      "Troposfera - ionosfera - mesosfera",
-      "Estratosfera - mesosfera - ionosfera.",
-      "Troposfera - estratosfera - ionosfera"
-    ],
-    "correctIndex": 3,
-    "explain": "En la clasificación básica por altura, primero está la troposfera, después la estratosfera y por encima la ionosfera, que es relevante para propagación de HF. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 103). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0105",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La emisión de señales armónicas y espurias:",
-    "options": [
-      "Disminuye la posible producción de interferencias.",
-      "Es necesaria en la banda de HF.",
-      "Implica la posible producción de interferencias.",
-      "Sólo hay que tenerlo en cuenta en las bandas de VHF y superiores."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 105). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0108",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "¿Cuál es la \"condición de resonancia\" para un circuito resonante?",
-    "options": [
-      "Que se produzca un buen eco del sonido.",
-      "Que las impedancias capacitivas e inductivas se igualen.",
-      "Que tenga dos bobinas iguales.",
-      "Que el circuito sea de corriente continua."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 108). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0110",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Una batería eléctrica es un dispositivo que convierte:",
-    "options": [
-      "Energía química en energía eléctrica.",
-      "Energía cinética en energía potencial.",
-      "Ninguna de las anteriores.",
-      "Energía química en potencial negativo."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 110). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0112",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "La relación señal/ruido en un receptor:",
-    "options": [
-      "Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).",
-      "Es siempre igual a uno.",
-      "No tiene sentido. En los receptores de alta calidad no hay ruido.",
-      "Depende de la potencia del equipo y se expresa en dBm."
-    ],
-    "correctIndex": 0,
-    "explain": "La relación señal/ruido compara el nivel de señal útil con el ruido de fondo. Cuanto mayor es el valor en dB, mejor se distingue la señal recibida. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 112). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0113",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Referido al parámetro de \"ROE\" de una estación transmisora, señale la opción que es correcta:",
-    "options": [
-      "Debe ser cero.",
-      "Es un indicador de grado de adaptación de impedancias entre el transmisor y la antena.",
-      "Sirve para indicar el consumo de energía de la estación.",
-      "Cuanto más elevado sea su valor, mayor rendimiento se obtiene en la transmisión."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 113). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0114",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Las capas ionizadas de la atmósfera se denominan:",
-    "options": [
-      "A, B, C1 y C2.",
-      "P1, P2, P3, P4.",
-      "D, E, F1 y F2.",
-      "1, 2, 3, 4."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 114). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «5.2k Ω 10% de tolerancia».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 54). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0117",
@@ -11411,21 +9398,8 @@ export default [
       "El índice de modulación es superior al 100%."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0123",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En un sistema de radiocomunicación, el llamado \"ruido blanco\":",
-    "options": [
-      "Es inaudible.",
-      "Es independiente de la fuente de alimentación.",
-      "Depende únicamente del micrófono y del altavoz.",
-      "Es independiente de la frecuencia."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 123). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Decimos que hay sobre modulación, cuando:»). La opción que responde al criterio del banco es «El índice de modulación es superior al 100%.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0124",
@@ -11439,7 +9413,8 @@ export default [
       "Siempre es 0."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 124). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En CA sinusoidal distinguimos valor máximo, eficaz y periodo; el eficaz es el que equivale térmicamente a una continua. «El tiempo que transcurre entre dos valores máximos consecutivos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 124). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0125",
@@ -11453,7 +9428,8 @@ export default [
       "Siempre vale 1."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 125). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Si la frecuencia es 0, su valor es 0.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 125). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0126",
@@ -11467,7 +9443,8 @@ export default [
       "Moduladores de banda lateral."
     ],
     "correctIndex": 1,
-    "explain": "Un DDS genera señales mediante síntesis digital, lo que permite obtener frecuencias variables con buena resolución y estabilidad. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 126). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un DDS genera señales mediante síntesis digital, lo que permite obtener frecuencias variables con buena resolución y estabilidad. La respuesta que marca el banco es «Osciladores variables de precisión».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 126). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0127",
@@ -11481,7 +9458,8 @@ export default [
       "Modulada en banda lateral única."
     ],
     "correctIndex": 0,
-    "explain": "El cristal de cuarzo presenta una resonancia muy estable, de modo que los osciladores a cristal mantienen mejor la frecuencia que un oscilador LC simple. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 127). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El cristal de cuarzo presenta una resonancia muy estable, de modo que los osciladores a cristal mantienen mejor la frecuencia que un oscilador LC simple.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 127). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0129",
@@ -11495,21 +9473,8 @@ export default [
       "La portadora está desfasada 180º respecto a la única banda lateral."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 129). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0130",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué ancho de frecuencia máxima permite?",
-    "options": [
-      "12 KHz.",
-      "50 KHz.",
-      "150 KHz.",
-      "25 MHz."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 130). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Se tiene una sola banda lateral sin portadora.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 129). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0131",
@@ -11523,7 +9488,8 @@ export default [
       "Certificado de Alta Garantía."
     ],
     "correctIndex": 0,
-    "explain": "CAG significa Control Automático de Ganancia: el receptor ajusta su ganancia para mantener un nivel de salida más constante aunque cambie la señal recibida. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 131). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "CAG significa Control Automático de Ganancia: el receptor ajusta su ganancia para mantener un nivel de salida más constante aunque cambie la señal recibida.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 131). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0132",
@@ -11537,7 +9503,8 @@ export default [
       "La distorsión es independiente de la clase de amplificador."
     ],
     "correctIndex": 0,
-    "explain": "Un amplificador de clase A conduce durante todo el ciclo de la señal. Es poco eficiente, pero reproduce con muy baja distorsión. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 132). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un amplificador de clase A conduce durante todo el ciclo de la señal. Es poco eficiente, pero reproduce con muy baja distorsión.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 132). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0133",
@@ -11551,7 +9518,8 @@ export default [
       "Atenuación de espacio libre."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 133). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Desvanecimiento o Fading.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 133). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0134",
@@ -11565,7 +9533,8 @@ export default [
       "40"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 134). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La Yagi usa reflector detrás y directores delante del elemento excitado para concentrar radiación. «10.000».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 134). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0135",
@@ -11579,7 +9548,8 @@ export default [
       "El número de espiras del primario y del secundario."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 135). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En el transformador ideal la relación de tensiones sigue la relación de espiras: V1/V2 = N1/N2. «El número de espiras del primario y del secundario.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 135). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0137",
@@ -11593,7 +9563,8 @@ export default [
       "HF."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 137). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista, altura y obstáculos. «MF.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 137). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0138",
@@ -11607,7 +9578,8 @@ export default [
       "Un polímetro digital."
     ],
     "correctIndex": 0,
-    "explain": "La ROE indica la desadaptación entre línea, transmisor y antena. El medidor de ROE permite ver cuánta energía se refleja por falta de adaptación. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 138). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La ROE indica la desadaptación entre línea, transmisor y antena. El medidor de ROE permite ver cuánta energía se refleja por falta de adaptación. La respuesta que marca el banco es «Un medidor de R.O.E.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 138). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0139",
@@ -11621,7 +9593,8 @@ export default [
       "Ser utilizado para comunicaciones de corta distancia."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 139). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La aplicación más importante del osciloscopio consiste en:»). La opción que responde al criterio del banco es «La representación gráfica de las formas de onda.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 139). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0140",
@@ -11635,7 +9608,8 @@ export default [
       "Receptores convencionales."
     ],
     "correctIndex": 2,
-    "explain": "Un amplificador lineal de potencia puede agravar emisiones no deseadas si se sobreexcita o no se filtra bien, por eso aumenta el riesgo de interferencias. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 140). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un amplificador lineal de potencia puede agravar emisiones no deseadas si se sobreexcita o no se filtra bien, por eso aumenta el riesgo de interferencias.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 140). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0142",
@@ -11649,7 +9623,8 @@ export default [
       "Es un duplicador de frecuencias digitales."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 142). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué se entiende por \"Procesador Digital de Señal\" (DSP)»). La opción que responde al criterio del banco es «Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 142). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0143",
@@ -11663,21 +9638,8 @@ export default [
       "Su valor disminuye al aumentar la temperatura."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 143). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0144",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "¿Qué es el denominado \"squelch\" de un equipo?",
-    "options": [
-      "Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel.",
-      "Un circuito amplificador para oír el sonido con mayor volumen que en la entrada.",
-      "Un circuito atenuador de la señal portadora que mejora la señal/ruido.",
-      "El oscilador de cuarzo."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 144). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un termistor PTC es aquel que:»). La opción que responde al criterio del banco es «Su valor aumenta con la temperatura.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 143). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0150",
@@ -11691,21 +9653,8 @@ export default [
       "Balun"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 150). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0163",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "¿Qué ventajas presenta la antena dipolo en V invertida?:",
-    "options": [
-      "Un valor de impedancia próximo a 75Ω y polarización circular.",
-      "Un valor de impedancia próximo a 75Ω y un diagrama de radiación muy directivo.",
-      "Un valor de impedancia constante y elevada ganancia.",
-      "Un valor de impedancia próximo a 50Ω y un diagrama de radiación prácticamente omnidireccional."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 163). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; si resuena alto está corto y si resuena bajo está largo. «Balun».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 150). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0166",
@@ -11719,7 +9668,8 @@ export default [
       "Eólico."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 166). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Químico.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 166). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0168",
@@ -11733,7 +9683,8 @@ export default [
       "Con una carga fiticia."
     ],
     "correctIndex": 0,
-    "explain": "Un amperímetro mide la corriente que atraviesa una rama, así que debe insertarse en serie con esa rama. En paralelo alteraría el circuito y podría dañarse. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 168). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un amperímetro mide la corriente que atraviesa una rama, así que debe insertarse en serie con esa rama. En paralelo alteraría el circuito y podría dañarse.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 168). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0169",
@@ -11747,7 +9698,8 @@ export default [
       "Es igual al valor de la menor de las resistencias."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 169). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Es mayor que el valor de cualquiera de las resistencias.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 169). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0170",
@@ -11761,21 +9713,8 @@ export default [
       "La tensión se mide en amperios."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 170). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0172",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "El factor de calidad \"Q\" de un circuito resonante es:",
-    "options": [
-      "La relación existente entre la frecuencia de resonancia de ese circuito y su ancho de banda.",
-      "Independiente de la frecuencia.",
-      "El valor de la carga del circuito.",
-      "Inexistente."
-    ],
-    "correctIndex": 0,
-    "explain": "El factor Q también puede expresarse como frecuencia de resonancia dividida por ancho de banda. Un Q alto significa resonancia más estrecha. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 172). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En esta pregunta sobre unidades eléctricas, cuál es la respuesta correcta:»). La opción que responde al criterio del banco es «Un culombio es igual al producto de un amperio por segundo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 170). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0174",
@@ -11789,7 +9728,8 @@ export default [
       "La capacidad de rechazar frecuencias superiores a la frecuencia intermedia."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 174). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad de separar dos señales muy próximas en frecuencia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 174). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0175",
@@ -11803,7 +9743,8 @@ export default [
       "1"
     ],
     "correctIndex": 2,
-    "explain": "En FM, el índice de modulación es desviación máxima dividida por frecuencia moduladora: 25 kHz / 10 kHz = 2,5. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 175). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En FM, el índice de modulación es desviación máxima dividida por frecuencia moduladora: 25 kHz / 10 kHz = 2,5.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 175). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0176",
@@ -11817,7 +9758,8 @@ export default [
       "125 ohmios."
     ],
     "correctIndex": 2,
-    "explain": "La impedancia normalizada de salida en muchos transmisores y líneas coaxiales de radioaficionado es 50 ohmios, para facilitar la adaptación con cable, filtros y antenas. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 176). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La impedancia normalizada de salida en muchos transmisores y líneas coaxiales de radioaficionado es 50 ohmios, para facilitar la adaptación con cable, filtros y antenas.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 176). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0177",
@@ -11831,7 +9773,8 @@ export default [
       "AM"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 177). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué símbolo va asociado a la modulación de frecuencia en fonía?»). La opción que responde al criterio del banco es «F3E».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 177). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0178",
@@ -11845,7 +9788,8 @@ export default [
       "(f1 - f2) / (f1 + f2)"
     ],
     "correctIndex": 2,
-    "explain": "Un mezclador produce componentes de suma y diferencia entre las frecuencias aplicadas. Entre sus productos aparece f1 + f2, además de otras componentes que se filtran según convenga. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 178). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un mezclador produce componentes de suma y diferencia entre las frecuencias aplicadas. Entre sus productos aparece f1 + f2, además de otras componentes que se filtran según convenga.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 178). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0179",
@@ -11859,7 +9803,8 @@ export default [
       "40 m"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 179). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; si resuena alto está corto y si resuena bajo está largo. «10 m».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 179). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0180",
@@ -11873,7 +9818,8 @@ export default [
       "Duplica la potencia que se le entrega"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 180). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En el transformador ideal la relación de tensiones sigue la relación de espiras: V1/V2 = N1/N2. «Uno de los devanados tiene doble número de espiras que el otro.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 180). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0181",
@@ -11887,7 +9833,8 @@ export default [
       "Tiene varios elementos denominados parásitos."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 181). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; si resuena alto está corto y si resuena bajo está largo. «Permite obtener resonancia en varias frecuencias.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 181). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0182",
@@ -11901,7 +9848,8 @@ export default [
       "A frecuencias muy altas se pierden las ondas espaciales."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 182). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Para el desvanecimiento o fading, es correcto afirmar que:»). La opción que responde al criterio del banco es «La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 182). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0183",
@@ -11915,7 +9863,8 @@ export default [
       "Rayos gamma."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 183). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Radiación electromagnética.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 183). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0185",
@@ -11929,7 +9878,8 @@ export default [
       "VHF y superiores."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 185). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «VHF y superiores.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 185). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0186",
@@ -11943,7 +9893,8 @@ export default [
       "Clase de emisión."
     ],
     "correctIndex": 2,
-    "explain": "La intermodulación se genera cuando varias señales pasan por una etapa no lineal y producen frecuencias nuevas no deseadas. Es una causa típica de interferencias. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 186). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La intermodulación se genera cuando varias señales pasan por una etapa no lineal y producen frecuencias nuevas no deseadas. Es una causa típica de interferencias.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 186). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0187",
@@ -11957,7 +9908,8 @@ export default [
       "La tensión eléctrica"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 187). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Tensión en paralelo, intensidad en serie; resistencia sin tensión de trabajo en el circuito. Para esta pregunta: «La impedancia de la antena.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 187). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0188",
@@ -11971,7 +9923,8 @@ export default [
       "El consumo de potencia de alimentación."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 188). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El medidor comúnmente denominado \"S-meter\" indica:»). La opción que responde al criterio del banco es «La intensidad de la señal de entrada del receptor.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 188). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0190",
@@ -11985,7 +9938,8 @@ export default [
       "Disponen de rejilla."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 190). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Tienen tres terminales.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 190). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0191",
@@ -11999,7 +9953,8 @@ export default [
       "Potencia."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 191). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los decibelios expresan relaciones; dBm referencia potencia a 1 mW y +3 dB en potencia ≈ doble. La respuesta es «Potencia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 191). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0192",
@@ -12013,7 +9968,8 @@ export default [
       "Comunicárselo al aeropuerto."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 192). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si al emitir en la banda de 2 metros se tiene conocimiento de que se producen interferencias al Serv…»). La opción que responde al criterio del banco es «Dejar de emitir.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 192). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0193",
@@ -12027,7 +9983,8 @@ export default [
       "Un receptor de reserva conectado en paralelo con la antena."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 193). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Como medida de protección y seguridad toda estación radioeléctrica debe disponer de:»). La opción que responde al criterio del banco es «Un interruptor general de suministro eléctrico.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 193). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0195",
@@ -12041,7 +9998,8 @@ export default [
       "Un voltio no se puede medir nunca."
     ],
     "correctIndex": 1,
-    "explain": "La definición de voltio se deriva de la ley de Ohm: un voltio aparece entre los extremos de un ohmio cuando circula un amperio. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 195). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La definición de voltio se deriva de la ley de Ohm: un voltio aparece entre los extremos de un ohmio cuando circula un amperio.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 195). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0197",
@@ -12055,7 +10013,8 @@ export default [
       "No se puede calcular."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 197). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Es el tiempo que transcurre entre dos mínimos consecutivos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 197). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0198",
@@ -12069,7 +10028,8 @@ export default [
       "Intensidad."
     ],
     "correctIndex": 0,
-    "explain": "dBm es una unidad logarítmica de potencia referida a 1 mW. Por ejemplo, 0 dBm equivale a 1 mW. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 198). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "dBm es una unidad logarítmica de potencia referida a 1 mW. Por ejemplo, 0 dBm equivale a 1 mW.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 198). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0199",
@@ -12083,7 +10043,8 @@ export default [
       "Filtro de línea de desacoplo."
     ],
     "correctIndex": 3,
-    "explain": "El filtro de línea de desacoplo atenúa la radiofrecuencia que podría circular por la alimentación eléctrica, evitando que el transceptor inyecte RF en la red. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 199). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El filtro de línea de desacoplo atenúa la radiofrecuencia que podría circular por la alimentación eléctrica, evitando que el transceptor inyecte RF en la red.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 199). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0200",
@@ -12097,7 +10058,8 @@ export default [
       "Dos bobinas acopladas."
     ],
     "correctIndex": 3,
-    "explain": "Un transformador necesita al menos dos bobinados acoplados magnéticamente: primario y secundario. La transferencia se realiza por inducción. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 200). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un transformador necesita al menos dos bobinados acoplados magnéticamente: primario y secundario. La transferencia se realiza por inducción.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 200). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0201",
@@ -12111,7 +10073,8 @@ export default [
       "15 vatios."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 201). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «120 vatios.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 201). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0202",
@@ -12125,7 +10088,8 @@ export default [
       "Haya ondas estacionarias."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 202). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Exista adaptación de las impedancias».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 202). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0203",
@@ -12139,7 +10103,8 @@ export default [
       "UHF"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 203). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «VHF».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 203). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0204",
@@ -12153,35 +10118,8 @@ export default [
       "Se debe apagar la instalación de ICT."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 204). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0205",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Cuando una instalación de radioaficionado afecta o interfiere a una ICT (Infraestructura Común de Telecomunicaciones):",
-    "options": [
-      "Se puede seguir emitiendo si se dispone de licencia o autorización de radioaficionado.",
-      "Se tiene que dejar de emitir, al menos temporalmente.",
-      "Se comunica al presidente de la comunidad.",
-      "Se debe apagar la instalación de ICT."
-    ],
-    "correctIndex": 1,
-    "explain": "Si una emisión afecta a una ICT, lo prudente y exigible es cesar o reducir la emisión temporalmente hasta eliminar la interferencia. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 205). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0206",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "El producto de 15 voltios por 2 amperio son",
-    "options": [
-      "30 Vatios (W)",
-      "15 Amperios (A)",
-      "15 Ohmios (Ω)",
-      "30 Faradios (F)"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 206). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Se tiene que dejar de emitir, al menos temporalmente.» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 204). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0207",
@@ -12195,7 +10133,8 @@ export default [
       "Sólo se pueden conectar en paralelo."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 207). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «El valor de la conexión de dos resistencias en paralelo, da un valor resultante menor que cualquiera de ellas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 207). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0208",
@@ -12209,7 +10148,8 @@ export default [
       "No se debe tocar una antena en transmisión."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 208). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Una antena en trasmisión, ¿se puede tocar con las manos?:»). La opción que responde al criterio del banco es «No se debe tocar una antena en transmisión.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 208). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0209",
@@ -12223,21 +10163,8 @@ export default [
       "Ninguna de las respuestas anteriores es correcta."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 209). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0211",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
-    "options": [
-      "Potencia eléctrica.",
-      "Diferencia de potencial eléctrico.",
-      "Corriente eléctrica.",
-      "Longitud de onda."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 211). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un enlace radioeléctrico entre España y Nueva Zelanda podría emplear:»). La opción que responde al criterio del banco es «Una frecuencia de la banda HF por debajo de la frecuencia crítica.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 209). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0212",
@@ -12251,7 +10178,8 @@ export default [
       "Al oscilador local."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 212). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «A la salida del mezclador.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 212). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0213",
@@ -12265,21 +10193,8 @@ export default [
       "De envolvente."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 213). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0214",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Si queremos sintonizar una frecuencia de 7 MHz en un receptor que tiene una frecuencia intermedia de 9 MHz ¿Cuál deberá ser la frecuencia del oscilador local?:",
-    "options": [
-      "63 MHz.",
-      "79 MHz.",
-      "16 MHz.",
-      "8MHz."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 214). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «De envolvente.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 213). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0216",
@@ -12293,21 +10208,8 @@ export default [
       "Limitar radiaciones indeseadas."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 216). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0218",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Indique cual de las siguientes respuestas es falsa:",
-    "options": [
-      "Un amplificador es lineal cuando la señal de salida es fiel reflejo de la entrada, pero amplificada.",
-      "Los amplificadores pueden ser clase A, B o C.",
-      "La carga de un amplificador de potencia debe ser del valor especificado por el fabricante.",
-      "La salida de un amplificador de potencia, nunca va seguida de filtros destinados a eliminar los armónicos."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 218). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Los equipos radioeléctricos deberán estar contenidos en cajas metálicas para:»). La opción que responde al criterio del banco es «Limitar radiaciones indeseadas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 216). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0219",
@@ -12321,21 +10223,8 @@ export default [
       "20.2 W"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 219). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0220",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "¿Qué valor indicará un medidor de ondas estacionarias, en el caso de un acoplamiento óptimo entre un transmisor y una antena?:",
-    "options": [
-      "0",
-      "10",
-      "2",
-      "1"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 220). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «20 W».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 219). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0221",
@@ -12349,21 +10238,8 @@ export default [
       "Estabilidad."
     ],
     "correctIndex": 3,
-    "explain": "La estabilidad de frecuencia es la capacidad del receptor para mantenerse en la frecuencia sintonizada sin deriva apreciable. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 221). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0222",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "Un elevado nivel de intensidad de campo eléctrico puede producir:",
-    "options": [
-      "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones.",
-      "Un aumento de la potencia entregada por la línea de alimentación a la antena.",
-      "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético.",
-      "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica."
-    ],
-    "correctIndex": 0,
-    "explain": "Un campo intenso puede saturar la entrada de equipos cercanos y bloquearlos o desensibilizarlos, aunque la señal no esté exactamente en su frecuencia de trabajo. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 222). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La estabilidad de frecuencia es la capacidad del receptor para mantenerse en la frecuencia sintonizada sin deriva apreciable.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 221). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0223",
@@ -12377,7 +10253,8 @@ export default [
       "Es el valor indicativo de la diferencia de fase de la sinusoide."
     ],
     "correctIndex": 0,
-    "explain": "En una sinusoide centrada en cero, la amplitud se mide desde el valor medio hasta el máximo. No es la distancia pico a pico completa. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 223). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En una sinusoide centrada en cero, la amplitud se mide desde el valor medio hasta el máximo. No es la distancia pico a pico completa.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 223). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0224",
@@ -12391,21 +10268,8 @@ export default [
       "Un tipo de antena."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 224). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0225",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Para cualquier comunicación radioeléctrica en la banda UHF, se puede afirmar que:",
-    "options": [
-      "A mayor frecuencia, menor es el alcance.",
-      "A mayor altura de las antenas menor es el alcance.",
-      "A menor frecuencia mayor deberá de ser la altura de las antenas.",
-      "A menor alcance mayor será la polarización de la señal."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 225). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Un componente que permite el paso de la comente eléctrica en un único sentido.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 224). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0226",
@@ -12419,7 +10283,8 @@ export default [
       "Fuente, base y emisor."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 226). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Emisor, base y colector.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 226). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0227",
@@ -12433,7 +10298,8 @@ export default [
       "Un altavoz de lujo."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 227). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué es un \"resonador de cuarzo\"?:»). La opción que responde al criterio del banco es «Los conmuUn dispositivo capaz de presentar un efecto de resonancia basado en una propiedad piezoeléctrica.tadores en la posición 1.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 227). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0228",
@@ -12447,7 +10313,8 @@ export default [
       "P = E² / R"
     ],
     "correctIndex": 2,
-    "explain": "La potencia cumple P = E·I, P = I²·R y P = E²/R. La expresión P = E²R es incorrecta porque debería dividirse por R, no multiplicarse. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 228). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La potencia cumple P = E·I, P = I²·R y P = E²/R. La expresión P = E²R es incorrecta porque debería dividirse por R, no multiplicarse.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 228). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0229",
@@ -12461,7 +10328,8 @@ export default [
       "Componentes de campo ajustados a impedancia nula."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 229). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "ROE alta indica energía reflejada por desadaptación entre transmisor, línea y antena; se mejora con acoplador o ajuste. «Interferencias.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 229). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0230",
@@ -12475,7 +10343,8 @@ export default [
       "Aisladores para corrientes inversas."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 230). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; si resuena alto está corto y si resuena bajo está largo. «Circuitos resonantes.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 230). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0232",
@@ -12489,7 +10358,8 @@ export default [
       "Para igualar la señal de salida a la de entrada."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 232). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «Para reducir el rizado de la señal de salida y obtener un valor más constante de esta.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 232). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0233",
@@ -12503,7 +10373,8 @@ export default [
       "Las siglas AM, significan modulación de armónicos."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Modulación de señales radioeléctricas:»). La opción que responde al criterio del banco es «La modulación AM, hace variar la amplitud de la portadora.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 233). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0234",
@@ -12517,7 +10388,8 @@ export default [
       "La suma de las capacidades individuales."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 234). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «La suma de las capacidades individuales.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 234). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0239",
@@ -12531,7 +10403,8 @@ export default [
       "No es correcta ninguna de las anteriores respuestas."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 239). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene de captar señales débiles y amplificarlas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 239). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0240",
@@ -12545,7 +10418,8 @@ export default [
       "10 MHz."
     ],
     "correctIndex": 3,
-    "explain": "Un mezclador entrega productos de suma y diferencia. Con 14 MHz y 4 MHz aparecen 18 MHz y 10 MHz; entre las opciones, 10 MHz es válida. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 240). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un mezclador entrega productos de suma y diferencia. Con 14 MHz y 4 MHz aparecen 18 MHz y 10 MHz; entre las opciones, 10 MHz es válida.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 240). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0241",
@@ -12559,7 +10433,8 @@ export default [
       "No se pueden utilizar."
     ],
     "correctIndex": 2,
-    "explain": "En VHF predominan trayectos de alcance local o regional, normalmente por línea de vista y repetidores, no propagación ionosférica de largo alcance como en HF. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 241). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En VHF predominan trayectos de alcance local o regional, normalmente por línea de vista y repetidores, no propagación ionosférica de largo alcance como en HF. La respuesta que marca el banco es «Para distancias cortas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 241). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0242",
@@ -12573,7 +10448,8 @@ export default [
       "Anula la salida del receptor cuando se recibe una señal con ruido muy alto."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 242). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El mando NB de un transceptor sirve para:»). La opción que responde al criterio del banco es «Suprimir ruidos impulsivos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 242). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0244",
@@ -12587,7 +10463,8 @@ export default [
       "La frecuencia con la que debe cortarse la guía para la transmisión."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 244). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La frecuencia por debajo de la cual no es posible la transmisión en la guía de onda.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 244). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0246",
@@ -12601,7 +10478,8 @@ export default [
       "Solo tienen dipolo y directores."
     ],
     "correctIndex": 0,
-    "explain": "La antena Yagi usa elementos director y reflector para concentrar la radiación en una dirección, por eso se considera directiva. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 246). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La antena Yagi usa elementos director y reflector para concentrar la radiación en una dirección, por eso se considera directiva.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 246). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0248",
@@ -12615,7 +10493,8 @@ export default [
       "Dispersión por propagación."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 248). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una señal radioeléctrica se puede caracterizar por su:»). La opción que responde al criterio del banco es «Amplitud y frecuencia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 248). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0249",
@@ -12629,7 +10508,8 @@ export default [
       "Hertzio: Frecuencia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 249). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Faradio: Cantidad de carga.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 249). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0250",
@@ -12643,7 +10523,8 @@ export default [
       "Evitar emisiones interferentes alrededor de la frecuencia de trabajo."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 250). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El Control Automático de Nivel conocido como ALC pemite:»). La opción que responde al criterio del banco es «Evitar emisiones interferentes alrededor de la frecuencia de trabajo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 250). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0251",
@@ -12657,21 +10538,8 @@ export default [
       "Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 251). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0254",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La velocidad de propagación de las ondas electromagnéticas en el vacio es de:",
-    "options": [
-      "300.000 km/s.",
-      "300.000 km/h.",
-      "300.000 m/s.",
-      "300.000 m/h."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 254). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 251). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0258",
@@ -12685,7 +10553,8 @@ export default [
       "Directamente proporcional al producto de las cargas"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 258). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La carga se mide en culombios; intensidad es carga por segundo. La opción correcta es «Directamente proporcional al producto de las cargas».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 258). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0259",
@@ -12699,21 +10568,8 @@ export default [
       "Nada"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 259). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0260",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "El ancho de banda ocupado es:",
-    "options": [
-      "El comprendido entre los límites superior e inferior de la señal modulada",
-      "El ancho del canal en uso, más los adyacentes",
-      "El número de vatios necesarios para mantener una buena comunicación",
-      "El número de kiloherzios que ocupa la banda de trabajo del equipo"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 260). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una de las técnicas para tratar de eliminar interferencias es el filtrado. Si se utiliza un filtro p…»). La opción que responde al criterio del banco es «Atenuar las frecuencias superiores e inferiores al intervalo de la banda de paso».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 259). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0261",
@@ -12727,7 +10583,8 @@ export default [
       "No amacena nada"
     ],
     "correctIndex": 2,
-    "explain": "El condensador almacena carga eléctrica en sus placas separadas por un dieléctrico; por eso también almacena energía en un campo eléctrico. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 261). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El condensador almacena carga eléctrica en sus placas separadas por un dieléctrico; por eso también almacena energía en un campo eléctrico.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 261). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0262",
@@ -12741,7 +10598,8 @@ export default [
       "100 voltios"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 262). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «10 voltios».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 262). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0263",
@@ -12755,7 +10613,8 @@ export default [
       "No es necesario conectarlo a tierra"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 263). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Proteger al operador de descargas».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 263). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0264",
@@ -12769,7 +10628,8 @@ export default [
       "Mayor alcance que el meramente visual entre las antenas transmisora y receptora"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 264). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista, altura y obstáculos. «Mayor alcance que el meramente visual entre las antenas transmisora y receptora».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 264). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0265",
@@ -12783,7 +10643,8 @@ export default [
       "Nulos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 265). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista, altura y obstáculos. «Menores».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 265). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0266",
@@ -12797,7 +10658,8 @@ export default [
       "Convierten la señal recibida a una de frecuencia fija denominada frecuencia imagen"
     ],
     "correctIndex": 1,
-    "explain": "En conversión directa, la señal recibida se mezcla con un oscilador local para trasladarla directamente a audiofrecuencia o a una frecuencia muy baja. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 266). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En conversión directa, la señal recibida se mezcla con un oscilador local para trasladarla directamente a audiofrecuencia o a una frecuencia muy baja.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 266). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0267",
@@ -12811,21 +10673,8 @@ export default [
       "Incrementar el margen de sintonía de un amplificador"
     ],
     "correctIndex": 1,
-    "explain": "Un multiplicador de frecuencia toma una señal de oscilador y genera una salida a un múltiplo de esa frecuencia mediante armónicos seleccionados. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 267). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-1-0269",
-    "part": 1,
-    "topicId": "componentes",
-    "stem": "¿Qué indica el factor de calidad \"Q\" de un circuito resonante?:",
-    "options": [
-      "La calidad de los componentes eléctricos",
-      "La facultad para estabilizar un circuito",
-      "Relación entre el ancho de banda de entrada y salida",
-      "Facultad para seleccionar una frecuencia eliminando las demás"
-    ],
-    "correctIndex": 3,
-    "explain": "El factor Q expresa lo selectivo que es un circuito resonante: cuanto mayor es, más estrecha es la banda alrededor de la frecuencia de resonancia. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 269). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Un multiplicador de frecuencia toma una señal de oscilador y genera una salida a un múltiplo de esa frecuencia mediante armónicos seleccionados.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 267). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0270",
@@ -12839,7 +10688,8 @@ export default [
       "Elementos que viven a costa de los demás"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 270). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La Yagi usa reflector detrás y directores delante del elemento excitado para concentrar radiación. «Componentes de la antena no activos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 270). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0271",
@@ -12853,7 +10703,8 @@ export default [
       "La orientación del campo magnético transmitido"
     ],
     "correctIndex": 1,
-    "explain": "La polarización describe la orientación del campo eléctrico de la onda radiada. Por eso se habla de antenas con polarización vertical, horizontal o circular. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 271). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La polarización describe la orientación del campo eléctrico de la onda radiada. Por eso se habla de antenas con polarización vertical, horizontal o circular.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 271). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-0272",
@@ -12867,7 +10718,8 @@ export default [
       "Igual a la de la antena y a la del transmisor"
     ],
     "correctIndex": 3,
-    "explain": "Para transferir potencia con pocas reflexiones, transmisor, línea y antena deben presentar impedancias compatibles. Si no, aumenta la ROE y baja la eficiencia. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 272). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Para transferir potencia con pocas reflexiones, transmisor, línea y antena deben presentar impedancias compatibles. Si no, aumenta la ROE y baja la eficiencia.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 272). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1558",
@@ -12881,7 +10733,8 @@ export default [
       "Las condiciones de propagación"
     ],
     "correctIndex": 1,
-    "explain": "La temperatura cambia características de cristales, bobinas y condensadores, por lo que puede desplazar la frecuencia de un oscilador. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1558). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La temperatura cambia características de cristales, bobinas y condensadores, por lo que puede desplazar la frecuencia de un oscilador.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1558). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1559",
@@ -12895,7 +10748,8 @@ export default [
       "Es aquella que contiene el 99% de la potencia emitida por el transmisor"
     ],
     "correctIndex": 2,
-    "explain": "La anchura de banda necesaria es la mínima suficiente para transportar la información con la velocidad y calidad requeridas, evitando ocupar espectro innecesario. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1559). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La anchura de banda necesaria es la mínima suficiente para transportar la información con la velocidad y calidad requeridas, evitando ocupar espectro innecesario.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1559). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1560",
@@ -12909,7 +10763,8 @@ export default [
       "0 voltios"
     ],
     "correctIndex": 0,
-    "explain": "Tres baterías iguales conectadas en serie suman sus tensiones. Si cada una vale X voltios, el total es 3X voltios. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1560). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Tres baterías iguales conectadas en serie suman sus tensiones. Si cada una vale X voltios, el total es 3X voltios.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1560). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1561",
@@ -12923,7 +10778,8 @@ export default [
       "En la etapa de radiofrecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1561). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «En el mezclador».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1561). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1562",
@@ -12937,7 +10793,8 @@ export default [
       "Amperio = Culombio / Segundo"
     ],
     "correctIndex": 2,
-    "explain": "Por la ley de Ohm, V = I·R. En unidades, eso equivale a decir que voltio = amperio por ohmio. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1562). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Por la ley de Ohm, V = I·R. En unidades, eso equivale a decir que voltio = amperio por ohmio.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1562). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1564",
@@ -12951,7 +10808,8 @@ export default [
       "Igual a la potencia media del transmisor."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1564). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Superior a la potencia media del transmisor.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1564). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1565",
@@ -12965,7 +10823,8 @@ export default [
       "Generar la señal, modular y amplificar."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1565). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Generar la señal, modular y amplificar.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1565). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1566",
@@ -12979,7 +10838,8 @@ export default [
       "Las de bocina."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1566). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Entre las antenas de apertura están:»). La opción que responde al criterio del banco es «Las de bocina.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1566). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1567",
@@ -12993,7 +10853,8 @@ export default [
       "Amarillo."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1567). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Amarillo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1567). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1568",
@@ -13007,7 +10868,8 @@ export default [
       "Sus inducciones se suman."
     ],
     "correctIndex": 3,
-    "explain": "Si dos bobinados tienen el mismo sentido de arrollamiento y están conectados de forma concordante, sus campos o inducciones se suman. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1568). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Si dos bobinados tienen el mismo sentido de arrollamiento y están conectados de forma concordante, sus campos o inducciones se suman.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1568). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1569",
@@ -13021,7 +10883,8 @@ export default [
       "El de la menor de las pilas."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1569). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre componentes pasivos y activos («Cuando colocamos varias pilas en serie, el voltaje resultante del conjunto es:»). La opción que responde al criterio del banco es «La suma del voltaje de todas las pilas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1569). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1570",
@@ -13035,7 +10898,8 @@ export default [
       "Onda de horizonte visto."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1570). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («La onda que rebasa el horizonte y llega a la atmósfera se denomina:»). La opción que responde al criterio del banco es «Onda espacial.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1570). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-1571",
@@ -13049,7 +10913,8 @@ export default [
       "Es superior o inferior a la de entrada según los casos."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1571). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Es igual a la de entrada.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1571). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2100",
@@ -13063,7 +10928,8 @@ export default [
       "Intermodulación"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2100). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las ondas EM combinan campo eléctrico y magnético; la luz y la RF son el mismo fenómeno a distinta frecuencia. «Atenuación».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2100). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2101",
@@ -13077,7 +10943,8 @@ export default [
       "Se hace variar la frecuencia portadora por medio una señal de audio."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2101). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre cadenas de receptor y transmisor («Se modula en amplitud cuando:»). La opción que responde al criterio del banco es «Se varía la amplitud de una portadora de radiofrecuencia por medio de una señal de audio.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2101). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2102",
@@ -13091,7 +10958,8 @@ export default [
       "Colector seguidor."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2102). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «Seguidor emisor».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2102). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2103",
@@ -13105,7 +10973,8 @@ export default [
       "Su inestabilidad frente a la radiofrecuencia"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2103). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Su elevado peso».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2103). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2205",
@@ -13119,7 +10988,8 @@ export default [
       "Tiene garantizada una velocidad mínima real de 2 Mbps en todo momento."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2205). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si un usuario tiene contratado un acceso a Internet “ADSL de 2 megas”, esto significa que:»). La opción que responde al criterio del banco es «Dispone de un ancho de banda de 2 millones de bits por segundo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2205). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2207",
@@ -13133,7 +11003,8 @@ export default [
       "La tensión del conjunto es cero."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2207). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre componentes pasivos y activos («En un circuito con varias baterías conectadas en paralelo:»). La opción que responde al criterio del banco es «La resistencia interna equivalente del conjunto disminuye.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2207). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2209",
@@ -13147,7 +11018,8 @@ export default [
       "Reactancia."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2209). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En electricidad, la letra Z corresponde a:»). La opción que responde al criterio del banco es «Impedancia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2209). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2213",
@@ -13161,7 +11033,8 @@ export default [
       "Amplitud modulada"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («Qué tipo de comunicación ocupa un mayor ancho de banda»). La opción que responde al criterio del banco es «Frecuencia modulada».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2213). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2218",
@@ -13175,7 +11048,8 @@ export default [
       "22.000 W"
     ],
     "correctIndex": 2,
-    "explain": "La potencia eléctrica aproximada se calcula como P = V·I. Con 220 V y 10 A: 220 x 10 = 2200 W. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2218). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La potencia eléctrica aproximada se calcula como P = V·I. Con 220 V y 10 A: 220 x 10 = 2200 W. La respuesta que marca el banco es «2.200 W».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2218). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2220",
@@ -13189,7 +11063,8 @@ export default [
       "Mesosfera"
     ],
     "correctIndex": 2,
-    "explain": "La reflexión o refracción que permite contactos HF a larga distancia se produce en la ionosfera, especialmente en sus capas ionizadas. Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2220). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La reflexión o refracción que permite contactos HF a larga distancia se produce en la ionosfera, especialmente en sus capas ionizadas.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2220). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-1-2221",
@@ -13203,67 +11078,8 @@ export default [
       "La tolerancia del ±5 %"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2221). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-14-0361",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
-    "options": [
-      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.",
-      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios por otros operadores.",
-      "La emisión de señales de identificación falsas o engañosas.",
-      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 361). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-14-0450",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
-    "options": [
-      "87,5 - 107 MHz sin limitación de potencia.",
-      "26,960 - 27,410 MHz.",
-      "144 - 146 y 430-440 MHz.",
-      "87,5 - 108 MHz con potencia máxima de 10mW."
-    ],
-    "correctIndex": 2,
-    "explain": "Las radiobalizas de aficionado se autorizan en segmentos concretos; en este banco se recogen las bandas VHF/UHF de 144-146 y 430-440 MHz. Práctica histórica (Quijotes EA3RCQ · reglamentacion, quiz 14, pregunta 450). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-83-1667",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomina:",
-    "stemFigure": "images/quiz/quijotes-83-1667-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1667): La región angular comprendida entre las dos líneas gruesas del siguiente diagrama de radiación de una antena, se denomin",
-    "options": [
-      "Polarización.",
-      "Ancho de haz de radiación.",
-      "Relación delante-detrás.",
-      "Región de campo radiado."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1667). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1668",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un receptor, qué circuito incluiría en el bloque con interrogantes al objeto de rechazar la frecuencia imagen:",
-    "stemFigure": "images/quiz/quijotes-83-1668-original.jpg",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1668): En el siguiente esquema de un receptor, qué circuito incluiría en el bloque con interrogantes al objeto de rechazar la f",
-    "options": [
-      "Un discriminador de señal.",
-      "Un mejorador de señal.",
-      "Un amplificador de banda ancha.",
-      "Un filtro."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1668). Contrastar con BOE y convocatoria."
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La tolerancia del ±5 %».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2221). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-83-1671",
@@ -13279,135 +11095,8 @@ export default [
       "Metálica, eléctricamente estanca y con conexión a tierra."
     ],
     "correctIndex": 3,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1671). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1673",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "El siguiente circuito conectado entre transmisor y antena se utiliza como:",
-    "stemFigure": "images/quiz/quijotes-83-1673-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1673): El siguiente circuito conectado entre transmisor y antena se utiliza como:",
-    "options": [
-      "Limitador",
-      "Discriminador",
-      "Acoplador",
-      "Atenuador"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1673). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1674",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En el siguiente diagrama de radiación de una antena, la diferencia de decibelios entre los puntos A y B, se denomina:",
-    "stemFigure": "images/quiz/quijotes-83-1674-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1674): En el siguiente diagrama de radiación de una antena, la diferencia de decibelios entre los puntos A y B, se denomina:",
-    "options": [
-      "Ganancia",
-      "Relación delante/atrás (D/A)",
-      "Directividad",
-      "Impedancia"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1674). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1676",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de evitar la generación de interferencias?",
-    "stemFigure": "images/quiz/quijotes-83-1676-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1676): En el siguiente esquema de un transmisor de banda lateral única, ¿qué circuito incluiría en el cuadro con interrogantes",
-    "options": [
-      "Control automático de frecuencia (CAF)",
-      "Control automático de ganancia (CAG)",
-      "Control automático de nivel (ALC)",
-      "Control automático de saturación (CAS)"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1676). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1677",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "El siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro de interrogantes al objeto de rechazar la frecuencia de imagen?",
-    "stemFigure": "images/quiz/quijotes-83-1677-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1677): El siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro de interrogantes al objeto de rechazar la frec",
-    "options": [
-      "Un discriminador de imagen",
-      "Un detector de imagen",
-      "Un amplificador",
-      "Un filtro"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1677). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1678",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "El siguiente esquema eléctrico corresponde a:",
-    "stemFigure": "images/quiz/quijotes-83-1678-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1678): El siguiente esquema eléctrico corresponde a:",
-    "options": [
-      "Un atenuador de radiofrecuencia",
-      "Un acoplador de antena",
-      "Un oscilador de cuarzo",
-      "Una fuente de alimentación."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1678). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1679",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "Las bobinas conectadas en los extremos del dipolo de la figura permiten",
-    "stemFigure": "images/quiz/quijotes-83-1679-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1679): Las bobinas conectadas en los extremos del dipolo de la figura permiten",
-    "options": [
-      "Disminuir la longitud eléctrica de la antena",
-      "Aumentar la potencia de emisión",
-      "Incrementar la longitud eléctrica de la antena",
-      "Evitar el uso del balun"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1679). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1682",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En el siguiente diagrama, corresponde a un receptor elemental de conversión directa, el bloque en interrogantes representa un:",
-    "stemFigure": "images/quiz/quijotes-83-1682-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1682): En el siguiente diagrama, corresponde a un receptor elemental de conversión directa, el bloque en interrogantes represen",
-    "options": [
-      "Amplificador RF",
-      "Oscilador local",
-      "Filtro paso banda",
-      "Variador de potencia"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1682). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-83-1685",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En este esquema de un receptor: ¿Qué circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de audio constante en el altavoz, independientemente del nivel de señal en antena?:",
-    "stemFigure": "images/quiz/quijotes-83-1685-original.png",
-    "stemFigureAlt": "Figura Quijotes EA3RCQ (quiz 83, pregunta 1685): En este esquema de un receptor: ¿Qué circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de",
-    "options": [
-      "Control automático de ganancia.",
-      "Control automático de estabilidad.",
-      "Control automático de frecuencia.",
-      "Control automático de audio."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1685). Contrastar con BOE y convocatoria."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Metálica, eléctricamente estanca y con conexión a tierra.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1671). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1686",
@@ -13423,7 +11112,8 @@ export default [
       "El valor de la R.O.E. es 1."
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1686). Contrastar con BOE y convocatoria."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «El transmisor no está adaptado a la antena.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1686). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1692",
@@ -13439,7 +11129,8 @@ export default [
       "Como oscilador a la frecuencia de resonancia del circuito LC."
     ],
     "correctIndex": 0,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1692). Contrastar con BOE y convocatoria."
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Como receptor de AM a la frecuencia de resonancia del circuito LC.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1692). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1694",
@@ -13455,7 +11146,8 @@ export default [
       "Rectificador de onda completa."
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1694). Contrastar con BOE y convocatoria."
+    "explain": "Cada diodo tiene función distinta: rectificar, estabilizar tensión (Zener), emitir luz (LED) o variar capacidad (varicap). La correcta es «Detector de envolvente.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1694). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1705",
@@ -13471,7 +11163,8 @@ export default [
       "Un oscilador."
     ],
     "correctIndex": 3,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1705). Contrastar con BOE y convocatoria."
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Un oscilador.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1705). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1710",
@@ -13487,7 +11180,8 @@ export default [
       "El doble de la disipada en el circuito L-C."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1710). Contrastar con BOE y convocatoria."
+    "explain": "Cada instrumento mide una magnitud: potencia (vatímetro), forma de onda (osciloscopio), frecuencia (frecuencímetro) o espectro (analizador). «Mínima.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1710). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-83-1752",
@@ -13503,105 +11197,8 @@ export default [
       "Fase por portadora."
     ],
     "correctIndex": 1,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1752). Contrastar con BOE y convocatoria."
-  },
-  {
-    "id": "quijotes-84-1802",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Los distintivos de llamada con sufijos de una letra:",
-    "options": [
-      "Se reservan para la participación en concursos internacionales de alta competitividad.",
-      "Se reservan para la participación en concursos nacionales de alta competitividad.",
-      "Se reservan para radioaficionados con una antigüedad mínima de 10 años.",
-      "No están permitidos en la reglamentación vigente."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1802). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1803",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "El código Q:",
-    "options": [
-      "Se utiliza exclusivamente en situaciones de emergencia.",
-      "Está compuesto por siete letras.",
-      "Actualmente ha caído en desuso.",
-      "Empieza siempre por la letra Q."
-    ],
-    "correctIndex": 3,
-    "explain": "Todas las señales del código Q empiezan por la letra Q, por ejemplo QTH, QRO, QRP o QSL. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1803). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1805",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Quién puede hacer uso de una estación de aficionado?",
-    "options": [
-      "Cualquier familiar de primer grado que conviva con él, bajo su responsabilidad.",
-      "Cualquiera que vaya a obtener el Diploma de Operador.",
-      "Solo su titular.",
-      "Cualquier titular de autorización de radioaficionado, con permiso de su propietario."
-    ],
-    "correctIndex": 3,
-    "explain": "Una estación puede ser usada por otro radioaficionado autorizado si cuenta con permiso del propietario; la autorización personal sigue siendo necesaria. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1805). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1806",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Con que anticipación a la fecha prevista para el comienzo de las emisiones, se deberá solicitar una autorización especial de uso del espectro radioeléctrico por radioaficionados?",
-    "options": [
-      "1 Mes.",
-      "2 Semanas.",
-      "3 Meses.",
-      "Ninguna."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1806). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1807",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Las estaciones radioeléctricas de aficionado quedan sometidas a la inspección de Telecomunicaciones:",
-    "options": [
-      "Únicamente en el caso de que se produzca interferencias a otros usuarios.",
-      "Únicamente en el caso de que el operador de la estación tenga menos de 5 años de antigüedad.",
-      "Siempre.",
-      "Únicamente si emite con más de 500 W de potencia."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1807). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1808",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "El Alfabeto fonético internacional:",
-    "options": [
-      "Se utiliza exclusivamente en emisiones digitales.",
-      "Se utiliza para el deletreo de palabras.",
-      "Se utiliza exclusivamente para deletrear números.",
-      "Actualmente está prohibida su utilización."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1808). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1809",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Cual de estas provincias pertenece al distrito 7:",
-    "options": [
-      "Guipuzkoa.",
-      "Girona.",
-      "Guadalajara.",
-      "Granada."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1809). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada instrumento mide una magnitud: potencia (vatímetro), forma de onda (osciloscopio), frecuencia (frecuencímetro) o espectro (analizador). «Amplitud.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1752). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-84-1810",
@@ -13615,7 +11212,8 @@ export default [
       "25 W."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El art. 25.h del reglamento distingue límites dentro y fuera del casco urbano; en el banco la pareja habitual es 10 W en urbano y hasta 50 W fuera, salvo motivación especial. La opción correcta es «25 W.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1812",
@@ -13629,63 +11227,8 @@ export default [
       "El deletreo de distintivos no está permitido."
     ],
     "correctIndex": 2,
-    "explain": "El deletreo internacional es letra por letra: E Echo, A Alfa, 3 Three, R Romeo, C Charlie y Q Quebec. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1812). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1813",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "La autorización especial de emisiones se otorgará por el periodo que duren las pruebas y, en cualquier caso, por un tiempo máximo de:",
-    "options": [
-      "9 meses.",
-      "12 meses.",
-      "18 meses.",
-      "15 meses."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1813). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1814",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Una emisión de estación de aficionado debe identificarse con un distintivo:",
-    "options": [
-      "Únicamente si el operador es menor de edad.",
-      "Únicamente si emite con una potencia de pico superior a 50W.",
-      "Únicamente si emite con una potencia media superior a 50W.",
-      "Siempre."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1814). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1815",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "La autorización de radioaficionado habilita a su titular para:",
-    "options": [
-      "Durante el primer año de vigencia de la autorización, el radioaficionado sólo puede emitir en VHF.",
-      "Efectuar emisiones siempre que domine el código MORSE.",
-      "Durante el primer año de vigencia de la autorización sólo podrá efectuar emisiones los fines de semana.",
-      "Efectuar emisiones en las bandas de frecuencias y con las características técnicas establecidas en el Reglamento de Radioaficionados."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1815). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1816",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El significado de la abreviatura PSE es:",
-    "options": [
-      "Por si está a la escucha.",
-      "Por favor.",
-      "Puede seguir emitiendo.",
-      "Esta abreviatura no significa nada."
-    ],
-    "correctIndex": 1,
-    "explain": "PSE es una abreviatura de procedimiento usada en radiocomunicaciones y telegrafía para pedir algo: equivale a 'por favor'. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1816). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El deletreo internacional es letra por letra: E Echo, A Alfa, 3 Three, R Romeo, C Charlie y Q Quebec.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1812). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1817",
@@ -13699,7 +11242,8 @@ export default [
       "Periodo de validez."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Asociación de radioaficionados a la que pertenece.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1819",
@@ -13713,35 +11257,8 @@ export default [
       "Obtiene la nacionalidad del país donde resida."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1820",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "La señal de socorro en radiotelefonía es:",
-    "options": [
-      "Mayday.",
-      "Socorro.",
-      "SOS.",
-      "Utilizada únicamente a bordo de barcos."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1820). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1821",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El contrato de seguro que cubre la responsabilidad del radioaficionado titular de una licencia de estación:",
-    "options": [
-      "Se debe formalizar únicamente si la instalación ha sido autorizada y en un plazo de un mes.",
-      "Sólo debe contratarse si la instalación es técnicamente compleja.",
-      "Debe estar formalizado antes de la expedición de la licencia de estación.",
-      "Debe contratarse cuando se solicita la autorización de radioaficionado."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1821). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Dispone del Certificado HAREC.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1822",
@@ -13755,63 +11272,8 @@ export default [
       "Cualquier comunicación."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1823",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los planes de banda de la IARU:",
-    "options": [
-      "Tienen previstas frecuencias para repetidores digitales en la banda 91.5-95.0 MHz.",
-      "Tienen previstas frecuencias para repetidores en la banda 433-433.375 MHz.",
-      "No tienen previstas frecuencias para comunicaciones por satélite.",
-      "No se aplican en países del Hemisferio Sur."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1823). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1824",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Según la nomenclatura de las bandas de frecuencias, el símbolo MF corresponde a:",
-    "options": [
-      "Ondas miriamétricas.",
-      "Ondas kilométricas.",
-      "Ondas hectométricas.",
-      "Ondas decamétricas."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1824). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1825",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La colaboración de los radioaficionados con los servicios de emergencia en caso de catástrofes:",
-    "options": [
-      "Es obligatoria en cualquier caso.",
-      "Es obligatoria si es requerida por la autoridad competente.",
-      "Es voluntaria.",
-      "Está expresamente prohibida en la reglamentación vigente."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1825). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1826",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Con qué potencia máxima de portadora se puede emitir en la banda de frecuencias 50.0-51-0 MHz, de acuerdo con el Reglamento de Radioaficionados?",
-    "options": [
-      "50W.",
-      "100W.",
-      "150W.",
-      "200W."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1826). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos técnicos, formación y actividad propia del servicio, no tráfico ajeno. Por eso encaja «Comunicaciones relacionadas con el Servicio de Aficionados.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1828",
@@ -13825,7 +11287,8 @@ export default [
       "Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1828). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1828). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1829",
@@ -13839,7 +11302,8 @@ export default [
       "Seguir emitiendo."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Suspender de inmediato las emisiones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1830",
@@ -13853,7 +11317,8 @@ export default [
       "Fox, India, Nada."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1830). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Foxtrot, India, November.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1830). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1831",
@@ -13867,7 +11332,8 @@ export default [
       "AR."
     ],
     "correctIndex": 3,
-    "explain": "En telegrafía, AR es una señal de procedimiento que indica fin de transmisión o fin de mensaje. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1831). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En telegrafía, AR es una señal de procedimiento que indica fin de transmisión o fin de mensaje. La respuesta que marca el banco es «AR.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1831). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1832",
@@ -13881,7 +11347,8 @@ export default [
       "MAYDAY (una vez), la palabra AQUI o DE y el distintivo de llamada (tres veces)."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «MAYDAY (tres veces), la palabra AQUI o DE y el distintivo de llamada (tres veces).».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1832). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1833",
@@ -13895,7 +11362,8 @@ export default [
       "La autorización del Ministerio de Industria, Turismo y Comercio para instalar la antena."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Su distintivo de llamada asociado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1834",
@@ -13909,7 +11377,8 @@ export default [
       "En España se deben aplicar los planes de banda de la IARU para la Región 2."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1834). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Región 1. La respuesta correcta es «Sirven de guía a los radioaficionados de todo el mundo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1834). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1835",
@@ -13923,7 +11392,8 @@ export default [
       "Permiso de un radio club."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1835). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Diploma de operador.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1835). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1836",
@@ -13939,7 +11409,8 @@ export default [
       "Distrito 6."
     ],
     "correctIndex": 2,
-    "explain": "Práctica con figura (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1836). Contrastar con BOE y convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Distrito 5.».",
+    "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1836). Contrastar con BOE y convocatoria."
   },
   {
     "id": "quijotes-84-1837",
@@ -13953,7 +11424,8 @@ export default [
       "QSW."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1837). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones operativas: QRM interferencia, QRN ruido, QSY cambio de frecuencia, QRT cese. «QRK.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1837). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1838",
@@ -13967,7 +11439,8 @@ export default [
       "Las estaciones automáticas desatendidas analógicas y digitales respectivamente."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Las estaciones automáticas desatendidas analógicas y digitales respectivamente.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1839",
@@ -13981,7 +11454,8 @@ export default [
       "El código de deletreo ICAO."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «El código de deletreo ICAO.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1840",
@@ -13995,7 +11469,8 @@ export default [
       "Los que comienzan por: EEE, EDD, EFF.v"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1840). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Los que comienzan por: UR y RC o RK.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1840). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1841",
@@ -14009,7 +11484,8 @@ export default [
       "Seis semanas."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1841). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Seis semanas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1841). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1842",
@@ -14023,7 +11499,8 @@ export default [
       "Si se han examinado en España de la Reglamentación Nacional."
     ],
     "correctIndex": 0,
-    "explain": "El certificado HAREC acredita la capacitación armonizada CEPT T/R 61-02 y permite reconocer esa aptitud para obtener autorización en países que aplican la recomendación. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1842). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El certificado HAREC acredita la capacitación armonizada CEPT T/R 61-02 y permite reconocer esa aptitud para obtener autorización en países que aplican la recomendación.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1842). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1843",
@@ -14037,7 +11514,8 @@ export default [
       "Zamora."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Valencia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1844",
@@ -14051,7 +11529,8 @@ export default [
       "QRS."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «EEE.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1845",
@@ -14065,7 +11544,8 @@ export default [
       "Certificado de empadronamiento."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1845). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Certificado de empadronamiento.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1845). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1846",
@@ -14079,7 +11559,8 @@ export default [
       "30 a 300 MHz."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1846). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «30 a 300 kHz.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1846). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1847",
@@ -14093,7 +11574,8 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («Como norma general, la instalación de una estación de aficionado deberá ser efectuada:»). La opción que responde al criterio del banco es «Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1848",
@@ -14107,21 +11589,8 @@ export default [
       "No tienen limitaciones geográficas."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1848). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1849",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Entre las obligaciones de un gestor de una estación desatendida no se encuentra la de:",
-    "options": [
-      "Actualizar periódicamente la información existente.",
-      "Procurar que el mantenimiento técnico dé la estación garantice el servicio continuo de la misma.",
-      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.",
-      "No tienen limitaciones geográficas.Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto."
-    ],
-    "correctIndex": 2,
-    "explain": "El gestor de una estación desatendida tiene obligaciones de mantenimiento y control, pero la conformidad administrativa de inicio no la otorga él mismo. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1849). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Son nominativas y sólo habilitarán para la realización de emisiones a su titular.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1848). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1850",
@@ -14135,7 +11604,8 @@ export default [
       "Milimétricas."
     ],
     "correctIndex": 1,
-    "explain": "VHF significa Very High Frequency y corresponde a ondas métricas, con longitudes de onda del orden de metros. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1850). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "VHF significa Very High Frequency y corresponde a ondas métricas, con longitudes de onda del orden de metros.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1850). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1851",
@@ -14149,7 +11619,8 @@ export default [
       "Seguir emitiendo."
     ],
     "correctIndex": 1,
-    "explain": "Si se causan interferencias a servicios autorizados, el titular debe adoptar medidas técnicas razonables a su costa y comunicar lo hecho a la inspección competente. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1851). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Si se causan interferencias a servicios autorizados, el titular debe adoptar medidas técnicas razonables a su costa y comunicar lo hecho a la inspección competente.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1851). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1852",
@@ -14163,7 +11634,8 @@ export default [
       "No es obligatorio disponer de estación fija."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1852). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «No es obligatorio disponer de estación fija.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1852). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1853",
@@ -14177,7 +11649,8 @@ export default [
       "Su nueva provincia de residencia se encuentra en distinta Comunidad Autónoma."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Su nueva provincia de residencia pertenece a un distrito distinto.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1854",
@@ -14191,7 +11664,8 @@ export default [
       "Únicamente si efectúa emisiones en frecuencias atribuidas al Servicio de Aficionados por Satélite."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1854). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pertenecer a una asociación puede ser útil, pero no es requisito legal para operar con autorización vigente. Por eso «No, pero es recomendable.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1854). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1855",
@@ -14205,7 +11679,8 @@ export default [
       "Se compromete a emitir únicamente en VHF."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1855). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Croacia aplica la Recomendación T/R 61-02 de la CEPT.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1855). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1856",
@@ -14219,35 +11694,8 @@ export default [
       "Banda lateral única con portadora reducida."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1856). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1857",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
-    "options": [
-      "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias.",
-      "Efectuar emisiones radioeléctricas que incumplan gravemente los límites de exposición establecidos en la normativa de desarrollo del artículo 44 de esta Ley e incumplir gravemente las demás medidas de seguridad establecidas en dicha normativa, incluidas las obligaciones de señalización o vallado de las instalaciones radioeléctricas.",
-      "La divulgación del contenido, o de simples existencias, de mensajes no destinados al público en general emitidos o recibidos a través de servicios de telecomunicaciones, a los que se acceda mediante la interceptación voluntaria o involuntaria, su publicación o cualquier otro uso de ellos sin la debida autorización.",
-      "El incumplimiento reiterado de los requerimientos de información formulados por el órgano competente de la Administración del Estado en el ejercicio de sus funciones."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1857). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1858",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fonético internacional con que palabra se identifica la letra R:",
-    "options": [
-      "Radio",
-      "Romeo",
-      "Roto",
-      "Roma"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1858). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Doble banda lateral con un solo canal con información analógica.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1856). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1859",
@@ -14261,7 +11709,8 @@ export default [
       "Bravo, Ortega, Julio."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1859). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Bravo, Oscar, Juliett.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1859). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1860",
@@ -14275,21 +11724,8 @@ export default [
       "QSW."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1860). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1861",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El distintivo de llamada estará constituido por un grupo alfanumérico del modo siguiente:",
-    "options": [
-      "Prefijo + 1 letra.",
-      "UR + RC + RK.",
-      "Prefijo + Distrito + Sufijo.",
-      "EA+EB+EC."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1861). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones operativas: QRM interferencia, QRN ruido, QSY cambio de frecuencia, QRT cese. «QRX.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1860). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1862",
@@ -14303,7 +11739,8 @@ export default [
       "Por todo radioaficionado que opera en España."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Región 1. La respuesta correcta es «Por todo radioaficionado que opera en España.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1863",
@@ -14317,7 +11754,8 @@ export default [
       "Ocho semanas."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1863). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Seis semanas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1863). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1864",
@@ -14331,7 +11769,8 @@ export default [
       "Bilbao."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Palma de Mallorca.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1865",
@@ -14345,7 +11784,8 @@ export default [
       "Sancionable según la reglamentación vigente."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1865). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en la misma, e…»). La opción que responde al criterio del banco es «Una práctica de operar adecuada.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1865). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1866",
@@ -14359,7 +11799,8 @@ export default [
       "EPA, EQZ, EAA."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1866). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «EA, EB, EC.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1866). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1867",
@@ -14373,7 +11814,8 @@ export default [
       "Ninguna de ellas, ya no es necesario comunicarlo."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Ninguna de ellas, ya no es necesario comunicarlo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1868",
@@ -14387,7 +11829,8 @@ export default [
       "Usos temporales de relevancia internacional."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Usos temporales de especial relevancia para eventos de carácter regional, autonómico o local.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1869",
@@ -14401,7 +11844,8 @@ export default [
       "Estación de control."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra \"CL\", que …»). La opción que responde al criterio del banco es «Cierre de la estación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1870",
@@ -14415,7 +11859,8 @@ export default [
       "La señal de seguridad Securite."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1870). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción grave. «La señal de seguridad Securite.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1870). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1871",
@@ -14429,7 +11874,8 @@ export default [
       "Respetar las diferencias de atribuciones de frecuencias en los servicios de aficionados en las tres Regiones de la Unión Internacional de Telecomunicaciones."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1871). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «No respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentación vigente en el país de origen.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1871). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1872",
@@ -14443,7 +11889,8 @@ export default [
       "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1872). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En instalaciones combina normativa de antenas, seguridad eléctrica y buenas prácticas de RF. «Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1872). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1873",
@@ -14457,7 +11904,8 @@ export default [
       "Intermitente."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1873). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Libre y si estuvieran dotados de código de acceso, este deberá ser público.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1873). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1874",
@@ -14471,7 +11919,8 @@ export default [
       "La abreviatura métrica B.m."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «La abreviatura métrica B.m.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1875",
@@ -14485,7 +11934,8 @@ export default [
       "Comunicarlo por escrito a la propiedad del inmueble o, en su caso, de la comunidad de propietarios."
     ],
     "correctIndex": 1,
-    "explain": "Una vez cancelada la licencia, mantener el sistema radiante solo para recepción exige autorización escrita de la propiedad o comunidad, porque sigue afectando al inmueble. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1875). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Una vez cancelada la licencia, mantener el sistema radiante solo para recepción exige autorización escrita de la propiedad o comunidad, porque sigue afectando al inmueble.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1875). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1876",
@@ -14499,7 +11949,8 @@ export default [
       "Telefonía con un solo canal."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1876). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Telefonía con un solo canal.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1876). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1877",
@@ -14513,7 +11964,8 @@ export default [
       "Toda la gama de frecuencias que pueda utilizar."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («La instalación y funcionamiento de una estación de aficionado precisará de una licencia, la cual se …»). La opción que responde al criterio del banco es «La autorización de radioaficionado de su titular.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1878",
@@ -14527,7 +11979,8 @@ export default [
       "Colectiva de aficionado."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («No se puede considerar como estación automática desatendida a una estación:»). La opción que responde al criterio del banco es «Colectiva de aficionado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1879",
@@ -14541,7 +11994,8 @@ export default [
       "Detectar y reducir interferencias dentro de un área determinada."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Qué objetivo se pretende al instalar un repetidor de radioficionado:»). La opción que responde al criterio del banco es «Ampliar el alcance de las comunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1880",
@@ -14555,21 +12009,8 @@ export default [
       "Tres en VHF y dos en UHF."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1880). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1881",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
-    "options": [
-      "Carecer de los preceptivos cuadros de tarifas o de precios cuando su exhibición se exija por la normativa vigente.",
-      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general, así como la divulgación del contenido.",
-      "La distribución, venta o exposición para la venta de equipos o aparatos cuya conformidad con los requisitos esenciales aplicables no haya sido evaluada de acuerdo con lo dispuesto en el título IV de esta ley o con los acuerdos o convenios internacionales celebrados por el Estado español.",
-      "La alteración, manipulación o la omisión de las características técnicas, de las marcas, de las etiquetas, de los signos de identificación o de la documentación de los equipos o de los aparatos de telecomunicaciones."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1881). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se autorizarán en función de las necesidades del servicio.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1880). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1882",
@@ -14583,7 +12024,8 @@ export default [
       "Se trata de un estación no autorizada."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1883",
@@ -14597,7 +12039,8 @@ export default [
       "Si la cota de su emplazamiento es inferior a 500 metros."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Un radioaficionado podrá ser autorizado a instalar un repetidor:»). La opción que responde al criterio del banco es «En ningún caso.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1884",
@@ -14611,7 +12054,8 @@ export default [
       "Por cualquier persona."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («El montaje del sistema radiante de una estación fija de radioaficionado será realizado:»). La opción que responde al criterio del banco es «Como norma general, por un instalador de telecomunica­ciones autorizado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1885",
@@ -14625,7 +12069,8 @@ export default [
       "Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Un radioaficionado podrá instalar la antena de su estación fija en el exterior de un inmueble si:»). La opción que responde al criterio del banco es «Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1886",
@@ -14639,7 +12084,8 @@ export default [
       "Unicamente puede emitir en frecuencias de HF."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1886). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «No podrá solicitar protección contra interferencias perjudiciales.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1886). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1887",
@@ -14653,7 +12099,8 @@ export default [
       "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1887). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La emisión de señales de identificación falsas o engañosas.» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1887). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1888",
@@ -14667,7 +12114,8 @@ export default [
       "Neun."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1888). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Nine.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1888). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1889",
@@ -14681,21 +12129,8 @@ export default [
       "Quebec."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1889). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1890",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "La señal de socorro en radiotelefonía es:",
-    "options": [
-      "Securité.",
-      "Urgente.",
-      "Mayday.",
-      "Pan."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1890). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Quebec.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1889). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1891",
@@ -14709,7 +12144,8 @@ export default [
       "Se trata de una conexión con interferencias."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1891). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1891). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1892",
@@ -14723,7 +12159,8 @@ export default [
       "Nunca."
     ],
     "correctIndex": 3,
-    "explain": "Interferir deliberadamente a otra estación está prohibido: el servicio exige uso compatible, colaboración y ausencia de perturbaciones intencionadas. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Interferir deliberadamente a otra estación está prohibido: el servicio exige uso compatible, colaboración y ausencia de perturbaciones intencionadas. La respuesta que marca el banco es «Nunca.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1893",
@@ -14737,21 +12174,8 @@ export default [
       "Doce palabras por minuto."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1895",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los Planes de Banda de la IARU:",
-    "options": [
-      "Son de obligado cumplimiento por ley en todos los países.",
-      "Son establecidos por las administraciones nacionales.",
-      "Sirven de guía para los radioaficionados, pudiendo ser adaptados según la región UIT",
-      "Sustituyen a la normativa nacional."
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1895). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Diez palabras por minuto.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1896",
@@ -14765,7 +12189,8 @@ export default [
       "QRX"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1896). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones operativas: QRM interferencia, QRN ruido, QSY cambio de frecuencia, QRT cese. «QRN».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1896). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1897",
@@ -14779,7 +12204,8 @@ export default [
       "20 W."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1897). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El art. 25.h del reglamento distingue límites dentro y fuera del casco urbano; en el banco la pareja habitual es 10 W en urbano y hasta 50 W fuera, salvo motivación especial. La opción correcta es «10 W.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1897). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1898",
@@ -14793,7 +12219,8 @@ export default [
       "Documento que acredite estar inscrito en un asociación de Radioaficionado."
     ],
     "correctIndex": 0,
-    "explain": "Para una estación fija se exige solicitud y memoria descriptiva de la instalación, porque la administración debe conocer sus características técnicas y emplazamiento. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1898). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Para una estación fija se exige solicitud y memoria descriptiva de la instalación, porque la administración debe conocer sus características técnicas y emplazamiento.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1898). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1899",
@@ -14807,7 +12234,8 @@ export default [
       "100 W."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1899). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El art. 25.h del reglamento distingue límites dentro y fuera del casco urbano; en el banco la pareja habitual es 10 W en urbano y hasta 50 W fuera, salvo motivación especial. La opción correcta es «50 W.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1899). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1900",
@@ -14821,7 +12249,8 @@ export default [
       "Deberán ser previamente autorizadas por el Ayuntamiento de la localidad."
     ],
     "correctIndex": 1,
-    "explain": "Cuando se quieren características técnicas distintas de las previstas con carácter general, hace falta autorización especial para esa utilización experimental. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1900). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cuando se quieren características técnicas distintas de las previstas con carácter general, hace falta autorización especial para esa utilización experimental.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1900). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1901",
@@ -14835,7 +12264,8 @@ export default [
       "Cuadro Nacional de Atribución de Frecuencias."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En el Reglamento de uso del dominio público radioeléctrico por aficionados aparece la abreviatura CN…»). La opción que responde al criterio del banco es «Cuadro Nacional de Atribución de Frecuencias.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1902",
@@ -14849,7 +12279,8 @@ export default [
       "No existen."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «EA, EB, EC.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1903",
@@ -14863,7 +12294,8 @@ export default [
       "En el momento de presentar la memoria descriptiva de la estación."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1903). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Finalizado el montaje de la instalación y presentada la documentación requerida en cada caso.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1903). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1904",
@@ -14877,7 +12309,8 @@ export default [
       "Almería."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Almería.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1906",
@@ -14891,7 +12324,8 @@ export default [
       "El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1907",
@@ -14905,7 +12339,8 @@ export default [
       "Valencia, Valladolid, Vizcaya."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1907). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Asturias, Ávila, León.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1907). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1908",
@@ -14919,7 +12354,8 @@ export default [
       "Poseer una walkie."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1908). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Aportar un escrito de autorización, en forma fehaciente de sus padres o personas que ostenten su custodia legal, en el que asumirán las responsabilidades que correspondan al menor titular de la licencia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1908). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1909",
@@ -14933,7 +12369,8 @@ export default [
       "Dado que el número de estaciones automáticas desatendidas es limitado, no es posible su acceso si el radioaficionado no pertenece a un Radio Club."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1909). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «El acceso será necesariamente libre y si la estación estuviera dotada de código de acceso éste deberá ser públicamente conocido.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1909). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1910",
@@ -14947,7 +12384,8 @@ export default [
       "Los elementos radiantes nunca deben sobrepasar el espacio de los inmuebles donde están situados."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Al instalar una antena de radioaficionado se tendrá en cuenta que:»). La opción que responde al criterio del banco es «Se debe garantizar el derecho de terceros a no sufrir daños en su propiedad derivados de la instalación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1911",
@@ -14961,7 +12399,8 @@ export default [
       "Realizar emisiones si el país visitado ha adoptado la Recomendación CEPT T/R61-01."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1911). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Realizar emisiones si el país visitado ha adoptado la Recomendación CEPT T/R61-01.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1911). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1912",
@@ -14975,21 +12414,8 @@ export default [
       "La división en Regiones sólo se aplica al continente americano."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1912). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1913",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fonético internacional con que palabra se identifica la letra M:",
-    "options": [
-      "Miko.",
-      "Mika.",
-      "Mila.",
-      "Mike."
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1913). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («De acuerdo con la división de la UIT del mundo en tres Regiones:»). La opción que responde al criterio del banco es «Toda España se encuentra en la Región 1.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1912). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1914",
@@ -15003,7 +12429,8 @@ export default [
       "Ninguna de las anteriores."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1914). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 €» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1914). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1915",
@@ -15017,7 +12444,8 @@ export default [
       "Charter, Inca, Delta."
     ],
     "correctIndex": 1,
-    "explain": "Con el alfabeto fonético internacional, C es Charlie, I es India y D es Delta. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1915). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Con el alfabeto fonético internacional, C es Charlie, I es India y D es Delta.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1915). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1916",
@@ -15031,7 +12459,8 @@ export default [
       "12 dB."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1916). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «6 dB.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1916). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1917",
@@ -15045,7 +12474,8 @@ export default [
       "Solo puede instalarla la A.E.R. (Agencia Estatal de Radiocomunicaciones)."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿A quién se le puede autorizar la instalación de una Estación Automática Desatendida?:»). La opción que responde al criterio del banco es «A cualquier Asociación de Aficionado legalmente reconocida.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1918",
@@ -15059,7 +12489,8 @@ export default [
       "De la palabra Cuidado repetida tres veces."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «De la palabra \"Securité\" repetida tres veces.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1919",
@@ -15073,7 +12504,8 @@ export default [
       "No pueden ser reutilizados."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1920",
@@ -15087,21 +12519,8 @@ export default [
       "Indicando el distintivo de llamada solicitado."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1921",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los planes de banda de la IARU:",
-    "options": [
-      "Solamente tienen en cuenta las bandas inferiores a 1.000 MHz.",
-      "Proporcionan información sobre el modo recomendado de utilización en cada banda de frecuencias.",
-      "Solamente detallan el uso de bandas superiores a 1.000 MHz.",
-      "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT."
-    ],
-    "correctIndex": 1,
-    "explain": "Los planes de banda de la IARU orientan el uso recomendado de cada segmento de frecuencia: modos, anchos de banda y convivencia entre usos. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1921). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Dirigida a la Asociación o Radio Club de aficionados correspondiente, que será la que autorice.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1922",
@@ -15115,7 +12534,8 @@ export default [
       "QTH"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1922). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones operativas: QRM interferencia, QRN ruido, QSY cambio de frecuencia, QRT cese. «QRG».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1922). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1923",
@@ -15129,7 +12549,8 @@ export default [
       "El código RST se utiliza para deletrear el mensaje."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1923). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «No es aconsejable inventar palabras para deletrear el mensaje.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1923). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1924",
@@ -15143,7 +12564,8 @@ export default [
       "Nueve horas."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Las Estaciones Repetidoras y Radiobalizas, deberán disponer de un sistema de alimentación ininterrum…»). La opción que responde al criterio del banco es «Seis horas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1925",
@@ -15157,21 +12579,8 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
     ],
     "correctIndex": 3,
-    "explain": "La instalación de una estación fija puede requerir intervención de empresa instaladora inscrita, especialmente por seguridad y cumplimiento técnico de la instalación. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1926",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra RPT que significa:",
-    "options": [
-      "Repetir.",
-      "Corte de transmisión.",
-      "Recibido.",
-      "Transmisor."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1926). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La instalación de una estación fija puede requerir intervención de empresa instaladora inscrita, especialmente por seguridad y cumplimiento técnico de la instalación.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1927",
@@ -15185,7 +12594,8 @@ export default [
       "VHF."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1927). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La ondas métricas se representan por el símbolo:»). La opción que responde al criterio del banco es «VHF.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1927). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1928",
@@ -15199,7 +12609,8 @@ export default [
       "Las iniciales y fecha de nacimiento del titular."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Un grupo alfanumérico de 6 caracteres como máximo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1929",
@@ -15213,21 +12624,8 @@ export default [
       "En general se permite que entre estaciones se transmitan comunicaciones en nombre de terceras personas."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1929). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1930",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El acceso a los repetidores analógicos y digitales finales será:",
-    "options": [
-      "Intermitente.",
-      "Siempre libre.",
-      "Solo en caso de urgencia",
-      "Restringido, si la estación estuviera dotada de código de acceso."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1930). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Las transmisiones entre estaciones no deberán codificarse para ocultar su significado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1929). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1931",
@@ -15241,7 +12639,8 @@ export default [
       "Exclusivamente, en las bandas atribuidas al servicio por Satélite."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1931). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «En todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el país visitado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1931). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1932",
@@ -15255,7 +12654,8 @@ export default [
       "Verificar que el tráfco de información se realice conforme a lo previsto por la normativa vigente al respecto."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1932). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1932). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1933",
@@ -15269,7 +12669,8 @@ export default [
       "Por periodos, hasta un máximo de 20 días al año."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «En caso de fallecimiento del titular, a familiares en primer grado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1934",
@@ -15283,7 +12684,8 @@ export default [
       "Que se haya examinado en España exclusivamente de la Reglamentación Nacional."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1934). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Que sea titular de un Diploma de operador expedido en España, o de un Certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1934). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1935",
@@ -15297,7 +12699,8 @@ export default [
       "Que posee antena y fuente de energía incorporada al propio equipo."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1935). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Dotada de un conjunto de dispositivos que permiten la realización de emisiones con técnicas digitales.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1935). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1936",
@@ -15311,7 +12714,8 @@ export default [
       "Únicamente requiere ser notificado al Ayuntamiento de la localidad."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1936). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En instalaciones combina normativa de antenas, seguridad eléctrica y buenas prácticas de RF. «Se debe solicitar a la Dirección General de Telecomunicaciones y seguir el mismo procedimiento que si se tratase de la primera instalación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1936). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1937",
@@ -15325,7 +12729,8 @@ export default [
       "La exención de presentar memoria descriptiva de la instalación."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («La Ley 19/1986, conocida como Ley de Antenas, regula:»). La opción que responde al criterio del banco es «El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1938",
@@ -15339,7 +12744,8 @@ export default [
       "Las transmisiones entre estaciones de aficionado no deberán limitarse a mensajes de naturaleza técnica relativos a ensayos y a observaciones de carácter puramente personal."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1938). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Las transmisiones entre estaciones de aficionados se deberán efectuar en lenguaje claro.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1938). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1939",
@@ -15353,7 +12759,8 @@ export default [
       "Solicitar permiso al titular de la licencia de estación."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Informar, con antelación mínima de un mes, al titular de la licencia de estación si fuera necesario desmontar la antena y/o elementos anejos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1940",
@@ -15367,7 +12774,8 @@ export default [
       "Se asignarán para eventos especiales de relevancia internacional."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1940). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Mantendrán sin variación el resto del distintivo asignado con carácter permanente al radioaficionado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1940). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1941",
@@ -15381,7 +12789,8 @@ export default [
       "Permite obtener autorización de radioaficionado en cualquier país que aplique la recomendación CEPT T/R 61-02."
     ],
     "correctIndex": 3,
-    "explain": "HAREC acredita capacitación armonizada y facilita obtener autorización en otros países que aplican la Recomendación CEPT T/R 61-02. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1941). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "HAREC acredita capacitación armonizada y facilita obtener autorización en otros países que aplican la Recomendación CEPT T/R 61-02.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1941). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1942",
@@ -15395,7 +12804,8 @@ export default [
       "Una estación de aficionado es una estación del Servicio de Aficionados."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1942). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Una estación de aficionado es una estación del Servicio de Aficionados.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1942). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1943",
@@ -15409,7 +12819,8 @@ export default [
       "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1943). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1943). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1944",
@@ -15423,7 +12834,8 @@ export default [
       "Siete."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1944). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Seven.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1944). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1945",
@@ -15437,7 +12849,8 @@ export default [
       "Los equipos receptores de radio no forman parte de una estación radioeléctrica."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1945). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «El Servicio de Aficionados por Satélite utiliza estaciones espaciales situadas en satélites.» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1945). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1946",
@@ -15451,7 +12864,8 @@ export default [
       "QRP."
     ],
     "correctIndex": 0,
-    "explain": "QRO significa aumentar potencia. Su opuesto práctico es QRP, que indica reducir potencia o trabajar con baja potencia. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1946). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "QRO significa aumentar potencia. Su opuesto práctico es QRP, que indica reducir potencia o trabajar con baja potencia. La respuesta que marca el banco es «QRO.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1946). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1947",
@@ -15465,7 +12879,8 @@ export default [
       "Se han suprimido los distritos."
     ],
     "correctIndex": 0,
-    "explain": "Los distritos de los indicativos españoles se corresponden con cifras de distrito; el banco recoge nueve distritos ordinarios. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1947). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los distritos de los indicativos españoles se corresponden con cifras de distrito; el banco recoge nueve distritos ordinarios.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1947). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1948",
@@ -15479,7 +12894,8 @@ export default [
       "300 y 3.000 MHz."
     ],
     "correctIndex": 2,
-    "explain": "SHF significa Super High Frequency y comprende de 3 a 30 GHz; por debajo está UHF y por encima EHF. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1948). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "SHF significa Super High Frequency y comprende de 3 a 30 GHz; por debajo está UHF y por encima EHF.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1948). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1949",
@@ -15493,7 +12909,8 @@ export default [
       "Cualquier telecomunicación que permita la tolerancia de frecuencias."
     ],
     "correctIndex": 1,
-    "explain": "Radiocomunicación es cualquier telecomunicación realizada mediante ondas radioeléctricas, es decir, sin soporte físico guiado entre emisor y receptor. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1949). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Radiocomunicación es cualquier telecomunicación realizada mediante ondas radioeléctricas, es decir, sin soporte físico guiado entre emisor y receptor.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1949). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1950",
@@ -15507,7 +12924,8 @@ export default [
       "Tres letras que comiencen por la Q."
     ],
     "correctIndex": 2,
-    "explain": "El sufijo del distintivo se forma con letras asignadas por la administración, hasta tres, siguiendo el orden y disponibilidad correspondientes. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1950). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El sufijo del distintivo se forma con letras asignadas por la administración, hasta tres, siguiendo el orden y disponibilidad correspondientes.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1950). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1951",
@@ -15521,7 +12939,8 @@ export default [
       "Su titular tendrá que superar un examen especial."
     ],
     "correctIndex": 2,
-    "explain": "Una licencia CEPT expedida por una administración adherida se equipara temporalmente a la autorización nacional en los términos del reglamento aplicable. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1951). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Una licencia CEPT expedida por una administración adherida se equipara temporalmente a la autorización nacional en los términos del reglamento aplicable.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1951). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1952",
@@ -15535,7 +12954,8 @@ export default [
       "Se le autorizaría uno temporal de periodo ilimitado."
     ],
     "correctIndex": 2,
-    "explain": "Si el cambio de domicilio implica cambio de distrito, puede cambiar la cifra del indicativo; el interesado puede solicitar conservar sufijo si está disponible. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Si el cambio de domicilio implica cambio de distrito, puede cambiar la cifra del indicativo; el interesado puede solicitar conservar sufijo si está disponible.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1953",
@@ -15549,7 +12969,8 @@ export default [
       "Si su titular crea interferencias."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Si se cancela la autorización correspondiente.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1954",
@@ -15563,7 +12984,8 @@ export default [
       "Tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1954). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Región 1. La respuesta correcta es «Tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1954). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1955",
@@ -15577,7 +12999,8 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1956",
@@ -15591,7 +13014,8 @@ export default [
       "De la palabra \"pan\" repetido tres veces."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Del grupo \"pan pan\" repetido tres veces.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1956). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1958",
@@ -15605,7 +13029,8 @@ export default [
       "Acredite documentalmente su condición de residente en España."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1958). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Acredite documentalmente su condición de residente en España.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1958). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1959",
@@ -15619,7 +13044,8 @@ export default [
       "T/R 61-03"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1959). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «T/R 61-02».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1959). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1960",
@@ -15633,7 +13059,8 @@ export default [
       "Normas básicas del régimen de prensa, radio y televisión."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1960). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «Telecomunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1960). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1961",
@@ -15647,7 +13074,8 @@ export default [
       "Las antenas y elementos anejos, y en particular, soportes, anclajes y riostras deberán ser de materiales endebles y de fácil instalación para facilitar su posterior desmontaje."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1961). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Las antenas y elementos anejos, y en particular, soportes, anclajes y riostras deberán ser de materiales endebles y de fácil instalación para facilitar su posterior desmontaje.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1961). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1962",
@@ -15661,7 +13089,8 @@ export default [
       "Se trata de un titular de licencia CEPT extranjero emitiendo en España."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Se trata de un titular de licencia CEPT extranjero emitiendo en España.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1962). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1963",
@@ -15675,7 +13104,8 @@ export default [
       "Conjunto de emisiones de banda estrecha."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1964",
@@ -15689,7 +13119,8 @@ export default [
       "En ningún caso, teniendo en cuenta que la autorización de radioaficionado ya lleva asociado un distintivo de llamada."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Cuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1965",
@@ -15703,7 +13134,8 @@ export default [
       "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1965). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1965). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1966",
@@ -15717,7 +13149,8 @@ export default [
       "Deberá obtener un permiso especial de la Inspección de Telecomunicaciones."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1966). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se identificará, con autorización del titular, mediante su propio distintivo precedido del distintivo del titular de la estación operada.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1966). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1967",
@@ -15731,7 +13164,8 @@ export default [
       "Cualquier titular de licencia CEPT."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Podrá ser titular de una estación automática desatendida:»). La opción que responde al criterio del banco es «Una asociación de radioaficionados reconocida.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1968",
@@ -15745,21 +13179,8 @@ export default [
       "Disponer de hasta un máximo de cinco distintivos de llamada."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1968). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1969",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El Certificado HAREC:",
-    "options": [
-      "Sirve para poder realizar emisiones al visitar otro país.",
-      "Sirve para demostrar que se ha superado un examen de radioaficionado.",
-      "Permite realizar emisiones al visitar cualquier país de Africa.",
-      "En España, únicamente se puede expedir para ciudadanos extranjeros."
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1969). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Disponer de distintivo de llamada sin tener una licencia de estación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1968). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1971",
@@ -15773,7 +13194,8 @@ export default [
       "Deberá cambiarse siempre el prefijo del distintivo de llamada."
     ],
     "correctIndex": 2,
-    "explain": "El distrito forma parte del distintivo de llamada. Por eso un cambio de domicilio puede obligar a modificar cifra y, si no procede mantenerlo, también sufijo. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1971). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distrito forma parte del distintivo de llamada. Por eso un cambio de domicilio puede obligar a modificar cifra y, si no procede mantenerlo, también sufijo.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1971). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1972",
@@ -15787,7 +13209,8 @@ export default [
       "87,5 -108 MHz con potencia máxima de 10mW."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1972). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:»). La opción que responde al criterio del banco es «144 - 146 y 430-440 MHz.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1972). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1973",
@@ -15801,7 +13224,8 @@ export default [
       "Sierra, Lima."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1973). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Sierra, Lima.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1973). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1974",
@@ -15815,7 +13239,8 @@ export default [
       "Tango, Oslo, Pepe."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1974). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Tango, Oscar, Papa.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1974). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1975",
@@ -15829,7 +13254,8 @@ export default [
       "UHF."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Que símbolo le corresponde a la gama de frecuencias de 3 a 30 MHz?:»). La opción que responde al criterio del banco es «HF.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1975). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1976",
@@ -15843,7 +13269,8 @@ export default [
       "Únicamente países de la Comunidad Europea."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1976). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Todos los países pertenezcan, o no, a la CEPT.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1976). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1977",
@@ -15857,7 +13284,8 @@ export default [
       "A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1977). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1977). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1978",
@@ -15871,7 +13299,8 @@ export default [
       "La palabra \"mayday\" (tres veces), seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces)."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1978). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En operación prima claridad, identificación y buenas prácticas. La respuesta correcta es «La palabra \"mayday\" (tres veces), seguida de la palabra \"aquí\" o \"de\" y a continuación el distintivo de llamada u otra señal que identifique a la estación móvil en peligro (tres veces).».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1978). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1979",
@@ -15885,7 +13314,8 @@ export default [
       "AD"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1979). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «ED.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1979). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1980",
@@ -15899,7 +13329,8 @@ export default [
       "Solo el Diploma de Operador."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:»). La opción que responde al criterio del banco es «Licencia de Estación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1982",
@@ -15913,7 +13344,8 @@ export default [
       "Sancionable según la reglamentación vigente."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1982). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («Utilizar la palabra \"cambio\" al finalizar una transmisión en fonía es:»). La opción que responde al criterio del banco es «Recomendable.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1982). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1983",
@@ -15927,21 +13359,8 @@ export default [
       "El operador no viene obligado a cumplir el Reglamento sobre perturbaciones parasitas en vigor."
     ],
     "correctIndex": 1,
-    "explain": "La estación debe disponer de medios adecuados para comprobar que transmite dentro de las bandas autorizadas y evitar emisiones fuera de frecuencia. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1983). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1984",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El plazo del que dispone la Administración para resolver una solicitud de autorización de radioaficionado será de:",
-    "options": [
-      "Seis semanas.",
-      "Un mes.",
-      "Tres meses.",
-      "Quince días."
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1984). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La estación debe disponer de medios adecuados para comprobar que transmite dentro de las bandas autorizadas y evitar emisiones fuera de frecuencia.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1983). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1985",
@@ -15955,7 +13374,8 @@ export default [
       "Vid."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1985). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Victor.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1985). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1986",
@@ -15969,7 +13389,8 @@ export default [
       "Seis días naturales consecutivos."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1986). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Tres días naturales consecutivos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1986). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1987",
@@ -15983,7 +13404,8 @@ export default [
       "Toledo, Teruel, Tarragona, Santa Cruz de Tenerife."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1987). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Cáceres, Cádiz, Cuenca, Ciudad Real.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1987). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1988",
@@ -15997,7 +13419,8 @@ export default [
       "Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000."
     ],
     "correctIndex": 3,
-    "explain": "La opción incorrecta menciona una recomendación inexistente para este caso: la referencia CEPT relevante es T/R 61-01 para licencia CEPT y T/R 61-02 para HAREC. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1988). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La opción incorrecta menciona una recomendación inexistente para este caso: la referencia CEPT relevante es T/R 61-01 para licencia CEPT y T/R 61-02 para HAREC. La respuesta que marca el banco es «Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1988). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1989",
@@ -16011,7 +13434,8 @@ export default [
       "Para uso temporal en eventos de carácter autonómico o local."
     ],
     "correctIndex": 2,
-    "explain": "La cifra 0 se reserva para indicativos especiales vinculados a actos inaugurados o visitados por Su Majestad el Rey, no para uso ordinario. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1989). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La cifra 0 se reserva para indicativos especiales vinculados a actos inaugurados o visitados por Su Majestad el Rey, no para uso ordinario.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1989). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1990",
@@ -16025,7 +13449,8 @@ export default [
       "Autoridad que expide la licencia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1990). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Fecha de superación del examen.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1990). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1991",
@@ -16039,7 +13464,8 @@ export default [
       "Radiobaliza."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Radiobaliza.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1992",
@@ -16053,7 +13479,8 @@ export default [
       "4"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «5».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1992). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1993",
@@ -16067,7 +13494,8 @@ export default [
       "Estación de mediciones de potencia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1993). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Estación colectiva de aficionado, que para su funcionamiento habitual no requiere la intervención directa del operador.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1993). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1994",
@@ -16081,7 +13509,8 @@ export default [
       "/MM."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «/MM.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1995",
@@ -16095,7 +13524,8 @@ export default [
       "No está permitida."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1995). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Requiere autorización previa de la Jefatura Provincial de Inspección de Telecomunicaciones (JPIT).».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1995). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1996",
@@ -16109,7 +13539,8 @@ export default [
       "Nunca se fijarán directamente a la obra civil."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Los soportes de una antena de radioaficionado:»). La opción que responde al criterio del banco es «No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1997",
@@ -16123,7 +13554,8 @@ export default [
       "Estación repetidora de gran alcance."
     ],
     "correctIndex": 0,
-    "explain": "Una estación fija remota sigue siendo fija por su emplazamiento, pero puede manejarse a distancia mediante un enlace de control. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1997). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Una estación fija remota sigue siendo fija por su emplazamiento, pero puede manejarse a distancia mediante un enlace de control.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1997). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1998",
@@ -16137,7 +13569,8 @@ export default [
       "Siempre y cuando no este en contradicción con la nuestra."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1998). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Siempre.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1998). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1999",
@@ -16151,7 +13584,8 @@ export default [
       "No permiten la utilización de equipos de construcción propia."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1999). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Se otorgarán por un plazo máximo de dieciocho meses.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1999). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2000",
@@ -16165,7 +13599,8 @@ export default [
       "Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2000). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2000). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2001",
@@ -16179,7 +13614,8 @@ export default [
       "Las transmisiones entre estaciones de aficionados de diferentes países deberán codificarse siempre por motivos de seguridad."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2001). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «En el transcurso de sus emisiones, las estaciones de aficionado deberán transmitir su indicativo a intervalos cortos.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2001). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2002",
@@ -16193,7 +13629,8 @@ export default [
       "QSA."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2002). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones operativas: QRM interferencia, QRN ruido, QSY cambio de frecuencia, QRT cese. «QRT.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2002). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2003",
@@ -16207,7 +13644,8 @@ export default [
       "November"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2003). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «November».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2003). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2004",
@@ -16221,7 +13659,8 @@ export default [
       "Canarias se encuentra en la Región 2"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («De acuerdo con el artículo 5 del Reglamento de Radiocomunicaciones de la UIT, desde el punto de vist…»). La opción que responde al criterio del banco es «España se encuentra en la Región 1».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2005",
@@ -16235,21 +13674,8 @@ export default [
       "La ganancia isótropa o absoluta"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2006",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El acceso a los repetidores analógicos y digitales finales:",
-    "options": [
-      "Estará restringido a los miembros de la Asociación titular de la licencia de la estación repetidora",
-      "Será necesariamente libre",
-      "Estará restringido a los titulares de licencia con antigüedad superior a 1 año",
-      "Estará restringido a los titulares de distintivo de llamada con sufijo de 2 letras"
-    ],
-    "correctIndex": 1,
-    "explain": "Los repetidores finales analógicos o digitales deben ser de acceso libre, de forma que no queden restringidos arbitrariamente a usuarios concretos. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2006). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Grupo de caracteres que constituye la señal de identificación del radioaficionado».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2007",
@@ -16263,7 +13689,8 @@ export default [
       "La participación en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «La participación en concursos internacionales de alta competitividad».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2008",
@@ -16277,7 +13704,8 @@ export default [
       "Romeo, Echo, Yuma"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fonético internacional deletrea R como Romeo, E como Echo e Y como Yankee. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2008). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético internacional deletrea R como Romeo, E como Echo e Y como Yankee.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2008). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2009",
@@ -16291,7 +13719,8 @@ export default [
       "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso"
     ],
     "correctIndex": 0,
-    "explain": "El servicio de aficionados permite comunicaciones relacionadas con ensayos, técnica y aprendizaje propio del servicio, no tráfico comercial o de terceros. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2009). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El servicio de aficionados permite comunicaciones relacionadas con ensayos, técnica y aprendizaje propio del servicio, no tráfico comercial o de terceros.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2009). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2010",
@@ -16305,7 +13734,8 @@ export default [
       "Informar sobre la intensidad de la señal recibida"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2010). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Deletrear el mensaje».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2010). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2011",
@@ -16319,7 +13749,8 @@ export default [
       "No existen"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «EA, EB, EC».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2012",
@@ -16333,7 +13764,8 @@ export default [
       "QTR"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2012). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones operativas: QRM interferencia, QRN ruido, QSY cambio de frecuencia, QRT cese. «QTH».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2012). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2013",
@@ -16347,7 +13779,8 @@ export default [
       "El propietario de la vivienda si esta es de alquiler"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2013). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «El radioaficionado».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2013). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2014",
@@ -16361,21 +13794,8 @@ export default [
       "Informar sobre la intensidad de la señal recibida"
     ],
     "correctIndex": 3,
-    "explain": "RST informa de la calidad de recepción: legibilidad, intensidad y tono. En fonía se usan normalmente R y S. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2014). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2015",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los planes de banda de la IARU:",
-    "options": [
-      "Son iguales a nivel mundial",
-      "No proporcionan información sobre el modo preferido de utilización",
-      "Son un instrumento básico para regular el uso de las bandas de frecuencias",
-      "No tienen en cuenta la atribución de bandas del Reglamento de Radiocomunicaciones de la UIT"
-    ],
-    "correctIndex": 2,
-    "explain": "Los planes de banda ordenan el uso de las frecuencias y ayudan a evitar conflictos entre modos, anchos de banda y actividades. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2015). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST informa de la calidad de recepción: legibilidad, intensidad y tono. En fonía se usan normalmente R y S.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2014). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2016",
@@ -16389,7 +13809,8 @@ export default [
       "URGENCE"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «PAN PAN».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2016). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2017",
@@ -16403,7 +13824,8 @@ export default [
       "1.100 kHz y 650KHz"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «2.220 Hz y 1.300 Hz».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2017). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2018",
@@ -16417,7 +13839,8 @@ export default [
       "Una de las condiciones para su adjudicación es que el radioaficionado no haya sido sometido a expediente sancionador en los ultimos cinco años"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Se reservan únicamente para estaciones colectivas».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2018). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2019",
@@ -16431,7 +13854,8 @@ export default [
       "Si, siempre que se tenga el proyecto técnico"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2019). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «No, solo pronunciarse respecto a la idoneidad de la instalación».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2019). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2020",
@@ -16445,7 +13869,8 @@ export default [
       "Permite operar permanentemente en cualquier país CEPT"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2020). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Permite operar en las bandas autorizadas al Servicio de Aficionados en cualquier país visitado que se haya adherido a la Recomendación T/R61-01 de la CEPT».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2020). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2021",
@@ -16459,7 +13884,8 @@ export default [
       "Es la cifra 0 de uso exclusiva para distintivos temporales"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Es la cifra coincidente con el número de distrito de residencia del titular, con arreglo a la división geográfica que se especifica en el Reglamento de Aficionados en vigor».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2022",
@@ -16473,7 +13899,8 @@ export default [
       "Se podrá desmontar la antena para realizar obras previo pago de una indemnización al titular de la antena"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («En el tejado de un edificio donde está instalada una antena de radioaficionado autorizada:»). La opción que responde al criterio del banco es «Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2023",
@@ -16487,7 +13914,8 @@ export default [
       "No se puede adjudicar a estación colectiva alguna"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Corresponde a una estación automática desatendida».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2023). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2024",
@@ -16501,7 +13929,8 @@ export default [
       "Los soportes de la antena se podrán fijar al mástil de conducción aérea de energía eléctrica"
     ],
     "correctIndex": 2,
-    "explain": "Al instalar antenas deben considerarse otros servicios y sus instalaciones para evitar interferencias, riesgos mecánicos o incompatibilidades técnicas. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2024). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Al instalar antenas deben considerarse otros servicios y sus instalaciones para evitar interferencias, riesgos mecánicos o incompatibilidades técnicas.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2024). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2025",
@@ -16515,7 +13944,8 @@ export default [
       "Diez años"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («El radioaficionado está obligado a comunicar, fehacientemente, su intención de continuar utilizando …»). La opción que responde al criterio del banco es «Ya no hay que comunicarlo».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2026",
@@ -16529,7 +13959,8 @@ export default [
       "El titular de una licencia de estación fija de aficionado siempre precisa autorización previa administrativa para utilizarla como portable"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2026). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «La revocación de la autorización de radioaficionado llevará aparejada la cancelación de las licencias de los equipos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2026). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2027",
@@ -16543,7 +13974,8 @@ export default [
       "Es que un titular de licencia CEPT extranjero está emitiendo en España"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Es que un titular de licencia CEPT extranjero está emitiendo en España».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2027). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2028",
@@ -16557,7 +13989,8 @@ export default [
       "Queda inhabilitado a perpetuidad a ser radioaficionado"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2028). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Hasta una nueva autorización no podrá ejercer la actividad de la radioafición».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2028). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2029",
@@ -16571,7 +14004,8 @@ export default [
       "Se requiere que el interesado sea socio de una Asociación colectiva de Radioaficionados"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2029). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Deberá ser notificada a la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente, con al menos cinco días de antelación del comienzo de las emisiones».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2029). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2030",
@@ -16585,7 +14019,8 @@ export default [
       "El Reglamento de Aficionados no contempla tal extremo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2030). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Instalar antenas en elementos comunes exige información y acuerdos con la comunidad según la normativa de antenas y propiedad horizontal. «Deberá expedirse en formato bilingüe, si así lo solicita el interesado».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2030). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2031",
@@ -16599,7 +14034,8 @@ export default [
       "No se exigen requisitos previos para solicitarla"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2031). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Cuando se conceda, a la vez se otorgará el distintivo de llamada».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2031). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2032",
@@ -16613,7 +14049,8 @@ export default [
       "La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT permite usar las bandas autorizadas en el país visitado, no todas las que estén autorizadas en el país de origen del operador. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2032). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT permite usar las bandas autorizadas en el país visitado, no todas las que estén autorizadas en el país de origen del operador.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2032). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2033",
@@ -16627,7 +14064,8 @@ export default [
       "Siempre y cuando no esté en contradicción con la nuestra"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2033). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Siempre».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2033). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2034",
@@ -16641,7 +14079,8 @@ export default [
       "La banda 7100 - 7200 kHz no está atribuida a ningún servicio"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «La banda 7100 a 7200 kHz está atribuida a titulo primario al servicio de radiodifusión hasta el 29 de marzo de 2009».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2035",
@@ -16655,7 +14094,8 @@ export default [
       "En duplex"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2035). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda necesaria…»). La opción que responde al criterio del banco es «Fuera de banda».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2035). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2036",
@@ -16669,7 +14109,8 @@ export default [
       "Eventos especiales de relevancia internacional."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2036). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Concursos internacionales de alta competitividad.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2036). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2037",
@@ -16683,7 +14124,8 @@ export default [
       "No hay planes de banda en la Región 3."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2037). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Región 1. La respuesta correcta es «Pueden ser distintos en cada Región.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2037). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2038",
@@ -16697,7 +14139,8 @@ export default [
       "Nunca se usan en VHF."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2038). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Permiten contactar con otros operadores que utilizan el mismo modo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2038). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2039",
@@ -16711,7 +14154,8 @@ export default [
       "Unicamente los producidos por un mantenimiento defectuoso."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («Los daños y perjuicios originados por una antena de una estación de radioaficionado, correrán a carg…»). La opción que responde al criterio del banco es «Los producidos con motivo de la instalación, mantenimiento y desmontaje de la antena.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2040",
@@ -16725,7 +14169,8 @@ export default [
       "Mike, Alfa, Romeo."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2040). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Mike, Alfa, Romeo.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2040). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2041",
@@ -16739,7 +14184,8 @@ export default [
       "Acuse recibo."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2041). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los códigos Q abrevian situaciones: QRL ocupado, QRX esperando, QSY cambio de frecuencia, QRT cese. «Deje de transmitir.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2041). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2042",
@@ -16753,7 +14199,8 @@ export default [
       "Al comienzo y final de cada emisión."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo de llamada identifica legalmente la estación; debe transmitirse al comienzo y al final de cada emisión para que la comunicación quede identificada. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2042). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo de llamada identifica legalmente la estación; debe transmitirse al comienzo y al final de cada emisión para que la comunicación quede identificada.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2042). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2043",
@@ -16767,7 +14214,8 @@ export default [
       "En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2044",
@@ -16781,21 +14229,8 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad."
     ],
     "correctIndex": 1,
-    "explain": "La administración debe informar a la comunidad cuando se pretende instalar antenas exteriores, porque afectan a elementos comunes del inmueble. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2044). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2045",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué es la licencia CEPT?:",
-    "options": [
-      "Aquella que permite temporalmente su utilización en todos los países acogidos a la Recomendación T/R 61-01.",
-      "La que permite transmitir en cualquier país de Europa.",
-      "La que sólo permite la transmisión en bandas VHF/UHF.",
-      "Aquella que permite su utilización a nivel internacional."
-    ],
-    "correctIndex": 0,
-    "explain": "La licencia CEPT permite operar temporalmente en países adheridos a la Recomendación T/R 61-01 sin tramitar una autorización completa local. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2045). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La administración debe informar a la comunidad cuando se pretende instalar antenas exteriores, porque afectan a elementos comunes del inmueble.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2044). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2046",
@@ -16809,7 +14244,8 @@ export default [
       "Sea de un corresponsal extranjero."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2046). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Sea demasiado extensa.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2046). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2047",
@@ -16823,7 +14259,8 @@ export default [
       "Posee antena y fuente de energía incorporada al propio equipo, ya que es una estación móvil."
     ],
     "correctIndex": 1,
-    "explain": "Una estación portable es una estación fija que se usa temporalmente desde una ubicación distinta a la habitual; no equivale a estación móvil. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2047). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Una estación portable es una estación fija que se usa temporalmente desde una ubicación distinta a la habitual; no equivale a estación móvil.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2047). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2048",
@@ -16837,7 +14274,8 @@ export default [
       "La potencia máxima de las estaciones de aficionado será fijada por la Unión Internacional de Telecomunicaciones (ITU)."
     ],
     "correctIndex": 0,
-    "explain": "El artículo citado de la UIT prohíbe codificar las comunicaciones internacionales de aficionados para ocultar su significado, porque el servicio no admite tráfico secreto. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2048). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El artículo citado de la UIT prohíbe codificar las comunicaciones internacionales de aficionados para ocultar su significado, porque el servicio no admite tráfico secreto.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2048). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2049",
@@ -16851,7 +14289,8 @@ export default [
       "Deberá comunicarlo a la Dirección General de Telecomunicaciones y Tecnología de la Información."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2049). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Podrá instalarla nuevamente en condiciones similares a las anteriores.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2049). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2050",
@@ -16865,7 +14304,8 @@ export default [
       "A efectos de ensayos puede emitirse un distintivo de llamada engañoso."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Puede emitirse información relacionada con la actividad del servicio de aficionados.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2050). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2051",
@@ -16879,7 +14319,8 @@ export default [
       "Golf, oscar, lima, foxtrot."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2051). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Golf, oscar, lima, foxtrot.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2051). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2052",
@@ -16893,7 +14334,8 @@ export default [
       "Anclaje."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2052). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Anclaje.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2052). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2053",
@@ -16907,7 +14349,8 @@ export default [
       "Es a la vez una estación portable de aficionado."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En relación con una estación portátil de aficionado, marque la alternativa errónea:»). La opción que responde al criterio del banco es «Es a la vez una estación portable de aficionado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2054",
@@ -16921,7 +14364,8 @@ export default [
       "Cualquier otro titular de autorización de radioaficionado."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2054). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Cualquier otro titular de autorización de radioaficionado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2054). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2055",
@@ -16935,7 +14379,8 @@ export default [
       "Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación."
     ],
     "correctIndex": 3,
-    "explain": "Al operar con licencia CEPT en otro país, se aplican las bandas y condiciones del país donde se usa la estación, no las españolas si son distintas. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2055). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Al operar con licencia CEPT en otro país, se aplican las bandas y condiciones del país donde se usa la estación, no las españolas si son distintas.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2055). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2056",
@@ -16949,7 +14394,8 @@ export default [
       "Presentar la autorización de radioaficionado, si las autoridades se lo exigen."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2056). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Presentar la autorización de radioaficionado, si las autoridades se lo exigen.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2056). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2057",
@@ -16963,7 +14409,8 @@ export default [
       "Solo en caso de emergencia"
     ],
     "correctIndex": 0,
-    "explain": "La opción correcta recoge el régimen temporal andorrano indicado por el banco: un radioaficionado con licencia extranjera válida puede solicitar operar temporalmente allí. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La opción correcta recoge el régimen temporal andorrano indicado por el banco: un radioaficionado con licencia extranjera válida puede solicitar operar temporalmente allí.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2058",
@@ -16977,7 +14424,8 @@ export default [
       "Una estación portable de aficionado es a la vez estación móvil."
     ],
     "correctIndex": 1,
-    "explain": "La autorización especial de uso del espectro para radioaficionados es nominativa: se concede a una persona titular concreta. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2058). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización especial de uso del espectro para radioaficionados es nominativa: se concede a una persona titular concreta.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2058). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2060",
@@ -16991,21 +14439,8 @@ export default [
       "Por conversión de frecuencias."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2061",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El certificado HAREC:",
-    "options": [
-      "Se expedirá conjuntamente con el diploma de operador.",
-      "Permite operar en frecuencias distintas a las autorizadas.",
-      "No sirve para demostrar que se ha aprobado el examen de radioaficionado con un programa básico.",
-      "Permite obtener licencia en cualquier país del mundo."
-    ],
-    "correctIndex": 0,
-    "explain": "El certificado HAREC acredita la aptitud del operador y, según la formulación del banco, se expide junto con el diploma de operador. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2061). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emision…»). La opción que responde al criterio del banco es «No deseadas.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2062",
@@ -17019,7 +14454,8 @@ export default [
       "Radiocomunicación."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2062). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:»). La opción que responde al criterio del banco es «Radiocomunicación.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2062). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2063",
@@ -17033,21 +14469,8 @@ export default [
       "35 W."
     ],
     "correctIndex": 1,
-    "explain": "Para estaciones desatendidas VHF/UHF fuera de casco urbano, el banco fija como regla general una potencia máxima de salida de 50 W. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2063). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2064",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fonético internacional la letra B se codifica como:",
-    "options": [
-      "Barril.",
-      "Breico",
-      "Bravo",
-      "Barco"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2064). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Para estaciones desatendidas VHF/UHF fuera de casco urbano, el banco fija como regla general una potencia máxima de salida de 50 W.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2063). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2066",
@@ -17061,7 +14484,8 @@ export default [
       "En la transmisión entre estaciones de radioaficionado está permitido la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2066). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «En la transmisión entre estaciones de radioaficionado está permitido la transmisión de un mensaje, cualquiera que sea su naturaleza, con destino a un tercero.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2066). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2067",
@@ -17075,7 +14499,8 @@ export default [
       "La utilización para fines distintos de los que se establecen en la resolución de la autorización."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2067). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «No adquirir una estación radioeléctrica de aficionado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2067). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2068",
@@ -17089,7 +14514,8 @@ export default [
       "Ávila."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2068). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Albacete.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2068). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2069",
@@ -17103,7 +14529,8 @@ export default [
       "Su titular reside en Cataluña."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «No se puede asignar.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2070",
@@ -17117,7 +14544,8 @@ export default [
       "431,050 - 431,825 MHz"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «145,0000 - 145,1875 MHz».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2071",
@@ -17131,7 +14559,8 @@ export default [
       "Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2071). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2071). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2072",
@@ -17145,7 +14574,8 @@ export default [
       "Es de naturaleza indefinida."
     ],
     "correctIndex": 2,
-    "explain": "El prefijo EF identifica un indicativo especial temporal. En este caso el banco lo asocia a un evento no especialmente significativo. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2072). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El prefijo EF identifica un indicativo especial temporal. En este caso el banco lo asocia a un evento no especialmente significativo.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2072). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2073",
@@ -17159,7 +14589,8 @@ export default [
       "500.000 Euros"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2073). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 Euros» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2073). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2074",
@@ -17173,7 +14604,8 @@ export default [
       "No será necesario tener en cuenta las características mecánicas de la misma."
     ],
     "correctIndex": 1,
-    "explain": "En propiedad horizontal, la instalación de antena exige comunicar datos relevantes a la administración, incluida la dirección del presidente de la comunidad afectada. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2074). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En propiedad horizontal, la instalación de antena exige comunicar datos relevantes a la administración, incluida la dirección del presidente de la comunidad afectada.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2074). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2075",
@@ -17187,7 +14619,8 @@ export default [
       "Las posibles pérdidas de radiofrecuencia."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2075). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El seguro de antenas cubre daños a terceros por la instalación; es parte de la responsabilidad del titular. «La responsabilidad civil del titular.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2075). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2076",
@@ -17201,7 +14634,8 @@ export default [
       "Tiene por objeto ampliar el alcance de las comunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2076). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Tiene por objeto ampliar el alcance de las comunicaciones.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2076). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2077",
@@ -17215,7 +14649,8 @@ export default [
       "Media."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2077). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Leve.» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2077). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2078",
@@ -17229,7 +14664,8 @@ export default [
       "No especialmente significativos."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2078). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Especiales de relevancia internacional.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2078). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2079",
@@ -17243,7 +14679,8 @@ export default [
       "Sólo en caso de que la instalación sea sencilla."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2079). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «No.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2079). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2080",
@@ -17257,7 +14694,8 @@ export default [
       "50,000-51,000 MHz."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2080). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «10,00-10,5 GHz.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2080). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2081",
@@ -17271,7 +14709,8 @@ export default [
       "Basa su funcionamiento en la emisión automática de señales de identificación."
     ],
     "correctIndex": 3,
-    "explain": "Una radiobaliza funciona transmitiendo automáticamente señales de identificación para pruebas, propagación o referencia técnica. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2081). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Una radiobaliza funciona transmitiendo automáticamente señales de identificación para pruebas, propagación o referencia técnica.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2081). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2082",
@@ -17285,7 +14724,8 @@ export default [
       "Se encuentra dentro de la clasificación de estaciones automáticas desatendidas."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2082). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Podrá se utilizada con carácter temporal como portable.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2082). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2083",
@@ -17299,7 +14739,8 @@ export default [
       "Únicamente en Europa."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2083). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «En cualquier país que haya adoptado la Recomendación T/R 61-01.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2083). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2084",
@@ -17313,7 +14754,8 @@ export default [
       "A los tres años."
     ],
     "correctIndex": 1,
-    "explain": "El plazo de prescripción de una sanción grave en el marco citado por el banco es de dos años; no debe confundirse con infracciones leves o muy graves. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2084). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El plazo de prescripción de una sanción grave en el marco citado por el banco es de dos años; no debe confundirse con infracciones leves o muy graves. La respuesta que marca el banco es «A los dos años.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2084). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2086",
@@ -17327,7 +14769,8 @@ export default [
       "MADRID, ECHO, ROMEO, OSCAR."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2086). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «MIKE, ECHO, ROMEO, OSCAR.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2086). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2087",
@@ -17341,7 +14784,8 @@ export default [
       "Habilita para hecer uso común del espectro radioeléctrico."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2087). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Certifica la capacidad de su titular para operar estaciones radioeléctricas del servicio de aficionados.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2087). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2088",
@@ -17355,7 +14799,8 @@ export default [
       "En ella ha de constar, entre otros datos, el distintivo de llamada y su periodo de validez."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2088). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «La utilización a que habilita es de forma temporal.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2088). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2089",
@@ -17369,7 +14814,8 @@ export default [
       "Dos semanas."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2089). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Cinco días.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2089). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2090",
@@ -17383,7 +14829,8 @@ export default [
       "Solo en casos muy graves."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2090). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «No.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2090). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2091",
@@ -17397,7 +14844,8 @@ export default [
       "Murcia."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2091). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Melillla.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2091). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2092",
@@ -17411,7 +14859,8 @@ export default [
       "Seguridad."
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2092). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La abreviatura XXX, cuando es transmitida tres veces consecutivas, constituye la señal de:»). La opción que responde al criterio del banco es «Urgencia.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2092). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2093",
@@ -17425,7 +14874,8 @@ export default [
       "Cuando haya que presentar memoria descriptiva."
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2093). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Siempre y cuando dichas modificaciones sean permanentes.» es la formulación del banco.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2093). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2094",
@@ -17439,7 +14889,8 @@ export default [
       "Es aconsejable emitir sin comprobar que la frecuencia se está utilizando."
     ],
     "correctIndex": 2,
-    "explain": "En fonía es habitual usar 'cambio' para indicar que se cede la palabra a la otra estación, aunque no sea una obligación técnica estricta. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En fonía es habitual usar 'cambio' para indicar que se cede la palabra a la otra estación, aunque no sea una obligación técnica estricta.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2095",
@@ -17453,7 +14904,8 @@ export default [
       "Deben ser aprobados por la Dirección General de Telecomunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "La pregunta apunta a la validez formal de los planes de banda: frente a simples costumbres, el banco considera correcta la aprobación por la Dirección General competente. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2095). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La pregunta apunta a la validez formal de los planes de banda: frente a simples costumbres, el banco considera correcta la aprobación por la Dirección General competente.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2095). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2104",
@@ -17467,7 +14919,8 @@ export default [
       "1000 w"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de la…»). La opción que responde al criterio del banco es «50 w».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2203",
@@ -17481,7 +14934,8 @@ export default [
       "156,525 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción grave. «2.187,5 kHz».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2210",
@@ -17495,7 +14949,8 @@ export default [
       "No tienen ninguna relación con la UIT."
     ],
     "correctIndex": 2,
-    "explain": "En España se toman como referencia general los planes de banda de la IARU Región 1, la región internacional en la que se integra España. Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "En España se toman como referencia general los planes de banda de la IARU Región 1, la región internacional en la que se integra España.",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2214",
@@ -17509,7 +14964,8 @@ export default [
       "LSB y AM"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza es»). La opción que responde al criterio del banco es «LSB».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2108",
@@ -17523,7 +14979,8 @@ export default [
       "Un amplificador de señal"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2108). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Un aparato que transmite y recibe».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2108). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2109",
@@ -17537,7 +14994,8 @@ export default [
       "50V"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tensión suelen usar los equipos de radio portátiles?»). La opción que responde al criterio del banco es «3,5 a 12V».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2110",
@@ -17551,7 +15009,8 @@ export default [
       "Nada"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre antenas, líneas y propagación («¿Qué pasa si transmitimos sin antena?»). La opción que responde al criterio del banco es «Se daña el equipo».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2111",
@@ -17565,7 +15024,8 @@ export default [
       "100 ohmios"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2111). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «50 ohmios».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2111). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2112",
@@ -17579,7 +15039,8 @@ export default [
       "Upper HF"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Ultra High Frequency».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2113",
@@ -17593,21 +15054,8 @@ export default [
       "Virtual HF"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2115",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La banda UHF comprende frecuencias:",
-    "options": [
-      "3-30 MHz",
-      "30-300 MHz",
-      "300-3000 MHz",
-      "3-30 GHz"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2115). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «Very High Frequency».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2116",
@@ -17621,7 +15069,8 @@ export default [
       "3-30 GHz"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «30-300 MHz».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2117",
@@ -17635,7 +15084,8 @@ export default [
       "100 W"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué potencia aproximada tienen los equipos fijos de EA3RCQ?»). La opción que responde al criterio del banco es «40 W».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2118",
@@ -17649,7 +15099,8 @@ export default [
       "10 W"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué potencia aproximada tienen los equipos portátiles de EA3RCQ?»). La opción que responde al criterio del banco es «1 W».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2119",
@@ -17663,7 +15114,8 @@ export default [
       "RC4"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tipo de encriptación usan las redes de EA3RCQ?»). La opción que responde al criterio del banco es «AES-256».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2120",
@@ -17677,7 +15129,8 @@ export default [
       "Data Mobile Receiver"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es el DMR?»). La opción que responde al criterio del banco es «Digital Mobile Radio».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2121",
@@ -17691,21 +15144,8 @@ export default [
       "APCO25"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2122",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En DMR, ¿cuántos slots de tiempo hay en una portadora?",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2122). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué sistema usa la Red SIRDE en España?»). La opción que responde al criterio del banco es «Tetrapol».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2123",
@@ -17719,7 +15159,8 @@ export default [
       "4"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2123). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Sin modulación de información solo se transmite la portadora (potencia de portadora). La respuesta es «4».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2123). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2124",
@@ -17733,7 +15174,8 @@ export default [
       "Send"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se llama el botón para transmitir en radio?»). La opción que responde al criterio del banco es «PTT».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2125",
@@ -17747,7 +15189,8 @@ export default [
       "Un amplificador"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un repetidor?»). La opción que responde al criterio del banco es «Un equipo que retransmite en otra frecuencia».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2126",
@@ -17761,7 +15204,8 @@ export default [
       "Comunicación cifrada"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es “simplex”?»). La opción que responde al criterio del banco es «Comunicación directa sin repetidor».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2127",
@@ -17775,7 +15219,8 @@ export default [
       "Una forma de modulación"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es “trunking”?»). La opción que responde al criterio del banco es «Un sistema para concentrar comunicaciones».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2128",
@@ -17789,7 +15234,8 @@ export default [
       "Modificar la potencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Para que usamos el “roaming” en radios digitales?»). La opción que responde al criterio del banco es «Buscar el repetidor con mejor cobertura».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2129",
@@ -17803,7 +15249,8 @@ export default [
       "Una frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Un apodo o nombre identificador».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2130",
@@ -17817,7 +15264,8 @@ export default [
       "Llamada múltiple"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tipo de orden es la palabra clave “SILENCIO RADIO”?»). La opción que responde al criterio del banco es «Orden de máxima prioridad».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2131",
@@ -17831,7 +15279,8 @@ export default [
       "Código QR"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2131). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Código ICAO».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2131). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2132",
@@ -17845,21 +15294,8 @@ export default [
       "Signal"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2133",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo se dice la letra “N” en código ICAO?",
-    "options": [
-      "November",
-      "Nine",
-      "North",
-      "Neptune"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2133). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se dice la letra “S” en código ICAO?»). La opción que responde al criterio del banco es «Sierra».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2134",
@@ -17873,7 +15309,8 @@ export default [
       "Copiado"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se confirma un dato afirmativo en radio?»). La opción que responde al criterio del banco es «Afirmativo Sierra».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2135",
@@ -17887,7 +15324,8 @@ export default [
       "En obsoluto"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se responde negativamente en radio?»). La opción que responde al criterio del banco es «Negativo November».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2136",
@@ -17901,7 +15339,8 @@ export default [
       "Una llamada de emergencia"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada individual?»). La opción que responde al criterio del banco es «Una llamada de un corresponsal a otro».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2137",
@@ -17915,7 +15354,8 @@ export default [
       "Una llamada de emergencia"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada múltiple?»). La opción que responde al criterio del banco es «Llamada de un mando a varios indicativos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2138",
@@ -17929,7 +15369,8 @@ export default [
       "Llamada de confirmación"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada colectiva?»). La opción que responde al criterio del banco es «Llamada a todos los indicativos de un sector».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2139",
@@ -17943,7 +15384,8 @@ export default [
       "Una llamada múltiple"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada general?»). La opción que responde al criterio del banco es «Una llamada para toda la malla».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2140",
@@ -17957,7 +15399,8 @@ export default [
       "Una llamada múltiple"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada de emergencia?»). La opción que responde al criterio del banco es «Llamada solo en caso de urgencia».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2141",
@@ -17971,35 +15414,8 @@ export default [
       "Preparar"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2142",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa A en el protocolo PAS?",
-    "options": [
-      "Asistir",
-      "Avisar",
-      "Atacar",
-      "Ayudar"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2142). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2143",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa S en el protocolo PAS?",
-    "options": [
-      "Socorrer",
-      "Salvar",
-      "Señalizar",
-      "Sujetar"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2143). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa P en el protocolo PAS?»). La opción que responde al criterio del banco es «Proteger».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2144",
@@ -18013,7 +15429,8 @@ export default [
       "911"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué número hay que marcar en Europa en caso de emergencia?»). La opción que responde al criterio del banco es «112».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2145",
@@ -18027,7 +15444,8 @@ export default [
       "No moverlo innecesariamente"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué no debe hacerse a un motorista accidentado?»). La opción que responde al criterio del banco es «Retirar el casco».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2146",
@@ -18041,7 +15459,8 @@ export default [
       "Punto de luz secundaria"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es la PLS?»). La opción que responde al criterio del banco es «Posición lateral de seguridad».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2147",
@@ -18055,7 +15474,8 @@ export default [
       "Solo con niños"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cuándo se debe aplicar la PLS?»). La opción que responde al criterio del banco es «Inconsciente y respira».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2148",
@@ -18069,7 +15489,8 @@ export default [
       "No hablar"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué debe hacerse al comunicarse con un accidentado?»). La opción que responde al criterio del banco es «Hablar calmado y cercano».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2149",
@@ -18083,7 +15504,8 @@ export default [
       "No hablarles"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué trato se recomienda con accidentados adultos?»). La opción que responde al criterio del banco es «Trato de usted».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2150",
@@ -18097,7 +15519,8 @@ export default [
       "Direct Mobile Output"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa DMO en TETRA?»). La opción que responde al criterio del banco es «Direct Mode Operation».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2151",
@@ -18111,7 +15534,8 @@ export default [
       "Time Multiplex Operation"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa TMO en TETRA?»). La opción que responde al criterio del banco es «Trunked Mode Operation».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2152",
@@ -18125,7 +15549,8 @@ export default [
       "18 W"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué potencia suelen tener los equipos portátiles TETRA?»). La opción que responde al criterio del banco es «1–3 W».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2153",
@@ -18139,7 +15564,8 @@ export default [
       "Equipo para medir cobertura"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un Gateway en TETRA?»). La opción que responde al criterio del banco es «Equipo que conecta DMO con TMO».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2154",
@@ -18153,7 +15579,8 @@ export default [
       "Repetir mensaje"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa la palabra clave “TOME NOTA”?»). La opción que responde al criterio del banco es «Información a anotar».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2155",
@@ -18167,7 +15594,8 @@ export default [
       "Dirección de tráfico"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa la palabra clave “FILIACIÓN”?»). La opción que responde al criterio del banco es «Dar o pedir datos personales».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2156",
@@ -18181,7 +15609,8 @@ export default [
       "Avisar de un corte"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa la palabra clave “DISPÓNGASE”?»). La opción que responde al criterio del banco es «Prepararse para recibir órdenes».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2157",
@@ -18195,7 +15624,8 @@ export default [
       "Reiniciar comunicaciones"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “Fin de Silencio Radio”?»). La opción que responde al criterio del banco es «Termina la orden prioritaria de silencio».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2158",
@@ -18209,7 +15639,8 @@ export default [
       "Un equipo de exterior"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un equipo base?»). La opción que responde al criterio del banco es «Un equipo móvil con fuente de alimentación fija».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2159",
@@ -18223,7 +15654,8 @@ export default [
       "Antena"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un equipo móvil?»). La opción que responde al criterio del banco es «Equipo instalado en vehículos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2160",
@@ -18237,7 +15669,8 @@ export default [
       "Un transmisor fijo"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un equipo portátil?»). La opción que responde al criterio del banco es «Un walkie-talkie».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2161",
@@ -18251,7 +15684,8 @@ export default [
       "Solo en UHF"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se puede usar un repetidor DMR?»). La opción que responde al criterio del banco es «Puede ser analógico y digital».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2162",
@@ -18265,7 +15699,8 @@ export default [
       "Selector de canal"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Para que podemos usar el potenciómetro en la radio?»). La opción que responde al criterio del banco es «Botón de encendido y volumen».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2163",
@@ -18279,7 +15714,8 @@ export default [
       "Plomo-ácido"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tipo de baterías suelen usar los equipos portátiles modernos?»). La opción que responde al criterio del banco es «Iones de litio».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2164",
@@ -18293,7 +15729,8 @@ export default [
       "Cambio de antena"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es la función “roaming” en digital?»). La opción que responde al criterio del banco es «Cambio automático de repetidor».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2165",
@@ -18307,7 +15744,8 @@ export default [
       "Reducir interferencias"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “encriptación de voz”?»). La opción que responde al criterio del banco es «Codificar la comunicación».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2166",
@@ -18321,7 +15759,8 @@ export default [
       "Poner música"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué se recomienda antes de transmitir por radio?»). La opción que responde al criterio del banco es «Comprobar que no hay otra transmisión».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2167",
@@ -18335,7 +15774,8 @@ export default [
       "Con modismos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo debe ser el lenguaje en radio profesional?»). La opción que responde al criterio del banco es «Breve, conciso y concentrado».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2168",
@@ -18349,7 +15789,8 @@ export default [
       "Un repetidor"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un “Talk Group” en digital?»). La opción que responde al criterio del banco es «Un grupo de conversación».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2169",
@@ -18363,7 +15804,8 @@ export default [
       "Un mensaje cifrado"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un “radio faro” en digital?»). La opción que responde al criterio del banco es «Una portadora de referencia del repetidor».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2171",
@@ -18377,7 +15819,8 @@ export default [
       "Se pone en analógico"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué pasa en digital cuando no hay cobertura?»). La opción que responde al criterio del banco es «No transmite, hace un tono de alarma».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2172",
@@ -18391,7 +15834,8 @@ export default [
       "Digital modulada"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es la modulación en FM?»). La opción que responde al criterio del banco es «Frecuencia modulada».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2173",
@@ -18405,7 +15849,8 @@ export default [
       "Banda VHF"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿En qué banda se usa la AM en radio profesional?»). La opción que responde al criterio del banco es «Banda aérea».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2174",
@@ -18419,7 +15864,8 @@ export default [
       "Informal"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “conciso” en comunicación por radio?»). La opción que responde al criterio del banco es «Sin palabras de más».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2175",
@@ -18433,7 +15879,8 @@ export default [
       "Repetir mucho"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “concentrado” en comunicación por radio?»). La opción que responde al criterio del banco es «Usar tecnicismos y datos justos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2176",
@@ -18447,7 +15894,8 @@ export default [
       "Hablar rápido"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “breve” en comunicación por radio?»). La opción que responde al criterio del banco es «Lo más corto posible».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2177",
@@ -18461,7 +15909,8 @@ export default [
       "Vocalizar"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué no debe hacerse al hablar por radio digital?»). La opción que responde al criterio del banco es «Alzar la voz».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2178",
@@ -18475,7 +15924,8 @@ export default [
       "Se mezcla con otras voces"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué sucede en digital cuando hay mala cobertura?»). La opción que responde al criterio del banco es «Se corta y parece “voz de pato”».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2179",
@@ -18489,7 +15939,8 @@ export default [
       "Numeración de calle"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué indica “sentido de circulación”?»). La opción que responde al criterio del banco es «Dirección según vehículos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2180",
@@ -18503,7 +15954,8 @@ export default [
       "Circular en rotonda"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa contra sentido de circulación?»). La opción que responde al criterio del banco es «Circular en sentido contrario».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2181",
@@ -18517,7 +15969,8 @@ export default [
       "Hacia el mar"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “ascendente” en orientación?»). La opción que responde al criterio del banco es «Subida».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2182",
@@ -18531,7 +15984,8 @@ export default [
       "Hacia el mar"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “descendente”?»). La opción que responde al criterio del banco es «Bajada».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2183",
@@ -18545,7 +15999,8 @@ export default [
       "Calle en obras"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “creciente”?»). La opción que responde al criterio del banco es «Numeración que aumenta».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2184",
@@ -18559,7 +16014,8 @@ export default [
       "Indicación de peligro"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “decreciente”?»). La opción que responde al criterio del banco es «Numeración que disminuye».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2185",
@@ -18573,7 +16029,8 @@ export default [
       "Que identifica solo vehículos"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Que siempre es el mismo».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2186",
@@ -18587,7 +16044,8 @@ export default [
       "Que identifica emergencias"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Que cambia según servicio».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2187",
@@ -18601,7 +16059,8 @@ export default [
       "Que identifica emergencias"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Asignado por habilidades o funciones».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2188",
@@ -18615,7 +16074,8 @@ export default [
       "Aumentar potencia automaticamente"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “monitorización remota” en radios modernas?»). La opción que responde al criterio del banco es «Controlar otro equipo a distancia».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2189",
@@ -18629,7 +16089,8 @@ export default [
       "Micrófono"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es el vocoder en radios digitales?»). La opción que responde al criterio del banco es «Conversor de voz a datos».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2190",
@@ -18643,7 +16104,8 @@ export default [
       "Grid Power Source"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa GPS en radios profesionales?»). La opción que responde al criterio del banco es «Global Positioning System».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2191",
@@ -18657,7 +16119,8 @@ export default [
       "En clave"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa que una comunicación sea “banal”?»). La opción que responde al criterio del banco es «Entre amigos sin importancia».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2192",
@@ -18671,7 +16134,8 @@ export default [
       "Banales"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa que una comunicación sea “crítica”?»). La opción que responde al criterio del banco es «Con importancia vital».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2194",
@@ -18685,7 +16149,8 @@ export default [
       "Gritar pidiendo ayuda"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?»). La opción que responde al criterio del banco es «Proteger la zona».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2195",
@@ -18699,7 +16164,8 @@ export default [
       "Cambiar de canal para no interrumpir."
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Guardar silencio inmediatamente y escuchar el comunicado».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2196",
@@ -18713,7 +16179,8 @@ export default [
       "Orientación hacia el río"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En Barcelona, la ciudad está delimitada por el mar al sur y la montaña al norte. ¿Qué significa la r…»). La opción que responde al criterio del banco es «Orientación hacia el sur, hacia el mar».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2197",
@@ -18727,7 +16194,8 @@ export default [
       "Orientación hacia el mar"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Con la referencia de barcelona, cuando se dice “lado MONTAÑA” se entiende…»). La opción que responde al criterio del banco es «Orientación hacia el norte, dirección montaña».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2199",
@@ -18741,7 +16209,8 @@ export default [
       "Una calle principal"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Cuando en comunicaciones de Barcelona se usa la palabra “BESÒS”, ¿qué indica?»). La opción que responde al criterio del banco es «Lado izquierdo de la ciudad mirando hacia el mar».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-85-2200",
@@ -18755,7 +16224,8 @@ export default [
       "Reemplazan a las direcciones oficiales"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En orientación urbana, ¿qué ventaja tiene usar referencias como MAR, MONTAÑA, BESÒS o LLOBREGAT?»). La opción que responde al criterio del banco es «Evitar tener que usar coordenadas complicadas».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "ure-p1-01",
@@ -18813,35 +16283,7 @@ export default [
       "Tensión eléctrica"
     ],
     "correctIndex": 3,
-    "explain": "dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente."
-  },
-  {
-    "id": "ure-p1-05",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
-    "options": [
-      "Duplicar la potencia de emisión",
-      "Optimizar los filtros del transceptor",
-      "Disminuir la potencia reflejada en la línea de transmisión",
-      "Incrementar el tiempo de transmisión sin calentamiento del equipo"
-    ],
-    "correctIndex": 1,
-    "explain": "DSP significa procesador digital de señal. En un transceptor permite aplicar filtros digitales, reducción de ruido y procesado avanzado de recepción/transmisión; no aumenta por sí mismo la potencia ni elimina la ROE."
-  },
-  {
-    "id": "ure-p1-06",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "La sensibilidad de un receptor indica:",
-    "options": [
-      "El ancho de banda del preamplificador de RF",
-      "Su capacidad para recibir señales débiles",
-      "El máximo nivel de señal que puede recibir su antena",
-      "Su capacidad para rechazar señales fuertes"
-    ],
-    "correctIndex": 1,
-    "explain": "Mayor sensibilidad implica umbral más bajo: capta señales más débiles. URE."
+    "explain": "dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente. La respuesta que marca el banco es «Tensión eléctrica». dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente."
   },
   {
     "id": "ure-p1-07",
@@ -18885,7 +16327,7 @@ export default [
       "Es independiente de la frecuencia"
     ],
     "correctIndex": 3,
-    "explain": "Ruido blanco: densidad espectral de potencia aproximadamente plana (independiente de f). URE."
+    "explain": "Ruido blanco: densidad espectral de potencia aproximadamente plana (independiente de f). URE. La respuesta que marca el banco es «Es independiente de la frecuencia». Ruido blanco: densidad espectral de potencia aproximadamente plana (independiente de f). URE."
   },
   {
     "id": "ure-p1-10",
@@ -18899,7 +16341,7 @@ export default [
       "La ganancia de modulación"
     ],
     "correctIndex": 0,
-    "explain": "El índice (o grado) de modulación m es un parámetro clásico de la AM. URE."
+    "explain": "El índice (o grado) de modulación m es un parámetro clásico de la AM. URE. La respuesta que marca el banco es «La modulación de amplitud». El índice (o grado) de modulación m es un parámetro clásico de la AM. URE."
   },
   {
     "id": "ure-p1-11",
@@ -18913,21 +16355,7 @@ export default [
       "Es constante en un determinado medio"
     ],
     "correctIndex": 3,
-    "explain": "En un medio homogéneo dado, la velocidad de fase es característica del medio (no “sube” con f de forma simple). URE."
-  },
-  {
-    "id": "ure-p1-12",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Una resistencia en SHUNT se puede utilizar para:",
-    "options": [
-      "Adaptar la impedancia de la etapa final",
-      "Adaptar la impedancia de la antena",
-      "Proteger aparatos de medida",
-      "Nada de lo anterior"
-    ],
-    "correctIndex": 2,
-    "explain": "La shunt en paralelo deriva corriente para extender rango y proteger el mecanismo del instrumento. URE."
+    "explain": "En un medio homogéneo dado, la velocidad de fase es característica del medio (no “sube” con f de forma simple). URE. La respuesta que marca el banco es «Es constante en un determinado medio». En un medio homogéneo dado, la velocidad de fase es característica del medio (no “sube” con f de forma simple). URE."
   },
   {
     "id": "ure-p1-13",
@@ -18985,7 +16413,7 @@ export default [
       "Colocarle un plano de tierra"
     ],
     "correctIndex": 2,
-    "explain": "Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE."
+    "explain": "Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE. La respuesta que marca el banco es «Alargarla». Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE."
   },
   {
     "id": "ure-p1-17",
@@ -19018,20 +16446,6 @@ export default [
     "explain": "ROE significa relación de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la línea/antena. Si la adaptación es mala, aumenta la potencia reflejada y sube la ROE."
   },
   {
-    "id": "ure-p1-19",
-    "part": 1,
-    "topicId": "antenas-prop",
-    "stem": "En una antena pasiva, se puede afirmar que:",
-    "options": [
-      "La ganancia es igual a la directividad",
-      "La ganacia es superior a la directividad",
-      "Los diagramas de radiación en transmisión y en recepción son iguales",
-      "La impedancia es constante con la frecuencia"
-    ],
-    "correctIndex": 2,
-    "explain": "Por reciprocidad, el diagrama de una antena lineal pasiva es el mismo en TX y RX. URE (texto original con errata «ganacia»)."
-  },
-  {
     "id": "ure-p1-20",
     "part": 1,
     "topicId": "electricidad-basica",
@@ -19043,7 +16457,7 @@ export default [
       "Longitud de onda"
     ],
     "correctIndex": 2,
-    "explain": "dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica."
+    "explain": "dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica. La respuesta que marca el banco es «Potencia eléctrica». dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica."
   },
   {
     "id": "ure-p1-21",
@@ -19058,20 +16472,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Las componentes espectrales son las partes de una emisión vistas por frecuencia: portadora, bandas laterales, armónicos o productos no deseados. Eso se observa con un analizador de espectro, no con un osciloscopio ni con un voltímetro. URE."
-  },
-  {
-    "id": "ure-p1-22",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La unidad de medida de intensidad eléctrica es el:",
-    "options": [
-      "Voltio",
-      "Vatio",
-      "Ohmio",
-      "Amperio"
-    ],
-    "correctIndex": 3,
-    "explain": "La intensidad de corriente se mide en amperios. URE."
   },
   {
     "id": "ure-p1-23",
@@ -19099,7 +16499,7 @@ export default [
       "La energía de radiofrecuencia que retorna por el cable de bajada"
     ],
     "correctIndex": 1,
-    "explain": "Los armónicos son componentes a nf₀ (n entero >1). URE."
+    "explain": "Los armónicos son componentes a nf₀ (n entero >1). URE. La respuesta que marca el banco es «Múltiplos de la frecuencia fundamental». Los armónicos son componentes a nf₀ (n entero >1). URE."
   },
   {
     "id": "ure-p1-25",
@@ -19114,20 +16514,6 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "En VHF/UHF domina la propagación en espacio libre / línea de visión (onda directa). URE."
-  },
-  {
-    "id": "ure-p1-26",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Las ondas de radio son de naturaleza:",
-    "options": [
-      "Eléctrica",
-      "Magnética",
-      "Electromagnética",
-      "Acústica"
-    ],
-    "correctIndex": 2,
-    "explain": "Las ondas de radio son ondas electromagnéticas. URE."
   },
   {
     "id": "ure-p1-27",
@@ -19185,7 +16571,7 @@ export default [
       "Es el medio de propagación característico en las grandes ciudades"
     ],
     "correctIndex": 1,
-    "explain": "La onda de superficie se adhiere/rodéa la tierra y puede seguir la curvatura en MF/bajas HF. URE."
+    "explain": "La onda de superficie se adhiere/rodéa la tierra y puede seguir la curvatura en MF/bajas HF. URE. La respuesta que marca el banco es «La señal radioeléctrica se propaga siguiendo la curvatura terrestre». La onda de superficie se adhiere/rodéa la tierra y puede seguir la curvatura en MF/bajas HF. URE."
   },
   {
     "id": "ure-p1x-01",
@@ -19199,7 +16585,8 @@ export default [
       "La frecuencia de valor constante utilizada en los receptores superheterodinos"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La frecuencia de valor constante utilizada en los receptores superheterodinos».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-04",
@@ -19213,7 +16600,8 @@ export default [
       "La capacidad del circuito disminuye"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En un circuito eléctrico de corriente continua:»). La opción que responde al criterio del banco es «La intensidad está en razón directa a la tensión».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-09",
@@ -19227,7 +16615,8 @@ export default [
       "Una resistencia cuyo valor se mantiene constante a medida que la temperatura disminuye"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un termistor NTC es:»). La opción que responde al criterio del banco es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-10",
@@ -19241,7 +16630,8 @@ export default [
       "Tener un sintonizador muy fino"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe p…»). La opción que responde al criterio del banco es «Tener una ROE baja».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-11",
@@ -19255,49 +16645,8 @@ export default [
       "El de clase A tiene una distorsión elevada"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p1x-12",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Para medir la potencia de una señal eléctrica, se emplea un:",
-    "options": [
-      "Vatímetro",
-      "Frecuencímetro",
-      "Puente se resonancia",
-      "Capacímetro"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p1x-13",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "La capacidad de que un sistema electrónico no produzca interferencias que comprometan su funcionamiento o que afecten a su entorno, se denomina:",
-    "options": [
-      "Fiabilidad y baja distorsión interferente",
-      "Compatibilidad electromagnética",
-      "AMC (Ambiente Medido y Comprobado)",
-      "SLI (Sistema Libre de Interferencia)"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p1x-14",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "Una etapa de frecuencia intermedia en un receptor superheterodino, básicamente, se compone de:",
-    "options": [
-      "Atenuadores y mezcladores",
-      "Osciladores y conversores de tensión",
-      "Demoduladores y redes inductivas",
-      "Amplificadores y filtros"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Existen varias clases de amplificadores, A, B, AB y C:»). La opción que responde al criterio del banco es «El de clase AB es una combinación de A y B».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-15",
@@ -19311,7 +16660,8 @@ export default [
       "Un oscilador de cuarzo"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-17",
@@ -19325,7 +16675,8 @@ export default [
       "Las emisiones parásitas"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las emisiones situadas fuera de la banda necesaria están constituidas por:»). La opción que responde al criterio del banco es «El conjunto de emisiones no esenciales y las emisiones fuera de banda».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-18",
@@ -19339,7 +16690,8 @@ export default [
       "El vatio"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «El vatio».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-20",
@@ -19353,7 +16705,8 @@ export default [
       "Uno"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre antenas, líneas y propagación («¿Qué valor indicará un medidor de ondas estacionarias, en el caso de un acoplamiento óptimo entre un…»). La opción que responde al criterio del banco es «Uno».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-21",
@@ -19367,7 +16720,8 @@ export default [
       "0 dBm"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Los decibelios expresan relaciones logarítmicas; dBm referencia potencia a 1 mW. La respuesta es «30 dBm».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-22",
@@ -19381,7 +16735,8 @@ export default [
       "13 faradios"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre componentes pasivos y activos («El producto de 13 voltios por 1 amperio son:»). La opción que responde al criterio del banco es «13 vatios».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-23",
@@ -19395,7 +16750,8 @@ export default [
       "Siempre se produce un cortocircuito"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «La intensidad del conjunto es igual a la de una pila».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-24",
@@ -19409,7 +16765,8 @@ export default [
       "A menor alcance mayor será la polarización de la señal"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «A mayor frecuencia menor es el alcance conseguido».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-26",
@@ -19423,7 +16780,8 @@ export default [
       "Receptor con dos amplificadores de RF"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Receptor con dos frecuencias intermedias independientes».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-28",
@@ -19437,7 +16795,8 @@ export default [
       "El número de kilohercios que ocupa la banda de trabajo del equipo"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («El ancho de banda ocupado es:»). La opción que responde al criterio del banco es «El comprendido entre los límites superior e inferior de la señal modulada».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-29",
@@ -19451,7 +16810,8 @@ export default [
       "Todos los anteriores"
     ],
     "correctIndex": 3,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Indique que factores influyen en cualquier comunicación radioeléctrica:»). La opción que responde al criterio del banco es «Todos los anteriores».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p1x-30",
@@ -19465,7 +16825,8 @@ export default [
       "40"
     ],
     "correctIndex": 0,
-    "explain": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «10000».",
+    "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p2-02",
@@ -19479,7 +16840,8 @@ export default [
       "Sabadell (Barcelona)"
     ],
     "correctIndex": 1,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Ceuta».",
+    "explainSourceNote": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p2-05",
@@ -19493,63 +16855,8 @@ export default [
       "Es de naturaleza indefinida"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-06",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Para que un menor de edad pueda obtener una licencia de estación de radioaficionado, deberá:",
-    "options": [
-      "Estar en posesión del título de Graduado Escolar",
-      "Aportar un escrito de autorización, en forma fehaciente de sus padres o personas que ostenten su custodia legal, en el que asumirán las responsabilidades que correspondan al menor titular de la licencia",
-      "Presentar una declaración jurada de que hará buen uso del espectro radioeléctrico",
-      "Poseer una estación propia"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-09",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En el Reglamento de uso del dominio público radioeléctrico por aficionados aparece la abreviatura CNAF que significa:",
-    "options": [
-      "Cuadro Nacional de Autorización de Frecuencia",
-      "Cuadro Normativo de Autorización de Frecuencias",
-      "Cuadro Normativo de Atribución de Frecuencias",
-      "Cuadro Nacional de Atribución de Frecuencias"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-10",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:",
-    "options": [
-      "87,5 -107 MHz sin limitación de potencia",
-      "26,960 - 27,410 MHz",
-      "144 -146 MHz",
-      "87,5 -108 MHz con potencia máxima de 10 mW"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-11",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
-    "options": [
-      "Melilla",
-      "Barcelona",
-      "Zamora",
-      "Murcia"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Es concedido para uso temporal por un evento no especialmente significado».",
+    "explainSourceNote": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
     "id": "ure-p2-12",
@@ -19563,132 +16870,7 @@ export default [
       "Auxilio"
     ],
     "correctIndex": 2,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-13",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En comunicaciones del Servicio de Aficionados, la palabra CID se deletrea:",
-    "options": [
-      "Charter, India, Delfo",
-      "Charlie, India, Delta",
-      "Charlie, India, Delfo",
-      "Charter, Inca , Delta"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-15",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Los planes de banda de la IARU en las diferentes Regiones geográficas definidas por la Unión Internacional de Telecomunicaciones (UIT):",
-    "options": [
-      "Pueden ser distintos en cada Región",
-      "Son los mismos en todas las Regiones",
-      "Son siempre iguales los de la Región 1 a los de la Región 3",
-      "No hay planes de banda en la Región 3"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-16",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Un radioaficionado podrá instalar la antena de su estación fija en el exterior de un inmueble si:",
-    "options": [
-      "En el inmueble reside un amigo",
-      "En el inmueble no hay instalada otra antena",
-      "Se hace cargo de los costes de la instalación",
-      "Está legitimado para usar de la totalidad o parte del mismo y ha obtenido la autorización reglamentaria"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-18",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Como norma general, la potencia de salida de los trasmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podrá exceder de:",
-    "options": [
-      "5 W",
-      "10 W",
-      "15 W",
-      "20 W"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-19",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "Como norma general las instalaciones en una estación de radioaficionado deberán ser efectuadas:",
-    "options": [
-      "Directamente por el propietario de la estación",
-      "Por un funcionario técnico de la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente",
-      "por un técnico de una Asociación legalizada de Radioaficionados",
-      "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-23",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "La señal de socorro en radiotelefonía es:",
-    "options": [
-      "SOS",
-      "Emergency",
-      "Mayday",
-      "Securité"
-    ],
-    "correctIndex": 2,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-28",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción grave:",
-    "options": [
-      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios",
-      "La no colaboración con la Inspección de Telecomunicaciones cuando esta sea requerida",
-      "El establecimiento de comunicaciones con estaciones no autorizadas",
-      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general"
-    ],
-    "correctIndex": 1,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-29",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:",
-    "options": [
-      "Espectro radioeléctrico",
-      "Campo eléctrico",
-      "Radioafición",
-      "Radiocomunicación"
-    ],
-    "correctIndex": 3,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
-  },
-  {
-    "id": "ure-p2-30",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Los distritos de los indicativos de llamada son:",
-    "options": [
-      "9 (nueve)",
-      "Ilimitados",
-      "Todos los que se soliciten",
-      "Se han suprimido los distritos"
-    ],
-    "correctIndex": 0,
-    "explain": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
+    "explain": "RST resume legibilidad, intensidad y tono; en fonía se usan normalmente R y S. «Mayday».",
+    "explainSourceNote": "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   }
 ];

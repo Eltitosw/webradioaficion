@@ -21,12 +21,14 @@ import fedi from "../data/fediea-2011.js";
 import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import { dedupeKey, writeUtf8File } from "../lib/import-question-utils.mjs";
+import { areParaphraseDuplicates } from "../lib/question-paraphrase.mjs";
 import {
   getRecencyMeta,
   hasObsoleteHint,
   recencyScore,
   tierPassesCribado,
 } from "../lib/question-recency.mjs";
+import { pickDuplicateWinner } from "../lib/banco-dedupe.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -55,7 +57,8 @@ const all = [
 const tierCounts = { A: 0, B: 0, C: 0 };
 const sourceCounts = new Map();
 const obsoleteIds = [];
-const byDedupe = new Map();
+/** @type {{ id: string, score: number, tier: string, q: object }[]} */
+const canonicals = [];
 
 for (const q of all) {
   const meta = getRecencyMeta(q.id);
@@ -64,12 +67,21 @@ for (const q of all) {
 
   if (hasObsoleteHint(q.stem, q.options)) obsoleteIds.push(q.id);
 
-  const key = dedupeKey(q.stem, q.options);
   const figureBonus = q.stemFigure ? 25 : 0;
   const score = recencyScore(meta.tier) + figureBonus;
-  const prev = byDedupe.get(key);
-  if (!prev || score > prev.score) {
-    byDedupe.set(key, { id: q.id, score, tier: meta.tier, meta, hasFigure: !!q.stemFigure });
+  const match = canonicals.find((c) => areParaphraseDuplicates(c.q, q));
+  if (!match) {
+    canonicals.push({ id: q.id, score, tier: meta.tier, q });
+    continue;
+  }
+  const winner = pickDuplicateWinner([match.q, q], new Set());
+  if (winner.id !== match.id) {
+    match.id = winner.id;
+    match.q = winner;
+    match.tier = getRecencyMeta(winner.id).tier;
+    match.score = Math.max(match.score, score);
+  } else if (score > match.score) {
+    match.score = score;
   }
 }
 
@@ -78,9 +90,8 @@ const preferredAmpliadoIds = [];
 const preferredStrictIds = [];
 const droppedHistoric = [];
 
-for (const [key, entry] of byDedupe) {
-  const q = all.find((x) => x.id === entry.id);
-  if (!q) continue;
+for (const entry of canonicals) {
+  const q = entry.q;
   if (hasObsoleteHint(q.stem, q.options)) continue;
 
   if (tierPassesCribado(entry.tier, "normal")) preferredNormalIds.push(entry.id);
@@ -126,7 +137,8 @@ lines.push("");
 lines.push(`export const CRIBADO_STATS = ${JSON.stringify(
   {
     totalBank: all.length,
-    uniqueStems: byDedupe.size,
+    uniqueStems: canonicals.length,
+    sourceEntriesDeduped: all.length - canonicals.length,
     tierA: tierCounts.A,
     tierB: tierCounts.B,
     tierC: tierCounts.C,
@@ -151,7 +163,8 @@ const report = [];
 report.push("=== Cribado por antigüedad ===");
 report.push(`Modo activo exportado: ${mode}`);
 report.push(`Banco total (con duplicados entre fuentes): ${all.length}`);
-report.push(`Enunciados únicos (deduplicados): ${byDedupe.size}`);
+report.push(`Enunciados únicos (exactos + parafraseados): ${canonicals.length}`);
+report.push(`Parafraseos colapsados: ${all.length - canonicals.length}`);
 report.push("");
 report.push("Por tier (todas las entradas del banco):");
 report.push(`  A (reciente):     ${tierCounts.A}`);

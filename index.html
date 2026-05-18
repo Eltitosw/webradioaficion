@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="description" content="Preparación para el examen de radioaficionado en España: práctica, tarjetas y métodos de estudio con base científica." />
-  <meta name="theme-color" content="#090c11" />
+  <meta name="theme-color" content="#090c11" id="meta-theme-color" />
   <link rel="canonical" href="https://examenradioaficionado.online/" />
   <title>RadioExamen · Preparación radioaficionado</title>
   <link
@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2026.05.15b" />
+  <link rel="stylesheet" href="styles.css?v=2026.05.18c" />
 </head>
 <body>
   <noscript>
@@ -56,13 +56,33 @@
         <summary class="a11y-toolbar__summary">Accesibilidad</summary>
         <div class="a11y-toolbar__body">
           <p class="a11y-toolbar__intro">
-            Preferencias guardadas en este navegador. La opción de movimiento también respeta la configuración del sistema si está activada.
+            Preferencias guardadas en este navegador. Ajusta el tamaño del texto según tu pantalla; el movimiento también respeta la configuración del sistema si está activada.
           </p>
           <ul class="a11y-toolbar__list" role="list">
+            <li class="a11y-toolbar__scale">
+              <label for="a11y-font-scale">Tamaño del texto</label>
+              <div class="a11y-scale-row">
+                <button type="button" class="btn btn--ghost btn--sm a11y-scale-btn" id="a11y-font-dec" aria-label="Reducir tamaño del texto">A−</button>
+                <input
+                  type="range"
+                  id="a11y-font-scale"
+                  class="a11y-scale-range"
+                  min="85"
+                  max="150"
+                  step="5"
+                  value="100"
+                  aria-valuemin="85"
+                  aria-valuemax="150"
+                  aria-valuenow="100"
+                />
+                <button type="button" class="btn btn--ghost btn--sm a11y-scale-btn" id="a11y-font-inc" aria-label="Aumentar tamaño del texto">A+</button>
+                <output id="a11y-font-scale-out" class="a11y-scale-out" for="a11y-font-scale">100%</output>
+              </div>
+            </li>
             <li>
               <label class="a11y-check">
-                <input type="checkbox" id="a11y-large" />
-                <span>Texto más grande</span>
+                <input type="checkbox" id="a11y-light" />
+                <span>Modo claro</span>
               </label>
             </li>
             <li>
@@ -213,6 +233,10 @@
             Cada bloque incluye idea clave, repaso express, teoría explicada, ejemplos guiados, programa de examen y tarjetas conceptuales.
             Los textos condensan el programa tipo examen; contrasta siempre normativa sensible con BOE y convocatoria.
           </p>
+          <p>
+            Para <strong>leer en voz alta</strong> con el navegador o el lector del sistema: activa <strong>modo lectura lineal</strong>,
+            usa <strong>Expandir secciones</strong> y salta de bloque con el índice o el selector.
+          </p>
         </details>
       </div>
       <aside class="next-step" aria-label="Siguiente paso recomendado">
@@ -220,13 +244,26 @@
         <span>Elige un bloque, léelo y después practica ese mismo tema sin cambiar demasiadas opciones.</span>
         <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Practicar después</a>
       </aside>
-      <div class="temario-toolbar panel">
+      <div class="temario-toolbar panel" role="search">
         <label for="temario-filter">Buscar en el temario</label>
         <input type="search" id="temario-filter" class="temario-toolbar__input" placeholder="Ej.: dipolo, ROE, mezclador…" autocomplete="off" />
         <label class="check temario-toolbar__weak">
           <input type="checkbox" id="temario-weak-only" />
           <span>Ver solo bloques débiles</span>
         </label>
+      </div>
+      <div class="temario-toolbar panel temario-toolbar--read" aria-label="Lectura en voz alta">
+        <p class="temario-toolbar__read-label">Lectura en voz alta</p>
+        <div class="temario-toolbar__read-actions">
+          <button type="button" id="temario-expand-all" class="btn btn--ghost btn--sm">Expandir secciones</button>
+          <button type="button" id="temario-collapse-all" class="btn btn--ghost btn--sm">Contraer secciones</button>
+          <label class="check temario-toolbar__reading">
+            <input type="checkbox" id="temario-reading-mode" />
+            <span>Modo lectura lineal</span>
+          </label>
+        </div>
+        <label for="temario-jump">Ir al bloque</label>
+        <select id="temario-jump" class="temario-toolbar__jump"></select>
       </div>
       <div id="temario-root" class="temario"></div>
     </section>
