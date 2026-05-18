@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2026.05.18c" />
+  <link rel="stylesheet" href="styles.css?v=2026.05.18g" />
   <script>
     (function () {
       try {
@@ -278,7 +278,10 @@
       </div>
       <div class="temario-toolbar panel temario-toolbar--read" aria-label="Lectura en voz alta">
         <p class="temario-toolbar__read-label">Lectura en voz alta</p>
+        <p class="temario-toolbar__read-hint muted">Usa «Escuchar bloque» (voz del navegador) o el botón en cada tema. En móvil, sube el volumen del dispositivo.</p>
         <div class="temario-toolbar__read-actions">
+          <button type="button" id="temario-speak-start" class="btn btn--primary btn--sm">Escuchar bloque</button>
+          <button type="button" id="temario-speak-stop" class="btn btn--ghost btn--sm" hidden>Detener lectura</button>
           <button type="button" id="temario-expand-all" class="btn btn--ghost btn--sm">Expandir secciones</button>
           <button type="button" id="temario-collapse-all" class="btn btn--ghost btn--sm">Contraer secciones</button>
           <label class="check temario-toolbar__reading">
@@ -286,6 +289,7 @@
             <span>Modo lectura lineal</span>
           </label>
         </div>
+        <p id="temario-speak-status" class="temario-speak-status" aria-live="polite"></p>
         <label for="temario-jump">Ir al bloque</label>
         <select id="temario-jump" class="temario-toolbar__jump"></select>
       </div>
@@ -820,7 +824,7 @@
 
           <details class="help-faq">
             <summary>¿Qué hago si la web no carga bien?</summary>
-            <p>Recarga la página. Si la abriste desde disco, sirve la carpeta por HTTP/HTTPS. Si publicas en hosting, sube también <code>app.js</code>, <code>data/</code>, <code>lib/</code>, <code>styles.css</code> e imágenes.</p>
+            <p>Recarga forzada (vacía caché o Ctrl+F5). Si abres el archivo desde disco, sirve la carpeta por HTTP. En hosting sube <code>index.html</code>, <code>app.bundle.js</code> y <code>styles.css</code> (genera el bundle con <code>npm run build:web</code>) y la carpeta <code>images/quiz/</code> para las figuras.</p>
           </details>
         </section>
 
@@ -1017,6 +1021,6 @@
       });
     })();
   </script>
-  <script src="app.bundle.js?v=2026.05.18e" type="module"></script>
+  <script src="app.bundle.js?v=2026.05.18g" type="module"></script>
 </body>
 </html>

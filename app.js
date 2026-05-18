@@ -498,6 +498,7 @@ async function onRoute() {
     id = "inicio";
   }
   if (id !== "practicar") clearExamTimer();
+  if (id !== "temario") stopTemarioSpeech();
   showView(id);
   updateDocumentTitle(id);
   announceRoute(id);
@@ -622,7 +623,7 @@ function renderNormativa() {
 }
 
 /** Sección plegable del temario con título accesible para lectura en voz alta. */
-function temarioDetailsSection(blockId, num, title, bodyHtml, openDefault = false) {
+function temarioDetailsSection(blockId, num, title, bodyHtml, openDefault = true) {
   const sid = `temario-${blockId}-sec-${num}`;
   const openAttr = openDefault ? " open" : "";
   return `
@@ -713,8 +714,8 @@ function renderBlockStudy(blockId) {
           <p class="temario-method-tip"><strong>Ruta teórica:</strong> ${escapeHtml(
             "lee en este orden: idea clave, resumen express, teoría explicada, ejemplos guiados, errores típicos y tarjetas conceptuales. Así no saltas al test sin entender el tema.",
           )}</p>
-          ${temarioDetailsSection(blockId, 1, "Idea clave para memorizar", hooks, true)}
-          ${temarioDetailsSection(blockId, 2, "Repaso express, uno a tres minutos", express)}
+          ${hooks ? temarioDetailsSection(blockId, 1, "Idea clave para memorizar", hooks) : ""}
+          ${express ? temarioDetailsSection(blockId, 2, "Repaso express, uno a tres minutos", express) : ""}
           ${readMore}
           ${trapWarnings}
           ${examChecklist}
@@ -726,6 +727,7 @@ function renderBlockStudy(blockId) {
           </section>
           ${sources}
           <nav class="temario-cta" aria-label="Acciones tras estudiar este bloque">
+            <button type="button" class="btn btn--ghost btn--sm temario-speak-block" data-block-id="${escapeHtml(blockId)}">Escuchar este bloque</button>
             <a href="#practicar" data-nav="practicar" data-practicar-topic="${escapeHtml(blockId)}" class="btn btn--primary btn--sm temario-cta__main">Practicar este bloque</a>
             <a href="#tarjetas" data-nav="tarjetas" data-tarjetas-topic="${escapeHtml(blockId)}" class="btn btn--ghost btn--sm">Tarjetas del banco (este bloque)</a>
             <a href="#tarjetas" data-nav="tarjetas" class="btn btn--ghost btn--sm">Tarjetas (todo el banco)</a>
@@ -739,7 +741,7 @@ function renderTemarioToc() {
   return `
     <nav class="temario-toc panel" aria-label="Índice de bloques del temario">
       <h2 class="temario-toc__title">Índice por bloques</h2>
-      <p class="temario-toc__hint muted">Usa los enlaces o «Ir al bloque». Activa <strong>modo lectura lineal</strong> para escuchar con la voz del sistema.</p>
+      <p class="temario-toc__hint muted">Usa los enlaces o «Ir al bloque». Pulsa <strong>Escuchar bloque</strong> para lectura en voz alta del navegador, o activa <strong>modo lectura lineal</strong> para ver todo seguido.</p>
       ${parts
         .map(
           (p) => `
@@ -868,15 +870,162 @@ function applyTemarioReadingMode(/** @type {{ linear: boolean }} */ opts) {
   if (opts.linear) setTemarioDetailsOpen(root, true);
 }
 
+function temarioSpeechSupported() {
+  return typeof window !== "undefined" && "speechSynthesis" in window;
+}
+
+function stopTemarioSpeech() {
+  if (!temarioSpeechSupported()) return;
+  window.speechSynthesis.cancel();
+  document.querySelectorAll(".temario-speak-block.is-speaking").forEach((el) => {
+    el.classList.remove("is-speaking");
+  });
+  const stopBtn = $("#temario-speak-stop");
+  const status = $("#temario-speak-status");
+  if (stopBtn instanceof HTMLButtonElement) stopBtn.hidden = true;
+  if (status) status.textContent = "";
+}
+
+function buildTemarioBlockSpeechText(blockId) {
+  const block = (topicsData.parts || []).flatMap((p) => p.blocks || []).find((b) => b.id === blockId);
+  const study = topicStudy[blockId];
+  const parts = [];
+  if (block?.title) parts.push(block.title);
+  if (block?.hint) parts.push(block.hint);
+  if (!study) return parts.join(". ");
+  const addList = (heading, items) => {
+    if (!items?.length) return;
+    parts.push(heading);
+    parts.push(...items);
+  };
+  addList("Idea clave para memorizar.", study.memoryHooks);
+  addList("Repaso express.", study.expressBullets);
+  addList("Teoría explicada.", study.bookGuide);
+  addList("Ejemplos guiados.", study.quickSession);
+  addList("Ampliación conceptual.", study.readMore);
+  addList("Programa de examen.", study.fedieaSyllabus);
+  addList("Preguntas trampa.", study.trapWarnings);
+  addList("Errores típicos y puntos de examen.", study.examChecklist);
+  if (study.flashcards?.length) {
+    parts.push("Autoevaluación conceptual.");
+    study.flashcards.forEach((fc, i) => {
+      parts.push(`Tarjeta ${i + 1}. Pregunta: ${fc.front}. Respuesta: ${fc.back}`);
+    });
+  }
+  if (study.sources) parts.push(`Contrastar con: ${study.sources}`);
+  return parts.join(". ");
+}
+
+function getTemarioBlockIdForSpeech() {
+  const jumpSel = $("#temario-jump");
+  if (jumpSel instanceof HTMLSelectElement && jumpSel.value) {
+    return jumpSel.value.replace(/^temario-/, "");
+  }
+  const blocks = document.querySelectorAll(".temario-block:not([hidden])");
+  for (const el of blocks) {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight * 0.55 && r.bottom > 72) {
+      return el.id.replace(/^temario-/, "");
+    }
+  }
+  const first = blocks[0];
+  return first ? first.id.replace(/^temario-/, "") : null;
+}
+
+function updateTemarioSpeechUi(blockId, speaking) {
+  const stopBtn = $("#temario-speak-stop");
+  const status = $("#temario-speak-status");
+  if (stopBtn instanceof HTMLButtonElement) stopBtn.hidden = !speaking;
+  document.querySelectorAll(".temario-speak-block").forEach((btn) => {
+    const id = btn.getAttribute("data-block-id");
+    btn.classList.toggle("is-speaking", speaking && id === blockId);
+    if (btn instanceof HTMLButtonElement) {
+      btn.setAttribute("aria-pressed", speaking && id === blockId ? "true" : "false");
+    }
+  });
+  if (status && blockId) {
+    const block = (topicsData.parts || []).flatMap((p) => p.blocks || []).find((b) => b.id === blockId);
+    status.textContent = speaking
+      ? `Leyendo: ${block?.title || blockId}`
+      : "";
+  }
+}
+
+function pickSpanishSpeechVoice() {
+  const voices = window.speechSynthesis.getVoices();
+  return (
+    voices.find((v) => /^es(-|_)/i.test(v.lang) && v.localService) ||
+    voices.find((v) => /^es(-|_)/i.test(v.lang)) ||
+    null
+  );
+}
+
+function speakTemarioBlock(blockId) {
+  if (!blockId) {
+    showSaveToast("Selecciona un bloque en el temario o desplázate hasta uno.", true);
+    return;
+  }
+  if (!temarioSpeechSupported()) {
+    showSaveToast("Tu navegador no admite lectura en voz alta. Prueba Chrome o Edge.", true);
+    return;
+  }
+  const text = buildTemarioBlockSpeechText(blockId);
+  if (!text.trim()) {
+    showSaveToast("Este bloque no tiene texto de estudio para leer.", true);
+    return;
+  }
+  stopTemarioSpeech();
+  const blockEl = document.getElementById(`temario-${blockId}`);
+  setTemarioDetailsOpen(blockEl, true);
+  const utter = new SpeechSynthesisUtterance(text);
+  utter.lang = "es-ES";
+  utter.rate = 0.95;
+  const startUi = () => updateTemarioSpeechUi(blockId, true);
+  const endUi = () => updateTemarioSpeechUi(blockId, false);
+  utter.onstart = startUi;
+  utter.onend = endUi;
+  utter.onerror = endUi;
+  const speakNow = () => {
+    const voice = pickSpanishSpeechVoice();
+    if (voice) utter.voice = voice;
+    window.speechSynthesis.speak(utter);
+  };
+  if (pickSpanishSpeechVoice()) {
+    speakNow();
+    return;
+  }
+  const onVoices = () => {
+    window.speechSynthesis.removeEventListener("voiceschanged", onVoices);
+    speakNow();
+  };
+  window.speechSynthesis.addEventListener("voiceschanged", onVoices);
+  speakNow();
+}
+
 function initTemarioReading() {
   const expandBtn = $("#temario-expand-all");
   const collapseBtn = $("#temario-collapse-all");
   const readingChk = $("#temario-reading-mode");
   const jumpSel = $("#temario-jump");
+  const speakBtn = $("#temario-speak-start");
+  const stopBtn = $("#temario-speak-stop");
   const root = $("#temario-root");
 
   expandBtn?.addEventListener("click", () => setTemarioDetailsOpen(root, true));
   collapseBtn?.addEventListener("click", () => setTemarioDetailsOpen(root, false));
+  speakBtn?.addEventListener("click", () => speakTemarioBlock(getTemarioBlockIdForSpeech()));
+  stopBtn?.addEventListener("click", () => stopTemarioSpeech());
+
+  if (temarioSpeechSupported() && window.speechSynthesis.onvoiceschanged !== undefined) {
+    window.speechSynthesis.onvoiceschanged = () => {};
+  }
+
+  root?.addEventListener("click", (e) => {
+    const btn = e.target.closest(".temario-speak-block");
+    if (!btn || !root.contains(btn)) return;
+    const blockId = btn.getAttribute("data-block-id");
+    if (blockId) speakTemarioBlock(blockId);
+  });
 
   if (readingChk instanceof HTMLInputElement) {
     const opts = loadTemarioReadingOpts();

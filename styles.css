@@ -954,7 +954,7 @@ html.a11y-reduce-motion .opt:active {
 .quiz-practice-guide h2 {
   margin: 0 0 0.35rem;
   font-size: 1rem;
-  color: #b8ebd4;
+  color: var(--text);
 }
 
 .quiz-practice-guide p {
@@ -967,7 +967,7 @@ html.a11y-reduce-motion .opt:active {
 .quiz-practice-guide__list {
   margin: 0.85rem 0 0;
   padding-left: 1.25rem;
-  color: #d0d8ea;
+  color: var(--text);
   font-size: 0.92rem;
   line-height: 1.5;
 }
@@ -2159,9 +2159,9 @@ body.quiz-focus-active #save-toast {
   margin: 0 0 0.65rem;
   padding: 0.55rem 0.8rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(46, 184, 122, 0.4);
-  background: rgba(46, 184, 122, 0.1);
-  color: #b8ebd4;
+  border: 1px solid color-mix(in srgb, var(--ok) 45%, transparent);
+  background: color-mix(in srgb, var(--ok) 12%, transparent);
+  color: var(--text);
   font-size: 0.98rem;
 }
 
@@ -2169,9 +2169,9 @@ body.quiz-focus-active #save-toast {
   margin: 0 0 0.65rem;
   padding: 0.55rem 0.8rem;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(224, 112, 118, 0.38);
-  background: rgba(224, 112, 118, 0.09);
-  color: #f2c2c5;
+  border: 1px solid color-mix(in srgb, var(--bad) 42%, transparent);
+  background: color-mix(in srgb, var(--bad) 10%, transparent);
+  color: var(--text);
   font-size: 0.98rem;
 }
 
@@ -3066,6 +3066,24 @@ html[data-theme="light"] .a11y-toolbar__body {
   border-color: var(--line-strong);
 }
 
+html.a11y-light .quiz-practice-guide,
+html[data-theme="light"] .quiz-practice-guide {
+  background: color-mix(in srgb, var(--ok) 10%, var(--bg-card));
+  border-color: color-mix(in srgb, var(--ok) 35%, transparent);
+}
+
+html.a11y-light .exam-ready,
+html[data-theme="light"] .exam-ready {
+  border-color: var(--line-strong);
+  background: var(--bg-card);
+}
+
+html.a11y-light .flashcard__face--back,
+html[data-theme="light"] .flashcard__face--back {
+  background: #e8edf5;
+  color: var(--text);
+}
+
 html.a11y-reduce-motion {
   scroll-behavior: auto;
 }
@@ -3547,9 +3565,9 @@ html.a11y-reduce-motion .flashcard__inner {
 .temario-block__count {
   padding: 0.15rem 0.5rem;
   border-radius: 6px;
-  background: rgba(126, 182, 255, 0.1);
-  border: 1px solid rgba(126, 182, 255, 0.25);
-  color: #c8daf8;
+  background: var(--accent-muted);
+  border: 1px solid color-mix(in srgb, var(--focus) 35%, transparent);
+  color: var(--text-secondary);
 }
 
 .temario-block__progress {
@@ -3559,9 +3577,9 @@ html.a11y-reduce-motion .flashcard__inner {
   gap: 0.25rem 0.45rem;
   padding: 0.15rem 0.55rem;
   border-radius: 999px;
-  border: 1px solid rgba(147, 184, 255, 0.22);
-  background: rgba(147, 184, 255, 0.08);
-  color: #d5e3ff;
+  border: 1px solid color-mix(in srgb, var(--focus) 28%, transparent);
+  background: color-mix(in srgb, var(--focus) 10%, transparent);
+  color: var(--text-secondary);
 }
 
 .temario-block__progress strong {
@@ -3582,39 +3600,43 @@ html.a11y-reduce-motion .flashcard__inner {
 }
 
 .temario-block__progress--weak {
-  border-color: rgba(224, 112, 118, 0.36);
-  background: rgba(224, 112, 118, 0.09);
-  color: #f2c2c5;
+  border-color: color-mix(in srgb, var(--bad) 45%, transparent);
+  background: color-mix(in srgb, var(--bad) 12%, transparent);
+  color: var(--text);
 }
 
 .temario-block__progress--strong {
-  border-color: rgba(62, 207, 142, 0.34);
-  background: rgba(62, 207, 142, 0.09);
-  color: #b8ebd4;
+  border-color: color-mix(in srgb, var(--ok) 45%, transparent);
+  background: color-mix(in srgb, var(--ok) 12%, transparent);
+  color: var(--text);
 }
 
 .temario-study {
   margin-top: 0.5rem;
   padding-top: 0.75rem;
-  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  border-top: 1px dashed var(--line-strong);
 }
 
 .temario-method-tip {
   margin: 0 0 0.75rem;
   padding: 0.65rem 0.85rem;
   border-radius: 10px;
-  background: rgba(126, 182, 255, 0.07);
-  border: 1px solid rgba(126, 182, 255, 0.22);
+  background: color-mix(in srgb, var(--focus) 12%, var(--bg-card));
+  border: 1px solid color-mix(in srgb, var(--focus) 30%, transparent);
   font-size: 0.88rem;
   line-height: 1.45;
-  color: #dbe6ff;
+  color: var(--text);
+}
+
+.temario-method-tip strong {
+  color: var(--text);
 }
 
 .temario-details {
   margin-bottom: 0.6rem;
   border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid var(--line-strong);
+  background: var(--bg-card);
   padding: 0 0.75rem;
 }
 
@@ -3623,8 +3645,40 @@ html.a11y-reduce-motion .flashcard__inner {
   font-weight: 700;
   font-size: 0.9rem;
   padding: 0.65rem 0;
-  color: var(--accent);
+  color: var(--text);
   list-style: none;
+}
+
+.temario-details__label {
+  color: var(--text);
+}
+
+.temario-details:not([open]) .temario-details__summary::after {
+  content: " · tocar para ver";
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.temario--reading .temario-details .temario-details__summary::after {
+  content: none;
+}
+
+.temario-toolbar__read-hint {
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+}
+
+.temario-speak-status {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 0.88rem;
+  color: var(--focus);
+  min-height: 1.25em;
+}
+
+.temario-speak-block.is-speaking {
+  border-color: var(--focus);
+  color: var(--focus);
 }
 
 .temario-details summary::-webkit-details-marker {
@@ -3645,9 +3699,13 @@ html.a11y-reduce-motion .flashcard__inner {
 .temario-details .temario-list {
   margin: 0 0 0.65rem;
   padding-left: 1.15rem;
-  color: #d0d8ea;
+  color: var(--text);
   font-size: 0.92rem;
   line-height: 1.5;
+}
+
+.temario-details .temario-list li {
+  margin-bottom: 0.35rem;
 }
 
 .temario-study-group {
