@@ -1,0 +1,50 @@
+Verificación estricta · 2026-05-18T19:22:53
+Banco: 1126
+OK: 1126
+Inaceptables: 0
+Solo plantilla: 0
+Frases sospechosas (pass 3): 61
+Regenerables en memoria (pass 2): 0 / aún mal: 0
+
+
+=== Frases sospechosas ===
+- fedi-a-028: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-a-032: \brst\b.*legibilidad.*intensidad
+- fedi-a-069: \brst\b.*legibilidad.*intensidad
+- fedi-a-120: \brst\b.*legibilidad.*intensidad
+- fedi-ab-044: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-b-181: \brst\b.*legibilidad.*intensidad
+- fedi-b-191: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-b-292: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-c-332: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-c-333: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-c-369: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-c-377: \brst\b.*legibilidad.*intensidad
+- fedi-c-378: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-c-381: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-c-383: \brst\b.*legibilidad.*intensidad
+- fedi-c-385: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-d-430: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-d-433: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-d-521: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-d-525: \brst\b.*legibilidad.*intensidad
+- fedi-d-566: \brst\b.*legibilidad.*intensidad
+- fedi-d-568: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-d-572: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-f-032: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-f-039: identifica la estaci[oó]n y debe usarse al inicio
+- fedi-t-032: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1832: \brst\b.*legibilidad.*intensidad
+- quijotes-84-1838: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1843: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1844: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1853: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1864: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1868: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1893: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1902: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1919: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1920: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1928: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1933: identifica la estaci[oó]n y debe usarse al inicio
+- quijotes-84-1953: identifica la estaci[oó]n y debe usarse al inicio

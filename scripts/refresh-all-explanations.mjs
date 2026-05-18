@@ -1,6 +1,5 @@
 /**
- * Regenera explicaciones genéricas o con baja fidelidad (221+58 del audit).
- * Actualiza generated-explanations.js y quijotes-explanations.js cuando procede.
+ * Regenera explicaciones hasta pasar verificación estricta (varias pasadas).
  */
 import path from "path";
 import { fileURLToPath } from "url";
@@ -8,16 +7,9 @@ import { fileURLToPath } from "url";
 import banco from "../data/questions-banco.js";
 import generated from "../data/generated-explanations.js";
 import quijotesExp from "../data/quijotes-explanations.js";
-import {
-  auditQuestionExplain,
-  explainMentionsCorrect,
-  isGenericExplainText,
-  isMisassignedPedagogicalExplain,
-  needsExplainRefresh,
-} from "../lib/explain-faithfulness.mjs";
+import { isExplainAcceptable } from "../lib/explain-verify.mjs";
 import { pedagogicalExplain } from "../lib/explain-quality.mjs";
-import { refreshExplainForQuestion } from "../lib/contextual-explain.mjs";
-import { generatePedagogicalExplain } from "../lib/generate-pedagogical-explain.mjs";
+import { buildBestExplain } from "../lib/build-best-explain.mjs";
 import { writeUtf8File } from "../lib/import-question-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -29,53 +21,57 @@ const nextGen = { ...generated };
 /** @type {Record<string, string>} */
 const nextQuij = { ...quijotesExp };
 
-let refreshed = 0;
-let quijUpdated = 0;
-let genUpdated = 0;
+const MAX_PASSES = 6;
 
-for (const q of banco) {
-  const issues = auditQuestionExplain(q);
-  const missingPedagogy = issues.some((i) => i.code === "only_template" || i.code === "no_pedagogical");
-  if (!needsExplainRefresh(q) && !isMisassignedPedagogicalExplain(q) && !missingPedagogy) continue;
-
-  const prior =
-    quijotesExp[q.id] ||
-    generated[q.id] ||
-    pedagogicalExplain(q) ||
-    (typeof q.explain === "string" ? q.explain : "");
-
-  const correct = String(q.options?.[q.correctIndex] ?? "");
-  let text = refreshExplainForQuestion(q, isGenericExplainText(prior) ? "" : prior);
-  const needsBetter =
-    isGenericExplainText(text) ||
-    !explainMentionsCorrect(text, correct) ||
-    isMisassignedPedagogicalExplain({ ...q, explain: text });
-  if (needsBetter) {
-    const gen = generatePedagogicalExplain(q);
-    if (
-      !isGenericExplainText(gen) &&
-      explainMentionsCorrect(gen, correct) &&
-      !isMisassignedPedagogicalExplain({ ...q, explain: gen })
-    ) {
-      text = gen;
-    }
-  }
-  if (
-    isGenericExplainText(text) ||
-    !explainMentionsCorrect(text, correct) ||
-    isMisassignedPedagogicalExplain({ ...q, explain: text })
-  ) {
-    text = refreshExplainForQuestion(q, "");
-  }
-  refreshed += 1;
-
+function storeExplain(q, text) {
   if (q.id.startsWith("quijotes-")) {
     nextQuij[q.id] = text;
-    quijUpdated += 1;
   } else {
     nextGen[q.id] = text;
-    genUpdated += 1;
   }
+}
+
+function currentText(q) {
+  return nextQuij[q.id] || nextGen[q.id] || pedagogicalExplain(q) || String(q.explain || "");
+}
+
+let totalUpdated = 0;
+
+for (let pass = 1; pass <= MAX_PASSES; pass += 1) {
+  let passUpdated = 0;
+  for (const q of banco) {
+    const probe = { ...q, explain: currentText(q) };
+    if (isExplainAcceptable(probe, currentText(q))) continue;
+
+    const text = buildBestExplain(q);
+    if (!isExplainAcceptable(q, text)) continue;
+
+    const prev = currentText(q);
+    if (prev === text) continue;
+    storeExplain(q, text);
+    passUpdated += 1;
+  }
+  totalUpdated += passUpdated;
+  process.stderr.write(`refresh pass ${pass}: ${passUpdated} actualizadas\n`);
+  if (passUpdated === 0) break;
+}
+
+/** Cobertura: reintento final solo si la explicación pasa verificación estricta. */
+let forced = 0;
+let stillBad = 0;
+for (const q of banco) {
+  const probe = { ...q, explain: currentText(q) };
+  if (isExplainAcceptable(probe, currentText(q))) continue;
+  const text = buildBestExplain(q);
+  if (!isExplainAcceptable(q, text)) {
+    stillBad += 1;
+    continue;
+  }
+  storeExplain(q, text);
+  forced += 1;
+}
+if (stillBad) {
+  process.stderr.write(`AVISO: ${stillBad} pregunta(s) sin explicación aceptable tras regenerar\n`);
 }
 
 function writeMap(outPath, header, map) {
@@ -89,17 +85,9 @@ function writeMap(outPath, header, map) {
   writeUtf8File(outPath, lines.join("\n"));
 }
 
-writeMap(
-  GEN_OUT,
-  "/** Explicaciones generadas (UTF-8). refresh-all-explanations.mjs */",
-  nextGen,
-);
-writeMap(
-  QUIJ_OUT,
-  "/** Explicaciones Quijotes (UTF-8). Ampliadas/refresh por refresh-all-explanations.mjs */",
-  nextQuij,
-);
+writeMap(GEN_OUT, "/** Explicaciones generadas (UTF-8). refresh-all-explanations.mjs */", nextGen);
+writeMap(QUIJ_OUT, "/** Explicaciones Quijotes (UTF-8). refresh-all-explanations.mjs */", nextQuij);
 
 process.stderr.write(
-  `refresh-all-explanations: ${refreshed} actualizadas (gen: ${genUpdated}, quijotes: ${quijUpdated})\n`,
+  `refresh-all-explanations: ${totalUpdated} en pasadas + ${forced} forzadas · gen ${Object.keys(nextGen).length} · quij ${Object.keys(nextQuij).length}\n`,
 );

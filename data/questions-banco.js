@@ -113,7 +113,7 @@ export default [
       "Poniendo al accidentado en decúbito supino y llamando a un médico"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En caso de accidente personal por quemaduras debe de atenderse a la victima:»). La opción que responde al criterio del banco es «Limpiando las quemaduras con agua y llamando al médico».",
+    "explain": "En «En caso de accidente personal por quemaduras debe de atenderse a la victima:», la formulación que encaja según el banco de examen es «Limpiando las quemaduras con agua y llamando al médico». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -278,7 +278,7 @@ export default [
       "De un conjunto de antenas direccionales y antenas omnidireccionales"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las estaciones de aficionados deberán estar provistas de:»). La opción que responde al criterio del banco es «Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables».",
+    "explain": "En «Las estaciones de aficionados deberán estar provistas de:», la formulación que encaja según el banco de examen es «Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -293,7 +293,7 @@ export default [
       "Que solamente puede instalarse dentro de los límites de una provincia"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una estación fija es la:»). La opción que responde al criterio del banco es «Autorizada únicamente para su utilización en una ubicación que es fija y que se consigna en la licencia».",
+    "explain": "En «Una estación fija es la:», la formulación que encaja según el banco de examen es «Autorizada únicamente para su utilización en una ubicación que es fija y que se consigna en la licencia». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -383,7 +383,7 @@ export default [
       "Cambiando de emisión a recepción"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando actuamos sobre el conmutador de bandas de un transceptor, estamos:»). La opción que responde al criterio del banco es «Situándolo en el margen de frecuencias deseado».",
+    "explain": "En «Cuando actuamos sobre el conmutador de bandas de un transceptor, estamos:», la formulación que encaja según el banco de examen es «Situándolo en el margen de frecuencias deseado». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -473,7 +473,7 @@ export default [
       "No dará ninguna indicación"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Al sintonizar un emisor que tenga un aparato de medida de corriente de placa del paso final, al esta…»). La opción que responde al criterio del banco es «Un mínino».",
+    "explain": "En «Al sintonizar un emisor que tenga un aparato de medida de corriente de placa del paso fina…», la formulación que encaja según el banco de examen es «Un mínino». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -863,7 +863,7 @@ export default [
       "No"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿Está permitido que una estación de aficionado se conecte con otras instalaciones de telecomunicació…»). La opción que responde al criterio del banco es «Sí, cumpliendo ciertas condiciones».",
+    "explain": "En «¿Está permitido que una estación de aficionado se conecte con otras instalaciones de telec…», la formulación que encaja según el banco de examen es «Sí, cumpliendo ciertas condiciones». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1133,7 +1133,7 @@ export default [
       "Sirven para estabilizar la frecuencia de un oscilador controlado por tensión"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («L0S CIRCUITOS CON \"LAZO ENGANCHADO DE FASE\":»). La opción que responde al criterio del banco es «Sirven para estabilizar la frecuencia de un oscilador controlado por tensión».",
+    "explain": "En «L0S CIRCUITOS CON \"LAZO ENGANCHADO DE FASE\":», la formulación que encaja según el banco de examen es «Sirven para estabilizar la frecuencia de un oscilador controlado por tensión». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1163,7 +1163,7 @@ export default [
       "1.215 MHz. y superiores"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LOS AMPLlFICADORES A CAVIDADES RESONANTES SE EMPLEAN EN LOS TRANSCEPTORES QUE TRABAJAN EN LAS BANDAS…»). La opción que responde al criterio del banco es «144 MHz. y superiores».",
+    "explain": "En «LOS AMPLlFICADORES A CAVIDADES RESONANTES SE EMPLEAN EN LOS TRANSCEPTORES QUE TRABAJAN EN …», la formulación que encaja según el banco de examen es «144 MHz. y superiores». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1223,7 +1223,7 @@ export default [
       "Al silenciador"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («A CUAL DE ESTOS CIRCUITOS DE LA PARTE RECEPTORA DE UN REPETIDOR DEBE ESTAR CONECTADO EL RELE QUE CON…»). La opción que responde al criterio del banco es «Al silenciador».",
+    "explain": "En «A CUAL DE ESTOS CIRCUITOS DE LA PARTE RECEPTORA DE UN REPETIDOR DEBE ESTAR CONECTADO EL RE…», la formulación que encaja según el banco de examen es «Al silenciador». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1343,7 +1343,7 @@ export default [
       "Incrementar el tiempo de transmisión sin calentamiento del equipo."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras co…»). La opción que responde al criterio del banco es «Optimizar los filtros del transceptor.».",
+    "explain": "En «En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entr…», la formulación que encaja según el banco de examen es «Optimizar los filtros del transceptor.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1508,7 +1508,7 @@ export default [
       "Amplificar la señal recibida."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («La etapa de detección de un receptor se emplea para:»). La opción que responde al criterio del banco es «Demodular la señal recibida.».",
+    "explain": "En «La etapa de detección de un receptor se emplea para:», la formulación que encaja según el banco de examen es «Demodular la señal recibida.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1523,7 +1523,7 @@ export default [
       "Inexistente."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos («El \"Factor de calidad, Q\" de un circuito resonante es:»). La opción que responde al criterio del banco es «La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.».",
+    "explain": "En «El \"Factor de calidad, Q\" de un circuito resonante es:», la formulación que encaja según el banco de examen es «La relación que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda.». Contrasta con el temario de componentes pasivos y activos si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1615,7 +1615,7 @@ export default [
       "La impedancia es constante con la frecuencia."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («En una antena pasiva, se puede afirmar que:»). La opción que responde al criterio del banco es «Los diagramas de radiación en transmisión y en recepción son iguales.».",
+    "explain": "En «En una antena pasiva, se puede afirmar que:», la formulación que encaja según el banco de examen es «Los diagramas de radiación en transmisión y en recepción son iguales.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1645,7 +1645,7 @@ export default [
       "Un filtro paso bajo o paso banda."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:»). La opción que responde al criterio del banco es «Un filtro paso bajo o paso banda.».",
+    "explain": "En «¿Qué se debería encontrar siempre antes de la toma de antena en un emisor?:», la formulación que encaja según el banco de examen es «Un filtro paso bajo o paso banda.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1677,7 +1677,7 @@ export default [
       "Troposfera - estratosfera - ionosfera."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:»). La opción que responde al criterio del banco es «Troposfera - estratosfera - ionosfera.».",
+    "explain": "En «De menor a mayor altura, indique el orden correcto de la capas de la atmosfera:», la formulación que encaja según el banco de examen es «Troposfera - estratosfera - ionosfera.». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1707,7 +1707,7 @@ export default [
       "Sólo hay que tenerlo en cuenta en las bandas de VHF y superiores."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La emisión de señales armónicas y espurias:»). La opción que responde al criterio del banco es «Implica la posible producción de interferencias.».",
+    "explain": "En «La emisión de señales armónicas y espurias:», la formulación que encaja según el banco de examen es «Implica la posible producción de interferencias.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1767,7 +1767,7 @@ export default [
       "Si dispone de diploma desde hace más de 15 años."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:»). La opción que responde al criterio del banco es «En ningún caso.».",
+    "explain": "En «¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:», la formulación que encaja según el banco de examen es «En ningún caso.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2745,7 +2745,7 @@ export default [
       "1= R x I x V"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre componentes pasivos y activos («Una de las expresiones de la Ley de Ohm es:»). La opción que responde al criterio del banco es «V = R X I».",
+    "explain": "En «Una de las expresiones de la Ley de Ohm es:», la formulación que encaja según el banco de examen es «V = R X I». Contrasta con el temario de componentes pasivos y activos si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2760,7 +2760,7 @@ export default [
       "Abrir y cerrar un circuito eléctrico"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un relevador o relé es un electroimán que se emplea para:»). La opción que responde al criterio del banco es «Abrir y cerrar un circuito eléctrico».",
+    "explain": "En «Un relevador o relé es un electroimán que se emplea para:», la formulación que encaja según el banco de examen es «Abrir y cerrar un circuito eléctrico». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2790,7 +2790,7 @@ export default [
       "Cesa de pasar una corriente eléctrica por la bobina"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un electroimán atrae al hierro solamente cuando:»). La opción que responde al criterio del banco es «Se hace pasar por su bobina una corriente eléctrica».",
+    "explain": "En «Un electroimán atrae al hierro solamente cuando:», la formulación que encaja según el banco de examen es «Se hace pasar por su bobina una corriente eléctrica». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2850,7 +2850,7 @@ export default [
       "La diferencia entre las frecuencias máxima y mínima que se producen al modular"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En términos generales, puede decirse que la anchura de banda de una emisión de radio es:»). La opción que responde al criterio del banco es «La diferencia entre las frecuencias máxima y mínima que se producen al modular».",
+    "explain": "En «En términos generales, puede decirse que la anchura de banda de una emisión de radio es:», la formulación que encaja según el banco de examen es «La diferencia entre las frecuencias máxima y mínima que se producen al modular». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2880,7 +2880,7 @@ export default [
       "Disminuir el calor"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En un emisor de radio, los amplificadores se emplean para:»). La opción que responde al criterio del banco es «Aumentar la potencia del emisor».",
+    "explain": "En «En un emisor de radio, los amplificadores se emplean para:», la formulación que encaja según el banco de examen es «Aumentar la potencia del emisor». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2940,7 +2940,7 @@ export default [
       "Es toda estación de aficionados destinada a ser utilizada en movimiento"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Estación movil de aficionado:»). La opción que responde al criterio del banco es «Estación que puede ser utilizada en movimiento o mientras está detenida en puntos no determinados».",
+    "explain": "En «Estación movil de aficionado:», la formulación que encaja según el banco de examen es «Estación que puede ser utilizada en movimiento o mientras está detenida en puntos no determinados». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -2970,7 +2970,7 @@ export default [
       "¿Cómo se llama su estación?"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La abreviatura QRA indica:»). La opción que responde al criterio del banco es «¿Cómo se llama su estación?».",
+    "explain": "En «La abreviatura QRA indica:», la formulación que encaja según el banco de examen es «¿Cómo se llama su estación?». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3000,7 +3000,7 @@ export default [
       "SHF"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («LA BANDA DE 430 A 440 MHZ PERTENECE A LAS ONDAS:»). La opción que responde al criterio del banco es «UHF».",
+    "explain": "En «LA BANDA DE 430 A 440 MHZ PERTENECE A LAS ONDAS:», la formulación que encaja según el banco de examen es «UHF». Contrasta con el temario de campos, ondas y parámetros λ–f–v si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3015,7 +3015,7 @@ export default [
       "QSO"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA QUE EL OPERADOR DE LA ESTACIÓN LLAMARÁ MAS TARDE?»). La opción que responde al criterio del banco es «QRX».",
+    "explain": "En «¿QUE ABREVIATURA INDICA QUE EL OPERADOR DE LA ESTACIÓN LLAMARÁ MAS TARDE?», la formulación que encaja según el banco de examen es «QRX». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3105,7 +3105,7 @@ export default [
       "Mejora la estabilidad de la frecuencia"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («LA INFLUENCIA DE UN CONDENSADOR EN SERIE EN LA BASE DE LA ANTENA ES:»). La opción que responde al criterio del banco es «Aumentar su frecuencia de resonancia».",
+    "explain": "En «LA INFLUENCIA DE UN CONDENSADOR EN SERIE EN LA BASE DE LA ANTENA ES:», la formulación que encaja según el banco de examen es «Aumentar su frecuencia de resonancia». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3120,7 +3120,7 @@ export default [
       "Haga saltar chispas en el condensador de antena"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («SE AJUSTAN LOS ELEMENTOS DE RESONANCIA DE LA ANTENA VARIANDOLOS DE MODO QUE LA CORRIENTE EN LA MISMA…»). La opción que responde al criterio del banco es «Alcance un máximo».",
+    "explain": "En «SE AJUSTAN LOS ELEMENTOS DE RESONANCIA DE LA ANTENA VARIANDOLOS DE MODO QUE LA CORRIENTE E…», la formulación que encaja según el banco de examen es «Alcance un máximo». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3135,7 +3135,7 @@ export default [
       "Modular menos profundamente"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («PARA ACORTAR LA LONGITUD DE UNA ANTENA SE PUEDE PROCEDER A:»). La opción que responde al criterio del banco es «Insertar un condensador, en serie, en la base».",
+    "explain": "En «PARA ACORTAR LA LONGITUD DE UNA ANTENA SE PUEDE PROCEDER A:», la formulación que encaja según el banco de examen es «Insertar un condensador, en serie, en la base». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3150,7 +3150,7 @@ export default [
       "Una bobina y un condensador"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («LOS ELEMENTOS VARIABLES DE QUE GENERALMENTE SE DISPONE, EN SERIE, EN LA BASE DE UNA ANTENA, PARA AJU…»). La opción que responde al criterio del banco es «Una bobina y un condensador».",
+    "explain": "En «LOS ELEMENTOS VARIABLES DE QUE GENERALMENTE SE DISPONE, EN SERIE, EN LA BASE DE UNA ANTENA…», la formulación que encaja según el banco de examen es «Una bobina y un condensador». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3345,7 +3345,7 @@ export default [
       "Mantiene constante el nivel de la señal de salida de un emisor cuando se modula en onda continua o en banda lateral única"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL CONTROL AUTOMÁTICO DE GANANCIA:»). La opción que responde al criterio del banco es «Sirve para mantener constante el nivel de salida del receptor, cuando varia la intensidad del campo recibido».",
+    "explain": "En «EL CONTROL AUTOMÁTICO DE GANANCIA:», la formulación que encaja según el banco de examen es «Sirve para mantener constante el nivel de salida del receptor, cuando varia la intensidad del campo recibido». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3360,7 +3360,7 @@ export default [
       "Para hacer una multiplicación de la frecuencia portadora"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA DETECCIÓN SIRVE PARA:»). La opción que responde al criterio del banco es «Extraer la información de la señal modulada».",
+    "explain": "En «LA DETECCIÓN SIRVE PARA:», la formulación que encaja según el banco de examen es «Extraer la información de la señal modulada». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3390,7 +3390,7 @@ export default [
       "La corriente inversa de Pico"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («SE AUMENTA EL ALCANCE DE UNA EMISORA SI SE AUMENTA:»). La opción que responde al criterio del banco es «La directividad de la antena».",
+    "explain": "En «SE AUMENTA EL ALCANCE DE UNA EMISORA SI SE AUMENTA:», la formulación que encaja según el banco de examen es «La directividad de la antena». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3405,7 +3405,7 @@ export default [
       "Invertir la polarización"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN UNA VÁLVULA ELECTRÓNICA LA FUNCIÓN DEL CÁTODO ES:»). La opción que responde al criterio del banco es «Emitir electrones».",
+    "explain": "En «EN UNA VÁLVULA ELECTRÓNICA LA FUNCIÓN DEL CÁTODO ES:», la formulación que encaja según el banco de examen es «Emitir electrones». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3480,7 +3480,7 @@ export default [
       "Reincidir en una falta leve"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («CONSTITUYE UNA FALTA GRAVE:»). La opción que responde al criterio del banco es «Reincidir en una falta leve».",
+    "explain": "En «CONSTITUYE UNA FALTA GRAVE:», la formulación que encaja según el banco de examen es «Reincidir en una falta leve». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3495,7 +3495,7 @@ export default [
       "Cuatro Nanovatios"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA POTENCIA DE LA RADIACIÓN PERTURBADORA DE LOS RECEPTORES DE UNA ESTACIÓN DE AFICIONADO, EN LAS BAN…»). La opción que responde al criterio del banco es «Cuatro Nanovatios».",
+    "explain": "En «LA POTENCIA DE LA RADIACIÓN PERTURBADORA DE LOS RECEPTORES DE UNA ESTACIÓN DE AFICIONADO, …», la formulación que encaja según el banco de examen es «Cuatro Nanovatios». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3510,7 +3510,7 @@ export default [
       "Emplear diferentes unidades de alimentación"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («AL UTILIZAR UN TRANSCEPTOR COMO EMISOR O RECEPTOR SE TIENE QUE:»). La opción que responde al criterio del banco es «Actuar un conmutador de paso de una a otra función».",
+    "explain": "En «AL UTILIZAR UN TRANSCEPTOR COMO EMISOR O RECEPTOR SE TIENE QUE:», la formulación que encaja según el banco de examen es «Actuar un conmutador de paso de una a otra función». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3525,7 +3525,7 @@ export default [
       "Variar la potencia"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN UN TRANSCEPTOR, EL CONMUTADOR DE BANDAS SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Emitir/recibir en el margen de frecuencias deseado».",
+    "explain": "En «EN UN TRANSCEPTOR, EL CONMUTADOR DE BANDAS SE UTILIZA PARA:», la formulación que encaja según el banco de examen es «Emitir/recibir en el margen de frecuencias deseado». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3540,7 +3540,7 @@ export default [
       "No ser de acero ni estar enterrado"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («EL CABLE QUE UNE LA ANTENA AL EMISOR DEBE DE:»). La opción que responde al criterio del banco es «Estar apantallado».",
+    "explain": "En «EL CABLE QUE UNE LA ANTENA AL EMISOR DEBE DE:», la formulación que encaja según el banco de examen es «Estar apantallado». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3600,7 +3600,7 @@ export default [
       "Un transistor de efecto campo"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN SHUNT INDICA:»). La opción que responde al criterio del banco es «Una resistencia en paralelo con otro elemento».",
+    "explain": "En «UN SHUNT INDICA:», la formulación que encaja según el banco de examen es «Una resistencia en paralelo con otro elemento». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3660,7 +3660,7 @@ export default [
       "No tiene propiedades magnéticas"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LAS PROPIEDADES MAGNÉTICAS DE UN ELECTROIMÁN SON:»). La opción que responde al criterio del banco es «Temporales».",
+    "explain": "En «LAS PROPIEDADES MAGNÉTICAS DE UN ELECTROIMÁN SON:», la formulación que encaja según el banco de examen es «Temporales». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3720,7 +3720,7 @@ export default [
       "La segunda frecuencia intermedia es la mitad de la primera"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («EN LOS RECEPTORES DE DOBLE CONVERSIÓN:»). La opción que responde al criterio del banco es «La primera frecuencia intermedia es mayor que la segunda».",
+    "explain": "En «EN LOS RECEPTORES DE DOBLE CONVERSIÓN:», la formulación que encaja según el banco de examen es «La primera frecuencia intermedia es mayor que la segunda». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3750,7 +3750,7 @@ export default [
       "Cuando se aplica una tensión a la placa y tierra al ánodo"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UNA VÁLVULA CONDUCE CORRIENTE:»). La opción que responde al criterio del banco es «Si se aplica una tensión positiva a la placa y negativa al cátodo».",
+    "explain": "En «UNA VÁLVULA CONDUCE CORRIENTE:», la formulación que encaja según el banco de examen es «Si se aplica una tensión positiva a la placa y negativa al cátodo». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3810,7 +3810,7 @@ export default [
       "Cuando se usan FET"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN AMPLIFICADOR PUEDE OSCILAR INDEBIDAMENTE:»). La opción que responde al criterio del banco es «Si hay un fuerte acoplamiento entre los circuitos de colector y base».",
+    "explain": "En «UN AMPLIFICADOR PUEDE OSCILAR INDEBIDAMENTE:», la formulación que encaja según el banco de examen es «Si hay un fuerte acoplamiento entre los circuitos de colector y base». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3840,7 +3840,7 @@ export default [
       "Puede haber sobremodulación pero el porcentaje se debe mantener menor del 150%"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («PARA QUE UNA ONDA MODULADA SEA LINEAL:»). La opción que responde al criterio del banco es «El porcentaje de modulación debe ser inferior al 100%».",
+    "explain": "En «PARA QUE UNA ONDA MODULADA SEA LINEAL:», la formulación que encaja según el banco de examen es «El porcentaje de modulación debe ser inferior al 100%». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3855,7 +3855,7 @@ export default [
       "QRA"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA LA INTELEGIBILIDAD DE LAS SEÑALES?»). La opción que responde al criterio del banco es «QRK».",
+    "explain": "En «¿QUE ABREVIATURA INDICA LA INTELEGIBILIDAD DE LAS SEÑALES?», la formulación que encaja según el banco de examen es «QRK». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3870,7 +3870,7 @@ export default [
       "QRN"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA QUE PERTURBAN LOS ATMOSFÉRICOS?»). La opción que responde al criterio del banco es «QRN».",
+    "explain": "En «¿QUE ABREVIATURA INDICA QUE PERTURBAN LOS ATMOSFÉRICOS?», la formulación que encaja según el banco de examen es «QRN». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3915,7 +3915,7 @@ export default [
       "Dirección General de Seguridad y Orden Público"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓ…»). La opción que responde al criterio del banco es «Dirección General de Telecomunicaciones».",
+    "explain": "En «PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA A…», la formulación que encaja según el banco de examen es «Dirección General de Telecomunicaciones». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3930,7 +3930,7 @@ export default [
       "Estación fija/portable"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («TODA ESTACIÓN DE AFICIONADO DESTINADA A SER UTILIZADA EN UN VEHICULO EN MOVIMIENTO O MIENTRAS ESTA D…»). La opción que responde al criterio del banco es «Estación móvil».",
+    "explain": "En «TODA ESTACIÓN DE AFICIONADO DESTINADA A SER UTILIZADA EN UN VEHICULO EN MOVIMIENTO O MIENT…», la formulación que encaja según el banco de examen es «Estación móvil». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3945,7 +3945,7 @@ export default [
       "2 años"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL PLAZO DE VALIDEZ DE LA AUTORIZACIÓN PARA QUE UN RADIOAFICIONADO PROCEDA AL MONTAJE DE SU ESTACIÓN…»). La opción que responde al criterio del banco es «3 meses».",
+    "explain": "En «EL PLAZO DE VALIDEZ DE LA AUTORIZACIÓN PARA QUE UN RADIOAFICIONADO PROCEDA AL MONTAJE DE S…», la formulación que encaja según el banco de examen es «3 meses». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3960,7 +3960,7 @@ export default [
       "Un servicio público de Protección Civil"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL SERVICIO DE RADIOAFICIONADOS ES:»). La opción que responde al criterio del banco es «Un servicio de instrucción individual, de intercomunicación y de estudios de Radiotecnia, efectuado por personas debidamente autorizadas, con carácter personal y sin fines de lucro».",
+    "explain": "En «EL SERVICIO DE RADIOAFICIONADOS ES:», la formulación que encaja según el banco de examen es «Un servicio de instrucción individual, de intercomunicación y de estudios de Radiotecnia, efectuado por personas debidamente autorizadas, con carácter personal y sin fines de lucro». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4005,7 +4005,7 @@ export default [
       "P3D"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («LA CLASE DE EMISIÓN EN TELEFONÍA, MODULACIÓN DE FRECUENCIA (O FASE) SE INDICA POR EL SÍMBOLO:»). La opción que responde al criterio del banco es «F3J».",
+    "explain": "En «LA CLASE DE EMISIÓN EN TELEFONÍA, MODULACIÓN DE FRECUENCIA (O FASE) SE INDICA POR EL SÍMBO…», la formulación que encaja según el banco de examen es «F3J». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4020,7 +4020,7 @@ export default [
       "LSB"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («PARA EMITIR EN FONIA, BANDA LATERAL ÚNICA INFERIOR, SITUAREMOS EL MANDO DE \"MODO DE EMISIÓN\" EN LA P…»). La opción que responde al criterio del banco es «LSB».",
+    "explain": "En «PARA EMITIR EN FONIA, BANDA LATERAL ÚNICA INFERIOR, SITUAREMOS EL MANDO DE \"MODO DE EMISIÓ…», la formulación que encaja según el banco de examen es «LSB». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4035,7 +4035,7 @@ export default [
       "Control de tono"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («SI SE QUIERE CORTAR LA SALIDA DEL RECEPTOR EN AUSENCIA DE SEÑAL HABRÁ DE ACTUARSE SOBRE EL MANDO:»). La opción que responde al criterio del banco es «Silenciador».",
+    "explain": "En «SI SE QUIERE CORTAR LA SALIDA DEL RECEPTOR EN AUSENCIA DE SEÑAL HABRÁ DE ACTUARSE SOBRE EL…», la formulación que encaja según el banco de examen es «Silenciador». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4050,7 +4050,7 @@ export default [
       "Control Automático de Ganancia"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («SI EN UN RECEPTOR SE OUlERE DISMINUIR LA SEÑAL DE ENTRADA, ACTUAREMOS SOBRE EL MANDO DE:»). La opción que responde al criterio del banco es «Volumen de radiofrecuencia».",
+    "explain": "En «SI EN UN RECEPTOR SE OUlERE DISMINUIR LA SEÑAL DE ENTRADA, ACTUAREMOS SOBRE EL MANDO DE:», la formulación que encaja según el banco de examen es «Volumen de radiofrecuencia». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4065,7 +4065,7 @@ export default [
       "Cambiar de emisión a recepción o viceversa"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL CONMUTADOR SENDREC. SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Cambiar de emisión a recepción o viceversa».",
+    "explain": "En «EL CONMUTADOR SENDREC. SE UTILIZA PARA:», la formulación que encaja según el banco de examen es «Cambiar de emisión a recepción o viceversa». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4080,7 +4080,7 @@ export default [
       "Suprimir señales del canal adyacente"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL MANDO NB EN UN TRANSCEPTOR, SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Suprimir ruido de impulsos».",
+    "explain": "En «EL MANDO NB EN UN TRANSCEPTOR, SE UTILIZA PARA:», la formulación que encaja según el banco de examen es «Suprimir ruido de impulsos». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4110,7 +4110,7 @@ export default [
       "Su impedancia"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («DEL NUMERO DE ESPIRAS QUE TIENE UNA ANTENA HELICOIDAL DEPENDE:»). La opción que responde al criterio del banco es «Su ganancia».",
+    "explain": "En «DEL NUMERO DE ESPIRAS QUE TIENE UNA ANTENA HELICOIDAL DEPENDE:», la formulación que encaja según el banco de examen es «Su ganancia». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4140,7 +4140,7 @@ export default [
       "Porcentaje de modulación"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS MIDE:»). La opción que responde al criterio del banco es «Intensidad de la señal recibida».",
+    "explain": "En «EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS MIDE:», la formulación que encaja según el banco de examen es «Intensidad de la señal recibida». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4155,7 +4155,7 @@ export default [
       "Reponer el fusible de entrada"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA MISIÓN DEL CONMUTADOR \"POWER ON/OFF\" EN UN TRANSCEPTOR, ES:»). La opción que responde al criterio del banco es «Encender y pagar el Equipo».",
+    "explain": "En «LA MISIÓN DEL CONMUTADOR \"POWER ON/OFF\" EN UN TRANSCEPTOR, ES:», la formulación que encaja según el banco de examen es «Encender y pagar el Equipo». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4170,7 +4170,7 @@ export default [
       "Un dispositivo electroquímico"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una pila es:»). La opción que responde al criterio del banco es «Un dispositivo electroquímico».",
+    "explain": "En «Una pila es:», la formulación que encaja según el banco de examen es «Un dispositivo electroquímico». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4185,7 +4185,7 @@ export default [
       "Cambia de polaridad"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se dice que una pila se ha polarizado cuando:»). La opción que responde al criterio del banco es «Tiene dos polos».",
+    "explain": "En «Se dice que una pila se ha polarizado cuando:», la formulación que encaja según el banco de examen es «Tiene dos polos». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4215,7 +4215,7 @@ export default [
       "Que el acumulador no se descarga"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La diferencia entre un acumulador y una pila es:»). La opción que responde al criterio del banco es «Que el acumulador se carga».",
+    "explain": "En «La diferencia entre un acumulador y una pila es:», la formulación que encaja según el banco de examen es «Que el acumulador se carga». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4290,7 +4290,7 @@ export default [
       "Telefonía, dos bandas laterales independientes"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («LA ABREVIATURA F3 INDICA:»). La opción que responde al criterio del banco es «Telefonía, modulación de frecuencia».",
+    "explain": "En «LA ABREVIATURA F3 INDICA:», la formulación que encaja según el banco de examen es «Telefonía, modulación de frecuencia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4305,7 +4305,7 @@ export default [
       "5 % e la potencia media total radiada"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («LAS FRECUENCIAS LIMITES PARA UNA DETERMINADA ANCHURA DE BANDA SON AQUELLAS A PARTIR DE LAS CUALES SE…»). La opción que responde al criterio del banco es «0,5 % de la potencia media total radiada».",
+    "explain": "En «LAS FRECUENCIAS LIMITES PARA UNA DETERMINADA ANCHURA DE BANDA SON AQUELLAS A PARTIR DE LAS…», la formulación que encaja según el banco de examen es «0,5 % de la potencia media total radiada». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4335,7 +4335,7 @@ export default [
       "Circuitos L-C paralelos en la línea de alimentación de antena"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («PARA ALARGAR Y ACORTAR LA LONGITUD DE UNA ANTENA PARA USARLA COMO MULTIBANDA SE CONECTAN:»). La opción que responde al criterio del banco es «Circuitos L-C serie a determinadas distancias del centro».",
+    "explain": "En «PARA ALARGAR Y ACORTAR LA LONGITUD DE UNA ANTENA PARA USARLA COMO MULTIBANDA SE CONECTAN:», la formulación que encaja según el banco de examen es «Circuitos L-C serie a determinadas distancias del centro». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4425,7 +4425,7 @@ export default [
       "Su conexión a la etapa RF o de FI"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («EL CIRCUITO DE CONTROL AUTOMATICO DE GANANCIA TIENE UN MANDO DE GOBIERNO QUE AFECTA A:»). La opción que responde al criterio del banco es «Su tiempo de respuesta».",
+    "explain": "En «EL CIRCUITO DE CONTROL AUTOMATICO DE GANANCIA TIENE UN MANDO DE GOBIERNO QUE AFECTA A:», la formulación que encaja según el banco de examen es «Su tiempo de respuesta». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4485,7 +4485,7 @@ export default [
       "Comprobar la disipación de placa de una válvula"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («El decibelio es una unidad de medida utilizada para:»). La opción que responde al criterio del banco es «La comparación de niveles de potencia eléctrica».",
+    "explain": "En «El decibelio es una unidad de medida utilizada para:», la formulación que encaja según el banco de examen es «La comparación de niveles de potencia eléctrica». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4500,7 +4500,7 @@ export default [
       "Menor intensidad"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Las pilas se acoplan en serie para obtener:»). La opción que responde al criterio del banco es «Mayor tensión».",
+    "explain": "En «Las pilas se acoplan en serie para obtener:», la formulación que encaja según el banco de examen es «Mayor tensión». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4515,7 +4515,7 @@ export default [
       "Cuatro diodos"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Un rectificador en puente, de onda completa tiene:»). La opción que responde al criterio del banco es «Cuatro diodos».",
+    "explain": "En «Un rectificador en puente, de onda completa tiene:», la formulación que encaja según el banco de examen es «Cuatro diodos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4560,7 +4560,7 @@ export default [
       "Velocidad de propagación"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Una característica de la corriente alterna es su:»). La opción que responde al criterio del banco es «Frecuencia».",
+    "explain": "En «Una característica de la corriente alterna es su:», la formulación que encaja según el banco de examen es «Frecuencia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4575,7 +4575,7 @@ export default [
       "Poco fiables"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Las reactancias inductiva y capacitiva, tienen propiedades:»). La opción que responde al criterio del banco es «Opuestas».",
+    "explain": "En «Las reactancias inductiva y capacitiva, tienen propiedades:», la formulación que encaja según el banco de examen es «Opuestas». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4590,7 +4590,7 @@ export default [
       "Un diodo zener"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Para estabilizar la tensión de salida de una fuente de alimentación se emplea:»). La opción que responde al criterio del banco es «Un diodo zener».",
+    "explain": "En «Para estabilizar la tensión de salida de una fuente de alimentación se emplea:», la formulación que encaja según el banco de examen es «Un diodo zener». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4620,7 +4620,7 @@ export default [
       "Los amplificadores para evitar que oscilen"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La neutralización se utiliza en:»). La opción que responde al criterio del banco es «Los amplificadores para evitar que oscilen».",
+    "explain": "En «La neutralización se utiliza en:», la formulación que encaja según el banco de examen es «Los amplificadores para evitar que oscilen». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4650,7 +4650,7 @@ export default [
       "Disminuir las interferencias"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En las emisiones radioelétricas la modulación sirve para:»). La opción que responde al criterio del banco es «Llevar la información».",
+    "explain": "En «En las emisiones radioelétricas la modulación sirve para:», la formulación que encaja según el banco de examen es «Llevar la información». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4710,7 +4710,7 @@ export default [
       "Las descargas eléctricas atmosféricas"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («El ruido estático es el producido por:»). La opción que responde al criterio del banco es «Las descargas eléctricas atmosféricas».",
+    "explain": "En «El ruido estático es el producido por:», la formulación que encaja según el banco de examen es «Las descargas eléctricas atmosféricas». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4785,7 +4785,7 @@ export default [
       "QRM"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué abreviatura indica que las señales recibidas estan afectadas por desvanecimientos (fading)?»). La opción que responde al criterio del banco es «QSB».",
+    "explain": "En «¿Qué abreviatura indica que las señales recibidas estan afectadas por desvanecimientos (fa…», la formulación que encaja según el banco de examen es «QSB». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4800,7 +4800,7 @@ export default [
       "QRS"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué abreviatura indica que se transmita más lentamente?»). La opción que responde al criterio del banco es «QRS».",
+    "explain": "En «¿Qué abreviatura indica que se transmita más lentamente?», la formulación que encaja según el banco de examen es «QRS». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4815,7 +4815,7 @@ export default [
       "QRX"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Mediante qué abreviatura indicaría que está Vd. ocupado?»). La opción que responde al criterio del banco es «QRL».",
+    "explain": "En «¿Mediante qué abreviatura indicaría que está Vd. ocupado?», la formulación que encaja según el banco de examen es «QRL». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4920,7 +4920,7 @@ export default [
       "250 watios"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cual es la potencia máxima de emisión, de una estación de radioaficionado, en la banda de frecuenci…»). La opción que responde al criterio del banco es «250 watios».",
+    "explain": "En «¿Cual es la potencia máxima de emisión, de una estación de radioaficionado, en la banda de…», la formulación que encaja según el banco de examen es «250 watios». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4980,7 +4980,7 @@ export default [
       "Bloqueando sin conectar la antena"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Cuando sintonizamos un emisor, es conveniente hacerlo:»). La opción que responde al criterio del banco es «A potencia reducida».",
+    "explain": "En «Cuando sintonizamos un emisor, es conveniente hacerlo:», la formulación que encaja según el banco de examen es «A potencia reducida». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5025,7 +5025,7 @@ export default [
       "Se obtiene una directividad mayor"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Cuando se sintoniza un emisor utilizando una antena artificial:»). La opción que responde al criterio del banco es «La mayor parte de la energía procedente del emisor se disipa en forma de calor».",
+    "explain": "En «Cuando se sintoniza un emisor utilizando una antena artificial:», la formulación que encaja según el banco de examen es «La mayor parte de la energía procedente del emisor se disipa en forma de calor». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5085,7 +5085,7 @@ export default [
       "Variar la frecuencia"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En emisión el mando \"control de carga\" \"LOAD KNOB\" sirve para:»). La opción que responde al criterio del banco es «Ajustar la sección final a la antena».",
+    "explain": "En «En emisión el mando \"control de carga\" \"LOAD KNOB\" sirve para:», la formulación que encaja según el banco de examen es «Ajustar la sección final a la antena». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5220,7 +5220,7 @@ export default [
       "Es una antena para las ondas decamétricas solamente"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («LA ANTENA DE MEDIA ONDA:»). La opción que responde al criterio del banco es «Es omnidireccional».",
+    "explain": "En «LA ANTENA DE MEDIA ONDA:», la formulación que encaja según el banco de examen es «Es omnidireccional». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5250,7 +5250,7 @@ export default [
       "R.L.C."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («UN ATENUADOR PARA PROTEGER CONTRA SOBRECARGAS LA ENTRADA DE UN RECEPTOR ESTARA FORMADO POR:»). La opción que responde al criterio del banco es «R».",
+    "explain": "En «UN ATENUADOR PARA PROTEGER CONTRA SOBRECARGAS LA ENTRADA DE UN RECEPTOR ESTARA FORMADO POR…», la formulación que encaja según el banco de examen es «R». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5265,7 +5265,7 @@ export default [
       "Amplificador de R.L."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («SI QUISIERA UTILIZAR UN RECEPTOR DE DECAMETRICAS PARA RECIBIR SEÑALES DE 2 METROS»). La opción que responde al criterio del banco es «Un conversor».",
+    "explain": "En «SI QUISIERA UTILIZAR UN RECEPTOR DE DECAMETRICAS PARA RECIBIR SEÑALES DE 2 METROS», la formulación que encaja según el banco de examen es «Un conversor». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5295,7 +5295,7 @@ export default [
       "Para conectar con el sistema radiante"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:»). La opción que responde al criterio del banco es «Antes de etapas en las que se necesitan potencias grandes».",
+    "explain": "En «LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:», la formulación que encaja según el banco de examen es «Antes de etapas en las que se necesitan potencias grandes». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5310,7 +5310,7 @@ export default [
       "Producen una amplificación lineal"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («CUAL DE ESTAS PROPIEDADES CARACTERIZA A UN AMPLIFICADOR CLASE A:»). La opción que responde al criterio del banco es «Producen una amplificación lineal».",
+    "explain": "En «CUAL DE ESTAS PROPIEDADES CARACTERIZA A UN AMPLIFICADOR CLASE A:», la formulación que encaja según el banco de examen es «Producen una amplificación lineal». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5355,7 +5355,7 @@ export default [
       "QSJ"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué abreviatura indica que el operador está ocupado?»). La opción que responde al criterio del banco es «QRL».",
+    "explain": "En «¿Qué abreviatura indica que el operador está ocupado?», la formulación que encaja según el banco de examen es «QRL». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5370,7 +5370,7 @@ export default [
       "QSV"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («¿Que abreviatura indica que la estación receptora sufre interferencias por atmosféricos?»). La opción que responde al criterio del banco es «QRN».",
+    "explain": "En «¿Que abreviatura indica que la estación receptora sufre interferencias por atmosféricos?», la formulación que encaja según el banco de examen es «QRN». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5415,7 +5415,7 @@ export default [
       "Se puede efectuar"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Emitir música es una falta o se puede efectuar?»). La opción que responde al criterio del banco es «Muy grave».",
+    "explain": "En «¿Emitir música es una falta o se puede efectuar?», la formulación que encaja según el banco de examen es «Muy grave». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5445,7 +5445,7 @@ export default [
       "Cuando lo deseen"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Durante sus emisiones, las estaciones de aficionados:»). La opción que responde al criterio del banco es «Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión».",
+    "explain": "En «Durante sus emisiones, las estaciones de aficionados:», la formulación que encaja según el banco de examen es «Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5475,7 +5475,7 @@ export default [
       "Sí, genéricamente con la obligación de informarlo a la DGTel."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:»). La opción que responde al criterio del banco es «Sí, genéricamente con la obligación de informarlo a la DGTel.».",
+    "explain": "En «Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:», la formulación que encaja según el banco de examen es «Sí, genéricamente con la obligación de informarlo a la DGTel.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5490,7 +5490,7 @@ export default [
       "18 años"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué edad mínima es necesaria para obtener una licencia de estación de aficionado?»). La opción que responde al criterio del banco es «15 años».",
+    "explain": "En «¿Qué edad mínima es necesaria para obtener una licencia de estación de aficionado?», la formulación que encaja según el banco de examen es «15 años». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5535,7 +5535,7 @@ export default [
       "El intercambio de mensajes por líneas aéreas"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El termino Radiocomunicación indica:»). La opción que responde al criterio del banco es «Toda Telecomunicación realizada por medio de ondas radioeléctricas».",
+    "explain": "En «El termino Radiocomunicación indica:», la formulación que encaja según el banco de examen es «Toda Telecomunicación realizada por medio de ondas radioeléctricas». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5550,7 +5550,7 @@ export default [
       "Security"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La señal radiotelefónica de seguridad está dada por la palabra:»). La opción que responde al criterio del banco es «Securité».",
+    "explain": "En «La señal radiotelefónica de seguridad está dada por la palabra:», la formulación que encaja según el banco de examen es «Securité». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5565,7 +5565,7 @@ export default [
       "En la frecuencia de W W V"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El conmutador de banda tendrá que estar en la posición correspondiente:»). La opción que responde al criterio del banco es «La banda deseada».",
+    "explain": "En «El conmutador de banda tendrá que estar en la posición correspondiente:», la formulación que encaja según el banco de examen es «La banda deseada». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5580,7 +5580,7 @@ export default [
       "LSB"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Para emitir en telegrafía, el conmutador \"Modo de emisión\" estará en la posición:»). La opción que responde al criterio del banco es «CW».",
+    "explain": "En «Para emitir en telegrafía, el conmutador \"Modo de emisión\" estará en la posición:», la formulación que encaja según el banco de examen es «CW». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5625,7 +5625,7 @@ export default [
       "Depende la conexión de la A.T. de que sea de caldeo directo o indirecto"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En caso de que el paso final de un emisor sea a válvulas:»). La opción que responde al criterio del banco es «Es necesario un tiempo de caldeo de filamento».",
+    "explain": "En «En caso de que el paso final de un emisor sea a válvulas:», la formulación que encaja según el banco de examen es «Es necesario un tiempo de caldeo de filamento». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5655,7 +5655,7 @@ export default [
       "Se conecta el conmutador transmisor-receptor del micrófono"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Con el mando \"VOX\", de un transceptor, conectado:»). La opción que responde al criterio del banco es «Se conmuta automáticamente recepción-transmisión».",
+    "explain": "En «Con el mando \"VOX\", de un transceptor, conectado:», la formulación que encaja según el banco de examen es «Se conmuta automáticamente recepción-transmisión». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5775,7 +5775,7 @@ export default [
       "A una impureza polarizada"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («De forma convencional se llama \"hueco\" en un semiconductor»). La opción que responde al criterio del banco es «A un portador de carga positiva».",
+    "explain": "En «De forma convencional se llama \"hueco\" en un semiconductor», la formulación que encaja según el banco de examen es «A un portador de carga positiva». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5805,7 +5805,7 @@ export default [
       "Mejora la modulación"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Cuando se sobremodula:»). La opción que responde al criterio del banco es «Se distorsiona la modulación».",
+    "explain": "En «Cuando se sobremodula:», la formulación que encaja según el banco de examen es «Se distorsiona la modulación». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5880,7 +5880,7 @@ export default [
       "Energía sonora en mecánica"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Los micrófonos son transductores que convierten:»). La opción que responde al criterio del banco es «Energía sonora en eléctrica».",
+    "explain": "En «Los micrófonos son transductores que convierten:», la formulación que encaja según el banco de examen es «Energía sonora en eléctrica». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5895,7 +5895,7 @@ export default [
       "Clase \"B/C\""
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando la señal de salida es una exacta reproducción de la señal de entrada, el amplificador trabaja…»). La opción que responde al criterio del banco es «Clase \"A\"».",
+    "explain": "En «Cuando la señal de salida es una exacta reproducción de la señal de entrada, el amplificad…», la formulación que encaja según el banco de examen es «Clase \"A\"». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5910,7 +5910,7 @@ export default [
       "Ondas milimétricas"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las reflexiones lunares se hacen principalmente en:»). La opción que responde al criterio del banco es «Ondas métricas».",
+    "explain": "En «Las reflexiones lunares se hacen principalmente en:», la formulación que encaja según el banco de examen es «Ondas métricas». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5925,7 +5925,7 @@ export default [
       "Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («El circuito de acoplamiento entre etapas amplificadoras:»). La opción que responde al criterio del banco es «Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa».",
+    "explain": "En «El circuito de acoplamiento entre etapas amplificadoras:», la formulación que encaja según el banco de examen es «Permite el paso de las señales e independiza las polarizaciones de la primera y segunda etapa». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5955,7 +5955,7 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Cuándo se añade la mención /P al indicador de llamada?»). La opción que responde al criterio del banco es «Cuando se opera en grafía una estación Fija/Portable».",
+    "explain": "En «¿Cuándo se añade la mención /P al indicador de llamada?», la formulación que encaja según el banco de examen es «Cuando se opera en grafía una estación Fija/Portable». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5970,7 +5970,7 @@ export default [
       "Sí esta permitido"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿Se puede conectar una estación de aficionado con otras instalaciones de radiocomunicación?»). La opción que responde al criterio del banco es «Sí esta permitido».",
+    "explain": "En «¿Se puede conectar una estación de aficionado con otras instalaciones de radiocomunicación…», la formulación que encaja según el banco de examen es «Sí esta permitido». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5985,7 +5985,7 @@ export default [
       "La ganancia en radiofrecuencia del receptor"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Variando el mando \"RF GAIN\" en un receptor, actuamos sobre:»). La opción que responde al criterio del banco es «La ganancia en radiofrecuencia del receptor».",
+    "explain": "En «Variando el mando \"RF GAIN\" en un receptor, actuamos sobre:», la formulación que encaja según el banco de examen es «La ganancia en radiofrecuencia del receptor». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6000,7 +6000,7 @@ export default [
       "Eliminar los atmosféricos"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El mando \"RIT\" de un transceptor permite:»). La opción que responde al criterio del banco es «Ajustar la frecuencia de recepción sin variar la de emisión».",
+    "explain": "En «El mando \"RIT\" de un transceptor permite:», la formulación que encaja según el banco de examen es «Ajustar la frecuencia de recepción sin variar la de emisión». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6015,7 +6015,7 @@ export default [
       "Modificar la sintonía"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El conmutador \"SEND-REC\" se utiliza para»). La opción que responde al criterio del banco es «Cambiar la emisión a recepción y viceversa».",
+    "explain": "En «El conmutador \"SEND-REC\" se utiliza para», la formulación que encaja según el banco de examen es «Cambiar la emisión a recepción y viceversa». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6030,7 +6030,7 @@ export default [
       "Aumentando la sensibilidad en recepción"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Cuando en un receptor actuamos el conmutador de canales estamos:»). La opción que responde al criterio del banco es «Variando la sintonía».",
+    "explain": "En «Cuando en un receptor actuamos el conmutador de canales estamos:», la formulación que encaja según el banco de examen es «Variando la sintonía». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6075,7 +6075,7 @@ export default [
       "Las cantidades de huecos y electrones se equilibran"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («UN SEMICONDUCTOR TIPO P ES AQUEL EN EL QUE:»). La opción que responde al criterio del banco es «La cantidad de huecos es mayor que la de electrones».",
+    "explain": "En «UN SEMICONDUCTOR TIPO P ES AQUEL EN EL QUE:», la formulación que encaja según el banco de examen es «La cantidad de huecos es mayor que la de electrones». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6150,7 +6150,7 @@ export default [
       "La intensidad está adelantada con respecto al voltaje"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre componentes pasivos y activos («EN UN CIRCUITO RESISTIVO PURO RECORRIDO POR UNA CORRIENTE ALTERNA:»). La opción que responde al criterio del banco es «Tensión e intensidad están en Fase».",
+    "explain": "En «EN UN CIRCUITO RESISTIVO PURO RECORRIDO POR UNA CORRIENTE ALTERNA:», la formulación que encaja según el banco de examen es «Tensión e intensidad están en Fase». Contrasta con el temario de componentes pasivos y activos si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6270,7 +6270,7 @@ export default [
       "Porque son las más efectivas para hacer las ruedas de aficionados"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre antenas, líneas y propagación («UNA ANTENA HELICOIDAL SE USA:»). La opción que responde al criterio del banco es «Para enlaces por satélites».",
+    "explain": "En «UNA ANTENA HELICOIDAL SE USA:», la formulación que encaja según el banco de examen es «Para enlaces por satélites». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6315,7 +6315,7 @@ export default [
       "Del oscilador local"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA ESTABILIDAD DE UN RECEPTOR ES FUNCION:»). La opción que responde al criterio del banco es «Del oscilador local».",
+    "explain": "En «LA ESTABILIDAD DE UN RECEPTOR ES FUNCION:», la formulación que encaja según el banco de examen es «Del oscilador local». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6330,7 +6330,7 @@ export default [
       "Ondas milimétricas"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA GAMA DE FRECUENCIÁS COMPRENDIDA ENTRE 300 Y 3.000 MHz CORRESPONDE A LAS:»). La opción que responde al criterio del banco es «Ondas decimétricas».",
+    "explain": "En «LA GAMA DE FRECUENCIÁS COMPRENDIDA ENTRE 300 Y 3.000 MHz CORRESPONDE A LAS:», la formulación que encaja según el banco de examen es «Ondas decimétricas». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6345,7 +6345,7 @@ export default [
       "SHF"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («LAS ONDAS CENTIMETRICAS SE DESIGNAN POR ABREVIATURA:»). La opción que responde al criterio del banco es «SHF».",
+    "explain": "En «LAS ONDAS CENTIMETRICAS SE DESIGNAN POR ABREVIATURA:», la formulación que encaja según el banco de examen es «SHF». Contrasta con el temario de campos, ondas y parámetros λ–f–v si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6360,7 +6360,7 @@ export default [
       "QRN"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA: ¿SUFRE USTED INTERFERENCIA?»). La opción que responde al criterio del banco es «QRM».",
+    "explain": "En «QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA: ¿SUFRE USTED INTERFERENCIA?», la formulación que encaja según el banco de examen es «QRM». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6435,7 +6435,7 @@ export default [
       "Emisiones de música, anuncios o propaganda"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL TRAFICO ENTRE ESTACIONES DE AFICIONADOS ESTA AUTORIZADO PARA:»). La opción que responde al criterio del banco es «Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal».",
+    "explain": "En «EL TRAFICO ENTRE ESTACIONES DE AFICIONADOS ESTA AUTORIZADO PARA:», la formulación que encaja según el banco de examen es «Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6465,7 +6465,7 @@ export default [
       "QRA"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA QUE SON INTELIGIBLES LAS SEÑALES?»). La opción que responde al criterio del banco es «QRK».",
+    "explain": "En «¿QUE ABREVIATURA INDICA QUE SON INTELIGIBLES LAS SEÑALES?», la formulación que encaja según el banco de examen es «QRK». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6480,7 +6480,7 @@ export default [
       "Grave"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EFECTUAR RADIOCOMUNICACIONES CON OTRA ESTACIÓN DE LA QUE SE ES TITULAR, ES FALTA:»). La opción que responde al criterio del banco es «Ninguna».",
+    "explain": "En «EFECTUAR RADIOCOMUNICACIONES CON OTRA ESTACIÓN DE LA QUE SE ES TITULAR, ES FALTA:», la formulación que encaja según el banco de examen es «Ninguna». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6495,7 +6495,7 @@ export default [
       "Según los casos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («NO ABONAR LOS CANONES y TASAS CORRESPONDIETES, ES FALTA:»). La opción que responde al criterio del banco es «Grave».",
+    "explain": "En «NO ABONAR LOS CANONES y TASAS CORRESPONDIETES, ES FALTA:», la formulación que encaja según el banco de examen es «Grave». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6510,7 +6510,7 @@ export default [
       "No se tomará ninguna medida hasta la llegada de los bomberos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN CASO DE INCENDIO PRODUCIDO POR ELECTRICIDAD:»). La opción que responde al criterio del banco es «Habrá que utiliza \"espuma\" en vez de agua».",
+    "explain": "En «EN CASO DE INCENDIO PRODUCIDO POR ELECTRICIDAD:», la formulación que encaja según el banco de examen es «Habrá que utiliza \"espuma\" en vez de agua». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6555,7 +6555,7 @@ export default [
       "La tensión del paso modulador"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN RECEPCION EL \"S-METER\" (MEDIDOR-S) MIDE:»). La opción que responde al criterio del banco es «La intensidad de la señal recibida».",
+    "explain": "En «EN RECEPCION EL \"S-METER\" (MEDIDOR-S) MIDE:», la formulación que encaja según el banco de examen es «La intensidad de la señal recibida». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6570,7 +6570,7 @@ export default [
       "Se amplifican las señales de baja frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL MANDO VOX:»). La opción que responde al criterio del banco es «Conmuta automáticamente transmisión-recepción».",
+    "explain": "En «EL MANDO VOX:», la formulación que encaja según el banco de examen es «Conmuta automáticamente transmisión-recepción». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6600,7 +6600,7 @@ export default [
       "La modulación es inferior al 100 por ciento"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («ESTAMOS SOBREMODULANDO CUANDO:»). La opción que responde al criterio del banco es «La modulación es superior al 100 por ciento».",
+    "explain": "En «ESTAMOS SOBREMODULANDO CUANDO:», la formulación que encaja según el banco de examen es «La modulación es superior al 100 por ciento». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6720,7 +6720,7 @@ export default [
       "Las oscilaciones presentes en uno de ellos se transmiten al otro"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («SE DICE QUE DOS CIRCUITOS ESTAN ACOPLADOS CUANDO:»). La opción que responde al criterio del banco es «Las oscilaciones presentes en uno de ellos se transmiten al otro».",
+    "explain": "En «SE DICE QUE DOS CIRCUITOS ESTAN ACOPLADOS CUANDO:», la formulación que encaja según el banco de examen es «Las oscilaciones presentes en uno de ellos se transmiten al otro». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6735,7 +6735,7 @@ export default [
       "Las superiores a 430 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («EN CONDICIONES NORMALES PARA UNA MISMA POTENCIA RADIADA, LAS ONDAS QUE LLEGARIAN CON MAS INTENSIDAD …»). La opción que responde al criterio del banco es «Las de 144 MHz».",
+    "explain": "En «EN CONDICIONES NORMALES PARA UNA MISMA POTENCIA RADIADA, LAS ONDAS QUE LLEGARIAN CON MAS I…», la formulación que encaja según el banco de examen es «Las de 144 MHz». Contrasta con el temario de campos, ondas y parámetros λ–f–v si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6810,7 +6810,7 @@ export default [
       "Las piezas eléctricas"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL EFECTO PIEZOELECTRICO SE PRODUCE EN:»). La opción que responde al criterio del banco es «Los cristales de cuarzo».",
+    "explain": "En «EL EFECTO PIEZOELECTRICO SE PRODUCE EN:», la formulación que encaja según el banco de examen es «Los cristales de cuarzo». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6840,7 +6840,7 @@ export default [
       "Es una intermodulación sui generis"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («LA MODULACION DE banda lateral única:»). La opción que responde al criterio del banco es «Es una variante de la modulación de amplitud».",
+    "explain": "En «LA MODULACION DE banda lateral única:», la formulación que encaja según el banco de examen es «Es una variante de la modulación de amplitud». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6930,7 +6930,7 @@ export default [
       "QRA"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿QUE ABREVIATURA INDICA LA INTELIGIBILIDAD DE LAS SEÑALES?»). La opción que responde al criterio del banco es «QRK».",
+    "explain": "En «¿QUE ABREVIATURA INDICA LA INTELIGIBILIDAD DE LAS SEÑALES?», la formulación que encaja según el banco de examen es «QRK». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6975,7 +6975,7 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿CUANDO SE AÑADE LA MENCIÓN PORTABLE AL INDICATIVA DE LLAMADA?»). La opción que responde al criterio del banco es «Cuando se opera una estación Fija/Portable».",
+    "explain": "En «¿CUANDO SE AÑADE LA MENCIÓN PORTABLE AL INDICATIVA DE LLAMADA?», la formulación que encaja según el banco de examen es «Cuando se opera una estación Fija/Portable». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6990,7 +6990,7 @@ export default [
       "Se autoriza solamente para concursos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿SE PUEDE UTILIZAR UNA ESTACION MOVIL EN DIFERENTES VEHICULOS?»). La opción que responde al criterio del banco es «Si, cuando las matriculas de los vehículos estén consignadas en la licencia».",
+    "explain": "En «¿SE PUEDE UTILIZAR UNA ESTACION MOVIL EN DIFERENTES VEHICULOS?», la formulación que encaja según el banco de examen es «Si, cuando las matriculas de los vehículos estén consignadas en la licencia». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7005,7 +7005,7 @@ export default [
       "Se autoriza para concursos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («LA COMUNICACION ENTRE DISTINTAS ESTACIONES DE UN MISMO TITULAR:»). La opción que responde al criterio del banco es «Se puede efectuar entre titular y segundo operador».",
+    "explain": "En «LA COMUNICACION ENTRE DISTINTAS ESTACIONES DE UN MISMO TITULAR:», la formulación que encaja según el banco de examen es «Se puede efectuar entre titular y segundo operador». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7035,7 +7035,7 @@ export default [
       "F2A"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («LA TELEFONIA POR MODULACION DE FRECUENCIA SE CONOCE POR EL SIMBOLO:»). La opción que responde al criterio del banco es «F3E».",
+    "explain": "En «LA TELEFONIA POR MODULACION DE FRECUENCIA SE CONOCE POR EL SIMBOLO:», la formulación que encaja según el banco de examen es «F3E». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7050,7 +7050,7 @@ export default [
       "Deberá estar dispuesta para trabajar en clase KZA"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («ENTRE OTRAS CONDICIONES LA ANTENA O ANTENAS DE UN TRANSCEPTOR:»). La opción que responde al criterio del banco es «Dispondrá de los necesarios filtros supresores de armónicos (paso bajo)».",
+    "explain": "En «ENTRE OTRAS CONDICIONES LA ANTENA O ANTENAS DE UN TRANSCEPTOR:», la formulación que encaja según el banco de examen es «Dispondrá de los necesarios filtros supresores de armónicos (paso bajo)». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7110,7 +7110,7 @@ export default [
       "El silenciador"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («PARA EVITAR SOBREMODULACIÓN, TENDRIAMOS QUE ACTUAR SOBRE:»). La opción que responde al criterio del banco es «El nivel de la señal de baja frecuencia».",
+    "explain": "En «PARA EVITAR SOBREMODULACIÓN, TENDRIAMOS QUE ACTUAR SOBRE:», la formulación que encaja según el banco de examen es «El nivel de la señal de baja frecuencia». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7125,7 +7125,7 @@ export default [
       "Amplificar las señales de baja Frecuencia"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EN UN TRANSCEPTOR, EL MANDO VOX SE UTILIZA PARA:»). La opción que responde al criterio del banco es «Conmutar automáticamente transmisión-recepción».",
+    "explain": "En «EN UN TRANSCEPTOR, EL MANDO VOX SE UTILIZA PARA:», la formulación que encaja según el banco de examen es «Conmutar automáticamente transmisión-recepción». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7140,7 +7140,7 @@ export default [
       "Variar la amplificación audio"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («EL MANDO \"NB\" DE UN TRANSCEPTOR SE EMPLEA PARA:»). La opción que responde al criterio del banco es «Suprimir ruidos producidos por impulsos».",
+    "explain": "En «EL MANDO \"NB\" DE UN TRANSCEPTOR SE EMPLEA PARA:», la formulación que encaja según el banco de examen es «Suprimir ruidos producidos por impulsos». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7170,7 +7170,7 @@ export default [
       "Modulación cruzada."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («La capacidad de un receptor para separar señales de RF de frecuencias muy próximas se denomina:»). La opción que responde al criterio del banco es «Selectividad.».",
+    "explain": "En «La capacidad de un receptor para separar señales de RF de frecuencias muy próximas se deno…», la formulación que encaja según el banco de examen es «Selectividad.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7200,7 +7200,7 @@ export default [
       "Que el equipo es electromecánico."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si un equipo está marcado con las siglas \"EMC\" significa:»). La opción que responde al criterio del banco es «Que el equipo cumple las directivas de la Unión Europea respecto de compatibilidad electromágnetica.».",
+    "explain": "En «Si un equipo está marcado con las siglas \"EMC\" significa:», la formulación que encaja según el banco de examen es «Que el equipo cumple las directivas de la Unión Europea respecto de compatibilidad electromágnetica.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7215,7 +7215,7 @@ export default [
       "No existen."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («En sistemas de transmisión analógicos, las señales:»). La opción que responde al criterio del banco es «Pueden tener infinitos valores.».",
+    "explain": "En «En sistemas de transmisión analógicos, las señales:», la formulación que encaja según el banco de examen es «Pueden tener infinitos valores.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7245,7 +7245,7 @@ export default [
       "Intensidad máxima / intensidad mínima."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («La R.O.E. de una instalación de una antena de radioaficionado se expresa con la fórmula:»). La opción que responde al criterio del banco es «Intensidad máxima / intensidad mínima.».",
+    "explain": "En «La R.O.E. de una instalación de una antena de radioaficionado se expresa con la fórmula:», la formulación que encaja según el banco de examen es «Intensidad máxima / intensidad mínima.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7335,7 +7335,7 @@ export default [
       "Anular las pérdidas de la línea de transmisión entre la etapa final de potencia y la antena."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («El acoplador de antena se emplea para:»). La opción que responde al criterio del banco es «Adaptar la impedancia de la etapa final de potencia a la línea de transmisión y antena.».",
+    "explain": "En «El acoplador de antena se emplea para:», la formulación que encaja según el banco de examen es «Adaptar la impedancia de la etapa final de potencia a la línea de transmisión y antena.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7350,7 +7350,7 @@ export default [
       "A las simetrías de de cada frecuencia."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:»). La opción que responde al criterio del banco es «A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales.».",
+    "explain": "En «¿A qué se suele llamar \"frecuencias imagen\" en un receptor?:», la formulación que encaja según el banco de examen es «A las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7485,7 +7485,7 @@ export default [
       "La obligación de respetar el plan de bandas reservado al servicio de aficionados."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estaciones de radioaficionados?»). La opción que responde al criterio del banco es «El derecho a instalar las antenas en el exterior de los inmuebles.».",
+    "explain": "En «¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estaciones de radioaficion…», la formulación que encaja según el banco de examen es «El derecho a instalar las antenas en el exterior de los inmuebles.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7515,7 +7515,7 @@ export default [
       "Hilo de cobre desnudo."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Cual es el tipo de conductor más inmune a las interferencias radiadas?:»). La opción que responde al criterio del banco es «Fibra óptica.».",
+    "explain": "En «¿Cual es el tipo de conductor más inmune a las interferencias radiadas?:», la formulación que encaja según el banco de examen es «Fibra óptica.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7530,7 +7530,7 @@ export default [
       "Un divisor de tensión en función de la temperatura externa."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un termistor de tipo NTC es:»). La opción que responde al criterio del banco es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta.».",
+    "explain": "En «Un termistor de tipo NTC es:», la formulación que encaja según el banco de examen es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7650,7 +7650,7 @@ export default [
       "Suele valer 13 dB."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («El ancho del haz de la antena:»). La opción que responde al criterio del banco es «Es la separación angular entre dos puntos de potencia radiada la mitad de la máxima.».",
+    "explain": "En «El ancho del haz de la antena:», la formulación que encaja según el banco de examen es «Es la separación angular entre dos puntos de potencia radiada la mitad de la máxima.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7680,7 +7680,7 @@ export default [
       "Se debe emitir con menor potencia."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Cuando se produce una interferencia perjudicial que afecta a la seguridad de la vida humana:»). La opción que responde al criterio del banco es «Se debe dejar de emitir hasta resolver el problema.».",
+    "explain": "En «Cuando se produce una interferencia perjudicial que afecta a la seguridad de la vida human…», la formulación que encaja según el banco de examen es «Se debe dejar de emitir hasta resolver el problema.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7725,7 +7725,7 @@ export default [
       "Cable coaxial de 75Ω."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Se aumenta el riesgo de causar interferencias cuando se emplea:»). La opción que responde al criterio del banco es «Un amplificador lineal.».",
+    "explain": "En «Se aumenta el riesgo de causar interferencias cuando se emplea:», la formulación que encaja según el banco de examen es «Un amplificador lineal.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7770,7 +7770,7 @@ export default [
       "La acción de sintonizar una determinada estación."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué es el \"fading\"?:»). La opción que responde al criterio del banco es «El desvanecimiento transitorio de una señal electromagnética que se propaga.».",
+    "explain": "En «¿Qué es el \"fading\"?:», la formulación que encaja según el banco de examen es «El desvanecimiento transitorio de una señal electromagnética que se propaga.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7785,7 +7785,7 @@ export default [
       "Seguridad."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La abreviatura TTT cuando es transmitida tres veces consecutivas, constituye la señal de:»). La opción que responde al criterio del banco es «Seguridad.».",
+    "explain": "En «La abreviatura TTT cuando es transmitida tres veces consecutivas, constituye la señal de:», la formulación que encaja según el banco de examen es «Seguridad.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7860,7 +7860,7 @@ export default [
       "Un acoplador de antenas"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Para realizar medidas de intensidad de campo radiado por una antena se emplea:»). La opción que responde al criterio del banco es «Un medidor de campo».",
+    "explain": "En «Para realizar medidas de intensidad de campo radiado por una antena se emplea:», la formulación que encaja según el banco de examen es «Un medidor de campo». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 27/10/2007 (bloque i)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7924,7 +7924,7 @@ export default [
       "R diodo"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Señale el circuito eléctrico equivalente de una antena en resonancia:»). La opción que responde al criterio del banco es «R».",
+    "explain": "En «Señale el circuito eléctrico equivalente de una antena en resonancia:», la formulación que encaja según el banco de examen es «R». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque m)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7939,7 +7939,7 @@ export default [
       "Nunca."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («La instalación, en el exterior de los edificios, del sistema radiante de una estación de radioaficio…»). La opción que responde al criterio del banco es «Solo aquellas que por su simplicidad así lo autorice el Jefe Provincial de Inspección de Telecomunicaciones.».",
+    "explain": "En «La instalación, en el exterior de los edificios, del sistema radiante de una estación de r…», la formulación que encaja según el banco de examen es «Solo aquellas que por su simplicidad así lo autorice el Jefe Provincial de Inspección de Telecomunicaciones.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8035,7 +8035,7 @@ export default [
       "Se trata de un distintivo solicitado por una Escuela Universitaria."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Esta emitiendo desde Andalucía.».",
+    "explain": "EA7UE es un indicativo español: EA = España, 7 = distrito (Andalucía), UE = sufijo de estación. No es un distintivo universitario ni un indicativo CEPT temporal. La respuesta correcta es «Esta emitiendo desde Andalucía.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8080,7 +8080,7 @@ export default [
       "No existe."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:»). La opción que responde al criterio del banco es «Mayor.».",
+    "explain": "En «El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:», la formulación que encaja según el banco de examen es «Mayor.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8294,7 +8294,7 @@ export default [
       "1, 2, 3, 4."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («Las capas ionizadas de la atmósfera se denominan:»). La opción que responde al criterio del banco es «D, E, F1 y F2.».",
+    "explain": "En «Las capas ionizadas de la atmósfera se denominan:», la formulación que encaja según el banco de examen es «D, E, F1 y F2.». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8339,7 +8339,7 @@ export default [
       "El indice de modulación es superior al 100%."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Decimos que hay sobremodulación, cuando:»). La opción que responde al criterio del banco es «El indice de modulación es superior al 100%.».",
+    "explain": "En «Decimos que hay sobremodulación, cuando:», la formulación que encaja según el banco de examen es «El indice de modulación es superior al 100%.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -9338,7 +9338,7 @@ export default [
       "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre componentes pasivos y activos («Un elevado nivel de intensidad de campo eléctrico puede producir:»). La opción que responde al criterio del banco es «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
+    "explain": "En «Un elevado nivel de intensidad de campo eléctrico puede producir:», la formulación que encaja según el banco de examen es «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones». Contrasta con el temario de componentes pasivos y activos si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9368,7 +9368,7 @@ export default [
       "La resistencia eléctrica es inmune a los cambios de temperatura"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si aumenta la temperatura en un conductor»). La opción que responde al criterio del banco es «Aumenta su resistencia eléctrica.».",
+    "explain": "En «Si aumenta la temperatura en un conductor», la formulación que encaja según el banco de examen es «Aumenta su resistencia eléctrica.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 12). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9398,7 +9398,7 @@ export default [
       "El índice de modulación es superior al 100%."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Decimos que hay sobre modulación, cuando:»). La opción que responde al criterio del banco es «El índice de modulación es superior al 100%.».",
+    "explain": "En «Decimos que hay sobre modulación, cuando:», la formulación que encaja según el banco de examen es «El índice de modulación es superior al 100%.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 117). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9593,7 +9593,7 @@ export default [
       "Ser utilizado para comunicaciones de corta distancia."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («La aplicación más importante del osciloscopio consiste en:»). La opción que responde al criterio del banco es «La representación gráfica de las formas de onda.».",
+    "explain": "En «La aplicación más importante del osciloscopio consiste en:», la formulación que encaja según el banco de examen es «La representación gráfica de las formas de onda.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 139). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9623,7 +9623,7 @@ export default [
       "Es un duplicador de frecuencias digitales."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué se entiende por \"Procesador Digital de Señal\" (DSP)»). La opción que responde al criterio del banco es «Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad.».",
+    "explain": "En «¿Qué se entiende por \"Procesador Digital de Señal\" (DSP)», la formulación que encaja según el banco de examen es «Es un sistema con Hardware y Software optimizados para aplicaciones que requieran un procesamiento digital de la señal a muy alta velocidad.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 142). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9638,7 +9638,7 @@ export default [
       "Su valor disminuye al aumentar la temperatura."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un termistor PTC es aquel que:»). La opción que responde al criterio del banco es «Su valor aumenta con la temperatura.».",
+    "explain": "En «Un termistor PTC es aquel que:», la formulación que encaja según el banco de examen es «Su valor aumenta con la temperatura.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 143). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9713,7 +9713,7 @@ export default [
       "La tensión se mide en amperios."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En esta pregunta sobre unidades eléctricas, cuál es la respuesta correcta:»). La opción que responde al criterio del banco es «Un culombio es igual al producto de un amperio por segundo.».",
+    "explain": "En «En esta pregunta sobre unidades eléctricas, cuál es la respuesta correcta:», la formulación que encaja según el banco de examen es «Un culombio es igual al producto de un amperio por segundo.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 170). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9773,7 +9773,7 @@ export default [
       "AM"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué símbolo va asociado a la modulación de frecuencia en fonía?»). La opción que responde al criterio del banco es «F3E».",
+    "explain": "En «¿Qué símbolo va asociado a la modulación de frecuencia en fonía?», la formulación que encaja según el banco de examen es «F3E». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 177). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9848,7 +9848,7 @@ export default [
       "A frecuencias muy altas se pierden las ondas espaciales."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Para el desvanecimiento o fading, es correcto afirmar que:»). La opción que responde al criterio del banco es «La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.».",
+    "explain": "En «Para el desvanecimiento o fading, es correcto afirmar que:», la formulación que encaja según el banco de examen es «La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 182). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9923,7 +9923,7 @@ export default [
       "El consumo de potencia de alimentación."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El medidor comúnmente denominado \"S-meter\" indica:»). La opción que responde al criterio del banco es «La intensidad de la señal de entrada del receptor.».",
+    "explain": "En «El medidor comúnmente denominado \"S-meter\" indica:», la formulación que encaja según el banco de examen es «La intensidad de la señal de entrada del receptor.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 188). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9968,7 +9968,7 @@ export default [
       "Comunicárselo al aeropuerto."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si al emitir en la banda de 2 metros se tiene conocimiento de que se producen interferencias al Serv…»). La opción que responde al criterio del banco es «Dejar de emitir.».",
+    "explain": "En «Si al emitir en la banda de 2 metros se tiene conocimiento de que se producen interferenci…», la formulación que encaja según el banco de examen es «Dejar de emitir.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 192). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9983,7 +9983,7 @@ export default [
       "Un receptor de reserva conectado en paralelo con la antena."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Como medida de protección y seguridad toda estación radioeléctrica debe disponer de:»). La opción que responde al criterio del banco es «Un interruptor general de suministro eléctrico.».",
+    "explain": "En «Como medida de protección y seguridad toda estación radioeléctrica debe disponer de:», la formulación que encaja según el banco de examen es «Un interruptor general de suministro eléctrico.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 193). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10148,7 +10148,7 @@ export default [
       "No se debe tocar una antena en transmisión."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Una antena en trasmisión, ¿se puede tocar con las manos?:»). La opción que responde al criterio del banco es «No se debe tocar una antena en transmisión.».",
+    "explain": "En «Una antena en trasmisión, ¿se puede tocar con las manos?:», la formulación que encaja según el banco de examen es «No se debe tocar una antena en transmisión.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 208). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10163,7 +10163,7 @@ export default [
       "Ninguna de las respuestas anteriores es correcta."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un enlace radioeléctrico entre España y Nueva Zelanda podría emplear:»). La opción que responde al criterio del banco es «Una frecuencia de la banda HF por debajo de la frecuencia crítica.».",
+    "explain": "En «Un enlace radioeléctrico entre España y Nueva Zelanda podría emplear:», la formulación que encaja según el banco de examen es «Una frecuencia de la banda HF por debajo de la frecuencia crítica.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 209). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10208,7 +10208,7 @@ export default [
       "Limitar radiaciones indeseadas."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Los equipos radioeléctricos deberán estar contenidos en cajas metálicas para:»). La opción que responde al criterio del banco es «Limitar radiaciones indeseadas.».",
+    "explain": "En «Los equipos radioeléctricos deberán estar contenidos en cajas metálicas para:», la formulación que encaja según el banco de examen es «Limitar radiaciones indeseadas.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 216). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10298,7 +10298,7 @@ export default [
       "Un altavoz de lujo."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («¿Qué es un \"resonador de cuarzo\"?:»). La opción que responde al criterio del banco es «Los conmuUn dispositivo capaz de presentar un efecto de resonancia basado en una propiedad piezoeléctrica.tadores en la posición 1.».",
+    "explain": "En «¿Qué es un \"resonador de cuarzo\"?:», la formulación que encaja según el banco de examen es «Los conmuUn dispositivo capaz de presentar un efecto de resonancia basado en una propiedad piezoeléctrica.tadores en la posición 1.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 227). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10448,7 +10448,7 @@ export default [
       "Anula la salida del receptor cuando se recibe una señal con ruido muy alto."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El mando NB de un transceptor sirve para:»). La opción que responde al criterio del banco es «Suprimir ruidos impulsivos.».",
+    "explain": "En «El mando NB de un transceptor sirve para:», la formulación que encaja según el banco de examen es «Suprimir ruidos impulsivos.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 242). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10493,7 +10493,7 @@ export default [
       "Dispersión por propagación."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una señal radioeléctrica se puede caracterizar por su:»). La opción que responde al criterio del banco es «Amplitud y frecuencia.».",
+    "explain": "En «Una señal radioeléctrica se puede caracterizar por su:», la formulación que encaja según el banco de examen es «Amplitud y frecuencia.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 248). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10523,7 +10523,7 @@ export default [
       "Evitar emisiones interferentes alrededor de la frecuencia de trabajo."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («El Control Automático de Nivel conocido como ALC pemite:»). La opción que responde al criterio del banco es «Evitar emisiones interferentes alrededor de la frecuencia de trabajo.».",
+    "explain": "En «El Control Automático de Nivel conocido como ALC pemite:», la formulación que encaja según el banco de examen es «Evitar emisiones interferentes alrededor de la frecuencia de trabajo.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 250). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10568,7 +10568,7 @@ export default [
       "Nada"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Una de las técnicas para tratar de eliminar interferencias es el filtrado. Si se utiliza un filtro p…»). La opción que responde al criterio del banco es «Atenuar las frecuencias superiores e inferiores al intervalo de la banda de paso».",
+    "explain": "En «Una de las técnicas para tratar de eliminar interferencias es el filtrado. Si se utiliza u…», la formulación que encaja según el banco de examen es «Atenuar las frecuencias superiores e inferiores al intervalo de la banda de paso». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 259). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10838,7 +10838,7 @@ export default [
       "Las de bocina."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Entre las antenas de apertura están:»). La opción que responde al criterio del banco es «Las de bocina.».",
+    "explain": "En «Entre las antenas de apertura están:», la formulación que encaja según el banco de examen es «Las de bocina.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1566). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10883,7 +10883,7 @@ export default [
       "El de la menor de las pilas."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre componentes pasivos y activos («Cuando colocamos varias pilas en serie, el voltaje resultante del conjunto es:»). La opción que responde al criterio del banco es «La suma del voltaje de todas las pilas.».",
+    "explain": "En «Cuando colocamos varias pilas en serie, el voltaje resultante del conjunto es:», la formulación que encaja según el banco de examen es «La suma del voltaje de todas las pilas.». Contrasta con el temario de componentes pasivos y activos si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1569). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10898,7 +10898,7 @@ export default [
       "Onda de horizonte visto."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre campos, ondas y parámetros λ–f–v («La onda que rebasa el horizonte y llega a la atmósfera se denomina:»). La opción que responde al criterio del banco es «Onda espacial.».",
+    "explain": "En «La onda que rebasa el horizonte y llega a la atmósfera se denomina:», la formulación que encaja según el banco de examen es «Onda espacial.». Contrasta con el temario de campos, ondas y parámetros λ–f–v si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1570). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10943,7 +10943,7 @@ export default [
       "Se hace variar la frecuencia portadora por medio una señal de audio."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre cadenas de receptor y transmisor («Se modula en amplitud cuando:»). La opción que responde al criterio del banco es «Se varía la amplitud de una portadora de radiofrecuencia por medio de una señal de audio.».",
+    "explain": "En «Se modula en amplitud cuando:», la formulación que encaja según el banco de examen es «Se varía la amplitud de una portadora de radiofrecuencia por medio de una señal de audio.». Contrasta con el temario de cadenas de receptor y transmisor si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2101). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10988,7 +10988,7 @@ export default [
       "Tiene garantizada una velocidad mínima real de 2 Mbps en todo momento."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Si un usuario tiene contratado un acceso a Internet “ADSL de 2 megas”, esto significa que:»). La opción que responde al criterio del banco es «Dispone de un ancho de banda de 2 millones de bits por segundo.».",
+    "explain": "En «Si un usuario tiene contratado un acceso a Internet “ADSL de 2 megas”, esto significa que:», la formulación que encaja según el banco de examen es «Dispone de un ancho de banda de 2 millones de bits por segundo.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2205). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11003,7 +11003,7 @@ export default [
       "La tensión del conjunto es cero."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre componentes pasivos y activos («En un circuito con varias baterías conectadas en paralelo:»). La opción que responde al criterio del banco es «La resistencia interna equivalente del conjunto disminuye.».",
+    "explain": "En «En un circuito con varias baterías conectadas en paralelo:», la formulación que encaja según el banco de examen es «La resistencia interna equivalente del conjunto disminuye.». Contrasta con el temario de componentes pasivos y activos si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2207). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11018,7 +11018,7 @@ export default [
       "Reactancia."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En electricidad, la letra Z corresponde a:»). La opción que responde al criterio del banco es «Impedancia.».",
+    "explain": "En «En electricidad, la letra Z corresponde a:», la formulación que encaja según el banco de examen es «Impedancia.». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2209). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11454,7 +11454,7 @@ export default [
       "El código de deletreo ICAO."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «El código de deletreo ICAO.».",
+    "explain": "Al deletrear un indicativo en fonía se usa el alfabeto fonético internacional (ICAO): Alfa, Bravo, Charlie…, no el código RST (que es informe de señal). La respuesta correcta es «El código de deletreo ICAO.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11574,7 +11574,7 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («Como norma general, la instalación de una estación de aficionado deberá ser efectuada:»). La opción que responde al criterio del banco es «Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.».",
+    "explain": "En «Como norma general, la instalación de una estación de aficionado deberá ser efectuada:», la formulación que encaja según el banco de examen es «Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11784,7 +11784,7 @@ export default [
       "Sancionable según la reglamentación vigente."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en la misma, e…»). La opción que responde al criterio del banco es «Una práctica de operar adecuada.».",
+    "explain": "En «Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en l…», la formulación que encaja según el banco de examen es «Una práctica de operar adecuada.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1865). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11844,7 +11844,7 @@ export default [
       "Estación de control."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra \"CL\", que …»). La opción que responde al criterio del banco es «Cierre de la estación.».",
+    "explain": "En «Entre las abreviaturas más usuales en las comunicaciones de radioaficionados se encuentra …», la formulación que encaja según el banco de examen es «Cierre de la estación.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11919,7 +11919,7 @@ export default [
       "La abreviatura métrica B.m."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:»). La opción que responde al criterio del banco es «La abreviatura métrica B.m.».",
+    "explain": "En «En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:», la formulación que encaja según el banco de examen es «La abreviatura métrica B.m.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1874). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11964,7 +11964,7 @@ export default [
       "Toda la gama de frecuencias que pueda utilizar."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («La instalación y funcionamiento de una estación de aficionado precisará de una licencia, la cual se …»). La opción que responde al criterio del banco es «La autorización de radioaficionado de su titular.».",
+    "explain": "En «La instalación y funcionamiento de una estación de aficionado precisará de una licencia, l…», la formulación que encaja según el banco de examen es «La autorización de radioaficionado de su titular.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11979,7 +11979,7 @@ export default [
       "Colectiva de aficionado."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («No se puede considerar como estación automática desatendida a una estación:»). La opción que responde al criterio del banco es «Colectiva de aficionado.».",
+    "explain": "En «No se puede considerar como estación automática desatendida a una estación:», la formulación que encaja según el banco de examen es «Colectiva de aficionado.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11994,7 +11994,7 @@ export default [
       "Detectar y reducir interferencias dentro de un área determinada."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Qué objetivo se pretende al instalar un repetidor de radioficionado:»). La opción que responde al criterio del banco es «Ampliar el alcance de las comunicaciones.».",
+    "explain": "En «Qué objetivo se pretende al instalar un repetidor de radioficionado:», la formulación que encaja según el banco de examen es «Ampliar el alcance de las comunicaciones.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12039,7 +12039,7 @@ export default [
       "Si la cota de su emplazamiento es inferior a 500 metros."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Un radioaficionado podrá ser autorizado a instalar un repetidor:»). La opción que responde al criterio del banco es «En ningún caso.».",
+    "explain": "En «Un radioaficionado podrá ser autorizado a instalar un repetidor:», la formulación que encaja según el banco de examen es «En ningún caso.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12054,7 +12054,7 @@ export default [
       "Por cualquier persona."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («El montaje del sistema radiante de una estación fija de radioaficionado será realizado:»). La opción que responde al criterio del banco es «Como norma general, por un instalador de telecomunica­ciones autorizado.».",
+    "explain": "En «El montaje del sistema radiante de una estación fija de radioaficionado será realizado:», la formulación que encaja según el banco de examen es «Como norma general, por un instalador de telecomunica­ciones autorizado.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12069,7 +12069,7 @@ export default [
       "Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Un radioaficionado podrá instalar la antena de su estación fija en el exterior de un inmueble si:»). La opción que responde al criterio del banco es «Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.».",
+    "explain": "En «Un radioaficionado podrá instalar la antena de su estación fija en el exterior de un inmue…», la formulación que encaja según el banco de examen es «Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12264,7 +12264,7 @@ export default [
       "Cuadro Nacional de Atribución de Frecuencias."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En el Reglamento de uso del dominio público radioeléctrico por aficionados aparece la abreviatura CN…»). La opción que responde al criterio del banco es «Cuadro Nacional de Atribución de Frecuencias.».",
+    "explain": "En «En el Reglamento de uso del dominio público radioeléctrico por aficionados aparece la abre…», la formulación que encaja según el banco de examen es «Cuadro Nacional de Atribución de Frecuencias.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12384,7 +12384,7 @@ export default [
       "Los elementos radiantes nunca deben sobrepasar el espacio de los inmuebles donde están situados."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Al instalar una antena de radioaficionado se tendrá en cuenta que:»). La opción que responde al criterio del banco es «Se debe garantizar el derecho de terceros a no sufrir daños en su propiedad derivados de la instalación.».",
+    "explain": "En «Al instalar una antena de radioaficionado se tendrá en cuenta que:», la formulación que encaja según el banco de examen es «Se debe garantizar el derecho de terceros a no sufrir daños en su propiedad derivados de la instalación.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12414,7 +12414,7 @@ export default [
       "La división en Regiones sólo se aplica al continente americano."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («De acuerdo con la división de la UIT del mundo en tres Regiones:»). La opción que responde al criterio del banco es «Toda España se encuentra en la Región 1.».",
+    "explain": "En «De acuerdo con la división de la UIT del mundo en tres Regiones:», la formulación que encaja según el banco de examen es «Toda España se encuentra en la Región 1.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1912). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12474,7 +12474,7 @@ export default [
       "Solo puede instalarla la A.E.R. (Agencia Estatal de Radiocomunicaciones)."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («¿A quién se le puede autorizar la instalación de una Estación Automática Desatendida?:»). La opción que responde al criterio del banco es «A cualquier Asociación de Aficionado legalmente reconocida.».",
+    "explain": "En «¿A quién se le puede autorizar la instalación de una Estación Automática Desatendida?:», la formulación que encaja según el banco de examen es «A cualquier Asociación de Aficionado legalmente reconocida.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12564,7 +12564,7 @@ export default [
       "Nueve horas."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Las Estaciones Repetidoras y Radiobalizas, deberán disponer de un sistema de alimentación ininterrum…»). La opción que responde al criterio del banco es «Seis horas.».",
+    "explain": "En «Las Estaciones Repetidoras y Radiobalizas, deberán disponer de un sistema de alimentación …», la formulación que encaja según el banco de examen es «Seis horas.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12594,7 +12594,7 @@ export default [
       "VHF."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La ondas métricas se representan por el símbolo:»). La opción que responde al criterio del banco es «VHF.».",
+    "explain": "En «La ondas métricas se representan por el símbolo:», la formulación que encaja según el banco de examen es «VHF.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1927). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12729,7 +12729,7 @@ export default [
       "La exención de presentar memoria descriptiva de la instalación."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («La Ley 19/1986, conocida como Ley de Antenas, regula:»). La opción que responde al criterio del banco es «El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.».",
+    "explain": "En «La Ley 19/1986, conocida como Ley de Antenas, regula:», la formulación que encaja según el banco de examen es «El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13164,7 +13164,7 @@ export default [
       "Cualquier titular de licencia CEPT."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Podrá ser titular de una estación automática desatendida:»). La opción que responde al criterio del banco es «Una asociación de radioaficionados reconocida.».",
+    "explain": "En «Podrá ser titular de una estación automática desatendida:», la formulación que encaja según el banco de examen es «Una asociación de radioaficionados reconocida.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13209,7 +13209,7 @@ export default [
       "87,5 -108 MHz con potencia máxima de 10mW."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:»). La opción que responde al criterio del banco es «144 - 146 y 430-440 MHz.».",
+    "explain": "En «La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:», la formulación que encaja según el banco de examen es «144 - 146 y 430-440 MHz.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1972). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13329,7 +13329,7 @@ export default [
       "Solo el Diploma de Operador."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre instalaciones, seguridad y normativa de antenas («Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:»). La opción que responde al criterio del banco es «Licencia de Estación.».",
+    "explain": "En «Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:», la formulación que encaja según el banco de examen es «Licencia de Estación.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13344,7 +13344,7 @@ export default [
       "Sancionable según la reglamentación vigente."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («Utilizar la palabra \"cambio\" al finalizar una transmisión en fonía es:»). La opción que responde al criterio del banco es «Recomendable.».",
+    "explain": "En «Utilizar la palabra \"cambio\" al finalizar una transmisión en fonía es:», la formulación que encaja según el banco de examen es «Recomendable.». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1982). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13539,7 +13539,7 @@ export default [
       "Nunca se fijarán directamente a la obra civil."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Los soportes de una antena de radioaficionado:»). La opción que responde al criterio del banco es «No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen.».",
+    "explain": "En «Los soportes de una antena de radioaficionado:», la formulación que encaja según el banco de examen es «No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13659,7 +13659,7 @@ export default [
       "Canarias se encuentra en la Región 2"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («De acuerdo con el artículo 5 del Reglamento de Radiocomunicaciones de la UIT, desde el punto de vist…»). La opción que responde al criterio del banco es «España se encuentra en la Región 1».",
+    "explain": "En «De acuerdo con el artículo 5 del Reglamento de Radiocomunicaciones de la UIT, desde el pun…», la formulación que encaja según el banco de examen es «España se encuentra en la Región 1». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13899,7 +13899,7 @@ export default [
       "Se podrá desmontar la antena para realizar obras previo pago de una indemnización al titular de la antena"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre antenas, líneas y propagación («En el tejado de un edificio donde está instalada una antena de radioaficionado autorizada:»). La opción que responde al criterio del banco es «Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena».",
+    "explain": "En «En el tejado de un edificio donde está instalada una antena de radioaficionado autorizada:», la formulación que encaja según el banco de examen es «Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13944,7 +13944,7 @@ export default [
       "Diez años"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («El radioaficionado está obligado a comunicar, fehacientemente, su intención de continuar utilizando …»). La opción que responde al criterio del banco es «Ya no hay que comunicarlo».",
+    "explain": "En «El radioaficionado está obligado a comunicar, fehacientemente, su intención de continuar u…», la formulación que encaja según el banco de examen es «Ya no hay que comunicarlo». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14094,7 +14094,7 @@ export default [
       "En duplex"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda necesaria…»). La opción que responde al criterio del banco es «Fuera de banda».",
+    "explain": "En «La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda…», la formulación que encaja según el banco de examen es «Fuera de banda». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2035). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14154,7 +14154,7 @@ export default [
       "Unicamente los producidos por un mantenimiento defectuoso."
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre antenas, líneas y propagación («Los daños y perjuicios originados por una antena de una estación de radioaficionado, correrán a carg…»). La opción que responde al criterio del banco es «Los producidos con motivo de la instalación, mantenimiento y desmontaje de la antena.».",
+    "explain": "En «Los daños y perjuicios originados por una antena de una estación de radioaficionado, corre…», la formulación que encaja según el banco de examen es «Los producidos con motivo de la instalación, mantenimiento y desmontaje de la antena.». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14349,7 +14349,7 @@ export default [
       "Es a la vez una estación portable de aficionado."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En relación con una estación portátil de aficionado, marque la alternativa errónea:»). La opción que responde al criterio del banco es «Es a la vez una estación portable de aficionado.».",
+    "explain": "En «En relación con una estación portátil de aficionado, marque la alternativa errónea:», la formulación que encaja según el banco de examen es «Es a la vez una estación portable de aficionado.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14439,7 +14439,7 @@ export default [
       "Por conversión de frecuencias."
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emision…»). La opción que responde al criterio del banco es «No deseadas.».",
+    "explain": "En «Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomi…», la formulación que encaja según el banco de examen es «No deseadas.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14454,7 +14454,7 @@ export default [
       "Radiocomunicación."
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:»). La opción que responde al criterio del banco es «Radiocomunicación.».",
+    "explain": "En «Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:», la formulación que encaja según el banco de examen es «Radiocomunicación.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2062). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14859,7 +14859,7 @@ export default [
       "Seguridad."
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («La abreviatura XXX, cuando es transmitida tres veces consecutivas, constituye la señal de:»). La opción que responde al criterio del banco es «Urgencia.».",
+    "explain": "En «La abreviatura XXX, cuando es transmitida tres veces consecutivas, constituye la señal de:», la formulación que encaja según el banco de examen es «Urgencia.». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2092). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14919,7 +14919,7 @@ export default [
       "1000 w"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de la…»). La opción que responde al criterio del banco es «50 w».",
+    "explain": "En «En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c…», la formulación que encaja según el banco de examen es «50 w». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14964,7 +14964,7 @@ export default [
       "LSB y AM"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza es»). La opción que responde al criterio del banco es «LSB».",
+    "explain": "En «En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza…», la formulación que encaja según el banco de examen es «LSB». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14994,7 +14994,7 @@ export default [
       "50V"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tensión suelen usar los equipos de radio portátiles?»). La opción que responde al criterio del banco es «3,5 a 12V».",
+    "explain": "En «¿Qué tensión suelen usar los equipos de radio portátiles?», la formulación que encaja según el banco de examen es «3,5 a 12V». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15009,7 +15009,7 @@ export default [
       "Nada"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre antenas, líneas y propagación («¿Qué pasa si transmitimos sin antena?»). La opción que responde al criterio del banco es «Se daña el equipo».",
+    "explain": "En «¿Qué pasa si transmitimos sin antena?», la formulación que encaja según el banco de examen es «Se daña el equipo». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15084,7 +15084,7 @@ export default [
       "100 W"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué potencia aproximada tienen los equipos fijos de EA3RCQ?»). La opción que responde al criterio del banco es «40 W».",
+    "explain": "En «¿Qué potencia aproximada tienen los equipos fijos de EA3RCQ?», la formulación que encaja según el banco de examen es «40 W». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15099,7 +15099,7 @@ export default [
       "10 W"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué potencia aproximada tienen los equipos portátiles de EA3RCQ?»). La opción que responde al criterio del banco es «1 W».",
+    "explain": "En «¿Qué potencia aproximada tienen los equipos portátiles de EA3RCQ?», la formulación que encaja según el banco de examen es «1 W». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15114,7 +15114,7 @@ export default [
       "RC4"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tipo de encriptación usan las redes de EA3RCQ?»). La opción que responde al criterio del banco es «AES-256».",
+    "explain": "En «¿Qué tipo de encriptación usan las redes de EA3RCQ?», la formulación que encaja según el banco de examen es «AES-256». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15129,7 +15129,7 @@ export default [
       "Data Mobile Receiver"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es el DMR?»). La opción que responde al criterio del banco es «Digital Mobile Radio».",
+    "explain": "En «¿Qué es el DMR?», la formulación que encaja según el banco de examen es «Digital Mobile Radio». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15144,7 +15144,7 @@ export default [
       "APCO25"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué sistema usa la Red SIRDE en España?»). La opción que responde al criterio del banco es «Tetrapol».",
+    "explain": "En «¿Qué sistema usa la Red SIRDE en España?», la formulación que encaja según el banco de examen es «Tetrapol». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15174,7 +15174,7 @@ export default [
       "Send"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se llama el botón para transmitir en radio?»). La opción que responde al criterio del banco es «PTT».",
+    "explain": "En «¿Cómo se llama el botón para transmitir en radio?», la formulación que encaja según el banco de examen es «PTT». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15189,7 +15189,7 @@ export default [
       "Un amplificador"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un repetidor?»). La opción que responde al criterio del banco es «Un equipo que retransmite en otra frecuencia».",
+    "explain": "En «¿Qué es un repetidor?», la formulación que encaja según el banco de examen es «Un equipo que retransmite en otra frecuencia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15204,7 +15204,7 @@ export default [
       "Comunicación cifrada"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es “simplex”?»). La opción que responde al criterio del banco es «Comunicación directa sin repetidor».",
+    "explain": "En «¿Qué es “simplex”?», la formulación que encaja según el banco de examen es «Comunicación directa sin repetidor». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15219,7 +15219,7 @@ export default [
       "Una forma de modulación"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es “trunking”?»). La opción que responde al criterio del banco es «Un sistema para concentrar comunicaciones».",
+    "explain": "En «¿Qué es “trunking”?», la formulación que encaja según el banco de examen es «Un sistema para concentrar comunicaciones». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15234,7 +15234,7 @@ export default [
       "Modificar la potencia"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Para que usamos el “roaming” en radios digitales?»). La opción que responde al criterio del banco es «Buscar el repetidor con mejor cobertura».",
+    "explain": "En «¿Para que usamos el “roaming” en radios digitales?», la formulación que encaja según el banco de examen es «Buscar el repetidor con mejor cobertura». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15264,7 +15264,7 @@ export default [
       "Llamada múltiple"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tipo de orden es la palabra clave “SILENCIO RADIO”?»). La opción que responde al criterio del banco es «Orden de máxima prioridad».",
+    "explain": "En «¿Qué tipo de orden es la palabra clave “SILENCIO RADIO”?», la formulación que encaja según el banco de examen es «Orden de máxima prioridad». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15294,7 +15294,7 @@ export default [
       "Signal"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se dice la letra “S” en código ICAO?»). La opción que responde al criterio del banco es «Sierra».",
+    "explain": "En «¿Cómo se dice la letra “S” en código ICAO?», la formulación que encaja según el banco de examen es «Sierra». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15309,7 +15309,7 @@ export default [
       "Copiado"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se confirma un dato afirmativo en radio?»). La opción que responde al criterio del banco es «Afirmativo Sierra».",
+    "explain": "En «¿Cómo se confirma un dato afirmativo en radio?», la formulación que encaja según el banco de examen es «Afirmativo Sierra». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15324,7 +15324,7 @@ export default [
       "En obsoluto"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se responde negativamente en radio?»). La opción que responde al criterio del banco es «Negativo November».",
+    "explain": "En «¿Cómo se responde negativamente en radio?», la formulación que encaja según el banco de examen es «Negativo November». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15339,7 +15339,7 @@ export default [
       "Una llamada de emergencia"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada individual?»). La opción que responde al criterio del banco es «Una llamada de un corresponsal a otro».",
+    "explain": "En «¿Qué es una llamada individual?», la formulación que encaja según el banco de examen es «Una llamada de un corresponsal a otro». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15354,7 +15354,7 @@ export default [
       "Una llamada de emergencia"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada múltiple?»). La opción que responde al criterio del banco es «Llamada de un mando a varios indicativos».",
+    "explain": "En «¿Qué es una llamada múltiple?», la formulación que encaja según el banco de examen es «Llamada de un mando a varios indicativos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15369,7 +15369,7 @@ export default [
       "Llamada de confirmación"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada colectiva?»). La opción que responde al criterio del banco es «Llamada a todos los indicativos de un sector».",
+    "explain": "En «¿Qué es una llamada colectiva?», la formulación que encaja según el banco de examen es «Llamada a todos los indicativos de un sector». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15384,7 +15384,7 @@ export default [
       "Una llamada múltiple"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada general?»). La opción que responde al criterio del banco es «Una llamada para toda la malla».",
+    "explain": "En «¿Qué es una llamada general?», la formulación que encaja según el banco de examen es «Una llamada para toda la malla». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15399,7 +15399,7 @@ export default [
       "Una llamada múltiple"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es una llamada de emergencia?»). La opción que responde al criterio del banco es «Llamada solo en caso de urgencia».",
+    "explain": "En «¿Qué es una llamada de emergencia?», la formulación que encaja según el banco de examen es «Llamada solo en caso de urgencia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15429,7 +15429,7 @@ export default [
       "911"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué número hay que marcar en Europa en caso de emergencia?»). La opción que responde al criterio del banco es «112».",
+    "explain": "En «¿Qué número hay que marcar en Europa en caso de emergencia?», la formulación que encaja según el banco de examen es «112». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15444,7 +15444,7 @@ export default [
       "No moverlo innecesariamente"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué no debe hacerse a un motorista accidentado?»). La opción que responde al criterio del banco es «Retirar el casco».",
+    "explain": "En «¿Qué no debe hacerse a un motorista accidentado?», la formulación que encaja según el banco de examen es «Retirar el casco». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15489,7 +15489,7 @@ export default [
       "No hablar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué debe hacerse al comunicarse con un accidentado?»). La opción que responde al criterio del banco es «Hablar calmado y cercano».",
+    "explain": "En «¿Qué debe hacerse al comunicarse con un accidentado?», la formulación que encaja según el banco de examen es «Hablar calmado y cercano». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15504,7 +15504,7 @@ export default [
       "No hablarles"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre operación, códigos Q y buenas prácticas («¿Qué trato se recomienda con accidentados adultos?»). La opción que responde al criterio del banco es «Trato de usted».",
+    "explain": "En «¿Qué trato se recomienda con accidentados adultos?», la formulación que encaja según el banco de examen es «Trato de usted». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15519,7 +15519,7 @@ export default [
       "Direct Mobile Output"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa DMO en TETRA?»). La opción que responde al criterio del banco es «Direct Mode Operation».",
+    "explain": "En «¿Qué significa DMO en TETRA?», la formulación que encaja según el banco de examen es «Direct Mode Operation». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15534,7 +15534,7 @@ export default [
       "Time Multiplex Operation"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa TMO en TETRA?»). La opción que responde al criterio del banco es «Trunked Mode Operation».",
+    "explain": "En «¿Qué significa TMO en TETRA?», la formulación que encaja según el banco de examen es «Trunked Mode Operation». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15549,7 +15549,7 @@ export default [
       "18 W"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué potencia suelen tener los equipos portátiles TETRA?»). La opción que responde al criterio del banco es «1–3 W».",
+    "explain": "En «¿Qué potencia suelen tener los equipos portátiles TETRA?», la formulación que encaja según el banco de examen es «1–3 W». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15564,7 +15564,7 @@ export default [
       "Equipo para medir cobertura"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un Gateway en TETRA?»). La opción que responde al criterio del banco es «Equipo que conecta DMO con TMO».",
+    "explain": "En «¿Qué es un Gateway en TETRA?», la formulación que encaja según el banco de examen es «Equipo que conecta DMO con TMO». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15579,7 +15579,7 @@ export default [
       "Repetir mensaje"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa la palabra clave “TOME NOTA”?»). La opción que responde al criterio del banco es «Información a anotar».",
+    "explain": "En «¿Qué significa la palabra clave “TOME NOTA”?», la formulación que encaja según el banco de examen es «Información a anotar». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15594,7 +15594,7 @@ export default [
       "Dirección de tráfico"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa la palabra clave “FILIACIÓN”?»). La opción que responde al criterio del banco es «Dar o pedir datos personales».",
+    "explain": "En «¿Qué significa la palabra clave “FILIACIÓN”?», la formulación que encaja según el banco de examen es «Dar o pedir datos personales». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15609,7 +15609,7 @@ export default [
       "Avisar de un corte"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa la palabra clave “DISPÓNGASE”?»). La opción que responde al criterio del banco es «Prepararse para recibir órdenes».",
+    "explain": "En «¿Qué significa la palabra clave “DISPÓNGASE”?», la formulación que encaja según el banco de examen es «Prepararse para recibir órdenes». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15624,7 +15624,7 @@ export default [
       "Reiniciar comunicaciones"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “Fin de Silencio Radio”?»). La opción que responde al criterio del banco es «Termina la orden prioritaria de silencio».",
+    "explain": "En «¿Qué significa “Fin de Silencio Radio”?», la formulación que encaja según el banco de examen es «Termina la orden prioritaria de silencio». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15639,7 +15639,7 @@ export default [
       "Un equipo de exterior"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un equipo base?»). La opción que responde al criterio del banco es «Un equipo móvil con fuente de alimentación fija».",
+    "explain": "En «¿Qué es un equipo base?», la formulación que encaja según el banco de examen es «Un equipo móvil con fuente de alimentación fija». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15654,7 +15654,7 @@ export default [
       "Antena"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un equipo móvil?»). La opción que responde al criterio del banco es «Equipo instalado en vehículos».",
+    "explain": "En «¿Qué es un equipo móvil?», la formulación que encaja según el banco de examen es «Equipo instalado en vehículos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15669,7 +15669,7 @@ export default [
       "Un transmisor fijo"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un equipo portátil?»). La opción que responde al criterio del banco es «Un walkie-talkie».",
+    "explain": "En «¿Qué es un equipo portátil?», la formulación que encaja según el banco de examen es «Un walkie-talkie». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15684,7 +15684,7 @@ export default [
       "Solo en UHF"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo se puede usar un repetidor DMR?»). La opción que responde al criterio del banco es «Puede ser analógico y digital».",
+    "explain": "En «¿Cómo se puede usar un repetidor DMR?», la formulación que encaja según el banco de examen es «Puede ser analógico y digital». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15699,7 +15699,7 @@ export default [
       "Selector de canal"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Para que podemos usar el potenciómetro en la radio?»). La opción que responde al criterio del banco es «Botón de encendido y volumen».",
+    "explain": "En «¿Para que podemos usar el potenciómetro en la radio?», la formulación que encaja según el banco de examen es «Botón de encendido y volumen». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15714,7 +15714,7 @@ export default [
       "Plomo-ácido"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué tipo de baterías suelen usar los equipos portátiles modernos?»). La opción que responde al criterio del banco es «Iones de litio».",
+    "explain": "En «¿Qué tipo de baterías suelen usar los equipos portátiles modernos?», la formulación que encaja según el banco de examen es «Iones de litio». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15729,7 +15729,7 @@ export default [
       "Cambio de antena"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es la función “roaming” en digital?»). La opción que responde al criterio del banco es «Cambio automático de repetidor».",
+    "explain": "En «¿Qué es la función “roaming” en digital?», la formulación que encaja según el banco de examen es «Cambio automático de repetidor». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15744,7 +15744,7 @@ export default [
       "Reducir interferencias"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “encriptación de voz”?»). La opción que responde al criterio del banco es «Codificar la comunicación».",
+    "explain": "En «¿Qué significa “encriptación de voz”?», la formulación que encaja según el banco de examen es «Codificar la comunicación». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15759,7 +15759,7 @@ export default [
       "Poner música"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué se recomienda antes de transmitir por radio?»). La opción que responde al criterio del banco es «Comprobar que no hay otra transmisión».",
+    "explain": "En «¿Qué se recomienda antes de transmitir por radio?», la formulación que encaja según el banco de examen es «Comprobar que no hay otra transmisión». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15774,7 +15774,7 @@ export default [
       "Con modismos"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Cómo debe ser el lenguaje en radio profesional?»). La opción que responde al criterio del banco es «Breve, conciso y concentrado».",
+    "explain": "En «¿Cómo debe ser el lenguaje en radio profesional?», la formulación que encaja según el banco de examen es «Breve, conciso y concentrado». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15789,7 +15789,7 @@ export default [
       "Un repetidor"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un “Talk Group” en digital?»). La opción que responde al criterio del banco es «Un grupo de conversación».",
+    "explain": "En «¿Qué es un “Talk Group” en digital?», la formulación que encaja según el banco de examen es «Un grupo de conversación». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15804,7 +15804,7 @@ export default [
       "Un mensaje cifrado"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es un “radio faro” en digital?»). La opción que responde al criterio del banco es «Una portadora de referencia del repetidor».",
+    "explain": "En «¿Qué es un “radio faro” en digital?», la formulación que encaja según el banco de examen es «Una portadora de referencia del repetidor». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15819,7 +15819,7 @@ export default [
       "Se pone en analógico"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué pasa en digital cuando no hay cobertura?»). La opción que responde al criterio del banco es «No transmite, hace un tono de alarma».",
+    "explain": "En «¿Qué pasa en digital cuando no hay cobertura?», la formulación que encaja según el banco de examen es «No transmite, hace un tono de alarma». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15834,7 +15834,7 @@ export default [
       "Digital modulada"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es la modulación en FM?»). La opción que responde al criterio del banco es «Frecuencia modulada».",
+    "explain": "En «¿Qué es la modulación en FM?», la formulación que encaja según el banco de examen es «Frecuencia modulada». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15849,7 +15849,7 @@ export default [
       "Banda VHF"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿En qué banda se usa la AM en radio profesional?»). La opción que responde al criterio del banco es «Banda aérea».",
+    "explain": "En «¿En qué banda se usa la AM en radio profesional?», la formulación que encaja según el banco de examen es «Banda aérea». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15864,7 +15864,7 @@ export default [
       "Informal"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “conciso” en comunicación por radio?»). La opción que responde al criterio del banco es «Sin palabras de más».",
+    "explain": "En «¿Qué significa “conciso” en comunicación por radio?», la formulación que encaja según el banco de examen es «Sin palabras de más». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15879,7 +15879,7 @@ export default [
       "Repetir mucho"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “concentrado” en comunicación por radio?»). La opción que responde al criterio del banco es «Usar tecnicismos y datos justos».",
+    "explain": "En «¿Qué significa “concentrado” en comunicación por radio?», la formulación que encaja según el banco de examen es «Usar tecnicismos y datos justos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15909,7 +15909,7 @@ export default [
       "Vocalizar"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué no debe hacerse al hablar por radio digital?»). La opción que responde al criterio del banco es «Alzar la voz».",
+    "explain": "En «¿Qué no debe hacerse al hablar por radio digital?», la formulación que encaja según el banco de examen es «Alzar la voz». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15924,7 +15924,7 @@ export default [
       "Se mezcla con otras voces"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué sucede en digital cuando hay mala cobertura?»). La opción que responde al criterio del banco es «Se corta y parece “voz de pato”».",
+    "explain": "En «¿Qué sucede en digital cuando hay mala cobertura?», la formulación que encaja según el banco de examen es «Se corta y parece “voz de pato”». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15939,7 +15939,7 @@ export default [
       "Numeración de calle"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué indica “sentido de circulación”?»). La opción que responde al criterio del banco es «Dirección según vehículos».",
+    "explain": "En «¿Qué indica “sentido de circulación”?», la formulación que encaja según el banco de examen es «Dirección según vehículos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15954,7 +15954,7 @@ export default [
       "Circular en rotonda"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa contra sentido de circulación?»). La opción que responde al criterio del banco es «Circular en sentido contrario».",
+    "explain": "En «¿Qué significa contra sentido de circulación?», la formulación que encaja según el banco de examen es «Circular en sentido contrario». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15969,7 +15969,7 @@ export default [
       "Hacia el mar"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “ascendente” en orientación?»). La opción que responde al criterio del banco es «Subida».",
+    "explain": "En «¿Qué significa “ascendente” en orientación?», la formulación que encaja según el banco de examen es «Subida». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -15984,7 +15984,7 @@ export default [
       "Hacia el mar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “descendente”?»). La opción que responde al criterio del banco es «Bajada».",
+    "explain": "En «¿Qué significa “descendente”?», la formulación que encaja según el banco de examen es «Bajada». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16029,7 +16029,7 @@ export default [
       "Que identifica solo vehículos"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Que siempre es el mismo».",
+    "explain": "Un indicativo fijo es el distintivo estable de una estación instalada (no cambia al operar en otro sitio como un móvil). Por eso encaja «Que siempre es el mismo», frente a opciones que lo confunden con móvil, zona o vehículos.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16044,7 +16044,7 @@ export default [
       "Que identifica emergencias"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Que cambia según servicio».",
+    "explain": "Un indicativo variable puede cambiar según el servicio o modalidad de operación (por ejemplo estación móvil/portátil frente a fija). La respuesta correcta es «Que cambia según servicio».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16059,7 +16059,7 @@ export default [
       "Que identifica emergencias"
     ],
     "correctIndex": 0,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Asignado por habilidades o funciones».",
+    "explain": "El indicativo de especialización no es el distintivo ordinario EA… de la estación: se asigna en función de titulación, rol o habilidades acreditadas del operador (por ejemplo funciones específicas en el servicio). No es solo numérico, ni el indicativo de emergencias. La respuesta correcta es «Asignado por habilidades o funciones».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16074,7 +16074,7 @@ export default [
       "Aumentar potencia automaticamente"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa “monitorización remota” en radios modernas?»). La opción que responde al criterio del banco es «Controlar otro equipo a distancia».",
+    "explain": "En «¿Qué significa “monitorización remota” en radios modernas?», la formulación que encaja según el banco de examen es «Controlar otro equipo a distancia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16089,7 +16089,7 @@ export default [
       "Micrófono"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué es el vocoder en radios digitales?»). La opción que responde al criterio del banco es «Conversor de voz a datos».",
+    "explain": "En «¿Qué es el vocoder en radios digitales?», la formulación que encaja según el banco de examen es «Conversor de voz a datos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16104,7 +16104,7 @@ export default [
       "Grid Power Source"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa GPS en radios profesionales?»). La opción que responde al criterio del banco es «Global Positioning System».",
+    "explain": "En «¿Qué significa GPS en radios profesionales?», la formulación que encaja según el banco de examen es «Global Positioning System». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16119,7 +16119,7 @@ export default [
       "En clave"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa que una comunicación sea “banal”?»). La opción que responde al criterio del banco es «Entre amigos sin importancia».",
+    "explain": "En «¿Qué significa que una comunicación sea “banal”?», la formulación que encaja según el banco de examen es «Entre amigos sin importancia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16134,7 +16134,7 @@ export default [
       "Banales"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («¿Qué significa que una comunicación sea “crítica”?»). La opción que responde al criterio del banco es «Con importancia vital».",
+    "explain": "En «¿Qué significa que una comunicación sea “crítica”?», la formulación que encaja según el banco de examen es «Con importancia vital». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16179,7 +16179,7 @@ export default [
       "Orientación hacia el río"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En Barcelona, la ciudad está delimitada por el mar al sur y la montaña al norte. ¿Qué significa la r…»). La opción que responde al criterio del banco es «Orientación hacia el sur, hacia el mar».",
+    "explain": "En «En Barcelona, la ciudad está delimitada por el mar al sur y la montaña al norte. ¿Qué sign…», la formulación que encaja según el banco de examen es «Orientación hacia el sur, hacia el mar». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16194,7 +16194,7 @@ export default [
       "Orientación hacia el mar"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Con la referencia de barcelona, cuando se dice “lado MONTAÑA” se entiende…»). La opción que responde al criterio del banco es «Orientación hacia el norte, dirección montaña».",
+    "explain": "En «Con la referencia de barcelona, cuando se dice “lado MONTAÑA” se entiende…», la formulación que encaja según el banco de examen es «Orientación hacia el norte, dirección montaña». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16209,7 +16209,7 @@ export default [
       "Una calle principal"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («Cuando en comunicaciones de Barcelona se usa la palabra “BESÒS”, ¿qué indica?»). La opción que responde al criterio del banco es «Lado izquierdo de la ciudad mirando hacia el mar».",
+    "explain": "En «Cuando en comunicaciones de Barcelona se usa la palabra “BESÒS”, ¿qué indica?», la formulación que encaja según el banco de examen es «Lado izquierdo de la ciudad mirando hacia el mar». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16224,7 +16224,7 @@ export default [
       "Reemplazan a las direcciones oficiales"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre la normativa de aficionados y el BOE vigente («En orientación urbana, ¿qué ventaja tiene usar referencias como MAR, MONTAÑA, BESÒS o LLOBREGAT?»). La opción que responde al criterio del banco es «Evitar tener que usar coordenadas complicadas».",
+    "explain": "En «En orientación urbana, ¿qué ventaja tiene usar referencias como MAR, MONTAÑA, BESÒS o LLOB…», la formulación que encaja según el banco de examen es «Evitar tener que usar coordenadas complicadas». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -16600,7 +16600,7 @@ export default [
       "La capacidad del circuito disminuye"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («En un circuito eléctrico de corriente continua:»). La opción que responde al criterio del banco es «La intensidad está en razón directa a la tensión».",
+    "explain": "En «En un circuito eléctrico de corriente continua:», la formulación que encaja según el banco de examen es «La intensidad está en razón directa a la tensión». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16615,7 +16615,7 @@ export default [
       "Una resistencia cuyo valor se mantiene constante a medida que la temperatura disminuye"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Un termistor NTC es:»). La opción que responde al criterio del banco es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta».",
+    "explain": "En «Un termistor NTC es:», la formulación que encaja según el banco de examen es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16630,7 +16630,7 @@ export default [
       "Tener un sintonizador muy fino"
     ],
     "correctIndex": 2,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe p…»). La opción que responde al criterio del banco es «Tener una ROE baja».",
+    "explain": "En «Para tratar de minimizar la producción de interferencias con una estación de radioaficiona…», la formulación que encaja según el banco de examen es «Tener una ROE baja». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16645,7 +16645,7 @@ export default [
       "El de clase A tiene una distorsión elevada"
     ],
     "correctIndex": 0,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Existen varias clases de amplificadores, A, B, AB y C:»). La opción que responde al criterio del banco es «El de clase AB es una combinación de A y B».",
+    "explain": "En «Existen varias clases de amplificadores, A, B, AB y C:», la formulación que encaja según el banco de examen es «El de clase AB es una combinación de A y B». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16675,7 +16675,7 @@ export default [
       "Las emisiones parásitas"
     ],
     "correctIndex": 1,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Las emisiones situadas fuera de la banda necesaria están constituidas por:»). La opción que responde al criterio del banco es «El conjunto de emisiones no esenciales y las emisiones fuera de banda».",
+    "explain": "En «Las emisiones situadas fuera de la banda necesaria están constituidas por:», la formulación que encaja según el banco de examen es «El conjunto de emisiones no esenciales y las emisiones fuera de banda». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {
@@ -16810,7 +16810,7 @@ export default [
       "Todos los anteriores"
     ],
     "correctIndex": 3,
-    "explain": "Pregunta sobre ley de Ohm, potencia y circuitos en CC/CA («Indique que factores influyen en cualquier comunicación radioeléctrica:»). La opción que responde al criterio del banco es «Todos los anteriores».",
+    "explain": "En «Indique que factores influyen en cualquier comunicación radioeléctrica:», la formulación que encaja según el banco de examen es «Todos los anteriores». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (URE (electricidad y radioelectricidad)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente."
   },
   {

@@ -14,8 +14,13 @@ import {
 import { shuffle, buildQuestionList, shuffleQuestionOptions } from "./lib/quiz-session.js";
 import { filterQuestionsForSession } from "./lib/question-pool.mjs";
 import { isTemplateOnlyExplain, pedagogicalExplain } from "./lib/explain-quality.mjs";
-import { isGenericExplainText, isMisassignedPedagogicalExplain } from "./lib/explain-faithfulness.mjs";
+import {
+  isGenericExplainText,
+  isMisassignedPedagogicalExplain,
+  isStemExplainTopicConflict,
+} from "./lib/explain-faithfulness.mjs";
 import { generatePedagogicalExplain } from "./lib/generate-pedagogical-explain.mjs";
+import { buildBestExplain } from "./lib/build-best-explain.mjs";
 import {
   buildExamReadiness,
   buildRecommendedPlan,
@@ -298,6 +303,14 @@ function showView(id) {
     const on = a.getAttribute("data-nav") === id;
     if (on) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
+  });
+  syncNavGroups();
+}
+
+function syncNavGroups() {
+  document.querySelectorAll(".nav-group").forEach((g) => {
+    const active = g.querySelector("[data-nav][aria-current='page']");
+    g.classList.toggle("nav-group--active", !!active);
   });
 }
 
@@ -3014,7 +3027,8 @@ function quizFeedbackTemarioHint(q) {
 /** Explicación didáctica usable (sin plantillas genéricas ni LF/RST mal asignados). */
 function usablePedagogy(q) {
   const p = pedagogicalExplain(q);
-  if (!p || isMisassignedPedagogicalExplain(q)) return "";
+  if (!p || isGenericExplainText(p) || isMisassignedPedagogicalExplain(q)) return "";
+  if (isStemExplainTopicConflict(p, q.stem)) return "";
   return p;
 }
 
@@ -3167,9 +3181,17 @@ function quizFeedbackExplainParagraph(q) {
   if (!raw) {
     return `<p class="quiz-fb-explain muted"><strong>Explicación:</strong> No hay texto de explicación registrado en el banco para este ítem.</p>${quizFeedbackTemarioHint(q)}`;
   }
-  if (isGenericExplainText(raw) || isMisassignedPedagogicalExplain(q)) {
+  if (
+    isGenericExplainText(raw) ||
+    isMisassignedPedagogicalExplain(q) ||
+    (raw && isStemExplainTopicConflict(raw, q.stem))
+  ) {
+    const rebuilt = buildBestExplain(q);
+    if (rebuilt && !isGenericExplainText(rebuilt) && !isStemExplainTopicConflict(rebuilt, q.stem)) {
+      return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(rebuilt)}</p>${quizFeedbackTemarioHint(q)}`;
+    }
     const gen = generatePedagogicalExplain(q);
-    if (gen && !isGenericExplainText(gen)) {
+    if (gen && !isGenericExplainText(gen) && !isStemExplainTopicConflict(gen, q.stem)) {
       return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(gen)}</p>${quizFeedbackTemarioHint(q)}`;
     }
     return `<p class="quiz-fb-explain"><strong>Explicación:</strong> ${escapeHtml(fallbackReasoningForQuestion(q, q.correctIndex))}</p>${quizFeedbackTemarioHint(q)}`;
@@ -3967,6 +3989,9 @@ function initNav() {
       }
       $("#site-nav")?.classList.remove("is-open");
       $("#nav-toggle")?.setAttribute("aria-expanded", "false");
+      $("#site-nav")?.querySelectorAll(".nav-group[open]").forEach((d) => {
+        d.removeAttribute("open");
+      });
     });
   }
   if (!hashChangeBound) {
