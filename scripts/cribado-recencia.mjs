@@ -29,6 +29,7 @@ import {
   tierPassesCribado,
 } from "../lib/question-recency.mjs";
 import { pickDuplicateWinner } from "../lib/banco-dedupe.mjs";
+import { isOffTopicForRadioaficionadoExam } from "../lib/exam-scope.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -60,7 +61,12 @@ const obsoleteIds = [];
 /** @type {{ id: string, score: number, tier: string, q: object }[]} */
 const canonicals = [];
 
+const excludedScope = [];
 for (const q of all) {
+  if (isOffTopicForRadioaficionadoExam(q)) {
+    excludedScope.push(q.id);
+    continue;
+  }
   const meta = getRecencyMeta(q.id);
   tierCounts[meta.tier] += 1;
   sourceCounts.set(meta.source, (sourceCounts.get(meta.source) || 0) + 1);
@@ -146,6 +152,7 @@ lines.push(`export const CRIBADO_STATS = ${JSON.stringify(
     preferredAmpliado: preferredAmpliadoIds.length,
     preferredStrict: preferredStrictIds.length,
     obsoleteFlagged: obsoleteIds.length,
+    excludedOffTopic: excludedScope.length,
     historicUniqueStems: droppedHistoric.length,
   },
   null,

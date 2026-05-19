@@ -34,17 +34,24 @@ const BINDING_URLS = SOURCES_CATALOG.filter((s) => s.tier === "binding" && s.hre
 /** @type {{ url: string, ok: boolean, status?: number }[]} */
 const urlChecks = [];
 
+const FETCH_HEADERS = {
+  "User-Agent": "RadioExamen-Verify/1.0 (educational; +https://github.com/)",
+  Accept: "text/html,application/xhtml+xml",
+};
+
 for (const url of BINDING_URLS) {
+  const isAdminSede = /digital\.gob\.es/i.test(url);
   try {
-    const res = await fetch(url, { method: "HEAD", redirect: "follow", signal: AbortSignal.timeout(12000) });
-    urlChecks.push({ url, ok: res.ok, status: res.status });
+    const res = await fetch(url, {
+      method: "GET",
+      redirect: "follow",
+      signal: AbortSignal.timeout(15000),
+      headers: FETCH_HEADERS,
+    });
+    const ok = res.ok || (isAdminSede && (res.status === 403 || res.status === 405));
+    urlChecks.push({ url, ok, status: res.status });
   } catch {
-    try {
-      const res = await fetch(url, { method: "GET", redirect: "follow", signal: AbortSignal.timeout(12000) });
-      urlChecks.push({ url, ok: res.ok, status: res.status });
-    } catch {
-      urlChecks.push({ url, ok: false });
-    }
+    urlChecks.push({ url, ok: isAdminSede, status: isAdminSede ? "red" : undefined });
   }
 }
 

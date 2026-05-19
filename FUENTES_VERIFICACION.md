@@ -31,7 +31,7 @@ Este proyecto es una herramienta de estudio para el examen de radioaficionado en
 
 ## Regla editorial
 
-Si un banco antiguo contradice BOE o convocatoria vigente, se corrige la explicación y se indica el riesgo. No se debe reforzar un dato legal solo porque aparezca repetido en bancos de práctica.
+Si un banco antiguo contradice BOE-A-2013-7624, se corrigen la opción correcta y la explicación en el simulador (`npm run apply:boe-bank`). No se debe reforzar un dato legal solo porque aparezca repetido en bancos de práctica.
 
 Las preguntas que dependen de una figura de banco externo no pueden usar recreaciones aproximadas. Si no se dispone de la figura original exacta o de un calco documentado, la pregunta se conserva para auditoría pero queda excluida del banco activo.
 

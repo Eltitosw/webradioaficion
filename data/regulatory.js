@@ -7,9 +7,9 @@ import { boeLinksForRegulatory, boeMarcoLinksForRegulatory, BOE_CATALOG_REVIEWED
 export default {
   headline: "Normativa principal (España)",
   intro:
-    "La prueba de radioaficionado y la autorización se encuadran en el uso especial del espectro. La norma del servicio de aficionados es la Orden IET/1311/2013 (BOE-A-2013-7624). El marco general del dominio público radioeléctrico es el RD 123/2017 (BOE-A-2017-2460 consolidado; mod. BOE-A-2023-1192). El BOE-A-2006-10286 quedó derogado. Equipos e interfaces (2016/2026) complementan pero no sustituyen el anexo I del reglamento de aficionados.",
+    "Este simulador prepara el examen oficial de radioaficionado y la autorización administrativa en España (Secretaría de Estado de Telecomunicaciones y Digitalización). La norma del servicio es la Orden IET/1311/2013 (BOE-A-2013-7624). No incluye temas de Tráfico (DGT carreteras), TETRA ni bancos ajenos al temario del examen.",
   trustNote:
-    "Las asociaciones y los bancos de tests enlazan aquí como apoyo didáctico. Si hay discrepancia con un artículo o anexo del BOE, prevalece siempre el texto oficial y las resoluciones de la Administración competente.",
+    "Las asociaciones y los bancos de tests enlazan aquí como apoyo didáctico. El simulador corrige respuestas y explicaciones frente a BOE-A-2013-7624; si hubiera discrepancia con el texto oficial, prevalece siempre el BOE.",
   /** Saltos dentro de la vista Normativa (scroll suave). */
   normativaNav: [
     { id: "normativa-boe", label: "BOE" },
@@ -30,9 +30,14 @@ export default {
       links: [
         ...boeLinksForRegulatory(),
         {
-          label: "Autorización de radioaficionado · Secretaría de Estado competente",
+          label: "Exámenes de radioaficionado (convocatoria y programa)",
+          href: "https://avance.digital.gob.es/espectro/radioaficionados/Paginas/examenes-radioaficionado.aspx",
+          note: "Referencia oficial del examen: dos pruebas (electricidad/radioelectricidad y reglamentación). El simulador se alinea a este ámbito.",
+        },
+        {
+          label: "Autorización de radioaficionado",
           href: "https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx",
-          note: "Página administrativa sobre autorización de radioaficionado. La sede o URL concreta puede cambiar: busca «radioaficionado» o «dominio público radioeléctrico» en la sede ministerial vigente.",
+          note: "Trámite de autorización tras superar el examen. No confundir con la DGT de Tráfico (carreteras).",
         },
       ],
     },
@@ -87,7 +92,7 @@ export default {
       id: "normativa-practica",
       title: "4. Práctica de examen y bancos de preguntas",
       blurb:
-        "Material de entrenamiento. Los enunciados pueden quedar obsoletos o contener erratas: contrasta siempre con el BOE y el anexo I del reglamento.",
+        "Material de entrenamiento alineado con BOE-A-2013-7624. Si un enunciado antiguo contradice el BOE, el banco del simulador se corrige; prevalece siempre el texto oficial.",
       links: [
         {
           label: "Legislación y reglamentación · URE",
@@ -211,6 +216,14 @@ export default {
       bullets: [
         "Art. 25.h: en VHF/UHF, estaciones automáticas desatendidas —salvo circunstancias especiales motivadas— no superan 50 W de salida fuera del casco urbano y 10 W dentro; la ganancia del sistema radiante no suele superar 6 dBd (mismo artículo).",
         "Las potencias máximas por banda de emisión del aficionado (incluidos tramos en MHz) están en el anexo I, apartado 3.1, del mismo reglamento; conviene contrastar tests antiguos (p. ej. FEDI 2011) porque el enunciado puede quedar desfasado.",
+      ],
+    },
+    {
+      id: "admin-telecom",
+      title: "Administración competente (no es la DGT de Tráfico)",
+      bullets: [
+        "En tests antiguos aparece «Dirección General de Telecomunicaciones» o «DGTel»: la antigua autoridad de telecomunicaciones. No es la Dirección General de Tráfico (carreteras).",
+        "Hoy los trámites de aficionado corresponden a la Administración competente en telecomunicaciones o espectro radioeléctrico (Secretaría de Estado, sede digital.gob.es, etc.).",
       ],
     },
     {

@@ -22,7 +22,13 @@ Abre `http://localhost:3000` (o el puerto que indique el servidor).
 npm run verify:all
 ```
 
-Incluye integridad del banco (más de 1100 preguntas activas tras cribado ampliado), comprobaciones extra y tests.
+Incluye integridad del banco (~1040 preguntas de examen oficial, sin material TETRA/Tráfico), BOE, explicaciones y 78 tests.
+
+```bash
+npm run build:banco      # regenerar banco tras cambiar fuentes
+npm run build:web        # app.bundle.js para hosting estático
+npm run cleanup:project  # quitar SVG/scripts legacy (una vez)
+```
 
 ## Publicar una nueva versión
 

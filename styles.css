@@ -3676,17 +3676,80 @@ html.a11y-reduce-motion .flashcard__inner {
   margin: 0;
 }
 
+.temario-toolbar__jump-hint {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 0.88rem;
+}
+
+.temario-block-chips {
+  margin: 0.5rem 0 0.75rem;
+}
+
+.temario-block-chips__part {
+  margin-bottom: 0.65rem;
+}
+
+.temario-block-chips__label {
+  margin: 0 0 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.temario-block-chips__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.temario-block-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.45rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(147, 184, 255, 0.14);
+  touch-action: manipulation;
+}
+
+.temario-block-chip.is-active,
+.temario-block-chip.is-speaking {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 18%, var(--bg-card));
+}
+
 .temario-toolbar__jump {
   display: block;
   width: 100%;
   max-width: 28rem;
   margin-top: 0.35rem;
   padding: 0.55rem 0.75rem;
+  min-height: 44px;
   border-radius: 10px;
   border: 1px solid var(--line);
   background: var(--bg-card);
   color: var(--text);
   font-size: 1rem;
+  touch-action: manipulation;
+}
+
+@media (min-width: 901px) {
+  .temario-toolbar__jump-hint {
+    display: none;
+  }
+
+  .temario-block-chips {
+    display: none;
+  }
 }
 
 .temario-toc {

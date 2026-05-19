@@ -1,7 +1,7 @@
-Verificación de fuentes · 2026-05-18T21:11:30
+Verificación de fuentes · 2026-05-19T14:46:36
 
 === Catálogo (data/verification-sources.mjs) ===
-Entradas: 24
+Entradas: 25
 - binding: Vinculante (BOE, convocatoria, sede administrativa)
 - harmonization: Armonización CEPT/UIT (HAREC, licencia CEPT)
 - didactic: Didáctico (URE, manuales, guías, PDFs editoriales)
@@ -10,7 +10,7 @@ Entradas: 24
 
 === Preguntas del banco por nivel de fuente ===
 - didactic: 56
-- historical: 1024
+- historical: 938
 - project: 46
 
 === Enlaces vinculantes (comprobación HTTP) ===
@@ -24,7 +24,8 @@ Entradas: 24
 - OK 200 https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-5878
 - OK 200 https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-552
 - OK 200 https://www.boe.es/buscar/pdf/2013/BOE-A-2013-7624-consolidado.pdf
-- FALLO — https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx
+- OK red https://avance.digital.gob.es/espectro/radioaficionados/Paginas/examenes-radioaficionado.aspx
+- OK red https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx
 
 === regulatory.js ===
 OK: grupos y jerarquía presentes

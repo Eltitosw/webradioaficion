@@ -569,7 +569,7 @@ export default [
       "100 W",
     ],
     correctIndex: 2,
-    explain: "Art. 25.h: hasta 50 W fuera del casco urbano y hasta 10 W dentro del casco urbano (ganancia del sistema radiante limitada). El test FEDI 2011 planteaba «fuera» con opciones hasta 25 W y respuesta 10 W; eso contradice el texto vigente del BOE. FEDI-EA + BOE-A-2013-7624.",
+    explain: "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «50 W».",
   },
   {
     id: "fedi-ah-041",

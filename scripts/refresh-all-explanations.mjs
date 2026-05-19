@@ -7,6 +7,7 @@ import { fileURLToPath } from "url";
 import banco from "../data/questions-banco.js";
 import generated from "../data/generated-explanations.js";
 import quijotesExp from "../data/quijotes-explanations.js";
+import quijotesSource from "../data/quijotes-ea3rcq.js";
 import { isExplainAcceptable } from "../lib/explain-verify.mjs";
 import { isGenericExplainText, isRespectoTemplateExplain } from "../lib/explain-faithfulness.mjs";
 import { pedagogicalExplain } from "../lib/explain-quality.mjs";
@@ -24,9 +25,10 @@ const nextGen = { ...generated };
 const nextQuij = { ...quijotesExp };
 
 const MAX_PASSES = 6;
+const quijotesSourceIds = new Set(quijotesSource.map((q) => q.id));
 
 function storeExplain(q, text) {
-  if (q.id.startsWith("quijotes-")) {
+  if (q.id.startsWith("quijotes-") && quijotesSourceIds.has(q.id)) {
     nextQuij[q.id] = text;
   } else {
     nextGen[q.id] = text;

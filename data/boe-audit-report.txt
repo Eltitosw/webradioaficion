@@ -1,0 +1,5 @@
+Auditoría BOE — banco activo (1040 preguntas)
+Generado: 2026-05-19T14:43:53.114Z
+
+Resumen: 0 con patrón obsoleto · 0 aún no alineadas por reglas
+Ejecutar: npm run apply:boe-bank && npm run build:banco

@@ -1,1 +1,7 @@
 node_modules/
+.DS_Store
+Thumbs.db
+
+# Informes regenerables (npm run audit:* / verify:*)
+data/explain-strict-failures.txt
+data/bad-explain-stems.txt

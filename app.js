@@ -42,6 +42,14 @@ import {
 import appVersion from "./data/version.js";
 import { showAppConfirm, showQuizLeaveDialog, showReplaceDraftDialog, initAppDialog } from "./lib/app-dialog.js";
 import { buildProgressBackupPayload, applyProgressBackupPayload } from "./lib/progress-backup.js";
+import {
+  getTemarioPinnedBlockId,
+  primeTemarioSpeechVoices,
+  setTemarioPinnedBlockId,
+  speakTemarioBlock as speakTemarioBlockCore,
+  stopTemarioSpeech as stopTemarioSpeechCore,
+  temarioSpeechSupported,
+} from "./lib/temario-speech.mjs";
 
 const STORAGE_KEY = "radioexam_card_schedule_v1";
 const TOPIC_PRESELECT_KEY = "radioexam_practicar_topic";
@@ -819,22 +827,74 @@ function renderTemarioToc() {
     </nav>`;
 }
 
+function temarioPartPrefix(partId) {
+  if (partId === "p1") return "1.ª · ";
+  if (partId === "p2") return "2.ª · ";
+  return "";
+}
+
 function fillTemarioJumpSelect() {
   const sel = $("#temario-jump");
   if (!(sel instanceof HTMLSelectElement)) return;
   const parts = topicsData.parts || [];
-  sel.innerHTML =
-    '<option value="">Ir a un bloque…</option>' +
-    parts
-      .map((part) => {
-        const label =
-          part.id === "p1" ? "1.ª prueba" : part.id === "p2" ? "2.ª prueba" : part.title || part.id;
-        const opts = (part.blocks || [])
-          .map((b) => `<option value="temario-${escapeHtml(b.id)}">${escapeHtml(b.title)}</option>`)
-          .join("");
-        return `<optgroup label="${escapeHtml(label)}">${opts}</optgroup>`;
-      })
-      .join("");
+  const opts = ['<option value="">Ir a un bloque…</option>'];
+  for (const part of parts) {
+    const prefix = temarioPartPrefix(part.id);
+    for (const b of part.blocks || []) {
+      opts.push(
+        `<option value="temario-${escapeHtml(b.id)}">${escapeHtml(prefix + b.title)}</option>`,
+      );
+    }
+  }
+  sel.innerHTML = opts.join("");
+  const pinned = getTemarioPinnedBlockId();
+  if (pinned) sel.value = `temario-${pinned}`;
+}
+
+function fillTemarioBlockChips() {
+  const wrap = $("#temario-block-chips");
+  if (!wrap) return;
+  const parts = topicsData.parts || [];
+  const html = parts
+    .map((part) => {
+      const partLabel = part.id === "p1" ? "1.ª prueba" : part.id === "p2" ? "2.ª prueba" : part.title;
+      const buttons = (part.blocks || [])
+        .map(
+          (b) =>
+            `<button type="button" class="temario-block-chip" data-block-id="${escapeHtml(b.id)}" aria-pressed="false">${escapeHtml(b.title)}</button>`,
+        )
+        .join("");
+      return `<div class="temario-block-chips__part">
+        <p class="temario-block-chips__label">${escapeHtml(partLabel)}</p>
+        <div class="temario-block-chips__grid">${buttons}</div>
+      </div>`;
+    })
+    .join("");
+  wrap.innerHTML = html;
+  const pinned = getTemarioPinnedBlockId();
+  if (pinned) {
+    wrap.querySelectorAll(".temario-block-chip").forEach((btn) => {
+      const id = btn.getAttribute("data-block-id");
+      const on = id === pinned;
+      btn.classList.toggle("is-active", on);
+      if (btn instanceof HTMLButtonElement) btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+}
+
+function scrollToTemarioBlock(anchorId) {
+  if (!anchorId) return;
+  const el = document.getElementById(anchorId);
+  el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  setTemarioPinnedBlockId(anchorId.replace(/^temario-/, ""));
+  const sel = $("#temario-jump");
+  if (sel instanceof HTMLSelectElement) sel.value = anchorId;
+  document.querySelectorAll(".temario-block-chip").forEach((btn) => {
+    const id = btn.getAttribute("data-block-id");
+    const on = anchorId === `temario-${id}`;
+    btn.classList.toggle("is-active", on);
+    if (btn instanceof HTMLButtonElement) btn.setAttribute("aria-pressed", on ? "true" : "false");
+  });
 }
 
 function ensureTopicSelectFilled() {
@@ -891,6 +951,7 @@ function renderTemario() {
     )
       .join("");
     fillTemarioJumpSelect();
+    fillTemarioBlockChips();
     applyTemarioReadingMode(loadTemarioReadingOpts());
   } catch (err) {
     console.error("renderTemario", err);
@@ -928,20 +989,8 @@ function applyTemarioReadingMode(/** @type {{ linear: boolean }} */ opts) {
   if (opts.linear) setTemarioDetailsOpen(root, true);
 }
 
-function temarioSpeechSupported() {
-  return typeof window !== "undefined" && "speechSynthesis" in window;
-}
-
 function stopTemarioSpeech() {
-  if (!temarioSpeechSupported()) return;
-  window.speechSynthesis.cancel();
-  document.querySelectorAll(".temario-speak-block.is-speaking").forEach((el) => {
-    el.classList.remove("is-speaking");
-  });
-  const stopBtn = $("#temario-speak-stop");
-  const status = $("#temario-speak-status");
-  if (stopBtn instanceof HTMLButtonElement) stopBtn.hidden = true;
-  if (status) status.textContent = "";
+  stopTemarioSpeechCore();
 }
 
 function buildTemarioBlockSpeechText(blockId) {
@@ -975,6 +1024,8 @@ function buildTemarioBlockSpeechText(blockId) {
 }
 
 function getTemarioBlockIdForSpeech() {
+  const pinned = getTemarioPinnedBlockId();
+  if (pinned) return pinned;
   const jumpSel = $("#temario-jump");
   if (jumpSel instanceof HTMLSelectElement && jumpSel.value) {
     return jumpSel.value.replace(/^temario-/, "");
@@ -1001,6 +1052,15 @@ function updateTemarioSpeechUi(blockId, speaking) {
       btn.setAttribute("aria-pressed", speaking && id === blockId ? "true" : "false");
     }
   });
+  document.querySelectorAll(".temario-block-chip").forEach((btn) => {
+    const id = btn.getAttribute("data-block-id");
+    const on = id === blockId;
+    btn.classList.toggle("is-active", on);
+    btn.classList.toggle("is-speaking", speaking && on);
+    if (btn instanceof HTMLButtonElement) {
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    }
+  });
   if (status && blockId) {
     const block = (topicsData.parts || []).flatMap((p) => p.blocks || []).find((b) => b.id === blockId);
     status.textContent = speaking
@@ -1009,55 +1069,13 @@ function updateTemarioSpeechUi(blockId, speaking) {
   }
 }
 
-function pickSpanishSpeechVoice() {
-  const voices = window.speechSynthesis.getVoices();
-  return (
-    voices.find((v) => /^es(-|_)/i.test(v.lang) && v.localService) ||
-    voices.find((v) => /^es(-|_)/i.test(v.lang)) ||
-    null
-  );
-}
-
 function speakTemarioBlock(blockId) {
-  if (!blockId) {
-    showSaveToast("Selecciona un bloque en el temario o desplázate hasta uno.", true);
-    return;
-  }
-  if (!temarioSpeechSupported()) {
-    showSaveToast("Tu navegador no admite lectura en voz alta. Prueba Chrome o Edge.", true);
-    return;
-  }
-  const text = buildTemarioBlockSpeechText(blockId);
-  if (!text.trim()) {
-    showSaveToast("Este bloque no tiene texto de estudio para leer.", true);
-    return;
-  }
-  stopTemarioSpeech();
-  const blockEl = document.getElementById(`temario-${blockId}`);
-  setTemarioDetailsOpen(blockEl, true);
-  const utter = new SpeechSynthesisUtterance(text);
-  utter.lang = "es-ES";
-  utter.rate = 0.95;
-  const startUi = () => updateTemarioSpeechUi(blockId, true);
-  const endUi = () => updateTemarioSpeechUi(blockId, false);
-  utter.onstart = startUi;
-  utter.onend = endUi;
-  utter.onerror = endUi;
-  const speakNow = () => {
-    const voice = pickSpanishSpeechVoice();
-    if (voice) utter.voice = voice;
-    window.speechSynthesis.speak(utter);
-  };
-  if (pickSpanishSpeechVoice()) {
-    speakNow();
-    return;
-  }
-  const onVoices = () => {
-    window.speechSynthesis.removeEventListener("voiceschanged", onVoices);
-    speakNow();
-  };
-  window.speechSynthesis.addEventListener("voiceschanged", onVoices);
-  speakNow();
+  speakTemarioBlockCore(
+    blockId,
+    updateTemarioSpeechUi,
+    (msg, isError) => showSaveToast(msg, !!isError),
+    buildTemarioBlockSpeechText,
+  );
 }
 
 function initTemarioReading() {
@@ -1067,22 +1085,38 @@ function initTemarioReading() {
   const jumpSel = $("#temario-jump");
   const speakBtn = $("#temario-speak-start");
   const stopBtn = $("#temario-speak-stop");
+  const chipsWrap = $("#temario-block-chips");
   const root = $("#temario-root");
+
+  const startSpeech = () => {
+    primeTemarioSpeechVoices();
+    speakTemarioBlock(getTemarioBlockIdForSpeech());
+  };
 
   expandBtn?.addEventListener("click", () => setTemarioDetailsOpen(root, true));
   collapseBtn?.addEventListener("click", () => setTemarioDetailsOpen(root, false));
-  speakBtn?.addEventListener("click", () => speakTemarioBlock(getTemarioBlockIdForSpeech()));
+  speakBtn?.addEventListener("click", startSpeech);
   stopBtn?.addEventListener("click", () => stopTemarioSpeech());
 
-  if (temarioSpeechSupported() && window.speechSynthesis.onvoiceschanged !== undefined) {
-    window.speechSynthesis.onvoiceschanged = () => {};
-  }
+  chipsWrap?.addEventListener("click", (e) => {
+    const chip = e.target.closest(".temario-block-chip");
+    if (!chip || !chipsWrap.contains(chip)) return;
+    const blockId = chip.getAttribute("data-block-id");
+    if (!blockId) return;
+    setTemarioPinnedBlockId(blockId);
+    scrollToTemarioBlock(`temario-${blockId}`);
+    primeTemarioSpeechVoices();
+    speakTemarioBlock(blockId);
+  });
 
   root?.addEventListener("click", (e) => {
     const btn = e.target.closest(".temario-speak-block");
     if (!btn || !root.contains(btn)) return;
     const blockId = btn.getAttribute("data-block-id");
-    if (blockId) speakTemarioBlock(blockId);
+    if (blockId) {
+      setTemarioPinnedBlockId(blockId);
+      speakTemarioBlock(blockId);
+    }
   });
 
   if (readingChk instanceof HTMLInputElement) {
@@ -1098,10 +1132,11 @@ function initTemarioReading() {
 
   jumpSel?.addEventListener("change", () => {
     const id = jumpSel instanceof HTMLSelectElement ? jumpSel.value : "";
-    if (!id) return;
-    const el = document.getElementById(id);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
-    if (jumpSel instanceof HTMLSelectElement) jumpSel.value = "";
+    if (!id) {
+      setTemarioPinnedBlockId("");
+      return;
+    }
+    scrollToTemarioBlock(id);
   });
 }
 
@@ -2683,8 +2718,8 @@ function renderUtilidades() {
         preguntas de electricidad, radio y normativa del servicio de aficionados.
       </p>
       <p class="muted">
-        Las preguntas de primeros auxilios o señalización del banco histórico solo aparecen si practicas el bloque
-        <strong>Operación, emergencias y buenas prácticas</strong>.
+        No se incluyen temas de Tráfico (DGT carreteras), TETRA ni bancos ajenos al
+        <a href="https://avance.digital.gob.es/espectro/radioaficionados/Paginas/examenes-radioaficionado.aspx" target="_blank" rel="noopener noreferrer">examen oficial de radioaficionado</a>.
       </p>
       <a class="btn btn--primary btn--sm" href="#practicar" data-nav="practicar">Ir a practicar</a>
       <a class="btn btn--ghost btn--sm" href="#temario--operacion-seguridad" data-nav="temario">Temario · operación</a>
@@ -2861,7 +2896,7 @@ function renderQuizPracticeGuide() {
       <div>
         <h2>${escapeHtml(title)}</h2>
         <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test → explicación → refuerzo en Temario → repetición.</p>
-        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura original). Cribado: ${BANCO_STATS.cribadoPreferred ?? "?"} entradas únicas por enunciado. Las de primeros auxilios del banco histórico solo entran si eliges el tema <strong>Operación, emergencias y buenas prácticas</strong> (<a href="#utilidades" data-nav="utilidades">consulta en Utilidades</a>).</p>
+        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura). Ámbito: examen y autorización de radioaficionado (Ministerio). Sin Tráfico ni material TETRA/EA3RCQ.</p>
         ${
           trapOnly
             ? `<p><strong>Modo preguntas trampa activo:</strong> distractores típicos (${trapCount} con filtros actuales).</p>`

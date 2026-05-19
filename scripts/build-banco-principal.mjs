@@ -21,6 +21,7 @@ import { dedupeKey, writeQuestionModule, writeUtf8File } from "../lib/import-que
 import { dedupeBankByStem } from "../lib/banco-dedupe.mjs";
 import { fillBankToMinimum } from "../lib/banco-fill.mjs";
 import { MIN_BANCO_QUESTIONS } from "../lib/question-recency.mjs";
+import { isExcludedFromRadioaficionadoExam } from "../lib/question-pool.mjs";
 import { enrichFromExisting } from "../lib/figure-import.mjs";
 import { hasPedagogicalExplain, isTemplateOnlyExplain } from "../lib/explain-quality.mjs";
 import { repairQuestionFields } from "../lib/text-encoding.mjs";
@@ -61,7 +62,7 @@ function withPedagogicalExplain(q) {
   const out = { ...repaired, explain: text };
   if (prev && isTemplateOnlyExplain(prev)) {
     out.explainSourceNote = prev;
-  } else if (prev && !isTemplateOnlyExplain(prev)) {
+  } else if (prev && !isTemplateOnlyExplain(prev) && !prev.includes(text.slice(0, 40))) {
     out.explain = `${text} ${prev}`;
   }
   return repairQuestionFields(out);
@@ -90,6 +91,7 @@ for (const id of CRIBADO_PREFERRED_IDS) {
     missing.push(id);
     continue;
   }
+  if (isExcludedFromRadioaficionadoExam(q)) continue;
   const merged = withPedagogicalExplain(q);
   if (!hasValidOptions(merged)) continue;
   bankById.set(id, merged);

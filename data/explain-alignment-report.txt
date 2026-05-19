@@ -1,6 +1,6 @@
-Informe de alineación · 2026-05-18T19:33:47
-Banco: 1126 preguntas
-Didácticas: 1126
+Informe de alineación · 2026-05-19T14:42:50
+Banco: 1040 preguntas
+Didácticas: 1040
 Solo plantilla: 0
 Fallos de fidelidad: 0
 Avisos: 0

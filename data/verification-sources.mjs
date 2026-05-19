@@ -29,12 +29,20 @@ export const SOURCES_CATALOG = [
     note: "Misma norma que HTML; búsqueda de art. 25.h y anexo I.",
   },
   {
+    id: "admin-examenes",
+    tier: "binding",
+    title: "Exámenes de radioaficionado · convocatoria oficial",
+    href: "https://avance.digital.gob.es/espectro/radioaficionados/Paginas/examenes-radioaficionado.aspx",
+    format: "Web administración",
+    note: "Ámbito del simulador: dos pruebas del examen de capacitación.",
+  },
+  {
     id: "admin-autorizacion",
     tier: "binding",
     title: "Autorización radioaficionado · sede administrativa",
     href: "https://avance.digital.gob.es/espectro/radioaficionados/autorizaciones/Paginas/autorizacion-administrativa-radioaficionado.aspx",
     format: "Web administración",
-    note: "Trámites y requisitos vigentes; URL puede cambiar.",
+    note: "Trámite tras superar el examen. No confundir con la DGT de Tráfico.",
   },
   {
     id: "cept-tr-61-01",

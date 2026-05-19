@@ -253,7 +253,7 @@ export default [
       "20 W",
     ],
     correctIndex: 1,
-    explain: "Práctica histórica (URE (reglamentación)). Puede contener erratas u obsolescencia; contrastar con BOE/convocatoria vigente.",
+    explain: "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «10 W».",
   },
   {
     id: "ure-p2-19",
@@ -273,7 +273,7 @@ export default [
     id: "ure-p2-20",
     part: 2,
     topicId: "licencias-indicativos",
-    stem: "¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:",
+    stem: "¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo temporal?:",
     options: [
       "El Reglamento actual no contempla el uso de distintivos temporales",
       "Sólo para los extranjeros residentes en España",

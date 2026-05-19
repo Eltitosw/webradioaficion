@@ -1,14 +1,14 @@
 /**
  * Banco principal: cribado (tier A+B+C) + figuras certificadas, un enunciado = una pregunta.
- * Generado: 2026-05-18 · 1126 preguntas · npm run build:banco
- * Cribado: 1106 · En banco por id: 1106 · Sustituidas por versión con figura: 0
+ * Generado: 2026-05-19 · 1040 preguntas · npm run build:banco
+ * Cribado: 1020 · En banco por id: 1020 · Sustituidas por versión con figura: 0
  * Duplicados eliminados: 0 (0 exactos, 0 parafraseados)
- * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1126)
+ * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1040)
  * Con figura: 34
  */
 
-export const BANCO_GENERATED_AT = "2026-05-18";
-export const BANCO_STATS = {"count":1126,"cribadoPreferred":1106,"cribadoById":1106,"cribadoReplacedByFigure":0,"withFigure":34,"dedupeRemoved":0,"dedupeGroups":0,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1729};
+export const BANCO_GENERATED_AT = "2026-05-19";
+export const BANCO_STATS = {"count":1040,"cribadoPreferred":1020,"cribadoById":1020,"cribadoReplacedByFigure":0,"withFigure":34,"dedupeRemoved":0,"dedupeGroups":0,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1729};
 
 export default [
   {
@@ -99,21 +99,6 @@ export default [
     ],
     "correctIndex": 3,
     "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Con una sola bobina».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-a-010",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "En caso de accidente personal por quemaduras debe de atenderse a la victima:",
-    "options": [
-      "Limpiando las quemaduras con agua y llamando al médico",
-      "Aplicando aceite o cualquier otra grasa sobre las mismas y llamando a un médico.",
-      "Poniendo lana esterilizada y llamando a un médico.",
-      "Poniendo al accidentado en decúbito supino y llamando a un médico"
-    ],
-    "correctIndex": 0,
-    "explain": "En «En caso de accidente personal por quemaduras debe de atenderse a la victima:», la formulación que encaja según el banco de examen es «Limpiando las quemaduras con agua y llamando al médico». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -233,7 +218,7 @@ export default [
       "4"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «7». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «7». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -248,7 +233,7 @@ export default [
       "4"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «2». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «2». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -263,7 +248,7 @@ export default [
       "5"
     ],
     "correctIndex": 3,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «5». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «5». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -278,7 +263,7 @@ export default [
       "De un conjunto de antenas direccionales y antenas omnidireccionales"
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Las estaciones de aficionados deberán estar provistas de:»), el criterio de examen apunta a «Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El reglamento exige que la estación disponga de medios para comprobar su funcionamiento técnico (instrumentos de medida adecuados). No basta con operar «a ojo». La opción del banco es «Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -308,7 +293,7 @@ export default [
       "No se puede asignar en ningún caso"
     ],
     "correctIndex": 3,
-    "explain": "El sufijo PAN está reservado a estaciones de interés público (REDERA), no a distintivos de aficionado clase A. Por eso «No se puede asignar en ningún caso». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El sufijo PAN está reservado a estaciones de interés público (REDERA), no a distintivos de aficionado clase A. Por eso «No se puede asignar en ningún caso». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -428,7 +413,7 @@ export default [
       "Las variaciones de señal"
     ],
     "correctIndex": 1,
-    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Posibles descargas al operador». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Posibles descargas al operador».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -518,7 +503,7 @@ export default [
       "La Portadora"
     ],
     "correctIndex": 1,
-    "explain": "El control de volumen en RF ajusta el nivel de señal en radiofrecuencia antes de la etapa de audio. «El volumen en radiofrecuencia». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El control de volumen en RF ajusta el nivel de señal en radiofrecuencia antes de la etapa de audio. «El volumen en radiofrecuencia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -563,7 +548,7 @@ export default [
       "Vatio"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatio». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatio». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -833,7 +818,7 @@ export default [
       "Jaén"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Valencia». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Valencia». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -845,11 +830,10 @@ export default [
       "La Delegación de Industria",
       "El Ministerio de Trabajo",
       "La Dirección General de Radio y TV",
-      "La Dirección General de Telecomunicaciones"
+      "La Administración competente en telecomunicaciones (inspección del espectro)"
     ],
     "correctIndex": 3,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La Dirección General de Telecomunicaciones» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Las estaciones de aficionado quedan sometidas a la inspección de la Administración competente en materia de espectro (art. 33, BOE-A-2013-7624). «La Administración competente en telecomunicaciones (inspección del espectro)»."
   },
   {
     "id": "fedi-a-076",
@@ -863,7 +847,7 @@ export default [
       "No"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («¿Está permitido que una estación de aficionado se conecte con otras inst…»), el criterio de examen apunta a «Sí, cumpliendo ciertas condiciones». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La interconexión con otras instalaciones de radiocomunicación no está prohibida de forma absoluta: puede admitirse si se cumplen las condiciones que fija la normativa (protección de otros servicios, autorización cuando proceda). «Sí, cumpliendo ciertas condiciones». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -893,7 +877,7 @@ export default [
       "Polimetro"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Medidor estacionarias». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Medidor estacionarias». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -908,7 +892,7 @@ export default [
       "Al conectar el micrófono"
     ],
     "correctIndex": 0,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Al actuar sobre el conmutador emisión/recepción». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Al actuar sobre el conmutador emisión/recepción».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1148,7 +1132,7 @@ export default [
       "Alimentación"
     ],
     "correctIndex": 0,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Demodulación». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Demodulación».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1178,7 +1162,7 @@ export default [
       "Los pasos de audiofrecuencia"
     ],
     "correctIndex": 2,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Los pasos de frecuencia intermedia». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Los pasos de frecuencia intermedia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1223,7 +1207,7 @@ export default [
       "Al silenciador"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («A CUAL DE ESTOS CIRCUITOS DE LA PARTE RECEPTORA DE UN REPETIDOR DEBE EST…»), el criterio de examen apunta a «Al silenciador». Repasa cadenas de receptor y transmisor en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El relé de repetición debe activarse desde el silenciador (squelch) o cadena que detecta señal útil en recepción, no desde el amplificador de audio ni la fuente de alimentación. «Al silenciador». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1253,7 +1237,7 @@ export default [
       "QSL"
     ],
     "correctIndex": 1,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «QRO». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «QRO». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1328,7 +1312,7 @@ export default [
       "250 vatios"
     ],
     "correctIndex": 3,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «250 vatios». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Las potencias máximas por banda están en el anexo I del reglamento de aficionados (BOE-A-2013-7624). El test FEDI (2011) puede usar redacción antigua: contrasta la banda del enunciado con el anexo I vigente. La respuesta que marca el banco es «250 vatios».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1373,7 +1357,7 @@ export default [
       "Voltios."
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Voltios.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Voltios.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1448,7 +1432,7 @@ export default [
       "Amplificadores y filtros."
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Amplificadores y filtros.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Amplificadores y filtros.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1553,7 +1537,7 @@ export default [
       "Redes de desplazamiento de fase."
     ],
     "correctIndex": 0,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Un oscilador de frecuencia variable.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Un oscilador de frecuencia variable.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1585,7 +1569,7 @@ export default [
       "Su capacidad para rechazar señales fuertes."
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su capacidad para recibir señales débiles.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su capacidad para recibir señales débiles.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque aa)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1737,7 +1721,7 @@ export default [
       "Nunca."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Los extranjeros que acrediten documentalmente su condición de residentes…»), el criterio de examen apunta a «Sean titulares del Certificado HAREC.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Un extranjero residente puede obtener autorización en España si acredita residencia y, según el supuesto, el certificado HAREC (armonización CEPT T/R 61-02). «Sean titulares del Certificado HAREC.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -1763,12 +1747,11 @@ export default [
     "options": [
       "Si únicamente realiza emisiones en bandas de HF.",
       "Únicamente en localidades aisladas.",
-      "En ningún caso.",
+      "Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.",
       "Si dispone de diploma desde hace más de 15 años."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («¿Un radioaficionado podrá ser autorizado a instalar una estación automát…»), el criterio de examen apunta a «En ningún caso.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 23/10/2010 (bloque ab)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El reglamento (BOE-A-2013-7624) autoriza estaciones automáticas desatendidas (repetidores, radiobalizas, etc.) con resolución administrativa; no están prohibidas. La respuesta correcta es «Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.»."
   },
   {
     "id": "fedi-ag-001",
@@ -1810,7 +1793,7 @@ export default [
       "Banda lateral única"
     ],
     "correctIndex": 1,
-    "explain": "AM significa modulación de amplitud: la información viaja en los cambios de amplitud de la portadora. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio. No sirve como detector principal de FM (modulación de frecuencia), PM (modulación de fase) o SSB (banda lateral única). Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. AM significa modulación de amplitud: la información viaja en los cambios de amplitud de la portadora. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio. No sirve como detector principal de FM (modulación de frecuencia), PM (modulación de fase) o SSB (banda lateral única). FEDI-EA."
+    "explain": "AM significa modulación de amplitud: la información viaja en los cambios de amplitud de la portadora. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio. No sirve como detector principal de FM (modulación de frecuencia), PM (modulación de fase) o SSB (banda lateral única)."
   },
   {
     "id": "fedi-ag-004",
@@ -1854,7 +1837,7 @@ export default [
       "Ninguna de las respuestas anteriores es correcta"
     ],
     "correctIndex": 3,
-    "explain": "Tensión en paralelo, intensidad en serie; la resistencia se mide sin alimentación en circuito. La respuesta que marca el banco es «Ninguna de las respuestas anteriores es correcta». Tensión en paralelo, intensidad en serie; la resistencia se mide sin alimentación en circuito. FEDI-EA."
+    "explain": "Tensión en paralelo, intensidad en serie; la resistencia se mide sin alimentación en circuito. La respuesta que marca el banco es «Ninguna de las respuestas anteriores es correcta»."
   },
   {
     "id": "fedi-ag-007",
@@ -1988,7 +1971,7 @@ export default [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 2,
-    "explain": "ROE alta indica energía reflejada por desadaptación; el balun adapta sistemas balanceados y no balanceados. «Potencia de portadora». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Sin modulación solo se transmite la portadora no modulada. FEDI-EA."
+    "explain": "ROE alta indica energía reflejada por desadaptación; el balun adapta sistemas balanceados y no balanceados. «Potencia de portadora». (BOE-A-2013-7624). Sin modulación solo se transmite la portadora no modulada. FEDI-EA."
   },
   {
     "id": "fedi-ag-016",
@@ -2018,7 +2001,7 @@ export default [
       "Alto nivel de ruido térmico"
     ],
     "correctIndex": 2,
-    "explain": "Las no linealidades mezclan frecuencias y crean productos de intermodulación. La respuesta que marca el banco es «Distorsión por intermodulación». Las no linealidades mezclan frecuencias y crean productos de intermodulación. FEDI-EA."
+    "explain": "Las no linealidades mezclan frecuencias y crean productos de intermodulación. La respuesta que marca el banco es «Distorsión por intermodulación»."
   },
   {
     "id": "fedi-ag-018",
@@ -2032,7 +2015,7 @@ export default [
       "Un factor que solo se aplica en corriente continua"
     ],
     "correctIndex": 0,
-    "explain": "El factor de potencia (coseno φ) relaciona potencia activa y aparente en CA y refleja el desfase entre tensión y corriente. «Indicador del desfasaje entre tensión y corriente». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. cos φ relaciona potencia activa y aparente en CA. FEDI-EA."
+    "explain": "El factor de potencia (coseno φ) relaciona potencia activa y aparente en CA y refleja el desfase entre tensión y corriente. «Indicador del desfasaje entre tensión y corriente». (BOE-A-2013-7624). cos φ relaciona potencia activa y aparente en CA. FEDI-EA."
   },
   {
     "id": "fedi-ag-019",
@@ -2046,7 +2029,7 @@ export default [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 0,
-    "explain": "Diodo: conducción preferente en un sentido. La respuesta que marca el banco es «Permiten el paso de la corriente en una única dirección». Diodo: conducción preferente en un sentido. FEDI-EA."
+    "explain": "Diodo: conducción preferente en un sentido. La respuesta que marca el banco es «Permiten el paso de la corriente en una única dirección»."
   },
   {
     "id": "fedi-ag-020",
@@ -2062,7 +2045,7 @@ export default [
       "Una reducción del ruido captado por la antena."
     ],
     "correctIndex": 2,
-    "explain": "Los radiales influyen en la impedancia vista en la base. La respuesta que marca el banco es «Una variación de la impedancia de entrada.». Los radiales influyen en la impedancia vista en la base. FEDI-EA."
+    "explain": "Los radiales influyen en la impedancia vista en la base. La respuesta que marca el banco es «Una variación de la impedancia de entrada.»."
   },
   {
     "id": "fedi-ag-021",
@@ -2076,7 +2059,7 @@ export default [
       "Excesivo nivel de señal en la antena"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. La respuesta que marca el banco es «Excesivo nivel de señal en la antena». RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. FEDI-EA."
+    "explain": "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Señales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. La respuesta que marca el banco es «Excesivo nivel de señal en la antena»."
   },
   {
     "id": "fedi-ag-022",
@@ -2090,7 +2073,7 @@ export default [
       "No se puede calcular"
     ],
     "correctIndex": 0,
-    "explain": "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. La respuesta que marca el banco es «7.500 Ω y 5 %». En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. FEDI-EA."
+    "explain": "En el código de colores, violeta = 7, verde = 5, rojo = multiplicador ×10² y oro = tolerancia 5 %. Por tanto 75 × 100 = 7500 Ω, es decir 7,5 kΩ con 5 % de tolerancia. La respuesta que marca el banco es «7.500 Ω y 5 %»."
   },
   {
     "id": "fedi-ag-023",
@@ -2120,7 +2103,7 @@ export default [
       "Un valor de impedancia próximo a 50&Omega; y un diagrama de radiación prácticamente omnidireccional."
     ],
     "correctIndex": 3,
-    "explain": "Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. La respuesta que marca el banco es «Un valor de impedancia próximo a 50&Omega; y un diagrama de radiación prácticamente omnidireccional.». Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. FEDI-EA."
+    "explain": "Con ángulo ~45° suele acercarse a 50 Ω y el diagrama horizontal es más redondeado. La respuesta que marca el banco es «Un valor de impedancia próximo a 50&Omega; y un diagrama de radiación prácticamente omnidireccional.»."
   },
   {
     "id": "fedi-ag-025",
@@ -2134,7 +2117,7 @@ export default [
       "Tomas de tierra y condensadores"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y líneas donde no debe. La respuesta que marca el banco es «Tomas de tierra y condensadores». RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y líneas donde no debe. FEDI-EA."
+    "explain": "RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y líneas donde no debe. La respuesta que marca el banco es «Tomas de tierra y condensadores»."
   },
   {
     "id": "fedi-ag-026",
@@ -2192,7 +2175,7 @@ export default [
       "Suprimiendo la portadora"
     ],
     "correctIndex": 1,
-    "explain": "EMI significa interferencia electromagnética y RF significa radiofrecuencia. Los filtros de línea en la alimentación reducen interferencias conducidas. La respuesta que marca el banco es «Colocando un filtro apropiado». EMI significa interferencia electromagnética y RF significa radiofrecuencia. Los filtros de línea en la alimentación reducen interferencias conducidas. FEDI-EA."
+    "explain": "EMI significa interferencia electromagnética y RF significa radiofrecuencia. Los filtros de línea en la alimentación reducen interferencias conducidas. La respuesta que marca el banco es «Colocando un filtro apropiado»."
   },
   {
     "id": "fedi-ag-030",
@@ -2220,7 +2203,7 @@ export default [
       "En Europa sólo se exige en España y Portugal"
     ],
     "correctIndex": 0,
-    "explain": "La convocatoria oficial define dos pruebas independientes (técnica y reglamentación), alineadas con el programa de examen. La respuesta es «Evalúa la capacidad de la persona para operar estaciones radioeléctricas del Servicio de Aficionados y Servicio de Aficionados por Satélite». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Evalúa competencias; aún hay autorización y trámites. FEDI-EA bloque ah (22/10/2011)."
+    "explain": "La convocatoria oficial define dos pruebas independientes (técnica y reglamentación), alineadas con el programa de examen. La respuesta es «Evalúa la capacidad de la persona para operar estaciones radioeléctricas del Servicio de Aficionados y Servicio de Aficionados por Satélite». (BOE-A-2013-7624). Evalúa competencias; aún hay autorización y trámites. FEDI-EA bloque ah (22/10/2011)."
   },
   {
     "id": "fedi-ah-032",
@@ -2234,7 +2217,7 @@ export default [
       "No están permitidos en la reglamentación vigente"
     ],
     "correctIndex": 0,
-    "explain": "Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignación. La respuesta que marca el banco es «Se reservan para concursos internacionales de alta competitividad». Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignación. FEDI-EA."
+    "explain": "Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignación. La respuesta que marca el banco es «Se reservan para concursos internacionales de alta competitividad»."
   },
   {
     "id": "fedi-ah-033",
@@ -2248,7 +2231,7 @@ export default [
       "Empieza siempre por la letra Q"
     ],
     "correctIndex": 3,
-    "explain": "Los códigos Q son grupos de tres letras empezando por Q. La respuesta que marca el banco es «Empieza siempre por la letra Q». Los códigos Q son grupos de tres letras empezando por Q. FEDI-EA."
+    "explain": "Los códigos Q son grupos de tres letras empezando por Q. La respuesta que marca el banco es «Empieza siempre por la letra Q»."
   },
   {
     "id": "fedi-ah-034",
@@ -2262,7 +2245,7 @@ export default [
       "Medio año"
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Tres meses». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Plazo habitual citado en supuestos de comunidad de propietarios (verificar normativa vigente). FEDI-EA."
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Tres meses». (BOE-A-2013-7624). Plazo habitual citado en supuestos de comunidad de propietarios (verificar normativa vigente). FEDI-EA."
   },
   {
     "id": "fedi-ah-035",
@@ -2276,7 +2259,7 @@ export default [
       "Solo su titular"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («¿Quién puede hacer uso de una estación de aficionado?»), el criterio de examen apunta a «Cualquier titular de autorización de radioaficionado, con permiso de su propietario». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Un titular de autorización puede operar la estación de otro con permiso del titular de esa estación (criterio habitual URE/CEPT). La D omite ese supuesto. FEDI-EA."
+    "explain": "No cualquiera puede operar una estación ajena: debe ser titular de autorización de radioaficionado (o invitado con permiso del titular según otro enunciado). «Cualquier titular de autorización de radioaficionado, con permiso de su propietario». (BOE-A-2013-7624). Un titular de autorización puede operar la estación de otro con permiso del titular de esa estación (criterio habitual URE/CEPT). La D omite ese supuesto. FEDI-EA."
   },
   {
     "id": "fedi-ah-036",
@@ -2290,7 +2273,7 @@ export default [
       "Ninguno"
     ],
     "correctIndex": 0,
-    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opción «1 mes» para este enunciado. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Según el texto del test FEDI (2011); verifica plazos en la normativa y resoluciones actuales. FEDI-EA."
+    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opción «1 mes» para este enunciado. (BOE-A-2013-7624). Según el texto del test FEDI (2011); verifica plazos en la normativa y resoluciones actuales. FEDI-EA."
   },
   {
     "id": "fedi-ah-037",
@@ -2304,7 +2287,7 @@ export default [
       "Únicamente si emite con más de 500 W de potencia"
     ],
     "correctIndex": 2,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Siempre» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. La Administración puede inspeccionar el cumplimiento normativo. FEDI-EA."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Siempre» es la formulación del banco. (BOE-A-2013-7624). La Administración puede inspeccionar el cumplimiento normativo. FEDI-EA."
   },
   {
     "id": "fedi-ah-038",
@@ -2332,7 +2315,7 @@ export default [
       "Granada"
     ],
     "correctIndex": 0,
-    "explain": "En el esquema provincial de distritos del examen español, Guipúzcoa figura en el distrito 7. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen. En el esquema provincial de distritos del examen español, Guipúzcoa figura en el distrito 7. FEDI-EA."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Guipúzcoa». En el esquema provincial de distritos del examen español, Guipúzcoa figura en el distrito 7. FEDI-EA."
   },
   {
     "id": "fedi-ah-040",
@@ -2346,7 +2329,7 @@ export default [
       "100 W"
     ],
     "correctIndex": 2,
-    "explain": "Art. 25.h: hasta 50 W fuera del casco urbano y hasta 10 W dentro del casco urbano (ganancia del sistema radiante limitada). El test FEDI 2011 planteaba «fuera» con opciones hasta 25 W y respuesta 10 W; eso contradice el texto vigente del BOE. FEDI-EA + BOE-A-2013-7624."
+    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «50 W»."
   },
   {
     "id": "fedi-ah-041",
@@ -2360,7 +2343,7 @@ export default [
       "Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Si una antena debidamente autorizada, e instalada en la terraza de una C…»), el criterio de examen apunta a «Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Equilibrio entre obras y restitución; contrasta con Ley de propiedad horizontal vigente. FEDI-EA."
+    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalación unilateral sin informar. «Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales». (BOE-A-2013-7624). Equilibrio entre obras y restitución; contrasta con Ley de propiedad horizontal vigente. FEDI-EA."
   },
   {
     "id": "fedi-ah-042",
@@ -2374,7 +2357,7 @@ export default [
       "El deletreo no está permitido"
     ],
     "correctIndex": 0,
-    "explain": "En español se usan nombres ICAO en castellano (Noviembre, no November). La respuesta que marca el banco es «Alfa, Noviembre, Seis, Bravo, Lima». En español se usan nombres ICAO en castellano (Noviembre, no November). FEDI-EA."
+    "explain": "En español se usan nombres ICAO en castellano (Noviembre, no November). La respuesta que marca el banco es «Alfa, Noviembre, Seis, Bravo, Lima»."
   },
   {
     "id": "fedi-ah-043",
@@ -2388,7 +2371,7 @@ export default [
       "18 meses"
     ],
     "correctIndex": 1,
-    "explain": "Plazo del enunciado FEDI; verifica con reglamento vigente. La respuesta que marca el banco es «12 meses». Plazo del enunciado FEDI; verifica con reglamento vigente. FEDI-EA."
+    "explain": "Plazo del enunciado FEDI; verifica con reglamento vigente. La respuesta que marca el banco es «12 meses»."
   },
   {
     "id": "fedi-ah-044",
@@ -2402,7 +2385,7 @@ export default [
       "Siempre"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Siempre». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Identificación obligatoria según servicio. FEDI-EA."
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Siempre». (BOE-A-2013-7624). Identificación obligatoria según servicio. FEDI-EA."
   },
   {
     "id": "fedi-ah-045",
@@ -2416,7 +2399,7 @@ export default [
       "Emitir en las bandas y con las características del reglamento"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («La autorización de radioaficionado habilita a su titular para:»), el criterio de examen apunta a «Emitir en las bandas y con las características del reglamento». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. La autorización delimita bandas y condiciones técnicas según normativa. FEDI-EA."
+    "explain": "La autorización de radioaficionado acredita al titular para emitir en las bandas y condiciones que permite el reglamento vigente (BOE-A-2013-7624), no sustituye la licencia de estación cuando esta sea exigible. «Emitir en las bandas y con las características del reglamento». La autorización delimita bandas y condiciones técnicas según normativa. FEDI-EA."
   },
   {
     "id": "fedi-ah-046",
@@ -2444,7 +2427,7 @@ export default [
       "Periodo de validez"
     ],
     "correctIndex": 2,
-    "explain": "No es requisito CEPT listar la asociación del titular. La respuesta que marca el banco es «Asociación de radioaficionados a la que pertenece». No es requisito CEPT listar la asociación del titular. FEDI-EA."
+    "explain": "No es requisito CEPT listar la asociación del titular. La respuesta que marca el banco es «Asociación de radioaficionados a la que pertenece»."
   },
   {
     "id": "fedi-ah-048",
@@ -2458,7 +2441,7 @@ export default [
       "Distrito, prefijo y sufijo"
     ],
     "correctIndex": 1,
-    "explain": "Esquema típico EA + número de distrito + sufijo. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen. Esquema típico EA + número de distrito + sufijo. FEDI-EA."
+    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Prefijo, distrito y sufijo». Esquema típico EA + número de distrito + sufijo. FEDI-EA."
   },
   {
     "id": "fedi-ah-049",
@@ -2472,7 +2455,7 @@ export default [
       "Obtiene la nacionalidad del país"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Un radioaficionado español que traslade su residencia a un país con T/R …»), el criterio de examen apunta a «Dispone del certificado HAREC». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. El HAREC acredita el examen armonizado CEPT. FEDI-EA."
+    "explain": "En países que aplican T/R 61-02 (HAREC), el certificado facilita el reconocimiento de tu formación; cada administración mantiene su trámite de autorización local. «Dispone del certificado HAREC». (BOE-A-2013-7624). El HAREC acredita el examen armonizado CEPT. FEDI-EA."
   },
   {
     "id": "fedi-ah-050",
@@ -2500,7 +2483,7 @@ export default [
       "XXX"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «TTT». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. TTT es el sufijo que recoge este banco como asignable. XXX se descarta por su asociación a señales especiales o de llamada general en otros contextos; no conviene memorizarlo como sufijo ordinario de autorización."
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «TTT». (BOE-A-2013-7624). TTT es el sufijo que recoge este banco como asignable. XXX se descarta por su asociación a señales especiales o de llamada general en otros contextos; no conviene memorizarlo como sufijo ordinario de autorización."
   },
   {
     "id": "fedi-ah-052",
@@ -2514,7 +2497,7 @@ export default [
       "Al solicitar la autorización de radioaficionado"
     ],
     "correctIndex": 2,
-    "explain": "El seguro de antenas cubre daños a terceros por la instalación; es parte de la responsabilidad del titular. «Debe estar formalizado antes de la expedición de la licencia de estación». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Según el enunciado FEDI sobre memoria y seguro para licencia de estación. FEDI-EA."
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Debe estar formalizado antes de la expedición de la licencia de estación». (BOE-A-2013-7624). Según el enunciado FEDI sobre memoria y seguro para licencia de estación. FEDI-EA."
   },
   {
     "id": "fedi-ah-053",
@@ -2528,7 +2511,7 @@ export default [
       "Cualquier comunicación"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionado no es telecomunicación de terceros a libre elección. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. El servicio de aficionado no es telecomunicación de terceros a libre elección. FEDI-EA."
+    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos técnicos, formación y actividad propia del servicio, no tráfico ajeno. Por eso encaja «Comunicaciones relacionadas con el servicio de aficionados». (BOE-A-2013-7624). El servicio de aficionado no es telecomunicación de terceros a libre elección. FEDI-EA."
   },
   {
     "id": "fedi-ah-054",
@@ -2542,7 +2525,7 @@ export default [
       "No se aplican en el hemisferio sur"
     ],
     "correctIndex": 1,
-    "explain": "La banda de 70 cm es típica de repetidores en planes IARU Región 1. La respuesta que marca el banco es «Prevén repetidores en 433–433,375 MHz». La banda de 70 cm es típica de repetidores en planes IARU Región 1. FEDI-EA."
+    "explain": "La banda de 70 cm es típica de repetidores en planes IARU Región 1. La respuesta que marca el banco es «Prevén repetidores en 433–433,375 MHz»."
   },
   {
     "id": "fedi-ah-055",
@@ -2556,7 +2539,7 @@ export default [
       "Ondas decamétricas"
     ],
     "correctIndex": 2,
-    "explain": "MF (300–3000 kHz) ≈ ondas hectométricas (~100–1000 m). Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen. MF (300–3000 kHz) ≈ ondas hectométricas (~100–1000 m). FEDI-EA."
+    "explain": "En la nomenclatura ITU, MF (Medium Frequency) designa el tramo aproximado de 300–3000 kHz. Para este enunciado la respuesta correcta es «Ondas hectométricas». MF (300–3000 kHz) ≈ ondas hectométricas (~100–1000 m). FEDI-EA."
   },
   {
     "id": "fedi-ah-056",
@@ -2570,7 +2553,7 @@ export default [
       "Está prohibida"
     ],
     "correctIndex": 2,
-    "explain": "La colaboración es voluntaria salvo marcos específicos de coordinación. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. La colaboración es voluntaria salvo marcos específicos de coordinación. FEDI-EA."
+    "explain": "La ayuda en catástrofes es voluntaria; el radioaficionado no está obligado por el reglamento (BOE-A-2013-7624) a prestar servicios de emergencia. «Es voluntaria». La colaboración es voluntaria salvo marcos específicos de coordinación. FEDI-EA."
   },
   {
     "id": "fedi-ah-057",
@@ -2598,7 +2581,7 @@ export default [
       "Constituye el documento fundamental de regulación de la radioafición"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («El Reglamento de uso del dominio público radioeléctrico por aficionados:»), el criterio de examen apunta a «Constituye el documento fundamental de regulación de la radioafición». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Es la norma principal del servicio (junto a ley y reglamentos de desarrollo). FEDI-EA."
+    "explain": "El reglamento de aficionados (BOE-A-2013-7624) es la norma nacional que desarrolla bandas, potencias, procedimientos y requisitos del servicio en España. «Constituye el documento fundamental de regulación de la radioafición». Es la norma principal del servicio (junto a ley y reglamentos de desarrollo). FEDI-EA."
   },
   {
     "id": "fedi-ah-059",
@@ -2612,7 +2595,7 @@ export default [
       "Se permiten salvo que una Administración notifique oposición"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Según el artículo 25 del Reglamento de Radiocomunicaciones de la UIT, la…»), el criterio de examen apunta a «Se permiten salvo que una Administración notifique oposición». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen. Criterio habitual del temario sobre comunicaciones internacionales. FEDI-EA."
+    "explain": "El art. 25 UIT regula comunicaciones entre aficionados, identificación y condiciones del servicio; las administraciones pueden notificar restricciones. «Se permiten salvo que una Administración notifique oposición». (BOE-A-2013-7624). Criterio habitual del temario sobre comunicaciones internacionales. FEDI-EA."
   },
   {
     "id": "fedi-ah-060",
@@ -2626,7 +2609,7 @@ export default [
       "Seguir emitiendo"
     ],
     "correctIndex": 1,
-    "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. La respuesta que marca el banco es «Suspender de inmediato las emisiones». Ante interferencias perjudiciales, cesar emisiones hasta resolver. FEDI-EA."
+    "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. La respuesta que marca el banco es «Suspender de inmediato las emisiones»."
   },
   {
     "id": "fedi-b-158",
@@ -2940,7 +2923,7 @@ export default [
       "Es toda estación de aficionados destinada a ser utilizada en movimiento"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Estación movil de aficionado:»), el criterio de examen apunta a «Estación que puede ser utilizada en movimiento o mientras está detenida en puntos no determinados». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Estación móvil: puede usarse en movimiento o en un emplazamiento distinto del fijo habitual del titular (vehículo, desplazamiento). No es la fija ni la portátil de un día. «Estación que puede ser utilizada en movimiento o mientras está detenida en puntos no determinados». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3045,7 +3028,7 @@ export default [
       "Empiezan por combinaciones de 2 letras o cifras"
     ],
     "correctIndex": 2,
-    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «Empieza por la combinación de letras o cifras con una longitud máxima de tres.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Empieza por la combinación de letras o cifras con una longitud máxima de tres.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3060,7 +3043,7 @@ export default [
       "5"
     ],
     "correctIndex": 3,
-    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «5». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «5». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3180,7 +3163,7 @@ export default [
       "Al seleccionar la banda de funcionamíento"
     ],
     "correctIndex": 1,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En dos etapas; en la primera se aplica una tensión media; y después del primer ajuste, se aplica toda la tensión». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En dos etapas; en la primera se aplica una tensión media; y después del primer ajuste, se aplica toda la tensión». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3195,7 +3178,7 @@ export default [
       "Desconectar el micrófono y conectar en su lugar un altavoz"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Actuar un conmutador de paso de una a otra función». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Actuar un conmutador de paso de una a otra función».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3420,7 +3403,7 @@ export default [
       "3"
     ],
     "correctIndex": 2,
-    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «4». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «4». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3495,7 +3478,7 @@ export default [
       "Cuatro Nanovatios"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («LA POTENCIA DE LA RADIACIÓN PERTURBADORA DE LOS RECEPTORES DE UNA ESTACI…»), el criterio de examen apunta a «Cuatro Nanovatios». Repasa cadenas de receptor y transmisor en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los límites de emisiones no deseadas (espurios, LO) se expresan en potencia muy baja; el banco usa «cuatro nanovatios» como orden de magnitud del examen. «Cuatro Nanovatios». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3555,7 +3538,7 @@ export default [
       "Debe llevar un diferencial"
     ],
     "correctIndex": 0,
-    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «No debe llevar fusible de protección». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «No debe llevar fusible de protección». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3795,7 +3778,7 @@ export default [
       "Su posibilidad de detectar fielmente señales con interferencias"
     ],
     "correctIndex": 2,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su posibilidad de distinguir entre señales de frecuencias muy cercanas». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su posibilidad de distinguir entre señales de frecuencias muy cercanas».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3885,7 +3868,7 @@ export default [
       "Constituye una falta grave"
     ],
     "correctIndex": 0,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «No, si precede autorización de la Dirección General». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «No, si precede autorización de la Dirección General». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3900,7 +3883,7 @@ export default [
       "Grave"
     ],
     "correctIndex": 0,
-    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «No es falta». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «No es falta». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3911,12 +3894,11 @@ export default [
     "options": [
       "Marina mercante",
       "Ministerio de Defensa",
-      "Dirección General de Telecomunicaciones",
+      "La Administración competente en espectro radioeléctrico",
       "Dirección General de Seguridad y Orden Público"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE O…»), el criterio de examen apunta a «Dirección General de Telecomunicaciones». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Para utilizar una estación de radioaficionado hace falta la autorización de operador y, para emitir, la licencia de estación cuando proceda; lo gestiona la Administración competente (BOE-A-2013-7624). «La Administración competente en espectro radioeléctrico»."
   },
   {
     "id": "fedi-b-289",
@@ -3930,7 +3912,7 @@ export default [
       "Estación fija/portable"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («TODA ESTACIÓN DE AFICIONADO DESTINADA A SER UTILIZADA EN UN VEHICULO EN …»), el criterio de examen apunta a «Estación móvil». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La estación instalada o usada principalmente en un vehículo en movimiento se clasifica como estación móvil de aficionado. «Estación móvil». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3945,7 +3927,7 @@ export default [
       "2 años"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («EL PLAZO DE VALIDEZ DE LA AUTORIZACIÓN PARA QUE UN RADIOAFICIONADO PROCE…»), el criterio de examen apunta a «3 meses». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La autorización para montar la instalación tiene caducidad: si no montas en plazo, debes renovar o solicitar de nuevo según el reglamento del examen. El banco fija «3 meses». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3960,7 +3942,7 @@ export default [
       "Un servicio público de Protección Civil"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («EL SERVICIO DE RADIOAFICIONADOS ES:»), el criterio de examen apunta a «Un servicio de instrucción individual, de intercomunicación y de estudios de Radiotecnia, efectuado por personas debidamente autorizadas, con carácter personal y sin fines de lucro». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El servicio de aficionados es formativo e individual: ensayos técnicos, intercambio de mensajes entre radioaficionados y autoformación, no un servicio comercial de telecomunicaciones al público. «Un servicio de instrucción individual, de intercomunicación y de estudios de Radiotecnia, efectuado por personas debidamente autorizadas, con carácter personal y sin fines de lucro». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3975,7 +3957,7 @@ export default [
       "Valencia"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Huesca». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Huesca».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4230,7 +4212,7 @@ export default [
       "La consumida en la etapa intermedia del emisor"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La corriente del paso final multiplicada por la tensión de la red». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La potencia de salida puede calcularse como P = V·I en la etapa final (tensión de alimentación por corriente del etapa de potencia). «La corriente del paso final multiplicada por la tensión de la red». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4245,7 +4227,7 @@ export default [
       "Cuando se realicen ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "La barra /P indica operación portátil (estación fija/portátil fuera del emplazamiento habitual del titular). «Cuando se opera en grafía una estación Fija/Portable». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La barra /P indica operación portátil (estación fija/portátil fuera del emplazamiento habitual del titular). «Cuando se opera en grafía una estación Fija/Portable».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4260,7 +4242,7 @@ export default [
       "3 y 5"
     ],
     "correctIndex": 1,
-    "explain": "En indicativos españoles, la cifra 6 corresponde a Baleares (EA6) y la 8 a Canarias (EA8). «6 y 8». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En indicativos españoles, la cifra 6 corresponde a Baleares (EA6) y la 8 a Canarias (EA8). «6 y 8».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4320,7 +4302,7 @@ export default [
       "Se deben proteger con un fusible"
     ],
     "correctIndex": 1,
-    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «De baja resistencia». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «De baja resistencia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4350,7 +4332,7 @@ export default [
       "Máxima"
     ],
     "correctIndex": 2,
-    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Mínima». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «Mínima».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4395,7 +4377,7 @@ export default [
       "A3J"
     ],
     "correctIndex": 1,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «A1». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «A1».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4455,7 +4437,7 @@ export default [
       "La adaptación de impedacia"
     ],
     "correctIndex": 3,
-    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «La adaptación de impedacia». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «La adaptación de impedacia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4470,7 +4452,7 @@ export default [
       "Mayor en la primera y menor en la última"
     ],
     "correctIndex": 2,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La misma». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La misma».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4530,7 +4512,7 @@ export default [
       "Disminuir su capacidad"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Aumentar su capacidad». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Aumentar su capacidad».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4545,7 +4527,7 @@ export default [
       "A veces aumenta o disminuye"
     ],
     "correctIndex": 1,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Aumenta». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Aumenta».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4680,7 +4662,7 @@ export default [
       "Eliminando la resistencia de carga"
     ],
     "correctIndex": 0,
-    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «En la parte lineal de su característica». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarización define linealidad y eficiencia. «En la parte lineal de su característica».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4725,7 +4707,7 @@ export default [
       "Banda eliminada"
     ],
     "correctIndex": 2,
-    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Paso banda». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Paso banda».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4755,7 +4737,7 @@ export default [
       "Burgos"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Sevilla». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Sevilla».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4770,7 +4752,7 @@ export default [
       "10"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «1». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «1». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4830,7 +4812,7 @@ export default [
       "Leve"
     ],
     "correctIndex": 0,
-    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción grave. «Grave». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción grave. «Grave». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4845,7 +4827,7 @@ export default [
       "No es falta"
     ],
     "correctIndex": 0,
-    "explain": "Omitir o usar mal el distintivo al operar es infracción; el reglamento la califica como falta leve. «Una falta leve». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Omitir o usar mal el distintivo al operar es infracción; el reglamento la califica como falta leve. «Una falta leve». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4860,7 +4842,7 @@ export default [
       "No abonar los cánones y tasas correspondientes"
     ],
     "correctIndex": 3,
-    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «No abonar los cánones y tasas correspondientes». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «No abonar los cánones y tasas correspondientes». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4875,7 +4857,7 @@ export default [
       "Un distintivo temporal"
     ],
     "correctIndex": 2,
-    "explain": "Si opera un invitado autorizado, se transmite el distintivo del titular seguido del del operador invitado. «El del titular seguido del del otro radioaficionado». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Si opera un invitado autorizado, se transmite el distintivo del titular seguido del del operador invitado. «El del titular seguido del del otro radioaficionado». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4890,7 +4872,7 @@ export default [
       "Unicamente en caso de enfermedad"
     ],
     "correctIndex": 1,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Si, por falta grave». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Si, por falta grave». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4920,7 +4902,7 @@ export default [
       "250 watios"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («¿Cual es la potencia máxima de emisión, de una estación de radioaficiona…»), el criterio de examen apunta a «250 watios». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La potencia máxima depende de la banda y del tipo de estación (anexo I, BOE-A-2013-7624). El banco histórico puede citar 250 W u otros límites: contrasta banda y anexo I vigente. «250 watios».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4935,7 +4917,7 @@ export default [
       "Una vez al comienzo, otra en medio y al final de la emisión"
     ],
     "correctIndex": 3,
-    "explain": "En este supuesto del banco la identificación va al comienzo, a mitad de la emisión y al final. «Una vez al comienzo, otra en medio y al final de la emisión». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En este supuesto del banco la identificación va al comienzo, a mitad de la emisión y al final. «Una vez al comienzo, otra en medio y al final de la emisión». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -4965,7 +4947,7 @@ export default [
       "Con arreglo a un modelo común"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («La estación de aficionado debe estar construida:»), el criterio de examen apunta a «De acuerdo con el estado de desarrollo de la técnica radioeléctrica». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La estación debe ajustarse al estado de la técnica y a las normas de seguridad e inmunidad aplicables; no basta con montar equipo sin criterio técnico. «De acuerdo con el estado de desarrollo de la técnica radioeléctrica». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5115,7 +5097,7 @@ export default [
       "P = R t/I 2"
     ],
     "correctIndex": 0,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «P = R I 2». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «P = R I 2». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5325,7 +5307,7 @@ export default [
       "El conversor"
     ],
     "correctIndex": 0,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «El primer paso de radio frecuencia». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «El primer paso de radio frecuencia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5445,7 +5427,7 @@ export default [
       "Cuando lo deseen"
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Durante sus emisiones, las estaciones de aficionados:»), el criterio de examen apunta a «Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La identificación con el distintivo asignado es obligatoria en las emisiones; el momento exacto (inicio, mitad, final) depende del supuesto del enunciado. Aquí «Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5460,7 +5442,7 @@ export default [
       "Cuando se realizan ensayos o concursos"
     ],
     "correctIndex": 1,
-    "explain": "La barra /P indica operación portátil (estación fija/portátil fuera del emplazamiento habitual del titular). «Cuando se opera en grafía una estación Fija/Portable». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La barra /P indica operación portátil (estación fija/portátil fuera del emplazamiento habitual del titular). «Cuando se opera en grafía una estación Fija/Portable».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5469,14 +5451,13 @@ export default [
     "topicId": "electricidad-basica",
     "stem": "Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:",
     "options": [
-      "Únicamente si lo autoriza previamente la DGTel.",
+      "Únicamente si lo autoriza previamente la Administración competente en telecomunicaciones.",
       "Sí. Pero únicamente para las licencias de clase A y B",
       "Sí, pero sin cambiar el sistema de afianciamento de la misma",
-      "Sí, genéricamente con la obligación de informarlo a la DGTel."
+      "Sí, genéricamente con la obligación de informarlo a la Administración competente en telecomunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Se pueden introducir modificaciones de sistema radiante de una estación …»), el criterio de examen apunta a «Sí, genéricamente con la obligación de informarlo a la DGTel.». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "Cambiar el sistema radiante suele requerir informar a la Administración competente en telecomunicaciones; no es un cambio libre sin avisar (BOE-A-2013-7624). «Sí, genéricamente con la obligación de informarlo a la Administración competente en telecomunicaciones.»."
   },
   {
     "id": "fedi-d-432",
@@ -5490,7 +5471,7 @@ export default [
       "18 años"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («¿Qué edad mínima es necesaria para obtener una licencia de estación de a…»), el criterio de examen apunta a «15 años». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Para la licencia de estación de aficionado el reglamento del banco fija una edad mínima (15 años en este enunciado), con autorización de los representantes legales si es menor. «15 años». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5595,7 +5576,7 @@ export default [
       "Indiferente"
     ],
     "correctIndex": 1,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Baja potencia». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Baja potencia». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5865,7 +5846,7 @@ export default [
       "La de audiofrecuencia"
     ],
     "correctIndex": 1,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «La mezcladora». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «La mezcladora».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5940,7 +5921,7 @@ export default [
       "No se utilizan en las bandas de radioaficionados"
     ],
     "correctIndex": 1,
-    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Se utilizan para comunicaciones de corta distancia». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Se utilizan para comunicaciones de corta distancia».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5970,7 +5951,7 @@ export default [
       "Sí esta permitido"
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («¿Se puede conectar una estación de aficionado con otras instalaciones de…»), el criterio de examen apunta a «Sí esta permitido». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La interconexión con otras instalaciones de radiocomunicación no está prohibida de forma absoluta: puede admitirse si se cumplen las condiciones que fija la normativa (protección de otros servicios, autorización cuando proceda). «Sí esta permitido». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6420,7 +6401,7 @@ export default [
       "EF"
     ],
     "correctIndex": 2,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «EE». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «EE». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6435,7 +6416,7 @@ export default [
       "Emisiones de música, anuncios o propaganda"
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («EL TRAFICO ENTRE ESTACIONES DE AFICIONADOS ESTA AUTORIZADO PARA:»), el criterio de examen apunta a «Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal». Repasa ley de Ohm, potencia y circuitos en CC/CA en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El tráfico entre aficionados debe ceñirse al objeto del servicio: mensajes técnicos, ensayos y comunicaciones propias del hobby, no tráfico ajeno ni comercial. «Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6585,7 +6566,7 @@ export default [
       "Ese mando no influye para nada en la señal recibida"
     ],
     "correctIndex": 1,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Se recibirá perfectamente». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Se recibirá perfectamente».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6645,7 +6626,7 @@ export default [
       "Amperio"
     ],
     "correctIndex": 1,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Watio». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Watio». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6735,7 +6716,7 @@ export default [
       "Las superiores a 430 MHz"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («EN CONDICIONES NORMALES PARA UNA MISMA POTENCIA RADIADA, LAS ONDAS QUE L…»), el criterio de examen apunta a «Las de 144 MHz». Repasa campos, ondas y parámetros λ–f–v en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "A igual potencia, en VHF (144 MHz) la propagación por línea de vista suele ser más favorable que en HF para enlaces locales; el enunciado pide la banda con mejor alcance en esas condiciones. «Las de 144 MHz». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6847,7 +6828,7 @@ export default [
     "id": "fedi-d-563",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODIFUSION O TELEVISION A REQUERIMIENTO DE LA DIRECCION GENERAL DE TELECOMUNICACIONES, CONSTITUYE UNA FALTA:",
+    "stem": "NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODIFUSION O TELEVISION A REQUERIMIENTO DE la Administración COMPETENTE EN ESPECTRO RADIOELÉCTRICO, CONSTITUYE UNA FALTA:",
     "options": [
       "Grave",
       "Leve",
@@ -6855,8 +6836,7 @@ export default [
       "Depende de las circunstancias"
     ],
     "correctIndex": 0,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Grave».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "No atender el requerimiento de eliminar interferencias a radiodifusión/TV puede tipificarse como infracción grave según la Ley 11/2022 (BOE-A-2022-10757). «Grave»."
   },
   {
     "id": "fedi-d-564",
@@ -6870,7 +6850,7 @@ export default [
       "100"
     ],
     "correctIndex": 1,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «50». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «50». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6915,7 +6895,7 @@ export default [
       "No es falta"
     ],
     "correctIndex": 1,
-    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Muy grave». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Muy grave».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6945,14 +6925,14 @@ export default [
       "No puede emplearse en estaciones españolas"
     ],
     "correctIndex": 1,
-    "explain": "El prefijo EE delante del indicativo marca una autorización temporal de estación clase B según la nomenclatura del examen. «Un distintivo temporal para estaciones clase B». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El prefijo EE delante del indicativo marca una autorización temporal de estación clase B según la nomenclatura del examen. «Un distintivo temporal para estaciones clase B». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
     "id": "fedi-d-574",
     "part": 1,
     "topicId": "electricidad-basica",
-    "stem": "¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A LA DIRECCION GENERAL DE TELECOMUNICACIONES EL TRASLADO DE DICHA ESTACION A OTRO VEHICULO DE SU PROPIEDAD?",
+    "stem": "¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A la Administración COMPETENTE EN ESPECTRO RADIOELÉCTRICO EL TRASLADO DE DICHA ESTACION A OTRO VEHICULO DE SU PROPIEDAD?",
     "options": [
       "TRES meses",
       "UN año",
@@ -6960,8 +6940,7 @@ export default [
       "UN mes"
     ],
     "correctIndex": 2,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «DIEZ días». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
+    "explain": "El traslado de una estación móvil a otro vehículo debe notificarse a la Administración competente en el plazo que fija el reglamento (BOE-A-2013-7624). «DIEZ días»."
   },
   {
     "id": "fedi-d-576",
@@ -7065,7 +7044,7 @@ export default [
       "Modulación en frecuencia a modulación en amplitud"
     ],
     "correctIndex": 0,
-    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulación; el mando de modo debe seleccionar USB. «Banda lateral única, banda inferior a banda superior». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "USB (Upper Side Band) transmite la banda lateral superior de la modulación; el mando de modo debe seleccionar USB. «Banda lateral única, banda inferior a banda superior».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7080,7 +7059,7 @@ export default [
       "Daños en la etapa osciladora"
     ],
     "correctIndex": 0,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Daños en las válvulas del paso final». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Daños en las válvulas del paso final». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7245,7 +7224,7 @@ export default [
       "Intensidad máxima / intensidad mínima."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («La R.O.E. de una instalación de una antena de radioaficionado se expresa…»), el criterio de examen apunta a «Intensidad máxima / intensidad mínima.». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La ROE (relación de ondas estacionarias) compara componentes de la onda estacionaria en la línea; no es cociente de intensidades de campo del diagrama. Si el banco mezcla conceptos, elige la definición que marca «Intensidad máxima / intensidad mínima.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7395,7 +7374,7 @@ export default [
       "Aumentar la selectividad del receptor."
     ],
     "correctIndex": 2,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Suprimir el audio si no hay señal de RF.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Suprimir el audio si no hay señal de RF.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7440,7 +7419,7 @@ export default [
       "QRA"
     ],
     "correctIndex": 0,
-    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «QRM». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «QRM».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7455,7 +7434,7 @@ export default [
       "No se puede asignar."
     ],
     "correctIndex": 3,
-    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «No se puede asignar.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «No se puede asignar.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7470,7 +7449,7 @@ export default [
       "Sin sufijo."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Por un grupo alfanumérico.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Por un grupo alfanumérico.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7485,7 +7464,7 @@ export default [
       "La obligación de respetar el plan de bandas reservado al servicio de aficionados."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estacion…»), el criterio de examen apunta a «El derecho a instalar las antenas en el exterior de los inmuebles.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La Ley de 19 julio 1983 sobre inmobiliaria y antenas regula el derecho a instalar en fachadas y cubiertas con límites de seguridad y estética. «El derecho a instalar las antenas en el exterior de los inmuebles.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7500,7 +7479,7 @@ export default [
       "Presentar la autorización de radioaficionado a petición de las autoridades."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Para operar estaciones en el país visitado temporalmente, el radioaficio…»), el criterio de examen apunta a «Presentar la autorización de radioaficionado a petición de las autoridades.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Con licencia CEPT u homologación, en el país visitado debes poder acreditar tu autorización si la administración lo solicita. «Presentar la autorización de radioaficionado a petición de las autoridades.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7605,7 +7584,7 @@ export default [
       "La diferencia que existe entre la señal sintonizada y el ruido."
     ],
     "correctIndex": 2,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene para separar dos señales de frecuencias próximas.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene para separar dos señales de frecuencias próximas.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque g)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7800,7 +7779,7 @@ export default [
       "Cuando la instalación de la antena sea defectuosa."
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «En cualquier momento a petición del titular.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «En cualquier momento a petición del titular.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7815,7 +7794,7 @@ export default [
       "Tiene naturaleza de autorización colectiva."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («La autorización administrativa de uso del espectro radioeléctrico por ra…»), el criterio de examen apunta a «Para su obtención se requerirá la posesión previa del diploma de operador.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Primero se obtiene el diploma de operador (prueba de capacidad); la autorización de radioaficionado es el paso previo o paralelo según el trámite del enunciado. «Para su obtención se requerirá la posesión previa del diploma de operador.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 26/5/2007 (bloque h)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -7939,7 +7918,7 @@ export default [
       "Nunca."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («La instalación, en el exterior de los edificios, del sistema radiante de…»), el criterio de examen apunta a «Solo aquellas que por su simplicidad así lo autorice el Jefe Provincial de Inspección de Telecomunicaciones.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "No toda antena exige proyecto complejo: las de baja complejidad pueden autorizarse por procedimiento simplificado según el reglamento de antenas. «Solo aquellas que por su simplicidad así lo autorice el Jefe Provincial de Inspección de Telecomunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 15/11/2008 (bloque n)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8035,7 +8014,7 @@ export default [
       "Se trata de un distintivo solicitado por una Escuela Universitaria."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Esta emitiendo desde Andalucía.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Esta emitiendo desde Andalucía.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8050,7 +8029,7 @@ export default [
       "El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico."
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «El titular no tendrá que comunicar en ningún momento su intención de continuar utilizando el espectro radioeléctrico.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/10/2009 (bloque t)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8080,7 +8059,7 @@ export default [
       "No existe."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («El riesgo de producir interferencias, al aumentar la potencia de transmi…»), el criterio de examen apunta a «Mayor.». Repasa cadenas de receptor y transmisor en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "A mayor potencia de transmisión aumenta la probabilidad de interferir a otros receptores si no hay filtros, ubicación y buenas prácticas. «Mayor.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8110,7 +8089,7 @@ export default [
       "Mantener constante el valor de la frecuencia intermedia."
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Mantener constante la amplitud de la señal de salida.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Mantener constante la amplitud de la señal de salida.».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8264,7 +8243,7 @@ export default [
       "Depende de la potencia del equipo y se expresa en dBm."
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB).».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8309,7 +8288,7 @@ export default [
       "Sólo cuando hay interferencias."
     ],
     "correctIndex": 1,
-    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Si, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3–30 MHz. Para este enunciado la respuesta correcta es «Si, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8450,7 +8429,7 @@ export default [
       "Capacímetro."
     ],
     "correctIndex": 0,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatímetro.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatímetro.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque w)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8465,7 +8444,7 @@ export default [
       "Se trata de un estación no autorizada."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Si un radioaficionado se identifica como EA4ABC/M3BVM:»), el criterio de examen apunta a «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente una estación española.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La barra y el segundo indicativo indican operación con autorización de otro país (CEPT) o invitado según el patrón del enunciado (EA/IZ…, EA/…, EA…/R…). «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente una estación española.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 8/5/2010 (bloque x)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -8480,7 +8459,7 @@ export default [
       "P = V + I"
     ],
     "correctIndex": 1,
-    "explain": "Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad. La respuesta que marca el banco es «P = V · I». Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad.",
+    "explain": "Potencia en CC: P = V·I (vatios). Es fórmula básica del programa de electricidad. La respuesta que marca el banco es «P = V · I».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / electricidad básica; contrastar con manuales URE."
   },
   {
@@ -8525,7 +8504,7 @@ export default [
       "Igual de potencia"
     ],
     "correctIndex": 0,
-    "explain": "3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10. La respuesta que marca el banco es «Doblar la potencia». 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
+    "explain": "3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10. La respuesta que marca el banco es «Doblar la potencia».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
@@ -8810,7 +8789,7 @@ export default [
       "Son obligatorias en DX"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio. La respuesta que marca el banco es «No son propias del servicio y deben evitarse». El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio.",
+    "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con técnica, experimentación y aprendizaje. No debe usarse para tráfico secreto, comercial o ajeno a la finalidad del servicio. La respuesta que marca el banco es «No son propias del servicio y deben evitarse».",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
@@ -8990,7 +8969,7 @@ export default [
       "Ignorarla si la ROE es baja"
     ],
     "correctIndex": 1,
-    "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución. La respuesta que marca el banco es «Dejar de emitir hasta resolver el problema». La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución.",
+    "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución. La respuesta que marca el banco es «Dejar de emitir hasta resolver el problema».",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
@@ -9005,7 +8984,7 @@ export default [
       "Solo importa la resistencia"
     ],
     "correctIndex": 1,
-    "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente). La respuesta que marca el banco es «Se igualan en magnitud y se cancelan». En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente).",
+    "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente). La respuesta que marca el banco es «Se igualan en magnitud y se cancelan».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
@@ -9020,7 +8999,7 @@ export default [
       "Q = f + B"
     ],
     "correctIndex": 1,
-    "explain": "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos. La respuesta que marca el banco es «Q = f / B». Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos.",
+    "explain": "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos. La respuesta que marca el banco es «Q = f / B».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
@@ -9095,7 +9074,7 @@ export default [
       "Dos antenas obligatoriamente"
     ],
     "correctIndex": 1,
-    "explain": "La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas. La respuesta que marca el banco es «Dos frecuencias intermedias en cadena». La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas.",
+    "explain": "La doble conversión mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas. La respuesta que marca el banco es «Dos frecuencias intermedias en cadena».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
   },
   {
@@ -9110,7 +9089,7 @@ export default [
       "El código Q"
     ],
     "correctIndex": 1,
-    "explain": "Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB). La respuesta que marca el banco es «La diferencia en dB entre radiación frontal y posterior». Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB).",
+    "explain": "Relación delante-atrás: cuánto más radiada o recibida hay en el lóbulo principal frente a la parte trasera (en dB). La respuesta que marca el banco es «La diferencia en dB entre radiación frontal y posterior».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
@@ -9170,7 +9149,7 @@ export default [
       "V = I + R"
     ],
     "correctIndex": 1,
-    "explain": "La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R. La respuesta que marca el banco es «V = I · R». La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R."
+    "explain": "La ley de Ohm establece que la tensión es el producto de la intensidad por la resistencia: V = I·R. La respuesta que marca el banco es «V = I · R»."
   },
   {
     "id": "q10",
@@ -9198,7 +9177,7 @@ export default [
       "Está prohibido siempre"
     ],
     "correctIndex": 2,
-    "explain": "Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente. La respuesta que marca el banco es «Pueden existir límites y requisitos de comunicación/acuerdos según normativa y estatutos». Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente."
+    "explain": "Suele intervenir la propiedad horizontal y la normativa aplicable; conviene consultar texto legal vigente. La respuesta que marca el banco es «Pueden existir límites y requisitos de comunicación/acuerdos según normativa y estatutos»."
   },
   {
     "id": "q12",
@@ -9212,7 +9191,7 @@ export default [
       "Usar potencia máxima siempre"
     ],
     "correctIndex": 1,
-    "explain": "La identificación periódica y al cierre es requisito operativo habitual en el servicio de aficionado. La respuesta que marca el banco es «Identificarse al inicio y al final (y según intervalos reglamentarios)». La identificación periódica y al cierre es requisito operativo habitual en el servicio de aficionado."
+    "explain": "La identificación periódica y al cierre es requisito operativo habitual en el servicio de aficionado. La respuesta que marca el banco es «Identificarse al inicio y al final (y según intervalos reglamentarios)»."
   },
   {
     "id": "q2",
@@ -9240,7 +9219,7 @@ export default [
       "λ = c + f"
     ],
     "correctIndex": 1,
-    "explain": "λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas. La respuesta que marca el banco es «λ = c / f». λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas."
+    "explain": "λ = c/f. A frecuencias de radio, longitudes de onda cortas corresponden a frecuencias altas. La respuesta que marca el banco es «λ = c / f»."
   },
   {
     "id": "q4",
@@ -9282,7 +9261,7 @@ export default [
       "Modulación excesiva"
     ],
     "correctIndex": 1,
-    "explain": "ROE alta implica energía reflejada: desadaptación entre línea/antena y etapa de RF. La respuesta que marca el banco es «Desadaptación de impedancias». ROE alta implica energía reflejada: desadaptación entre línea/antena y etapa de RF."
+    "explain": "ROE alta implica energía reflejada: desadaptación entre línea/antena y etapa de RF. La respuesta que marca el banco es «Desadaptación de impedancias»."
   },
   {
     "id": "q7",
@@ -9728,7 +9707,7 @@ export default [
       "La capacidad de rechazar frecuencias superiores a la frecuencia intermedia."
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad de separar dos señales muy próximas en frecuencia.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad de separar dos señales muy próximas en frecuencia.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 174). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9758,7 +9737,7 @@ export default [
       "125 ohmios."
     ],
     "correctIndex": 2,
-    "explain": "La impedancia normalizada de salida en muchos transmisores y líneas coaxiales de radioaficionado es 50 ohmios, para facilitar la adaptación con cable, filtros y antenas. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «50 ohmios.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 176). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -9893,7 +9872,7 @@ export default [
       "Clase de emisión."
     ],
     "correctIndex": 2,
-    "explain": "La intermodulación se genera cuando varias señales pasan por una etapa no lineal y producen frecuencias nuevas no deseadas. Es una causa típica de interferencias. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La intermodulación se genera cuando varias señales pasan por una etapa no lineal y producen frecuencias nuevas no deseadas. Es una causa típica de interferencias.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 186). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10073,7 +10052,7 @@ export default [
       "15 vatios."
     ],
     "correctIndex": 2,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «120 vatios.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «120 vatios.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 201). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10088,7 +10067,7 @@ export default [
       "Haya ondas estacionarias."
     ],
     "correctIndex": 2,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «Exista adaptación de las impedancias». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Exista adaptación de las impedancias». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 202). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10118,7 +10097,7 @@ export default [
       "Se debe apagar la instalación de ICT."
     ],
     "correctIndex": 0,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Se tiene que dejar de emitir, al menos temporalmente.» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Se tiene que dejar de emitir, al menos temporalmente.» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 204). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10178,7 +10157,7 @@ export default [
       "Al oscilador local."
     ],
     "correctIndex": 2,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «A la salida del mezclador.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «A la salida del mezclador.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 212). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10223,7 +10202,7 @@ export default [
       "20.2 W"
     ],
     "correctIndex": 2,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «20 W». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los decibelios expresan relaciones logarítmicas; dBm referencia potencia a 1 mW. La respuesta es «20 W». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 219). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10403,7 +10382,7 @@ export default [
       "No es correcta ninguna de las anteriores respuestas."
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene de captar señales débiles y amplificarlas.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene de captar señales débiles y amplificarlas.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 239). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10598,7 +10577,7 @@ export default [
       "100 voltios"
     ],
     "correctIndex": 0,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «10 voltios». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «10 voltios». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 262). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10613,7 +10592,7 @@ export default [
       "No es necesario conectarlo a tierra"
     ],
     "correctIndex": 2,
-    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Proteger al operador de descargas». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Proteger al operador de descargas».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 263). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10658,7 +10637,7 @@ export default [
       "Convierten la señal recibida a una de frecuencia fija denominada frecuencia imagen"
     ],
     "correctIndex": 1,
-    "explain": "En conversión directa, la señal recibida se mezcla con un oscilador local para trasladarla directamente a audiofrecuencia o a una frecuencia muy baja. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En conversión directa, la señal recibida se mezcla con un oscilador local para trasladarla directamente a audiofrecuencia o a una frecuencia muy baja.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 266). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10778,7 +10757,7 @@ export default [
       "En la etapa de radiofrecuencia"
     ],
     "correctIndex": 1,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «En el mezclador». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «En el mezclador».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1561). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -10808,7 +10787,7 @@ export default [
       "Igual a la potencia media del transmisor."
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Superior a la potencia media del transmisor.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Superior a la potencia media del transmisor.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 1564). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11048,7 +11027,7 @@ export default [
       "22.000 W"
     ],
     "correctIndex": 2,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «2.200 W». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «2.200 W». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · electricidad-y-radioelectricidad, quiz 1, pregunta 2218). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11112,7 +11091,7 @@ export default [
       "El valor de la R.O.E. es 1."
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «El transmisor no está adaptado a la antena.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Potencia reflejada en el vatímetro indica desadaptación (ROE > 1): el transmisor no entrega toda la energía a la antena. «El transmisor no está adaptado a la antena.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1686). Contrastar con BOE y convocatoria."
   },
   {
@@ -11163,7 +11142,7 @@ export default [
       "Un oscilador."
     ],
     "correctIndex": 3,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Un oscilador.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Un receptor de FM en superheterodinia necesita oscilador local para mezclar con la señal de antena y obtener frecuencia intermedia; el diagrama incompleto carece de ese bloque. La opción correcta es «Un oscilador.».",
     "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1705). Contrastar con BOE y convocatoria."
   },
   {
@@ -11180,7 +11159,7 @@ export default [
       "El doble de la disipada en el circuito L-C."
     ],
     "correctIndex": 2,
-    "explain": "Cada instrumento mide una magnitud: potencia (vatímetro), forma de onda (osciloscopio), frecuencia (frecuencímetro) o espectro (analizador). «Mínima.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En resonancia serie el LC presenta impedancia mínima y puede desviar potencia: el vatímetro lee un valor mínimo hacia la carga. «Mínima.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · radioelectricidad-correccion-inmediata, quiz 83, pregunta 1710). Contrastar con BOE y convocatoria."
   },
   {
@@ -11209,26 +11188,10 @@ export default [
       "10 W.",
       "15 W.",
       "20 W.",
-      "25 W."
+      "50 W."
     ],
     "correctIndex": 3,
-    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «25 W.».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1812",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El deletreo del distintivo EA3RCQ según el alfabeto fonético internacional:",
-    "options": [
-      "Echo, Alfa, Tres, Romeo, Charlie, Quebec.",
-      "E, A, Tres, R, C, Q.",
-      "Echo, Alfa, Three, Romeo, Charlie, Quebec.",
-      "El deletreo de distintivos no está permitido."
-    ],
-    "correctIndex": 2,
-    "explain": "El deletreo internacional es letra por letra: E Echo, A Alfa, 3 Three, R Romeo, C Charlie y Q Quebec. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1812). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida máxima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). «50 W.»."
   },
   {
     "id": "quijotes-84-1817",
@@ -11242,7 +11205,7 @@ export default [
       "Periodo de validez."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Asociación de radioaficionados a la que pertenece.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Asociación de radioaficionados a la que pertenece.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11257,7 +11220,7 @@ export default [
       "Obtiene la nacionalidad del país donde resida."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Dispone del Certificado HAREC.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Dispone del Certificado HAREC.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11272,7 +11235,7 @@ export default [
       "Cualquier comunicación."
     ],
     "correctIndex": 1,
-    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos técnicos, formación y actividad propia del servicio, no tráfico ajeno. Por eso encaja «Comunicaciones relacionadas con el Servicio de Aficionados.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos técnicos, formación y actividad propia del servicio, no tráfico ajeno. Por eso encaja «Comunicaciones relacionadas con el Servicio de Aficionados.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11287,7 +11250,7 @@ export default [
       "Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («De acuerdo con el Artículo 25 del Reglamento de Radiocomunicaciones de l…»), el criterio de examen apunta a «Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El art. 25 UIT regula comunicaciones entre aficionados, identificación y condiciones del servicio; las administraciones pueden notificar restricciones. «Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1828). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11359,10 +11322,10 @@ export default [
       "La matrícula de su estación.",
       "Su distintivo de llamada asociado.",
       "El permiso de instalación de la antena.",
-      "La autorización del Ministerio de Industria, Turismo y Comercio para instalar la antena."
+      "La autorización de la Administración competente en espectro radioeléctrico para instalar la antena."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («¿Qué identifica a un radioaficionado titular de una autorización?:»), el criterio de examen apunta a «Su distintivo de llamada asociado.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Lo que identifica al operador autorizado ante terceros en emisión es su distintivo de llamada asignado, no el DNI ni el domicilio. «Su distintivo de llamada asociado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11392,7 +11355,7 @@ export default [
       "Permiso de un radio club."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («La obtención de la autorización de radioaficionado requerirá la obtenció…»), el criterio de examen apunta a «Diploma de operador.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Sin superar la prueba de operador (diploma) no se concede la autorización de radioaficionado. «Diploma de operador.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1835). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11409,7 +11372,7 @@ export default [
       "Distrito 6."
     ],
     "correctIndex": 2,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Distrito 5.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El mapa del enunciado corresponde al distrito EA5 (Comunidad Valenciana y Murcia en la tabla de residencia del BOE-A-2013-7624). La cifra 5 identifica ese distrito geográfico. «Distrito 5.».",
     "explainSourceNote": "Práctica con figura (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1836). Contrastar con BOE y convocatoria."
   },
   {
@@ -11439,7 +11402,7 @@ export default [
       "Las estaciones automáticas desatendidas analógicas y digitales respectivamente."
     ],
     "correctIndex": 3,
-    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones automáticas desatendidas (analógicas y digitales). «Las estaciones automáticas desatendidas analógicas y digitales respectivamente.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones automáticas desatendidas (analógicas y digitales). «Las estaciones automáticas desatendidas analógicas y digitales respectivamente.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1838). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11454,7 +11417,7 @@ export default [
       "El código de deletreo ICAO."
     ],
     "correctIndex": 3,
-    "explain": "Al deletrear un indicativo en fonía se usa el alfabeto fonético internacional (ICAO): Alfa, Bravo, Charlie…, no el código RST (que es informe de señal). La respuesta correcta es «El código de deletreo ICAO.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «El código de deletreo ICAO.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1839). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11469,7 +11432,7 @@ export default [
       "Los que comienzan por: EEE, EDD, EFF.v"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Los que comienzan por: UR y RC o RK.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones automáticas desatendidas (analógicas y digitales). «Los que comienzan por: UR y RC o RK.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1840). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11484,7 +11447,7 @@ export default [
       "Seis semanas."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («El plazo de que dispone la Administración para resolver y notíficar las …»), el criterio de examen apunta a «Seis semanas.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opción «Seis semanas.» para este enunciado. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1841). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11499,7 +11462,7 @@ export default [
       "Si se han examinado en España de la Reglamentación Nacional."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («La autorización de aficionados para extranjeros residentes en España se …»), el criterio de examen apunta a «Cuando sea titular de un certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Un extranjero residente puede obtener autorización en España si acredita residencia y, según el supuesto, el certificado HAREC (armonización CEPT T/R 61-02). «Cuando sea titular de un certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1842). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11529,7 +11492,7 @@ export default [
       "QRS."
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «EEE.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «EEE.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1844). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11544,7 +11507,7 @@ export default [
       "Certificado de empadronamiento."
     ],
     "correctIndex": 3,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Certificado de empadronamiento.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Certificado de empadronamiento.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1845). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11559,7 +11522,7 @@ export default [
       "30 a 300 MHz."
     ],
     "correctIndex": 0,
-    "explain": "Cada símbolo ITU agrupa un tramo espectral; LF son frecuencias muy bajas (30–300 kHz en la tabla habitual del examen). La respuesta es «30 a 300 kHz.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En la nomenclatura ITU, LF (Low Frequency) designa el tramo aproximado de 30–300 kHz. Para este enunciado la respuesta correcta es «30 a 300 kHz.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1846). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11574,7 +11537,7 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Como norma general, la instalación de una estación de aficionado deberá …»), el criterio de examen apunta a «Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Como norma general el montaje del sistema radiante lo realiza un instalador inscrito en el registro correspondiente. «Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1847). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11589,7 +11552,7 @@ export default [
       "No tienen limitaciones geográficas."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Las autorizaciones especiales de uso del espectro radioeléctrico por afi…»), el criterio de examen apunta a «Son nominativas y sólo habilitarán para la realización de emisiones a su titular.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Las autorizaciones especiales son personales (nominativas) y limitan bandas, potencia o modalidad; no son transferibles. «Son nominativas y sólo habilitarán para la realización de emisiones a su titular.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1848). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11604,7 +11567,7 @@ export default [
       "Milimétricas."
     ],
     "correctIndex": 1,
-    "explain": "VHF significa Very High Frequency y corresponde a ondas métricas, con longitudes de onda del orden de metros. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «Métricas.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1850). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11615,11 +11578,11 @@ export default [
     "options": [
       "Darse de baja inmediatamente en el servicio de aficionados.",
       "Deberá a su costa, adoptar en su estación todas las medidas razonables de tipo técnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspección de Telecomunicaciones las medidas adoptadas.",
-      "Cambiar de equipo antes de cualquier inspección por parte de la Dirección General de Telecomunicaciones.",
+      "Cambiar de equipo antes de cualquier inspección por parte de la Administración competente en espectro radioeléctrico.",
       "Seguir emitiendo."
     ],
     "correctIndex": 1,
-    "explain": "Si se causan interferencias a servicios autorizados, el titular debe adoptar medidas técnicas razonables a su costa y comunicar lo hecho a la inspección competente. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Deberá a su costa, adoptar en su estación todas las medidas razonables de tipo técnico, para eliminar dicha interferencia, comunicando a la Jefatura Provincial de Inspección de Telecomunicaciones las medidas adoptadas.» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1851). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11634,7 +11597,7 @@ export default [
       "No es obligatorio disponer de estación fija."
     ],
     "correctIndex": 3,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «No es obligatorio disponer de estación fija.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «No es obligatorio disponer de estación fija.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1852). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11649,7 +11612,7 @@ export default [
       "Su nueva provincia de residencia se encuentra en distinta Comunidad Autónoma."
     ],
     "correctIndex": 2,
-    "explain": "Si la nueva residencia está en otro distrito (otra cifra EA), no puedes conservar el mismo indicativo sin trámite. «Su nueva provincia de residencia pertenece a un distrito distinto.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Si la nueva residencia está en otro distrito (otra cifra EA), no puedes conservar el mismo indicativo sin trámite. «Su nueva provincia de residencia pertenece a un distrito distinto.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1853). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11664,7 +11627,7 @@ export default [
       "Únicamente si efectúa emisiones en frecuencias atribuidas al Servicio de Aficionados por Satélite."
     ],
     "correctIndex": 2,
-    "explain": "Pertenecer a una asociación puede ser útil, pero no es requisito legal para operar con autorización vigente. Por eso «No, pero es recomendable.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Pertenecer a una asociación puede ser útil, pero no es requisito legal para operar con autorización vigente. Por eso «No, pero es recomendable.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1854). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11679,7 +11642,7 @@ export default [
       "Se compromete a emitir únicamente en VHF."
     ],
     "correctIndex": 0,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Croacia aplica la Recomendación T/R 61-02 de la CEPT.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Croacia aplica la Recomendación T/R 61-02 de la CEPT.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1855). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11694,7 +11657,7 @@ export default [
       "Banda lateral única con portadora reducida."
     ],
     "correctIndex": 1,
-    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Doble banda lateral con un solo canal con información analógica.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Doble banda lateral con un solo canal con información analógica.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1856). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11709,7 +11672,7 @@ export default [
       "Bravo, Ortega, Julio."
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Bravo, Oscar, Juliett.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Bravo, Oscar, Juliett.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1859). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11754,7 +11717,7 @@ export default [
       "Ocho semanas."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («¿Qué plazo tiene la Administración para resolver una solicitud de Autori…»), el criterio de examen apunta a «Seis semanas.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los plazos de resolución administrativa están en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). «Seis semanas.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1863). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11799,7 +11762,7 @@ export default [
       "EPA, EQZ, EAA."
     ],
     "correctIndex": 1,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «EA, EB, EC.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «EA, EB, EC.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1866). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11814,7 +11777,7 @@ export default [
       "Ninguna de ellas, ya no es necesario comunicarlo."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («¿Cuáles de estas causas será causa específica de revocación de la autori…»), el criterio de examen apunta a «Ninguna de ellas, ya no es necesario comunicarlo.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La revocación exige causas tasadas en el reglamento; el enunciado pide la opción que el banco considera correcta (a veces refleja normativa derogada: léelo como «según el banco»). «Ninguna de ellas, ya no es necesario comunicarlo.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11829,7 +11792,7 @@ export default [
       "Usos temporales de relevancia internacional."
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Usos temporales de especial relevancia para eventos de carácter regional, autonómico o local.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Usos temporales de especial relevancia para eventos de carácter regional, autonómico o local.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1868). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11844,7 +11807,7 @@ export default [
       "Estación de control."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Entre las abreviaturas más usuales en las comunicaciones de radioaficion…»), el criterio de examen apunta a «Cierre de la estación.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "QRT indica cese de transmisión o cierre de estación en el Q-code internacional; otros Q-codes abrevian tráfico (QSY, QSL…). «Cierre de la estación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1869). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11889,7 +11852,7 @@ export default [
       "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar."
     ],
     "correctIndex": 1,
-    "explain": "En instalaciones combina normativa de antenas, seguridad eléctrica y buenas prácticas de RF. «Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1872). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11904,7 +11867,7 @@ export default [
       "Intermitente."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («El acceso a los repetidores analógicos y digitales finales será necesari…»), el criterio de examen apunta a «Libre y si estuvieran dotados de código de acceso, este deberá ser público.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El acceso a repetidores debe ser libre salvo código técnico justificado; no puede reservarse a un club sin base reglamentaria. «Libre y si estuvieran dotados de código de acceso, este deberá ser público.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1873). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11934,8 +11897,7 @@ export default [
       "Comunicarlo por escrito a la propiedad del inmueble o, en su caso, de la comunidad de propietarios."
     ],
     "correctIndex": 1,
-    "explain": "Una vez cancelada la licencia, mantener el sistema radiante solo para recepción exige autorización escrita de la propiedad o comunidad, porque sigue afectando al inmueble. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1875). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Tras cancelar la licencia, conservar el sistema radiante solo para recepción requiere autorización escrita del propietario o de la comunidad de propietarios (BOE-A-2013-7624). «Autorización por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios.»."
   },
   {
     "id": "quijotes-84-1876",
@@ -11949,7 +11911,7 @@ export default [
       "Telefonía con un solo canal."
     ],
     "correctIndex": 3,
-    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Telefonía con un solo canal.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Telefonía con un solo canal.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1876). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11964,7 +11926,7 @@ export default [
       "Toda la gama de frecuencias que pueda utilizar."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («La instalación y funcionamiento de una estación de aficionado precisará …»), el criterio de examen apunta a «La autorización de radioaficionado de su titular.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Sin titular con autorización de radioaficionado (y licencia de estación cuando proceda) no hay instalación regular. «La autorización de radioaficionado de su titular.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1877). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11979,7 +11941,7 @@ export default [
       "Colectiva de aficionado."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («No se puede considerar como estación automática desatendida a una estaci…»), el criterio de examen apunta a «Colectiva de aficionado.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Una estación colectiva de aficionados sí puede ser automática desatendida si cumple requisitos; el enunciado pide la opción que no encaja con la definición. «Colectiva de aficionado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1878). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11994,7 +11956,7 @@ export default [
       "Detectar y reducir interferencias dentro de un área determinada."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Qué objetivo se pretende al instalar un repetidor de radioficionado:»), el criterio de examen apunta a «Ampliar el alcance de las comunicaciones.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El repetidor amplía cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tráfico ajeno al servicio. «Ampliar el alcance de las comunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1879). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12009,7 +11971,7 @@ export default [
       "Tres en VHF y dos en UHF."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una z…»), el criterio de examen apunta a «Se autorizarán en función de las necesidades del servicio.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El número de desatendidas autorizadas depende de necesidades del servicio y criterio de la administración, no de un cupo fijo universal en el enunciado. «Se autorizarán en función de las necesidades del servicio.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1880). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12024,7 +11986,7 @@ export default [
       "Se trata de un estación no autorizada."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Si un radioaficionado se identifica como EA2ABC/R7BHZ:»), el criterio de examen apunta a «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La barra y el segundo indicativo indican operación con autorización de otro país (CEPT) o invitado según el patrón del enunciado (EA/IZ…, EA/…, EA…/R…). «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12034,13 +11996,12 @@ export default [
     "stem": "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
     "options": [
       "Si la antigüedad de su licencia es superior a 5 años.",
-      "En ningún caso.",
+      "Sí, previa autorización administrativa conforme al reglamento.",
       "Unicamente en localidades de menos de 5000 habitantes.",
       "Si la cota de su emplazamiento es inferior a 500 metros."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Un radioaficionado podrá ser autorizado a instalar un repetidor:»), el criterio de examen apunta a «En ningún caso.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1883). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Los repetidores son estaciones automáticas desatendidas reguladas en el art. 24 y autorizables según el art. 25 (BOE-A-2013-7624). La respuesta correcta es «Sí, previa autorización administrativa conforme al reglamento.»."
   },
   {
     "id": "quijotes-84-1884",
@@ -12054,7 +12015,7 @@ export default [
       "Por cualquier persona."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («El montaje del sistema radiante de una estación fija de radioaficionado …»), el criterio de examen apunta a «Como norma general, por un instalador de telecomunica­ciones autorizado.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Como norma general el montaje del sistema radiante lo realiza un instalador inscrito en el registro correspondiente. «Como norma general, por un instalador de telecomunica­ciones autorizado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1884). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12069,7 +12030,7 @@ export default [
       "Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Un radioaficionado podrá instalar la antena de su estación fija en el ex…»), el criterio de examen apunta a «Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El titular puede usar zonas comunes o fachada del inmueble donde tiene derecho, respetando normativa de antenas y comunidad de propietarios. «Está legitimado para usar la totalidad o parte del mismo y ha obtenido autorización reglamentaria.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1885). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12084,7 +12045,7 @@ export default [
       "Unicamente puede emitir en frecuencias de HF."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Un radioaficionado español que utiliza temporalmente su estación en Aust…»), el criterio de examen apunta a «No podrá solicitar protección contra interferencias perjudiciales.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En país visitado CEPT aplicas sus condiciones locales; la protección contra interferencias la rige la administración visitada. «No podrá solicitar protección contra interferencias perjudiciales.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1886). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12099,7 +12060,7 @@ export default [
       "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general."
     ],
     "correctIndex": 2,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La emisión de señales de identificación falsas o engañosas.» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La emisión de señales de identificación falsas o engañosas.» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1887). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12144,7 +12105,7 @@ export default [
       "Se trata de una conexión con interferencias."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Que está ocurriendo si un radioaficionado se identifica como EA3/IZ4RKL:»), el criterio de examen apunta a «Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La barra y el segundo indicativo indican operación con autorización de otro país (CEPT) o invitado según el patrón del enunciado (EA/IZ…, EA/…, EA…/R…). «Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1891). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12159,7 +12120,7 @@ export default [
       "Nunca."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Se puede interferir deliberadamente a otra estación de radioaficionado:»), el criterio de examen apunta a «Nunca.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Interferir a sabiendas a otra estación está prohibido; es mala práctica e infracción. «Nunca.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12174,7 +12135,7 @@ export default [
       "Doce palabras por minuto."
     ],
     "correctIndex": 1,
-    "explain": "La identificación automática en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). «Diez palabras por minuto.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La identificación automática en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). «Diez palabras por minuto.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1893). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12204,8 +12165,7 @@ export default [
       "20 W."
     ],
     "correctIndex": 1,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «10 W.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1897). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «10 W.»."
   },
   {
     "id": "quijotes-84-1898",
@@ -12219,7 +12179,7 @@ export default [
       "Documento que acredite estar inscrito en un asociación de Radioaficionado."
     ],
     "correctIndex": 0,
-    "explain": "Para una estación fija se exige solicitud y memoria descriptiva de la instalación, porque la administración debe conocer sus características técnicas y emplazamiento. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada país mantiene su procedimiento nacional. Encaja «Solicitud adjuntando una memoria descriptiva del conjunto de la instalación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1898). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12249,7 +12209,7 @@ export default [
       "Deberán ser previamente autorizadas por el Ayuntamiento de la localidad."
     ],
     "correctIndex": 1,
-    "explain": "Cuando se quieren características técnicas distintas de las previstas con carácter general, hace falta autorización especial para esa utilización experimental. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las emisiones experimentales fuera del cuadro habitual requieren autorización especial (art. 17, BOE-A-2013-7624). «Requerirán una autorización especial.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1900). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12264,7 +12224,7 @@ export default [
       "Cuadro Nacional de Atribución de Frecuencias."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («En el Reglamento de uso del dominio público radioeléctrico por aficionad…»), el criterio de examen apunta a «Cuadro Nacional de Atribución de Frecuencias.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El CNAF fija atribuciones de bandas en España; el reglamento de aficionados remite a él para frecuencias permitidas. «Cuadro Nacional de Atribución de Frecuencias.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1901). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12279,7 +12239,7 @@ export default [
       "No existen."
     ],
     "correctIndex": 1,
-    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12294,7 +12254,7 @@ export default [
       "En el momento de presentar la memoria descriptiva de la estación."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («La licencia de estación de radioaficionado se expedirá:»), el criterio de examen apunta a «Finalizado el montaje de la instalación y presentada la documentación requerida en cada caso.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia de estación suele expedirse una vez presentada la memoria o comprobado el montaje, no antes de tener instalación real. «Finalizado el montaje de la instalación y presentada la documentación requerida en cada caso.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1903). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12339,7 +12299,7 @@ export default [
       "Valencia, Valladolid, Vizcaya."
     ],
     "correctIndex": 1,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Asturias, Ávila, León.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Asturias, Ávila, León.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1907). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12354,7 +12314,7 @@ export default [
       "Poseer una walkie."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Para que un menor de edad pueda obtener una licencia de estación de radi…»), el criterio de examen apunta a «Aportar un escrito de autorización, en forma fehaciente de sus padres o personas que ostenten su custodia legal, en el que asumirán las responsabilidades que correspondan al menor titular de la licencia.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los menores necesitan autorización fehaciente de padres o tutores además de cumplir requisitos de edad y examen. «Aportar un escrito de autorización, en forma fehaciente de sus padres o personas que ostenten su custodia legal, en el que asumirán las responsabilidades que correspondan al menor titular de la licencia.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1908). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12369,7 +12329,7 @@ export default [
       "Dado que el número de estaciones automáticas desatendidas es limitado, no es posible su acceso si el radioaficionado no pertenece a un Radio Club."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Cómo se efectúa el acceso a los repetidores analógicos y digitales final…»), el criterio de examen apunta a «El acceso será necesariamente libre y si la estación estuviera dotada de código de acceso éste deberá ser públicamente conocido.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El acceso a repetidores debe ser libre salvo código técnico justificado; no puede reservarse a un club sin base reglamentaria. «El acceso será necesariamente libre y si la estación estuviera dotada de código de acceso éste deberá ser públicamente conocido.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1909). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12384,7 +12344,7 @@ export default [
       "Los elementos radiantes nunca deben sobrepasar el espacio de los inmuebles donde están situados."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Al instalar una antena de radioaficionado se tendrá en cuenta que:»), el criterio de examen apunta a «Se debe garantizar el derecho de terceros a no sufrir daños en su propiedad derivados de la instalación.». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Debes garantizar seguridad estructural, EMC y derechos de terceros; no basta con «tener señal». «Se debe garantizar el derecho de terceros a no sufrir daños en su propiedad derivados de la instalación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1910). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12429,7 +12389,7 @@ export default [
       "Ninguna de las anteriores."
     ],
     "correctIndex": 0,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 €» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 €» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1914). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12444,7 +12404,7 @@ export default [
       "Charter, Inca, Delta."
     ],
     "correctIndex": 1,
-    "explain": "Con el alfabeto fonético internacional, C es Charlie, I es India y D es Delta. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Charlie, India, Delta.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1915). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12459,7 +12419,7 @@ export default [
       "12 dB."
     ],
     "correctIndex": 0,
-    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «6 dB.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «6 dB.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1916). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12474,7 +12434,7 @@ export default [
       "Solo puede instalarla la A.E.R. (Agencia Estatal de Radiocomunicaciones)."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («¿A quién se le puede autorizar la instalación de una Estación Automática…»), el criterio de examen apunta a «A cualquier Asociación de Aficionado legalmente reconocida.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Las estaciones automáticas desatendidas colectivas suelen vincularse a asociaciones legalmente constituidas, no a cualquier particular sin más. «A cualquier Asociación de Aficionado legalmente reconocida.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1917). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12489,7 +12449,7 @@ export default [
       "De la palabra Cuidado repetida tres veces."
     ],
     "correctIndex": 2,
-    "explain": "La señal radiotelefónica internacional de seguridad es la palabra «Securité» (ortografía ITU), repetida tres veces. No confundir con Mayday (socorro) ni con RST. La opción correcta es «De la palabra \"Securité\" repetida tres veces.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La señal radiotelefónica internacional de seguridad es la palabra «Securité» repetida tres veces (ITU). No confundir con Mayday ni con RST. «De la palabra \"Securité\" repetida tres veces.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1918). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12504,7 +12464,7 @@ export default [
       "No pueden ser reutilizados."
     ],
     "correctIndex": 2,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1919). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12519,7 +12479,7 @@ export default [
       "Indicando el distintivo de llamada solicitado."
     ],
     "correctIndex": 1,
-    "explain": "La solicitud de distintivo temporal se presenta a la administración competente, no la autoriza por sí sola el radio club. La opción errónea es la que dice lo contrario. «Dirigida a la Asociación o Radio Club de aficionados correspondiente, que será la que autorice.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La solicitud de distintivo temporal se presenta a la administración competente, no la autoriza por sí sola el radio club. La opción errónea es la que dice lo contrario. «Dirigida a la Asociación o Radio Club de aficionados correspondiente, que será la que autorice.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1920). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12549,7 +12509,7 @@ export default [
       "El código RST se utiliza para deletrear el mensaje."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («El radioaficionado debe tener en cuenta que:»), el criterio de examen apunta a «No es aconsejable inventar palabras para deletrear el mensaje.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Usa siempre el alfabeto fonético reconocido; inventar palabras aumenta errores en fonía. «No es aconsejable inventar palabras para deletrear el mensaje.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1923). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12564,7 +12524,7 @@ export default [
       "Nueve horas."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Las Estaciones Repetidoras y Radiobalizas, deberán disponer de un sistem…»), el criterio de examen apunta a «Seis horas.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Las estaciones desatendidas deben identificarse periódicamente; el banco fija un intervalo (p. ej. seis horas). «Seis horas.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1924). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12579,7 +12539,7 @@ export default [
       "Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación."
     ],
     "correctIndex": 3,
-    "explain": "La instalación de una estación fija puede requerir intervención de empresa instaladora inscrita, especialmente por seguridad y cumplimiento técnico de la instalación. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Como norma general el montaje lo realiza un instalador inscrito en el registro de empresas instaladoras (art. 19.e, BOE-A-2013-7624). «Por un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicación.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12609,7 +12569,7 @@ export default [
       "Las iniciales y fecha de nacimiento del titular."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Un grupo alfanumérico de 6 caracteres como máximo.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Un grupo alfanumérico de 6 caracteres como máximo.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1928). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12624,7 +12584,7 @@ export default [
       "En general se permite que entre estaciones se transmitan comunicaciones en nombre de terceras personas."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («La utilización de una estación de aficionado se debe ajustar a una serie…»), el criterio de examen apunta a «Las transmisiones entre estaciones no deberán codificarse para ocultar su significado.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Entre las reglas está no cifrar mensajes de forma opaca y ceñirse al objeto del servicio de aficionados. «Las transmisiones entre estaciones no deberán codificarse para ocultar su significado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1929). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12654,7 +12614,7 @@ export default [
       "Verificar que el tráfco de información se realice conforme a lo previsto por la normativa vigente al respecto."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («De entre las diversas obligaciones del gestor de una estación desatendid…»), el criterio de examen apunta a «Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El gestor debe cumplir requisitos técnicos y de supervisión que marca el reglamento; no «otorga» licencias a terceros en sentido administrativo. «Otorgar la autorización y conformidad del inicio del funcionamiento de la estación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1932). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12669,7 +12629,7 @@ export default [
       "Por periodos, hasta un máximo de 20 días al año."
     ],
     "correctIndex": 0,
-    "explain": "Un distintivo liberado puede reasignarse cuando se cancela la autorización previa; no se hereda automáticamente por familiaridad. «En caso de fallecimiento del titular, a familiares en primer grado.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Un distintivo liberado puede reasignarse cuando se cancela la autorización previa; no se hereda automáticamente por familiaridad. «En caso de fallecimiento del titular, a familiares en primer grado.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1933). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12684,7 +12644,7 @@ export default [
       "Que se haya examinado en España exclusivamente de la Reglamentación Nacional."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («La obtención de la Autorización de Aficionado por un extranjero resident…»), el criterio de examen apunta a «Que sea titular de un Diploma de operador expedido en España, o de un Certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El extranjero residente debe aportar diploma de operador válido (o equivalente reconocido) además de la residencia. «Que sea titular de un Diploma de operador expedido en España, o de un Certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1934). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12699,7 +12659,7 @@ export default [
       "Que posee antena y fuente de energía incorporada al propio equipo."
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Se entiende por estación digital de aficionado, la estación:»), el criterio de examen apunta a «Dotada de un conjunto de dispositivos que permiten la realización de emisiones con técnicas digitales.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Estación digital: conjunto de equipos que permiten modos digitales en las bandas autorizadas, con las mismas obligaciones de identificación. «Dotada de un conjunto de dispositivos que permiten la realización de emisiones con técnicas digitales.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1935). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12708,14 +12668,13 @@ export default [
     "topicId": "instalaciones",
     "stem": "El cambio de ubicación de una antena:",
     "options": [
-      "No es necesario solicitarlo a la Dirección General de Telecomunicaciones.",
-      "Se debe solicitar a la Dirección General de Telecomunicaciones y seguir un procedimiento distinto al de la primera instalación.",
-      "Se debe solicitar a la Dirección General de Telecomunicaciones y seguir el mismo procedimiento que si se tratase de la primera instalación.",
+      "No es necesario solicitarlo a la Administración competente en espectro radioeléctrico.",
+      "Se debe solicitar a la Administración competente en espectro radioeléctrico y seguir un procedimiento distinto al de la primera instalación.",
+      "Se debe solicitar a la Administración competente en espectro radioeléctrico y seguir el mismo procedimiento que si se tratase de la primera instalación.",
       "Únicamente requiere ser notificado al Ayuntamiento de la localidad."
     ],
     "correctIndex": 2,
-    "explain": "En instalaciones combina normativa de antenas, seguridad eléctrica y buenas prácticas de RF. «Se debe solicitar a la Dirección General de Telecomunicaciones y seguir el mismo procedimiento que si se tratase de la primera instalación.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1936). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cualquier modificación sustancial de la instalación exige comunicación o autorización ante la Administración competente, con el mismo procedimiento que una nueva instalación (BOE-A-2013-7624). «Se debe solicitar a la Administración competente y seguir el mismo procedimiento que si se tratase de la primera instalación.»."
   },
   {
     "id": "quijotes-84-1937",
@@ -12723,7 +12682,7 @@ export default [
     "topicId": "instalaciones",
     "stem": "La Ley 19/1986, conocida como Ley de Antenas, regula:",
     "options": [
-      "La obligación de comunicar la instalación de una antena a la Dirección General de Telecomunicaciones.",
+      "La obligación de comunicar la instalación de una antena a la Administración competente en espectro radioeléctrico.",
       "El derecho a instalar una antena de cualquier tamaño.",
       "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.",
       "La exención de presentar memoria descriptiva de la instalación."
@@ -12759,7 +12718,7 @@ export default [
       "Solicitar permiso al titular de la licencia de estación."
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Informar, con antelación mínima de un mes, al titular de la licencia de estación si fuera necesario desmontar la antena y/o elementos anejos.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Informar, con antelación mínima de un mes, al titular de la licencia de estación si fuera necesario desmontar la antena y/o elementos anejos.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12804,7 +12763,7 @@ export default [
       "Una estación de aficionado es una estación del Servicio de Aficionados."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Según el Reglamento de Radiocomunicaciones de la UIT:»), el criterio de examen apunta a «Una estación de aficionado es una estación del Servicio de Aficionados.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La UIT define la estación de aficionado como parte del servicio de aficionados, bajo supervisión de un operador acreditado. «Una estación de aficionado es una estación del Servicio de Aficionados.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1942). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12819,7 +12778,7 @@ export default [
       "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioeléctricas, en los supuestos de producción de interferencias."
     ],
     "correctIndex": 1,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas.» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1943). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12849,7 +12808,7 @@ export default [
       "Los equipos receptores de radio no forman parte de una estación radioeléctrica."
     ],
     "correctIndex": 1,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «El Servicio de Aficionados por Satélite utiliza estaciones espaciales situadas en satélites.» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «El Servicio de Aficionados por Satélite utiliza estaciones espaciales situadas en satélites.» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1945). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12864,7 +12823,7 @@ export default [
       "QRP."
     ],
     "correctIndex": 0,
-    "explain": "Los códigos Q abrevian situaciones: QRL ocupado, QRX esperando, QSY cambio de frecuencia, QRT cese. «QRO.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los códigos Q abrevian situaciones: QRL ocupado, QRX esperando, QSY cambio de frecuencia, QRT cese. «QRO.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1946). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12894,7 +12853,7 @@ export default [
       "300 y 3.000 MHz."
     ],
     "correctIndex": 2,
-    "explain": "SHF significa Super High Frequency y comprende de 3 a 30 GHz; por debajo está UHF y por encima EHF. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En la nomenclatura ITU, SHF designa el tramo aproximado de 3–30 GHz (tabla ITU). Para este enunciado la respuesta correcta es «3 y 30 GHz.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1948). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12924,7 +12883,7 @@ export default [
       "Tres letras que comiencen por la Q."
     ],
     "correctIndex": 2,
-    "explain": "El sufijo del distintivo se forma con letras asignadas por la administración, hasta tres, siguiendo el orden y disponibilidad correspondientes. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Hasta tres letras que se asignarán ordenadas alfabéticamente por turno riguroso de expedición.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1950). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12954,7 +12913,7 @@ export default [
       "Se le autorizaría uno temporal de periodo ilimitado."
     ],
     "correctIndex": 2,
-    "explain": "Si el cambio de domicilio implica cambio de distrito, puede cambiar la cifra del indicativo; el interesado puede solicitar conservar sufijo si está disponible. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «El interesado podrá solicitar mantener su sufijo, si este estuviera disponible. Caso contrario le será asignado un nuevo sufijo siguiendo el orden establecido.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12969,7 +12928,7 @@ export default [
       "Si su titular crea interferencias."
     ],
     "correctIndex": 0,
-    "explain": "Un distintivo liberado puede reasignarse cuando se cancela la autorización previa; no se hereda automáticamente por familiaridad. «Si se cancela la autorización correspondiente.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Un distintivo liberado puede reasignarse cuando se cancela la autorización previa; no se hereda automáticamente por familiaridad. «Si se cancela la autorización correspondiente.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1953). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12991,7 +12950,7 @@ export default [
     "id": "quijotes-84-1955",
     "part": 2,
     "topicId": "instalaciones",
-    "stem": "La Dirección General de Telecomunicaciones debe informar al presidente de la comunidad de propietarios afectada siempre que:",
+    "stem": "La Administración competente en espectro radioeléctrico debe informar al presidente de la comunidad de propietarios afectada siempre que:",
     "options": [
       "Se pretenda cambiar las antenas.",
       "Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.",
@@ -12999,7 +12958,7 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad."
     ],
     "correctIndex": 1,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13029,7 +12988,7 @@ export default [
       "Acredite documentalmente su condición de residente en España."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Una condición imprescindible para que a un extranjero se le otorgue una …»), el criterio de examen apunta a «Acredite documentalmente su condición de residente en España.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Sin acreditar residencia legal en España no procede la autorización de extranjero residente. «Acredite documentalmente su condición de residente en España.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1958). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13059,7 +13018,7 @@ export default [
       "Normas básicas del régimen de prensa, radio y televisión."
     ],
     "correctIndex": 0,
-    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «Telecomunicaciones.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «Telecomunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1960). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13111,7 +13070,7 @@ export default [
     "id": "quijotes-84-1964",
     "part": 2,
     "topicId": "licencias-indicativos",
-    "stem": "¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:",
+    "stem": "¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo temporal?:",
     "options": [
       "El Reglamento actual no contempla el uso de distintivos temporales.",
       "Sólo para los extranjeros residentes en España.",
@@ -13130,11 +13089,11 @@ export default [
     "options": [
       "Nunca.",
       "Sí, si el sistema es poco voluminosos.",
-      "Siempre que lo autorice la Dirección General de Telecomunicaciones.",
-      "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones."
+      "Siempre que lo autorice la Administración competente en espectro radioeléctrico.",
+      "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Administración competente en espectro radioeléctrico."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («En caso de cancelación de la Licencia de Estación de Aficionado. ¿Puede …»), el criterio de examen apunta a «Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Tras cancelar la licencia, el uso del equipo puede limitarse a recepción y solo con autorización expresa, no a emitir con el distintivo anterior. «Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la Comunidad de Propietarios, remitiendo una copia de dicha autorización a la la Administración competente en espectro radioeléctrico.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1965). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13149,7 +13108,7 @@ export default [
       "Deberá obtener un permiso especial de la Inspección de Telecomunicaciones."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Si un radioaficionado no es titular de la estación que está utilizando:»), el criterio de examen apunta a «Se identificará, con autorización del titular, mediante su propio distintivo precedido del distintivo del titular de la estación operada.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El operador invitado se identifica con su distintivo tras el del titular, con permiso de este. «Se identificará, con autorización del titular, mediante su propio distintivo precedido del distintivo del titular de la estación operada.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1966). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13164,7 +13123,7 @@ export default [
       "Cualquier titular de licencia CEPT."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Podrá ser titular de una estación automática desatendida:»), el criterio de examen apunta a «Una asociación de radioaficionados reconocida.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Suelen autorizarse a asociaciones de aficionados legalmente constituidas, no a particulares sin estructura de gestión. «Una asociación de radioaficionados reconocida.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1967). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13194,7 +13153,7 @@ export default [
       "Deberá cambiarse siempre el prefijo del distintivo de llamada."
     ],
     "correctIndex": 2,
-    "explain": "El distrito forma parte del distintivo de llamada. Por eso un cambio de domicilio puede obligar a modificar cifra y, si no procede mantenerlo, también sufijo. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «Puede ser necesario cambiar la cifra del distintivo y el sufijo del distintivo de llamada.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1971). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13284,7 +13243,7 @@ export default [
       "A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional."
     ],
     "correctIndex": 3,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «A cualquier radioaficionado que acredite cinco años de prácticas en la radioafición internacional.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1977). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13314,7 +13273,7 @@ export default [
       "AD"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «ED.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «ED.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1979). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13329,7 +13288,7 @@ export default [
       "Solo el Diploma de Operador."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Para la instalación y funcionamiento de una estación de aficionado, es n…»), el criterio de examen apunta a «Licencia de Estación.». Repasa instalaciones, seguridad y normativa de antenas en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Hace falta licencia de estación (y autorización de operador vigente); no basta con comprar equipo. «Licencia de Estación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1980). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13359,7 +13318,7 @@ export default [
       "El operador no viene obligado a cumplir el Reglamento sobre perturbaciones parasitas en vigor."
     ],
     "correctIndex": 1,
-    "explain": "La estación debe disponer de medios adecuados para comprobar que transmite dentro de las bandas autorizadas y evitar emisiones fuera de frecuencia. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La estación debe disponer de medios para verificar que emite dentro de las bandas y condiciones autorizadas (anexo I, BOE-A-2013-7624). «Deberá estar provista la estación de los elementos adecuados para comprobar que la emisión se realiza dentro de las bandas autorizadas.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1983). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13389,7 +13348,7 @@ export default [
       "Seis días naturales consecutivos."
     ],
     "correctIndex": 0,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Tres días naturales consecutivos.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Tres días naturales consecutivos.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1986). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13404,7 +13363,7 @@ export default [
       "Toledo, Teruel, Tarragona, Santa Cruz de Tenerife."
     ],
     "correctIndex": 1,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Cáceres, Cádiz, Cuenca, Ciudad Real.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Cáceres, Cádiz, Cuenca, Ciudad Real.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1987). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13419,7 +13378,7 @@ export default [
       "Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000."
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Un extranjero residente puede obtener autorización en España si acredita residencia y, según el supuesto, el certificado HAREC (armonización CEPT T/R 61-02). «Siempre que el país de origen del radioaficionado aplique la Recomendación T/R 5000.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1988). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13434,7 +13393,7 @@ export default [
       "Para uso temporal en eventos de carácter autonómico o local."
     ],
     "correctIndex": 2,
-    "explain": "La cifra 0 se reserva para indicativos especiales vinculados a actos inaugurados o visitados por Su Majestad el Rey, no para uso ordinario. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Con motivos de actos que sean inaugurados o visitados por Su Majestad el Rey.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1989). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13449,7 +13408,7 @@ export default [
       "Autoridad que expide la licencia."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Fecha de superación del examen.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Fecha de superación del examen.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1990). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13464,7 +13423,7 @@ export default [
       "Radiobaliza."
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Radiobaliza.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Una estación colectiva para experimentación de propagación puede ser una radiobaliza u otra estación automática desatendida según el supuesto. «Radiobaliza.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1991). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13494,7 +13453,7 @@ export default [
       "Estación de mediciones de potencia."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («¿Definiría \"Estación automática desatendida\" como?:»), el criterio de examen apunta a «Estación colectiva de aficionado, que para su funcionamiento habitual no requiere la intervención directa del operador.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Es una estación colectiva que funciona sin operador presente, con identificación automática y supervisión del gestor. «Estación colectiva de aficionado, que para su funcionamiento habitual no requiere la intervención directa del operador.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1993). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13509,7 +13468,7 @@ export default [
       "/MM."
     ],
     "correctIndex": 3,
-    "explain": "El sufijo /MM identifica emisiones de estación móvil marítima añadido al distintivo. «/MM.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El sufijo /MM identifica emisiones de estación móvil marítima añadido al distintivo. «/MM.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1994). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13524,7 +13483,7 @@ export default [
       "No está permitida."
     ],
     "correctIndex": 0,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Requiere autorización previa de la Jefatura Provincial de Inspección de Telecomunicaciones (JPIT).». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Requiere autorización previa de la Jefatura Provincial de Inspección de Telecomunicaciones (JPIT).». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1995). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13539,7 +13498,7 @@ export default [
       "Nunca se fijarán directamente a la obra civil."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Los soportes de una antena de radioaficionado:»), el criterio de examen apunta a «No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen.». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Los soportes deben mantener la resistencia mecánica del edificio y cumplir normativa de seguridad estructural. «No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1996). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13554,7 +13513,7 @@ export default [
       "Estación repetidora de gran alcance."
     ],
     "correctIndex": 0,
-    "explain": "Una estación fija remota sigue siendo fija por su emplazamiento, pero puede manejarse a distancia mediante un enlace de control. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Estación fija de aficionado que puede ser accionada a distancia.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1997). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13599,7 +13558,7 @@ export default [
       "Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Los equipos de radioaficionados de construcción propia:»), el criterio de examen apunta a «Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El equipo casero debe cumplir requisitos técnicos y puede necesitar autorización o declaración conforme al reglamento. «Para ser utilizados deberán ser autorizados por la Jefatura Provincial de Inspección de Telecomunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2000). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13614,7 +13573,7 @@ export default [
       "Las transmisiones entre estaciones de aficionados de diferentes países deberán codificarse siempre por motivos de seguridad."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («De acuerdo con el artículo 25 del Reglamento de Radiocomunicaciones de l…»), el criterio de examen apunta a «En el transcurso de sus emisiones, las estaciones de aficionado deberán transmitir su indicativo a intervalos cortos.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El art. 25 UIT regula comunicaciones entre aficionados, identificación y condiciones del servicio; las administraciones pueden notificar restricciones. «En el transcurso de sus emisiones, las estaciones de aficionado deberán transmitir su indicativo a intervalos cortos.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2001). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13659,7 +13618,7 @@ export default [
       "Canarias se encuentra en la Región 2"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («De acuerdo con el artículo 5 del Reglamento de Radiocomunicaciones de la…»), el criterio de examen apunta a «España se encuentra en la Región 1». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "España pertenece a la Región 1 de la UIT (Europa, África y parte de Asia). «España se encuentra en la Región 1». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2004). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13674,7 +13633,7 @@ export default [
       "La ganancia isótropa o absoluta"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo de llamada es el grupo de caracteres que identifica la estación en las emisiones. «Grupo de caracteres que constituye la señal de identificación del radioaficionado». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo de llamada es el grupo de caracteres que identifica la estación en las emisiones. «Grupo de caracteres que constituye la señal de identificación del radioaficionado».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2005). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13689,7 +13648,7 @@ export default [
       "La participación en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "Los distintivos temporales de una letra se reservan a concursos internacionales de alta competitividad. «La participación en concursos internacionales de alta competitividad». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los distintivos temporales de una letra se reservan a concursos internacionales de alta competitividad. «La participación en concursos internacionales de alta competitividad».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2007). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13704,7 +13663,7 @@ export default [
       "Romeo, Echo, Yuma"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fonético internacional deletrea R como Romeo, E como Echo e Y como Yankee. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Romeo, Echo, Yankee».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2008). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13719,7 +13678,7 @@ export default [
       "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso"
     ],
     "correctIndex": 0,
-    "explain": "El servicio de aficionados permite comunicaciones relacionadas con ensayos, técnica y aprendizaje propio del servicio, no tráfico comercial o de terceros. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Transmitir mensajes de naturaleza técnica sobre ensayos». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2009). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13749,7 +13708,7 @@ export default [
       "No existen"
     ],
     "correctIndex": 1,
-    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13779,7 +13738,7 @@ export default [
       "El propietario de la vivienda si esta es de alquiler"
     ],
     "correctIndex": 1,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «El radioaficionado». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El titular responde de daños por instalación, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). «El radioaficionado». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2013). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13854,7 +13813,7 @@ export default [
       "Si, siempre que se tenga el proyecto técnico"
     ],
     "correctIndex": 0,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «No, solo pronunciarse respecto a la idoneidad de la instalación». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalación unilateral sin informar. «No, solo pronunciarse respecto a la idoneidad de la instalación». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2019). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13884,7 +13843,7 @@ export default [
       "Es la cifra 0 de uso exclusiva para distintivos temporales"
     ],
     "correctIndex": 2,
-    "explain": "La cifra de distrito coincide con la residencia del titular según la división geográfica del reglamento de aficionados. «Es la cifra coincidente con el número de distrito de residencia del titular, con arreglo a la división geográfica que se especifica en el Reglamento de Aficionados en vigor». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La cifra de distrito coincide con la residencia del titular según la división geográfica del reglamento de aficionados. «Es la cifra coincidente con el número de distrito de residencia del titular, con arreglo a la división geográfica que se especifica en el Reglamento de Aficionados en vigor». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2021). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13899,7 +13858,7 @@ export default [
       "Se podrá desmontar la antena para realizar obras previo pago de una indemnización al titular de la antena"
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («En el tejado de un edificio donde está instalada una antena de radioafic…»), el criterio de examen apunta a «Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Deben poder ejecutarse obras de mantenimiento del edificio, aunque obligue a desmontar temporalmente la antena autorizada. «Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2022). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13929,7 +13888,7 @@ export default [
       "Los soportes de la antena se podrán fijar al mástil de conducción aérea de energía eléctrica"
     ],
     "correctIndex": 2,
-    "explain": "Al instalar antenas deben considerarse otros servicios y sus instalaciones para evitar interferencias, riesgos mecánicos o incompatibilidades técnicas. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Debes coordinar la instalación con otros servicios y usuarios del espectro; evitar interferencias y respetar normativa de antenas. «Es necesario tener en cuenta las instalaciones y antenas de otros servicios». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2024). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13944,7 +13903,7 @@ export default [
       "Diez años"
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («El radioaficionado está obligado a comunicar, fehacientemente, su intenc…»), el criterio de examen apunta a «Ya no hay que comunicarlo». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Algunos trámites de comunicación previa han sido simplificados en normativa reciente; el banco puede reflejar la redacción histórica «ya no hay que comunicarlo». «Ya no hay que comunicarlo». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13959,7 +13918,7 @@ export default [
       "El titular de una licencia de estación fija de aficionado siempre precisa autorización previa administrativa para utilizarla como portable"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «La revocación de la autorización de radioaficionado llevará aparejada la cancelación de las licencias de los equipos». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «La revocación de la autorización de radioaficionado llevará aparejada la cancelación de las licencias de los equipos». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2026). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -13989,7 +13948,7 @@ export default [
       "Queda inhabilitado a perpetuidad a ser radioaficionado"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («Tras la revocación, en su caso, de la autorización de radioaficionado, e…»), el criterio de examen apunta a «Hasta una nueva autorización no podrá ejercer la actividad de la radioafición». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Revocada la autorización, no puedes operar hasta obtener una nueva si la normativa lo permite. «Hasta una nueva autorización no podrá ejercer la actividad de la radioafición». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2028). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14004,7 +13963,7 @@ export default [
       "Se requiere que el interesado sea socio de una Asociación colectiva de Radioaficionados"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Deberá ser notificada a la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente, con al menos cinco días de antelación del comienzo de las emisiones». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Deberá ser notificada a la Jefatura Provincial de Inspección de Telecomunicaciones correspondiente, con al menos cinco días de antelación del comienzo de las emisiones». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2029). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14019,7 +13978,7 @@ export default [
       "El Reglamento de Aficionados no contempla tal extremo"
     ],
     "correctIndex": 1,
-    "explain": "Instalar antenas en elementos comunes exige información y acuerdos con la comunidad según la normativa de antenas y propiedad horizontal. «Deberá expedirse en formato bilingüe, si así lo solicita el interesado». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Deberá expedirse en formato bilingüe, si así lo solicita el interesado». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2030). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14034,7 +13993,7 @@ export default [
       "No se exigen requisitos previos para solicitarla"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Cuando se conceda, a la vez se otorgará el distintivo de llamada». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Cuando se conceda, a la vez se otorgará el distintivo de llamada». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2031). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14049,7 +14008,7 @@ export default [
       "La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «La licencia permitirá utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su país, aunque no lo estén en el país donde va a operarar la estación». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2032). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14079,7 +14038,7 @@ export default [
       "La banda 7100 - 7200 kHz no está atribuida a ningún servicio"
     ],
     "correctIndex": 0,
-    "explain": "En este enunciado («Conforme a la nota 5.141C del Reglamento de Radioaficionados de la Unión…»), el criterio de examen apunta a «La banda 7100 a 7200 kHz está atribuida a titulo primario al servicio de radiodifusión hasta el 29 de marzo de 2009». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La nota 5.141C UIT reserva segmentos en HF; contrasta el cuadro de atribuciones con el CNAF y el reglamento vigente. «La banda 7100 a 7200 kHz está atribuida a titulo primario al servicio de radiodifusión hasta el 29 de marzo de 2009». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14109,7 +14068,7 @@ export default [
       "Eventos especiales de relevancia internacional."
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Concursos internacionales de alta competitividad.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Concursos internacionales de alta competitividad.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2036). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14154,7 +14113,7 @@ export default [
       "Unicamente los producidos por un mantenimiento defectuoso."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («Los daños y perjuicios originados por una antena de una estación de radi…»), el criterio de examen apunta a «Los producidos con motivo de la instalación, mantenimiento y desmontaje de la antena.». Repasa antenas, líneas y propagación en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El titular responde de daños por instalación, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). «Los producidos con motivo de la instalación, mantenimiento y desmontaje de la antena.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2039). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14184,7 +14143,7 @@ export default [
       "Acuse recibo."
     ],
     "correctIndex": 1,
-    "explain": "Los códigos Q abrevian situaciones: QRL ocupado, QRX esperando, QSY cambio de frecuencia, QRT cese. «Deje de transmitir.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los códigos Q abrevian situaciones: QRL ocupado, QRX esperando, QSY cambio de frecuencia, QRT cese. «Deje de transmitir.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2041). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14199,7 +14158,7 @@ export default [
       "Al comienzo y final de cada emisión."
     ],
     "correctIndex": 3,
-    "explain": "El distintivo de llamada identifica legalmente la estación; debe transmitirse al comienzo y al final de cada emisión para que la comunicación quede identificada. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Al comienzo y final de cada emisión.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2042). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14229,7 +14188,7 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad."
     ],
     "correctIndex": 1,
-    "explain": "La administración debe informar a la comunidad cuando se pretende instalar antenas exteriores, porque afectan a elementos comunes del inmueble. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Instalar antenas en elementos comunes exige información y acuerdos con la comunidad según la normativa de antenas y propiedad horizontal. «Se pretenda instalar las antenas en el exterior del inmueble.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2044). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14244,7 +14203,7 @@ export default [
       "Sea de un corresponsal extranjero."
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estación y debe usarse al inicio y al final de cada comunicación. La respuesta correcta es «Sea demasiado extensa.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «Sea demasiado extensa.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2046). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14259,7 +14218,7 @@ export default [
       "Posee antena y fuente de energía incorporada al propio equipo, ya que es una estación móvil."
     ],
     "correctIndex": 1,
-    "explain": "Una estación portable es una estación fija que se usa temporalmente desde una ubicación distinta a la habitual; no equivale a estación móvil. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La estación portátil es una estación fija usada temporalmente fuera del emplazamiento habitual del titular (anexo I, BOE-A-2013-7624). «Es una estación fija, que puede ser utilizada temporalmente en ubicación distinta de la habitual.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2047). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14274,7 +14233,7 @@ export default [
       "La potencia máxima de las estaciones de aficionado será fijada por la Unión Internacional de Telecomunicaciones (ITU)."
     ],
     "correctIndex": 0,
-    "explain": "El artículo citado de la UIT prohíbe codificar las comunicaciones internacionales de aficionados para ocultar su significado, porque el servicio no admite tráfico secreto. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El art. 25 UIT regula comunicaciones entre aficionados, identificación y condiciones del servicio; las administraciones pueden notificar restricciones. «Las transmisiones entre estaciones de aficionado de diferentes países no deberán codificarse para ocultar su significado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2048). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14286,10 +14245,10 @@ export default [
       "Tendrá que presentar nueva memoria.",
       "Podrá instalarla nuevamente en condiciones similares a las anteriores.",
       "Ha de pedir permiso a la comunidad de propietarios.",
-      "Deberá comunicarlo a la Dirección General de Telecomunicaciones y Tecnología de la Información."
+      "Deberá comunicarlo a la Administración competente en espectro radioeléctrico y Tecnología de la Información."
     ],
     "correctIndex": 1,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Podrá instalarla nuevamente en condiciones similares a las anteriores.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Podrá instalarla nuevamente en condiciones similares a las anteriores.» es la formulación del banco.",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2049). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14334,7 +14293,7 @@ export default [
       "Anclaje."
     ],
     "correctIndex": 3,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Anclaje.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Anclaje.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2052). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14349,7 +14308,7 @@ export default [
       "Es a la vez una estación portable de aficionado."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («En relación con una estación portátil de aficionado, marque la alternati…»), el criterio de examen apunta a «Es a la vez una estación portable de aficionado.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Portátil y portátil de mano son categorías del reglamento: una estación portátil puede ser también «portable» según el desplazamiento del enunciado. «Es a la vez una estación portable de aficionado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2053). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14364,7 +14323,7 @@ export default [
       "Cualquier otro titular de autorización de radioaficionado."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Con autorización de su titular, podrá hacer uso de una estación de afici…»), el criterio de examen apunta a «Cualquier otro titular de autorización de radioaficionado.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Otro titular de autorización puede operar la estación del titular si este lo autoriza; en emisión se identifican ambos según el reglamento. «Cualquier otro titular de autorización de radioaficionado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2054). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14379,7 +14338,7 @@ export default [
       "Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación."
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Le permite la utilización de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el país donde se va a operar la estación.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2055). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14394,7 +14353,7 @@ export default [
       "Presentar la autorización de radioaficionado, si las autoridades se lo exigen."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («En el país visitado temporalmente, el radioaficionado está obligado a:»), el criterio de examen apunta a «Presentar la autorización de radioaficionado, si las autoridades se lo exigen.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Con licencia CEPT u homologación, en el país visitado debes poder acreditar tu autorización si la administración lo solicita. «Presentar la autorización de radioaficionado, si las autoridades se lo exigen.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2056). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14424,7 +14383,7 @@ export default [
       "Una estación portable de aficionado es a la vez estación móvil."
     ],
     "correctIndex": 1,
-    "explain": "La autorización especial de uso del espectro para radioaficionados es nominativa: se concede a una persona titular concreta. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «La autorización especial del uso del espectro radioeléctrico por radioaficionados será nominativa.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2058). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14469,8 +14428,7 @@ export default [
       "35 W."
     ],
     "correctIndex": 1,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «50 W.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2063). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «50 W.»."
   },
   {
     "id": "quijotes-84-2066",
@@ -14499,7 +14457,7 @@ export default [
       "La utilización para fines distintos de los que se establecen en la resolución de la autorización."
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («No es causa de revocación de una autorización de radioaficionado:»), el criterio de examen apunta a «No adquirir una estación radioeléctrica de aficionado.». Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La revocación requiere causas legales concretas; no tener todavía estación montada no es, por sí solo, motivo de revocación en este supuesto. «No adquirir una estación radioeléctrica de aficionado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2067). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14514,7 +14472,7 @@ export default [
       "Ávila."
     ],
     "correctIndex": 1,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Albacete.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Albacete.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2068). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14529,7 +14487,7 @@ export default [
       "Su titular reside en Cataluña."
     ],
     "correctIndex": 2,
-    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción. «No se puede asignar.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El distintivo identifica la estación en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. «No se puede asignar.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14544,7 +14502,7 @@ export default [
       "431,050 - 431,825 MHz"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «145,0000 - 145,1875 MHz». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «145,0000 - 145,1875 MHz». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2070). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14559,7 +14517,7 @@ export default [
       "Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Una emisión de radioaficionado:»), el criterio de examen apunta a «Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "Las emisiones deben limitarse a finalidades del servicio de aficionados (técnicas, ensayos, intercambio entre operadores). «Se limitará a temas relacionados con el servicio de aficionados y a observaciones de carácter personal.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2071). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14589,7 +14547,7 @@ export default [
       "500.000 Euros"
     ],
     "correctIndex": 1,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 Euros» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 Euros» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2073). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14604,7 +14562,7 @@ export default [
       "No será necesario tener en cuenta las características mecánicas de la misma."
     ],
     "correctIndex": 1,
-    "explain": "En propiedad horizontal, la instalación de antena exige comunicar datos relevantes a la administración, incluida la dirección del presidente de la comunidad afectada. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La polarización de la antena debe alinearse con la de la onda para máxima transferencia. «Se comunicará a la Administración la dirección del Presidente de la Comunidad de Propietarios.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2074). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14619,7 +14577,7 @@ export default [
       "Las posibles pérdidas de radiofrecuencia."
     ],
     "correctIndex": 0,
-    "explain": "El seguro de antenas cubre daños a terceros por la instalación; es parte de la responsabilidad del titular. «La responsabilidad civil del titular.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El seguro de antenas cubre daños a terceros por la instalación; es parte de la responsabilidad del titular. «La responsabilidad civil del titular.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2075). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14634,14 +14592,14 @@ export default [
       "Tiene por objeto ampliar el alcance de las comunicaciones."
     ],
     "correctIndex": 3,
-    "explain": "En este enunciado («Una estación automática desatendida (repetidora):»), el criterio de examen apunta a «Tiene por objeto ampliar el alcance de las comunicaciones.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La repetidora desatendida retransmite señales para ampliar alcance; debe identificarse y cumplir límites técnicos del reglamento. «Tiene por objeto ampliar el alcance de las comunicaciones.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2076). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2077",
     "part": 2,
     "topicId": "marco-normativo",
-    "stem": "Según la Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones, retrasar injustificadamente la aportación de datos requeridos por la Administración cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas es considerado como una infracción:",
+    "stem": "Según la Ley 11/2022, de 28 de junio, General de Telecomunicaciones (BOE-A-2022-10757), retrasar injustificadamente la aportación de datos requeridos por la Administración cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas es considerado como una infracción:",
     "options": [
       "Leve.",
       "Muy grave.",
@@ -14649,8 +14607,7 @@ export default [
       "Media."
     ],
     "correctIndex": 0,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Leve.» es la formulación del banco. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2077). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Según la Ley 11/2022 (BOE-A-2022-10757), retrasar injustificadamente la aportación de datos exigidos por la Administración puede ser infracción leve. «Leve.»."
   },
   {
     "id": "quijotes-84-2078",
@@ -14679,7 +14636,7 @@ export default [
       "Sólo en caso de que la instalación sea sencilla."
     ],
     "correctIndex": 0,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «No.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalación unilateral sin informar. «No.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2079). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14709,7 +14666,7 @@ export default [
       "Basa su funcionamiento en la emisión automática de señales de identificación."
     ],
     "correctIndex": 3,
-    "explain": "Una radiobaliza funciona transmitiendo automáticamente señales de identificación para pruebas, propagación o referencia técnica. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "La radiobaliza es una estación automática desatendida que emite identificación periódica (anexo I, BOE-A-2013-7624). «Basa su funcionamiento en la emisión automática de señales de identificación.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2081). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14724,7 +14681,7 @@ export default [
       "Se encuentra dentro de la clasificación de estaciones automáticas desatendidas."
     ],
     "correctIndex": 1,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Podrá se utilizada con carácter temporal como portable.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opción válida es «Podrá se utilizada con carácter temporal como portable.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2082). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14754,7 +14711,7 @@ export default [
       "A los tres años."
     ],
     "correctIndex": 1,
-    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «A los dos años.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El régimen sancionador de telecomunicaciones clasifica infracciones según gravedad; la opción del banco refleja la redacción del supuesto. «A los dos años.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2084). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14784,7 +14741,7 @@ export default [
       "Habilita para hecer uso común del espectro radioeléctrico."
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («El diploma de operador de estaciones de aficionado:»), el criterio de examen apunta a «Certifica la capacidad de su titular para operar estaciones radioeléctricas del servicio de aficionados.». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "El diploma acredita que superaste la prueba de capacidad para operar estaciones del servicio. «Certifica la capacidad de su titular para operar estaciones radioeléctricas del servicio de aficionados.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2087). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14814,7 +14771,7 @@ export default [
       "Dos semanas."
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Cinco días.». Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Cinco días.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2089). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14844,7 +14801,7 @@ export default [
       "Murcia."
     ],
     "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Melillla.». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Melillla.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2091). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14889,7 +14846,7 @@ export default [
       "Es aconsejable emitir sin comprobar que la frecuencia se está utilizando."
     ],
     "correctIndex": 2,
-    "explain": "En fonía es habitual usar 'cambio' para indicar que se cede la palabra a la otra estación, aunque no sea una obligación técnica estricta. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "En fonía es buena práctica cerrar con «cambio» o «out» para indicar fin de transmisión; no sustituye la identificación con distintivo. «Es recomendable finalizar la emisión con la palabra \"cambio\".». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14901,7 +14858,7 @@ export default [
       "Son establecidos por las Asociaciones locales de radioaficionados.",
       "Sirven de guía a los radioaficionados de todo el mundo.",
       "Son establecidos sin tener en cuenta la división en Regiones de la UIT.",
-      "Deben ser aprobados por la Dirección General de Telecomunicaciones."
+      "Deben ser aprobados por la Administración competente en espectro radioeléctrico."
     ],
     "correctIndex": 3,
     "explain": "La pregunta apunta a la validez formal de los planes de banda: frente a simples costumbres, el banco considera correcta la aprobación por la Dirección General competente.",
@@ -14919,7 +14876,7 @@ export default [
       "1000 w"
     ],
     "correctIndex": 1,
-    "explain": "En este enunciado («En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de …»), el criterio de examen apunta a «50 w». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En 160 m el límite de potencia del banco histórico puede ser 50 W PEP; verifica en anexo I (BOE-A-2013-7624) la banda exacta. «50 w».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14944,12 +14901,12 @@ export default [
     "stem": "En España, los Planes de Banda utilizados por los radioaficionados:",
     "options": [
       "Son establecidos por asociaciones locales de radioaficionados.",
-      "Son aprobados por la Dirección General de Telecomunicaciones.",
+      "Son aprobados por la Administración competente en espectro radioeléctrico.",
       "Son los planes de la IARU Región 1, utilizados como norma general.",
       "No tienen ninguna relación con la UIT."
     ],
     "correctIndex": 2,
-    "explain": "En España se toman como referencia general los planes de banda de la IARU Región 1, la región internacional en la que se integra España. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
+    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Región 1. La respuesta correcta es «Son los planes de la IARU Región 1, utilizados como norma general.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -14964,1268 +14921,8 @@ export default [
       "LSB y AM"
     ],
     "correctIndex": 2,
-    "explain": "En este enunciado («En la banda de radioaficionado de 40 metros, el modo de emisión que norm…»), el criterio de examen apunta a «LSB». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
+    "explain": "En 40 m fonía el modo habitual es LSB; el enunciado pide el modo no permitido según el plan del banco. «LSB». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2214). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2108",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué es un transceptor?",
-    "options": [
-      "Un aparato que solo transmite",
-      "Un aparato que solo recibe",
-      "Un aparato que transmite y recibe",
-      "Un amplificador de señal"
-    ],
-    "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Un aparato que transmite y recibe».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2108). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2109",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué tensión suelen usar los equipos de radio portátiles?",
-    "options": [
-      "220V",
-      "110V",
-      "3,5 a 12V",
-      "50V"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué tensión suelen usar los equipos de radio portátiles?», la formulación que encaja según el banco de examen es «3,5 a 12V». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2109). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2110",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "¿Qué pasa si transmitimos sin antena?",
-    "options": [
-      "Aumenta la cobertura",
-      "Se daña el equipo",
-      "Se escucha mejor",
-      "Nada"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué pasa si transmitimos sin antena?», la formulación que encaja según el banco de examen es «Se daña el equipo». Contrasta con el temario de antenas, líneas y propagación si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2110). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2111",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "La impedancia de las antenas en radios suele ser:",
-    "options": [
-      "25 ohmios",
-      "75 ohmios",
-      "50 ohmios",
-      "100 ohmios"
-    ],
-    "correctIndex": 2,
-    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «50 ohmios». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2111). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2112",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa UHF?",
-    "options": [
-      "Ultra High Frequency",
-      "Universal HF",
-      "Ultra Hard Field",
-      "Upper HF"
-    ],
-    "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, UHF designa el tramo aproximado de 300–3000 MHz. Para este enunciado la respuesta correcta es «Ultra High Frequency».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2112). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2113",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa VHF?",
-    "options": [
-      "Very Hard Frequency",
-      "Very High Frequency",
-      "Variable HF",
-      "Virtual HF"
-    ],
-    "correctIndex": 1,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «Very High Frequency».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2113). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2116",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La banda VHF comprende frecuencias:",
-    "options": [
-      "30-300 MHz",
-      "300-3000 MHz",
-      "3-30 MHz",
-      "3-30 GHz"
-    ],
-    "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «30-300 MHz».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2116). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2117",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué potencia aproximada tienen los equipos fijos de EA3RCQ?",
-    "options": [
-      "1 W",
-      "5 W",
-      "40 W",
-      "100 W"
-    ],
-    "correctIndex": 2,
-    "explain": "En este enunciado («¿Qué potencia aproximada tienen los equipos fijos de EA3RCQ?»), el criterio de examen apunta a «40 W». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2117). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2118",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué potencia aproximada tienen los equipos portátiles de EA3RCQ?",
-    "options": [
-      "0,5 W",
-      "1 W",
-      "5 W",
-      "10 W"
-    ],
-    "correctIndex": 1,
-    "explain": "En este enunciado («¿Qué potencia aproximada tienen los equipos portátiles de EA3RCQ?»), el criterio de examen apunta a «1 W». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2118). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2119",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué tipo de encriptación usan las redes de EA3RCQ?",
-    "options": [
-      "DES",
-      "AES-128",
-      "AES-256",
-      "RC4"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué tipo de encriptación usan las redes de EA3RCQ?», la formulación que encaja según el banco de examen es «AES-256». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2119). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2120",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es el DMR?",
-    "options": [
-      "Digital Multi Relay",
-      "Digital Mobile Radio",
-      "Digital Master Radio",
-      "Data Mobile Receiver"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es el DMR?», la formulación que encaja según el banco de examen es «Digital Mobile Radio». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2120). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2121",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué sistema usa la Red SIRDE en España?",
-    "options": [
-      "DMR",
-      "TETRA",
-      "Tetrapol",
-      "APCO25"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué sistema usa la Red SIRDE en España?», la formulación que encaja según el banco de examen es «Tetrapol». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2121). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2123",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En TETRA, ¿cuántos slots de tiempo hay en una portadora?",
-    "options": [
-      "1",
-      "2",
-      "3",
-      "4"
-    ],
-    "correctIndex": 3,
-    "explain": "Sin modulación de información solo se transmite la portadora (potencia de portadora). La respuesta es «4». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2123). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2124",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo se llama el botón para transmitir en radio?",
-    "options": [
-      "Call",
-      "TX",
-      "PTT",
-      "Send"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Cómo se llama el botón para transmitir en radio?», la formulación que encaja según el banco de examen es «PTT». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2124). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2125",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un repetidor?",
-    "options": [
-      "Un equipo que amplifica el volumen",
-      "Un equipo que retransmite en otra frecuencia",
-      "Una antena direccional",
-      "Un amplificador"
-    ],
-    "correctIndex": 1,
-    "explain": "En este enunciado («¿Qué es un repetidor?»), el criterio de examen apunta a «Un equipo que retransmite en otra frecuencia». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2125). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2126",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es “simplex”?",
-    "options": [
-      "Comunicación con repetidor",
-      "Comunicación directa sin repetidor",
-      "Comunicación digital",
-      "Comunicación cifrada"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es “simplex”?», la formulación que encaja según el banco de examen es «Comunicación directa sin repetidor». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2126). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2127",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es “trunking”?",
-    "options": [
-      "Un sistema de encriptación",
-      "Un sistema para concentrar comunicaciones",
-      "Un sistema de antenas",
-      "Una forma de modulación"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es “trunking”?», la formulación que encaja según el banco de examen es «Un sistema para concentrar comunicaciones». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2127). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2128",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Para que usamos el “roaming” en radios digitales?",
-    "options": [
-      "Cambiar de idioma",
-      "Buscar el repetidor con mejor cobertura",
-      "Cambiar de canal manualmente",
-      "Modificar la potencia"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Para que usamos el “roaming” en radios digitales?», la formulación que encaja según el banco de examen es «Buscar el repetidor con mejor cobertura». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2128). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2129",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué es un indicativo de radio?",
-    "options": [
-      "Una contraseña",
-      "Un apodo o nombre identificador",
-      "Un canal de comunicación",
-      "Una frecuencia"
-    ],
-    "correctIndex": 1,
-    "explain": "No es un apodo informal: es el identificador oficial asignado por la administración para la estación. «Un apodo o nombre identificador». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2129). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2130",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué tipo de orden es la palabra clave “SILENCIO RADIO”?",
-    "options": [
-      "Fin del turno",
-      "Apagar el equipo",
-      "Orden de máxima prioridad",
-      "Llamada múltiple"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué tipo de orden es la palabra clave “SILENCIO RADIO”?», la formulación que encaja según el banco de examen es «Orden de máxima prioridad». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2130). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2131",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué se usa para deletrear letras en radio?",
-    "options": [
-      "Código Morse",
-      "Código ICAO",
-      "Código ASCII",
-      "Código QR"
-    ],
-    "correctIndex": 1,
-    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas en fonía. La secuencia correcta del enunciado es «Código ICAO».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2131). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2132",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo se dice la letra “S” en código ICAO?",
-    "options": [
-      "Sierra",
-      "Sun",
-      "Salamanca",
-      "Signal"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Cómo se dice la letra “S” en código ICAO?», la formulación que encaja según el banco de examen es «Sierra». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2132). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2134",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo se confirma un dato afirmativo en radio?",
-    "options": [
-      "Sí",
-      "Afirmativo Sierra",
-      "Rebut",
-      "Copiado"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Cómo se confirma un dato afirmativo en radio?», la formulación que encaja según el banco de examen es «Afirmativo Sierra». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2134). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2135",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo se responde negativamente en radio?",
-    "options": [
-      "No",
-      "Negativo November",
-      "Cancelado",
-      "En obsoluto"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Cómo se responde negativamente en radio?», la formulación que encaja según el banco de examen es «Negativo November». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2135). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2136",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es una llamada individual?",
-    "options": [
-      "Una llamada a muchos usuarios",
-      "Una llamada a la estación directora",
-      "Una llamada de un corresponsal a otro",
-      "Una llamada de emergencia"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué es una llamada individual?», la formulación que encaja según el banco de examen es «Una llamada de un corresponsal a otro». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2136). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2137",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es una llamada múltiple?",
-    "options": [
-      "Llamada entre dos personas",
-      "Llamada de un mando a varios indicativos",
-      "Llamada de un usuario a la central",
-      "Una llamada de emergencia"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es una llamada múltiple?», la formulación que encaja según el banco de examen es «Llamada de un mando a varios indicativos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2137). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2138",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es una llamada colectiva?",
-    "options": [
-      "Llamada a todos los indicativos de un sector",
-      "Llamada privada",
-      "Llamada de emergencia",
-      "Llamada de confirmación"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué es una llamada colectiva?», la formulación que encaja según el banco de examen es «Llamada a todos los indicativos de un sector». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2138). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2139",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es una llamada general?",
-    "options": [
-      "Una llamada informal",
-      "Una llamada para toda la malla",
-      "Una llamada de prueba",
-      "Una llamada múltiple"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es una llamada general?», la formulación que encaja según el banco de examen es «Una llamada para toda la malla». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2139). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2140",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es una llamada de emergencia?",
-    "options": [
-      "Llamada rápida entre amigos",
-      "Llamada solo en caso de urgencia",
-      "Llamada de confirmación",
-      "Una llamada múltiple"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es una llamada de emergencia?», la formulación que encaja según el banco de examen es «Llamada solo en caso de urgencia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2140). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2141",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa P en el protocolo PAS?",
-    "options": [
-      "Prevenir",
-      "Proteger",
-      "Parar",
-      "Preparar"
-    ],
-    "correctIndex": 1,
-    "explain": "En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos daños antes de actuar. Por eso encaja «Proteger». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2141). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2144",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué número hay que marcar en Europa en caso de emergencia?",
-    "options": [
-      "061",
-      "092",
-      "112",
-      "911"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué número hay que marcar en Europa en caso de emergencia?», la formulación que encaja según el banco de examen es «112». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2144). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2145",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué no debe hacerse a un motorista accidentado?",
-    "options": [
-      "Aflojar la ropa",
-      "Protegerlo del frío",
-      "Retirar el casco",
-      "No moverlo innecesariamente"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué no debe hacerse a un motorista accidentado?», la formulación que encaja según el banco de examen es «Retirar el casco». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2145). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2146",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué es la PLS?",
-    "options": [
-      "Posición lateral de seguridad",
-      "Posición larga sentada",
-      "Plan de localización segura",
-      "Punto de luz secundaria"
-    ],
-    "correctIndex": 0,
-    "explain": "La PLS (posición lateral de seguridad) es una maniobra de primeros auxilios para mantener la vía aérea en personas inconscientes que respiran. Aparece en material de formación de operadores y emergencias; la respuesta es «Posición lateral de seguridad».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2146). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2147",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Cuándo se debe aplicar la PLS?",
-    "options": [
-      "Inconsciente y respira",
-      "Inconsciente y no respira",
-      "Con fracturas graves",
-      "Solo con niños"
-    ],
-    "correctIndex": 0,
-    "explain": "La PLS (posición lateral de seguridad) es una maniobra de primeros auxilios para mantener la vía aérea en personas inconscientes que respiran. Aparece en material de formación de operadores y emergencias; la respuesta es «Inconsciente y respira».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2147). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2148",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué debe hacerse al comunicarse con un accidentado?",
-    "options": [
-      "Hablar rápido y fuerte",
-      "Hablar calmado y cercano",
-      "Hablar insistentemente",
-      "No hablar"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué debe hacerse al comunicarse con un accidentado?», la formulación que encaja según el banco de examen es «Hablar calmado y cercano». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2148). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2149",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué trato se recomienda con accidentados adultos?",
-    "options": [
-      "Tutear",
-      "Trato de usted",
-      "Usar apodos",
-      "No hablarles"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué trato se recomienda con accidentados adultos?», la formulación que encaja según el banco de examen es «Trato de usted». Contrasta con el temario de operación, códigos Q y buenas prácticas si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2149). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2150",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa DMO en TETRA?",
-    "options": [
-      "Direct Mode Operation",
-      "Digital Manual Operation",
-      "Data Management Option",
-      "Direct Mobile Output"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa DMO en TETRA?», la formulación que encaja según el banco de examen es «Direct Mode Operation». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2150). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2151",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa TMO en TETRA?",
-    "options": [
-      "Transmission Multiple Output",
-      "Trunked Mode Operation",
-      "Transfer Mode Option",
-      "Time Multiplex Operation"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa TMO en TETRA?», la formulación que encaja según el banco de examen es «Trunked Mode Operation». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2151). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2152",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué potencia suelen tener los equipos portátiles TETRA?",
-    "options": [
-      "10 W",
-      "1–3 W",
-      "5W",
-      "18 W"
-    ],
-    "correctIndex": 1,
-    "explain": "En este enunciado («¿Qué potencia suelen tener los equipos portátiles TETRA?»), el criterio de examen apunta a «1–3 W». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2152). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2153",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un Gateway en TETRA?",
-    "options": [
-      "Equipo para cifrar",
-      "Equipo que conecta DMO con TMO",
-      "Equipo de repetición analógico",
-      "Equipo para medir cobertura"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es un Gateway en TETRA?», la formulación que encaja según el banco de examen es «Equipo que conecta DMO con TMO». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2153). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2154",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa la palabra clave “TOME NOTA”?",
-    "options": [
-      "Mirar una información",
-      "Información a anotar",
-      "Fin de comunicación",
-      "Repetir mensaje"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa la palabra clave “TOME NOTA”?», la formulación que encaja según el banco de examen es «Información a anotar». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2154). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2155",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa la palabra clave “FILIACIÓN”?",
-    "options": [
-      "Dar o pedir datos personales",
-      "Cifrado de claves",
-      "Llamada de emergencia",
-      "Dirección de tráfico"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa la palabra clave “FILIACIÓN”?», la formulación que encaja según el banco de examen es «Dar o pedir datos personales». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2155). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2156",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa la palabra clave “DISPÓNGASE”?",
-    "options": [
-      "Saludar",
-      "Prepararse para recibir órdenes",
-      "Esperar instrucciones",
-      "Avisar de un corte"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa la palabra clave “DISPÓNGASE”?», la formulación que encaja según el banco de examen es «Prepararse para recibir órdenes». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2156). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2157",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “Fin de Silencio Radio”?",
-    "options": [
-      "Apagar radios",
-      "Termina la orden prioritaria de silencio",
-      "Cambiar de canal",
-      "Reiniciar comunicaciones"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa “Fin de Silencio Radio”?», la formulación que encaja según el banco de examen es «Termina la orden prioritaria de silencio». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2157). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2158",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un equipo base?",
-    "options": [
-      "Un portátil con más batería",
-      "Un equipo móvil con fuente de alimentación fija",
-      "Una antena direccional",
-      "Un equipo de exterior"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es un equipo base?», la formulación que encaja según el banco de examen es «Un equipo móvil con fuente de alimentación fija». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2158). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2159",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un equipo móvil?",
-    "options": [
-      "Equipo instalado en vehículos",
-      "Equipo portátil de mano",
-      "Equipo fijo en edificios",
-      "Antena"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué es un equipo móvil?», la formulación que encaja según el banco de examen es «Equipo instalado en vehículos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2159). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2160",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un equipo portátil?",
-    "options": [
-      "Un repetidor",
-      "Un walkie-talkie",
-      "Una antena móvil",
-      "Un transmisor fijo"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es un equipo portátil?», la formulación que encaja según el banco de examen es «Un walkie-talkie». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2160). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2161",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo se puede usar un repetidor DMR?",
-    "options": [
-      "Solo analógico",
-      "Puede ser analógico y digital",
-      "Solo digital",
-      "Solo en UHF"
-    ],
-    "correctIndex": 1,
-    "explain": "En este enunciado («¿Cómo se puede usar un repetidor DMR?»), el criterio de examen apunta a «Puede ser analógico y digital». Repasa la normativa de aficionados y el BOE vigente en el temario y fija qué regla o magnitud distingue la opción correcta de los distractores. Pregunta de banco histórico (FEDI/Quijotes): la respuesta válida en el test puede diferir del texto actual del BOE; contrasta con el reglamento consolidado BOE-A-2013-7624 (anexo I potencias, anexo II examen) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2161). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2162",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Para que podemos usar el potenciómetro en la radio?",
-    "options": [
-      "Un tipo de antena",
-      "Botón de encendido y volumen",
-      "Conector de batería",
-      "Selector de canal"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Para que podemos usar el potenciómetro en la radio?», la formulación que encaja según el banco de examen es «Botón de encendido y volumen». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2162). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2163",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué tipo de baterías suelen usar los equipos portátiles modernos?",
-    "options": [
-      "Níquel-cadmio",
-      "Níquel-metal hidruro",
-      "Iones de litio",
-      "Plomo-ácido"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué tipo de baterías suelen usar los equipos portátiles modernos?», la formulación que encaja según el banco de examen es «Iones de litio». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2163). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2164",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es la función “roaming” en digital?",
-    "options": [
-      "Cambio manual de canal",
-      "Cambio automático de potencia",
-      "Cambio automático de repetidor",
-      "Cambio de antena"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué es la función “roaming” en digital?», la formulación que encaja según el banco de examen es «Cambio automático de repetidor». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2164). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2165",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “encriptación de voz”?",
-    "options": [
-      "Mejorar el volumen",
-      "Codificar la comunicación",
-      "Repetir la voz dos veces",
-      "Reducir interferencias"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa “encriptación de voz”?», la formulación que encaja según el banco de examen es «Codificar la comunicación». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2165). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2166",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué se recomienda antes de transmitir por radio?",
-    "options": [
-      "Pulsar y hablar rápido",
-      "Comprobar que no hay otra transmisión",
-      "Gritar para claridad",
-      "Poner música"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué se recomienda antes de transmitir por radio?», la formulación que encaja según el banco de examen es «Comprobar que no hay otra transmisión». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2166). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2167",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Cómo debe ser el lenguaje en radio profesional?",
-    "options": [
-      "Informal y amistoso",
-      "Breve, conciso y concentrado",
-      "Largo y detallado",
-      "Con modismos"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Cómo debe ser el lenguaje en radio profesional?», la formulación que encaja según el banco de examen es «Breve, conciso y concentrado». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2167). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2168",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un “Talk Group” en digital?",
-    "options": [
-      "Un canal de audio",
-      "Un grupo de conversación",
-      "Una clave secreta",
-      "Un repetidor"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es un “Talk Group” en digital?», la formulación que encaja según el banco de examen es «Un grupo de conversación». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2168). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2169",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es un “radio faro” en digital?",
-    "options": [
-      "Una clave de acceso",
-      "Una portadora de referencia del repetidor",
-      "Una antena omnidireccional",
-      "Un mensaje cifrado"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es un “radio faro” en digital?», la formulación que encaja según el banco de examen es «Una portadora de referencia del repetidor». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2169). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2171",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué pasa en digital cuando no hay cobertura?",
-    "options": [
-      "Se escucha ruido",
-      "No transmite, hace un tono de alarma",
-      "Se distorsiona lentamente",
-      "Se pone en analógico"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué pasa en digital cuando no hay cobertura?», la formulación que encaja según el banco de examen es «No transmite, hace un tono de alarma». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2171). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2172",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es la modulación en FM?",
-    "options": [
-      "Fase modulada",
-      "Frecuencia modulada",
-      "Amplitud modulada",
-      "Digital modulada"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué es la modulación en FM?», la formulación que encaja según el banco de examen es «Frecuencia modulada». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2172). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2173",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿En qué banda se usa la AM en radio profesional?",
-    "options": [
-      "Banda aérea",
-      "Banda marítima",
-      "Banda UHF",
-      "Banda VHF"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿En qué banda se usa la AM en radio profesional?», la formulación que encaja según el banco de examen es «Banda aérea». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2173). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2174",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “conciso” en comunicación por radio?",
-    "options": [
-      "Sin palabras de más",
-      "Muy largo",
-      "Con adornos",
-      "Informal"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa “conciso” en comunicación por radio?», la formulación que encaja según el banco de examen es «Sin palabras de más». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2174). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2175",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “concentrado” en comunicación por radio?",
-    "options": [
-      "Usar tecnicismos y datos justos",
-      "Hablar lentamente",
-      "Gritar al micrófono",
-      "Repetir mucho"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa “concentrado” en comunicación por radio?», la formulación que encaja según el banco de examen es «Usar tecnicismos y datos justos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2175). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2176",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué significa “breve” en comunicación por radio?",
-    "options": [
-      "Lo más corto posible",
-      "Usar claves",
-      "Repetir varias veces",
-      "Hablar rápido"
-    ],
-    "correctIndex": 0,
-    "explain": "En operación por radio, «breve» significa ser claro con el mínimo de palabras necesarias (buena práctica y códigos Q). La respuesta es «Lo más corto posible».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2176). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2177",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué no debe hacerse al hablar por radio digital?",
-    "options": [
-      "Hablar normal",
-      "Alejarse del micro",
-      "Alzar la voz",
-      "Vocalizar"
-    ],
-    "correctIndex": 2,
-    "explain": "En «¿Qué no debe hacerse al hablar por radio digital?», la formulación que encaja según el banco de examen es «Alzar la voz». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2177). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2178",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué sucede en digital cuando hay mala cobertura?",
-    "options": [
-      "Se escucha con fritura",
-      "Se corta y parece “voz de pato”",
-      "Se distorsiona",
-      "Se mezcla con otras voces"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué sucede en digital cuando hay mala cobertura?», la formulación que encaja según el banco de examen es «Se corta y parece “voz de pato”». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2178). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2179",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué indica “sentido de circulación”?",
-    "options": [
-      "Dirección según vehículos",
-      "Dirección contraria",
-      "Subida de calle",
-      "Numeración de calle"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué indica “sentido de circulación”?», la formulación que encaja según el banco de examen es «Dirección según vehículos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2179). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2180",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa contra sentido de circulación?",
-    "options": [
-      "Circular a favor",
-      "Circular en sentido contrario",
-      "Circular en línea recta",
-      "Circular en rotonda"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa contra sentido de circulación?», la formulación que encaja según el banco de examen es «Circular en sentido contrario». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2180). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2181",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “ascendente” en orientación?",
-    "options": [
-      "Subida",
-      "Bajada",
-      "Numeración decreciente",
-      "Hacia el mar"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa “ascendente” en orientación?», la formulación que encaja según el banco de examen es «Subida». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2181). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2182",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “descendente”?",
-    "options": [
-      "Subida",
-      "Bajada",
-      "Numeración decreciente",
-      "Hacia el mar"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa “descendente”?», la formulación que encaja según el banco de examen es «Bajada». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2182). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2183",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué significa “creciente”?",
-    "options": [
-      "Numeración que baja",
-      "Numeración que aumenta",
-      "Calle cerrada",
-      "Calle en obras"
-    ],
-    "correctIndex": 1,
-    "explain": "En señalización vial y mapas, «creciente» indica que la numeración de la calle aumenta en esa dirección (frente a decreciente). «Numeración que aumenta».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2183). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2184",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué significa “decreciente”?",
-    "options": [
-      "Numeración que disminuye",
-      "Numeración que sube",
-      "Señal de tráfico",
-      "Indicación de peligro"
-    ],
-    "correctIndex": 0,
-    "explain": "En señalización vial y mapas, «creciente» indica que la numeración de la calle aumenta en esa dirección (frente a decreciente). «Numeración que disminuye».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2184). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2185",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué es un indicativo fijo?",
-    "options": [
-      "Que cambia según servicio",
-      "Que siempre es el mismo",
-      "Que depende de la zona",
-      "Que identifica solo vehículos"
-    ],
-    "correctIndex": 1,
-    "explain": "Un indicativo fijo es el distintivo estable de una estación instalada (no cambia al operar en otro sitio como un móvil). Por eso encaja «Que siempre es el mismo», frente a opciones que lo confunden con móvil, zona o vehículos. Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2185). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2186",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué es un indicativo variable?",
-    "options": [
-      "Que cambia según servicio",
-      "Que siempre es igual",
-      "Que identifica a mandos",
-      "Que identifica emergencias"
-    ],
-    "correctIndex": 0,
-    "explain": "Un indicativo variable puede cambiar según el servicio o modalidad de operación (por ejemplo estación móvil/portátil frente a fija). La respuesta correcta es «Que cambia según servicio». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2186). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2187",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué es un indicativo de especialización?",
-    "options": [
-      "Asignado por habilidades o funciones",
-      "Numérico solamente",
-      "Temporal",
-      "Que identifica emergencias"
-    ],
-    "correctIndex": 0,
-    "explain": "El indicativo de especialización no es el distintivo ordinario EA… de la estación: se asigna en función de titulación, rol o habilidades acreditadas del operador (por ejemplo funciones específicas en el servicio). No es solo numérico, ni el indicativo de emergencias. La respuesta correcta es «Asignado por habilidades o funciones». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2187). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2188",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa “monitorización remota” en radios modernas?",
-    "options": [
-      "Controlar otro equipo a distancia",
-      "Escuchar música en el equipo",
-      "Cambiar de canal",
-      "Aumentar potencia automaticamente"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa “monitorización remota” en radios modernas?», la formulación que encaja según el banco de examen es «Controlar otro equipo a distancia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2188). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2189",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué es el vocoder en radios digitales?",
-    "options": [
-      "Conversor de voz a datos",
-      "Amplificador",
-      "Antena",
-      "Micrófono"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué es el vocoder en radios digitales?», la formulación que encaja según el banco de examen es «Conversor de voz a datos». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2189). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2190",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa GPS en radios profesionales?",
-    "options": [
-      "Global Positioning System",
-      "General Portable Signal",
-      "Ground Point Service",
-      "Grid Power Source"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa GPS en radios profesionales?», la formulación que encaja según el banco de examen es «Global Positioning System». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2190). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2191",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa que una comunicación sea “banal”?",
-    "options": [
-      "Profesional",
-      "Entre amigos sin importancia",
-      "Crítica",
-      "En clave"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Qué significa que una comunicación sea “banal”?», la formulación que encaja según el banco de examen es «Entre amigos sin importancia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2191). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2192",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué significa que una comunicación sea “crítica”?",
-    "options": [
-      "Con importancia vital",
-      "Entre amigos",
-      "Cotidiana",
-      "Banales"
-    ],
-    "correctIndex": 0,
-    "explain": "En «¿Qué significa que una comunicación sea “crítica”?», la formulación que encaja según el banco de examen es «Con importancia vital». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2192). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2194",
-    "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?",
-    "options": [
-      "Llamar a emergencias",
-      "Proteger la zona",
-      "Socorrer inmediatamente",
-      "Gritar pidiendo ayuda"
-    ],
-    "correctIndex": 1,
-    "explain": "En primeros auxilios el protocolo PAS ordena: Proteger la escena, Avisar (112), Socorrer. Lo primero es evitar nuevos daños antes de actuar. Por eso encaja «Proteger la zona».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2194). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2195",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Qué debemos hacer cuando un indicativo inicia su transmisión con “ATENCIÓN ATENCIÓN”?",
-    "options": [
-      "Continuar con nuestras comunicaciones normales.",
-      "Repetir también “ATENCIÓN ATENCIÓN” para confirmar.",
-      "Guardar silencio inmediatamente y escuchar el comunicado",
-      "Cambiar de canal para no interrumpir."
-    ],
-    "correctIndex": 2,
-    "explain": "Anuncia un comunicado prioritario; debes callar y escuchar sin interferir. «Guardar silencio inmediatamente y escuchar el comunicado». Es pregunta de banco histórico (FEDI/Quijotes): contrasta plazos y cifras con el BOE consolidado (Orden IET/1311/2013) antes del examen.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2195). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2196",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En Barcelona, la ciudad está delimitada por el mar al sur y la montaña al norte. ¿Qué significa la referencia “lado MAR”?",
-    "options": [
-      "Orientación hacia la montaña",
-      "Orientación hacia el norte",
-      "Orientación hacia el sur, hacia el mar",
-      "Orientación hacia el río"
-    ],
-    "correctIndex": 2,
-    "explain": "En «En Barcelona, la ciudad está delimitada por el mar al sur y la montaña al norte. ¿Qué sign…», la formulación que encaja según el banco de examen es «Orientación hacia el sur, hacia el mar». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2196). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2197",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Con la referencia de barcelona, cuando se dice “lado MONTAÑA” se entiende…",
-    "options": [
-      "Orientación hacia el sur",
-      "Orientación hacia el norte, dirección montaña",
-      "Orientación hacia el este",
-      "Orientación hacia el mar"
-    ],
-    "correctIndex": 1,
-    "explain": "En «Con la referencia de barcelona, cuando se dice “lado MONTAÑA” se entiende…», la formulación que encaja según el banco de examen es «Orientación hacia el norte, dirección montaña». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2197). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2199",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Cuando en comunicaciones de Barcelona se usa la palabra “BESÒS”, ¿qué indica?",
-    "options": [
-      "Lado izquierdo de la ciudad mirando hacia el mar",
-      "Lado derecho mirando desde el centro",
-      "El centro de la ciudad",
-      "Una calle principal"
-    ],
-    "correctIndex": 0,
-    "explain": "En «Cuando en comunicaciones de Barcelona se usa la palabra “BESÒS”, ¿qué indica?», la formulación que encaja según el banco de examen es «Lado izquierdo de la ciudad mirando hacia el mar». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2199). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-85-2200",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "En orientación urbana, ¿qué ventaja tiene usar referencias como MAR, MONTAÑA, BESÒS o LLOBREGAT?",
-    "options": [
-      "Evitar tener que usar coordenadas complicadas",
-      "Servir solo para radioaficionados",
-      "Son códigos secretos que no entiende nadie",
-      "Reemplazan a las direcciones oficiales"
-    ],
-    "correctIndex": 0,
-    "explain": "En «En orientación urbana, ¿qué ventaja tiene usar referencias como MAR, MONTAÑA, BESÒS o LLOB…», la formulación que encaja según el banco de examen es «Evitar tener que usar coordenadas complicadas». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · comunicaciones, quiz 85, pregunta 2200). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "ure-p1-01",
@@ -16283,7 +14980,7 @@ export default [
       "Tensión eléctrica"
     ],
     "correctIndex": 3,
-    "explain": "dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente. La respuesta que marca el banco es «Tensión eléctrica». dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente."
+    "explain": "dBµV significa decibelios referidos a 1 microvoltio. Es una forma logarítmica de expresar nivel de tensión, no potencia, resistencia ni corriente. La respuesta que marca el banco es «Tensión eléctrica»."
   },
   {
     "id": "ure-p1-07",
@@ -16327,7 +15024,7 @@ export default [
       "Es independiente de la frecuencia"
     ],
     "correctIndex": 3,
-    "explain": "Ruido blanco: densidad espectral de potencia aproximadamente plana (independiente de f). URE. La respuesta que marca el banco es «Es independiente de la frecuencia». Ruido blanco: densidad espectral de potencia aproximadamente plana (independiente de f). URE."
+    "explain": "Ruido blanco: densidad espectral de potencia aproximadamente plana (independiente de f). URE. La respuesta que marca el banco es «Es independiente de la frecuencia»."
   },
   {
     "id": "ure-p1-10",
@@ -16341,7 +15038,7 @@ export default [
       "La ganancia de modulación"
     ],
     "correctIndex": 0,
-    "explain": "El índice (o grado) de modulación m es un parámetro clásico de la AM. URE. La respuesta que marca el banco es «La modulación de amplitud». El índice (o grado) de modulación m es un parámetro clásico de la AM. URE."
+    "explain": "El índice (o grado) de modulación m es un parámetro clásico de la AM. URE. La respuesta que marca el banco es «La modulación de amplitud»."
   },
   {
     "id": "ure-p1-11",
@@ -16355,7 +15052,7 @@ export default [
       "Es constante en un determinado medio"
     ],
     "correctIndex": 3,
-    "explain": "En un medio homogéneo dado, la velocidad de fase es característica del medio (no “sube” con f de forma simple). URE. La respuesta que marca el banco es «Es constante en un determinado medio». En un medio homogéneo dado, la velocidad de fase es característica del medio (no “sube” con f de forma simple). URE."
+    "explain": "En un medio homogéneo dado, la velocidad de fase es característica del medio (no “sube” con f de forma simple). URE. La respuesta que marca el banco es «Es constante en un determinado medio»."
   },
   {
     "id": "ure-p1-13",
@@ -16413,7 +15110,7 @@ export default [
       "Colocarle un plano de tierra"
     ],
     "correctIndex": 2,
-    "explain": "Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE. La respuesta que marca el banco es «Alargarla». Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE."
+    "explain": "Frecuencia más baja implica longitud de onda mayor: el dipolo resonante debe ser más largo. URE. La respuesta que marca el banco es «Alargarla»."
   },
   {
     "id": "ure-p1-17",
@@ -16457,7 +15154,7 @@ export default [
       "Longitud de onda"
     ],
     "correctIndex": 2,
-    "explain": "dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica. La respuesta que marca el banco es «Potencia eléctrica». dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica."
+    "explain": "dBm significa decibelios referidos a 1 milivatio. Por definición, 0 dBm = 1 mW, así que dBm expresa nivel de potencia en escala logarítmica. La respuesta que marca el banco es «Potencia eléctrica»."
   },
   {
     "id": "ure-p1-21",
@@ -16499,7 +15196,7 @@ export default [
       "La energía de radiofrecuencia que retorna por el cable de bajada"
     ],
     "correctIndex": 1,
-    "explain": "Los armónicos son componentes a nf₀ (n entero >1). URE. La respuesta que marca el banco es «Múltiplos de la frecuencia fundamental». Los armónicos son componentes a nf₀ (n entero >1). URE."
+    "explain": "Los armónicos son componentes a nf₀ (n entero >1). URE. La respuesta que marca el banco es «Múltiplos de la frecuencia fundamental»."
   },
   {
     "id": "ure-p1-25",
@@ -16571,7 +15268,7 @@ export default [
       "Es el medio de propagación característico en las grandes ciudades"
     ],
     "correctIndex": 1,
-    "explain": "La onda de superficie se adhiere/rodéa la tierra y puede seguir la curvatura en MF/bajas HF. URE. La respuesta que marca el banco es «La señal radioeléctrica se propaga siguiendo la curvatura terrestre». La onda de superficie se adhiere/rodéa la tierra y puede seguir la curvatura en MF/bajas HF. URE."
+    "explain": "La onda de superficie se adhiere/rodéa la tierra y puede seguir la curvatura en MF/bajas HF. URE. La respuesta que marca el banco es «La señal radioeléctrica se propaga siguiendo la curvatura terrestre»."
   },
   {
     "id": "ure-p1x-01",

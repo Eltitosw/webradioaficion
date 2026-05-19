@@ -1,40 +1,43 @@
 /**
- * Añade matiz BOE a explicaciones históricas normativas ya guardadas.
+ * Elimina colas «banco histórico / contrastar BOE» de explicaciones ya materializadas.
  */
 import path from "path";
 import { fileURLToPath } from "url";
 
-import banco from "../data/questions-banco.js";
 import generated from "../data/generated-explanations.js";
 import quijotesExp from "../data/quijotes-explanations.js";
-import { pedagogicalExplain } from "../lib/explain-quality.mjs";
-import { explainHasBoeAficionadosAnchor, stemNeedsBoeAficionadosAnchor } from "../lib/boe-explain.mjs";
-import { ensureHistoricalSourceHedge } from "../lib/source-hedge.mjs";
-import { auditExplainAgainstSources } from "../lib/source-verification.mjs";
+import { BOE_HISTORICAL_HEDGE } from "../lib/boe-explain.mjs";
 import { writeUtf8File } from "../lib/import-question-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const GEN_OUT = path.join(__dirname, "..", "data", "generated-explanations.js");
 const QUIJ_OUT = path.join(__dirname, "..", "data", "quijotes-explanations.js");
 
+function stripHistoricalHedge(text) {
+  return String(text || "")
+    .replace(BOE_HISTORICAL_HEDGE, "")
+    .replace(/\s*Pregunta de banco histórico \(FEDI\/Quijotes\):[^.]*\.\s*/gi, " ")
+    .replace(/\s*Es pregunta de banco histórico \(FEDI\/Quijotes\):[^.]*\.\s*/gi, " ")
+    .replace(/\s*Contrastar con el reglamento consolidado BOE-A-2013-7624[^.]*\.\s*/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 const nextGen = { ...generated };
 const nextQuij = { ...quijotesExp };
 let patched = 0;
 
-for (const q of banco) {
-  const current = nextQuij[q.id] || nextGen[q.id] || pedagogicalExplain(q);
-  const meta = q.id.startsWith("quijotes-") || q.id.startsWith("fedi-");
-  if (!meta) continue;
-  const stem = String(q.stem || "");
-  if (!stemNeedsBoeAficionadosAnchor(stem)) continue;
-  if (explainHasBoeAficionadosAnchor(q, current)) continue;
-
-  const hedged = ensureHistoricalSourceHedge(q, current);
-  if (hedged === current) continue;
-
-  if (q.id.startsWith("quijotes-")) nextQuij[q.id] = hedged;
-  else nextGen[q.id] = hedged;
-  patched += 1;
+for (const [map, label] of [
+  [nextGen, "gen"],
+  [nextQuij, "quij"],
+]) {
+  for (const id of Object.keys(map)) {
+    const cleaned = stripHistoricalHedge(map[id]);
+    if (cleaned !== map[id]) {
+      map[id] = cleaned;
+      patched += 1;
+    }
+  }
 }
 
 function writeMap(outPath, header, map) {
@@ -48,4 +51,4 @@ function writeMap(outPath, header, map) {
 writeMap(GEN_OUT, "/** Explicaciones generadas (UTF-8). patch-historical-hedges.mjs */", nextGen);
 writeMap(QUIJ_OUT, "/** Explicaciones Quijotes (UTF-8). patch-historical-hedges.mjs */", nextQuij);
 
-process.stderr.write(`patch-historical-hedges: ${patched} explicaciones actualizadas\n`);
+process.stderr.write(`patch-historical-hedges: ${patched} explicaciones depuradas\n`);
