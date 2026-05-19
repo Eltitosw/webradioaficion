@@ -1,0 +1,8 @@
+=== Revisión: clasificación de baja confianza ===
+Fecha: 2026-05-19
+Total banco: 1024
+Revisión pendiente (fallback-review): 0
+
+Agrupado por parte/tema almacenado. Añade reglas en lib/question-classification.mjs
+o entradas en data/question-classification-overrides.mjs
+

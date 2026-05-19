@@ -25,7 +25,7 @@ import { fetchFediBlock } from "../lib/parse-fedi-html.mjs";
 import { fetchUreQuizPage } from "../lib/parse-ure-quiz.mjs";
 import {
   dedupeKey,
-  inferTopicId,
+  classifyQuestion,
   stemNeedsFigure,
   writeQuestionModule,
 } from "../lib/import-question-utils.mjs";
@@ -116,10 +116,11 @@ function tryAddQuestion(opts) {
   }
   seenKeys.add(key);
   seenIds.add(id);
+  const classified = classifyQuestion({ stem, sourcePart: part, id });
   out.push({
     id,
-    part,
-    topicId: inferTopicId(stem, part),
+    part: classified.part,
+    topicId: classified.topicId,
     stem,
     options,
     correctIndex,

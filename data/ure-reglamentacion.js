@@ -1,12 +1,12 @@
 /**
- * URE reglamentación.
+ * URE reglamentación (parte 2).
  * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [
   {
     id: "ure-p2-01",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:",
     options: [
       "Autorización administrativa",
@@ -146,7 +146,7 @@ export default [
   {
     id: "ure-p2-11",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
     options: [
       "Melilla",
@@ -174,7 +174,7 @@ export default [
   {
     id: "ure-p2-13",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "En comunicaciones del Servicio de Aficionados, la palabra CID se deletrea:",
     options: [
       "Charter, India, Delfo",
@@ -187,8 +187,8 @@ export default [
   },
   {
     id: "ure-p2-14",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "Para la instalación de antenas de radioaficionados, es obligatorio tener un seguro que cubra:",
     options: [
       "La responsabilidad civil del titular",
@@ -243,8 +243,8 @@ export default [
   },
   {
     id: "ure-p2-18",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Como norma general, la potencia de salida de los trasmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podrá exceder de:",
     options: [
       "5 W",
@@ -258,7 +258,7 @@ export default [
   {
     id: "ure-p2-19",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Como norma general las instalaciones en una estación de radioaficionado deberán ser efectuadas:",
     options: [
       "Directamente por el propietario de la estación",
@@ -327,8 +327,8 @@ export default [
   },
   {
     id: "ure-p2-24",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Las estaciones automáticas desatendidas en la banda de HF tendrán una potencia de salida máxima de:",
     options: [
       "25 W",
@@ -383,8 +383,8 @@ export default [
   },
   {
     id: "ure-p2-29",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:",
     options: [
       "Espectro radioeléctrico",

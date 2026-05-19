@@ -19,8 +19,8 @@ export default [
   },
   {
     id: "quijotes-85-2113",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "¿Qué significa VHF?",
     options: [
       "Very Hard Frequency",
@@ -33,8 +33,8 @@ export default [
   },
   {
     id: "quijotes-85-2116",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La banda VHF comprende frecuencias:",
     options: [
       "30-300 MHz",
@@ -75,8 +75,8 @@ export default [
   },
   {
     id: "quijotes-85-2123",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "En TETRA, ¿cuántos slots de tiempo hay en una portadora?",
     options: [
       "1",
@@ -425,8 +425,8 @@ export default [
   },
   {
     id: "quijotes-85-2111",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "La impedancia de las antenas en radios suele ser:",
     options: [
       "25 ohmios",
@@ -467,8 +467,8 @@ export default [
   },
   {
     id: "quijotes-85-2122",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "En DMR, ¿cuántos slots de tiempo hay en una portadora?",
     options: [
       "1",
@@ -496,7 +496,7 @@ export default [
   {
     id: "quijotes-85-2131",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Qué se usa para deletrear letras en radio?",
     options: [
       "Código Morse",
@@ -635,8 +635,8 @@ export default [
   },
   {
     id: "quijotes-85-2172",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "¿Qué es la modulación en FM?",
     options: [
       "Fase modulada",
@@ -650,7 +650,7 @@ export default [
   {
     id: "quijotes-85-2176",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué significa “breve” en comunicación por radio?",
     options: [
       "Lo más corto posible",
@@ -691,8 +691,8 @@ export default [
   },
   {
     id: "quijotes-85-2110",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "¿Qué pasa si transmitimos sin antena?",
     options: [
       "Aumenta la cobertura",
@@ -705,8 +705,8 @@ export default [
   },
   {
     id: "quijotes-85-2112",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "¿Qué significa UHF?",
     options: [
       "Ultra High Frequency",
@@ -719,8 +719,8 @@ export default [
   },
   {
     id: "quijotes-85-2115",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La banda UHF comprende frecuencias:",
     options: [
       "3-30 MHz",
@@ -776,7 +776,7 @@ export default [
   {
     id: "quijotes-85-2145",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué no debe hacerse a un motorista accidentado?",
     options: [
       "Aflojar la ropa",
@@ -790,7 +790,7 @@ export default [
   {
     id: "quijotes-85-2146",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué es la PLS?",
     options: [
       "Posición lateral de seguridad",
@@ -804,7 +804,7 @@ export default [
   {
     id: "quijotes-85-2148",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué debe hacerse al comunicarse con un accidentado?",
     options: [
       "Hablar rápido y fuerte",
@@ -818,7 +818,7 @@ export default [
   {
     id: "quijotes-85-2149",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué trato se recomienda con accidentados adultos?",
     options: [
       "Tutear",
@@ -874,7 +874,7 @@ export default [
   {
     id: "quijotes-85-2183",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué significa “creciente”?",
     options: [
       "Numeración que baja",
@@ -888,7 +888,7 @@ export default [
   {
     id: "quijotes-85-2194",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué es lo primero que hay que hacer al encontrar un accidente de tráfico?",
     options: [
       "Llamar a emergencias",
@@ -915,8 +915,8 @@ export default [
   },
   {
     id: "quijotes-85-2108",
-    part: 2,
-    topicId: "licencias-indicativos",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "¿Qué es un transceptor?",
     options: [
       "Un aparato que solo transmite",
@@ -958,7 +958,7 @@ export default [
   {
     id: "quijotes-85-2147",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Cuándo se debe aplicar la PLS?",
     options: [
       "Inconsciente y respira",
@@ -1042,7 +1042,7 @@ export default [
   {
     id: "quijotes-85-2184",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "¿Qué significa “decreciente”?",
     options: [
       "Numeración que disminuye",
@@ -1434,7 +1434,7 @@ export default [
   {
     id: "quijotes-1-0190",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Los transistores bipolares son dispositivos que:",
     options: [
       "Son elementos pasivos.",
@@ -1476,7 +1476,7 @@ export default [
   {
     id: "quijotes-1-0211",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "magnetismo-ondas",
     stem: "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
     options: [
       "Potencia eléctrica.",
@@ -1672,7 +1672,7 @@ export default [
   {
     id: "quijotes-1-0067",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "En un circuito electrónico, un transistor no se puede emplear como:",
     options: [
       "Amplificador.",
@@ -1798,7 +1798,7 @@ export default [
   {
     id: "quijotes-1-0226",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Un transistor bipolar está compuesto por:",
     options: [
       "Base, colector y drenador.",
@@ -1826,7 +1826,7 @@ export default [
   {
     id: "quijotes-1-0242",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "El mando NB de un transceptor sirve para:",
     options: [
       "Seleccionar las señales moduladas en AM.",
@@ -2080,7 +2080,7 @@ export default [
   {
     id: "quijotes-1-0198",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "magnetismo-ondas",
     stem: "La unidad dBm corresponde a la magnitud:",
     options: [
       "Potencia.",
@@ -2234,7 +2234,7 @@ export default [
   {
     id: "quijotes-1-0069",
     part: 1,
-    topicId: "magnetismo-ondas",
+    topicId: "componentes",
     stem: "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
     options: [
       "Directamente proporcional a la inductancia de la bobina.",
@@ -2499,8 +2499,8 @@ export default [
   },
   {
     id: "quijotes-1-0115",
-    part: 1,
-    topicId: "magnetismo-ondas",
+    part: 2,
+    topicId: "marco-normativo",
     stem: "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?",
     options: [
       "No hay limitaciones.",
@@ -2710,7 +2710,7 @@ export default [
   {
     id: "quijotes-1-0061",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
     options: [
       "Emitir con más potencia.",
@@ -2724,7 +2724,7 @@ export default [
   {
     id: "quijotes-1-0097",
     part: 1,
-    topicId: "magnetismo-ondas",
+    topicId: "receptores-emisores",
     stem: "Los transceptores con cambio de frecuencia de emisión, utilizan:",
     options: [
       "Un oscilador de frecuencia variable.",
@@ -2878,7 +2878,7 @@ export default [
   {
     id: "quijotes-1-0002",
     part: 1,
-    topicId: "componentes",
+    topicId: "electricidad-basica",
     stem: "Un elevado nivel de intensidad de campo eléctrico puede producir:",
     options: [
       "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones",
@@ -2962,7 +2962,7 @@ export default [
   {
     id: "quijotes-1-0188",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "El medidor comúnmente denominado \"S-meter\" indica:",
     options: [
       "La relación de onda estacionaria.",
@@ -2990,7 +2990,7 @@ export default [
   {
     id: "quijotes-1-0199",
     part: 1,
-    topicId: "magnetismo-ondas",
+    topicId: "receptores-emisores",
     stem: "Al objeto de evitar que el transceptor introduzca señales de radiofrecuencia en la red de suministro eléctrico, se emplea:",
     options: [
       "Blindaje por apantallamiento.",
@@ -3060,7 +3060,7 @@ export default [
   {
     id: "quijotes-1-2207",
     part: 1,
-    topicId: "componentes",
+    topicId: "electricidad-basica",
     stem: "En un circuito con varias baterías conectadas en paralelo:",
     options: [
       "La tensión total se suma.",
@@ -3187,7 +3187,7 @@ export default [
   {
     id: "quijotes-1-0222",
     part: 1,
-    topicId: "componentes",
+    topicId: "electricidad-basica",
     stem: "Un elevado nivel de intensidad de campo eléctrico puede producir:",
     options: [
       "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones.",
@@ -3284,8 +3284,8 @@ export default [
   },
   {
     id: "quijotes-1-0196",
-    part: 1,
-    topicId: "electricidad-basica",
+    part: 2,
+    topicId: "marco-normativo",
     stem: "Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe procurarse:",
     options: [
       "Radiar con potencia elevada.",
@@ -3634,7 +3634,7 @@ export default [
   {
     id: "quijotes-1-0263",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "El transceptor debe estar conectado a tierra para:",
     options: [
       "Evitar las interferencias atmosféricas",
@@ -3662,7 +3662,7 @@ export default [
   {
     id: "quijotes-1-0055",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "El excitador:",
     options: [
       "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
@@ -3704,7 +3704,7 @@ export default [
   {
     id: "quijotes-1-0219",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "En un amplificador de ganancia 20 dB, con impedancia de entrada igual a la de salida, y una potencia de entrada de 0.2 watios. ¿Cuánto vale la potencia de salida?:",
     options: [
       "200 W",
@@ -3886,7 +3886,7 @@ export default [
   {
     id: "quijotes-1-0132",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
     options: [
       "Clase A.",
@@ -4194,7 +4194,7 @@ export default [
   {
     id: "quijotes-1-2102",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Un circuito con un transistor montado en colector común se denomina también:",
     options: [
       "Colector mixto",
@@ -4292,7 +4292,7 @@ export default [
   {
     id: "quijotes-84-1847",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Como norma general, la instalación de una estación de aficionado deberá ser efectuada:",
     options: [
       "Únicamente por el propietario de la estación.",
@@ -4334,7 +4334,7 @@ export default [
   {
     id: "quijotes-84-1873",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "El acceso a los repetidores analógicos y digitales finales será necesariamente:",
     options: [
       "Obligatorio.",
@@ -4376,7 +4376,7 @@ export default [
   {
     id: "quijotes-84-1918",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "La señal de seguridad en radiotelefonía se compone:",
     options: [
       "De la palabra \"Securité\" repetida cinco veces.",
@@ -4543,8 +4543,8 @@ export default [
   },
   {
     id: "quijotes-84-2049",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por obras en la comunidad, cuando estas hayan terminado:",
     options: [
       "Tendrá que presentar nueva memoria.",
@@ -4599,8 +4599,8 @@ export default [
   },
   {
     id: "quijotes-84-2074",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "Para instalar una antena en un edificio en régimen de propiedad horizontal:",
     options: [
       "Se necesita autorización expresa de la Comunidad de Propietarios.",
@@ -4641,8 +4641,8 @@ export default [
   },
   {
     id: "quijotes-84-2104",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de las emisiones, no deberá ser superior a",
     options: [
       "5 w",
@@ -4782,7 +4782,7 @@ export default [
   {
     id: "quijotes-84-1875",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Para no desmontar el sistema radiante de una estación fija, una vez cancelada la licencia, y dejarlo sólo para recepción, su titular deberá obtener:",
     options: [
       "Autorización por escrito de la Jefatura Provincial de Inspección de Telecomunicaciones.",
@@ -4880,7 +4880,7 @@ export default [
   {
     id: "quijotes-84-1944",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea el número 7?:",
     options: [
       "Severo",
@@ -4935,8 +4935,8 @@ export default [
   },
   {
     id: "quijotes-84-1996",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "Los soportes de una antena de radioaficionado:",
     options: [
       "Se podrán fijar a los anclajes de un pararrayos.",
@@ -5215,8 +5215,8 @@ export default [
   },
   {
     id: "quijotes-84-1982",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "Utilizar la palabra \"cambio\" al finalizar una transmisión en fonía es:",
     options: [
       "Recomendable.",
@@ -5244,7 +5244,7 @@ export default [
   {
     id: "quijotes-84-1991",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "Toda estación colectiva fija de aficionado destinada a realizar estudios de propagación y cuyo funcionamiento se basa en la emisión automática de señales de identificación, recibe el nombre de:",
     options: [
       "Servicio de aficionado por satélite.",
@@ -5328,7 +5328,7 @@ export default [
   {
     id: "quijotes-84-2041",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "La señal QRT tiene el significado de:",
     options: [
       "Su frecuencia varía.",
@@ -5397,8 +5397,8 @@ export default [
   },
   {
     id: "quijotes-84-2203",
-    part: 2,
-    topicId: "operacion-seguridad",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En el sistema GMDSS, la alerta de socorro inicial en MF/HF se realiza mediante Llamada Selectiva Digital (DSC). ¿En qué frecuencia se transmite esta alerta en banda MF?",
     options: [
       "2.182 kHz",
@@ -5412,7 +5412,7 @@ export default [
   {
     id: "quijotes-84-1812",
     part: 2,
-    topicId: "licencias-indicativos",
+    topicId: "operacion-seguridad",
     stem: "El deletreo del distintivo EA3RCQ según el alfabeto fonético internacional:",
     options: [
       "Echo, Alfa, Tres, Romeo, Charlie, Quebec.",
@@ -5482,7 +5482,7 @@ export default [
   {
     id: "quijotes-84-1872",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Para la instalación de una estación fija de radioaficionado, es necesario:",
     options: [
       "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
@@ -5495,8 +5495,8 @@ export default [
   },
   {
     id: "quijotes-84-1874",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
     options: [
       "La gama de frecuencia de 3 a 30 GHz.",
@@ -5565,8 +5565,8 @@ export default [
   },
   {
     id: "quijotes-84-1916",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Como norma general, la ganancia del sistema radiante de las estaciones desatendidas en las bandas de VHF y UHF, no será superior a:",
     options: [
       "6 dB.",
@@ -5580,7 +5580,7 @@ export default [
   {
     id: "quijotes-84-1917",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "¿A quién se le puede autorizar la instalación de una Estación Automática Desatendida?:",
     options: [
       "A cualquier titular de licencia de Estación.",
@@ -5594,7 +5594,7 @@ export default [
   {
     id: "quijotes-84-1925",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Como norma general las instalaciones en una estación de radioaficionado deberán ser efectuadas:",
     options: [
       "Directamente por el propietario de la estación.",
@@ -5649,8 +5649,8 @@ export default [
   },
   {
     id: "quijotes-84-2035",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda necesaria, resultante del proceso de modulación, se denomina emisión:",
     options: [
       "Esencial",
@@ -5663,8 +5663,8 @@ export default [
   },
   {
     id: "quijotes-84-2038",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La utilizacion de frecuencias de llamada:",
     options: [
       "Sólo se usan en HF.",
@@ -5678,7 +5678,7 @@ export default [
   {
     id: "quijotes-84-2051",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "En las comunicaciones de radio, la palabra GOLF se deletreará:",
     options: [
       "Simplemete con la palabra Golf.",
@@ -5720,7 +5720,7 @@ export default [
   {
     id: "quijotes-84-1809",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Cual de estas provincias pertenece al distrito 7:",
     options: [
       "Guipuzkoa.",
@@ -5747,8 +5747,8 @@ export default [
   },
   {
     id: "quijotes-84-1850",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La banda de frecuencias número 8, cuyo símbolo es VHF, corresponde a las ondas:",
     options: [
       "Kilométricas.",
@@ -5789,8 +5789,8 @@ export default [
   },
   {
     id: "quijotes-84-1899",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Las estaciones automáticas desatendidas en la banda de HF tendrán una potencia de salida máxima de:",
     options: [
       "25 W.",
@@ -5818,7 +5818,7 @@ export default [
   {
     id: "quijotes-84-1909",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Cómo se efectúa el acceso a los repetidores analógicos y digitales finales:",
     options: [
       "Se accede solamente en el caso de que el radioaficionado tenga una licencia de 10 años de antigüedad.",
@@ -5831,8 +5831,8 @@ export default [
   },
   {
     id: "quijotes-84-1936",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "El cambio de ubicación de una antena:",
     options: [
       "No es necesario solicitarlo a la Administración competente en espectro radioeléctrico.",
@@ -5916,7 +5916,7 @@ export default [
   {
     id: "quijotes-84-2040",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea la palabra MAR?",
     options: [
       "Mayo, Alfa, Roma.",
@@ -5944,7 +5944,7 @@ export default [
   {
     id: "quijotes-84-2068",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Una de las siguientes provincias españolas se encuentra adscrita al distrito 5. Indíquela:",
     options: [
       "Almería.",
@@ -5972,7 +5972,7 @@ export default [
   {
     id: "quijotes-84-2091",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
     options: [
       "Melillla.",
@@ -6041,8 +6041,8 @@ export default [
   },
   {
     id: "quijotes-84-1856",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La clase de emisión A3E corresponde a:",
     options: [
       "Doble banda lateral con ausencia de señal moduladora.",
@@ -6069,8 +6069,8 @@ export default [
   },
   {
     id: "quijotes-84-1865",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en la misma, es:",
     options: [
       "Muy perjudicial para el uso eficiente del espectro radioeléctrico.",
@@ -6083,8 +6083,8 @@ export default [
   },
   {
     id: "quijotes-84-1910",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "Al instalar una antena de radioaficionado se tendrá en cuenta que:",
     options: [
       "No se pueden situar en azoteas o lugares transitables.",
@@ -6237,8 +6237,8 @@ export default [
   },
   {
     id: "quijotes-84-2022",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "En el tejado de un edificio donde está instalada una antena de radioaficionado autorizada:",
     options: [
       "Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena",
@@ -6308,7 +6308,7 @@ export default [
   {
     id: "quijotes-84-1830",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea la palabra fin?",
     options: [
       "Fado, India, November.",
@@ -6321,8 +6321,8 @@ export default [
   },
   {
     id: "quijotes-84-1846",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la nomenclatura de las bandas de frecuencia, el símbolo LF corresponde a la banda de frecuencias:",
     options: [
       "30 a 300 kHz.",
@@ -6336,7 +6336,7 @@ export default [
   {
     id: "quijotes-84-1883",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
     options: [
       "Si la antigüedad de su licencia es superior a 5 años.",
@@ -6364,7 +6364,7 @@ export default [
   {
     id: "quijotes-84-1915",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "En comunicaciones del Servicio de Aficionados, la palabra CID se deletrea:",
     options: [
       "Charter, India, Delfo.",
@@ -6448,7 +6448,7 @@ export default [
   {
     id: "quijotes-84-2008",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea la palabra REY?",
     options: [
       "Radio, Echo, Yankee",
@@ -6476,7 +6476,7 @@ export default [
   {
     id: "quijotes-84-2056",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "En el país visitado temporalmente, el radioaficionado está obligado a:",
     options: [
       "Pedir indicativo de dicho país.",
@@ -6532,7 +6532,7 @@ export default [
   {
     id: "quijotes-84-1855",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Un radioaficionado español que traslade su residencia a Croacia podrá obtener una licencia de radioaficionado en dicho país si:",
     options: [
       "Croacia aplica la Recomendación T/R 61-02 de la CEPT.",
@@ -6602,7 +6602,7 @@ export default [
   {
     id: "quijotes-84-1974",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea la palabra TOP?:",
     options: [
       "Tunga, Oslo, Papa.",
@@ -6644,7 +6644,7 @@ export default [
   {
     id: "quijotes-84-2039",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Los daños y perjuicios originados por una antena de una estación de radioaficionado, correrán a cargo del titular de la licencia de la estación:",
     options: [
       "Unicamente los producidos al instalar la antena.",
@@ -6672,7 +6672,7 @@ export default [
   {
     id: "quijotes-84-1804",
     part: 2,
-    topicId: "licencias-indicativos",
+    topicId: "instalaciones",
     stem: "Excepto en casos de urgencia, ¿con qué antelación la propiedad del inmueble debe requerir el desmontaje de antenas de radioaficionado por la realización de obras?:",
     options: [
       "Un mes.",
@@ -6685,8 +6685,8 @@ export default [
   },
   {
     id: "quijotes-84-1831",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "En telegrafía, la abreviatura de procedimiento usada para finalizar una transmisión es:",
     options: [
       "AS.",
@@ -6728,7 +6728,7 @@ export default [
   {
     id: "quijotes-84-1891",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Que está ocurriendo si un radioaficionado se identifica como EA3/IZ4RKL:",
     options: [
       "Se están realizando pruebas en el distrito 3.",
@@ -6797,8 +6797,8 @@ export default [
   },
   {
     id: "quijotes-84-1963",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "¿Qué se entiende por emisiones no deseadas?:",
     options: [
       "Conjunto de emisiones que producen interferencias.",
@@ -6812,7 +6812,7 @@ export default [
   {
     id: "quijotes-84-1980",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:",
     options: [
       "Autorización administrativa.",
@@ -6825,8 +6825,8 @@ export default [
   },
   {
     id: "quijotes-84-2062",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:",
     options: [
       "Espectro radioeléctrico.",
@@ -6895,8 +6895,8 @@ export default [
   },
   {
     id: "quijotes-84-1904",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la banda de frecuencia de 50,00-51,00 MHz, existen restricciones geográficas de uso. Señale la provincia desde la que se podrán efectuar emisiones:",
     options: [
       "Madrid.",
@@ -6923,8 +6923,8 @@ export default [
   },
   {
     id: "quijotes-84-1927",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La ondas métricas se representan por el símbolo:",
     options: [
       "LF.",
@@ -7021,8 +7021,8 @@ export default [
   },
   {
     id: "quijotes-84-2057",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "Puedo realizar transmisiones desde Andorra si tengo la licencia?",
     options: [
       "Si, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el país en el que residen habitualmente, pueden obtener una licencia temporal para usar su estación en territorio andorrano.",
@@ -7035,8 +7035,8 @@ export default [
   },
   {
     id: "quijotes-84-2075",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "Para la instalación de antenas de radioaficionados, es obligatorio tener un seguro que cubra:",
     options: [
       "La responsabilidad civil del titular.",
@@ -7106,7 +7106,7 @@ export default [
   {
     id: "quijotes-84-1880",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
     options: [
       "No existe límite para estas autorizaciones.",
@@ -7119,8 +7119,8 @@ export default [
   },
   {
     id: "quijotes-84-1897",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "Como norma general, la potencia de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podrá exceder de:",
     options: [
       "5 W.",
@@ -7161,8 +7161,8 @@ export default [
   },
   {
     id: "quijotes-84-1937",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "La Ley 19/1986, conocida como Ley de Antenas, regula:",
     options: [
       "La obligación de comunicar la instalación de una antena a la Administración competente en espectro radioeléctrico.",
@@ -7231,8 +7231,8 @@ export default [
   },
   {
     id: "quijotes-84-2214",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza es",
     options: [
       "USB",
@@ -7274,7 +7274,7 @@ export default [
   {
     id: "quijotes-84-1886",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Un radioaficionado español que utiliza temporalmente su estación en Australia (país que aplica la Recomendación T/R 61-01):",
     options: [
       "Puede emitir en las mismas frecuencias que en España.",
@@ -7441,8 +7441,8 @@ export default [
   },
   {
     id: "quijotes-84-1810",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Como norma general, y salvo circunstancias especiales debidamente motivadas, las estaciones automáticas desatendidas en las bandas de VHF y UHF fuera del casco urbano, emitirán una potencia de salida máxima de:",
     options: [
       "10 W.",
@@ -7497,8 +7497,8 @@ export default [
   },
   {
     id: "quijotes-84-2017",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La señal de alarma en radiotelefonía consiste en dos señales de audiofrecuencia, aproximadamente sinusoidales, transmitidas alternativamente. ¿Qué frecuencias son?:",
     options: [
       "2.220 Hz y 1.300 Hz",
@@ -7539,8 +7539,8 @@ export default [
   },
   {
     id: "quijotes-84-1824",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Según la nomenclatura de las bandas de frecuencias, el símbolo MF corresponde a:",
     options: [
       "Ondas miriamétricas.",
@@ -7596,7 +7596,7 @@ export default [
   {
     id: "quijotes-84-1882",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Si un radioaficionado se identifica como EA2ABC/R7BHZ:",
     options: [
       "Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.",
@@ -7624,7 +7624,7 @@ export default [
   {
     id: "quijotes-84-2086",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea la palabra MERO?",
     options: [
       "MADRID, ECHO, ROMA, OSCAR.",
@@ -7638,7 +7638,7 @@ export default [
   {
     id: "quijotes-84-1987",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
     options: [
       "Málaga, Murcia, Madrid, Vizcaya.",
@@ -7778,7 +7778,7 @@ export default [
   {
     id: "quijotes-84-1877",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "La instalación y funcionamiento de una estación de aficionado precisará de una licencia, la cual se considera asociada a:",
     options: [
       "Una asociación legalizada de radioaficionados de la provincia correspondiente.",
@@ -7833,8 +7833,8 @@ export default [
   },
   {
     id: "quijotes-84-2024",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "antenas-prop",
     stem: "En la instalación de una antena de radioaficionado y sus elementos anejos:",
     options: [
       "No es necesario tener en cuenta la proximidad de líneas eléctricas aéreas",
@@ -7876,7 +7876,7 @@ export default [
   {
     id: "quijotes-84-1859",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "En comunicaciones del Servicio de Aficionados, la palabra BOJ se deletrea:",
     options: [
       "Bravo, Oscar, Julio.",
@@ -7917,8 +7917,8 @@ export default [
   },
   {
     id: "quijotes-84-2043",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podrán efectuar:",
     options: [
       "Desde cualquier punto del territorio nacional.",
@@ -7974,7 +7974,7 @@ export default [
   {
     id: "quijotes-84-1879",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "Qué objetivo se pretende al instalar un repetidor de radioficionado:",
     options: [
       "Determinar la ubicación de aparatos radioeléctricos.",
@@ -8029,8 +8029,8 @@ export default [
   },
   {
     id: "quijotes-84-2050",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     options: [
       "300-3000 MHz.",
@@ -8044,7 +8044,7 @@ export default [
   {
     id: "quijotes-84-1907",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "¿Cuál de las siguientes proposiciones contiene mayor número de provincias pertenecientes al distrito 1?:",
     options: [
       "Soria, Sevilla, Santa Cruz de Tenerife.",
@@ -8057,8 +8057,8 @@ export default [
   },
   {
     id: "quijotes-84-1948",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "En la nomenclatura de las bandas de frecuencia, la banda SHF corresponde a las frecuencias comprendidas entre:",
     options: [
       "3 y 30 MHz.",
@@ -8198,7 +8198,7 @@ export default [
   {
     id: "quijotes-84-2006",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "El acceso a los repetidores analógicos y digitales finales:",
     options: [
       "Estará restringido a los miembros de la Asociación titular de la licencia de la estación repetidora",
@@ -8212,7 +8212,7 @@ export default [
   {
     id: "quijotes-84-1930",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "licencias-indicativos",
     stem: "El acceso a los repetidores analógicos y digitales finales será:",
     options: [
       "Intermitente.",
@@ -8226,7 +8226,7 @@ export default [
   {
     id: "quijotes-84-1884",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "marco-normativo",
     stem: "El montaje del sistema radiante de una estación fija de radioaficionado será realizado:",
     options: [
       "Como norma general, por un instalador de telecomunica­ciones autorizado.",
@@ -8253,8 +8253,8 @@ export default [
   },
   {
     id: "quijotes-84-2060",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emisiones:",
     options: [
       "Catódicas.",
@@ -8309,8 +8309,8 @@ export default [
   },
   {
     id: "quijotes-84-1975",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "¿Que símbolo le corresponde a la gama de frecuencias de 3 a 30 MHz?:",
     options: [
       "VHF.",

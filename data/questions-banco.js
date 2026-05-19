@@ -1,14 +1,14 @@
 /**
  * Banco principal: cribado (tier A+B+C) + figuras certificadas, un enunciado = una pregunta.
- * Generado: 2026-05-19 · 1040 preguntas · npm run build:banco
- * Cribado: 1020 · En banco por id: 1020 · Sustituidas por versión con figura: 0
- * Duplicados eliminados: 0 (0 exactos, 0 parafraseados)
- * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1040)
+ * Generado: 2026-05-19 · 1024 preguntas · npm run build:banco
+ * Cribado: 1020 · En banco por id: 1004 · Sustituidas por versión con figura: 16
+ * Duplicados eliminados: 16 (0 exactos, 16 parafraseados)
+ * Relleno hasta ≥900: 0 añadidas (total tras relleno: 1024)
  * Con figura: 34
  */
 
 export const BANCO_GENERATED_AT = "2026-05-19";
-export const BANCO_STATS = {"count":1040,"cribadoPreferred":1020,"cribadoById":1020,"cribadoReplacedByFigure":0,"withFigure":34,"dedupeRemoved":0,"dedupeGroups":0,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1729};
+export const BANCO_STATS = {"count":1024,"cribadoPreferred":1020,"cribadoById":1004,"cribadoReplacedByFigure":16,"withFigure":34,"dedupeRemoved":16,"dedupeGroups":0,"paraphraseRemoved":16,"fillAdded":0,"sourceEntries":1729};
 
 export default [
   {
@@ -134,7 +134,7 @@ export default [
   {
     "id": "fedi-a-013",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Debido a la distorsión:",
     "options": [
       "La señal de salida disminuye",
@@ -179,7 +179,7 @@ export default [
   {
     "id": "fedi-a-016",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Los transistores son dispositivos:",
     "options": [
       "Que tienen tres electrodos",
@@ -193,8 +193,8 @@ export default [
   },
   {
     "id": "fedi-a-017",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la letra J?:",
     "options": [
       "Jonas",
@@ -208,8 +208,8 @@ export default [
   },
   {
     "id": "fedi-a-023",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "Una estación de aficionado ubicada en la provincia de Huelva se identifica por la cifra:",
     "options": [
       "1",
@@ -223,8 +223,8 @@ export default [
   },
   {
     "id": "fedi-a-024",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "Una estación de aficionado ubicada en la provincia de Zaragoza se identifica por la cifra:",
     "options": [
       "8",
@@ -238,8 +238,8 @@ export default [
   },
   {
     "id": "fedi-a-025",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "Una estación de aficionado ubicada en la provincia de Albacete se identifica por la cifra:",
     "options": [
       "7",
@@ -253,8 +253,8 @@ export default [
   },
   {
     "id": "fedi-a-026",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Las estaciones de aficionados deberán estar provistas de:",
     "options": [
       "Los aparatos de medida precisos para determinar su funcionamiento en condiciones técnicas favorables",
@@ -268,8 +268,8 @@ export default [
   },
   {
     "id": "fedi-a-027",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Una estación fija es la:",
     "options": [
       "Que sólo se puede utilizar sin mover de un vehículo determinado",
@@ -283,8 +283,8 @@ export default [
   },
   {
     "id": "fedi-a-028",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "¿Se puede asignar el sufijo PAN a un distintivo de estación de aficionado clase A?:",
     "options": [
       "No, solamente a los distintivos de clase C",
@@ -313,8 +313,8 @@ export default [
   },
   {
     "id": "fedi-a-032",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "La señal de socorro en Radiotelefonía está constituida por la palabra:",
     "options": [
       "Ayuda",
@@ -329,7 +329,7 @@ export default [
   {
     "id": "fedi-a-033",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "LA ABREVIATURA LF INDICA:",
     "options": [
       "Ondas métricas",
@@ -359,7 +359,7 @@ export default [
   {
     "id": "fedi-a-037",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Cuando actuamos sobre el conmutador de bandas de un transceptor, estamos:",
     "options": [
       "Cambiando de UHF a HF",
@@ -374,7 +374,7 @@ export default [
   {
     "id": "fedi-a-038",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El dial de presentación digital \"digital display\" nos indica:",
     "options": [
       "La interferencia",
@@ -404,7 +404,7 @@ export default [
   {
     "id": "fedi-a-040",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El terminal de tierra de un transceptor se conecta a tierra principalmente para evitar:",
     "options": [
       "El aumento de autoinducción",
@@ -419,7 +419,7 @@ export default [
   {
     "id": "fedi-a-041",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "Cuando el modo de emisión esta en la posición \"CW\" se puede trabajar en:",
     "options": [
       "Fonía",
@@ -449,7 +449,7 @@ export default [
   {
     "id": "fedi-a-043",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Al sintonizar un emisor que tenga un aparato de medida de corriente de placa del paso final, al estar bien ajustado, este medidor marcará:",
     "options": [
       "Un máximo",
@@ -494,7 +494,7 @@ export default [
   {
     "id": "fedi-a-046",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "En un transceptor, al actuar sobre el mando \"Volumen en RF\" variamos:",
     "options": [
       "La potencia de salida",
@@ -509,7 +509,7 @@ export default [
   {
     "id": "fedi-a-047",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "La clase de emisión F3 es:",
     "options": [
       "Telegrafía, modulación de frecuencia o de fase",
@@ -689,7 +689,7 @@ export default [
   {
     "id": "fedi-a-059",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Los materiales empleados en la fabricación de transistores estan dentro de la categoria de",
     "options": [
       "Aislantes",
@@ -778,8 +778,8 @@ export default [
   },
   {
     "id": "fedi-a-069",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "La señal internacional de seguridad en telefonía es:",
     "options": [
       "Alarma",
@@ -808,8 +808,8 @@ export default [
   },
   {
     "id": "fedi-a-071",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "La cifra 5 identifica una estación de aficionado ubicada:",
     "options": [
       "Valencia",
@@ -823,8 +823,8 @@ export default [
   },
   {
     "id": "fedi-a-074",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Las estaciones de aficionado quedan sometidas a la inspección de:",
     "options": [
       "La Delegación de Industria",
@@ -837,8 +837,8 @@ export default [
   },
   {
     "id": "fedi-a-076",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "¿Está permitido que una estación de aficionado se conecte con otras instalaciones de telecomunicación?",
     "options": [
       "Si",
@@ -867,8 +867,8 @@ export default [
   },
   {
     "id": "fedi-a-084",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "En particular, uno de los siguientes aparatos de medida es imprescidible en una estación de radioaficionado:",
     "options": [
       "Frecuencímetro",
@@ -883,7 +883,7 @@ export default [
   {
     "id": "fedi-a-085",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En un transceptor a válvulas, la alta frecuencia del paso final se aplica:",
     "options": [
       "Al actuar sobre el conmutador emisión/recepción",
@@ -1138,7 +1138,7 @@ export default [
   {
     "id": "fedi-a-104",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "LOS AMPLlFICADORES A CAVIDADES RESONANTES SE EMPLEAN EN LOS TRANSCEPTORES QUE TRABAJAN EN LAS BANDAS DE:",
     "options": [
       "28 MHz. y superiores",
@@ -1212,8 +1212,8 @@ export default [
   },
   {
     "id": "fedi-a-109",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué ABREVIATURA INDICA QUE EL OPERADOR SUFRE UNA INTERFERENCIA?",
     "options": [
       "QRL",
@@ -1227,8 +1227,8 @@ export default [
   },
   {
     "id": "fedi-a-110",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué ABREVIATURA INDICA QUE DEBE AUMENTAR LA POTENCIA DEL TRANSMISOR?",
     "options": [
       "QRP",
@@ -1242,8 +1242,8 @@ export default [
   },
   {
     "id": "fedi-a-111",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué ABREVIATURA INDICA QUE ES DEFECTUOSA LA MANIPULACIÓN?",
     "options": [
       "QSD",
@@ -1256,24 +1256,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-a-112",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Qué ABREVIATURA INDICA CUAL ES LA SITUACIÓN O UBICACIÓN?",
-    "options": [
-      "QUA",
-      "QTR",
-      "QTH",
-      "QRN"
-    ],
-    "correctIndex": 2,
-    "explain": "QTH es la ubicación o emplazamiento de la estación en tráfico. «QTH».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque a). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-a-114",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "EA5/EA4EOT/M",
     "options": [
       "Es el distintivo de llamada de una estación móvil del distrito 4 operando en el distrito 5",
@@ -1302,8 +1287,8 @@ export default [
   },
   {
     "id": "fedi-a-121",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "CON QUE POTENCIA MAXIMA PODRA EMITIR UNA ESTACIÓN DE AFICIONADO, EN LA BANDA DE FRECUENCIAS 14.000 A 14.350 Kcs:",
     "options": [
       "500 vatios",
@@ -1318,7 +1303,7 @@ export default [
   {
     "id": "fedi-aa-002",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "En los modernos transceptores el uso de procesadores digitales de señal (DSP) permite entre otras cosas:",
     "options": [
       "Duplicar la potencia de emisión.",
@@ -1438,7 +1423,7 @@ export default [
   {
     "id": "fedi-aa-010",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "En un circuito electrónico, un transistor no se puede emplear como:",
     "options": [
       "Amplificador.",
@@ -1528,7 +1513,7 @@ export default [
   {
     "id": "fedi-aa-017",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "Los transceptores con cambio de frecuencia de emisión, utilizan:",
     "options": [
       "Un oscilador de frecuencia variable.",
@@ -1756,7 +1741,7 @@ export default [
   {
     "id": "fedi-ag-001",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "En la teoría de electricidad, un ohmio equivale a:",
     "options": [
       "1 amperio x 1 voltio",
@@ -1784,7 +1769,7 @@ export default [
   {
     "id": "fedi-ag-003",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "El llamado \"detector de envolvente\" se implementa en receptores para señales con modulación de:",
     "options": [
       "Fase (PM)",
@@ -1828,7 +1813,7 @@ export default [
   {
     "id": "fedi-ag-006",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "En la realización de medidas usando un polímetro, indique la respuesta correcta:",
     "options": [
       "Para tensión, las puntas en serie con el elemento.",
@@ -1842,7 +1827,7 @@ export default [
   {
     "id": "fedi-ag-007",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "El ancho de banda necesario de un transmisor es:",
     "options": [
       "La anchura de banda estrictamente suficiente para transmitir la información en condiciones adecuadas",
@@ -1916,7 +1901,7 @@ export default [
   {
     "id": "fedi-ag-012",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "Es recomendable ante la previsión de una tormenta:",
     "options": [
       "Desconectar los cables de bajada de antena",
@@ -1962,7 +1947,7 @@ export default [
   {
     "id": "fedi-ag-015",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "antenas-prop",
     "stem": "La potencia suministrada a la línea de alimentación de la antena por un transmisor, durante un ciclo en ausencia de modulación, se denomina:",
     "options": [
       "Potencia reflejada",
@@ -1992,7 +1977,7 @@ export default [
   {
     "id": "fedi-ag-017",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "Cuando dos o más señales atraviesan simultáneamente un sistema no lineal, existe el riesgo de que se genere:",
     "options": [
       "Realimentación excesiva",
@@ -2064,7 +2049,7 @@ export default [
   {
     "id": "fedi-ag-022",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Indique el valor de la resistencia cuyos colores son, en este orden: violeta, verde, rojo, oro:",
     "options": [
       "7.500 Ω y 5 %",
@@ -2122,7 +2107,7 @@ export default [
   {
     "id": "fedi-ag-026",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "La radiación armónica es:",
     "options": [
       "Radiación no esencial en múltiplos enteros de la frecuencia principal",
@@ -2250,7 +2235,7 @@ export default [
   {
     "id": "fedi-ah-035",
     "part": 2,
-    "topicId": "licencias-indicativos",
+    "topicId": "marco-normativo",
     "stem": "¿Quién puede hacer uso de una estación de aficionado?",
     "options": [
       "Cualquier familiar de primer grado que conviva con él, bajo su responsabilidad",
@@ -2264,7 +2249,7 @@ export default [
   {
     "id": "fedi-ah-036",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Con qué anticipación a la fecha prevista para el comienzo de las emisiones se deberá solicitar una autorización especial de uso del espectro radioeléctrico por radioaficionados?",
     "options": [
       "1 mes",
@@ -2362,7 +2347,7 @@ export default [
   {
     "id": "fedi-ah-043",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "La autorización especial de emisiones se otorgará por el periodo que duren las pruebas y, como máximo:",
     "options": [
       "9 meses",
@@ -2376,7 +2361,7 @@ export default [
   {
     "id": "fedi-ah-044",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "licencias-indicativos",
     "stem": "Una emisión de estación de aficionado debe identificarse con un distintivo:",
     "options": [
       "Únicamente si el operador es menor de edad",
@@ -2404,7 +2389,7 @@ export default [
   {
     "id": "fedi-ah-046",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "El significado de la abreviatura PSE es:",
     "options": [
       "Por si está a la escucha",
@@ -2488,7 +2473,7 @@ export default [
   {
     "id": "fedi-ah-052",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "licencias-indicativos",
     "stem": "El contrato de seguro que cubre la responsabilidad del titular de una licencia de estación:",
     "options": [
       "Solo si la instalación fue autorizada, en un mes",
@@ -2502,7 +2487,7 @@ export default [
   {
     "id": "fedi-ah-053",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Las transmisiones entre estaciones de radioaficionados deberán limitarse a:",
     "options": [
       "Actualidad nacional e internacional",
@@ -2529,8 +2514,8 @@ export default [
   },
   {
     "id": "fedi-ah-055",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Según la nomenclatura de bandas, el símbolo MF corresponde a:",
     "options": [
       "Ondas miriamétricas",
@@ -2544,7 +2529,7 @@ export default [
   {
     "id": "fedi-ah-056",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "La colaboración de los radioaficionados con servicios de emergencia en catástrofes:",
     "options": [
       "Es obligatoria en cualquier caso",
@@ -2600,7 +2585,7 @@ export default [
   {
     "id": "fedi-ah-060",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Si una autorización especial de emisiones produce interferencias a radiodifusión o TV, deberá:",
     "options": [
       "Informar al interferido del horario de emisión",
@@ -2854,7 +2839,7 @@ export default [
   {
     "id": "fedi-b-174",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "En un emisor de radio, los amplificadores se emplean para:",
     "options": [
       "Multiplicar el valor de frecuencia",
@@ -2869,7 +2854,7 @@ export default [
   {
     "id": "fedi-b-175",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "La estabilidad de la frecuencia de un emisor de radio proporciona la siguiente ventaja:",
     "options": [
       "Mayor alcance",
@@ -2913,8 +2898,8 @@ export default [
   },
   {
     "id": "fedi-b-182",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Estación movil de aficionado:",
     "options": [
       "Estación de aficionado instalada en vehiculo o en segundo domicilio",
@@ -2943,8 +2928,8 @@ export default [
   },
   {
     "id": "fedi-b-186",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "La abreviatura QRA indica:",
     "options": [
       "¿Qué frecuencia utiliza Vd.?",
@@ -2988,8 +2973,8 @@ export default [
   },
   {
     "id": "fedi-b-190",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿QUE ABREVIATURA INDICA QUE EL OPERADOR DE LA ESTACIÓN LLAMARÁ MAS TARDE?",
     "options": [
       "QRC",
@@ -3003,8 +2988,8 @@ export default [
   },
   {
     "id": "fedi-b-191",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "LAS PRIMERAS LETRAS DE UN DISTINTIVO DE LLAMADA:",
     "options": [
       "Las elige cada país según la inicial francesa de su nombre",
@@ -3018,8 +3003,8 @@ export default [
   },
   {
     "id": "fedi-b-192",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "LAS SERIES DE DISTINTIVOS DE LLAMADA:",
     "options": [
       "Empieza siempre por la inicial en lengua francesa del nombre del país",
@@ -3033,8 +3018,8 @@ export default [
   },
   {
     "id": "fedi-b-194",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "UNA ESTACIÓN DE AFICIONADOS UBICADA EN ALICANTE ES IDENTIFICADA POR LA CIFRA:",
     "options": [
       "2",
@@ -3154,7 +3139,7 @@ export default [
   {
     "id": "fedi-b-206",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EN UN EMISOR DE POTENCIA MEDIA, LA ALTA TENSIÓN DE PLACA DE PASO FINAL SE APLICA:",
     "options": [
       "Directamente con el encendido general",
@@ -3289,7 +3274,7 @@ export default [
   {
     "id": "fedi-b-218",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "EL TRANSISTOR ES:",
     "options": [
       "Una bobina",
@@ -3334,7 +3319,7 @@ export default [
   {
     "id": "fedi-b-221",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "LA DETECCIÓN SIRVE PARA:",
     "options": [
       "Convertir las corrientes continuas en corrientes alternas",
@@ -3393,8 +3378,8 @@ export default [
   },
   {
     "id": "fedi-b-228",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "UNA ESTACIÓN DE RADIOAFICIONADO SITUADA EN LA PROVINCIA DE CUENCA SE IDENTIFICA POR EL NUMERO:",
     "options": [
       "6",
@@ -3404,21 +3389,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "La cifra del indicativo español identifica el distrito geográfico de la estación según la tabla oficial. Para este enunciado corresponde «4». (BOE-A-2013-7624).",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-b-230",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿COMO SE DELETREA EL NUMERO 9?",
-    "options": [
-      "Novenine",
-      "Novo",
-      "Nonenite",
-      "Nine"
-    ],
-    "correctIndex": 3,
-    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Nine».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -3453,8 +3423,8 @@ export default [
   },
   {
     "id": "fedi-b-242",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "CONSTITUYE UNA FALTA GRAVE:",
     "options": [
       "Falsear los documentos de comprobación para obtener la licencia",
@@ -3468,8 +3438,8 @@ export default [
   },
   {
     "id": "fedi-b-243",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "LA POTENCIA DE LA RADIACIÓN PERTURBADORA DE LOS RECEPTORES DE UNA ESTACIÓN DE AFICIONADO, EN LAS BANDAS DE FRECUENCIA DEL SERVICIO DE RADIODIFUSIÓN SONORA, NO DEBE REBASAR:",
     "options": [
       "Dos milivátios",
@@ -3499,7 +3469,7 @@ export default [
   {
     "id": "fedi-b-250",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EN UN TRANSCEPTOR, EL CONMUTADOR DE BANDAS SE UTILIZA PARA:",
     "options": [
       "Cambiar el Modo de emisión",
@@ -3709,7 +3679,7 @@ export default [
   {
     "id": "fedi-b-269",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "¿Qué ventaja tienen los transistores FET sobre los transistores clásicos?",
     "options": [
       "Se pueden usar para señales de frecuencias más altas",
@@ -3739,7 +3709,7 @@ export default [
   {
     "id": "fedi-b-271",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "UN AMPLIFICADOR CON TRANSISTOR CONECTADO CON EMISOR COMÚN PRODUCE AMPLIFICACIÓN:",
     "options": [
       "Solo de tensión",
@@ -3784,7 +3754,7 @@ export default [
   {
     "id": "fedi-b-274",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "UN AMPLIFICADOR PUEDE OSCILAR INDEBIDAMENTE:",
     "options": [
       "Si hay un fuerte acoplamiento entre los circuitos de colector y base",
@@ -3828,8 +3798,8 @@ export default [
   },
   {
     "id": "fedi-b-280",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿QUE ABREVIATURA INDICA LA INTELEGIBILIDAD DE LAS SEÑALES?",
     "options": [
       "QRL",
@@ -3843,8 +3813,8 @@ export default [
   },
   {
     "id": "fedi-b-281",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿QUE ABREVIATURA INDICA QUE PERTURBAN LOS ATMOSFÉRICOS?",
     "options": [
       "QSB",
@@ -3858,8 +3828,8 @@ export default [
   },
   {
     "id": "fedi-b-285",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "UTILIZAR COMO PORTABLE UNA ESTACIÓN FIJA, ¿CONSTITUYE INFRACCIÓN?",
     "options": [
       "No, si precede autorización de la Dirección General",
@@ -3873,8 +3843,8 @@ export default [
   },
   {
     "id": "fedi-b-286",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "¿QUE CLASE DE INFRACCIÓN CONSTITUYE LA FALTA DEL LIBRO DIARIO?",
     "options": [
       "No es falta",
@@ -3888,8 +3858,8 @@ export default [
   },
   {
     "id": "fedi-b-288",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓN DE:",
     "options": [
       "Marina mercante",
@@ -3902,8 +3872,8 @@ export default [
   },
   {
     "id": "fedi-b-289",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "TODA ESTACIÓN DE AFICIONADO DESTINADA A SER UTILIZADA EN UN VEHICULO EN MOVIMIENTO O MIENTRAS ESTA DETENIDO EN PUNTOS NO DETERMINADOS ES UNA?",
     "options": [
       "Estación temporal",
@@ -3917,8 +3887,8 @@ export default [
   },
   {
     "id": "fedi-b-290",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "EL PLAZO DE VALIDEZ DE LA AUTORIZACIÓN PARA QUE UN RADIOAFICIONADO PROCEDA AL MONTAJE DE SU ESTACIÓN SERA, A PARTIR DE SU NOTIFICACIÓN, DE:",
     "options": [
       "1 año",
@@ -3932,8 +3902,8 @@ export default [
   },
   {
     "id": "fedi-b-291",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "EL SERVICIO DE RADIOAFICIONADOS ES:",
     "options": [
       "Una empresa interesada en cuestiones comerciales de Electrónica",
@@ -3947,8 +3917,8 @@ export default [
   },
   {
     "id": "fedi-b-292",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "LA CIFRA 2 EN EL DISTINTIVO DE LLAMADA IDENTIFICA LA PROVINCIA DE:",
     "options": [
       "Huesca",
@@ -4038,7 +4008,7 @@ export default [
   {
     "id": "fedi-b-300",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EL CONMUTADOR SENDREC. SE UTILIZA PARA:",
     "options": [
       "Cambiar de banda",
@@ -4053,7 +4023,7 @@ export default [
   {
     "id": "fedi-b-301",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EL MANDO NB EN UN TRANSCEPTOR, SE UTILIZA PARA:",
     "options": [
       "Suprimir ruido producido por emisoras de radiofrecuencia",
@@ -4067,8 +4037,8 @@ export default [
   },
   {
     "id": "fedi-b-302",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "LOS CONDUCTORES DE TIERRA DEBEN:",
     "options": [
       "Estar aislados",
@@ -4113,7 +4083,7 @@ export default [
   {
     "id": "fedi-b-305",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS MIDE:",
     "options": [
       "Tensiones de placa",
@@ -4128,7 +4098,7 @@ export default [
   {
     "id": "fedi-b-306",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "LA MISIÓN DEL CONMUTADOR \"POWER ON/OFF\" EN UN TRANSCEPTOR, ES:",
     "options": [
       "Encender y pagar el Equipo",
@@ -4247,8 +4217,8 @@ export default [
   },
   {
     "id": "fedi-c-334",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "LA ABREVIATURA UHF INDICA LA SUBDlVISION METRICA CORRESPONDIENTE A ONDAS:",
     "options": [
       "Métricas",
@@ -4277,8 +4247,8 @@ export default [
   },
   {
     "id": "fedi-c-336",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "LAS FRECUENCIAS LIMITES PARA UNA DETERMINADA ANCHURA DE BANDA SON AQUELLAS A PARTIR DE LAS CUALES SE RADIA:",
     "options": [
       "0,5 % de la potencia media total radiada",
@@ -4291,24 +4261,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-c-338",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "LOS CONDUCTORES DE TIERRA DEBEN:",
-    "options": [
-      "Estar aislados",
-      "De baja resistencia",
-      "De alta resistencia",
-      "Se deben proteger con un fusible"
-    ],
-    "correctIndex": 1,
-    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «De baja resistencia».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-c-339",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "PARA ALARGAR Y ACORTAR LA LONGITUD DE UNA ANTENA PARA USARLA COMO MULTIBANDA SE CONECTAN:",
     "options": [
       "Circuitos L-C serie a determinadas distancias del centro",
@@ -4322,8 +4277,8 @@ export default [
   },
   {
     "id": "fedi-c-341",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "SI A LA SALIDA DEL EMISOR A LA ANTENA SE DISPONE DE UN AMPERIMETRO, EL AJUSTE DE MAXIMA EMISIÓN SE DARA CUANDO LA LECTURA SEA:",
     "options": [
       "A media escala",
@@ -4337,8 +4292,8 @@ export default [
   },
   {
     "id": "fedi-c-342",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "LAS MEDIDAS DE COMPRESIÓN DE UN TRANSCEPTOR INDICAN:",
     "options": [
       "La anchura de banda de las señales de audio",
@@ -4351,24 +4306,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-c-343",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "EN RECEPCIÓN, EL MEDIDOR \"S\" INCORPORADO AL TRANSCEPTOR NOS INDICA:",
-    "options": [
-      "Tensión de placa",
-      "Frecuencia de recepción",
-      "Intensidad de la señal recibida",
-      "Porcentaje de modulación"
-    ],
-    "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Intensidad de la señal recibida».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-c-344",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "SI EL CONMUTADOR \"MODO DE EMISIÓN\" ESTA EN LA POSICIÓN CW SE TRABAJA EN:",
     "options": [
       "A3",
@@ -4382,8 +4322,8 @@ export default [
   },
   {
     "id": "fedi-c-345",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "electricidad-basica",
     "stem": "EL CONMUTADOR \"VOX-MAN\" EN POSICIÓN MAN:",
     "options": [
       "Se conecta el conmutador transmisor-receptor del micrófono",
@@ -4397,8 +4337,8 @@ export default [
   },
   {
     "id": "fedi-c-346",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "electricidad-basica",
     "stem": "EL CIRCUITO DE CONTROL AUTOMATICO DE GANANCIA TIENE UN MANDO DE GOBIERNO QUE AFECTA A:",
     "options": [
       "Su capacidad de ganancia",
@@ -4411,24 +4351,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-c-347",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "SI EN UN RECEPTOR SE QUIERE DISMINUIR LA SEÑAL DE ENTRADA, ACTUAREMOS EL MANDO DE:",
-    "options": [
-      "Volumen de audiofrecuencia",
-      "Volumen de radiofrecuencia",
-      "Silenciador",
-      "Control automático de ganancia"
-    ],
-    "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Volumen de radiofrecuencia».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-c-348",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "componentes",
     "stem": "Los transformadores se uti1izan, entre otras aplicaciones, para:",
     "options": [
       "La transformación de corriente contínua en alterna.",
@@ -4442,8 +4367,8 @@ export default [
   },
   {
     "id": "fedi-c-349",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "componentes",
     "stem": "En varias resistencias de diferente valor conectadas en serie, la intensidad de la corriente que circula por cada una de ellas será:",
     "options": [
       "Inversamente proporcional al valor de la resistencia",
@@ -4457,8 +4382,8 @@ export default [
   },
   {
     "id": "fedi-c-350",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "El decibelio es una unidad de medida utilizada para:",
     "options": [
       "La comparación de niveles de potencia eléctrica",
@@ -4472,8 +4397,8 @@ export default [
   },
   {
     "id": "fedi-c-351",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "electricidad-basica",
     "stem": "Las pilas se acoplan en serie para obtener:",
     "options": [
       "Mayor tensión",
@@ -4487,8 +4412,8 @@ export default [
   },
   {
     "id": "fedi-c-352",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "componentes",
     "stem": "Un rectificador en puente, de onda completa tiene:",
     "options": [
       "Un diodo",
@@ -4502,8 +4427,8 @@ export default [
   },
   {
     "id": "fedi-c-353",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "componentes",
     "stem": "El menor espesor del dieléctrico se utiliza en los condensadores para:",
     "options": [
       "Dar mayor solidez a éstos",
@@ -4516,69 +4441,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-c-354",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Al aumentar la temperatura del cobre su resistencia:",
-    "options": [
-      "Disminuye",
-      "Aumenta",
-      "Permanece invariable",
-      "A veces aumenta o disminuye"
-    ],
-    "correctIndex": 1,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Aumenta».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-c-355",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Una característica de la corriente alterna es su:",
-    "options": [
-      "Frecuencia",
-      "Conductividad",
-      "Valor uniforme",
-      "Velocidad de propagación"
-    ],
-    "correctIndex": 0,
-    "explain": "En «Una característica de la corriente alterna es su:», la formulación que encaja según el banco de examen es «Frecuencia». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-c-356",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Las reactancias inductiva y capacitiva, tienen propiedades:",
-    "options": [
-      "Similares",
-      "Opuestas",
-      "Alternativas",
-      "Poco fiables"
-    ],
-    "correctIndex": 1,
-    "explain": "En «Las reactancias inductiva y capacitiva, tienen propiedades:», la formulación que encaja según el banco de examen es «Opuestas». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-c-357",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Para estabilizar la tensión de salida de una fuente de alimentación se emplea:",
-    "options": [
-      "Un filtro en PI",
-      "Un filtro en L invertida",
-      "Un condensador variable",
-      "Un diodo zener"
-    ],
-    "correctIndex": 3,
-    "explain": "En «Para estabilizar la tensión de salida de una fuente de alimentación se emplea:», la formulación que encaja según el banco de examen es «Un diodo zener». Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-c-358",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "¿En que orden de sucesión se encuentran las diversas etapas de un receptor superheterodino?",
     "options": [
       "R.F. - mezclador - F.I. - demodulador - audio",
@@ -4592,8 +4457,8 @@ export default [
   },
   {
     "id": "fedi-c-359",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "electricidad-basica",
     "stem": "La neutralización se utiliza en:",
     "options": [
       "Los relés para neutralizarlos",
@@ -4607,8 +4472,8 @@ export default [
   },
   {
     "id": "fedi-c-360",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "En un transistor PNP usado como amplificador:",
     "options": [
       "La tensión del colector es positiva respecto a la base",
@@ -4622,8 +4487,8 @@ export default [
   },
   {
     "id": "fedi-c-361",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "En las emisiones radioelétricas la modulación sirve para:",
     "options": [
       "Llevar la información",
@@ -4637,8 +4502,8 @@ export default [
   },
   {
     "id": "fedi-c-362",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Un oscilador transistorizado puede oscilar indebidamente:",
     "options": [
       "Si hay un fuerte acoplamiento entre los circuitos de colector y base",
@@ -4652,8 +4517,8 @@ export default [
   },
   {
     "id": "fedi-c-363",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Cuando en un amplificador a transistor sea necesario reproducir la señal de entrada sin distorsión, se debe funcionar:",
     "options": [
       "En la parte lineal de su característica",
@@ -4667,8 +4532,8 @@ export default [
   },
   {
     "id": "fedi-c-364",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Un receptor de radio se llama superheterodino porque:",
     "options": [
       "Usa frecuencia intermedia",
@@ -4682,8 +4547,8 @@ export default [
   },
   {
     "id": "fedi-c-365",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "electricidad-basica",
     "stem": "El ruido estático es el producido por:",
     "options": [
       "Las altas frecuencias",
@@ -4697,8 +4562,8 @@ export default [
   },
   {
     "id": "fedi-c-366",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Los pasos de la etapa de frecuencia intermedia son filtros:",
     "options": [
       "Paso bajo",
@@ -4712,8 +4577,8 @@ export default [
   },
   {
     "id": "fedi-c-367",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "En una etapa mezcladora:",
     "options": [
       "Se producen señales de frecuencias suma o resta de las de entrada",
@@ -4728,7 +4593,7 @@ export default [
   {
     "id": "fedi-c-368",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "En el distrito 7º está incluida la provincia de:",
     "options": [
       "Las Palmas",
@@ -4758,7 +4623,7 @@ export default [
   {
     "id": "fedi-c-372",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué abreviatura indica que las señales recibidas estan afectadas por desvanecimientos (fading)?",
     "options": [
       "QRJ",
@@ -4773,7 +4638,7 @@ export default [
   {
     "id": "fedi-c-373",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué abreviatura indica que se transmita más lentamente?",
     "options": [
       "QTR",
@@ -4788,7 +4653,7 @@ export default [
   {
     "id": "fedi-c-374",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "¿Mediante qué abreviatura indicaría que está Vd. ocupado?",
     "options": [
       "QRX",
@@ -4863,7 +4728,7 @@ export default [
   {
     "id": "fedi-c-382",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Se puede suspender provisionalmente una licencia de aficionado:",
     "options": [
       "No se contempla en el Reglamento esta sanción",
@@ -4922,8 +4787,8 @@ export default [
   },
   {
     "id": "fedi-c-386",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La abreviatura HF indica la subdivisión métrica correspondiente a ondas:",
     "options": [
       "Decamétricas",
@@ -4952,8 +4817,8 @@ export default [
   },
   {
     "id": "fedi-c-388",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Cuando sintonizamos un emisor, es conveniente hacerlo:",
     "options": [
       "A potencia máxima",
@@ -4967,8 +4832,8 @@ export default [
   },
   {
     "id": "fedi-c-389",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "En un transceptor, el mando del silenciador (SQUELCH) se emplea:",
     "options": [
       "Sólo en emisión",
@@ -4981,24 +4846,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-c-391",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "El control automático de ganancia:",
-    "options": [
-      "Tiende a mantener constante la fidelidad del receptor",
-      "Tiende a mantener constante el nivel de salida del receptor",
-      "Hace que la frecuencia intermedia sea constante, independientemente de la frecuencia recibída",
-      "Tiende a mantener constante la selectividad del receptor"
-    ],
-    "correctIndex": 1,
-    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Tiende a mantener constante el nivel de salida del receptor».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque c). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-c-392",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Cuando se sintoniza un emisor utilizando una antena artificial:",
     "options": [
       "La mayor parte de la energía procedente del emisor se disipa en forma de calor",
@@ -5012,8 +4862,8 @@ export default [
   },
   {
     "id": "fedi-c-393",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "El mando de ganancia de radiofrecuencia en un transceptor:",
     "options": [
       "Controla la potencia de salida de radiofrecuencia del emisor",
@@ -5027,8 +4877,8 @@ export default [
   },
   {
     "id": "fedi-c-394",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "En un transceptor el conmutador \"VOX-MAN\" en la posición \"MAN\":",
     "options": [
       "Conecta el conmutador transmisor-receptor del micrófono",
@@ -5042,8 +4892,8 @@ export default [
   },
   {
     "id": "fedi-c-395",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Un medidor \"S\" típico evalúa la intensidad de señal de entrada a un receptor en:",
     "options": [
       "Microamperios",
@@ -5057,8 +4907,8 @@ export default [
   },
   {
     "id": "fedi-c-396",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "electricidad-basica",
     "stem": "En emisión el mando \"control de carga\" \"LOAD KNOB\" sirve para:",
     "options": [
       "Ajustar la sección final a la antena",
@@ -5072,8 +4922,8 @@ export default [
   },
   {
     "id": "fedi-c-397",
-    "part": 2,
-    "topicId": "licencias-indicativos",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Se entiende por estabilidad de un receptor de radio:",
     "options": [
       "Que es irrompible",
@@ -5268,7 +5118,7 @@ export default [
   {
     "id": "fedi-d-416",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "LAS DENOMINADAS ETAPAS EXCITADORAS SE USAN:",
     "options": [
       "A la salida de los micrófonos con cable largo",
@@ -5283,7 +5133,7 @@ export default [
   {
     "id": "fedi-d-417",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "CUAL DE ESTAS PROPIEDADES CARACTERIZA A UN AMPLIFICADOR CLASE A:",
     "options": [
       "Solamente se puede usar en amplificadores con salida máxima de 250 vatios",
@@ -5327,8 +5177,8 @@ export default [
   },
   {
     "id": "fedi-d-421",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿Qué abreviatura indica que el operador está ocupado?",
     "options": [
       "QRF",
@@ -5342,8 +5192,8 @@ export default [
   },
   {
     "id": "fedi-d-422",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿Que abreviatura indica que la estación receptora sufre interferencias por atmosféricos?",
     "options": [
       "QRS",
@@ -5372,8 +5222,8 @@ export default [
   },
   {
     "id": "fedi-d-424",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "EA7/EA4KLM/M",
     "options": [
       "Es el distintivo de llamada de una estación móvil del distrito 7 operando en el distrito 4",
@@ -5387,8 +5237,8 @@ export default [
   },
   {
     "id": "fedi-d-426",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "¿Emitir música es una falta o se puede efectuar?",
     "options": [
       "Leve",
@@ -5417,8 +5267,8 @@ export default [
   },
   {
     "id": "fedi-d-429",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Durante sus emisiones, las estaciones de aficionados:",
     "options": [
       "Deberán transmitir su distintivo de llamada por lo menos al comienzo y al final de la emisión",
@@ -5431,24 +5281,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-d-430",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cuando se añade la mención /P al indicativo de llamada?",
-    "options": [
-      "Cuando se opera una estación Fija/Portable",
-      "Cuando se opera en grafía una estación Fija/Portable",
-      "Cuando se opera en fonía una estación Fija/Portable",
-      "Cuando se realizan ensayos o concursos"
-    ],
-    "correctIndex": 1,
-    "explain": "La barra /P indica operación portátil (estación fija/portátil fuera del emplazamiento habitual del titular). «Cuando se opera en grafía una estación Fija/Portable».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-d-431",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:",
     "options": [
       "Únicamente si lo autoriza previamente la Administración competente en telecomunicaciones.",
@@ -5461,8 +5296,8 @@ export default [
   },
   {
     "id": "fedi-d-432",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "¿Qué edad mínima es necesaria para obtener una licencia de estación de aficionado?",
     "options": [
       "20 años",
@@ -5476,8 +5311,8 @@ export default [
   },
   {
     "id": "fedi-d-433",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "Los distritos de Ceuta y Melilla están identificados por la cifra del distrito de llamada:",
     "options": [
       "8",
@@ -5487,21 +5322,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Ceuta y Melilla comparten la cifra 9 del indicativo (EA9). «9».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-434",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "La abreviatura VHF indica la subdivisión métrica correspondiente a ondas:",
-    "options": [
-      "Métrica",
-      "Decimétrica",
-      "Kilométrica",
-      "Centimétrica"
-    ],
-    "correctIndex": 0,
-    "explain": "Cada abreviatura ITU designa un tramo del espectro; asocia LF/MF/HF/VHF/UHF con su banda. «Métrica».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -5552,7 +5372,7 @@ export default [
   {
     "id": "fedi-d-441",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Para emitir en telegrafía, el conmutador \"Modo de emisión\" estará en la posición:",
     "options": [
       "Tun",
@@ -5597,7 +5417,7 @@ export default [
   {
     "id": "fedi-d-444",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "En caso de que el paso final de un emisor sea a válvulas:",
     "options": [
       "Es necesario un tiempo de caldeo de filamento",
@@ -5627,7 +5447,7 @@ export default [
   {
     "id": "fedi-d-446",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Con el mando \"VOX\", de un transceptor, conectado:",
     "options": [
       "Se recibe en fonía",
@@ -5867,7 +5687,7 @@ export default [
   {
     "id": "fedi-d-465",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Cuando la señal de salida es una exacta reproducción de la señal de entrada, el amplificador trabaja en:",
     "options": [
       "Clase \"C\"",
@@ -5897,7 +5717,7 @@ export default [
   {
     "id": "fedi-d-468",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El circuito de acoplamiento entre etapas amplificadoras:",
     "options": [
       "Sirve para el paso de las señales y fija la polarización del emisor de la etapa siguiente",
@@ -5912,7 +5732,7 @@ export default [
   {
     "id": "fedi-d-469",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En condiciones normales los transceptores de VHF:",
     "options": [
       "Se utilizan para comunicaciones de larga distancia",
@@ -5925,24 +5745,9 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-d-479",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "¿Cuándo se añade la mención /P al indicador de llamada?",
-    "options": [
-      "Cuando se opera una estación Fija/Portable",
-      "Cuando se opera en grafía una estación Fija/Portable",
-      "Cuando se opera en fonía una estación Fija/Portable",
-      "Cuando se realicen ensayos o concursos"
-    ],
-    "correctIndex": 1,
-    "explain": "En «¿Cuándo se añade la mención /P al indicador de llamada?», la formulación que encaja según el banco de examen es «Cuando se opera en grafía una estación Fija/Portable». Contrasta con el temario de ley de Ohm, potencia y circuitos en CC/CA si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-d-481",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "¿Se puede conectar una estación de aficionado con otras instalaciones de radiocomunicación?",
     "options": [
       "No esta permitido",
@@ -5972,7 +5777,7 @@ export default [
   {
     "id": "fedi-d-487",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El mando \"RIT\" de un transceptor permite:",
     "options": [
       "Ajustar la frecuencia de recepción sin variar la de emisión",
@@ -5987,7 +5792,7 @@ export default [
   {
     "id": "fedi-d-490",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El conmutador \"SEND-REC\" se utiliza para",
     "options": [
       "Cambiar el modo de emisión",
@@ -6017,7 +5822,7 @@ export default [
   {
     "id": "fedi-d-492",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El control automático de ganancia \"AGC\" se utiliza:",
     "options": [
       "Emisión",
@@ -6165,21 +5970,6 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-d-504",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "EN LOS PASOS DE FRECUENCIA INTERMEDIA SE EMPLEAN FILTROS DE:",
-    "options": [
-      "Paso bajo",
-      "Paso alto",
-      "Paso banda",
-      "Banda eliminada"
-    ],
-    "correctIndex": 2,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Paso banda».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-d-505",
     "part": 1,
     "topicId": "componentes",
@@ -6197,7 +5987,7 @@ export default [
   {
     "id": "fedi-d-506",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "UN AMPLIFICADOR CON TRANSISTOR CONECTADO CON BASE COMUN PRODUCE AMPLIFICACION:",
     "options": [
       "Solo de tensión",
@@ -6267,21 +6057,6 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Solamente condensadores».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
-    "id": "fedi-d-511",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "EN UNA ETAPA MEZCLADORA:",
-    "options": [
-      "Se producen señales de frecuencias suma o resta de las de entrada",
-      "Se producen señales de frecuencias producto de las de entrada",
-      "Se produce una modulación de frecuencia de las dos señales de entrada",
-      "Sale un lío de frecuencias"
-    ],
-    "correctIndex": 0,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Se producen señales de frecuencias suma o resta de las de entrada».",
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
@@ -6361,8 +6136,8 @@ export default [
   },
   {
     "id": "fedi-d-518",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "LA ABREVIATURA \"QSB\" DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA DE:",
     "options": [
       "¿Quien me llama?",
@@ -6376,8 +6151,8 @@ export default [
   },
   {
     "id": "fedi-d-521",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "LA CIFRA DEL DISTINTIVO DE LLAMADA QUE IDENTIFICA EL DISTRITO, SEGUN DISTRIBUCION geográfica, ES PARA VALLADOLID:",
     "options": [
       "3º",
@@ -6391,8 +6166,8 @@ export default [
   },
   {
     "id": "fedi-d-522",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "PODRA AUTORIZARSE A UNA O MAS ESTACIONES DE AFICIONADO LA UTILIZACION TEMPORAL DE PREFIJOS, MANTENIENDO EL RESTO DEL DISTINTIVO ¿CUAL SERA EL AUTORIZADO PARA LAS FRECUENCIAS DE CLASE B?",
     "options": [
       "EB",
@@ -6406,8 +6181,8 @@ export default [
   },
   {
     "id": "fedi-d-523",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "EL TRAFICO ENTRE ESTACIONES DE AFICIONADOS ESTA AUTORIZADO PARA:",
     "options": [
       "Mensajes de naturaleza tecnica relativos a ensayos y observaciones de carácter puramente personal",
@@ -6421,8 +6196,8 @@ export default [
   },
   {
     "id": "fedi-d-525",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "LA SEÑAL RADIOTELEFONICA DE SOCORRO ESTA CONSTITUIDA POR:",
     "options": [
       "MAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)",
@@ -6436,8 +6211,8 @@ export default [
   },
   {
     "id": "fedi-d-529",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿QUE ABREVIATURA INDICA QUE SON INTELIGIBLES LAS SEÑALES?",
     "options": [
       "QRL",
@@ -6466,8 +6241,8 @@ export default [
   },
   {
     "id": "fedi-d-531",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "NO ABONAR LOS CANONES y TASAS CORRESPONDIETES, ES FALTA:",
     "options": [
       "Leve",
@@ -6497,7 +6272,7 @@ export default [
   {
     "id": "fedi-d-534",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EL CONTROL DE GANACIA AUTOMATICA \"AGC\" SE UTILIZA EN:",
     "options": [
       "Emisión",
@@ -6527,7 +6302,7 @@ export default [
   {
     "id": "fedi-d-537",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EN RECEPCION EL \"S-METER\" (MEDIDOR-S) MIDE:",
     "options": [
       "La clase de emisión recibida",
@@ -6542,7 +6317,7 @@ export default [
   {
     "id": "fedi-d-540",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EL MANDO VOX:",
     "options": [
       "Sirve para emitir en fonia",
@@ -6647,7 +6422,7 @@ export default [
   {
     "id": "fedi-d-548",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "UN INCONVENIENTE DE LOS TRANSISTORES ES:",
     "options": [
       "Su alta tensión de polarización",
@@ -6722,7 +6497,7 @@ export default [
   {
     "id": "fedi-d-555",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "LAS DIFERENTES PARTES DE UN TRANSISTOR SE DENOMINAN",
     "options": [
       "Colector, conductor, masa",
@@ -6797,7 +6572,7 @@ export default [
   {
     "id": "fedi-d-560",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "EN UN TRANSISTOR N P N USADO COMO AMPLIFICADOR, LA POLARIZACION DEL COLECTOR ES:",
     "options": [
       "Negativa",
@@ -6827,7 +6602,7 @@ export default [
   {
     "id": "fedi-d-563",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODIFUSION O TELEVISION A REQUERIMIENTO DE la Administración COMPETENTE EN ESPECTRO RADIOELÉCTRICO, CONSTITUYE UNA FALTA:",
     "options": [
       "Grave",
@@ -6840,8 +6615,8 @@ export default [
   },
   {
     "id": "fedi-d-564",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "LA POTENCIA MAXIMA DE EMISION, EN WATIOS, PERMITIDA AL TITULAR DE UNA LICENCIA DE AFICIONADO AUTORIZADA PARA TRABAJAR EN LA BANDA DE 430 a 440 MHz ES DE:",
     "options": [
       "30",
@@ -6855,8 +6630,8 @@ export default [
   },
   {
     "id": "fedi-d-566",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "LA SEÑAL DE SOCORRO EN RADIOTELEFONIA ESTA DADA POR LA PALABRA:",
     "options": [
       "Ayuda",
@@ -6870,8 +6645,8 @@ export default [
   },
   {
     "id": "fedi-d-567",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "UTILIZAR COMO PORTABLE UNA ESTACIÓN FIJA SIN AUTORIZACION DE LA DlRECCION GENERAL DE TELECOMUNICACIONES ES FALTA:",
     "options": [
       "Grave",
@@ -6885,8 +6660,8 @@ export default [
   },
   {
     "id": "fedi-d-568",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "EMITIR DISTINTIVOS DE LLAMADA FALSOS CONSTITUYE UNA FALTA:",
     "options": [
       "Grave",
@@ -6900,8 +6675,8 @@ export default [
   },
   {
     "id": "fedi-d-570",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "¿QUE ABREVIATURA INDICA LA INTELIGIBILIDAD DE LAS SEÑALES?",
     "options": [
       "QRL",
@@ -6915,8 +6690,8 @@ export default [
   },
   {
     "id": "fedi-d-572",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "EL PREFIJO EE INDICA DELANTE DE UN DISTINTIVO COMPLETO DE RADIOAFICIONADO:",
     "options": [
       "Una estación de servicios especiales",
@@ -6930,8 +6705,8 @@ export default [
   },
   {
     "id": "fedi-d-574",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A la Administración COMPETENTE EN ESPECTRO RADIOELÉCTRICO EL TRASLADO DE DICHA ESTACION A OTRO VEHICULO DE SU PROPIEDAD?",
     "options": [
       "TRES meses",
@@ -6944,8 +6719,8 @@ export default [
   },
   {
     "id": "fedi-d-576",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "licencias-indicativos",
     "stem": "¿CUANDO SE AÑADE LA MENCIÓN PORTABLE AL INDICATIVA DE LLAMADA?",
     "options": [
       "Cuando se opera una estación Fija/Portable",
@@ -6959,8 +6734,8 @@ export default [
   },
   {
     "id": "fedi-d-577",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "¿SE PUEDE UTILIZAR UNA ESTACION MOVIL EN DIFERENTES VEHICULOS?",
     "options": [
       "No está permitido",
@@ -6974,8 +6749,8 @@ export default [
   },
   {
     "id": "fedi-d-578",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "LA COMUNICACION ENTRE DISTINTAS ESTACIONES DE UN MISMO TITULAR:",
     "options": [
       "Está absolutamente prohibido",
@@ -7050,7 +6825,7 @@ export default [
   {
     "id": "fedi-d-584",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EFECTUAR LA SINTONIZACIÓN DE UN EMISOR A PLENA POTENCIA PUEDE PRODUCIR:",
     "options": [
       "Daños en las válvulas del paso final",
@@ -7065,7 +6840,7 @@ export default [
   {
     "id": "fedi-d-585",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EL ELEMENTO PRINCIPAL PARA ATENUACIÓN DE ARMONICOS EN UN EMISOR CONSISTIRÁ EN LA INSTALACIÓN DE:",
     "options": [
       "Un relé de puesta a tierra",
@@ -7095,7 +6870,7 @@ export default [
   {
     "id": "fedi-d-588",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EN UN TRANSCEPTOR, EL MANDO VOX SE UTILIZA PARA:",
     "options": [
       "Cambiar la sintonía",
@@ -7110,7 +6885,7 @@ export default [
   {
     "id": "fedi-d-591",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "EL MANDO \"NB\" DE UN TRANSCEPTOR SE EMPLEA PARA:",
     "options": [
       "Suprimir interferencias producidas por emisoras de Radiodifusión",
@@ -7230,7 +7005,7 @@ export default [
   {
     "id": "fedi-e-010",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Un transistor bipolar puede ser de tipo:",
     "options": [
       "NPN",
@@ -7408,21 +7183,6 @@ export default [
     "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque e)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
   },
   {
-    "id": "fedi-f-027",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "¿Qué abreviatura indica que el operador sufre una interferencia?:",
-    "options": [
-      "QRM",
-      "QRK",
-      "QRL",
-      "QRA"
-    ],
-    "correctIndex": 0,
-    "explain": "Si una emisión perjudica servicios protegidos, el titular debe corregir o cesar; la buena práctica es actuar antes de que escale. «QRM».",
-    "explainSourceNote": "Práctica histórica (Fuente: FEDI-EA examen 17/2/2007 (bloque f)). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente."
-  },
-  {
     "id": "fedi-f-032",
     "part": 2,
     "topicId": "licencias-indicativos",
@@ -7455,7 +7215,7 @@ export default [
   {
     "id": "fedi-f-040",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estaciones de radioaficionados?",
     "options": [
       "Las sanciones por instalaciones no comunicadas a la Administración.",
@@ -7470,7 +7230,7 @@ export default [
   {
     "id": "fedi-f-056",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Para operar estaciones en el país visitado temporalmente, el radioaficionado está obligado a:",
     "options": [
       "Pedir indicativo en dicho país.",
@@ -7649,8 +7409,8 @@ export default [
   },
   {
     "id": "fedi-g-016",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Cuando se produce una interferencia perjudicial que afecta a la seguridad de la vida humana:",
     "options": [
       "Se debe bajar el volumen.",
@@ -7815,7 +7575,7 @@ export default [
   {
     "id": "fedi-i-019",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "En armónicos producidos por circuitos no lineales:",
     "options": [
       "Solo existen los de segundo orden",
@@ -8278,8 +8038,8 @@ export default [
   },
   {
     "id": "fedi-w-019",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?",
     "options": [
       "No hay limitaciones.",
@@ -8435,7 +8195,7 @@ export default [
   {
     "id": "fedi-x-054",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Si un radioaficionado se identifica como EA4ABC/M3BVM:",
     "options": [
       "Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente una estación española.",
@@ -8465,7 +8225,7 @@ export default [
   {
     "id": "ofic-002",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:",
     "options": [
       "R1 · R2 / (R1 + R2)",
@@ -8480,7 +8240,7 @@ export default [
   {
     "id": "ofic-003",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En modulación de frecuencia (FM), la magnitud de la portadora que varía con la señal moduladora es principalmente:",
     "options": [
       "La amplitud",
@@ -8495,7 +8255,7 @@ export default [
   {
     "id": "ofic-004",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:",
     "options": [
       "Doblar la potencia",
@@ -8780,7 +8540,7 @@ export default [
   {
     "id": "ofic-023",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado mediante cifrado:",
     "options": [
       "Están permitidas si son entre amigos",
@@ -8794,8 +8554,8 @@ export default [
   },
   {
     "id": "ofic-024",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Durante una transmisión, tocar una antena o elementos próximos al sistema radiante:",
     "options": [
       "Es inocuo si la ROE es baja",
@@ -8809,8 +8569,8 @@ export default [
   },
   {
     "id": "ofic-025",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida técnica razonable es:",
     "options": [
       "Aumentar siempre la potencia",
@@ -8885,7 +8645,7 @@ export default [
   {
     "id": "ofic-030",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "En banda lateral única (SSB), frente a una AM convencional, se transmite normalmente:",
     "options": [
       "La portadora completa y las dos bandas laterales",
@@ -8900,7 +8660,7 @@ export default [
   {
     "id": "ofic-031",
     "part": 2,
-    "topicId": "licencias-indicativos",
+    "topicId": "operacion-seguridad",
     "stem": "En bancos españoles de práctica, si se pide deletrear la letra N con la tabla fonética usada para indicativos, la respuesta esperada suele ser:",
     "options": [
       "Noviembre",
@@ -8929,8 +8689,8 @@ export default [
   },
   {
     "id": "ofic-033",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La designación internacional de una clase de emisión consta, en el esquema habitual, de:",
     "options": [
       "Un solo dígito",
@@ -8960,7 +8720,7 @@ export default [
   {
     "id": "ofic-035",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Si una interferencia perjudicial afecta a la seguridad de la vida humana, el operador debe:",
     "options": [
       "Aumentar potencia para superarla",
@@ -8990,7 +8750,7 @@ export default [
   {
     "id": "ofic-037",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "componentes",
     "stem": "El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el ancho de banda B como:",
     "options": [
       "Q = B / f",
@@ -9005,7 +8765,7 @@ export default [
   {
     "id": "ofic-038",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:",
     "options": [
       "0 dBm",
@@ -9109,8 +8869,8 @@ export default [
   },
   {
     "id": "ofic-045",
-    "part": 2,
-    "topicId": "operacion-seguridad",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Antes de transmitir en una frecuencia, escuchar si la frecuencia está libre es:",
     "options": [
       "Opcional y sin importancia",
@@ -9125,7 +8885,7 @@ export default [
   {
     "id": "ofic-046",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "En tráfico de radioaficionado, la abreviatura «CL» suele significar:",
     "options": [
       "Cambio de polarización",
@@ -9140,7 +8900,7 @@ export default [
   {
     "id": "q1",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "En corriente continua, la ley de Ohm relaciona tensión (V), intensidad (I) y resistencia (R) como:",
     "options": [
       "V = I / R",
@@ -9154,7 +8914,7 @@ export default [
   {
     "id": "q10",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "El certificado HAREC (nivel armonizado CEPT) se asocia principalmente a:",
     "options": [
       "Permiso de instalar torres sin límite de altura",
@@ -9182,7 +8942,7 @@ export default [
   {
     "id": "q12",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Al finalizar una comunicación en telefonía, es buena práctica:",
     "options": [
       "Dejar de emitir sin identificarse",
@@ -9224,7 +8984,7 @@ export default [
   {
     "id": "q4",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En la modulación de amplitud (AM), ¿qué magnitud de la portadora varía principalmente?",
     "options": [
       "La frecuencia",
@@ -9252,7 +9012,7 @@ export default [
   {
     "id": "q6",
     "part": 1,
-    "topicId": "antenas-prop",
+    "topicId": "receptores-emisores",
     "stem": "La relación de ondas estacionarias (ROE) elevada en la línea de transmisión suele indicar:",
     "options": [
       "Buen acoplamiento antena-transmisor",
@@ -9308,7 +9068,7 @@ export default [
   {
     "id": "quijotes-1-0002",
     "part": 1,
-    "topicId": "componentes",
+    "topicId": "electricidad-basica",
     "stem": "Un elevado nivel de intensidad de campo eléctrico puede producir:",
     "options": [
       "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones",
@@ -9473,7 +9233,7 @@ export default [
   {
     "id": "quijotes-1-0132",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:",
     "options": [
       "Clase A.",
@@ -9893,7 +9653,7 @@ export default [
   {
     "id": "quijotes-1-0188",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El medidor comúnmente denominado \"S-meter\" indica:",
     "options": [
       "La relación de onda estacionaria.",
@@ -9908,7 +9668,7 @@ export default [
   {
     "id": "quijotes-1-0190",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Los transistores bipolares son dispositivos que:",
     "options": [
       "Son elementos pasivos.",
@@ -9998,7 +9758,7 @@ export default [
   {
     "id": "quijotes-1-0198",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "La unidad dBm corresponde a la magnitud:",
     "options": [
       "Potencia.",
@@ -10013,7 +9773,7 @@ export default [
   {
     "id": "quijotes-1-0199",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "Al objeto de evitar que el transceptor introduzca señales de radiofrecuencia en la red de suministro eléctrico, se emplea:",
     "options": [
       "Blindaje por apantallamiento.",
@@ -10193,7 +9953,7 @@ export default [
   {
     "id": "quijotes-1-0219",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "En un amplificador de ganancia 20 dB, con impedancia de entrada igual a la de salida, y una potencia de entrada de 0.2 watios. ¿Cuánto vale la potencia de salida?:",
     "options": [
       "200 W",
@@ -10253,7 +10013,7 @@ export default [
   {
     "id": "quijotes-1-0226",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Un transistor bipolar está compuesto por:",
     "options": [
       "Base, colector y drenador.",
@@ -10418,7 +10178,7 @@ export default [
   {
     "id": "quijotes-1-0242",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El mando NB de un transceptor sirve para:",
     "options": [
       "Seleccionar las señales moduladas en AM.",
@@ -10583,7 +10343,7 @@ export default [
   {
     "id": "quijotes-1-0263",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "El transceptor debe estar conectado a tierra para:",
     "options": [
       "Evitar las interferencias atmosféricas",
@@ -10928,7 +10688,7 @@ export default [
   {
     "id": "quijotes-1-2102",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Un circuito con un transistor montado en colector común se denomina también:",
     "options": [
       "Colector mixto",
@@ -10973,7 +10733,7 @@ export default [
   {
     "id": "quijotes-1-2207",
     "part": 1,
-    "topicId": "componentes",
+    "topicId": "electricidad-basica",
     "stem": "En un circuito con varias baterías conectadas en paralelo:",
     "options": [
       "La tensión total se suma.",
@@ -11181,8 +10941,8 @@ export default [
   },
   {
     "id": "quijotes-84-1810",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Como norma general, y salvo circunstancias especiales debidamente motivadas, las estaciones automáticas desatendidas en las bandas de VHF y UHF fuera del casco urbano, emitirán una potencia de salida máxima de:",
     "options": [
       "10 W.",
@@ -11271,7 +11031,7 @@ export default [
   {
     "id": "quijotes-84-1830",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la palabra fin?",
     "options": [
       "Fado, India, November.",
@@ -11285,8 +11045,8 @@ export default [
   },
   {
     "id": "quijotes-84-1831",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "En telegrafía, la abreviatura de procedimiento usada para finalizar una transmisión es:",
     "options": [
       "AS.",
@@ -11512,8 +11272,8 @@ export default [
   },
   {
     "id": "quijotes-84-1846",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la nomenclatura de las bandas de frecuencia, el símbolo LF corresponde a la banda de frecuencias:",
     "options": [
       "30 a 300 kHz.",
@@ -11528,7 +11288,7 @@ export default [
   {
     "id": "quijotes-84-1847",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "Como norma general, la instalación de una estación de aficionado deberá ser efectuada:",
     "options": [
       "Únicamente por el propietario de la estación.",
@@ -11557,8 +11317,8 @@ export default [
   },
   {
     "id": "quijotes-84-1850",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La banda de frecuencias número 8, cuyo símbolo es VHF, corresponde a las ondas:",
     "options": [
       "Kilométricas.",
@@ -11633,7 +11393,7 @@ export default [
   {
     "id": "quijotes-84-1855",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Un radioaficionado español que traslade su residencia a Croacia podrá obtener una licencia de radioaficionado en dicho país si:",
     "options": [
       "Croacia aplica la Recomendación T/R 61-02 de la CEPT.",
@@ -11647,8 +11407,8 @@ export default [
   },
   {
     "id": "quijotes-84-1856",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La clase de emisión A3E corresponde a:",
     "options": [
       "Doble banda lateral con ausencia de señal moduladora.",
@@ -11663,7 +11423,7 @@ export default [
   {
     "id": "quijotes-84-1859",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "En comunicaciones del Servicio de Aficionados, la palabra BOJ se deletrea:",
     "options": [
       "Bravo, Oscar, Julio.",
@@ -11737,8 +11497,8 @@ export default [
   },
   {
     "id": "quijotes-84-1865",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en la misma, es:",
     "options": [
       "Muy perjudicial para el uso eficiente del espectro radioeléctrico.",
@@ -11843,7 +11603,7 @@ export default [
   {
     "id": "quijotes-84-1872",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "Para la instalación de una estación fija de radioaficionado, es necesario:",
     "options": [
       "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
@@ -11858,7 +11618,7 @@ export default [
   {
     "id": "quijotes-84-1873",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "El acceso a los repetidores analógicos y digitales finales será necesariamente:",
     "options": [
       "Obligatorio.",
@@ -11872,8 +11632,8 @@ export default [
   },
   {
     "id": "quijotes-84-1874",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
     "options": [
       "La gama de frecuencia de 3 a 30 GHz.",
@@ -11888,7 +11648,7 @@ export default [
   {
     "id": "quijotes-84-1875",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "Para no desmontar el sistema radiante de una estación fija, una vez cancelada la licencia, y dejarlo sólo para recepción, su titular deberá obtener:",
     "options": [
       "Autorización por escrito de la Jefatura Provincial de Inspección de Telecomunicaciones.",
@@ -11917,7 +11677,7 @@ export default [
   {
     "id": "quijotes-84-1877",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "La instalación y funcionamiento de una estación de aficionado precisará de una licencia, la cual se considera asociada a:",
     "options": [
       "Una asociación legalizada de radioaficionados de la provincia correspondiente.",
@@ -11947,7 +11707,7 @@ export default [
   {
     "id": "quijotes-84-1879",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Qué objetivo se pretende al instalar un repetidor de radioficionado:",
     "options": [
       "Determinar la ubicación de aparatos radioeléctricos.",
@@ -11962,7 +11722,7 @@ export default [
   {
     "id": "quijotes-84-1880",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
     "options": [
       "No existe límite para estas autorizaciones.",
@@ -11977,7 +11737,7 @@ export default [
   {
     "id": "quijotes-84-1882",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Si un radioaficionado se identifica como EA2ABC/R7BHZ:",
     "options": [
       "Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.",
@@ -11992,7 +11752,7 @@ export default [
   {
     "id": "quijotes-84-1883",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
     "options": [
       "Si la antigüedad de su licencia es superior a 5 años.",
@@ -12006,7 +11766,7 @@ export default [
   {
     "id": "quijotes-84-1884",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "El montaje del sistema radiante de una estación fija de radioaficionado será realizado:",
     "options": [
       "Como norma general, por un instalador de telecomunica­ciones autorizado.",
@@ -12036,7 +11796,7 @@ export default [
   {
     "id": "quijotes-84-1886",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Un radioaficionado español que utiliza temporalmente su estación en Australia (país que aplica la Recomendación T/R 61-01):",
     "options": [
       "Puede emitir en las mismas frecuencias que en España.",
@@ -12096,7 +11856,7 @@ export default [
   {
     "id": "quijotes-84-1891",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Que está ocurriendo si un radioaficionado se identifica como EA3/IZ4RKL:",
     "options": [
       "Se están realizando pruebas en el distrito 3.",
@@ -12155,8 +11915,8 @@ export default [
   },
   {
     "id": "quijotes-84-1897",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Como norma general, la potencia de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podrá exceder de:",
     "options": [
       "5 W.",
@@ -12184,8 +11944,8 @@ export default [
   },
   {
     "id": "quijotes-84-1899",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Las estaciones automáticas desatendidas en la banda de HF tendrán una potencia de salida máxima de:",
     "options": [
       "25 W.",
@@ -12259,8 +12019,8 @@ export default [
   },
   {
     "id": "quijotes-84-1904",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la banda de frecuencia de 50,00-51,00 MHz, existen restricciones geográficas de uso. Señale la provincia desde la que se podrán efectuar emisiones:",
     "options": [
       "Madrid.",
@@ -12290,7 +12050,7 @@ export default [
   {
     "id": "quijotes-84-1907",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cuál de las siguientes proposiciones contiene mayor número de provincias pertenecientes al distrito 1?:",
     "options": [
       "Soria, Sevilla, Santa Cruz de Tenerife.",
@@ -12320,7 +12080,7 @@ export default [
   {
     "id": "quijotes-84-1909",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Cómo se efectúa el acceso a los repetidores analógicos y digitales finales:",
     "options": [
       "Se accede solamente en el caso de que el radioaficionado tenga una licencia de 10 años de antigüedad.",
@@ -12334,8 +12094,8 @@ export default [
   },
   {
     "id": "quijotes-84-1910",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Al instalar una antena de radioaficionado se tendrá en cuenta que:",
     "options": [
       "No se pueden situar en azoteas o lugares transitables.",
@@ -12395,7 +12155,7 @@ export default [
   {
     "id": "quijotes-84-1915",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "En comunicaciones del Servicio de Aficionados, la palabra CID se deletrea:",
     "options": [
       "Charter, India, Delfo.",
@@ -12409,8 +12169,8 @@ export default [
   },
   {
     "id": "quijotes-84-1916",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Como norma general, la ganancia del sistema radiante de las estaciones desatendidas en las bandas de VHF y UHF, no será superior a:",
     "options": [
       "6 dB.",
@@ -12425,7 +12185,7 @@ export default [
   {
     "id": "quijotes-84-1917",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "¿A quién se le puede autorizar la instalación de una Estación Automática Desatendida?:",
     "options": [
       "A cualquier titular de licencia de Estación.",
@@ -12440,7 +12200,7 @@ export default [
   {
     "id": "quijotes-84-1918",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "La señal de seguridad en radiotelefonía se compone:",
     "options": [
       "De la palabra \"Securité\" repetida cinco veces.",
@@ -12530,7 +12290,7 @@ export default [
   {
     "id": "quijotes-84-1925",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "Como norma general las instalaciones en una estación de radioaficionado deberán ser efectuadas:",
     "options": [
       "Directamente por el propietario de la estación.",
@@ -12544,8 +12304,8 @@ export default [
   },
   {
     "id": "quijotes-84-1927",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La ondas métricas se representan por el símbolo:",
     "options": [
       "LF.",
@@ -12664,8 +12424,8 @@ export default [
   },
   {
     "id": "quijotes-84-1936",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "El cambio de ubicación de una antena:",
     "options": [
       "No es necesario solicitarlo a la Administración competente en espectro radioeléctrico.",
@@ -12678,8 +12438,8 @@ export default [
   },
   {
     "id": "quijotes-84-1937",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "La Ley 19/1986, conocida como Ley de Antenas, regula:",
     "options": [
       "La obligación de comunicar la instalación de una antena a la Administración competente en espectro radioeléctrico.",
@@ -12784,7 +12544,7 @@ export default [
   {
     "id": "quijotes-84-1944",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea el número 7?:",
     "options": [
       "Severo",
@@ -12843,8 +12603,8 @@ export default [
   },
   {
     "id": "quijotes-84-1948",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la nomenclatura de las bandas de frecuencia, la banda SHF corresponde a las frecuencias comprendidas entre:",
     "options": [
       "3 y 30 MHz.",
@@ -13053,8 +12813,8 @@ export default [
   },
   {
     "id": "quijotes-84-1963",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "¿Qué se entiende por emisiones no deseadas?:",
     "options": [
       "Conjunto de emisiones que producen interferencias.",
@@ -13189,7 +12949,7 @@ export default [
   {
     "id": "quijotes-84-1974",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la palabra TOP?:",
     "options": [
       "Tunga, Oslo, Papa.",
@@ -13203,8 +12963,8 @@ export default [
   },
   {
     "id": "quijotes-84-1975",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "¿Que símbolo le corresponde a la gama de frecuencias de 3 a 30 MHz?:",
     "options": [
       "VHF.",
@@ -13279,7 +13039,7 @@ export default [
   {
     "id": "quijotes-84-1980",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "Para la instalación y funcionamiento de una estación de aficionado, es necesario obtener:",
     "options": [
       "Autorización administrativa.",
@@ -13293,8 +13053,8 @@ export default [
   },
   {
     "id": "quijotes-84-1982",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Utilizar la palabra \"cambio\" al finalizar una transmisión en fonía es:",
     "options": [
       "Recomendable.",
@@ -13354,7 +13114,7 @@ export default [
   {
     "id": "quijotes-84-1987",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
     "options": [
       "Málaga, Murcia, Madrid, Vizcaya.",
@@ -13414,7 +13174,7 @@ export default [
   {
     "id": "quijotes-84-1991",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Toda estación colectiva fija de aficionado destinada a realizar estudios de propagación y cuyo funcionamiento se basa en la emisión automática de señales de identificación, recibe el nombre de:",
     "options": [
       "Servicio de aficionado por satélite.",
@@ -13488,8 +13248,8 @@ export default [
   },
   {
     "id": "quijotes-84-1996",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Los soportes de una antena de radioaficionado:",
     "options": [
       "Se podrán fijar a los anclajes de un pararrayos.",
@@ -13654,7 +13414,7 @@ export default [
   {
     "id": "quijotes-84-2008",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la palabra REY?",
     "options": [
       "Radio, Echo, Yankee",
@@ -13773,8 +13533,8 @@ export default [
   },
   {
     "id": "quijotes-84-2017",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La señal de alarma en radiotelefonía consiste en dos señales de audiofrecuencia, aproximadamente sinusoidales, transmitidas alternativamente. ¿Qué frecuencias son?:",
     "options": [
       "2.220 Hz y 1.300 Hz",
@@ -13848,8 +13608,8 @@ export default [
   },
   {
     "id": "quijotes-84-2022",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "En el tejado de un edificio donde está instalada una antena de radioaficionado autorizada:",
     "options": [
       "Se podrán realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalación de la antena",
@@ -13878,8 +13638,8 @@ export default [
   },
   {
     "id": "quijotes-84-2024",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "En la instalación de una antena de radioaficionado y sus elementos anejos:",
     "options": [
       "No es necesario tener en cuenta la proximidad de líneas eléctricas aéreas",
@@ -14043,8 +13803,8 @@ export default [
   },
   {
     "id": "quijotes-84-2035",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda necesaria, resultante del proceso de modulación, se denomina emisión:",
     "options": [
       "Esencial",
@@ -14088,8 +13848,8 @@ export default [
   },
   {
     "id": "quijotes-84-2038",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La utilizacion de frecuencias de llamada:",
     "options": [
       "Sólo se usan en HF.",
@@ -14104,7 +13864,7 @@ export default [
   {
     "id": "quijotes-84-2039",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "marco-normativo",
     "stem": "Los daños y perjuicios originados por una antena de una estación de radioaficionado, correrán a cargo del titular de la licencia de la estación:",
     "options": [
       "Unicamente los producidos al instalar la antena.",
@@ -14119,7 +13879,7 @@ export default [
   {
     "id": "quijotes-84-2040",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la palabra MAR?",
     "options": [
       "Mayo, Alfa, Roma.",
@@ -14134,7 +13894,7 @@ export default [
   {
     "id": "quijotes-84-2041",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "La señal QRT tiene el significado de:",
     "options": [
       "Su frecuencia varía.",
@@ -14163,8 +13923,8 @@ export default [
   },
   {
     "id": "quijotes-84-2043",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podrán efectuar:",
     "options": [
       "Desde cualquier punto del territorio nacional.",
@@ -14238,8 +13998,8 @@ export default [
   },
   {
     "id": "quijotes-84-2049",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por obras en la comunidad, cuando estas hayan terminado:",
     "options": [
       "Tendrá que presentar nueva memoria.",
@@ -14253,8 +14013,8 @@ export default [
   },
   {
     "id": "quijotes-84-2050",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la nomenclatura de las bandas de frecuencia, la banda de HF corresponde a la gama de frecuencias de:",
     "options": [
       "300-3000 MHz.",
@@ -14269,7 +14029,7 @@ export default [
   {
     "id": "quijotes-84-2051",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "En las comunicaciones de radio, la palabra GOLF se deletreará:",
     "options": [
       "Simplemete con la palabra Golf.",
@@ -14344,7 +14104,7 @@ export default [
   {
     "id": "quijotes-84-2056",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "En el país visitado temporalmente, el radioaficionado está obligado a:",
     "options": [
       "Pedir indicativo de dicho país.",
@@ -14358,8 +14118,8 @@ export default [
   },
   {
     "id": "quijotes-84-2057",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Puedo realizar transmisiones desde Andorra si tengo la licencia?",
     "options": [
       "Si, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el país en el que residen habitualmente, pueden obtener una licencia temporal para usar su estación en territorio andorrano.",
@@ -14388,8 +14148,8 @@ export default [
   },
   {
     "id": "quijotes-84-2060",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emisiones:",
     "options": [
       "Catódicas.",
@@ -14403,8 +14163,8 @@ export default [
   },
   {
     "id": "quijotes-84-2062",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:",
     "options": [
       "Espectro radioeléctrico.",
@@ -14463,7 +14223,7 @@ export default [
   {
     "id": "quijotes-84-2068",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "Una de las siguientes provincias españolas se encuentra adscrita al distrito 5. Indíquela:",
     "options": [
       "Almería.",
@@ -14552,8 +14312,8 @@ export default [
   },
   {
     "id": "quijotes-84-2074",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Para instalar una antena en un edificio en régimen de propiedad horizontal:",
     "options": [
       "Se necesita autorización expresa de la Comunidad de Propietarios.",
@@ -14567,8 +14327,8 @@ export default [
   },
   {
     "id": "quijotes-84-2075",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Para la instalación de antenas de radioaficionados, es obligatorio tener un seguro que cubra:",
     "options": [
       "La responsabilidad civil del titular.",
@@ -14717,7 +14477,7 @@ export default [
   {
     "id": "quijotes-84-2086",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la palabra MERO?",
     "options": [
       "MADRID, ECHO, ROMA, OSCAR.",
@@ -14792,7 +14552,7 @@ export default [
   {
     "id": "quijotes-84-2091",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "licencias-indicativos",
     "stem": "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
     "options": [
       "Melillla.",
@@ -14866,8 +14626,8 @@ export default [
   },
   {
     "id": "quijotes-84-2104",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de las emisiones, no deberá ser superior a",
     "options": [
       "5 w",
@@ -14881,8 +14641,8 @@ export default [
   },
   {
     "id": "quijotes-84-2203",
-    "part": 2,
-    "topicId": "operacion-seguridad",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En el sistema GMDSS, la alerta de socorro inicial en MF/HF se realiza mediante Llamada Selectiva Digital (DSC). ¿En qué frecuencia se transmite esta alerta en banda MF?",
     "options": [
       "2.182 kHz",
@@ -14911,8 +14671,8 @@ export default [
   },
   {
     "id": "quijotes-84-2214",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza es",
     "options": [
       "USB",
@@ -14971,7 +14731,7 @@ export default [
   {
     "id": "ure-p1-04",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "La lectura “10 dBµV”, es un valor de:",
     "options": [
       "Resistencia eléctrica",
@@ -14985,7 +14745,7 @@ export default [
   {
     "id": "ure-p1-07",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band Frequency Modulation) ¿Qué excursión de frecuencia máxima permite?:",
     "options": [
       "12 kHz",
@@ -14999,7 +14759,7 @@ export default [
   {
     "id": "ure-p1-08",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "En la siguiente gráfica de la pantalla de un osciloscopio, se puede afirmar que:",
     "stemFigure": "images/quiz/ure-p1-08-original.png",
     "stemFigureAlt": "Figura original URE 2008_05_24-28: osciloscopio con A en horizontal y B en vertical.",
@@ -15015,7 +14775,7 @@ export default [
   {
     "id": "ure-p1-09",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "En un sistema de radiocomunicación, el llamado “ruido blanco”:",
     "options": [
       "Es incoloro",
@@ -15029,7 +14789,7 @@ export default [
   {
     "id": "ure-p1-10",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "El índice de modulación caracteriza a:",
     "options": [
       "La modulación de amplitud",
@@ -15043,7 +14803,7 @@ export default [
   {
     "id": "ure-p1-11",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "antenas-prop",
     "stem": "La velocidad de propagación de las ondas electromagnéticas:",
     "options": [
       "En el vacío es menor que a través del aire",
@@ -15057,7 +14817,7 @@ export default [
   {
     "id": "ure-p1-13",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "Indique cual de las siguientes respuestas es falsa:",
     "options": [
       "Un amplificador es lineal cuando la señal de salida es fiel reflejo de la entrada, pero amplificada",
@@ -15131,7 +14891,7 @@ export default [
   {
     "id": "ure-p1-18",
     "part": 1,
-    "topicId": "antenas-prop",
+    "topicId": "magnetismo-ondas",
     "stem": "Un medidor de Relación de Ondas Estacionarias (R.O.E.):",
     "options": [
       "Mide la robustez del equipo",
@@ -15145,7 +14905,7 @@ export default [
   {
     "id": "ure-p1-20",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
     "options": [
       "Corriente eléctrica",
@@ -15159,7 +14919,7 @@ export default [
   {
     "id": "ure-p1-21",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "electricidad-basica",
     "stem": "Las componentes espectrales de una determinada emisión se ven con:",
     "options": [
       "Un ondulador",
@@ -15187,7 +14947,7 @@ export default [
   {
     "id": "ure-p1-24",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "Los armónicos son:",
     "options": [
       "Batidos de frecuencias indeseadas",
@@ -15215,7 +14975,7 @@ export default [
   {
     "id": "ure-p1-27",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "antenas-prop",
     "stem": "En el siguiente esquema de un receptor, ¿que circuito incluiría en el cuadro con interrogantes al objeto de obtener un nivel de audio constante en el altavoz, independientemente del nivel de señal en antena?:",
     "stemFigure": "images/quiz/ure-p1-27-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA aa-14: esquema de receptor con bloque de interrogantes para control de ganancia.",
@@ -15245,7 +15005,7 @@ export default [
   {
     "id": "ure-p1-29",
     "part": 1,
-    "topicId": "antenas-prop",
+    "topicId": "magnetismo-ondas",
     "stem": "De las siguientes bandas de frecuencias la más adecuada para comunicaciones por satélite se corresponde con:",
     "options": [
       "HF",
@@ -15317,8 +15077,8 @@ export default [
   },
   {
     "id": "ure-p1x-10",
-    "part": 1,
-    "topicId": "electricidad-basica",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe procurarse:",
     "options": [
       "Radiar con potencia elevada",
@@ -15333,7 +15093,7 @@ export default [
   {
     "id": "ure-p1x-11",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "receptores-emisores",
     "stem": "Existen varias clases de amplificadores, A, B, AB y C:",
     "options": [
       "El de clase AB es una combinación de A y B",

@@ -18,6 +18,7 @@ import generatedExplanations from "../data/generated-explanations.js";
 import figures from "../data/questions-figures.js";
 import { CRIBADO_PREFERRED_IDS, CRIBADO_STATS } from "../data/question-cribado.js";
 import { dedupeKey, writeQuestionModule, writeUtf8File } from "../lib/import-question-utils.mjs";
+import { classifyQuestion } from "../lib/question-classification.mjs";
 import { dedupeBankByStem } from "../lib/banco-dedupe.mjs";
 import { fillBankToMinimum } from "../lib/banco-fill.mjs";
 import { MIN_BANCO_QUESTIONS } from "../lib/question-recency.mjs";
@@ -53,8 +54,19 @@ for (const q of all) {
  * - Estudio inmediato / confianza: `pedagogicalExplain(q)` lee `explain`.
  * - Estudio profundizar: `explain` didáctico + `explainSourceNote` (plantilla FEDI/Quijotes).
  */
-function withPedagogicalExplain(q) {
+function applyExamClassification(q) {
   const repaired = repairQuestionFields(q);
+  const { part, topicId } = classifyQuestion({
+    stem: repaired.stem,
+    sourcePart: repaired.part,
+    id: repaired.id,
+  });
+  if (part === repaired.part && topicId === repaired.topicId) return repaired;
+  return repairQuestionFields({ ...repaired, part, topicId });
+}
+
+function withPedagogicalExplain(q) {
+  const repaired = applyExamClassification(q);
   const text = quijotesExplanations[repaired.id] || generatedExplanations[repaired.id];
   if (!text) return repaired;
   const prev = typeof repaired.explain === "string" ? repaired.explain.trim() : "";

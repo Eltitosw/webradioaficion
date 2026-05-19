@@ -1,0 +1,24 @@
+=== Auditoría clasificación (banco activo) ===
+Fecha: 2026-05-19
+Preguntas: 1024
+Drift (almacenado ≠ clasificador): 0
+Confianza baja (revisar — fallback-review): 0
+
+Distribución según clasificador:
+  181	1/receptores-emisores
+  171	1/electricidad-basica
+  165	2/licencias-indicativos
+  138	2/marco-normativo
+  129	1/componentes
+  96	1/antenas-prop
+  79	1/magnetismo-ondas
+  53	2/operacion-seguridad
+  12	2/instalaciones
+
+Reglas aplicadas:
+  339	p2-regulatory
+  280	p1-technical
+  271	inferred-topic
+  101	default-topic-ok
+  24	p2-reg-over-tech
+  9	override
