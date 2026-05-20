@@ -36,6 +36,17 @@ test("mantiene estación móvil en vehículo (radioaficionado)", () => {
   );
 });
 
+test("excluye ADSL / Internet de consumo", () => {
+  assert.equal(
+    isOffTopicForRadioaficionadoExam({
+      id: "quijotes-1-2205",
+      stem: 'Si un usuario tiene contratado un acceso a Internet "ADSL de 2 megas", esto significa que:',
+      options: ["A", "B", "C", "D"],
+    }),
+    true,
+  );
+});
+
 test("mantiene tráfico entre estaciones de aficionado", () => {
   assert.equal(
     isOffTopicForRadioaficionadoExam({

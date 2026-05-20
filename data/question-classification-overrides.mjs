@@ -19,4 +19,12 @@ export const CLASSIFICATION_OVERRIDES = {
   "ofic-025": { part: 1, topicId: "receptores-emisores" },
   /** Repetidor: reglamento P2 (licencias/instalaciones). */
   "quijotes-84-1883": { part: 2, topicId: "licencias-indicativos" },
+  /** SSB / banda lateral: modulación P1. */
+  "ofic-030": { part: 1, topicId: "magnetismo-ondas" },
+  /** Modos de emisión en transceptor (USB/LSB). */
+  "fedi-b-297": { part: 1, topicId: "receptores-emisores" },
+  /** Interferencias y amplificadores de potencia. */
+  "quijotes-1-0140": { part: 1, topicId: "receptores-emisores" },
+  /** Fading / desvanecimiento. */
+  "quijotes-1-0182": { part: 1, topicId: "magnetismo-ondas" },
 };

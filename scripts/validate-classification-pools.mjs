@@ -11,6 +11,8 @@ const TECH_IN_LICENCIAS =
   /transceptor|compresi[oó]n de un transceptor|ganancia de radiofrecuencia|superheterodin|ley de ohm\b|mezclador/i;
 const REG_IN_P1_TECH =
   /distintivo de llamada|autorizaci[oó]n de radioaficionado|harec|\bcept\b|mayday|securit[eé]/i;
+const JUNK_IN_ELECTRICIDAD =
+  /c[oó]digo\s*["']?\s*q|\bq(?:rm|rn|sy|rt)\b|distintivo|\bindicativo\b|señal\s+.*socorro|mayday|acceso a internet|\badsl\b|control autom[aá]tico de ganancia|vox-man|load knob|gama de frecuenc|reflexiones lunares|usb.*lsb|banda lateral|\bssb\b|fading|desvanecimiento|modo de emisi[oó]n/i;
 
 let failures = 0;
 
@@ -65,6 +67,9 @@ checkPool("P2 licencias (30)", buildQuestionList(base, "2", "teorico", "licencia
 });
 checkPool("P1 receptores (30)", buildQuestionList(base, "1", "teorico", "receptores-emisores", 30), {
   forbidStemRe: REG_IN_P1_TECH,
+});
+checkPool("P1 electricidad (30)", buildQuestionList(base, "1", "teorico", "electricidad-basica", 30), {
+  forbidStemRe: JUNK_IN_ELECTRICIDAD,
 });
 checkPool(
   "P2 operacion (30)",

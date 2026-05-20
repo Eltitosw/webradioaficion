@@ -1,0 +1,4 @@
+Verificación estricta · banco ESTUDIO · 2026-05-20T23:12:57
+Total: 542
+OK: 542
+Inaceptables: 0

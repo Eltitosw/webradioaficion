@@ -2,6 +2,8 @@ import topicsData from "./data/topics.js";
 import topicStudy from "./data/topics-study.js";
 import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
+import questionsBancoEstudio from "./data/questions-banco-estudio.js";
+import { BANCO_ESTUDIO_STATS } from "./data/questions-banco-estudio.js";
 import regulatory from "./data/regulatory.js";
 import { isActiveQuestion } from "./data/question-policy.js";
 import {
@@ -39,6 +41,10 @@ import {
   isActiveError,
   updateErrorNotebookWithResult,
 } from "./lib/learning-coach.js";
+import {
+  EXAM_PASS_MIN_SIMULATIONS_PER_PART,
+  summarizePresentReadiness,
+} from "./lib/exam-present-readiness.mjs";
 import appVersion from "./data/version.js";
 import { showAppConfirm, showQuizLeaveDialog, showReplaceDraftDialog, initAppDialog } from "./lib/app-dialog.js";
 import { buildProgressBackupPayload, applyProgressBackupPayload } from "./lib/progress-backup.js";
@@ -214,8 +220,14 @@ function questionIsPlayable(q) {
   return q.options.filter((o) => String(o ?? "").trim().length > 0).length >= 2;
 }
 
+/** Simulacro tipo test: banco examen estricto (481). */
+const examQuestions = [...questionsBanco].filter(questionIsPlayable);
+
+/** Practicar, tarjetas, repaso: banco ampliado con más ítems y explicaciones. */
+const studyQuestions = [...questionsBancoEstudio].filter(questionIsPlayable);
+
 /** @type {typeof questionsBanco} */
-let allQuestions = [...questionsBanco].filter(questionIsPlayable);
+let allQuestions = studyQuestions;
 
 const TRAP_QUESTION_IDS = new Set([
   "q6",
@@ -1630,7 +1642,8 @@ async function startQuiz() {
   const wrongOnly = !!$("#quiz-wrong-only")?.checked;
   const trapOnly = !!$("#quiz-trap-only")?.checked;
   const onlyPool = buildQuizOnlyPool();
-  const sessionPool = filterQuestionsForSession(allQuestions, {
+  const poolSource = quizState.sessionType === "teorico" ? examQuestions : studyQuestions;
+  const sessionPool = filterQuestionsForSession(poolSource, {
     topicFilter,
     sessionType: quizState.sessionType,
     mode: quizState.mode,
@@ -2727,9 +2740,27 @@ function renderUtilidades() {
   `;
 }
 
+function renderGlobalPresentVerdict(readiness, userStats) {
+  const present = summarizePresentReadiness(readiness, userStats?.gradedByPart);
+  const cls =
+    present.status === "ready"
+      ? "present-verdict--ok"
+      : present.status === "almost"
+        ? "present-verdict--warn"
+        : "present-verdict--work";
+  return `
+    <aside class="present-verdict ${cls}" aria-label="Veredicto global para presentarse al examen">
+      <p class="present-verdict__eyebrow">Objetivo: apto en las dos pruebas</p>
+      <h3 class="present-verdict__title">${escapeHtml(present.label)}</h3>
+      <p class="present-verdict__text">${escapeHtml(present.message)}</p>
+      <p class="present-verdict__meta muted">Simulacros aptos registrados: 1.ª prueba <strong>${present.simP1}</strong> / ${EXAM_PASS_MIN_SIMULATIONS_PER_PART} · 2.ª prueba <strong>${present.simP2}</strong> / ${EXAM_PASS_MIN_SIMULATIONS_PER_PART}</p>
+    </aside>`;
+}
+
 function renderExamReadiness() {
   const root = $("#exam-readiness-root");
   if (!root) return;
+  const userStats = loadUserStats();
   const { entries, activeEntries, highSecurity, readiness } = coachSnapshot();
   root.innerHTML = `
     <div class="exam-coach__head">
@@ -2738,6 +2769,7 @@ function renderExamReadiness() {
         <p>Simula cada prueba y usa el indicador para decidir si estás listo o si conviene cerrar errores antes.</p>
       </div>
     </div>
+    ${renderGlobalPresentVerdict(readiness, userStats)}
     <div class="exam-coach__metrics" aria-label="Resumen de preparación">
       <span><strong>${entries.length}</strong> pregunta(s) en cuaderno</span>
       <span><strong>${activeEntries.length}</strong> error(es) pendiente(s)</span>
@@ -2896,7 +2928,7 @@ function renderQuizPracticeGuide() {
       <div>
         <h2>${escapeHtml(title)}</h2>
         <p><strong>Practicar</strong> es para entrenar, no para perderse entre opciones: test → explicación → refuerzo en Temario → repetición.</p>
-        <p class="muted">Banco: ${allQuestions.length} preguntas (${BANCO_STATS.withFigure ?? 0} con figura). Ámbito: examen y autorización de radioaficionado (Ministerio). Sin Tráfico ni material TETRA/EA3RCQ.</p>
+        <p class="muted">Estudio: <strong>${studyQuestions.length}</strong> preguntas con explicación (${BANCO_ESTUDIO_STATS.withPedagogicalExplain ?? "?"} didácticas, ${BANCO_ESTUDIO_STATS.withFigure ?? 0} con figura). Simulacro examen: <strong>${examQuestions.length}</strong> preguntas curadas. Sin Tráfico ni TETRA.</p>
         ${
           trapOnly
             ? `<p><strong>Modo preguntas trampa activo:</strong> distractores típicos (${trapCount} con filtros actuales).</p>`

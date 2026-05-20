@@ -29,6 +29,7 @@ import {
   tierPassesCribado,
 } from "../lib/question-recency.mjs";
 import { pickDuplicateWinner } from "../lib/banco-dedupe.mjs";
+import { isExamAlignedSourceId } from "../lib/exam-aligned-sources.mjs";
 import { isOffTopicForRadioaficionadoExam } from "../lib/exam-scope.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -37,14 +38,17 @@ const OUT = path.join(ROOT, "data", "question-cribado.js");
 const REPORT = path.join(ROOT, "data", "cribado-report.txt");
 
 const args = process.argv.slice(2);
+const examOnly = args.includes("--examen");
 const mode = args.includes("--estricto")
   ? "estricto"
   : args.includes("--normal")
     ? "normal"
-    : "ampliado";
+    : examOnly
+      ? "normal"
+      : "ampliado";
 const writeReport = args.includes("--report");
 
-const all = [
+const allRaw = [
   ...questions,
   ...propias,
   ...ure,
@@ -54,6 +58,7 @@ const all = [
   ...fediBloques,
   ...quijotes,
 ];
+const all = examOnly ? allRaw.filter((q) => q?.id && isExamAlignedSourceId(q.id)) : allRaw;
 
 const tierCounts = { A: 0, B: 0, C: 0 };
 const sourceCounts = new Map();
@@ -117,13 +122,15 @@ const lines = [];
 lines.push("/**");
 lines.push(" * Cribado por antigüedad de fuente (generado por `node scripts/cribado-recencia.mjs`).");
 lines.push(
-  ` * Modo al generar: ${
-    mode === "estricto"
-      ? "estricto (solo tier A)"
-      : mode === "normal"
-        ? "normal (tier A + B)"
-        : "ampliado (tier A + B + C, banco ≥900)"
-  }.`,
+  examOnly
+    ? " * Modo: examen (--examen): solo fuentes oficiales (ofic, FEDI examen, URE, Quijotes 84, q*)."
+    : ` * Modo al generar: ${
+        mode === "estricto"
+          ? "estricto (solo tier A)"
+          : mode === "normal"
+            ? "normal (tier A + B)"
+            : "ampliado (tier A + B + C, banco ≥900)"
+      }.`,
 );
 lines.push(` * Generado: ${new Date().toISOString().slice(0, 10)}`);
 lines.push(" *");

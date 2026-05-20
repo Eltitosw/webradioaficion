@@ -1394,6 +1394,53 @@ html.a11y-reduce-motion .opt:active {
   }
 }
 
+.present-verdict {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.present-verdict--ok {
+  border-color: rgba(46, 184, 122, 0.55);
+  background: rgba(46, 184, 122, 0.1);
+}
+
+.present-verdict--warn {
+  border-color: rgba(228, 168, 42, 0.5);
+  background: rgba(228, 168, 42, 0.08);
+}
+
+.present-verdict--work {
+  border-color: rgba(224, 112, 118, 0.4);
+  background: rgba(224, 112, 118, 0.06);
+}
+
+.present-verdict__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.present-verdict__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.present-verdict__text {
+  margin: 0 0 0.5rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.present-verdict__meta {
+  margin: 0;
+  font-size: 0.86rem;
+}
+
 .exam-ready {
   padding: 0.8rem 0.9rem;
   border-radius: var(--radius-sm);

@@ -1,0 +1,109 @@
+=== AUDITORÍA PROFUNDA ===
+Preguntas: 522
+Drift almacenado≠clasificador: 0
+Prohibidas en su tema (forbid): 0
+Sin señal del tema (weak, puede ser basura): 91
+Fuera examen pero en banco: 0
+Pools 30 con sospechosas: 41
+
+
+--- POOLS PRACTICAR (30) con sospechosas ---
+
+electricidad-basica (3/30):
+  ure-p1-q254: La lectura “10 dBµV”, es un valor de:
+  fedi-ag-018: En una instalación eléctrica, el "factor de potencia" o coseno φ es:
+  ure-p1-q241: Un dieléctrico es:
+
+magnetismo-ondas (4/30):
+  ure-p1-q482: Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:
+  quijotes-84-1963: ¿Qué se entiende por emisiones no deseadas?:
+  ure-p1-q63: El ancho de banda ocupado es:
+  quijotes-84-2060: Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las d
+
+componentes (5/30):
+  ure-p1-q24: Un amperio es la intensidad de corriente que corresponde al paso por un conductor, du
+  fedi-ag-001: En la teoría de electricidad, un ohmio equivale a:
+  ure-p1-q304: Un Kiloohmio equivale a:
+  ure-p1-q477: El producto de 13 voltios por 1 amperio son:
+  ofic-036: En resonancia de un circuito serie LC ideal, la reactancia capacitiva y la inductiva:
+
+receptores-emisores (6/30):
+  ure-p1-q368: En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow B
+  ure-p1-q427: ¿Qué símbolo va asociado a la modulación de frecuencia en fonía?:
+  ofic-025: Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida t
+  ure-p2-q119: La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de 
+  ure-p1-q71: El índice de modulación caracteriza a:
+  ure-p1-q131: Modulación de señales radioeléctricas:
+
+marco-normativo (18/30):
+  quijotes-84-1822: Las transmisiones entre estaciones de radioaficionados deberá limitarse a:
+  quijotes-84-1862: Los planes de banda de la IARU para la Región 1 deben ser tenidos en cuenta:
+  ure-p2-q157: Para la instalación y funcionamiento de una estación de aficionado, es necesario obte
+  quijotes-84-2094: Al realizar las emisiones desde estaciones de radioaficionados:
+  ure-p2-q332: Los planes de bandas de la IARU para la Región 1 deben ser tenidos en cuenta:
+  ure-p2-q391: Se puede interferir deliberadamente a otra estación de radioaficionado:
+  ure-p2-q525: Si un radioaficionado no es titular de la estación que está utilizando:
+  ure-p2-q169: Toda estación colectiva fija de aficionado destinada a realizar estudios de propagaci
+  ure-p2-q466: Se entiende por estación digital de aficionado, la estación:
+  ure-p2-q47: Una estación fija de radioaficionado:
+  ure-p2-q354: El montaje del sistema radiante una estación fija de radioaficionado será realizado:
+  ure-p2-q171: ¿Definiría "estación automática desatendida" como?:
+  ure-p2-q454: Las Estaciones Repetidoras y Radiobalizas, deberán disponer de un sistema de alimenta
+  ure-p2-q40: ¿Qué regula la Ley 19/1983, en lo relativo a las antenas de las estaciones de radioaf
+  ure-p2-q34: Una emisión de radioaficionado:
+  ure-p2-q220: Una estación portable de aficionado:
+  ure-p2-q291: ¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendi
+  ure-p2-q459: La utilización de una estación de aficionado se debe ajustar a una serie de normas, e
+
+operacion-seguridad (4/30):
+  ure-p2-q100: La señal de urgencia en radiotelefonía consiste en la transmisión, repetida tres vece
+  ure-p2-q448: La señal de seguridad en radiotelefonía se compone:
+  ure-p2-q516: La señal de urgencia en radiotelefonía se compone:
+  ure-p2-q27: ¿Qué abreviatura indica que el operador sufre una interferencia?:
+
+instalaciones (1/30):
+  ure-p2-q517: La instalación, en el exterior de los edificios, del sistema radiante de una estación
+
+--- SIN SEÑAL DEL TEMA (91, muestra 40) ---
+Por tema:
+{"componentes":7,"electricidad-basica":3,"marco-normativo":52,"receptores-emisores":14,"magnetismo-ondas":6,"operacion-seguridad":4,"licencias-indicativos":4,"instalaciones":1}
+fedi-ag-001	componentes	A	En la teoría de electricidad, un ohmio equivale a:
+fedi-ag-018	electricidad-basica	A	En una instalación eléctrica, el "factor de potencia" o coseno φ es:
+fedi-ah-035	marco-normativo	A	¿Quién puede hacer uso de una estación de aficionado?
+fedi-ah-037	marco-normativo	A	Las estaciones radioeléctricas de aficionado quedan sometidas a la inspección de Telecomun
+fedi-ah-053	marco-normativo	A	Las transmisiones entre estaciones de radioaficionados deberán limitarse a:
+fedi-ah-056	marco-normativo	A	La colaboración de los radioaficionados con servicios de emergencia en catástrofes:
+ofic-023	marco-normativo	A	Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado 
+ofic-025	receptores-emisores	A	Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida técnic
+ofic-027	marco-normativo	A	Los planes de banda de la IARU deben entenderse principalmente como:
+ofic-036	componentes	A	En resonancia de un circuito serie LC ideal, la reactancia capacitiva y la inductiva:
+ofic-046	marco-normativo	A	En tráfico de radioaficionado, la abreviatura «CL» suele significar:
+quijotes-84-1822	marco-normativo	A	Las transmisiones entre estaciones de radioaficionados deberá limitarse a:
+quijotes-84-1862	marco-normativo	A	Los planes de banda de la IARU para la Región 1 deben ser tenidos en cuenta:
+quijotes-84-1906	marco-normativo	A	Según la normativa vigente:
+quijotes-84-1925	marco-normativo	A	Como norma general las instalaciones en una estación de radioaficionado deberán ser efectu
+quijotes-84-1963	magnetismo-ondas	A	¿Qué se entiende por emisiones no deseadas?:
+quijotes-84-2025	marco-normativo	A	El radioaficionado está obligado a comunicar, fehacientemente, su intención de continuar u
+quijotes-84-2060	magnetismo-ondas	A	Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomi
+quijotes-84-2094	marco-normativo	A	Al realizar las emisiones desde estaciones de radioaficionados:
+quijotes-84-2210	marco-normativo	A	En España, los Planes de Banda utilizados por los radioaficionados:
+quijotes-84-2214	magnetismo-ondas	A	En la banda de radioaficionado de 40 metros, el modo de emisión que normalmente se utiliza
+ure-p1-q122	marco-normativo	A	Para tratar de minimizar la producción de interferencias con una estación de radioaficiona
+ure-p1-q124	magnetismo-ondas	A	La unidad dBm corresponde a la magnitud:
+ure-p1-q129	receptores-emisores	A	La siguiente gráfica de espectro a la salida de un trasmisor corresponde a una señal con m
+ure-p1-q131	receptores-emisores	A	Modulación de señales radioeléctricas:
+ure-p1-q15	receptores-emisores	A	Existen varias clases de amplificadores, A, B, AB y C:
+ure-p1-q199	receptores-emisores	A	Los armónicos son:
+ure-p1-q24	componentes	A	Un amperio es la intensidad de corriente que corresponde al paso por un conductor, durante
+ure-p1-q241	electricidad-basica	A	Un dieléctrico es:
+ure-p1-q250	componentes	A	A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igu
+ure-p1-q254	electricidad-basica	A	La lectura “10 dBµV”, es un valor de:
+ure-p1-q304	componentes	A	Un Kiloohmio equivale a:
+ure-p1-q319	receptores-emisores	A	Decimos que hay sobremodulación, cuando:
+ure-p1-q368	receptores-emisores	A	En los equipos de radioaficionado, el modo de modulación conocido como NBFM (Narrow Band F
+ure-p1-q370	receptores-emisores	A	¿Qué clase de amplificador reproduce la señal de entrada con la mínima distorsión?:
+ure-p1-q382	receptores-emisores	A	Las interferencias son más frecuentes empleando:
+ure-p1-q417	componentes	A	El amperímetro se debe conectar:
+ure-p1-q427	receptores-emisores	A	¿Qué símbolo va asociado a la modulación de frecuencia en fonía?:
+ure-p1-q475	receptores-emisores	A	La radiodifusión sonora con Modulación de Frecuencia (FM), ¿qué banda de frecuencias utili
+ure-p1-q477	componentes	A	El producto de 13 voltios por 1 amperio son:

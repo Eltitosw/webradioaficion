@@ -1419,8 +1419,8 @@ export default [
   },
   {
     id: "fedi-a-120",
-    part: 1,
-    topicId: "electricidad-basica",
+    part: 2,
+    topicId: "operacion-seguridad",
     stem: "LA SEÑAL RADIOTELEGRÁFlCA DE SOCORRO CONSISTE EN:",
     options: [
       "La palabra Mayday",
@@ -2497,8 +2497,8 @@ export default [
   },
   {
     id: "fedi-b-181",
-    part: 1,
-    topicId: "electricidad-basica",
+    part: 2,
+    topicId: "operacion-seguridad",
     stem: "Señal internacional de socorro en telefonía:",
     options: [
       "SECURITE",
@@ -2988,7 +2988,7 @@ export default [
   {
     id: "fedi-b-220",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "EL CONTROL AUTOMÁTICO DE GANANCIA:",
     options: [
       "Sirve para mantener constante el nivel de salida del receptor, cuando varía la frecuencia de la señal recibida",
@@ -4164,7 +4164,7 @@ export default [
   {
     id: "fedi-c-345",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "EL CONMUTADOR \"VOX-MAN\" EN POSICIÓN MAN:",
     options: [
       "Se conecta el conmutador transmisor-receptor del micrófono",
@@ -4178,7 +4178,7 @@ export default [
   {
     id: "fedi-c-346",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "EL CIRCUITO DE CONTROL AUTOMATICO DE GANANCIA TIENE UN MANDO DE GOBIERNO QUE AFECTA A:",
     options: [
       "Su capacidad de ganancia",
@@ -4738,7 +4738,7 @@ export default [
   {
     id: "fedi-c-391",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "El control automático de ganancia:",
     options: [
       "Tiende a mantener constante la fidelidad del receptor",
@@ -4808,7 +4808,7 @@ export default [
   {
     id: "fedi-c-396",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "En emisión el mando \"control de carga\" \"LOAD KNOB\" sirve para:",
     options: [
       "Ajustar la sección final a la antena",
@@ -5074,7 +5074,7 @@ export default [
   {
     id: "fedi-d-419",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "EL CONTROL AUTOMATICO DE GANANCIA:",
     options: [
       "Tiende a mantener constante la fidelidad del receptor",
@@ -5382,7 +5382,7 @@ export default [
   {
     id: "fedi-d-445",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "receptores-emisores",
     stem: "Cuando se pasa el modo de recepción de USB a LSB se cambia:",
     options: [
       "De recibir en A3 a A3j",
@@ -5662,7 +5662,7 @@ export default [
   {
     id: "fedi-d-466",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "antenas-prop",
     stem: "Las reflexiones lunares se hacen principalmente en:",
     options: [
       "Ondas decamétricas",
@@ -6166,7 +6166,7 @@ export default [
   {
     id: "fedi-d-514",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "magnetismo-ondas",
     stem: "LA GAMA DE FRECUENCIÁS COMPRENDIDA ENTRE 300 Y 3.000 MHz CORRESPONDE A LAS:",
     options: [
       "Ondas kilométricas",
@@ -6193,8 +6193,8 @@ export default [
   },
   {
     id: "fedi-d-516",
-    part: 1,
-    topicId: "electricidad-basica",
+    part: 2,
+    topicId: "operacion-seguridad",
     stem: "QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE A LA PREGUNTA: ¿SUFRE USTED INTERFERENCIA?",
     options: [
       "QRP",
@@ -6207,8 +6207,8 @@ export default [
   },
   {
     id: "fedi-d-517",
-    part: 1,
-    topicId: "magnetismo-ondas",
+    part: 2,
+    topicId: "operacion-seguridad",
     stem: "A QUE ABREVIATURA DEL CODIGO \"Q\" CORRESPONDE LA PREGUNTA: ¿TENGO OUE PASAR A TRANSMITIR EN OTRA FRECUENCIA?",
     options: [
       "QSV",
@@ -6278,7 +6278,7 @@ export default [
   {
     id: "fedi-d-525",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "LA SEÑAL RADIOTELEFONICA DE SOCORRO ESTA CONSTITUIDA POR:",
     options: [
       "MAYDAY (tres veces) - AQUI o DE distintivo de llamada (tres veces)",
@@ -9470,7 +9470,7 @@ export default [
   {
     id: "fedi-j-060",
     part: 2,
-    topicId: "marco-normativo",
+    topicId: "operacion-seguridad",
     stem: "La señal internacional de socorro en radiotelefonía es:",
     options: [
       "Help",

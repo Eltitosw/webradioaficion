@@ -1,0 +1,54 @@
+=== Auditoría URE Valencia (urevalencia.es/tests.php) ===
+Banco local: 481 preguntas · 481 enunciados únicos
+Muestra: 15 preguntas/tema · 10 temas
+
+Preguntas obtenidas:     52
+Nuevas (no en banco):    49
+Duplicadas exactas:      0
+Parafraseadas:           0
+Obsoletas:               3
+Con motivo incorrecta:   44
+Con página libro URE:    0
+Con fecha de examen:     0
+
+--- Muestra nuevas (primeras 20) ---
+  [I-1] En una instalación eléctrica, el llamado "factor de potencia" o "Coseno de &phi;" es:
+    Correcta: Un valor indicador del desfasaje entre la tensión y la corriente en un
+  [I-1] En una onda electromágnetica, ¿qué caracteriza su polarización?
+    Correcta: La dirección del campo eléctrico
+  [I-1] En una onda electromágnetica, ¿qué caracteriza su polarización?
+    Correcta: La dirección del campo eléctrico
+  [I-1] En una onda electromágnetica, ¿qué caracteriza su polarización?
+    Correcta: La dirección del campo eléctrico
+  [I-2] Un diodo LED se emplea para...
+    Correcta: Emitir luz cuando se polariza directamente
+  [I-2] ¿Qué es un diodo?
+    Correcta: Dispositivo que permite el paso de la corriente eléctrica en un sólo s
+  [I-2] ¿Qué es un diodo?
+    Correcta: Dispositivo que permite el paso de la corriente eléctrica en un sólo s
+  [I-2] ¿Qué es un diodo?
+    Correcta: Dispositivo que permite el paso de la corriente eléctrica en un sólo s
+  [I-2] ¿Qué es un diodo?
+    Correcta: Dispositivo que permite el paso de la corriente eléctrica en un sólo s
+  [I-3] A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igu
+    Correcta: Inversamente proporcional al producto de la inductancia de la bobina p
+  [I-3] El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de reson
+    Correcta: Q=f/B
+  [I-3] El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de reson
+    Correcta: Q=f/B
+  [I-3] El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de reson
+    Correcta: Q=f/B
+  [I-3] El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de reson
+    Correcta: Q=f/B
+  [I-3] El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de reson
+    Correcta: Q=f/B
+  [I-3] El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de reson
+    Correcta: Q=f/B
+  [I-4] En un circuito electrónico, un transistor no se puede emplear como:
+    Correcta: Balun.
+  [I-4] La "desensibilización o bloqueo" de un receptor puede producirse por:
+    Correcta: Excesivo nivel de señal en la antena.
+  [I-4] La "desensibilización o bloqueo" de un receptor puede producirse por:
+    Correcta: Excesivo nivel de señal en la antena.
+  [I-4] La "desensibilización o bloqueo" de un receptor puede producirse por:
+    Correcta: Excesivo nivel de señal en la antena.

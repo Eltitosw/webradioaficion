@@ -1,0 +1,354 @@
+{
+  "totals": {
+    "fetched": 1078,
+    "already_fedi_local": 914,
+    "differs_from_local_fedi": 57,
+    "dup_other_fedi": 18,
+    "dup_banco": 19,
+    "dup_paraphrase": 0,
+    "usable_new": 7,
+    "obsolete": 13,
+    "needs_figure": 49,
+    "off_topic": 1,
+    "no_answer": 0,
+    "errors": 0
+  },
+  "usableNew": [
+    {
+      "id": "feracat-a-001",
+      "part": 1,
+      "stem": "Cuando se habla del colector nos referimos a:",
+      "bloque": "a",
+      "num": "001"
+    },
+    {
+      "id": "feracat-b-157",
+      "part": 1,
+      "stem": "Una pila eléctrica proporciona energía eléctrica a costa de consumir energía:",
+      "bloque": "b",
+      "num": "157"
+    },
+    {
+      "id": "feracat-b-239",
+      "part": 1,
+      "stem": "LAS ESTACIONES DE AFICIONADO QUEDAN SOMETIDAS A LA INSPECCIÓN DE:",
+      "bloque": "b",
+      "num": "239"
+    },
+    {
+      "id": "feracat-c-331",
+      "part": 2,
+      "stem": "DURANTE SUS EMISIONES ¿CUANDO DEBEN DE TRANSMITIR SUS DISTINTIVOS DE LLAMADA LAS ESTACIONES DE AFICIONADOS?",
+      "bloque": "c",
+      "num": "331"
+    },
+    {
+      "id": "feracat-d-401",
+      "part": 1,
+      "stem": "LA RESISTENCIA eléctrica DE UN CUERPO ES DIRECTAMENTE PROPORCIONAL A LAS DOS MAGNITUDES SIGUIENTES:",
+      "bloque": "d",
+      "num": "401"
+    },
+    {
+      "id": "feracat-s-001",
+      "part": 1,
+      "stem": "En un sistema de radiocomunicación, el llamado \"ruido blanco\":",
+      "bloque": "s",
+      "num": "001"
+    },
+    {
+      "id": "feracat-aa-001",
+      "part": 1,
+      "stem": "Cuando la impedancia de la antena, de la línea de transmisión y de salida del emisor, coinciden:",
+      "bloque": "aa",
+      "num": "001"
+    }
+  ],
+  "differs": [
+    {
+      "id": "fedi-a-074",
+      "feracatStem": "Las estaciones de aficionado quedan sometidas a la inspección de:",
+      "localStem": "Las estaciones de aficionado quedan sometidas a la inspección de:"
+    },
+    {
+      "id": "fedi-b-248",
+      "feracatStem": "CUANDO EL MODO DE EMISIÓN ESTA EN LA POSICIÓN “CW” SE PUEDE TRABAJAR EN:",
+      "localStem": "CUANDO EL MODO DE EMISIÓN ESTA EN LA POSICIÓN CW SE PUEDE TRABAJAR EN:"
+    },
+    {
+      "id": "fedi-b-288",
+      "feracatStem": "PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓ",
+      "localStem": "PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓ"
+    },
+    {
+      "id": "fedi-d-431",
+      "feracatStem": "Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:",
+      "localStem": "Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:"
+    },
+    {
+      "id": "fedi-d-563",
+      "feracatStem": "NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODI",
+      "localStem": "NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODI"
+    },
+    {
+      "id": "fedi-d-573",
+      "feracatStem": "¿SE PUEDEN INTRODUCIR MODIFICACIONES DE SISTEMA RADIANTE DE UNA ESTACION DE AFICIONADO?",
+      "localStem": "¿SE PUEDEN INTRODUCIR MODIFICACIONES DE SISTEMA RADIANTE DE UNA ESTACION DE AFICIONADO?"
+    },
+    {
+      "id": "fedi-d-574",
+      "feracatStem": "¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A LA DIRECCION GEN",
+      "localStem": "¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A la Administració"
+    },
+    {
+      "id": "fedi-e-011",
+      "feracatStem": "La energía almacenada en un condensador C se expresa por la fórmula:",
+      "localStem": "La energía almacenada en un condensador C se expresa por la fórmula:"
+    },
+    {
+      "id": "fedi-f-042",
+      "feracatStem": "Según la Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones, retrasar injustificadamente ",
+      "localStem": "Según la Ley 11/2022, de 28 de junio, General de Telecomunicaciones (BOE-A-2022-10757), retrasar inj"
+    },
+    {
+      "id": "fedi-h-044",
+      "feracatStem": "Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por o",
+      "localStem": "Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por o"
+    },
+    {
+      "id": "fedi-h-060",
+      "feracatStem": "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas ",
+      "localStem": "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas "
+    },
+    {
+      "id": "fedi-n-043",
+      "feracatStem": "La Dirección General de Telecomunicaciones debe informar al presidente de la comunidad de propietari",
+      "localStem": "La Administración competente en espectro radioeléctrico debe informar al presidente de la comunidad "
+    },
+    {
+      "id": "fedi-n-052",
+      "feracatStem": "¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:",
+      "localStem": "¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo t"
+    },
+    {
+      "id": "fedi-n-053",
+      "feracatStem": "En caso de cancelación de la Licencia de Estación de Aficionado. ¿Puede su titular mantener instalad",
+      "localStem": "En caso de cancelación de la Licencia de Estación de Aficionado. ¿Puede su titular mantener instalad"
+    },
+    {
+      "id": "fedi-p-053",
+      "feracatStem": "El cambio de ubicación de una antena:",
+      "localStem": "El cambio de ubicación de una antena:"
+    },
+    {
+      "id": "fedi-p-054",
+      "feracatStem": "La Ley 19/1983, conocida como Ley de Antenas, regula:",
+      "localStem": "La Ley 19/1983, conocida como Ley de Antenas, regula:"
+    },
+    {
+      "id": "fedi-t-038",
+      "feracatStem": "Los Planes de Banda:",
+      "localStem": "Los Planes de Banda:"
+    },
+    {
+      "id": "fedi-x-055",
+      "feracatStem": "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
+      "localStem": "Un radioaficionado podrá ser autorizado a instalar un repetidor:"
+    },
+    {
+      "id": "fedi-ab-034",
+      "feracatStem": "¿Qué identifica a un radioaficionado titular de una autorización?:",
+      "localStem": "¿Qué identifica a un radioaficionado titular de una autorización?:"
+    },
+    {
+      "id": "fedi-ab-053",
+      "feracatStem": "¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:",
+      "localStem": "¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:"
+    },
+    {
+      "id": "fedi-ag-002",
+      "feracatStem": "Colocamos 3 Condensadores en paralelo, si el valor individual de 2 de ellos es 100 pF, y el valor to",
+      "localStem": "Colocamos 3 condensadores en paralelo; si el valor individual de 2 de ellos es 100 pF y el valor tot"
+    },
+    {
+      "id": "fedi-ag-003",
+      "feracatStem": "El llamado \"detector de envolvente\" es implementado en receptores para señales con modulación de:",
+      "localStem": "El llamado \"detector de envolvente\" se implementa en receptores para señales con modulación de:"
+    },
+    {
+      "id": "fedi-ag-006",
+      "feracatStem": "En la realización de medidas, usando un polímetro, indique la respuesta correcta:",
+      "localStem": "En la realización de medidas usando un polímetro, indique la respuesta correcta:"
+    },
+    {
+      "id": "fedi-ag-007",
+      "feracatStem": "El ancho de banda necesario de un transmisor es:",
+      "localStem": "El ancho de banda necesario de un transmisor es:"
+    },
+    {
+      "id": "fedi-ag-015",
+      "feracatStem": "La potencia suministrada a la línea de alimentación de la antena, por un transmisor, durante un cicl",
+      "localStem": "La potencia suministrada a la línea de alimentación de la antena por un transmisor, durante un ciclo"
+    },
+    {
+      "id": "fedi-ag-017",
+      "feracatStem": "Cuando dos o más señales atraviesan simultáneamente un sistema no lineal, existe el riesgo de que se",
+      "localStem": "Cuando dos o más señales atraviesan simultáneamente un sistema no lineal, existe el riesgo de que se"
+    },
+    {
+      "id": "fedi-ag-018",
+      "feracatStem": "En una instalación eléctrica, el llamado \"factor de potencia\" o \"Coseno de &phi;\" es:",
+      "localStem": "En una instalación eléctrica, el \"factor de potencia\" o coseno φ es:"
+    },
+    {
+      "id": "fedi-ag-019",
+      "feracatStem": "En general los diodos se caracterizan por ser dispositivos que:",
+      "localStem": "En general los diodos se caracterizan por ser dispositivos que:"
+    },
+    {
+      "id": "fedi-ag-021",
+      "feracatStem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "localStem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:"
+    },
+    {
+      "id": "fedi-ag-022",
+      "feracatStem": "El valor y tolerancia de las resistencias más habituales se indica mediante un código de colores. In",
+      "localStem": "Indique el valor de la resistencia cuyos colores son, en este orden: violeta, verde, rojo, oro:"
+    },
+    {
+      "id": "fedi-ag-026",
+      "feracatStem": "La radiación armónica es:",
+      "localStem": "La radiación armónica es:"
+    },
+    {
+      "id": "fedi-ag-029",
+      "feracatStem": "¿Cómo se puede eliminar una interferencia generada por la fuente de alimentación de un transmisor?",
+      "localStem": "¿Cómo se puede eliminar una interferencia generada por la fuente de alimentación de un transmisor?"
+    },
+    {
+      "id": "fedi-ag-030",
+      "feracatStem": "En función de la actividad solar, la capa de la atmósfera responsable de las variaciones de propagac",
+      "localStem": "La capa de la atmósfera responsable de las variaciones de propagación en HF (<30 MHz) según activida"
+    },
+    {
+      "id": "fedi-ah-032",
+      "feracatStem": "Los distintivos de llamada con sufijos de una letra:",
+      "localStem": "Los distintivos de llamada con sufijos de una letra:"
+    },
+    {
+      "id": "fedi-ah-033",
+      "feracatStem": "El código Q:",
+      "localStem": "El código Q:"
+    },
+    {
+      "id": "fedi-ah-036",
+      "feracatStem": "¿Con que anticipación a la fecha prevista para el comienzo de las emisiones, se deberá solicitar una",
+      "localStem": "¿Con qué anticipación a la fecha prevista para el comienzo de las emisiones se deberá solicitar una "
+    },
+    {
+      "id": "fedi-ah-037",
+      "feracatStem": "Las estaciones radioeléctricas de aficionado quedan sometidas a la inspección de Telecomunicaciones:",
+      "localStem": "Las estaciones radioeléctricas de aficionado quedan sometidas a la inspección de Telecomunicaciones:"
+    },
+    {
+      "id": "fedi-ah-038",
+      "feracatStem": "El Alfabeto fonético internacional:",
+      "localStem": "El alfabeto fonético internacional:"
+    },
+    {
+      "id": "fedi-ah-039",
+      "feracatStem": "Cual de estas provincias pertenece al distrito 7:",
+      "localStem": "¿Cuál de estas provincias pertenece al distrito 7?"
+    },
+    {
+      "id": "fedi-ah-040",
+      "feracatStem": "Como norma general, y salvo circunstancias especiales debidamente motivadas, las estaciones automáti",
+      "localStem": "Salvo circunstancias especiales debidamente motivadas, las estaciones automáticas desatendidas en VH"
+    },
+    {
+      "id": "fedi-ah-042",
+      "feracatStem": "El deletreo del distintivo AN6BL según el alfabeto fonético internacional:",
+      "localStem": "El deletreo del distintivo AN6BL según el alfabeto fonético internacional:"
+    },
+    {
+      "id": "fedi-ah-043",
+      "feracatStem": "La autorización especial de emisiones se otorgará por el periodo que duren las pruebas y, en cualqui",
+      "localStem": "La autorización especial de emisiones se otorgará por el periodo que duren las pruebas y, como máxim"
+    },
+    {
+      "id": "fedi-ah-044",
+      "feracatStem": "Una emisión de estación de aficionado debe identificarse con un distintivo:",
+      "localStem": "Una emisión de estación de aficionado debe identificarse con un distintivo:"
+    },
+    {
+      "id": "fedi-ah-045",
+      "feracatStem": "La autorización de radioaficionado habilita a su titular para:",
+      "localStem": "La autorización de radioaficionado habilita a su titular para:"
+    },
+    {
+      "id": "fedi-ah-046",
+      "feracatStem": "El significado de la abreviatura PSE es:",
+      "localStem": "El significado de la abreviatura PSE es:"
+    },
+    {
+      "id": "fedi-ah-047",
+      "feracatStem": "En la licencia de estación de radioaficionado CEPT habrá de constar necesariamente una determinada i",
+      "localStem": "En la licencia CEPT debe constar cierta información. Indique la respuesta incorrecta:"
+    },
+    {
+      "id": "fedi-ah-049",
+      "feracatStem": "Un radioaficionado español que traslade su residencia a un país que aplica la Recomendación de la CE",
+      "localStem": "Un radioaficionado español que traslade su residencia a un país con T/R 61-02 podrá obtener licencia"
+    },
+    {
+      "id": "fedi-ah-050",
+      "feracatStem": "La señal de socorro en radiotelefonía es:",
+      "localStem": "La señal de socorro en radiotelefonía es:"
+    },
+    {
+      "id": "fedi-ah-051",
+      "feracatStem": "Qué sufijo puede asignarse a una autorización de radioaficionado:",
+      "localStem": "¿Qué sufijo puede asignarse a una autorización de radioaficionado?"
+    },
+    {
+      "id": "fedi-ah-052",
+      "feracatStem": "El contrato de seguro que cubre la responsabilidad del radioaficionado titular de una licencia de es",
+      "localStem": "El contrato de seguro que cubre la responsabilidad del titular de una licencia de estación:"
+    },
+    {
+      "id": "fedi-ah-053",
+      "feracatStem": "Las transmisiones entre estaciones de radioaficionados deberá limitarse a:",
+      "localStem": "Las transmisiones entre estaciones de radioaficionados deberán limitarse a:"
+    },
+    {
+      "id": "fedi-ah-054",
+      "feracatStem": "Los planes de banda de la IARU:",
+      "localStem": "Los planes de banda de la IARU:"
+    },
+    {
+      "id": "fedi-ah-055",
+      "feracatStem": "Según la nomenclatura de las bandas de frecuencias, el símbolo MF corresponde a:",
+      "localStem": "Según la nomenclatura de bandas, el símbolo MF corresponde a:"
+    },
+    {
+      "id": "fedi-ah-056",
+      "feracatStem": "La colaboración de los radioaficionados con los servicios de emergencia en caso de catástrofes:",
+      "localStem": "La colaboración de los radioaficionados con servicios de emergencia en catástrofes:"
+    },
+    {
+      "id": "fedi-ah-057",
+      "feracatStem": "¿Con qué potencia máxima de portadora se puede emitir en la banda de frecuencias 50.0-51-0 MHz, de a",
+      "localStem": "¿Con qué potencia máxima de portadora se puede emitir en la banda de frecuencias 50,0–51,0 MHz, de a"
+    },
+    {
+      "id": "fedi-ah-059",
+      "feracatStem": "De acuerdo con el Artículo 25 del Reglamento de Radiocomunicaciones de la UIT las comunicaciones por",
+      "localStem": "Según el artículo 25 del Reglamento de Radiocomunicaciones de la UIT, las comunicaciones entre afici"
+    },
+    {
+      "id": "fedi-ah-060",
+      "feracatStem": "En el caso de que un titular de una autorización especial de emisiones produzca interferencias a otr",
+      "localStem": "Si una autorización especial de emisiones produce interferencias a radiodifusión o TV, deberá:"
+    }
+  ]
+}

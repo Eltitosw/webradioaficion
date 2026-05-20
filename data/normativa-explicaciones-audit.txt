@@ -1,0 +1,14 @@
+=== Auditoría normativa y explicaciones ===
+Fecha: 2026-05-20
+Banco: 522 preguntas
+
+--- Normativa ---
+Inaceptables (stem obsoleto o correcta antigua): 0
+Respuesta correcta obsoleta: 0
+
+--- Explicaciones ---
+No aceptables (estricto): 0
+Genéricas (fallback): 0
+Plantilla «Práctica URE» sin didáctica: 0
+Fidelidad: OK 522 · fallos 0
+

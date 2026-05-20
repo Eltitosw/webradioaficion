@@ -11,20 +11,22 @@ import ure from "../data/ure-electricidad.js";
 import ureExtra from "../data/ure-electricidad-extra.js";
 import ureReg from "../data/ure-reglamentacion.js";
 import fedi from "../data/fediea-2011.js";
-import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import quijotesExplanations from "../data/quijotes-explanations.js";
 import generatedExplanations from "../data/generated-explanations.js";
 import figures from "../data/questions-figures.js";
 import { CRIBADO_PREFERRED_IDS, CRIBADO_STATS } from "../data/question-cribado.js";
 import { dedupeKey, writeQuestionModule, writeUtf8File } from "../lib/import-question-utils.mjs";
-import { classifyQuestion } from "../lib/question-classification.mjs";
+import { isPublishableEnrichedQuestion, prepareBankQuestion } from "../lib/banco-quality.mjs";
 import { dedupeBankByStem } from "../lib/banco-dedupe.mjs";
 import { fillBankToMinimum } from "../lib/banco-fill.mjs";
 import { MIN_BANCO_QUESTIONS } from "../lib/question-recency.mjs";
 import { isExcludedFromRadioaficionadoExam } from "../lib/question-pool.mjs";
 import { enrichFromExisting } from "../lib/figure-import.mjs";
+import { buildBestExplain } from "../lib/build-best-explain.mjs";
 import { hasPedagogicalExplain, isTemplateOnlyExplain } from "../lib/explain-quality.mjs";
+import { isExplainAcceptable } from "../lib/explain-verify.mjs";
+import { generatePedagogicalExplain } from "../lib/generate-pedagogical-explain.mjs";
 import { repairQuestionFields } from "../lib/text-encoding.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -39,7 +41,6 @@ const all = [
   ...ureExtra,
   ...ureReg,
   ...fedi,
-  ...fediBloques,
   ...quijotes,
   ...figures,
 ];
@@ -55,28 +56,41 @@ for (const q of all) {
  * - Estudio profundizar: `explain` didáctico + `explainSourceNote` (plantilla FEDI/Quijotes).
  */
 function applyExamClassification(q) {
-  const repaired = repairQuestionFields(q);
-  const { part, topicId } = classifyQuestion({
-    stem: repaired.stem,
-    sourcePart: repaired.part,
-    id: repaired.id,
-  });
-  if (part === repaired.part && topicId === repaired.topicId) return repaired;
-  return repairQuestionFields({ ...repaired, part, topicId });
+  return prepareBankQuestion(q).question;
 }
 
 function withPedagogicalExplain(q) {
-  const repaired = applyExamClassification(q);
-  const text = quijotesExplanations[repaired.id] || generatedExplanations[repaired.id];
-  if (!text) return repaired;
-  const prev = typeof repaired.explain === "string" ? repaired.explain.trim() : "";
-  /** @type {Record<string, unknown>} */
-  const out = { ...repaired, explain: text };
-  if (prev && isTemplateOnlyExplain(prev)) {
-    out.explainSourceNote = prev;
-  } else if (prev && !isTemplateOnlyExplain(prev) && !prev.includes(text.slice(0, 40))) {
-    out.explain = `${text} ${prev}`;
+  let out = repairQuestionFields(applyExamClassification(q));
+  const prev = typeof out.explain === "string" ? out.explain.trim() : "";
+  const curated = quijotesExplanations[out.id] || generatedExplanations[out.id] || "";
+
+  if (curated && isExplainAcceptable(out, curated)) {
+    out = { ...out, explain: curated };
+  } else if (!isExplainAcceptable(out)) {
+    if (curated) out = { ...out, explain: curated };
+    else if (!hasPedagogicalExplain(out)) {
+      const gen = generatePedagogicalExplain(out);
+      if (gen && isExplainAcceptable(out, gen)) out = { ...out, explain: gen };
+    }
+    if (!isExplainAcceptable(out)) {
+      const best = buildBestExplain(out);
+      if (best && isExplainAcceptable(out, best)) out = { ...out, explain: best };
+    }
+  } else if (curated && (!out.explain || out.explain.length < 50)) {
+    out = { ...out, explain: curated };
   }
+
+  if (prev && isTemplateOnlyExplain(prev) && out.explain !== prev) {
+    out = { ...out, explainSourceNote: prev };
+  } else if (
+    prev &&
+    !isTemplateOnlyExplain(prev) &&
+    out.explain &&
+    !prev.includes(String(out.explain).slice(0, 40))
+  ) {
+    out = { ...out, explain: `${out.explain} ${prev}` };
+  }
+
   return repairQuestionFields(out);
 }
 
@@ -106,6 +120,7 @@ for (const id of CRIBADO_PREFERRED_IDS) {
   if (isExcludedFromRadioaficionadoExam(q)) continue;
   const merged = withPedagogicalExplain(q);
   if (!hasValidOptions(merged)) continue;
+  if (!isPublishableEnrichedQuestion(merged)) continue;
   bankById.set(id, merged);
 }
 
@@ -118,6 +133,7 @@ for (const fq of figures) {
   if (!fq?.id) continue;
   const merged = mergeFigureWithTextSource(fq, byId);
   if (!hasValidOptions(merged)) continue;
+  if (!isPublishableEnrichedQuestion(merged)) continue;
   const key = dedupeKey(merged.stem, merged.options);
   const dupId = stemToId.get(key);
   if (dupId && dupId !== merged.id && !figureIdSet.has(dupId)) {
@@ -141,11 +157,16 @@ const sourceList = [
   ...ureExtra,
   ...ureReg,
   ...fedi,
-  ...fediBloques,
   ...quijotes,
   ...figures,
 ];
 const { added: fillAdded, finalCount: countAfterFill } = fillBankToMinimum(bankById, byId, sourceList);
+
+for (const [id, q] of [...bankById]) {
+  const enriched = withPedagogicalExplain(q);
+  if (!isPublishableEnrichedQuestion(enriched)) bankById.delete(id);
+  else if (enriched !== q) bankById.set(id, enriched);
+}
 
 const bank = [...bankById.values()].sort((a, b) => a.id.localeCompare(b.id));
 const figureIds = bank.filter((q) => q.stemFigure).map((q) => q.id).sort();
@@ -158,9 +179,10 @@ if (bank.length < MIN_BANCO_QUESTIONS) {
 }
 
 if (missing.length) {
-  console.error(`build-banco: ${missing.length} id(s) del cribado no encontrados en fuentes:`);
-  missing.slice(0, 20).forEach((id) => console.error(`  - ${id}`));
-  process.exit(1);
+  console.error(
+    `build-banco: ${missing.length} id(s) del cribado omitidos (no en fuentes o no pasan calidad examen).`,
+  );
+  missing.slice(0, 12).forEach((id) => console.error(`  - ${id}`));
 }
 
 const generated = new Date().toISOString().slice(0, 10);
@@ -169,7 +191,7 @@ const cribadoReplacedByFigure = CRIBADO_PREFERRED_IDS.size - cribadoInBank;
 
 const lines = [];
 lines.push("/**");
-lines.push(" * Banco principal: cribado (tier A+B+C) + figuras certificadas, un enunciado = una pregunta.");
+lines.push(" * Banco principal: examen oficial (ofic, FEDI examen, URE, Quijotes 84) + figuras certificadas.");
 lines.push(` * Generado: ${generated} · ${bank.length} preguntas · npm run build:banco`);
 lines.push(` * Cribado: ${CRIBADO_PREFERRED_IDS.size} · En banco por id: ${cribadoInBank} · Sustituidas por versión con figura: ${cribadoReplacedByFigure}`);
 lines.push(

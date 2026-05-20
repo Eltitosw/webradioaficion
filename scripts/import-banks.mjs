@@ -10,7 +10,8 @@
  * Salida:
  *   data/fediea-bloques.js
  *   data/ure-reglamentacion.js
- *   data/ure-electricidad-extra.js  (preguntas URE parte 1 no duplicadas)
+ *   data/ure-electricidad.js  (pool completo parte 1, ids ure-p1-q{sourceId})
+ *   data/ure-electricidad-extra.js  (vacío; legado)
  */
 import path from "path";
 import { fileURLToPath } from "url";
@@ -18,23 +19,31 @@ import { fileURLToPath } from "url";
 import questions from "../data/questions.js";
 import propias from "../data/questions-examen-propias.js";
 import ure from "../data/ure-electricidad.js";
+import ureExtra from "../data/ure-electricidad-extra.js";
+import ureReg from "../data/ure-reglamentacion.js";
 import fediea2011 from "../data/fediea-2011.js";
 import fediBloquesExisting from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import { fetchFediBlock } from "../lib/parse-fedi-html.mjs";
-import { fetchUreQuizPage } from "../lib/parse-ure-quiz.mjs";
+import { fetchUreQuizPool } from "../lib/parse-ure-quiz.mjs";
 import {
   dedupeKey,
   classifyQuestion,
   stemNeedsFigure,
   writeQuestionModule,
 } from "../lib/import-question-utils.mjs";
+import { isTemplateOnlyExplain } from "../lib/explain-quality.mjs";
+import { isOffTopicForRadioaficionadoExam } from "../lib/exam-scope.mjs";
+import { hasObsoleteHint } from "../lib/question-recency.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
 const OUT_FEDI = path.join(ROOT, "data", "fediea-bloques.js");
+const OUT_URE_P1 = path.join(ROOT, "data", "ure-electricidad.js");
 const OUT_URE_P2 = path.join(ROOT, "data", "ure-reglamentacion.js");
 const OUT_URE_P1_EXTRA = path.join(ROOT, "data", "ure-electricidad-extra.js");
+
+const DEFAULT_URE_ROUNDS = 25;
 
 /** Bloques FEDI-EA (índice https://fediea.org/examen/ejercicios/) */
 const FEDI_BLOCKS = [
@@ -81,6 +90,10 @@ const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const doFedi = args.includes("--fedi") || (!args.includes("--ure") && !args.includes("--fedi"));
 const doUre = args.includes("--ure") || (!args.includes("--fedi") && !args.includes("--ure"));
+const ureRoundsArg = args.find((a) => a.startsWith("--ure-rounds="));
+const ureRounds = ureRoundsArg
+  ? Math.max(5, Math.min(50, Number.parseInt(ureRoundsArg.split("=")[1], 10) || DEFAULT_URE_ROUNDS))
+  : DEFAULT_URE_ROUNDS;
 
 function loadExistingKeys() {
   const all = [...questions, ...propias, ...ure, ...fediea2011, ...quijotes];
@@ -196,36 +209,97 @@ async function importFedi(seenIds) {
   return { out, stats };
 }
 
-async function importUre(seenKeys, seenIds) {
+/** Conserva explicaciones ya curadas al reimportar por id estable ure-p1-q{sourceId}. */
+function loadExistingUreByStem() {
+  /** @type {Map<string, { explain?: string; stemFigure?: string; stemFigureAlt?: string }>} */
+  const byStem = new Map();
+  for (const q of [...ure, ...ureExtra, ...ureReg]) {
+    if (!q?.stem) continue;
+    const key = dedupeKey(q.stem, q.options);
+    const prev = byStem.get(key);
+    const exp = typeof q.explain === "string" ? q.explain.trim() : "";
+    const keep =
+      exp && !isTemplateOnlyExplain(exp)
+        ? { explain: exp, stemFigure: q.stemFigure, stemFigureAlt: q.stemFigureAlt }
+        : prev;
+    if (keep) byStem.set(key, keep);
+  }
+  return byStem;
+}
+
+async function importUre() {
+  const byStem = loadExistingUreByStem();
+  /** @type {object[]} */
   const p1 = [];
+  /** @type {object[]} */
   const p2 = [];
-  const stats = { added: 0, duplicate: 0, duplicateId: 0, skippedFigure: 0, fetched: 0 };
+  const stats = {
+    rounds: ureRounds,
+    poolP1: 0,
+    poolP2: 0,
+    writtenP1: 0,
+    writtenP2: 0,
+    skippedFigure: 0,
+    keptExplain: 0,
+  };
 
   for (const page of URE_PAGES) {
-    process.stderr.write(`URE parte ${page.part}…\n`);
-    const items = await fetchUreQuizPage(page.url, page.part);
+    process.stderr.write(
+      `URE parte ${page.part} (${ureRounds} cargas aleatorias del pool)…\n`,
+    );
+    const pool = await fetchUreQuizPool(page.url, page.part, { rounds: ureRounds });
     const label = `Fuente: URE (${page.part === 1 ? "electricidad y radioelectricidad" : "reglamentación"}).`;
     const out = page.part === 1 ? p1 : p2;
-    const idPrefix = page.part === 1 ? "ure-p1x" : "ure-p2";
+    const idPrefix = page.part === 1 ? "ure-p1-q" : "ure-p2-q";
 
-    for (const q of items) {
-      stats.fetched += 1;
-      const numKey = String(q.index).padStart(2, "0");
-      tryAddQuestion({
+    if (page.part === 1) stats.poolP1 = pool.length;
+    else stats.poolP2 = pool.length;
+
+    for (const q of pool) {
+      const id = `${idPrefix}${q.sourceId}`;
+      const probe = { id, stem: q.stem, options: q.options };
+      if (isOffTopicForRadioaficionadoExam(probe)) {
+        stats.skippedOffTopic = (stats.skippedOffTopic || 0) + 1;
+        continue;
+      }
+      if (hasObsoleteHint(q.stem, q.options)) {
+        stats.skippedObsolete = (stats.skippedObsolete || 0) + 1;
+        continue;
+      }
+      if (stemNeedsFigure(q.stem) && !(q.imageUrls?.length > 0)) {
+        stats.skippedFigure += 1;
+        continue;
+      }
+      const classified = classifyQuestion({ stem: q.stem, sourcePart: page.part, id });
+      const key = dedupeKey(q.stem, q.options);
+      const prev = byStem.get(key);
+      const explain =
+        prev?.explain ||
+        `Práctica histórica (${label.replace(/\.$/, "")}). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente.`;
+      if (prev?.explain) stats.keptExplain += 1;
+
+      /** @type {Record<string, unknown>} */
+      const item = {
+        id,
+        part: classified.part,
+        topicId: classified.topicId,
         stem: q.stem,
         options: q.options,
         correctIndex: q.correctIndex,
-        part: page.part,
-        sourceLabel: label,
-        idPrefix,
-        numKey,
-        seenKeys,
-        seenIds,
-        out,
-        stats,
-      });
+        explain,
+      };
+      if (prev?.stemFigure) {
+        item.stemFigure = prev.stemFigure;
+        if (prev.stemFigureAlt) item.stemFigureAlt = prev.stemFigureAlt;
+      }
+      out.push(item);
     }
   }
+
+  p1.sort((a, b) => a.id.localeCompare(b.id));
+  p2.sort((a, b) => a.id.localeCompare(b.id));
+  stats.writtenP1 = p1.length;
+  stats.writtenP2 = p2.length;
   return { p1, p2, stats };
 }
 
@@ -250,23 +324,35 @@ async function main() {
   }
 
   if (doUre) {
-    const { p1, p2, stats } = await importUre(seenKeys, seenIds);
+    const { p1, p2, stats } = await importUre();
     report.ure = stats;
     process.stderr.write(
-      `URE: ${stats.added} nuevas, ${stats.duplicate} duplicadas, ${stats.skippedFigure} omitidas, ${stats.fetched} leídas.\n`,
+      `URE pool: P1=${stats.poolP1} P2=${stats.poolP2} (${stats.rounds} peticiones/URL). ` +
+        `Escritas: P1=${stats.writtenP1} P2=${stats.writtenP2}. ` +
+        `Figura pendiente: ${stats.skippedFigure}. Obsoletas: ${stats.skippedObsolete || 0}. Fuera examen: ${stats.skippedOffTopic || 0}. Explicaciones: ${stats.keptExplain}.\n` +
+        `Para pool+imágenes: npm run import:ure\n`,
     );
     if (!dryRun) {
       writeQuestionModule(
+        OUT_URE_P1,
+        "URE — electricidad y radioelectricidad (pool completo web).\n" +
+          "https://www.ure.es/examenes/electricidad-y-radioelectricidad/\n" +
+          "La web muestra 30 preguntas aleatorias por sesión; este archivo reúne el pool por id URE (ure-p1-q*).",
+        p1,
+      );
+      writeQuestionModule(
         OUT_URE_P2,
-        "URE — prueba de Reglamentación (web pública).\nhttps://www.ure.es/examenes/reglamentacion/",
+        "URE — prueba de Reglamentación (pool completo web).\nhttps://www.ure.es/examenes/reglamentacion/",
         p2,
       );
       writeQuestionModule(
         OUT_URE_P1_EXTRA,
-        "URE — electricidad y radioelectricidad adicionales (no presentes en ure-electricidad.js).\nhttps://www.ure.es/examenes/electricidad-y-radioelectricidad/",
-        p1,
+        "Legado: las preguntas URE parte 1 están en ure-electricidad.js (pool ure-p1-q*).",
+        [],
       );
-      process.stderr.write(`Escrito ${OUT_URE_P2} (${p2.length}), ${OUT_URE_P1_EXTRA} (${p1.length}).\n`);
+      process.stderr.write(
+        `Escrito ${OUT_URE_P1} (${p1.length}), ${OUT_URE_P2} (${p2.length}), extra vacío.\n`,
+      );
     }
   }
 

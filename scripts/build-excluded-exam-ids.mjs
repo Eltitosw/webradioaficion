@@ -14,6 +14,7 @@ import ureExtra from "../data/ure-electricidad-extra.js";
 import ureReg from "../data/ure-reglamentacion.js";
 import questions from "../data/questions.js";
 import { EXAM_OFFICIAL_URLS, isOffTopicForRadioaficionadoExam } from "../lib/exam-scope.mjs";
+import { isNormativelyUnacceptableQuestion } from "../lib/question-recency.mjs";
 
 const OUT = join(import.meta.dirname, "..", "data", "excluded-exam-ids.js");
 
@@ -31,6 +32,7 @@ const all = [
 const ids = [];
 for (const q of all) {
   if (isOffTopicForRadioaficionadoExam(q)) ids.push(q.id);
+  else if (isNormativelyUnacceptableQuestion(q)) ids.push(q.id);
 }
 ids.sort();
 

@@ -1,0 +1,22 @@
+=== Auditoría: proyecto listo para preparar el apto ===
+Fecha: 2026-05-20
+
+  ✓ Banco 522 preguntas (mín. 400)
+  ✓ Equilibrio partes: P1=269, P2=253
+  ✓ Con figura: 110 (110)
+  ✓ Enunciados que piden figura sin imagen: 0 (tolerancia ≤8)
+  ✓ Tema electricidad-basica: 17 preguntas
+  ✓ Tema instalaciones: 11 preguntas
+
+Simulador (comprobar en app):
+  · Examen tipo test: 30 preguntas, 30 min, APTO ≥15/30 por prueba
+  · Indicador global en pestaña Examen
+  · Cuaderno + repaso inteligente
+
+Estudio recomendado (ver RUTA_AL_APTO.md):
+  1. Temario → Practicar por bloque
+  2. Cuaderno de falladas
+  3. ≥2 simulacros aptos por prueba
+  4. Revisar convocatoria oficial antes de inscribirse
+
+RESULTADO: Proyecto APTO para su cometido (preparación examen).

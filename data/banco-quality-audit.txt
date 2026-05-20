@@ -1,0 +1,8 @@
+=== Auditoría calidad banco (examen radioaficionado) ===
+Fecha: 2026-05-20
+Preguntas activas: 522
+Errores: 0 · Avisos: 0
+Tier C (histórico FEDI bloques): 0 · Con drift: 0
+
+Resumen por código:
+

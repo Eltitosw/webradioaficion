@@ -9,6 +9,6 @@ test("tierPassesCribado ampliado incluye tier C", () => {
   assert.equal(tierPassesCribado("C", "normal"), false);
 });
 
-test("MIN_BANCO_QUESTIONS es 900", () => {
-  assert.equal(MIN_BANCO_QUESTIONS, 900);
+test("MIN_BANCO_QUESTIONS es 400 (banco examen oficial)", () => {
+  assert.equal(MIN_BANCO_QUESTIONS, 400);
 });

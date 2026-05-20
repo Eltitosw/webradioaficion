@@ -1,0 +1,4613 @@
+{
+  "totals": {
+    "fetched": 52,
+    "new": 49,
+    "dup": 0,
+    "paraphrase": 0,
+    "obsolete": 3,
+    "withWrongHints": 44,
+    "withLibro": 0,
+    "withExamDate": 0
+  },
+  "samples": [
+    {
+      "preguntaId": "71",
+      "stem": "En una instalación eléctrica, el llamado \"factor de potencia\" o \"Coseno de &phi;\" es:",
+      "optionRows": [
+        {
+          "id": "262",
+          "text": "Un factor para duplicar la potencia consumida en un determinado componente",
+          "wrongHint": "Incorrecta. Motivo: La potencia consumida depende del componente y no de un factor externo"
+        },
+        {
+          "id": "263",
+          "text": "Una magnitud relacionada con la potencia que varía entre 1 y 3",
+          "wrongHint": "Incorrecta. Motivo: El factor de potencia como maximo puede ser 1"
+        },
+        {
+          "id": "261",
+          "text": "Un valor indicador del desfasaje entre la tensión y la corriente en un determinado componente de la instalación",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "264",
+          "text": "Un factor que sólo se aplica en corriente continua",
+          "wrongHint": "Incorrecta. Motivo: En continua no hay factor de potencia. Solo se aplica en se?ales senoidales"
+        }
+      ],
+      "options": [
+        "Un factor para duplicar la potencia consumida en un determinado componente",
+        "Una magnitud relacionada con la potencia que varía entre 1 y 3",
+        "Un valor indicador del desfasaje entre la tensión y la corriente en un determinado componente de la instalación",
+        "Un factor que sólo se aplica en corriente continua"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: La potencia consumida depende del componente y no de un factor externo",
+        "Incorrecta. Motivo: El factor de potencia como maximo puede ser 1",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: En continua no hay factor de potencia. Solo se aplica en se?ales senoidales"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "261",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica",
+      "status": "new"
+    },
+    {
+      "preguntaId": "191",
+      "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+      "optionRows": [
+        {
+          "id": "748",
+          "text": "La carga atmosférica del camino recorrido por la onda",
+          "wrongHint": "Incorrecta. Motivo: No tiene sentido alguno"
+        },
+        {
+          "id": "745",
+          "text": "La dirección del campo eléctrico",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "746",
+          "text": "La dirección de propagación",
+          "wrongHint": "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion"
+        },
+        {
+          "id": "747",
+          "text": "La potencia del transmisor",
+          "wrongHint": "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+        }
+      ],
+      "options": [
+        "La carga atmosférica del camino recorrido por la onda",
+        "La dirección del campo eléctrico",
+        "La dirección de propagación",
+        "La potencia del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No tiene sentido alguno",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion",
+        "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "745",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica",
+      "status": "new"
+    },
+    {
+      "preguntaId": "191",
+      "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+      "optionRows": [
+        {
+          "id": "748",
+          "text": "La carga atmosférica del camino recorrido por la onda",
+          "wrongHint": "Incorrecta. Motivo: No tiene sentido alguno"
+        },
+        {
+          "id": "747",
+          "text": "La potencia del transmisor",
+          "wrongHint": "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+        },
+        {
+          "id": "746",
+          "text": "La dirección de propagación",
+          "wrongHint": "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion"
+        },
+        {
+          "id": "745",
+          "text": "La dirección del campo eléctrico",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "La carga atmosférica del camino recorrido por la onda",
+        "La potencia del transmisor",
+        "La dirección de propagación",
+        "La dirección del campo eléctrico"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No tiene sentido alguno",
+        "Incorrecta. Motivo: La potencia es independiente de la polarizacion",
+        "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "745",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica",
+      "status": "new"
+    },
+    {
+      "preguntaId": "191",
+      "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+      "optionRows": [
+        {
+          "id": "747",
+          "text": "La potencia del transmisor",
+          "wrongHint": "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+        },
+        {
+          "id": "746",
+          "text": "La dirección de propagación",
+          "wrongHint": "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion"
+        },
+        {
+          "id": "745",
+          "text": "La dirección del campo eléctrico",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "748",
+          "text": "La carga atmosférica del camino recorrido por la onda",
+          "wrongHint": "Incorrecta. Motivo: No tiene sentido alguno"
+        }
+      ],
+      "options": [
+        "La potencia del transmisor",
+        "La dirección de propagación",
+        "La dirección del campo eléctrico",
+        "La carga atmosférica del camino recorrido por la onda"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: La potencia es independiente de la polarizacion",
+        "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No tiene sentido alguno"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "745",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica",
+      "status": "new"
+    },
+    {
+      "preguntaId": "425",
+      "stem": "Un diodo LED se emplea para...",
+      "optionRows": [
+        {
+          "id": "1701",
+          "text": "Emitir luz cuando se polariza directamente",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1703",
+          "text": "Rectificar señales de potencia",
+          "wrongHint": "Incorrecta. Motivo: El LED podra rectificar pero Señales de bajisima potencia y en cualquier caso no esta diseado para eso"
+        },
+        {
+          "id": "1704",
+          "text": "Estabilizar la tensión inversa",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hace un zener"
+        },
+        {
+          "id": "1702",
+          "text": "Emitir luz cuando se polariza inversamente",
+          "wrongHint": "Incorrecta. Motivo: Permaneceria apagado"
+        }
+      ],
+      "options": [
+        "Emitir luz cuando se polariza directamente",
+        "Rectificar señales de potencia",
+        "Estabilizar la tensión inversa",
+        "Emitir luz cuando se polariza inversamente"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: El LED podra rectificar pero Señales de bajisima potencia y en cualquier caso no esta diseado para eso",
+        "Incorrecta. Motivo: Eso lo hace un zener",
+        "Incorrecta. Motivo: Permaneceria apagado"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1701",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        },
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        },
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        }
+      ],
+      "options": [
+        "Elemento que filtra la corriente eléctrica",
+        "Componente eléctrico que elimina espúreas",
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Dispositivo limitador de potencia"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un diodo no filtra nada",
+        "Incorrecta. Motivo: Eso lo hari?a un filtro",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Esto es mas bien un fusible"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        },
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        },
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        }
+      ],
+      "options": [
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Componente eléctrico que elimina espúreas",
+        "Elemento que filtra la corriente eléctrica",
+        "Dispositivo limitador de potencia"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Eso lo hari?a un filtro",
+        "Incorrecta. Motivo: Un diodo no filtra nada",
+        "Incorrecta. Motivo: Esto es mas bien un fusible"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        },
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        },
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        }
+      ],
+      "options": [
+        "Componente eléctrico que elimina espúreas",
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Dispositivo limitador de potencia",
+        "Elemento que filtra la corriente eléctrica"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Eso lo hari?a un filtro",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Esto es mas bien un fusible",
+        "Incorrecta. Motivo: Un diodo no filtra nada"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        },
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        },
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        }
+      ],
+      "options": [
+        "Dispositivo limitador de potencia",
+        "Elemento que filtra la corriente eléctrica",
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Componente eléctrico que elimina espúreas"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Esto es mas bien un fusible",
+        "Incorrecta. Motivo: Un diodo no filtra nada",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Eso lo hari?a un filtro"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "476",
+      "stem": "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
+      "optionRows": [
+        {
+          "id": "1892",
+          "text": "Cero.",
+          "wrongHint": "Incorrecta. Motivo: Si el cuadrado es cero, es porque la frecuencia es cero."
+        },
+        {
+          "id": "1889",
+          "text": "Directamente proporcional a la inductancia de la bobina.",
+          "wrongHint": "Incorrecta. Motivo: La inductancia est en el denominador"
+        },
+        {
+          "id": "1891",
+          "text": "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1890",
+          "text": "Directamente proporcional a la capacidad del condensador.",
+          "wrongHint": "Incorrecta. Motivo: La capacidad est en el denominador"
+        }
+      ],
+      "options": [
+        "Cero.",
+        "Directamente proporcional a la inductancia de la bobina.",
+        "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador.",
+        "Directamente proporcional a la capacidad del condensador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si el cuadrado es cero, es porque la frecuencia es cero.",
+        "Incorrecta. Motivo: La inductancia est en el denominador",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: La capacidad est en el denominador"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1891",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Q=B/f",
+        "Q=f&middot;B 2",
+        "Q=f&middot;B",
+        "Q=f/B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f&middot;B 2",
+        "Q=f/B",
+        "Q=B/f",
+        "Q=f&middot;B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f/B",
+        "Q=B/f",
+        "Q=f&middot;B 2",
+        "Q=f&middot;B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f/B",
+        "Q=f&middot;B",
+        "Q=f&middot;B 2",
+        "Q=B/f"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=B/f",
+        "Q=f&middot;B 2",
+        "Q=f/B",
+        "Q=f&middot;B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f&middot;B 2",
+        "Q=f/B",
+        "Q=f&middot;B",
+        "Q=B/f"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes",
+      "status": "new"
+    },
+    {
+      "preguntaId": "73",
+      "stem": "En un circuito electrónico, un transistor no se puede emplear como:",
+      "optionRows": [
+        {
+          "id": "269",
+          "text": "Amplificador.",
+          "wrongHint": "Incorrecta. Motivo: Es la principal aplicación de un transistor."
+        },
+        {
+          "id": "271",
+          "text": "Mezclador.",
+          "wrongHint": "Incorrecta. Motivo: Un transistor FET tambin puede funcionar como un mezclador (ver pg.127)"
+        },
+        {
+          "id": "272",
+          "text": "Balun.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "270",
+          "text": "Oscilador.",
+          "wrongHint": "Incorrecta. Motivo: Los transistores debidamente realimentados pueden funcionar como osciladores."
+        }
+      ],
+      "options": [
+        "Amplificador.",
+        "Mezclador.",
+        "Balun.",
+        "Oscilador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Es la principal aplicación de un transistor.",
+        "Incorrecta. Motivo: Un transistor FET tambin puede funcionar como un mezclador (ver pg.127)",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Los transistores debidamente realimentados pueden funcionar como osciladores."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "272",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        },
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        }
+      ],
+      "options": [
+        "Excesivo nivel de señal en la antena.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Escaso nivel de Squelch.",
+        "Fallo en la fuente de alimentación."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo.",
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        }
+      ],
+      "options": [
+        "Fallo en la fuente de alimentación.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Excesivo nivel de señal en la antena.",
+        "Escaso nivel de Squelch."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        }
+      ],
+      "options": [
+        "Fallo en la fuente de alimentación.",
+        "Excesivo nivel de señal en la antena.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Escaso nivel de Squelch."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        },
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        }
+      ],
+      "options": [
+        "Excesivo nivel de señal en la antena.",
+        "Escaso nivel de Squelch.",
+        "Fallo en la fuente de alimentación.",
+        "Insuficiente ancho de banda de la señal de salida."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo.",
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        },
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Escaso nivel de Squelch.",
+        "Fallo en la fuente de alimentación.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Excesivo nivel de señal en la antena."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo.",
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "532",
+      "stem": "El excitador:",
+      "optionRows": [
+        {
+          "id": "2115",
+          "text": "Excita la etapa osciladora.",
+          "wrongHint": "Incorrecta. Motivo: Un oscilador no necesita excitacion, solo le hace falta ser alimentado."
+        },
+        {
+          "id": "2116",
+          "text": "Alimenta el transmisor.",
+          "wrongHint": "Incorrecta. Motivo: Esto seria una fuente de alimentacion."
+        },
+        {
+          "id": "2113",
+          "text": "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2114",
+          "text": "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+          "wrongHint": "Incorrecta. Motivo: Esta funcion la hace un mezclador."
+        }
+      ],
+      "options": [
+        "Excita la etapa osciladora.",
+        "Alimenta el transmisor.",
+        "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+        "Suministra la potencia necesaria a la etapa amplificadora de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un oscilador no necesita excitacion, solo le hace falta ser alimentado.",
+        "Incorrecta. Motivo: Esto seria una fuente de alimentacion.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Esta funcion la hace un mezclador."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "2113",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores",
+      "status": "new"
+    },
+    {
+      "preguntaId": "398",
+      "stem": "La relación entre la longitud física de un cable y su longitud eléctrica, es: (AGD)",
+      "optionRows": [
+        {
+          "id": "1603",
+          "text": "La longitud física es igual a la eléctrica, multiplicada por el factor de velocidad de propagación",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1601",
+          "text": "Las dos longitudes son iguales",
+          "wrongHint": "Incorrecta. Motivo: Solo si el factor de velocidad vale uno, cosa que solo ocurre cuando el aislante es el vaci­o"
+        },
+        {
+          "id": "1604",
+          "text": "La diferencia de las dos",
+          "wrongHint": "Incorrecta. Motivo: Una relacion es una division. Nunca es una diferencia (resta)"
+        },
+        {
+          "id": "1602",
+          "text": "La longitud física es mayor que la eléctrica",
+          "wrongHint": "Incorrecta. Motivo: La longitud fisica siempre es menor que la eléctrica y su relacion la determina el factor de velocidad de propagacion"
+        }
+      ],
+      "options": [
+        "La longitud física es igual a la eléctrica, multiplicada por el factor de velocidad de propagación",
+        "Las dos longitudes son iguales",
+        "La diferencia de las dos",
+        "La longitud física es mayor que la eléctrica"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Solo si el factor de velocidad vale uno, cosa que solo ocurre cuando el aislante es el vaci­o",
+        "Incorrecta. Motivo: Una relacion es una division. Nunca es una diferencia (resta)",
+        "Incorrecta. Motivo: La longitud fisica siempre es menor que la eléctrica y su relacion la determina el factor de velocidad de propagacion"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1602",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        }
+      ],
+      "options": [
+        "Menor a la de la antena",
+        "Igual a la de la antena y a la del transmisor",
+        "Comprendida entre la de la antena y la del transmisor",
+        "Inferior a la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        }
+      ],
+      "options": [
+        "Inferior a la del transmisor",
+        "Igual a la de la antena y a la del transmisor",
+        "Menor a la de la antena",
+        "Comprendida entre la de la antena y la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        }
+      ],
+      "options": [
+        "Comprendida entre la de la antena y la del transmisor",
+        "Igual a la de la antena y a la del transmisor",
+        "Menor a la de la antena",
+        "Inferior a la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Comprendida entre la de la antena y la del transmisor",
+        "Inferior a la del transmisor",
+        "Menor a la de la antena",
+        "Igual a la de la antena y a la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "416",
+      "stem": "La propagación radioeléctrica por onda de superficie:",
+      "optionRows": [
+        {
+          "id": "1675",
+          "text": "Sólo se emplea para trayectos marítimos.",
+          "wrongHint": "Incorrecta. Motivo: No es exclusivo de estos trayectos"
+        },
+        {
+          "id": "1674",
+          "text": "La señal radioeléctrica se propaga siguiendo la curvatura terrestre.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1676",
+          "text": "Es el medio de propagación característico en las grandes ciudades.",
+          "wrongHint": "Incorrecta. Motivo: Tambien por onda espacial"
+        },
+        {
+          "id": "1673",
+          "text": "Se emplea para cualquier enlace radioeléctrico a excepción de los enlaces satélites.",
+          "wrongHint": "Incorrecta. Motivo: depende de la frecuencia y de la potencia"
+        }
+      ],
+      "options": [
+        "Sólo se emplea para trayectos marítimos.",
+        "La señal radioeléctrica se propaga siguiendo la curvatura terrestre.",
+        "Es el medio de propagación característico en las grandes ciudades.",
+        "Se emplea para cualquier enlace radioeléctrico a excepción de los enlaces satélites."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es exclusivo de estos trayectos",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Tambien por onda espacial",
+        "Incorrecta. Motivo: depende de la frecuencia y de la potencia"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1674",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        }
+      ],
+      "options": [
+        "La energía de una onda permanece invariable.",
+        "A frecuencias muy altas se pierden las ondas espaciales.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "Se evita con una antena omnidireccional."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        },
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        }
+      ],
+      "options": [
+        "La energía de una onda permanece invariable.",
+        "Se evita con una antena omnidireccional.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "A frecuencias muy altas se pierden las ondas espaciales."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading",
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        },
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        }
+      ],
+      "options": [
+        "La energía de una onda permanece invariable.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "A frecuencias muy altas se pierden las ondas espaciales.",
+        "Se evita con una antena omnidireccional."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas",
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        },
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        }
+      ],
+      "options": [
+        "Se evita con una antena omnidireccional.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "A frecuencias muy altas se pierden las ondas espaciales.",
+        "La energía de una onda permanece invariable."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas",
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop",
+      "status": "new"
+    },
+    {
+      "preguntaId": "542",
+      "stem": "La abreviatura del código Q, \"QRH\" tiene el significado de:",
+      "optionRows": [
+        {
+          "id": "2153",
+          "text": "Su frecuencia varía.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2155",
+          "text": "Son las .... horas.",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con QTR"
+        },
+        {
+          "id": "2156",
+          "text": "Cambie de frecuencia a .... kHz",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QSY\"."
+        },
+        {
+          "id": "2154",
+          "text": "Le volveré a llamar a las ... horas en ... kHz",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRX"
+        }
+      ],
+      "options": [
+        "Su frecuencia varía.",
+        "Son las .... horas.",
+        "Cambie de frecuencia a .... kHz",
+        "Le volveré a llamar a las ... horas en ... kHz"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Este corresponderia con QTR",
+        "Incorrecta. Motivo: Este corresponderia con \"QSY\".",
+        "Incorrecta. Motivo: Este corresponderia con \"QRX"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2153",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-2",
+      "part": 2,
+      "topicId": "operacion-seguridad",
+      "status": "new"
+    },
+    {
+      "preguntaId": "541",
+      "stem": "La abreviatura del código Q, \"QRG\" tiene el significado de:",
+      "optionRows": [
+        {
+          "id": "2151",
+          "text": "Cese la transmisión",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRT\""
+        },
+        {
+          "id": "2150",
+          "text": "Estoy ocupado. No interfiera",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRL\""
+        },
+        {
+          "id": "2152",
+          "text": "Aumente la potencia",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRO\""
+        },
+        {
+          "id": "2149",
+          "text": "Su frecuencia exacta es ... kHz",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Cese la transmisión",
+        "Estoy ocupado. No interfiera",
+        "Aumente la potencia",
+        "Su frecuencia exacta es ... kHz"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Este corresponderia con \"QRT\"",
+        "Incorrecta. Motivo: Este corresponderia con \"QRL\"",
+        "Incorrecta. Motivo: Este corresponderia con \"QRO\"",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "2149",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-2",
+      "part": 2,
+      "topicId": "operacion-seguridad",
+      "status": "new"
+    },
+    {
+      "preguntaId": "296",
+      "stem": "¿Qué está ocurriendo si un radioaficionado se identifica como EA3/OK2HM:",
+      "optionRows": [
+        {
+          "id": "1194",
+          "text": "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1196",
+          "text": "Se trata de una conexión con interferencias.",
+          "wrongHint": "Incorrecta. Motivo: El indicativo no depende de las interferencias"
+        },
+        {
+          "id": "1193",
+          "text": "Se están realizando pruebas en el distrito 3.",
+          "wrongHint": "Incorrecta. Motivo: Que sean pruebas o no, no se puede saber de antemano y nada tiene que ver."
+        },
+        {
+          "id": "1195",
+          "text": "Se están realizado cambios en el reglamento el distrito 3 es pionero.",
+          "wrongHint": "Incorrecta. Motivo: Nada tiene que ver."
+        }
+      ],
+      "options": [
+        "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
+        "Se trata de una conexión con interferencias.",
+        "Se están realizando pruebas en el distrito 3.",
+        "Se están realizado cambios en el reglamento el distrito 3 es pionero."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: El indicativo no depende de las interferencias",
+        "Incorrecta. Motivo: Que sean pruebas o no, no se puede saber de antemano y nada tiene que ver.",
+        "Incorrecta. Motivo: Nada tiene que ver."
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1194",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos",
+      "status": "new"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        },
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        }
+      ],
+      "options": [
+        "Se reservan únicamente para estaciones colectivas.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+        "No pueden ser reutilizados."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: El pago es independiente del distintivo",
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos",
+      "status": "new"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        }
+      ],
+      "options": [
+        "Se reservan únicamente para estaciones colectivas.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+        "No pueden ser reutilizados.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar",
+        "Incorrecta. Motivo: El pago es independiente del distintivo"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos",
+      "status": "new"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Se reservan únicamente para estaciones colectivas.",
+        "No pueden ser reutilizados.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar",
+        "Incorrecta. Motivo: El pago es independiente del distintivo",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos",
+      "status": "new"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        },
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "No pueden ser reutilizados.",
+        "Se reservan únicamente para estaciones colectivas.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar",
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo: El pago es independiente del distintivo",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos",
+      "status": "new"
+    },
+    {
+      "preguntaId": "331",
+      "stem": "Un radioaficionado español que traslade su residencia a un país que aplica la Recomendación de la CEPT T/R 61-02 podrá obtener una licencia de radioaficionado en dicho país si:",
+      "optionRows": [
+        {
+          "id": "1334",
+          "text": "Supera un examen en el idioma del país.",
+          "wrongHint": "Incorrecta. Motivo: No es correcta."
+        },
+        {
+          "id": "1336",
+          "text": "Obtiene la nacionalidad del país donde resida.",
+          "wrongHint": "Incorrecta. Motivo: No es correcta."
+        },
+        {
+          "id": "1335",
+          "text": "Dispone del Certificado HAREC.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1333",
+          "text": "Acredita 10 años de experiencia en la radioafición internacional.",
+          "wrongHint": "Incorrecta. Motivo: No es correcta."
+        }
+      ],
+      "options": [
+        "Supera un examen en el idioma del país.",
+        "Obtiene la nacionalidad del país donde resida.",
+        "Dispone del Certificado HAREC.",
+        "Acredita 10 años de experiencia en la radioafición internacional."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcta.",
+        "Incorrecta. Motivo: No es correcta.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es correcta."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1335",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-8",
+      "part": 2,
+      "topicId": "marco-normativo",
+      "status": "new"
+    },
+    {
+      "preguntaId": "341",
+      "stem": "Para la instalación de una estación fija de radioaficionado, es necesario:",
+      "optionRows": [
+        {
+          "id": "1373",
+          "text": "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1374",
+          "text": "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1376",
+          "text": "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1375",
+          "text": "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        }
+      ],
+      "options": [
+        "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+        "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+        "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+        "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo: No es correcto."
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1374",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-8",
+      "part": 2,
+      "topicId": "marco-normativo",
+      "status": "obsolete"
+    },
+    {
+      "preguntaId": "341",
+      "stem": "Para la instalación de una estación fija de radioaficionado, es necesario:",
+      "optionRows": [
+        {
+          "id": "1375",
+          "text": "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1376",
+          "text": "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1373",
+          "text": "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1374",
+          "text": "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
+        "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+        "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+        "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1374",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-8",
+      "part": 2,
+      "topicId": "marco-normativo",
+      "status": "obsolete"
+    },
+    {
+      "preguntaId": "341",
+      "stem": "Para la instalación de una estación fija de radioaficionado, es necesario:",
+      "optionRows": [
+        {
+          "id": "1375",
+          "text": "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1376",
+          "text": "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        },
+        {
+          "id": "1374",
+          "text": "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1373",
+          "text": "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto."
+        }
+      ],
+      "options": [
+        "Comunicarlo por escrito al presidente de la comunidad de propietarios donde se vaya a instalar.",
+        "Presentar una memoria descriptiva del conjunto de la estación al presidente de la comunidad de propietarios donde se vaya a instalar.",
+        "Presentar, para su aprobación, una memoria descriptiva del conjunto de la estación en la Jefatura Provincial de Inspección de Telecomunicaciones.",
+        "Comunicarlo por escrito a la Jefatura Provincial de Inspección de Telecomunicaciones."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo: No es correcto.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es correcto."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1374",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-8",
+      "part": 2,
+      "topicId": "marco-normativo",
+      "status": "obsolete"
+    }
+  ],
+  "newOnes": [
+    {
+      "preguntaId": "71",
+      "stem": "En una instalación eléctrica, el llamado \"factor de potencia\" o \"Coseno de &phi;\" es:",
+      "optionRows": [
+        {
+          "id": "262",
+          "text": "Un factor para duplicar la potencia consumida en un determinado componente",
+          "wrongHint": "Incorrecta. Motivo: La potencia consumida depende del componente y no de un factor externo"
+        },
+        {
+          "id": "263",
+          "text": "Una magnitud relacionada con la potencia que varía entre 1 y 3",
+          "wrongHint": "Incorrecta. Motivo: El factor de potencia como maximo puede ser 1"
+        },
+        {
+          "id": "261",
+          "text": "Un valor indicador del desfasaje entre la tensión y la corriente en un determinado componente de la instalación",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "264",
+          "text": "Un factor que sólo se aplica en corriente continua",
+          "wrongHint": "Incorrecta. Motivo: En continua no hay factor de potencia. Solo se aplica en se?ales senoidales"
+        }
+      ],
+      "options": [
+        "Un factor para duplicar la potencia consumida en un determinado componente",
+        "Una magnitud relacionada con la potencia que varía entre 1 y 3",
+        "Un valor indicador del desfasaje entre la tensión y la corriente en un determinado componente de la instalación",
+        "Un factor que sólo se aplica en corriente continua"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: La potencia consumida depende del componente y no de un factor externo",
+        "Incorrecta. Motivo: El factor de potencia como maximo puede ser 1",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: En continua no hay factor de potencia. Solo se aplica en se?ales senoidales"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "261",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica"
+    },
+    {
+      "preguntaId": "191",
+      "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+      "optionRows": [
+        {
+          "id": "748",
+          "text": "La carga atmosférica del camino recorrido por la onda",
+          "wrongHint": "Incorrecta. Motivo: No tiene sentido alguno"
+        },
+        {
+          "id": "745",
+          "text": "La dirección del campo eléctrico",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "746",
+          "text": "La dirección de propagación",
+          "wrongHint": "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion"
+        },
+        {
+          "id": "747",
+          "text": "La potencia del transmisor",
+          "wrongHint": "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+        }
+      ],
+      "options": [
+        "La carga atmosférica del camino recorrido por la onda",
+        "La dirección del campo eléctrico",
+        "La dirección de propagación",
+        "La potencia del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No tiene sentido alguno",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion",
+        "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "745",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica"
+    },
+    {
+      "preguntaId": "191",
+      "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+      "optionRows": [
+        {
+          "id": "748",
+          "text": "La carga atmosférica del camino recorrido por la onda",
+          "wrongHint": "Incorrecta. Motivo: No tiene sentido alguno"
+        },
+        {
+          "id": "747",
+          "text": "La potencia del transmisor",
+          "wrongHint": "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+        },
+        {
+          "id": "746",
+          "text": "La dirección de propagación",
+          "wrongHint": "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion"
+        },
+        {
+          "id": "745",
+          "text": "La dirección del campo eléctrico",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "La carga atmosférica del camino recorrido por la onda",
+        "La potencia del transmisor",
+        "La dirección de propagación",
+        "La dirección del campo eléctrico"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No tiene sentido alguno",
+        "Incorrecta. Motivo: La potencia es independiente de la polarizacion",
+        "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "745",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica"
+    },
+    {
+      "preguntaId": "191",
+      "stem": "En una onda electromágnetica, ¿qué caracteriza su polarización?",
+      "optionRows": [
+        {
+          "id": "747",
+          "text": "La potencia del transmisor",
+          "wrongHint": "Incorrecta. Motivo: La potencia es independiente de la polarizacion"
+        },
+        {
+          "id": "746",
+          "text": "La dirección de propagación",
+          "wrongHint": "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion"
+        },
+        {
+          "id": "745",
+          "text": "La dirección del campo eléctrico",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "748",
+          "text": "La carga atmosférica del camino recorrido por la onda",
+          "wrongHint": "Incorrecta. Motivo: No tiene sentido alguno"
+        }
+      ],
+      "options": [
+        "La potencia del transmisor",
+        "La dirección de propagación",
+        "La dirección del campo eléctrico",
+        "La carga atmosférica del camino recorrido por la onda"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: La potencia es independiente de la polarizacion",
+        "Incorrecta. Motivo: cualquiera de las dos polarizaciones puede tener la misma direccion",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No tiene sentido alguno"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "745",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-1",
+      "part": 1,
+      "topicId": "electricidad-basica"
+    },
+    {
+      "preguntaId": "425",
+      "stem": "Un diodo LED se emplea para...",
+      "optionRows": [
+        {
+          "id": "1701",
+          "text": "Emitir luz cuando se polariza directamente",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1703",
+          "text": "Rectificar señales de potencia",
+          "wrongHint": "Incorrecta. Motivo: El LED podra rectificar pero Señales de bajisima potencia y en cualquier caso no esta diseado para eso"
+        },
+        {
+          "id": "1704",
+          "text": "Estabilizar la tensión inversa",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hace un zener"
+        },
+        {
+          "id": "1702",
+          "text": "Emitir luz cuando se polariza inversamente",
+          "wrongHint": "Incorrecta. Motivo: Permaneceria apagado"
+        }
+      ],
+      "options": [
+        "Emitir luz cuando se polariza directamente",
+        "Rectificar señales de potencia",
+        "Estabilizar la tensión inversa",
+        "Emitir luz cuando se polariza inversamente"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: El LED podra rectificar pero Señales de bajisima potencia y en cualquier caso no esta diseado para eso",
+        "Incorrecta. Motivo: Eso lo hace un zener",
+        "Incorrecta. Motivo: Permaneceria apagado"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1701",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        },
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        },
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        }
+      ],
+      "options": [
+        "Elemento que filtra la corriente eléctrica",
+        "Componente eléctrico que elimina espúreas",
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Dispositivo limitador de potencia"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un diodo no filtra nada",
+        "Incorrecta. Motivo: Eso lo hari?a un filtro",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Esto es mas bien un fusible"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        },
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        },
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        }
+      ],
+      "options": [
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Componente eléctrico que elimina espúreas",
+        "Elemento que filtra la corriente eléctrica",
+        "Dispositivo limitador de potencia"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Eso lo hari?a un filtro",
+        "Incorrecta. Motivo: Un diodo no filtra nada",
+        "Incorrecta. Motivo: Esto es mas bien un fusible"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        },
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        },
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        }
+      ],
+      "options": [
+        "Componente eléctrico que elimina espúreas",
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Dispositivo limitador de potencia",
+        "Elemento que filtra la corriente eléctrica"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Eso lo hari?a un filtro",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Esto es mas bien un fusible",
+        "Incorrecta. Motivo: Un diodo no filtra nada"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "183",
+      "stem": "¿Qué es un diodo?",
+      "optionRows": [
+        {
+          "id": "712",
+          "text": "Dispositivo limitador de potencia",
+          "wrongHint": "Incorrecta. Motivo: Esto es mas bien un fusible"
+        },
+        {
+          "id": "709",
+          "text": "Elemento que filtra la corriente eléctrica",
+          "wrongHint": "Incorrecta. Motivo: Un diodo no filtra nada"
+        },
+        {
+          "id": "710",
+          "text": "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "711",
+          "text": "Componente eléctrico que elimina espúreas",
+          "wrongHint": "Incorrecta. Motivo: Eso lo hari?a un filtro"
+        }
+      ],
+      "options": [
+        "Dispositivo limitador de potencia",
+        "Elemento que filtra la corriente eléctrica",
+        "Dispositivo que permite el paso de la corriente eléctrica en un sólo sentido",
+        "Componente eléctrico que elimina espúreas"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Esto es mas bien un fusible",
+        "Incorrecta. Motivo: Un diodo no filtra nada",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Eso lo hari?a un filtro"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "710",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-2",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "476",
+      "stem": "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
+      "optionRows": [
+        {
+          "id": "1892",
+          "text": "Cero.",
+          "wrongHint": "Incorrecta. Motivo: Si el cuadrado es cero, es porque la frecuencia es cero."
+        },
+        {
+          "id": "1889",
+          "text": "Directamente proporcional a la inductancia de la bobina.",
+          "wrongHint": "Incorrecta. Motivo: La inductancia est en el denominador"
+        },
+        {
+          "id": "1891",
+          "text": "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1890",
+          "text": "Directamente proporcional a la capacidad del condensador.",
+          "wrongHint": "Incorrecta. Motivo: La capacidad est en el denominador"
+        }
+      ],
+      "options": [
+        "Cero.",
+        "Directamente proporcional a la inductancia de la bobina.",
+        "Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador.",
+        "Directamente proporcional a la capacidad del condensador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si el cuadrado es cero, es porque la frecuencia es cero.",
+        "Incorrecta. Motivo: La inductancia est en el denominador",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: La capacidad est en el denominador"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1891",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Q=B/f",
+        "Q=f&middot;B 2",
+        "Q=f&middot;B",
+        "Q=f/B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f&middot;B 2",
+        "Q=f/B",
+        "Q=B/f",
+        "Q=f&middot;B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f/B",
+        "Q=B/f",
+        "Q=f&middot;B 2",
+        "Q=f&middot;B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f/B",
+        "Q=f&middot;B",
+        "Q=f&middot;B 2",
+        "Q=B/f"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=B/f",
+        "Q=f&middot;B 2",
+        "Q=f/B",
+        "Q=f&middot;B"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "499",
+      "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
+      "optionRows": [
+        {
+          "id": "1982",
+          "text": "Q=f&middot;B 2",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1981",
+          "text": "Q=f/B",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1983",
+          "text": "Q=f&middot;B",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        },
+        {
+          "id": "1984",
+          "text": "Q=B/f",
+          "wrongHint": "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+        }
+      ],
+      "options": [
+        "Q=f&middot;B 2",
+        "Q=f/B",
+        "Q=f&middot;B",
+        "Q=B/f"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q",
+        "Incorrecta. Motivo: No es la correcta, entre otros motivos porque cuanto menor ancho de banda, tendriamos menor Q"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1981",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-3",
+      "part": 1,
+      "topicId": "componentes"
+    },
+    {
+      "preguntaId": "73",
+      "stem": "En un circuito electrónico, un transistor no se puede emplear como:",
+      "optionRows": [
+        {
+          "id": "269",
+          "text": "Amplificador.",
+          "wrongHint": "Incorrecta. Motivo: Es la principal aplicación de un transistor."
+        },
+        {
+          "id": "271",
+          "text": "Mezclador.",
+          "wrongHint": "Incorrecta. Motivo: Un transistor FET tambin puede funcionar como un mezclador (ver pg.127)"
+        },
+        {
+          "id": "272",
+          "text": "Balun.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "270",
+          "text": "Oscilador.",
+          "wrongHint": "Incorrecta. Motivo: Los transistores debidamente realimentados pueden funcionar como osciladores."
+        }
+      ],
+      "options": [
+        "Amplificador.",
+        "Mezclador.",
+        "Balun.",
+        "Oscilador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Es la principal aplicación de un transistor.",
+        "Incorrecta. Motivo: Un transistor FET tambin puede funcionar como un mezclador (ver pg.127)",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Los transistores debidamente realimentados pueden funcionar como osciladores."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "272",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        },
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        }
+      ],
+      "options": [
+        "Excesivo nivel de señal en la antena.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Escaso nivel de Squelch.",
+        "Fallo en la fuente de alimentación."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo.",
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        }
+      ],
+      "options": [
+        "Fallo en la fuente de alimentación.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Excesivo nivel de señal en la antena.",
+        "Escaso nivel de Squelch."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        }
+      ],
+      "options": [
+        "Fallo en la fuente de alimentación.",
+        "Excesivo nivel de señal en la antena.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Escaso nivel de Squelch."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        },
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        }
+      ],
+      "options": [
+        "Excesivo nivel de señal en la antena.",
+        "Escaso nivel de Squelch.",
+        "Fallo en la fuente de alimentación.",
+        "Insuficiente ancho de banda de la señal de salida."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo.",
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "61",
+      "stem": "La \"desensibilización o bloqueo\" de un receptor puede producirse por:",
+      "optionRows": [
+        {
+          "id": "223",
+          "text": "Escaso nivel de Squelch.",
+          "wrongHint": "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo."
+        },
+        {
+          "id": "221",
+          "text": "Fallo en la fuente de alimentación.",
+          "wrongHint": "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general."
+        },
+        {
+          "id": "222",
+          "text": "Insuficiente ancho de banda de la señal de salida.",
+          "wrongHint": "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida."
+        },
+        {
+          "id": "224",
+          "text": "Excesivo nivel de señal en la antena.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Escaso nivel de Squelch.",
+        "Fallo en la fuente de alimentación.",
+        "Insuficiente ancho de banda de la señal de salida.",
+        "Excesivo nivel de señal en la antena."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un escaso nivel de squelch har? que escuchemos ruido de recepci?n en ausencia de se?al ?til o corresponsal no activo.",
+        "Incorrecta. Motivo: Un fallo en la alimentaci?n causa un fallo general.",
+        "Incorrecta. Motivo: La causa de la desensibilizaci?n hay que mirarla a la entrada y no a la salida.",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "224",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-4",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "532",
+      "stem": "El excitador:",
+      "optionRows": [
+        {
+          "id": "2115",
+          "text": "Excita la etapa osciladora.",
+          "wrongHint": "Incorrecta. Motivo: Un oscilador no necesita excitacion, solo le hace falta ser alimentado."
+        },
+        {
+          "id": "2116",
+          "text": "Alimenta el transmisor.",
+          "wrongHint": "Incorrecta. Motivo: Esto seria una fuente de alimentacion."
+        },
+        {
+          "id": "2113",
+          "text": "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2114",
+          "text": "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+          "wrongHint": "Incorrecta. Motivo: Esta funcion la hace un mezclador."
+        }
+      ],
+      "options": [
+        "Excita la etapa osciladora.",
+        "Alimenta el transmisor.",
+        "Suministra la potencia necesaria a la etapa amplificadora de potencia.",
+        "Suministra la potencia necesaria a la etapa amplificadora de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Un oscilador no necesita excitacion, solo le hace falta ser alimentado.",
+        "Incorrecta. Motivo: Esto seria una fuente de alimentacion.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Esta funcion la hace un mezclador."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "2113",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "509",
+      "stem": "¿ En qué orden se encuentran los siguientes bloques funcionales en un equipo emisor ?",
+      "optionRows": [
+        {
+          "id": "2022",
+          "text": "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2024",
+          "text": "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2023",
+          "text": "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2021",
+          "text": "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Amplificador lineal final, red de acoplo de potencia, cadena de amplificación y traslación de frecuencia, modulador.",
+        "Modulador, cadena de amplificación y traslación de frecuencia, amplificador lineal final, red de acoplo de potencia.",
+        "Amplificador lineal final, modulador, cadena de amplificación y traslación de frecuencia, red de acoplo de potencia.",
+        "Cadena de amplificación y traslación de frecuencia, modulador, amplificador lineal final, red de acoplo de potencia."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "2024",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-5",
+      "part": 1,
+      "topicId": "receptores-emisores"
+    },
+    {
+      "preguntaId": "398",
+      "stem": "La relación entre la longitud física de un cable y su longitud eléctrica, es: (AGD)",
+      "optionRows": [
+        {
+          "id": "1603",
+          "text": "La longitud física es igual a la eléctrica, multiplicada por el factor de velocidad de propagación",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1601",
+          "text": "Las dos longitudes son iguales",
+          "wrongHint": "Incorrecta. Motivo: Solo si el factor de velocidad vale uno, cosa que solo ocurre cuando el aislante es el vaci­o"
+        },
+        {
+          "id": "1604",
+          "text": "La diferencia de las dos",
+          "wrongHint": "Incorrecta. Motivo: Una relacion es una division. Nunca es una diferencia (resta)"
+        },
+        {
+          "id": "1602",
+          "text": "La longitud física es mayor que la eléctrica",
+          "wrongHint": "Incorrecta. Motivo: La longitud fisica siempre es menor que la eléctrica y su relacion la determina el factor de velocidad de propagacion"
+        }
+      ],
+      "options": [
+        "La longitud física es igual a la eléctrica, multiplicada por el factor de velocidad de propagación",
+        "Las dos longitudes son iguales",
+        "La diferencia de las dos",
+        "La longitud física es mayor que la eléctrica"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Solo si el factor de velocidad vale uno, cosa que solo ocurre cuando el aislante es el vaci­o",
+        "Incorrecta. Motivo: Una relacion es una division. Nunca es una diferencia (resta)",
+        "Incorrecta. Motivo: La longitud fisica siempre es menor que la eléctrica y su relacion la determina el factor de velocidad de propagacion"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1602",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        }
+      ],
+      "options": [
+        "Menor a la de la antena",
+        "Igual a la de la antena y a la del transmisor",
+        "Comprendida entre la de la antena y la del transmisor",
+        "Inferior a la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        }
+      ],
+      "options": [
+        "Inferior a la del transmisor",
+        "Igual a la de la antena y a la del transmisor",
+        "Menor a la de la antena",
+        "Comprendida entre la de la antena y la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        }
+      ],
+      "options": [
+        "Comprendida entre la de la antena y la del transmisor",
+        "Igual a la de la antena y a la del transmisor",
+        "Menor a la de la antena",
+        "Inferior a la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "391",
+      "stem": "Para un acoplamiento óptimo entre transmisor y antena, la línea de transmisión debe tener una impedancia:",
+      "optionRows": [
+        {
+          "id": "1574",
+          "text": "Comprendida entre la de la antena y la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1575",
+          "text": "Inferior a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1573",
+          "text": "Menor a la de la antena",
+          "wrongHint": "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena"
+        },
+        {
+          "id": "1576",
+          "text": "Igual a la de la antena y a la del transmisor",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Comprendida entre la de la antena y la del transmisor",
+        "Inferior a la del transmisor",
+        "Menor a la de la antena",
+        "Igual a la de la antena y a la del transmisor"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo: debe ser igual a las impedancias del transmisor y antena",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1576",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-6",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "416",
+      "stem": "La propagación radioeléctrica por onda de superficie:",
+      "optionRows": [
+        {
+          "id": "1675",
+          "text": "Sólo se emplea para trayectos marítimos.",
+          "wrongHint": "Incorrecta. Motivo: No es exclusivo de estos trayectos"
+        },
+        {
+          "id": "1674",
+          "text": "La señal radioeléctrica se propaga siguiendo la curvatura terrestre.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1676",
+          "text": "Es el medio de propagación característico en las grandes ciudades.",
+          "wrongHint": "Incorrecta. Motivo: Tambien por onda espacial"
+        },
+        {
+          "id": "1673",
+          "text": "Se emplea para cualquier enlace radioeléctrico a excepción de los enlaces satélites.",
+          "wrongHint": "Incorrecta. Motivo: depende de la frecuencia y de la potencia"
+        }
+      ],
+      "options": [
+        "Sólo se emplea para trayectos marítimos.",
+        "La señal radioeléctrica se propaga siguiendo la curvatura terrestre.",
+        "Es el medio de propagación característico en las grandes ciudades.",
+        "Se emplea para cualquier enlace radioeléctrico a excepción de los enlaces satélites."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es exclusivo de estos trayectos",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Tambien por onda espacial",
+        "Incorrecta. Motivo: depende de la frecuencia y de la potencia"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1674",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        }
+      ],
+      "options": [
+        "La energía de una onda permanece invariable.",
+        "A frecuencias muy altas se pierden las ondas espaciales.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "Se evita con una antena omnidireccional."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        },
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        }
+      ],
+      "options": [
+        "La energía de una onda permanece invariable.",
+        "Se evita con una antena omnidireccional.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "A frecuencias muy altas se pierden las ondas espaciales."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading",
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        },
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        }
+      ],
+      "options": [
+        "La energía de una onda permanece invariable.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "A frecuencias muy altas se pierden las ondas espaciales.",
+        "Se evita con una antena omnidireccional."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas",
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "413",
+      "stem": "Para el desvanecimiento o fading, es correcto afirmar que:",
+      "optionRows": [
+        {
+          "id": "1663",
+          "text": "Se evita con una antena omnidireccional.",
+          "wrongHint": "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio"
+        },
+        {
+          "id": "1664",
+          "text": "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1661",
+          "text": "A frecuencias muy altas se pierden las ondas espaciales.",
+          "wrongHint": "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas"
+        },
+        {
+          "id": "1662",
+          "text": "La energía de una onda permanece invariable.",
+          "wrongHint": "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+        }
+      ],
+      "options": [
+        "Se evita con una antena omnidireccional.",
+        "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor.",
+        "A frecuencias muy altas se pierden las ondas espaciales.",
+        "La energía de una onda permanece invariable."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No tiene nada que ver la caracter?stica de radiaci?n de una antena con los eventos que puedan ocurrirle a la onda en su viaje por el espacio",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: precisamente el fadin ocurre principalmente en ondas bajas",
+        "Incorrecta. Motivo: Si fuera invariable, no habr?a fading"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1664",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "I-7",
+      "part": 1,
+      "topicId": "antenas-prop"
+    },
+    {
+      "preguntaId": "542",
+      "stem": "La abreviatura del código Q, \"QRH\" tiene el significado de:",
+      "optionRows": [
+        {
+          "id": "2153",
+          "text": "Su frecuencia varía.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "2155",
+          "text": "Son las .... horas.",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con QTR"
+        },
+        {
+          "id": "2156",
+          "text": "Cambie de frecuencia a .... kHz",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QSY\"."
+        },
+        {
+          "id": "2154",
+          "text": "Le volveré a llamar a las ... horas en ... kHz",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRX"
+        }
+      ],
+      "options": [
+        "Su frecuencia varía.",
+        "Son las .... horas.",
+        "Cambie de frecuencia a .... kHz",
+        "Le volveré a llamar a las ... horas en ... kHz"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Este corresponderia con QTR",
+        "Incorrecta. Motivo: Este corresponderia con \"QSY\".",
+        "Incorrecta. Motivo: Este corresponderia con \"QRX"
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "2153",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-2",
+      "part": 2,
+      "topicId": "operacion-seguridad"
+    },
+    {
+      "preguntaId": "541",
+      "stem": "La abreviatura del código Q, \"QRG\" tiene el significado de:",
+      "optionRows": [
+        {
+          "id": "2151",
+          "text": "Cese la transmisión",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRT\""
+        },
+        {
+          "id": "2150",
+          "text": "Estoy ocupado. No interfiera",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRL\""
+        },
+        {
+          "id": "2152",
+          "text": "Aumente la potencia",
+          "wrongHint": "Incorrecta. Motivo: Este corresponderia con \"QRO\""
+        },
+        {
+          "id": "2149",
+          "text": "Su frecuencia exacta es ... kHz",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Cese la transmisión",
+        "Estoy ocupado. No interfiera",
+        "Aumente la potencia",
+        "Su frecuencia exacta es ... kHz"
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Este corresponderia con \"QRT\"",
+        "Incorrecta. Motivo: Este corresponderia con \"QRL\"",
+        "Incorrecta. Motivo: Este corresponderia con \"QRO\"",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "2149",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-2",
+      "part": 2,
+      "topicId": "operacion-seguridad"
+    },
+    {
+      "preguntaId": "296",
+      "stem": "¿Qué está ocurriendo si un radioaficionado se identifica como EA3/OK2HM:",
+      "optionRows": [
+        {
+          "id": "1194",
+          "text": "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1196",
+          "text": "Se trata de una conexión con interferencias.",
+          "wrongHint": "Incorrecta. Motivo: El indicativo no depende de las interferencias"
+        },
+        {
+          "id": "1193",
+          "text": "Se están realizando pruebas en el distrito 3.",
+          "wrongHint": "Incorrecta. Motivo: Que sean pruebas o no, no se puede saber de antemano y nada tiene que ver."
+        },
+        {
+          "id": "1195",
+          "text": "Se están realizado cambios en el reglamento el distrito 3 es pionero.",
+          "wrongHint": "Incorrecta. Motivo: Nada tiene que ver."
+        }
+      ],
+      "options": [
+        "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3.",
+        "Se trata de una conexión con interferencias.",
+        "Se están realizando pruebas en el distrito 3.",
+        "Se están realizado cambios en el reglamento el distrito 3 es pionero."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: El indicativo no depende de las interferencias",
+        "Incorrecta. Motivo: Que sean pruebas o no, no se puede saber de antemano y nada tiene que ver.",
+        "Incorrecta. Motivo: Nada tiene que ver."
+      ],
+      "correctIndex": 0,
+      "correctOptionId": "1194",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        },
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        }
+      ],
+      "options": [
+        "Se reservan únicamente para estaciones colectivas.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+        "No pueden ser reutilizados."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: El pago es independiente del distintivo",
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        }
+      ],
+      "options": [
+        "Se reservan únicamente para estaciones colectivas.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+        "No pueden ser reutilizados.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar",
+        "Incorrecta. Motivo: El pago es independiente del distintivo"
+      ],
+      "correctIndex": 1,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "Se reservan únicamente para estaciones colectivas.",
+        "No pueden ser reutilizados.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar",
+        "Incorrecta. Motivo: El pago es independiente del distintivo",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos"
+    },
+    {
+      "preguntaId": "301",
+      "stem": "Los distintivos de llamada con sufijo de 2 letras:",
+      "optionRows": [
+        {
+          "id": "1216",
+          "text": "No pueden ser reutilizados.",
+          "wrongHint": "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar"
+        },
+        {
+          "id": "1213",
+          "text": "Se reservan únicamente para estaciones colectivas.",
+          "wrongHint": "Incorrecta. Motivo: No es correcto y tampoco normal"
+        },
+        {
+          "id": "1214",
+          "text": "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+          "wrongHint": "Incorrecta. Motivo: El pago es independiente del distintivo"
+        },
+        {
+          "id": "1215",
+          "text": "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones.",
+          "wrongHint": "Incorrecta. Motivo:"
+        }
+      ],
+      "options": [
+        "No pueden ser reutilizados.",
+        "Se reservan únicamente para estaciones colectivas.",
+        "Devengan una tasa distinta a la estipulada para sufijos de 3 letras.",
+        "Podrán ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: Cuando pierdes el indicativo y pasa un tiempo se puede reutilizar",
+        "Incorrecta. Motivo: No es correcto y tampoco normal",
+        "Incorrecta. Motivo: El pago es independiente del distintivo",
+        "Incorrecta. Motivo:"
+      ],
+      "correctIndex": 3,
+      "correctOptionId": "1215",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-5",
+      "part": 2,
+      "topicId": "licencias-indicativos"
+    },
+    {
+      "preguntaId": "331",
+      "stem": "Un radioaficionado español que traslade su residencia a un país que aplica la Recomendación de la CEPT T/R 61-02 podrá obtener una licencia de radioaficionado en dicho país si:",
+      "optionRows": [
+        {
+          "id": "1334",
+          "text": "Supera un examen en el idioma del país.",
+          "wrongHint": "Incorrecta. Motivo: No es correcta."
+        },
+        {
+          "id": "1336",
+          "text": "Obtiene la nacionalidad del país donde resida.",
+          "wrongHint": "Incorrecta. Motivo: No es correcta."
+        },
+        {
+          "id": "1335",
+          "text": "Dispone del Certificado HAREC.",
+          "wrongHint": "Incorrecta. Motivo:"
+        },
+        {
+          "id": "1333",
+          "text": "Acredita 10 años de experiencia en la radioafición internacional.",
+          "wrongHint": "Incorrecta. Motivo: No es correcta."
+        }
+      ],
+      "options": [
+        "Supera un examen en el idioma del país.",
+        "Obtiene la nacionalidad del país donde resida.",
+        "Dispone del Certificado HAREC.",
+        "Acredita 10 años de experiencia en la radioafición internacional."
+      ],
+      "wrongHints": [
+        "Incorrecta. Motivo: No es correcta.",
+        "Incorrecta. Motivo: No es correcta.",
+        "Incorrecta. Motivo:",
+        "Incorrecta. Motivo: No es correcta."
+      ],
+      "correctIndex": 2,
+      "correctOptionId": "1335",
+      "libroPage": null,
+      "examDate": null,
+      "topic": "II-8",
+      "part": 2,
+      "topicId": "marco-normativo"
+    }
+  ]
+}

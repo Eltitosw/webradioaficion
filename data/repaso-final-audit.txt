@@ -1,0 +1,21 @@
+=== Repaso final del banco ===
+Fecha: 2026-05-20T23:12:47.371Z
+
+## Banco EXAMEN (simulacro) (522 preguntas)
+  ✓ Sin duplicados exactos (enunciado+opciones)
+  ✓ Sin parafraseos cercanos
+  ✓ Nada fuera de ámbito radioaficionado
+  ✓ Sin ítems normativamente inaceptables
+  ✓ Sin fugas de lista de exclusión
+  ✓ UTF-8 OK
+
+## Banco ESTUDIO (practicar) (542 preguntas)
+  ✓ Sin duplicados exactos (enunciado+opciones)
+  ✓ Sin parafraseos cercanos
+  ✓ Nada fuera de ámbito radioaficionado
+  ✓ Sin ítems normativamente inaceptables
+  ✓ Sin fugas de lista de exclusión
+  ✓ UTF-8 OK
+  ✓ Todas las preguntas examen están en banco estudio
+
+RESULTADO: OK para publicar y estudiar.

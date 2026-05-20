@@ -1,0 +1,82 @@
+Repaso explicaciones banco estudio · 2026-05-20T22:34:04
+
+✓ ure-p1-q126
+  P: Al objeto de evitar que el transceptor introduzca señales de radiofrecuencia en la red de suministro
+  E: El filtro de línea de desacoplo evita que RF del equipo entre en la red eléctrica doméstica. «Filtro de línea de desacoplo».
+
+✓ ure-p1-q183
+  P: Un termistor de tipo NTC es:
+  E: NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. «Una resistencia cuyo valor se reduce a medida que la tempera
+
+✓ ure-p1-q251
+  P: La etapa de detección de un receptor se emplea para:
+  E: La etapa de detección (demodulador) extrae audio o datos de la portadora o FI ya filtrada. «Demodular la señal recibida».
+
+✓ ure-p1-q382
+  P: Las interferencias son más frecuentes empleando:
+  E: El enunciado del banco asocia aquí las interferencias a «Amplificadores lineales de potencia» frente a AM, antenas directivas o receptores convencionales. Contr
+
+✓ ure-p1-q385
+  P: Un termistor PTC es aquel que:
+  E: PTC: la resistencia sube con la temperatura; se usa en protección térmica. NTC baja con el calor. «Su valor aumenta con la temperatura».
+
+✓ ure-p1-q481
+  P: En un circuito eléctrico de corriente continua:
+  E: En un circuito CC simple, la intensidad es la misma en serie; no confundir con reparto de tensión. «La intensidad está en razón directa a la tensión».
+
+✓ ure-p1-q69
+  P: Los receptores de conversión directa:
+  E: En conversión directa (homodino) se mezcla la RF con un oscilador para obtener audio o FI muy baja en un solo paso. «Mezclan directamente la señal recibida para
+
+✓ ure-p1-q7
+  P: Un termistor NTC es:
+  E: NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. «Una resistencia cuyo valor se reduce a medida que la tempera
+
+✓ ure-p1-q80
+  P: Para realizar medidas de intensidad de campo radiado por una antena se emplea:
+  E: La intensidad de campo se mide con sonda o medidor de campo (V/m o dBµV/m), no con vatímetro de potencia directa. «Un medidor de campo».
+
+✓ ure-p2-q119
+  P: La emisión de una o varias frecuencias situada inmediatamente fuera de la anchura de banda necesaria
+  E: Emisiones fuera de banda son componentes espectrales adyacentes no deseadas (armónicos, splatter). «Fuera de banda».
+
+✓ ure-p2-q160
+  P: Utilizar la palabra "cambio" al finalizar una transmisión en fonía es:
+  E: En fonía se usa «cambio» al ceder el turno de palabra; es buena práctica operativa. «Recomendable».
+
+✓ ure-p2-q177
+  P: Las autorizaciones especiales para emisiones en bandas de frecuencias de uso restringido:
+  E: Las autorizaciones en bandas restringidas tienen plazo limitado; el enunciado fija el máximo legal aplicable. «Se otorgarán por un plazo máximo de dieciocho mes
+
+✓ ure-p2-q237
+  P: Toda telecomunicación transmitida por medio de ondas radioeléctricas recibe el nombre de:
+  E: Radiocomunicación es toda telecomunicación realizada mediante ondas radioeléctricas. «Radiocomunicación».
+
+✓ ure-p2-q270
+  P: En telegrafía, la abreviatura de procedimiento usada para finalizar una transmisión es:
+  E: En telegrafía, AR (end of message) indica fin de transmisión del mensaje. «AR».
+
+✓ ure-p2-q335
+  P: Comprobar si alguien está utilizando una frecuencia, antes de iniciar una transmisión en la misma, e
+  E: Antes de transmitir conviene escuchar la frecuencia (QRL/QRY) para no interferir: buena práctica operativa. «Una práctica de operar adecuada».
+
+✓ ure-p2-q457
+  P: Las ondas métricas se representan por el símbolo:
+  E: Las ondas métricas (30–300 MHz) se asocian al símbolo VHF en la nomenclatura habitual del examen. «VHF».
+
+✓ ure-p2-q51
+  P: El Reglamento de uso del dominio público radioeléctrico por aficionados:
+  E: El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones según el texto vigente. «Prevé que el CNAF podrá modificar en algún m
+
+✓ ure-p2-q530
+  P: La reglamentación vigente permite el funcionamiento de radiobalizas en las bandas:
+  E: Las radiobalizas de emergencia usan bandas asignadas en VHF (p. ej. 144–146 MHz en el banco). «144 -146 MHz».
+
+Actualizadas: 18
+Sin arreglar: 2
+
+=== Pendientes ===
+- ure-p1-q3: La capacidad de un receptor para separar señales de RF de frecuencias muy próxim
+  En este enunciado («La capacidad de un receptor para separar señales de RF de frecuencias mu…»), el criterio de examen a
+- ure-p1-q6: En sistemas de transmisión analógicos, las señales:
+  En este enunciado («En sistemas de transmisión analógicos, las señales:»), el criterio de examen apunta a «Pueden tener 

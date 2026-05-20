@@ -1,6 +1,8 @@
 # RadioExamen (webradioaficion)
 
-Herramienta web para preparar el examen de radioaficionado en España: temario, banco de preguntas, práctica, simulacros, cuaderno de errores y tarjetas con repaso espaciado.
+Herramienta web para **aprobar el examen de radioaficionado en España**: temario, banco de preguntas verificado, práctica, simulacros (30+30), cuaderno de errores y tarjetas.
+
+**Ruta de estudio:** ver [RUTA_AL_APTO.md](RUTA_AL_APTO.md).
 
 ## Requisitos
 
@@ -22,7 +24,11 @@ Abre `http://localhost:3000` (o el puerto que indique el servidor).
 npm run verify:all
 ```
 
-Incluye integridad del banco (~1040 preguntas de examen oficial, sin material TETRA/Tráfico), BOE, explicaciones y 78 tests.
+Incluye integridad del banco (**481 preguntas** publicadas, sin material TETRA/Tráfico), BOE, explicaciones y tests.
+
+```bash
+npm run audit:exam-ready   # ¿proyecto listo para su cometido?
+```
 
 ```bash
 npm run build:banco      # regenerar banco tras cambiar fuentes

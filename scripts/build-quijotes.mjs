@@ -12,8 +12,9 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import { loadExistingDedupeKeys } from "../lib/existing-question-keys.mjs";
+import { dedupeKey } from "../lib/import-question-utils.mjs";
 import {
-  dedupeKey,
   discoverExamQuizUrls,
   detectQuizKey,
   fetchQuizPool,
@@ -26,6 +27,8 @@ const OUT_EXPLAIN = path.join(__dirname, "..", "data", "quijotes-explanations.js
 
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
+const allowDuplicates = args.includes("--allow-duplicates");
+const slugFilter = args.find((a) => a.startsWith("--slug="))?.split("=")[1]?.replace(/\/$/, "");
 const roundsArg = args.find((a) => a.startsWith("--rounds="));
 const ROUNDS = roundsArg ? parseInt(roundsArg.split("=")[1], 10) : 60;
 
@@ -134,7 +137,26 @@ async function main() {
     if (q) trapKeys.add(dedupeKey(q.stem, q.options));
   }
 
-  const discovered = await discoverExamQuizUrls();
+  let existingKeys = new Set();
+  if (!allowDuplicates) {
+    const loaded = await loadExistingDedupeKeys();
+    existingKeys = loaded.keys;
+    process.stderr.write(
+      `Claves ya en proyecto: ${existingKeys.size} (${Object.entries(loaded.counts)
+        .map(([f, n]) => `${f}:${n}`)
+        .join(", ")})\n`,
+    );
+  }
+
+  let discovered = await discoverExamQuizUrls();
+  if (slugFilter) {
+    discovered = discovered.filter((d) => d.slug === slugFilter || d.slug.includes(slugFilter));
+    if (!discovered.length) {
+      console.error(`No hay quiz con slug «${slugFilter}».`);
+      process.exit(1);
+    }
+  }
+
   const sources = [];
 
   for (const { url, slug } of discovered) {
@@ -152,8 +174,15 @@ async function main() {
     });
   }
 
-  const merged = [];
-  const seen = new Set();
+  /** @type {Map<string, object>} */
+  const mergedByKey = new Map();
+  for (const q of legacyById.values()) {
+    mergedByKey.set(dedupeKey(q.stem, q.options), q);
+  }
+
+  let skippedExisting = 0;
+  let skippedDupRun = 0;
+  let addedNew = 0;
 
   for (const src of sources) {
     process.stderr.write(`Muestreando ${src.slug} (quiz ${src.key}, ${ROUNDS} rondas)…\n`);
@@ -164,22 +193,55 @@ async function main() {
     });
     for (const it of items) {
       const k = dedupeKey(it.stem, it.options);
-      if (seen.has(k)) continue;
-      seen.add(k);
-      merged.push({ ...it, sourceSlug: src.slug });
+      if (existingKeys.has(k)) {
+        skippedExisting += 1;
+        continue;
+      }
+      if (mergedByKey.has(k)) {
+        skippedDupRun += 1;
+        continue;
+      }
+      const row = {
+        id: stableQuijotesId(it.quizKey, it.qid),
+        part: it.part,
+        topicId: it.topicId,
+        stem: it.stem,
+        options: it.options,
+        correctIndex: it.correctIndex,
+        explain: `Práctica histórica (Quijotes EA3RCQ · ${src.slug}, quiz ${it.quizKey}, pregunta ${it.qid}). Puede contener erratas; contrastar con BOE/convocatoria.`,
+      };
+      mergedByKey.set(k, row);
+      existingKeys.add(k);
+      addedNew += 1;
     }
-    process.stderr.write(`  → ${items.length} del quiz, ${merged.length} acumuladas únicas\n`);
+    process.stderr.write(
+      `  → ${items.length} del quiz, +${addedNew} nuevas, ${skippedExisting} ya en banco/fuentes, ${skippedDupRun} duplicadas en esta pasada\n`,
+    );
   }
 
-  process.stderr.write(`\nTotal Quijotes: ${merged.length} preguntas únicas (${sources.length} quizzes).\n`);
+  const merged = [...mergedByKey.values()];
+  process.stderr.write(
+    `\nTotal Quijotes: ${merged.length} (${addedNew} añadidas, ${skippedExisting} omitidas por ya existir, ${legacyById.size} legado conservado).\n`,
+  );
 
   if (dryRun) {
     process.stderr.write("Modo --dry-run: no se escribieron archivos.\n");
     return;
   }
 
-  writeQuestionsModule(merged, sources);
-  const nExplain = writeExplanationsModule(merged, stemToExplain);
+  const forWrite = merged.map((q) => ({
+    quizKey: q.id.match(/^quijotes-(\d+)-/)?.[1] ?? "0",
+    qid: q.id.replace(/^quijotes-\d+-/, ""),
+    part: q.part,
+    topicId: q.topicId,
+    stem: q.stem,
+    options: q.options,
+    correctIndex: q.correctIndex,
+    sourceSlug: q.explain?.match(/Quijotes EA3RCQ · ([^,]+),/)?.[1] ?? "quijotes",
+  }));
+
+  writeQuestionsModule(forWrite, sources);
+  const nExplain = writeExplanationsModule(forWrite, stemToExplain);
   process.stderr.write(`Escrito ${OUT}\n`);
   process.stderr.write(`Escrito ${OUT_EXPLAIN} (${nExplain} explicaciones remapeadas).\n`);
 

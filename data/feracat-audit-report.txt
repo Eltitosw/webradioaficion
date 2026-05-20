@@ -1,0 +1,73 @@
+=== Auditoría FeRaCat vs banco local ===
+Fuente: https://www.feracat.org/examen/ejercicios/
+Corpus local: 1504 enunciados únicos (exactos)
+
+Resumen por pregunta:
+  Total en FeRaCat:        1078
+  Ya en fedi-{bloque}-N:   914 (mismo texto, importado vía fediea.org)
+  Duplicado otro FEDI:     18
+  Duplicado banco (exact): 19
+  Duplicado parafraseo:    0
+  Obsoleta (JPIT/SET…):    13
+  Requiere figura:         49
+  Fuera de examen:         1
+  Sin respuesta OK:        0
+  Texto distinto a local:  57
+  NUEVAS aprovechables:    7
+  Errores de red:          0
+
+--- Candidatas nuevas (muestra) ---
+  feracat-a-001 [P1] Cuando se habla del colector nos referimos a:
+  feracat-b-157 [P1] Una pila eléctrica proporciona energía eléctrica a costa de consumir energía:
+  feracat-b-239 [P1] LAS ESTACIONES DE AFICIONADO QUEDAN SOMETIDAS A LA INSPECCIÓN DE:
+  feracat-c-331 [P2] DURANTE SUS EMISIONES ¿CUANDO DEBEN DE TRANSMITIR SUS DISTINTIVOS DE LLAMADA LAS ESTACIONES DE AFICIONADOS?
+  feracat-d-401 [P1] LA RESISTENCIA eléctrica DE UN CUERPO ES DIRECTAMENTE PROPORCIONAL A LAS DOS MAGNITUDES SIGUIENTES:
+  feracat-s-001 [P1] En un sistema de radiocomunicación, el llamado "ruido blanco":
+  feracat-aa-001 [P1] Cuando la impedancia de la antena, de la línea de transmisión y de salida del emisor, coinciden:
+
+--- Mismo nº FEDI pero texto distinto FeRaCat vs local ---
+  fedi-a-074
+    FeRaCat: Las estaciones de aficionado quedan sometidas a la inspección de:
+    Local:   Las estaciones de aficionado quedan sometidas a la inspección de:
+  fedi-b-248
+    FeRaCat: CUANDO EL MODO DE EMISIÓN ESTA EN LA POSICIÓN “CW” SE PUEDE TRABAJAR EN:
+    Local:   CUANDO EL MODO DE EMISIÓN ESTA EN LA POSICIÓN CW SE PUEDE TRABAJAR EN:
+  fedi-b-288
+    FeRaCat: PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓ
+    Local:   PARA LA UTILIZACIÓN DE ESTACIONES DE RADIOAFICIONADO ES IMPRESCINDIBLE OBTENER LA PREVIA AUTORIZACIÓ
+  fedi-d-431
+    FeRaCat: Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:
+    Local:   Se pueden introducir modificaciones de sistema radiante de una estación de aficionado:
+  fedi-d-563
+    FeRaCat: NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODI
+    Local:   NO ELIMINAR O REDUCIR A NIVELES ACEPTABLES LAS INTERFERENCIAS A LA RECEPCION DE EMISIONES DE RADIODI
+  fedi-d-573
+    FeRaCat: ¿SE PUEDEN INTRODUCIR MODIFICACIONES DE SISTEMA RADIANTE DE UNA ESTACION DE AFICIONADO?
+    Local:   ¿SE PUEDEN INTRODUCIR MODIFICACIONES DE SISTEMA RADIANTE DE UNA ESTACION DE AFICIONADO?
+  fedi-d-574
+    FeRaCat: ¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A LA DIRECCION GEN
+    Local:   ¿CUAL ES EL PLAZO PARA QUE EL TITULAR DE UNA LICENCIA DE ESTACION MOVIL NOTIFIQUE A la Administració
+  fedi-e-011
+    FeRaCat: La energía almacenada en un condensador C se expresa por la fórmula:
+    Local:   La energía almacenada en un condensador C se expresa por la fórmula:
+  fedi-f-042
+    FeRaCat: Según la Ley 32/2003, de 3 de noviembre, General de Telecomunicaciones, retrasar injustificadamente 
+    Local:   Según la Ley 11/2022, de 28 de junio, General de Telecomunicaciones (BOE-A-2022-10757), retrasar inj
+  fedi-h-044
+    FeRaCat: Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por o
+    Local:   Según la legislación de Telecomunicaciones, en el caso de desmontar una instalación de antenas por o
+  fedi-h-060
+    FeRaCat: Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas 
+    Local:   Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas 
+  fedi-n-043
+    FeRaCat: La Dirección General de Telecomunicaciones debe informar al presidente de la comunidad de propietari
+    Local:   La Administración competente en espectro radioeléctrico debe informar al presidente de la comunidad 
+  fedi-n-052
+    FeRaCat: ¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:
+    Local:   ¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo t
+  fedi-n-053
+    FeRaCat: En caso de cancelación de la Licencia de Estación de Aficionado. ¿Puede su titular mantener instalad
+    Local:   En caso de cancelación de la Licencia de Estación de Aficionado. ¿Puede su titular mantener instalad
+  fedi-p-053
+    FeRaCat: El cambio de ubicación de una antena:
+    Local:   El cambio de ubicación de una antena:

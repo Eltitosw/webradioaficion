@@ -3,6 +3,17 @@ import assert from "node:assert/strict";
 
 import { dedupeBankByStem, pickDuplicateWinner } from "../lib/banco-dedupe.mjs";
 
+test("pickDuplicateWinner: prefiere URE frente a FEDI duplicado", () => {
+  const winner = pickDuplicateWinner(
+    [
+      { id: "fedi-ag-001", stem: "x", options: ["a"] },
+      { id: "ure-p1-q42", stem: "x", options: ["a"] },
+    ],
+    new Set(),
+  );
+  assert.equal(winner.id, "ure-p1-q42");
+});
+
 test("pickDuplicateWinner: prefiere cribado y URE frente a Quijotes duplicado", () => {
   const crib = new Set(["ure-p1-02"]);
   const winner = pickDuplicateWinner(
