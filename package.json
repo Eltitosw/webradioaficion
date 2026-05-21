@@ -8,7 +8,9 @@
     "verify:figures": "node scripts/verify-figures.mjs",
     "verify:encoding": "node scripts/verify-encoding.mjs",
     "audit:frontend": "node scripts/audit-frontend-views.mjs",
+    "test:e2e": "node scripts/e2e-functional-check.mjs",
     "audit:live": "node scripts/audit-live-deploy.mjs",
+    "publish:check": "npm run build:web && npm run sync-version && node scripts/publish-static.mjs",
     "verify:all": "node scripts/verify-encoding.mjs && node scripts/verify-data.mjs && node scripts/verify-extra.mjs && node scripts/verify-figures.mjs && node scripts/verify-exam-banco.mjs && node scripts/audit-explanations.mjs && node scripts/verify-explanations-strict.mjs && node scripts/verify-sources.mjs && node scripts/audit-frontend-views.mjs && node scripts/audit-banco-quality.mjs && node scripts/validate-classification-pools.mjs && node --test tests/smoke.test.mjs tests/quiz-session.test.mjs tests/stem-figure.test.mjs tests/stem-needs-figure.test.mjs tests/text-encoding.test.mjs tests/banco-dedupe.test.mjs tests/banco-fill.test.mjs tests/explain-quality.test.mjs tests/explain-faithfulness.test.mjs tests/explain-verify.test.mjs tests/source-verification.test.mjs tests/quiz-structured-feedback.test.mjs tests/learn-while-test.test.mjs tests/learn-contrast-rules.test.mjs tests/question-paraphrase.test.mjs tests/learning-coach.test.mjs tests/question-recency.test.mjs tests/question-pool.test.mjs tests/exam-scope.test.mjs tests/import-topic-classification.test.mjs",
     "sync-version": "node scripts/sync-version.mjs",
     "import:banks": "node scripts/import-banks.mjs",
@@ -51,11 +53,13 @@
     "expand:explanations:needed": "node scripts/expand-explanations-when-needed.mjs",
     "expand:explanations:exam:needed": "node scripts/expand-explanations-exam-needed.mjs",
     "strip:ure-figures": "node scripts/strip-ure-orphan-figures.mjs",
-    "finalize:banco": "node scripts/strip-ure-orphan-figures.mjs && node scripts/apply-boe-bank-corrections.mjs && node scripts/sync-boe-normative-explanations.mjs && node scripts/patch-historical-hedges.mjs && node scripts/build-banco-principal.mjs && node scripts/build-banco-estudio.mjs",
+    "finalize:banco": "node scripts/strip-ure-orphan-figures.mjs && node scripts/apply-boe-bank-corrections.mjs && node scripts/sync-boe-normative-explanations.mjs && node scripts/patch-historical-hedges.mjs && node scripts/build-banco-principal.mjs && node scripts/build-banco-estudio.mjs && node scripts/sync-cribado-banco.mjs",
+    "sync:cribado": "node scripts/sync-cribado-banco.mjs",
     "verify:sources": "node scripts/verify-sources.mjs",
     "verify:boe-dates": "node scripts/verify-boe-dates.mjs",
     "build:web": "node scripts/build-frontend.mjs",
     "repair:encoding": "node scripts/repair-data-encoding.mjs",
+    "repair:ocr": "node scripts/repair-ocr-pages.mjs",
     "repair:sourceref": "node scripts/repair-propias-sourceref.mjs",
     "repair:topics": "node scripts/repair-topic-classification.mjs && node scripts/build-banco-principal.mjs",
     "audit:feracat": "node scripts/audit-feracat.mjs",
@@ -70,5 +74,8 @@
     "recover:banco": "node scripts/repair-propias-sourceref.mjs && node scripts/import-banks.mjs --fedi && node scripts/import-figures.mjs && node scripts/cribado-recencia.mjs && node scripts/build-banco-principal.mjs",
     "audit:encoding": "node scripts/audit-encoding.mjs",
     "import:banks:fedi": "node scripts/import-banks.mjs --fedi"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.1"
   }
 }

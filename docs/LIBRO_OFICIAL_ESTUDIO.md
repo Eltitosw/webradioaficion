@@ -13,6 +13,16 @@ Material en PDF por capítulos (no subir al repositorio: ~1,3 GB).
 
 Ruta habitual en este proyecto: `C:\Users\joanc\Documents\output\chapters\`
 
+### OCR / audiobook (1.ª parte técnica)
+
+Texto por página (útil para alinear el temario, no para publicar en la web):
+
+`C:\Users\joanc\Documents\output\audiobook\parte_02_Primera_parte__Técnica\ocr-pages\`
+
+- `0022.txt` = página impresa **22** (cap. 1).
+- Índice capítulos ↔ bloques del temario: `data/libro-tecnica-indice.mjs`.
+- Tras generar o actualizar OCR: `npm run repair:ocr` (limpia marcas de agua, tildes/mojibake y errores léxicos frecuentes; regenera `texto.txt`).
+
 ## Cómo usarlo con la app
 
 1. **Temario** en la app → leer el bloque.

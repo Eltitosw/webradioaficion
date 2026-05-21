@@ -239,9 +239,10 @@ var topics_study_default = {
       "Filtros RC/RLC: frecuencia de corte conceptual seg\xFAn R, L, C."
     ],
     "expressBullets": [
-      "Diodo en directa conduce; en inversa bloquea (modelo ideal del test).",
-      "Condensador pasa altas (bloquea DC en coupling); bobina opondr\xE1se a cambios bruscos de I.",
-      "Puente rectificador: convierte AC en pulsante DC; despu\xE9s suele ir filtrado."
+      "Diodo PN: umbral \u2192 abierto; por encima \u2192 conduce. Media onda vs puente.",
+      "BJT emisor com\xFAn = amplificar; FET = control por tensi\xF3n (puerta).",
+      "Acoplador T/\u03C0: antena \u2260 50 \u03A9 \u2192 presentar 50 \u03A9 al TX.",
+      "Condensador pasa altas; bobina se opone a cambios bruscos de I."
     ],
     "readMore": [
       "Transistor bipolar: tiene emisor, base y colector; una peque\xF1a se\xF1al en base controla una corriente mayor entre colector y emisor.",
@@ -261,28 +262,40 @@ var topics_study_default = {
       "El condensador almacena carga en un campo el\xE9ctrico. En continua, una vez cargado, se comporta idealmente como circuito abierto. En alterna presenta reactancia capacitiva, que disminuye al subir la frecuencia.",
       "La bobina almacena energ\xEDa en un campo magn\xE9tico. En continua ideal se comporta casi como un cortocircuito; en alterna presenta reactancia inductiva, que aumenta con la frecuencia.",
       "La resonancia aparece cuando reactancia inductiva y capacitiva se compensan. En circuitos sintonizados, el factor Q relaciona frecuencia de resonancia y ancho de banda: Q = f/B.",
-      "El diodo conduce principalmente en un sentido. El Zener se usa como referencia o regulaci\xF3n en inversa; el LED emite luz; el varicap se comporta como condensador variable controlado por tensi\xF3n.",
+      "Semiconductores: germanio o silicio puro son aislantes; con impurezas donantes (tipo N, m\xE1s electrones) o aceptoras (tipo P, huecos) aumenta la conductividad. El diodo es una uni\xF3n PN: por debajo del umbral se comporta como circuito abierto; por encima conduce con muy baja resistencia.",
+      "Aplicaciones del diodo (libro cap. 3): rectificador de media onda (elimina semiciclo negativo, salida pulsante), puente de onda completa, Zener en inversa como referencia, LED y varicap (condensador 1\u2013500 pF controlado por tensi\xF3n inversa, m\xEDnimo ~1 V).",
       "El transformador acopla energ\xEDa entre bobinas. La relaci\xF3n de espiras determina la relaci\xF3n de tensiones; si sube tensi\xF3n en el secundario, idealmente baja la corriente disponible.",
-      "El transistor amplifica o conmuta: una peque\xF1a se\xF1al en base o puerta controla una corriente mayor en colector/drenador. En examen basta distinguir funci\xF3n amplificar de rectificar (diodo).",
-      "Un puente rectificador convierte alterna en continua pulsante usando cuatro diodos. El filtro posterior (condensador) suaviza la tensi\xF3n para alimentar etapas de CC."
+      "Transistor bipolar (NPN/PNP): emisor, base y colector. Emisor com\xFAn (Fig. 64): entrada en base, salida en colector \u2014 alta ganancia de tensi\xF3n y corriente. Base com\xFAn: entrada en emisor, salida en colector. Colector com\xFAn: entrada en base, salida en emisor \u2014 baja impedancia de salida.",
+      "FET/MOSFET: controlados por tensi\xF3n en la puerta (casi sin corriente de entrada); corriente entre drenador y fuente. Bipolar: controlados por corriente de base. En examen: FET = interruptor/amplificador por tensi\xF3n; bipolar = por corriente.",
+      "Curvas del transistor (Fig. 63): zona de corte (Ic \u2248 0), zona activa (Ic depende de Ib) y saturaci\xF3n (Ic deja de depender de Ib y depende de Vce). A altas frecuencias cae la ganancia.",
+      "V\xE1lvulas (hist\xF3rico): c\xE1todo emite electrones al calentarse; placa recoge corriente. \xDAtil para entender que el diodo y el transistor evolucionan el mismo concepto de conducci\xF3n unidireccional o controlada.",
+      "Adaptaci\xF3n de impedancias (pp. 58\u201359): la antena real rara vez es exactamente 50 \u03A9; acopladores en T o en \u03C0 (condensadores + bobina) hacen resonar y presentar 50 \u03A9 al transmisor. Los equipos modernos suelen llevar acoplador autom\xE1tico."
     ],
     "practiceDrills": [
-      "Haz tarjetas s\xEDmbolo\u2192funci\xF3n con los componentes que m\xE1s caen: diodo conduce en un sentido, varicap equivale a capacidad controlada por tensi\xF3n, Zener regula y electrol\xEDtico exige polaridad.",
-      "Resuelve tres 'por qu\xE9': resonancia cuando reactancia L y C se igualan, PTC sube resistencia con temperatura, NTC la baja. Despu\xE9s busca una pregunta del banco que use cada idea.",
-      "Para transformadores, no memorices una frase suelta: dibuja primario/secundario, cuenta espiras y deduce si sube o baja tensi\xF3n antes de mirar respuestas."
+      "Libro pp. 48\u201359 (OCR 0048\u20130059): lee cap. 3 en PDF; dibuja uni\xF3n PN, rectificador media onda y montaje emisor com\xFAn. No copies el OCR literal \u2014 usa estas notas y las figuras del PDF.",
+      "Haz tarjetas s\xEDmbolo\u2192funci\xF3n: diodo rectifica, Zener regula en inversa, varicap = C variable, LED emite luz, BJT amplifica por corriente de base, FET por tensi\xF3n de puerta.",
+      "Resuelve tres \xABpor qu\xE9\xBB: resonancia cuando Xl = Xc; PTC sube R con temperatura; saturaci\xF3n del transistor cuando Ic ya no sigue a Ib. Busca una pregunta del banco por cada idea.",
+      "Montajes BJT: escribe en una l\xEDnea la entrada y la salida de emisor com\xFAn, base com\xFAn y colector com\xFAn. Si el enunciado pide \xABm\xE1xima ganancia de tensi\xF3n\xBB, piensa emisor com\xFAn.",
+      "Acoplamiento antena: si ROE alta con antena real, el libro propone acoplador T o \u03C0 \u2014 no confundas con el balun (balanceado/no balanceado)."
     ],
     "quickSession": [
       "Para comparar R, L y C: R disipa energ\xEDa y se mide en ohmios; C almacena carga/campo el\xE9ctrico y se mide en faradios; L almacena campo magn\xE9tico y se mide en henrios.",
       "Si sube la frecuencia, el condensador ofrece menos oposici\xF3n porque su reactancia capacitiva baja. La bobina ofrece m\xE1s oposici\xF3n porque su reactancia inductiva sube.",
       "En resistencias en serie, suma directa: Rtotal = R1 + R2 + R3. En paralelo, el resultado siempre es menor que la resistencia m\xE1s peque\xF1a; para dos iguales, Req = R/2.",
       "En condensadores sucede al rev\xE9s que en resistencias: en paralelo se suman capacidades; en serie la capacidad equivalente baja.",
-      "Para diodos, piensa en funci\xF3n: rectificador deja pasar semiciclos en una fuente, Zener estabiliza tensi\xF3n en inversa, LED indica/emite luz y varicap act\xFAa como condensador variable.",
-      "En transformadores, compara espiras. Si el secundario tiene m\xE1s espiras que el primario, sube tensi\xF3n; si tiene menos, baja tensi\xF3n. Idealmente, al subir tensi\xF3n baja corriente para conservar potencia."
+      "Diodo PN: por debajo del umbral \u2248 abierto; por encima \u2248 conductor. Rectificador media onda corta un semiciclo; puente de cuatro diodos da pulsos de ambos semiciclos.",
+      "Zener en inversa estabiliza tensi\xF3n; varicap cambia capacidad con tensi\xF3n (sinton\xEDa); LED convierte corriente en luz.",
+      "BJT emisor com\xFAn: Ib peque\xF1a controla Ic grande \u2014 es el montaje t\xEDpico de amplificaci\xF3n. FET: V en puerta controla corriente drenador\u2013fuente sin consumir corriente de puerta (ideal).",
+      "Saturaci\xF3n: Ic deja de crecer con Ib; corte: Ic \u2248 0. En examen, \xABzona activa\xBB = amplificaci\xF3n lineal.",
+      "Transformador: V1/V2 = N1/N2. Acoplador T o \u03C0 al final del cap. 3: presenta 50 \u03A9 al TX cuando la antena no coincide."
     ],
     "examChecklist": [
       "Faradio = capacidad; henrio = inductancia; ohmio = resistencia.",
       "Diodo ideal conduce en directa y bloquea en inversa.",
       "Zener se usa como referencia/regulaci\xF3n en inversa controlada.",
+      "BJT emisor com\xFAn: alta ganancia; FET: control por tensi\xF3n en puerta.",
+      "Transistor: corte, activa, saturaci\xF3n (Fig. 63).",
+      "Acoplador T o \u03C0 adapta impedancia de antena a 50 \u03A9.",
       "Factor Q aparece en bobinas/circuitos resonantes y selectividad.",
       "PTC sube resistencia al subir temperatura; NTC baja resistencia al subir temperatura."
     ],
@@ -329,17 +342,21 @@ var topics_study_default = {
   },
   "receptores-emisores": {
     "memoryHooks": [
-      "Superheterodino: mezclador + OL \u2192 FI fija; amplificar FI es m\xE1s estable que a RF variable.",
-      "Detector: AM diodo/envelope; SSB product detector; FM discriminador (concepto).",
-      "Medici\xF3n: vat\xEDmetro para potencia; ROE alto \u2192 desadaptaci\xF3n."
+      "Superheterodino: FI AM ~455 kHz, FM ~10,7 MHz; mezclador + OL en t\xE1ndem con sinton\xEDa.",
+      "Galena: L-C + diodo detector (hist\xF3rico; poca sensibilidad/selectividad).",
+      "TX: excitador \u2192 PA; mezcla bajo nivel + amplificadores lineales.",
+      "Medici\xF3n: vat\xEDmetro potencia; ROE alta \u2192 desadaptaci\xF3n; osciloscopio \u2192 forma de onda."
     ],
     "expressBullets": [
-      "Cadena t\xEDpica RX: entrada \u2192 mezclador \u2192 FI \u2192 detector \u2192 AF.",
-      "Transmisor: oscilador/mezclador \u2192 amplificaci\xF3n \u2192 filtrado/arm\xF3nicos (seg\xFAn pregunta) \u2192 acoplo a antena.",
-      "Potencia reflejada alta con adaptaci\xF3n mala: ROE sube; en examen se asocia a desadaptaci\xF3n."
+      "Galena: L-C + diodo \u2192 audio (hist\xF3rico). Superheterodino: FI fija tras mezclador.",
+      "Cadena RX: RF \u2192 mezclador+OL \u2192 FI \u2192 detector \u2192 AF. TX: oscilador \u2192 excitador \u2192 PA \u2192 filtro.",
+      "FI AM ~455 kHz; FM ~10,7 MHz. Sinton\xEDa en t\xE1ndem: C variable acopla RF y OL.",
+      "Interferencias: arm\xF3nicos, modulaci\xF3n cruzada, bloqueo \u2192 filtros rechazo / atenuador."
     ],
     "readMore": [
       "Estabilidad y selectividad: trabajar a FI fija permite filtros m\xE1s eficaces y ganancia m\xE1s controlada que intentar hacerlo todo a RF variable.",
+      "Frecuencia imagen: conviene FI suficientemente alta para separar frecuencia deseada e imagen; por eso no siempre se usa la FI m\xE1s baja posible.",
+      "Mezcladores pasivos (diodos): mejor frente a intermodulaci\xF3n pero m\xE1s ruidosos y exigen m\xE1s se\xF1al del oscilador local; activos (FET) pueden ganar ~10 dB en conversi\xF3n.",
       "Control AGC/CAG: reduce o aumenta ganancia autom\xE1ticamente para que la salida no cambie demasiado cuando cambia la intensidad de se\xF1al.",
       "Emisiones no deseadas: arm\xF3nicos, espurias e intermodulaci\xF3n se reducen con dise\xF1o lineal, filtrado y no sobreexcitar etapas."
     ],
@@ -352,39 +369,61 @@ var topics_study_default = {
       "Receptores y transmisores: superheterodino simple/doble, conversi\xF3n directa, bloques de CW/AM/SSB/FM, FI, CAG, medidor S, silenciador, excitador, PA, filtro de salida y repetidores VHF/UHF."
     ],
     "bookGuide": [
-      "Un receptor transforma una se\xF1al de radio muy d\xE9bil en informaci\xF3n \xFAtil. En un superheterodino, la se\xF1al de RF se mezcla con un oscilador local para obtener una frecuencia intermedia fija.",
-      "La frecuencia intermedia permite usar filtros y amplificadores estables. Despu\xE9s llega la detecci\xF3n o demodulaci\xF3n: detector de envolvente para AM, detector de producto para SSB/CW y discriminador para FM.",
-      "La selectividad es la capacidad de separar se\xF1ales pr\xF3ximas; la sensibilidad es la capacidad de recibir se\xF1ales d\xE9biles; la estabilidad es la capacidad de mantenerse en frecuencia.",
-      "El CAG/AGC ajusta autom\xE1ticamente la ganancia para evitar saturaci\xF3n con se\xF1ales fuertes. El squelch silencia el audio cuando no hay se\xF1al suficiente.",
-      "Un transmisor genera o procesa la se\xF1al, la modula, la amplifica y la filtra antes de enviarla a la antena. El filtro de salida reduce arm\xF3nicos y emisiones no deseadas.",
-      "Los instrumentos se asocian a magnitudes concretas: vat\xEDmetro para potencia, frecuenc\xEDmetro para frecuencia, osciloscopio para formas de onda y analizador de espectro para componentes espectrales.",
-      "En SSB la potencia de referencia suele ser PEP (pico de la envolvente). No confundas PEP con potencia media en AM o con lectura de vat\xEDmetro sin el modo correcto.",
-      "El medidor de ROE se coloca entre transmisor y l\xEDnea de antena. ROE alta indica reflexi\xF3n por desadaptaci\xF3n; el acoplador puede ayudar a presentar carga adecuada al transmisor."
+      "Receptor de galena (cap. 6, Fig. 100\u2013101): antena \u2192 circuito sintonizado L-C (C1, L1, C2) selecciona la emisora; diodo en una toma de L1 rectifica la RF; condensador de audio filtra y los auriculares reproducen la modulaci\xF3n. Poca sensibilidad y selectividad, pero ilustra la detecci\xF3n.",
+      "Los receptores de RF sintonizada fallaban en estabilidad y selectividad (filtros Q altos pero ancho de banda enorme en RF). El superheterodino convierte todas las se\xF1ales a una FI constante y m\xE1s baja antes de detectar.",
+      "Heterodinaci\xF3n: mezclador + oscilador local producen suma y diferencia. La FI es la frecuencia intermedia fija. Suele elegirse el producto inferior (o el que filtre la cadena). FI AM dom\xE9stica ~455 kHz (algunos textos 470 kHz); FM ~10,7 MHz.",
+      "Cadena superheterodino AM (libro): antena \u2192 amplificador RF \u2192 mezclador \u2192 amplificador FI \u2192 detector \u2192 amplificador de audio. La etapa de FI admite filtros LC, de cristal, mec\xE1nicos o DSP con gran selectividad.",
+      "Secci\xF3n de entrada: circuitos sintonizados de alto Q por banda para atenuar emisoras fuertes de bandas adyacentes antes del mezclador.",
+      "Mezcladores activos (p. ej. FET) pueden ganar ~10 dB en conversi\xF3n; pasivos con diodos pierden ~8 dB pero resisten mejor la intermodulaci\xF3n, a costa de m\xE1s nivel de oscilador local. DBM y TBM (triple balanceado) mejoran el balanceo.",
+      "Frecuencia imagen: una FI m\xE1s alta facilita separar se\xF1al deseada e imagen con el mismo filtro de RF. FI fija permite reutilizar el mismo filtro de FI para todas las estaciones de una banda.",
+      "Detectores: AM \u2192 envolvente (diode + constante de tiempo RC lenta para seguir la portadora); SSB/CW \u2192 producto + BFO; FM \u2192 discriminador o pendiente. SSB en TX exige filtro por banda lateral (mec\xE1nico o digital).",
+      "CAG/AGC y squelch: el AGC evita saturaci\xF3n con se\xF1ales fuertes variando ganancia; el squelch corta audio sin se\xF1al \xFAtil. Limitadores de ruido anal\xF3gicos y DNL (Digital Noise Limiter) suprimen picos que saturan etapas previas.",
+      "Sinton\xEDa en t\xE1ndem: el mismo condensador variable (o ganged) sintoniza la entrada RF y el oscilador local manteniendo \u0394f = FI constante al girar el dial.",
+      "Transmisor elemental (cap. 7): oscilador directo monobanda/QRP; se a\xF1ade etapa separadora/amplificadora para no cargar el oscilador. Transmisores serios usan cambio de frecuencia: osciladores, mezcladores y multiplicadores por etapa.",
+      "Excitador alimenta la etapa de potencia (PA) con se\xF1al ya modulada y filtrada. Mezclar a bajo nivel y amplificar en lineal reduce distorsi\xF3n e intermodulaci\xF3n. Filtro de salida aten\xFAa arm\xF3nicos antes de la antena.",
+      "Transceptor multimodo: misma heterodinaci\xF3n en RX y TX; conmutadores seleccionan osciladores fijos por banda en la salida del mezclador. Manipulador Morse en CW interrumpe la portadora manualmente.",
+      "Interferencias (pp. 123\u2013135): arm\xF3nicos de emisoras >30 MHz, modulaci\xF3n cruzada en entornos urbanos, bloqueo por se\xF1al muy fuerte. Soluciones: filtros de rechazo, atenuadores, blindaje, antena m\xE1s directiva.",
+      "Medidas (cap. 10, pp. 166\u2013177): vat\xEDmetro en l\xEDnea (potencia directa/reflejida); medidor ROE entre TX y l\xEDnea; osciloscopio para formas de onda y tensiones (escala vertical calibrada); frecuenc\xEDmetro; analizador de espectro para arm\xF3nicos.",
+      "En SSB la potencia de referencia suele ser PEP. ROE alta = energ\xEDa reflejada por desadaptaci\xF3n; acoplador o ajuste de antena la corrigen. S-meter: intensidad relativa recibida, no potencia transmitida."
     ],
     "practiceDrills": [
-      "Usa el \xEDndice del libro como propone el m\xE9todo de preparaci\xF3n: pregunta de FI \u2192 receptor \u2192 diagrama de bloques \u2192 respuesta. FI va despu\xE9s del mezclador en el superheterodino.",
-      "Dibuja dos cadenas y t\xE1pales un bloque: RX con RF, mezclador, FI, detector y audio; TX con oscilador/modulador, excitador, PA y filtro de salida. Completa el hueco como si fuera un test.",
-      "Empareja instrumento y magnitud: osciloscopio/formas de onda, frecuenc\xEDmetro/frecuencia, vat\xEDmetro/potencia, S-meter/intensidad recibida, analizador de espectro/componentes espectrales."
+      "Sesi\xF3n A (cap. 6, pp. 100\u2013113, OCR 0100\u20130113): galena Fig. 100\u2013101 \u2192 superheterodino Fig. bloques \u2192 marca FI tras mezclador. PDF obligatorio si OCR vac\xEDo (0109, 0115).",
+      "Sesi\xF3n B (cap. 6, pp. 114\u2013127): mezcladores activo/pasivo, AGC, interferencias. Lista: arm\xF3nico / modulaci\xF3n cruzada / bloqueo \u2192 remedio.",
+      "Sesi\xF3n C (cap. 7, pp. 114\u2013127, OCR 0117\u20130120): TX oscilador directo vs cambio de frecuencia; excitador \u2192 PA \u2192 filtro SSB.",
+      "Dibuja RX y TX en paralelo y tapa un bloque al azar: antena, mezclador, FI, detector, PA, filtro. Recita la funci\xF3n antes de mirar soluci\xF3n.",
+      "Instrumentos: 6 parejas (osciloscopio, frecuenc\xEDmetro, vat\xEDmetro, ROE, S-meter, analizador) \xD7 magnitud medida.",
+      "C\xE1lculo r\xE1pido: RF 14 MHz + OL 13,545 MHz \u2192 FI 455 kHz. Repite con otras bandas hasta automatizar suma/diferencia."
     ],
     "quickSession": [
-      "Un receptor superheterodino se entiende como cadena: antena capta RF, filtro/entrada selecciona, mezclador con oscilador local convierte a FI, amplificador de FI aumenta, detector extrae audio y amplificador de BF lo lleva al altavoz.",
-      "La FI va despu\xE9s del mezclador. Si una pregunta pregunta d\xF3nde se conecta la etapa de FI, la respuesta esperada es a la salida del mezclador.",
-      "Un transmisor b\xE1sico sigue la cadena inversa: oscilador o generador de se\xF1al, modulador, excitador, amplificador de potencia y filtro de salida antes de la antena.",
-      "El mezclador produce suma y diferencia de frecuencias. Si entran 14 MHz y 4 MHz, una salida posible es 10 MHz y otra 18 MHz; los filtros seleccionan la \xFAtil.",
-      "Cada detector depende del modo: AM usa detector de envolvente; SSB y CW usan detector de producto/BFO; FM usa discriminador o detector equivalente de frecuencia.",
-      "Instrumentos: osciloscopio para ver formas de onda; frecuenc\xEDmetro para medir frecuencia; vat\xEDmetro para potencia; medidor de ROE para adaptaci\xF3n; analizador de espectro para arm\xF3nicos y se\xF1ales no deseadas."
+      "Galena: sinton\xEDa L-C, diodo rectifica RF en toma de bobina, audio en auriculares \u2014 base conceptual, no referencia moderna.",
+      "Superheterodino: antena \u2192 RF \u2192 mezclador (OL) \u2192 FI \u2192 detector \u2192 audio. FI = salida \xFAtil del mezclador (tras filtrar suma/imagen).",
+      "\xBFPor qu\xE9 FI? Selectividad y ganancia estables; filtros estrechos en FI, no en cada frecuencia de RF.",
+      "FI t\xEDpicas: AM 455 kHz; FM 10,7 MHz. Heterodinaci\xF3n: suma y diferencia; ejemplo 14 MHz \xB1 13,545 MHz \u2192 455 kHz y 27,545 MHz.",
+      "Detectores: AM envolvente; SSB/CW producto+BFO; FM discriminador. TX SSB: filtro de una banda lateral.",
+      "AGC baja ganancia con se\xF1al fuerte; squelch silencia sin portadora. DNL limita picos de ruido digitales.",
+      "TX: oscilador \u2192 (mezclador/multiplicador) \u2192 excitador \u2192 PA \u2192 filtro \u2192 antena. QRP puede ser oscilador directo con buffer.",
+      "ROE en l\xEDnea; vat\xEDmetro potencia; osciloscopio forma de onda. S-meter solo intensidad RX."
     ],
     "examChecklist": [
-      "Mezclador genera suma y diferencia de frecuencias.",
-      "FI = frecuencia intermedia; permite filtrado y ganancia estables.",
-      "CAG/AGC controla ganancia para se\xF1ales fuertes o d\xE9biles.",
-      "Filtro de salida reduce arm\xF3nicos/espurias antes de la antena.",
-      "Clase A baja distorsi\xF3n; clase C m\xE1s eficiente pero no lineal para se\xF1al de amplitud.",
-      "S-meter indica intensidad relativa de se\xF1al recibida, no potencia de salida del transmisor."
+      "FI se genera en el mezclador (OL + RF), no en el detector.",
+      "Galena \u2260 superheterodino; ambos pueden usar diodo, pero galena no tiene FI.",
+      "Mezclador: suma y diferencia de frecuencias.",
+      "FI AM ~455 kHz; FM ~10,7 MHz (receptor dom\xE9stico).",
+      "Sinton\xEDa en t\xE1ndem mantiene FI constante al sintonizar.",
+      "CAG/AGC = ganancia autom\xE1tica; no es AFC de frecuencia.",
+      "Excitador antes de PA; filtro de salida reduce arm\xF3nicos.",
+      "Modulaci\xF3n cruzada / bloqueo / arm\xF3nicos: causas y filtros de rechazo.",
+      "ROE alta = reflexi\xF3n; S-meter = se\xF1al recibida relativa.",
+      "Osciloscopio = forma de onda; vat\xEDmetro = potencia en l\xEDnea."
     ],
     "trapWarnings": [
       "Superheterodino: el mezclador con oscilador local genera la FI. No confundas FI con detector, audio o filtro de entrada.",
       "Mezclador: aparecen suma y diferencia. Si entran 14 MHz y 4 MHz, entre las salidas posibles est\xE1 10 MHz.",
+      "FI t\xEDpica AM ~455 kHz y FM ~10,7 MHz en receptores dom\xE9sticos: no confundas FI con frecuencia de la estaci\xF3n sintonizada.",
+      "Galena rectifica en la toma de la bobina; superheterodino no es un receptor de galena aunque tambi\xE9n use diodo en detecci\xF3n.",
+      "Frecuencia imagen: no confundas con FI; la imagen es otra se\xF1al espuria separada por 2\xD7FI del oscilador (concepto de examen).",
+      "Mezclador pasivo no implica \xABmejor sensibilidad\xBB; suele perder conversi\xF3n y exigir OL m\xE1s potente.",
+      "Excitador \u2260 amplificador de potencia: el excitador prepara la se\xF1al; la PA entrega potencia a la antena.",
       "dB\xB5V es nivel de tensi\xF3n, no potencia. dBm s\xED es potencia referida a 1 mW.",
       "Sensibilidad = capacidad de recibir se\xF1ales d\xE9biles; selectividad = separar se\xF1ales cercanas; margen din\xE1mico = aguantar se\xF1ales fuertes sin saturar.",
       "CAG/AGC mantiene nivel de audio m\xE1s constante variando ganancia; no es control autom\xE1tico de frecuencia.",
@@ -420,9 +459,29 @@ var topics_study_default = {
       {
         "front": "SSB/CW frente a AM en demodulaci\xF3n",
         "back": "Detector de producto / BFO (no envolvente)"
+      },
+      {
+        "front": "FI t\xEDpica en AM (receptor dom\xE9stico, libro)",
+        "back": "Unos 455 kHz (470 kHz en algunos textos)"
+      },
+      {
+        "front": "\xBFD\xF3nde se genera la FI?",
+        "back": "En el mezclador (OL + se\xF1al de entrada), antes del amplificador de FI"
+      },
+      {
+        "front": "Galena: elementos clave",
+        "back": "Sinton\xEDa L-C, diodo en toma de bobina, audio en auriculares"
+      },
+      {
+        "front": "Mezclador activo vs pasivo (idea libro)",
+        "back": "Activo ~+10 dB conversi\xF3n; pasivo diodos ~\u22128 dB, menos intermodulaci\xF3n"
+      },
+      {
+        "front": "\xBFPor qu\xE9 FI relativamente alta?",
+        "back": "Separar se\xF1al deseada de frecuencia imagen con filtro de RF"
       }
     ],
-    "sources": "CEPT programa; bloques de receptor en gu\xEDas URE y bancos de pr\xE1ctica."
+    "sources": "CEPT programa; libro oficial 1.\xAA parte caps. 6\u20137 y 10; gu\xEDas URE."
   },
   "antenas-prop": {
     "memoryHooks": [
@@ -431,9 +490,10 @@ var topics_study_default = {
       "L\xEDnea coaxial: modo TEM; impedancia caracter\xEDstica Zo (50/75 \u03A9 t\xEDpicos)."
     ],
     "expressBullets": [
-      "Propagaci\xF3n: HF ionosfera (saltos); VHF/UHF m\xE1s l\xEDnea de vista y obst\xE1culos.",
-      "Ganancia en dBi vs dBd: diferencia fija 2,15 dB (2,15 dBi = 0 dBd) \u2014 suele aparecer como trampa/distractor.",
-      "Altura de antena: m\xE1s altura suele mejorar horizonte radioel\xE9ctrico en VHF."
+      "\u03BB \u2248 300/f(MHz); dipolo total \u2248 \u03BB/2.",
+      "ROE 1:1 = sin reflexi\xF3n; balun vs acoplador T/\u03C0.",
+      "Yagi: reflector atr\xE1s, directores delante.",
+      "HF ionosfera; VHF troposfera + l\xEDnea de vista. dBi = dBd + 2,15."
     ],
     "readMore": [
       "Ondas estacionarias: aparecen por reflexi\xF3n en la l\xEDnea cuando la carga no est\xE1 adaptada. La ROE compara m\xE1ximos y m\xEDnimos de tensi\xF3n o corriente.",
@@ -448,35 +508,44 @@ var topics_study_default = {
       "Propagaci\xF3n: onda de tierra, espacio, visi\xF3n directa, ionosfera, frecuencia cr\xEDtica, MUF, frecuencia \xF3ptima, distancia de salto, saltos m\xFAltiples, desvanecimiento, troposfera, conducto, espor\xE1dica, auroras, meteoros, EME y ruido atmosf\xE9rico/gal\xE1ctico."
     ],
     "bookGuide": [
-      "La antena convierte corriente de radiofrecuencia en onda electromagn\xE9tica y viceversa. Su longitud, forma, altura, polarizaci\xF3n e impedancia determinan c\xF3mo radia y c\xF3mo recibe.",
-      "Un dipolo de media onda mide aproximadamente \u03BB/2 en total; cada brazo es cercano a \u03BB/4. Una vertical de cuarto de onda necesita plano de tierra o radiales para funcionar correctamente.",
-      "La impedancia de antena debe adaptarse a la l\xEDnea y al transmisor para transferir potencia. Si hay desadaptaci\xF3n aparece potencia reflejada y aumenta la ROE.",
-      "Una l\xEDnea de transmisi\xF3n tiene impedancia caracter\xEDstica y factor de velocidad. El coaxial t\xEDpico de radioaficionado suele ser de 50 \u03A9; el balun adapta sistemas balanceados y no balanceados.",
-      "La Yagi es directiva y usa elemento excitado, reflector y directores. La relaci\xF3n delante-atr\xE1s compara radiaci\xF3n frontal y posterior; el ancho de haz describe la apertura del l\xF3bulo principal.",
-      "En HF predomina la propagaci\xF3n ionosf\xE9rica; en VHF/UHF domina la visi\xF3n directa, aunque pueden aparecer propagaci\xF3n troposf\xE9rica, espor\xE1dica E, meteoros, sat\xE9lite o rebote lunar.",
-      "Ganancia en dBi se refiere al dipolo isotr\xF3pico; dBd al dipolo medio onda. La conversi\xF3n aproximada es dBi = dBd + 2,15 dB. No confundas directividad con potencia del transmisor.",
-      "En ionosfera, capas D, E y F condicionan reflexi\xF3n HF seg\xFAn hora y ciclo solar. En examen basta asociar HF a rebote ionosf\xE9rico y VHF/UHF a trayectos m\xE1s cortos y l\xEDnea de vista."
+      "La antena convierte corriente de radiofrecuencia en onda electromagn\xE9tica y viceversa. Su tama\xF1o est\xE1 ligado a la longitud de onda: suele ser un m\xFAltiplo o subm\xFAltiplo de \u03BB (dipolo total \u2248 \u03BB/2; vertical \u2248 \u03BB/4 con radiales o plano de tierra).",
+      "En recepci\xF3n, un campo electromagn\xE9tico induce una FEM alterna en la antena; en transmisi\xF3n ocurre el proceso inverso. La eficiencia compara potencia radiada real con la que entrega el transmisor.",
+      "Impedancia de antena y l\xEDnea: el coaxial t\xEDpico es 50 \u03A9. Si la carga absorbe toda la potencia sin reflexi\xF3n, la l\xEDnea est\xE1 equilibrada (ROE 1:1). ROE alta indica desadaptaci\xF3n y energ\xEDa reflejada hacia el transmisor.",
+      "L\xEDnea de transmisi\xF3n: tiene L, C e impedancia caracter\xEDstica Zo. Mayor di\xE1metro del conductor \u2192 menor L; mayor separaci\xF3n entre conductores \u2192 menor C. Paralelo de dos hilos y coaxial son los m\xE1s usados; tambi\xE9n existe gu\xEDa de onda.",
+      "Balun: adapta l\xEDnea no balanceada (coaxial) a antena balanceada (dipolo) y reduce corrientes por la malla. Acoplador T o \u03C0 (libro cap. 8): hace resonar y presentar 50 \u03A9 cuando la antena real no coincide; muchos transmisores lo integran.",
+      "Yagi: reflector detr\xE1s del dipolo excitado, directores delante. Los elementos par\xE1sitos reradian energ\xEDa hacia el excitado \u2192 mayor ganancia en el l\xF3bulo frontal. Relaci\xF3n frente-espalda: Yagi 3 elementos ~20 dB; parab\xF3lica ~60 dB (no es lo mismo que ganancia en dBi).",
+      "ERP (Effective Radiated Power) referencia dipolo ideal; EIRP referencia antena isotr\xF3pica. dBi = dBd + 2,15 dB aprox. La ganancia concentra potencia en una direcci\xF3n; no aumenta la potencia legal del transmisor.",
+      "Dipolo con trampas: en frecuencias bajas las trampas act\xFAan como carga y \xABalargan\xBB el dipolo; permiten acortar el elemento para la banda m\xE1s alta. Esquema t\xEDpico multibanda HF del libro.",
+      "Propagaci\xF3n (cap. 9): \u03BB = v/f; periodo T = 1/f. Las ondas EM se reflejan y difractan como la luz. HF: ionosfera (capas D, E, F), MUF, saltos y desvanecimiento. VHF: visi\xF3n directa limitada por curvatura terrestre y altura de antenas.",
+      "Dispersi\xF3n troposf\xE9rica en VHF: curva la trayectoria m\xE1s all\xE1 del horizonte \xF3ptico; depende de cambios bruscos de humedad/temperatura. Conductos troposf\xE9ricos (450\u20132000 m) pueden dar enlaces excepcionales en microondas/VHF.",
+      "Antena corta \u2192 resuena por encima de la frecuencia deseada \u2192 alargar para bajar frecuencia de resonancia. Antena larga \u2192 resuena por debajo \u2192 acortar.",
+      "Filtro de salida del transmisor (Chebyshev) est\xE1 calculado para una carga concreta; si la antena no est\xE1 adaptada, la se\xF1al puede distorsionarse \u2014 otro motivo para acoplar bien."
     ],
     "practiceDrills": [
-      "Pasa de la f\xF3rmula al caso real: para 40 m, el dipolo ronda 20 m totales; si la antena resuena demasiado alta, alargarla baja la frecuencia de resonancia.",
-      "Practica la cadena de adaptaci\xF3n completa: transmisor 50 \u03A9 \u2192 medidor ROE \u2192 acoplador si procede \u2192 coaxial \u2192 balun/dipolo. Se\xF1ala d\xF3nde aparece potencia reflejada.",
-      "Relaciona cada diagrama con una palabra: vertical m\xE1ximo hacia horizonte, Yagi directiva, relaci\xF3n delante-atr\xE1s, ancho de haz y ROE 1:1 como adaptaci\xF3n ideal."
+      "Libro pp. 130\u2013165 (OCR 0130\u20130165): sesi\xF3n 1 cap. 8 (antenas, l\xEDneas, Yagi, ERP); sesi\xF3n 2 cap. 9 (\u03BB, periodo, ionosfera, troposfera). Abre PDF en paralelo a las figuras de radiaci\xF3n.",
+      "Calcula dipolo 7 MHz: \u03BB \u2248 42,8 m \u2192 longitud total \u2248 21 m. Repite con 14 MHz y 145 MHz hasta hacerlo sin calculadora.",
+      "Cadena TX: transmisor 50 \u03A9 \u2192 medidor ROE \u2192 acoplador (T/\u03C0 o autom\xE1tico) \u2192 coaxial \u2192 balun si dipolo \u2192 antena. Marca en qu\xE9 eslab\xF3n aparece reflexi\xF3n si ROE > 1.",
+      "Tabla r\xE1pida: ERP vs EIRP; relaci\xF3n frente-espalda vs ganancia dBi; MUF vs l\xEDnea coaxial (trampa habitual).",
+      "Yagi: dibuja reflector\u2013excitado\u2013directores y se\xF1ala el l\xF3bulo principal hacia los directores."
     ],
     "quickSession": [
-      "Para calcular un dipolo de media onda, primero calcula \u03BB = 300/f(MHz) y despu\xE9s toma aproximadamente la mitad. Ejemplo: para 7 MHz, \u03BB \u2248 42,8 m y el dipolo total ronda 21,4 m antes de ajustes pr\xE1cticos.",
-      "Si una antena resuena por encima de la frecuencia deseada, est\xE1 corta y hay que alargarla. Si resuena por debajo, est\xE1 larga y hay que acortarla.",
-      "La ROE indica desadaptaci\xF3n entre transmisor, l\xEDnea y antena. ROE 1:1 es adaptaci\xF3n ideal; cuanto mayor es, m\xE1s energ\xEDa se refleja hacia el transmisor.",
-      "El balun se usa cuando conectas una l\xEDnea no balanceada, como coaxial, a una antena balanceada, como un dipolo. Ayuda a reducir corrientes indeseadas por la malla.",
-      "La propagaci\xF3n HF suele usar ionosfera para largas distancias. VHF y UHF dependen m\xE1s de visi\xF3n directa, altura de antena, obst\xE1culos y repetidores.",
-      "La Yagi concentra energ\xEDa en una direcci\xF3n. El reflector va detr\xE1s del elemento excitado y los directores delante; por eso aumenta ganancia en el l\xF3bulo frontal."
+      "\u03BB(m) \u2248 300/f(MHz). Dipolo media onda: longitud total \u2248 \u03BB/2 (cada brazo \u2248 \u03BB/4). Vertical cuarto de onda: elemento \u03BB/4 + radiales o plano de tierra.",
+      "ROE 1:1 = l\xEDnea equilibrada, sin reflexi\xF3n. ROE alta = desadaptaci\xF3n; revisa acoplador, longitud de antena y tipo de l\xEDnea.",
+      "Coaxial 50 \u03A9 habitual. Balun: coaxial \u2192 dipolo. Acoplador T/\u03C0: antena distinta de 50 \u03A9 \u2192 presentar 50 \u03A9 al TX.",
+      "Yagi: reflector atr\xE1s, directores delante, l\xF3bulo hacia directores. Relaci\xF3n frente-espalda en dB (Yagi ~20 dB, parab\xF3lica mucho m\xE1s).",
+      "ERP vs dipolo; EIRP vs isotr\xF3pica. dBi \u2248 dBd + 2,15.",
+      "HF: ionosfera, MUF, desvanecimiento, saltos. VHF/UHF: l\xEDnea de vista; dispersi\xF3n troposf\xE9rica extiende cobertura m\xE1s all\xE1 del horizonte \xF3ptico.",
+      "Periodo T = 1/f. Reflexi\xF3n y difracci\xF3n aplican a ondas de radio como a la luz.",
+      "Antena corta (resuena alto) \u2192 alargar; antena larga (resuena bajo) \u2192 acortar."
     ],
     "examChecklist": [
       "Dipolo media onda: longitud total \u2248 \u03BB/2; cada brazo \u2248 \u03BB/4.",
       "Vertical cuarto de onda: m\xE1ximo de radiaci\xF3n hacia el horizonte.",
-      "Yagi: antena directiva; relaci\xF3n delante/atr\xE1s compara l\xF3bulo frontal y posterior.",
-      "ROE alta = desadaptaci\xF3n/reflexi\xF3n; se corrige con adaptaci\xF3n, acoplador o antena ajustada.",
-      "MUF y frecuencia cr\xEDtica son conceptos de ionosfera, no de l\xEDnea coaxial.",
-      "Ganancia en dBi y dBd no son iguales: dBi referencia antena isotr\xF3pica; dBd referencia dipolo."
+      "Yagi: reflector detr\xE1s, directores delante; relaci\xF3n frente-espalda \u2260 ganancia dBi.",
+      "ROE alta = desadaptaci\xF3n; acoplador T/\u03C0 o balun seg\xFAn el caso.",
+      "ERP (dipolo); EIRP (isotr\xF3pica). \u03BB = v/f; T = 1/f.",
+      "MUF y frecuencia cr\xEDtica = ionosfera, no coaxial.",
+      "Antena corta \u2192 alargar para bajar frecuencia de resonancia."
     ],
     "trapWarnings": [
       "ROE elevada = desadaptaci\xF3n y potencia reflejada. No significa buen acoplamiento, robustez del equipo ni fallo del oscilador.",
@@ -814,7 +883,9 @@ var topics_study_default = {
   "instalaciones": {
     "memoryHooks": [
       "Antenas en comunidades: propiedad horizontal + normativa de antenas (Ley 19/1983 citada en el reglamento).",
-      "Instalador autorizado y seguros pueden aparecer seg\xFAn enunciado y vigencia."
+      "EMC: interferencia = respuesta no deseada; bloqueo = receptor saturado por se\xF1al fuerte.",
+      "Electricidad: RCD antes de fibrilaci\xF3n; tormenta \u2192 desconectar bajada, no quitar tierra.",
+      "Ajustes con TX encendido: herramientas aisladas; sin anillos ni relojes."
     ],
     "expressBullets": [
       "No existe \u201Clibertad total\u201D ni \u201Cprohibido siempre\u201D en opciones extremas: la norma suele exigir procedimientos y acuerdos.",
@@ -844,9 +915,15 @@ var topics_study_default = {
       "El RD 2623/1986 y sus instrucciones desarrollan requisitos de instalaciones de antenas de aficionado: documentaci\xF3n, condiciones t\xE9cnicas y relaci\xF3n con la normativa de antenas en inmuebles. En test suele cruzarse con Ley 19/1983.",
       "Ante obras en el edificio, la norma puede exigir comunicaci\xF3n previa y plazos; la coletilla \xABexcepto urgencia\xBB cambia los m\xE1rgenes. Si la antena impide obras de conservaci\xF3n, el titular debe permitirlas con garant\xEDa de restituci\xF3n seg\xFAn el supuesto.",
       "Repetidores y balizas son estaciones desatendidas: requieren gestor responsable, identificaci\xF3n, l\xEDmites de potencia y ubicaci\xF3n seg\xFAn reglamento. No las confundas con una estaci\xF3n fija operada en casa por el titular.",
-      "El seguro de antenas cubre responsabilidad civil por da\xF1os a terceros derivados de la instalaci\xF3n. La memoria descriptiva y el instalador autorizado pueden ser exigidos seg\xFAn el enunciado y la vigencia citada."
+      "El seguro de antenas cubre responsabilidad civil por da\xF1os a terceros derivados de la instalaci\xF3n. La memoria descriptiva y el instalador autorizado pueden ser exigidos seg\xFAn el enunciado y la vigencia citada.",
+      "Compatibilidad electromagn\xE9tica (EMC): un equipo no debe perturbar a otros ni verse inutilizado por interferencias ajenas. En aficionado suelen aparecer arm\xF3nicos, espurias o exceso de modulaci\xF3n por mal ajuste.",
+      "Bloqueo o desensibilizaci\xF3n: una se\xF1al de campo muy intenso satura el receptor y puede dejarlo inoperativo aunque no sea la frecuencia deseada.",
+      "Riesgo el\xE9ctrico: el cuerpo se modela como impedancias de piel de entrada y salida m\xE1s impedancia interna. Por encima de unos 50 V en CA la piel deja de proteger tanto; el interruptor diferencial debe actuar antes de la fibrilaci\xF3n.",
+      "Tormentas: el refugio seguro es el interior del edificio; entre fachadas no basta. Desconecta la bajada de antena y equipos, mant\xE9n la toma de tierra de protecci\xF3n.",
+      "Pr\xE1cticas de taller (libro p. 207): no ajustar equipos energizados sin herramientas aisladas; quitar anillos, relojes y pulseras; instrumentos y puntas de prueba acordes a la tensi\xF3n; manos secas."
     ],
     "practiceDrills": [
+      "Libro pp. 184\u2013207: OCR 0184\u20130207 o PDF \u2014 cap. 11 EMC y cap. 12 seguridad; subraya bloqueo, RCD y tormentas.",
       "Semana 1 \u2014 banco: en Practicar elige \xABInstalaciones\xBB y repite las ~12 preguntas del bloque tres veces en d\xEDas distintos (objetivo: acertar casi todas la tercera vez). Son pocas en banco; el temario y el PDF compensan.",
       "Checklist de estaci\xF3n fija exterior (sin test): memoria descriptiva, croquis/ubicaci\xF3n, instalador si el enunciado lo exige, seguro de antenas, toma de tierra, riostras se\xF1alizadas y comunicaci\xF3n a la comunidad. Rep\xE1sala en voz alta antes de abrir el PDF.",
       "Cruce con normativa: lee en el temario \xABMarco normativo\xBB los apartados de Ley 19/1983 y RD 2623/1986, luego vuelve a las preguntas de instalaciones. Muchas trampas mezclan comunidad de propietarios, plazos de obras y cancelaci\xF3n de licencia.",
@@ -867,6 +944,8 @@ var topics_study_default = {
       "La instalaci\xF3n exterior no es libertad absoluta ni prohibici\xF3n total: hay procedimiento legal.",
       "Toma de tierra y protecciones son seguridad, no accesorio opcional.",
       "Filtrado, desacoplo y apantallamiento son medidas contra interferencias.",
+      "Bloqueo del receptor por se\xF1al fuerte: no confundir con QRM de otra estaci\xF3n en el mismo canal.",
+      "Interruptor diferencial (RCD): protege personas; no sustituye la toma de tierra de la estaci\xF3n.",
       "Si se cancela licencia o hay obras, revisa condiciones de desmontaje o permanencia solo recepci\xF3n seg\xFAn enunciado.",
       "Ante interferencia a servicios de seguridad, la respuesta prudente es cesar o corregir antes de seguir emitiendo."
     ],
@@ -879,9 +958,20 @@ var topics_study_default = {
       "RF en altavoces/equipos cercanos: medidas razonables son ferritas, filtros, apantallamiento, tierra y revisi\xF3n de arm\xF3nicos; aumentar potencia es justo lo contrario.",
       "Estaci\xF3n fija, portable, m\xF3vil, remota y desatendida no son sin\xF3nimos. Lee si el enunciado habla de ubicaci\xF3n, movimiento o control a distancia.",
       "Toma de tierra y protecciones no se eliminan para evitar tormentas; se desconectan bajadas/equipos cuando proceda manteniendo seguridad.",
-      "Si hay interferencia perjudicial a servicios protegidos o seguridad de la vida, cesar/corregir suele ser la opci\xF3n segura."
+      "Si hay interferencia perjudicial a servicios protegidos o seguridad de la vida, cesar/corregir suele ser la opci\xF3n segura.",
+      "EMC del libro: la interferencia degrada o destruye la se\xF1al \xFAtil; arm\xF3nicos y sobremodulaci\xF3n son causas frecuentes en TX mal ajustado.",
+      "Entre edificios no est\xE1s protegido del rayo como en el interior; desconectar bajada no es eliminar tierra.",
+      "Ajustar un transmisor encendido sin herramientas aisladas y con anillos puestos son distractores claramente falsos en examen de seguridad."
     ],
     "flashcards": [
+      {
+        "front": "Bloqueo del receptor (libro cap. 11)",
+        "back": "Se\xF1al muy fuerte satura la entrada y reduce sensibilidad"
+      },
+      {
+        "front": "Tormenta el\xE9ctrica \u2014 refugio seguro",
+        "back": "Interior del edificio; desconectar bajada de antena/equipos"
+      },
       {
         "front": "Tema t\xEDpico de antenas en edificios compartidos",
         "back": "Normativa de propiedad horizontal + normativa de antenas"
@@ -934,7 +1024,7 @@ var LIBRO_OFICIAL_INTRO = {
 var TEMARIO_BLOCK_ENRICHMENT = {
   "electricidad-basica": {
     libro: "1.\xAA parte \xB7 T\xE9cnica",
-    capitulos: "Electricidad b\xE1sica: magnitudes, Ohm, potencia, CC/CA, instrumentos, fuentes y decibelios.",
+    capitulos: "Electricidad b\xE1sica: magnitudes, Ohm, CA, resonancia (libro pp. 22\u201347, caps. 1\u20132).",
     enfoque: "Bloque ampliado con URE, FEDI y propias (\u224857 en banco). El PDF sigue siendo la referencia para diagramas y definiciones largas.",
     bankPractice: [
       "Practicar: elige \xABElectricidad b\xE1sica\xBB \u2014 ver\xE1s todas las preguntas del bloque (no 30: es el tema completo). Pulsa \xABNueva sesi\xF3n\xBB para reordenar.",
@@ -953,8 +1043,8 @@ var TEMARIO_BLOCK_ENRICHMENT = {
   },
   componentes: {
     libro: "1.\xAA parte \xB7 T\xE9cnica",
-    capitulos: "Componentes pasivos y activos, diodos, transistores, etapas y medidas.",
-    enfoque: "Relaciona s\xEDmbolo en esquema con funci\xF3n (rectificar, amplificar, filtrar).",
+    capitulos: "Cap. 3 (pp. 48\u201359): semiconductores, diodos, BJT/FET, acopladores.",
+    enfoque: "Libro + OCR 0048\u20130059: uni\xF3n PN, rectificadores, montajes BJT (emisor com\xFAn = ganancia), FET por tensi\xF3n, acoplador T/\u03C0 a 50 \u03A9.",
     bankPractice: [
       "51 preguntas: conviene repasar por familias (R, L, C, diodo, transistor) y luego mezclar.",
       "Activa \xABpreguntas trampa\xBB cuando domines lo b\xE1sico: confunden rectificar con limitar corriente."
@@ -962,8 +1052,8 @@ var TEMARIO_BLOCK_ENRICHMENT = {
   },
   "receptores-emisores": {
     libro: "1.\xAA parte \xB7 T\xE9cnica",
-    capitulos: "Receptores, transmisores, superheterodino, medici\xF3n, potencia y seguridad de equipos.",
-    enfoque: "Aprende el orden de bloques del superheterodino y qu\xE9 mide cada instrumento.",
+    capitulos: "Cap. 6\u20137 (pp. 100\u2013127) + medidas cap. 10 (pp. 166\u2013177).",
+    enfoque: "Tres sesiones: galena+superheterodino (FI tras mezclador), TX excitador/PA/filtro SSB, instrumentos ROE/vat\xEDmetro. OCR 0100\u20130120; PDF si p\xE1gina vac\xEDa.",
     bankPractice: [
       "81 preguntas \u2014 el bloque m\xE1s grande de la 1.\xAA prueba: divide en 2\u20133 sesiones de ~30.",
       "Figuras de esquema de receptor/transmisor: l\xE9elas con calma; el enunciado suele citar \xABsiguiente esquema\xBB."
@@ -971,8 +1061,8 @@ var TEMARIO_BLOCK_ENRICHMENT = {
   },
   "antenas-prop": {
     libro: "1.\xAA parte \xB7 T\xE9cnica",
-    capitulos: "Antenas, l\xEDneas de transmisi\xF3n, ROE, propagaci\xF3n HF/VHF y diagramas de radiaci\xF3n.",
-    enfoque: "ROE, dipolo, Yagi y balun son n\xFAcleo del examen t\xE9cnico.",
+    capitulos: "Cap. 8\u20139 (pp. 130\u2013165): antenas, l\xEDneas, propagaci\xF3n.",
+    enfoque: "Dos sesiones: cap. 8 (dipolo, Yagi, ROE, ERP, acopladores) y cap. 9 (\u03BB, ionosfera, troposfera). OCR 0130\u20130165 como apoyo; teor\xEDa curada en la app.",
     bankPractice: [
       "71 preguntas con varias figuras: practica primero las que piden diagrama de radiaci\xF3n o esquema de l\xEDnea.",
       "Contrasta ROE alta (mala adaptaci\xF3n) frente a \xABbuen acoplamiento\xBB en distractores."
@@ -1008,10 +1098,100 @@ var TEMARIO_BLOCK_ENRICHMENT = {
   instalaciones: {
     libro: "3.\xAA parte (antenas/instalaciones) + 1.\xAA parte (seguridad el\xE9ctrica)",
     capitulos: "Instalaci\xF3n exterior, comunidades, tierra, repetidores y compatibilidad electromagn\xE9tica.",
-    enfoque: "Solo ~12 preguntas en banco: ~12 p\xE1rrafos de teor\xEDa + Ley 19/1983 y RD 2623/1986 en resumen y PDF. El temario compensa el banco.",
+    enfoque: "Solo ~12 preguntas en banco: teor\xEDa + caps. 11\u201312 del libro (EMC, bloqueo, RCD, p. 207 taller). PDF y temario compensan el banco.",
     bankPractice: [
       "Practica las ~12 preguntas varias veces; luego refuerza con checklist de instalaci\xF3n fija del temario.",
       "Relaciona cada pregunta con un \xEDtem de \xABErrores t\xEDpicos\xBB (tierra, RF, comunidad de propietarios)."
+    ]
+  }
+};
+
+// data/libro-tecnica-indice.mjs
+var LIBRO_TECNICA_OCR_BASE = "C:\\Users\\joanc\\Documents\\output\\audiobook\\parte_02_Primera_parte__T\xE9cnica\\ocr-pages";
+var LIBRO_TEMA_PAGINAS = {
+  "electricidad-basica": {
+    paginas: "22\u201347",
+    capitulos: "Cap. 1\u20132",
+    ocrEjemplo: ["0022.txt", "0030.txt", "0035.txt"],
+    lecturaCapitulos: [
+      "Cap. 1 (pp. 22\u201331): inducci\xF3n, alternador, regla de la mano derecha, FEM E = B\xB7l\xB7v, valor eficaz.",
+      "Cap. 2 (pp. 32\u201344): reactancias Xc y Xl, desfase 90\xB0, circuitos R-L-C en serie y paralelo.",
+      "Cap. 2 (pp. 35\u201340): resonancia, factor Q, filtros PI y T."
+    ]
+  },
+  "magnetismo-ondas": {
+    paginas: "45\u201399",
+    capitulos: "Cap. 2 (\xA72.7) \xB7 4\u20135",
+    ocrEjemplo: ["0045.txt", "0080.txt", "0090.txt"],
+    lecturaCapitulos: [
+      "Cap. 2 \xA72.7 (pp. 45\u201347): ondas de radio, campos E y B, polarizaci\xF3n, c \u2248 300.000 km/s.",
+      "Cap. 4 (pp. 61\u201389): AM, FM, SSB, CW; envolvente, bandas laterales, sobremodulaci\xF3n.",
+      "Cap. 5 (pp. 90\u201399): se\xF1al digital, muestreo y criterio de Nyquist."
+    ]
+  },
+  componentes: {
+    paginas: "48\u201359",
+    capitulos: "Cap. 3",
+    ocrEjemplo: ["0048.txt", "0050.txt", "0055.txt", "0058.txt"],
+    lecturaCapitulos: [
+      "Cap. 3 (pp. 48\u201352): semiconductores N/P, diodo PN, rectificadores, Zener, LED, varicap.",
+      "Cap. 3 (pp. 52\u201356): BJT NPN/PNP, curvas Fig. 63, montajes emisor com\xFAn (Fig. 64), base y colector.",
+      "Cap. 3 (pp. 54\u201355): FET/MOSFET \u2014 control por tensi\xF3n en puerta.",
+      "Cap. 3 (pp. 56\u201359): v\xE1lvulas (concepto); acopladores T y \u03C0 para presentar 50 \u03A9 a la antena."
+    ]
+  },
+  "receptores-emisores": {
+    paginas: "100\u2013177",
+    capitulos: "Cap. 6\u20137 \xB7 10",
+    ocrEjemplo: ["0100.txt", "0102.txt", "0106.txt", "0114.txt", "0118.txt", "0172.txt"],
+    lecturaCapitulos: [
+      "Cap. 6 (pp. 100\u2013102): galena; por qu\xE9 superheterodino (estabilidad, selectividad).",
+      "Cap. 6 (pp. 102\u2013108): cadena AM, FI, frecuencia imagen, mezcladores activo/pasivo.",
+      "Cap. 6 (pp. 108\u2013113): filtros FI, detectores, AGC, squelch, limitadores de ruido.",
+      "Cap. 6 (pp. 123\u2013127): interferencias (arm\xF3nicos, mod. cruzada, bloqueo) y filtros de rechazo.",
+      "Cap. 7 (pp. 114\u2013127): TX directo vs cambio de frecuencia; excitador, PA, filtro SSB, transceptor.",
+      "Cap. 10 (pp. 166\u2013177): ROE, vat\xEDmetro, osciloscopio \u2014 usar PDF si OCR vac\xEDo en 0170."
+    ]
+  },
+  "antenas-prop": {
+    paginas: "130\u2013165",
+    capitulos: "Cap. 8\u20139",
+    ocrEjemplo: ["0130.txt", "0135.txt", "0140.txt", "0150.txt", "0160.txt"],
+    lecturaCapitulos: [
+      "Cap. 8 (pp. 130\u2013139): funci\xF3n de la antena, \u03BB, l\xEDneas (Zo, ROE), coaxial 50 \u03A9.",
+      "Cap. 8 (pp. 140\u2013149): Yagi, ERP/EIRP, relaci\xF3n frente-espalda, dipolo con trampas HF.",
+      "Cap. 8 (pp. 135\u2013137): acopladores T/\u03C0 y filtros de salida \u2014 adaptar antena al transmisor.",
+      "Cap. 9 (pp. 150\u2013159): longitud de onda, periodo, reflexi\xF3n, difracci\xF3n.",
+      "Cap. 9 (pp. 160\u2013165): ionosfera, MUF, desvanecimiento, dispersi\xF3n troposf\xE9rica VHF."
+    ]
+  },
+  "marco-normativo": {
+    paginas: "\u2014",
+    capitulos: "parte_04 (PDF)",
+    ocrEjemplo: [],
+    lecturaCapitulos: ["Usa parte_04 \xB7 Normativa (PDF en chapters/), no este OCR t\xE9cnico."]
+  },
+  "licencias-indicativos": {
+    paginas: "\u2014",
+    capitulos: "parte_04 + parte_03",
+    ocrEjemplo: [],
+    lecturaCapitulos: ["parte_04 distintivos; parte_03 alfabeto fon\xE9tico."]
+  },
+  "operacion-seguridad": {
+    paginas: "\u2014",
+    capitulos: "parte_03",
+    ocrEjemplo: [],
+    lecturaCapitulos: ["parte_03 \xB7 Normas y procedimientos de operaci\xF3n (c\xF3digo Q, QSO)."]
+  },
+  instalaciones: {
+    paginas: "184\u2013207+",
+    capitulos: "Cap. 11\u201312",
+    ocrEjemplo: ["0184.txt", "0190.txt", "0207.txt"],
+    lecturaCapitulos: [
+      "Cap. 11 (pp. 184\u2013205): EMC, bloqueo/desensibilizaci\xF3n, arm\xF3nicos y espurias por mal uso (sobremodulaci\xF3n).",
+      "Cap. 12 (pp. 190\u2013200): electrocuci\xF3n, fibrilaci\xF3n, impedancia del cuerpo (Fig. 170), RCD.",
+      "Cap. 12 (pp. 200+): tormentas \u2014 desconectar bajada; refugio en interior del edificio.",
+      "Pr\xE1cticas finales (p. 207+): herramientas aisladas, sin joyas, instrumentos acordes a la tensi\xF3n."
     ]
   }
 };
@@ -1023,18 +1203,11 @@ var LIBRO_TEMA_TEORIA = {
     resumenMemorizar: [
       "Magnitudes: V (tensi\xF3n), I (intensidad), R (resistencia), P (potencia). Ohm V = I\xB7R; potencia P = V\xB7I.",
       "Serie suma R; paralelo: 1/Req = 1/R1 + 1/R2. CC estable: C \u2248 abierto, L ideal \u2248 corto.",
-      "CA: valor eficaz Vp \u2248 \u221A2\xB7Vrms; T = 1/f. Instrumentos: volt\xEDmetro en paralelo, amper\xEDmetro en serie.",
-      "dB relaci\xF3n; dBm potencia respecto a 1 mW. Coulomb: fuerza \u221D producto de cargas."
+      "CA: valor eficaz Vp \u2248 \u221A2\xB7Vrms; T = 1/f. a(t) = A\xB7sen(2\u03C0ft + \u03C6).",
+      "Inducci\xF3n: regla de la mano derecha (B, movimiento \u2192 sentido de I). Alternador: E = B\xB7l\xB7v.",
+      "Coulomb: fuerza \u221D producto de cargas. dB y dBm seg\xFAn enunciado."
     ],
-    lecturaOrden: [
-      "Magnitudes el\xE9ctricas y unidades del SI (voltio, amperio, ohmio, vatio, faradio, henrio).",
-      "Ley de Ohm y ley de Coulomb; resistencia, conductores y c\xF3digo de colores.",
-      "Potencia en CC y CA; valor eficaz, periodo y frecuencia.",
-      "Fuentes, FEM y resistencia interna; condensadores y bobinas en CC/CA.",
-      "Decibelios y medidas (volt\xEDmetro, amper\xEDmetro, \xF3hmetro, osciloscopio).",
-      "Contrasta cada apartado con la secci\xF3n \xABTeor\xEDa explicada\xBB de este bloque en la app."
-    ],
-    diagramasLibro: "Esquemas de divisor de tensi\xF3n, serie/paralelo, forma de onda en osciloscopio, c\xF3digo de colores."
+    diagramasLibro: "Figs. 20\u201324 alternador y CA; circuitos R, L, C (Figs. 29\u201335); resonancia y filtros PI/T (Figs. 40\u201341)."
   },
   "magnetismo-ondas": {
     partePdf: "parte_02_Primera_parte__T\xE9cnica.pdf",
@@ -1044,63 +1217,42 @@ var LIBRO_TEMA_TEORIA = {
       "Fundamental + arm\xF3nicos en se\xF1ales no sinusoidales. Nyquist: fs \u2265 2\xB7fmax.",
       "+3 dB \u2248 doble potencia; +10 dB \u2248 \xD710."
     ],
-    lecturaOrden: [
-      "Ondas electromagn\xE9ticas: propagaci\xF3n, polarizaci\xF3n, relaci\xF3n frecuencia\u2013longitud de onda.",
-      "Se\xF1ales sinusoidales y no sinusoidales (arm\xF3nicos, ruido).",
-      "Modulaciones AM, FM, fase, SSB y CW; anchura de banda y sobremodulaci\xF3n.",
-      "Introducci\xF3n a muestreo digital y criterio de Nyquist si aparece en el \xEDndice.",
-      "Repasa la tabla AM/FM/SSB del temario antes de cerrar el cap\xEDtulo."
-    ],
-    diagramasLibro: "Espectros AM/SSB, diagrama de onda modulada, gr\xE1fica f versus \u03BB."
+    diagramasLibro: "\xA72.7 ondas EM; Fig. 84 AM; espectros FM/SSB; muestreo digital (cap. 5)."
   },
   componentes: {
     partePdf: "parte_02_Primera_parte__T\xE9cnica.pdf",
     resumenMemorizar: [
       "R disipa; C almacena carga (Xc baja con f); L almacena campo (Xl sube con f).",
-      "Diodo: conduce en directa, bloquea en inversa (ideal). Zener regula en inversa.",
-      "Transistor: peque\xF1a se\xF1al controla corriente mayor. Transformador: relaci\xF3n de espiras.",
-      "Resonancia L\u2013C: Q = f/B. C\xF3digo de colores en R y C."
+      "Uni\xF3n PN: por debajo del umbral \u2248 abierto; por encima conduce. Rectificador media onda / puente.",
+      "Zener (inversa), LED, varicap (C variable 1\u2013500 pF). Tipo N donante; tipo P aceptor (huecos).",
+      "BJT: emisor com\xFAn = m\xE1xima ganancia; FET = control por tensi\xF3n en puerta.",
+      "Zonas transistor: corte, activa, saturaci\xF3n (Fig. 63). Acoplador T o \u03C0 \u2192 50 \u03A9 a la antena."
     ],
-    lecturaOrden: [
-      "Resistencias: tipos, c\xF3digo de colores, PTC/NTC.",
-      "Condensadores: capacidad, reactancia, tipos y polaridad en electrol\xEDticos.",
-      "Bobinas: inductancia, factor Q, n\xFAcleos.",
-      "Diodos (rectificador, Zener, LED, varicap) y transistores (bipolar, FET).",
-      "Transformadores y circuitos RLC; resonancia y filtros conceptuales."
-    ],
-    diagramasLibro: "S\xEDmbolos esquem\xE1ticos, curva del diodo, puente rectificador, circuito resonante."
+    diagramasLibro: "Figs. 56\u201357 rectificadores; 63 curvas BJT; 64\u201366 montajes; acopladores T/\u03C0 (pp. 58\u201359)."
   },
   "receptores-emisores": {
     partePdf: "parte_02_Primera_parte__T\xE9cnica.pdf",
     resumenMemorizar: [
-      "Superheterodino: antena \u2192 RF \u2192 mezclador+OL \u2192 FI fija \u2192 IF \u2192 detector \u2192 audio/AF.",
-      "Selectividad separa frecuencias; sensibilidad detecta se\xF1ales d\xE9biles.",
-      "Potencia: PEP en SSB; medidores de ROE, vat\xEDmetro, analizador de espectro seg\xFAn enunciado.",
-      "Seguridad: no tocar antena en TX; EMC y puesta a tierra del equipo."
+      "Galena Fig. 100\u2013101: L-C + diodo \u2192 auriculares (hist\xF3rico).",
+      "Superheterodino: RF \u2192 mezclador+OL \u2192 FI (455 kHz AM / 10,7 MHz FM) \u2192 detector \u2192 audio.",
+      "FI tras mezclador; suma y diferencia. FI alta ayuda contra frecuencia imagen.",
+      "Mezclador activo ~+10 dB; pasivo diodos ~\u22128 dB, menos intermodulaci\xF3n.",
+      "TX: excitador \u2192 PA \u2192 filtro. SSB: filtro banda lateral. AGC/squelch/DNL.",
+      "Interferencias: arm\xF3nicos, mod. cruzada, bloqueo \u2192 filtro rechazo.",
+      "Cap. 10: vat\xEDmetro, ROE, osciloscopio, S-meter."
     ],
-    lecturaOrden: [
-      "Bloques del receptor: entrada, mezclador, oscilador local, FI, demodulador, AF.",
-      "Transmisores: oscilador, amplificadores, acoplamiento a antena, filtros de arm\xF3nicos.",
-      "Medidas de potencia y ROE; interpretaci\xF3n de esquemas de cadena.",
-      "Seguridad el\xE9ctrica y RF en estaci\xF3n (tierra, contactos, potencia m\xE1xima)."
-    ],
-    diagramasLibro: "Esquema superheterodino, cadena TX, pantalla de instrumento o s-meter."
+    diagramasLibro: "Figs. 100\u2013101 galena; bloques superheterodino AM; mezcladores DBM/TBM; TX cap. 7; medidas cap. 10."
   },
   "antenas-prop": {
     partePdf: "parte_02_Primera_parte__T\xE9cnica.pdf",
     resumenMemorizar: [
-      "\u03BB total dipolo \u2248 \u03BB/2; cuarto de onda vertical. Yagi: reflector\u2013excitado\u2013directores.",
-      "ROE alta = mala adaptaci\xF3n (reflexi\xF3n). Balun adapta l\xEDnea 50 \u03A9 a antena balanceada.",
-      "HF: ionosfera; VHF/UHF: m\xE1s l\xEDnea de vista. dBi vs dBd (+2,15 dB aprox.).",
-      "Antena corta \u2192 sube frecuencia de resonancia; alargar para bajar f."
+      "Antena \u2194 onda EM; tama\xF1o ~ m\xFAltiplo de \u03BB. Dipolo \u03BB/2; vertical \u03BB/4 + tierra.",
+      "L\xEDnea 50 \u03A9; ROE 1:1 sin reflexi\xF3n. Balun (balanceado); acoplador T/\u03C0 (impedancia).",
+      "Yagi: reflector\u2013excitado\u2013directores; frente-espalda ~20 dB (3 elem.). ERP/EIRP; dBi = dBd + 2,15.",
+      "Cap. 9: \u03BB = v/f; T = 1/f; reflexi\xF3n/difracci\xF3n. HF ionosfera/MUF; VHF troposfera/visi\xF3n directa.",
+      "Antena corta \u2192 resuena alto \u2192 alargar."
     ],
-    lecturaOrden: [
-      "Tipos de antenas: dipolo, Yagi, vertical, loop; diagramas de radiaci\xF3n.",
-      "L\xEDneas de transmisi\xF3n, impedancia caracter\xEDstica y ROE.",
-      "Propagaci\xF3n HF (ionosfera) y VHF/UHF (troposfera, obst\xE1culos).",
-      "Adaptaci\xF3n, balun y medidas en antena analizador/ROE."
-    ],
-    diagramasLibro: "Diagrama de radiaci\xF3n, esquema Yagi, curva ROE, capas ionosf\xE9ricas."
+    diagramasLibro: "Diagramas radiaci\xF3n; Yagi; dipolo con trampas HF; Fig. 143 (\u03BB, T, f); ionosfera y troposfera."
   },
   "marco-normativo": {
     partePdf: "parte_04_Tercera_parte__Normativa_nacional_e_internacional.pdf",
@@ -1165,19 +1317,25 @@ var LIBRO_TEMA_TEORIA = {
       "Comunidad: comunicaci\xF3n previa, obras, plazos; \xABexcepto urgencia\xBB cambia m\xE1rgenes.",
       "Tipos: port\xE1til, m\xF3vil, fija, remota, desatendida \u2014 no son sin\xF3nimos.",
       "RF en equipos: filtros, ferritas, tierra. No tocar antena en TX.",
-      "Interferencia a servicios protegidos \u2192 cesar o corregir. Cancelar licencia \u2192 antena puede exigir autorizaci\xF3n."
+      "Cap. 12: ajustes con equipo en marcha \u2192 herramientas aisladas; quitar anillos y relojes.",
+      "EMC (cap. 11): interferencia = respuesta no deseada; bloqueo por se\xF1al fuerte; arm\xF3nicos/espurias.",
+      "Cap. 12: impedancia cuerpo (piel+interna); RCD dispara antes de fibrilaci\xF3n; tormenta: desconectar bajada.",
+      "p. 207: herramientas aisladas si ajustas en marcha; sin anillos ni relojes; primeros auxilios."
     ],
-    lecturaOrden: [
-      "Ley 19/1983: derecho a instalar antenas y l\xEDmites en fachadas (parte_04).",
-      "RD 2623/1986 e instrucciones: memoria, instalador, seguro, condiciones t\xE9cnicas.",
-      "Puesta a tierra, protecciones y descargas (parte_02, cap\xEDtulo seguridad).",
-      "Repetidores/desatendidas: gestor, identificaci\xF3n y potencias (cruce con marco normativo).",
-      "EMC: v\xEDas de entrada de RF y medidas (filtros, blindaje, ferritas).",
-      "Subraya procedimientos: pocas preguntas en banco; el PDF y el temario compensan."
-    ],
-    diagramasLibro: "Croquis de instalaci\xF3n, esquema de toma de tierra, se\xF1alizaci\xF3n de riostras."
+    diagramasLibro: "Fig. 170 impedancia cuerpo; cap. 11 bloqueo/EMC; cap. 12 tablas tensi\xF3n; p. 207 pr\xE1cticas."
   }
 };
+var LECTURA_CIERRE = "Contrasta con \xABTeor\xEDa explicada\xBB (secci\xF3n 5) en la app.";
+for (const [blockId, refs] of Object.entries(LIBRO_TEMA_PAGINAS)) {
+  const tema = LIBRO_TEMA_TEORIA[blockId];
+  if (!tema || !refs) continue;
+  tema.paginasLibro = refs.paginas;
+  tema.capitulosLibro = refs.capitulos;
+  tema.ocrCarpeta = LIBRO_TECNICA_OCR_BASE;
+  if (refs.lecturaCapitulos?.length) {
+    tema.lecturaOrden = [...refs.lecturaCapitulos, LECTURA_CIERRE];
+  }
+}
 
 // data/questions-banco.js
 var questions_banco_default = [
@@ -2986,7 +3144,7 @@ var questions_banco_default = [
       "La autorizaci\xF3n de la Administraci\xF3n competente en espectro radioel\xE9ctrico para instalar la antena."
     ],
     "correctIndex": 1,
-    "explain": "Lo que identifica al operador autorizado ante terceros en emisi\xF3n es su distintivo de llamada asignado, no el DNI ni el domicilio. \xABSu distintivo de llamada asociado.\xBB.",
+    "explain": "Lo que identifica al operador autorizado ante terceros en emisi\xF3n es su distintivo de llamada asignado, no el DNI ni el domicilio. \xABSu distintivo de llamada asociado.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3108,7 +3266,7 @@ var questions_banco_default = [
       "Nunca."
     ],
     "correctIndex": 3,
-    "explain": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca.\xBB.",
+    "explain": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -22721,8 +22879,8 @@ function summarizePresentReadiness(readiness, gradedByPart = {}) {
 
 // data/version.js
 var version_default = {
-  build: "2026.05.19g",
-  label: "2026.05.19g"
+  build: "2026.05.21a",
+  label: "2026.05.21a"
 };
 
 // lib/app-dialog.js
@@ -23543,7 +23701,10 @@ async function onRoute() {
   if (raw.startsWith("temario--")) {
     const sub = raw.slice("temario--".length);
     id = "temario";
-    if (sub) scrollTargetId = `temario-${sub}`;
+    if (sub) {
+      const secMatch = /^(.+?)--sec-(\d+)$/.exec(sub);
+      scrollTargetId = secMatch ? `temario-${secMatch[1]}-sec-${secMatch[2]}` : `temario-${sub}`;
+    }
   } else if (raw.startsWith("normativa--")) {
     const sub = raw.slice("normativa--".length);
     id = "normativa";
@@ -23698,6 +23859,8 @@ function renderBlockEnrichment(blockId, questionCount) {
   const sync = LIBRO_TEMA_TEORIA[blockId];
   const listItems = (items) => items?.length ? `<ul class="temario-list">${items.map((x) => `<li>${escapeHtml2(x)}</li>`).join("")}</ul>` : "";
   const pdfPart = sync?.partePdf ? `<p class="muted">Archivo local: <code>${escapeHtml2(sync.partePdf)}</code></p>` : "";
+  const paginasLibro = sync?.paginasLibro && sync.paginasLibro !== "\u2014" ? `<p class="muted">P\xE1ginas del libro (1.\xAA parte \xB7 T\xE9cnica): <strong>pp. ${escapeHtml2(sync.paginasLibro)}</strong>${sync.capitulosLibro ? ` \xB7 ${escapeHtml2(sync.capitulosLibro)}` : ""}</p>` : sync?.capitulosLibro ? `<p class="muted">Libro: ${escapeHtml2(sync.capitulosLibro)} (otra parte del PDF).</p>` : "";
+  const ocrHint = sync?.ocrCarpeta && sync.paginasLibro && sync.paginasLibro !== "\u2014" ? `<p class="muted">Texto OCR (tu PC): <code>${escapeHtml2(sync.ocrCarpeta)}</code> \u2014 fichero <code>NNNN.txt</code> = p\xE1gina impresa (p. ej. 0022 = p. 22).</p>` : "";
   const resumen = sync?.resumenMemorizar?.length ? `<h5 class="temario-study-group__title">Resumen para memorizar</h5>
        <p class="muted">Una p\xE1gina antes de abrir el PDF; contrasta con \xABTeor\xEDa explicada\xBB (secci\xF3n 5).</p>
        ${listItems(sync.resumenMemorizar)}` : "";
@@ -23711,6 +23874,8 @@ function renderBlockEnrichment(blockId, questionCount) {
       <h5 class="temario-study-group__title">Libro oficial (PDF)</h5>
       <p><strong>${escapeHtml2(en.libro)}</strong> \u2014 ${escapeHtml2(en.capitulos)}</p>
       ${pdfPart}
+      ${paginasLibro}
+      ${ocrHint}
       <p class="muted">${escapeHtml2(en.enfoque)}</p>
       ${resumen}
       ${lectura}
@@ -24330,7 +24495,7 @@ function quizDraftSessionLabel(s) {
   const type = s.sessionType === "teorico" ? "Examen tipo test" : "Pr\xE1ctica libre";
   if (s.mode === "exam") return `${type} \xB7 modo examen`;
   if (s.studyFeedback === "confidence") return `${type} \xB7 estudio con seguridad`;
-  if (s.studyFeedback === "deepen") return `${type} \xB7 estudio temario y libro`;
+  if (s.studyFeedback === "deepen") return `${type} \xB7 ampliar temario y PDF`;
   return `${type} \xB7 estudio`;
 }
 function validateQuizDraft(draft) {
@@ -24896,7 +25061,7 @@ function buildTemarioSearchIndex(blockId, blockMeta, study) {
     }
     const sync = LIBRO_TEMA_TEORIA[blockId];
     if (sync) {
-      bits.push(sync.partePdf || "");
+      bits.push(sync.partePdf || "", sync.paginasLibro || "", sync.capitulosLibro || "", sync.ocrCarpeta || "");
       if (sync.diagramasLibro) bits.push(String(sync.diagramasLibro));
       if (sync.resumenMemorizar) for (const x of sync.resumenMemorizar) bits.push(String(x));
       if (sync.lecturaOrden) for (const x of sync.lecturaOrden) bits.push(String(x));
@@ -24972,10 +25137,34 @@ function applyQuizPrefsToForm() {
   if (trapEl instanceof HTMLInputElement) trapEl.checked = !!p.trapOnly;
   syncPretestAvailability();
   validateTopicPartConsistency();
+  syncQuizModeHint();
+}
+var QUIZ_MODE_HINTS = {
+  study: "Tras cada respuesta ver\xE1s por qu\xE9 encaja la opci\xF3n y la explicaci\xF3n did\xE1ctica. Es el modo por defecto para aprender con el banco.",
+  study_deepen: "Solo acierto o fallo aqu\xED; el detalle est\xE1 en el resumen del bloque, enlaces al temario (secciones 3 y 5) y PDF. No repite la explicaci\xF3n larga del modo anterior.",
+  study_confidence: "Antes de corregir marcas seguridad baja, media o alta; luego ves la explicaci\xF3n y una nota de calibraci\xF3n.",
+  exam: "Sin correcci\xF3n hasta terminar las 30 preguntas (o la sesi\xF3n libre completa)."
+};
+function syncQuizModeHint() {
+  const hint = $("#quiz-mode-hint");
+  const mode = $("#quiz-mode")?.value || "study";
+  if (!hint) return;
+  const text = QUIZ_MODE_HINTS[mode];
+  if (text) {
+    hint.textContent = text;
+    hint.hidden = false;
+  } else {
+    hint.textContent = "";
+    hint.hidden = true;
+  }
 }
 function initQuizPrefsAutosave() {
   for (const id of ["quiz-part", "quiz-topic", "quiz-session", "quiz-mode"]) {
-    $(`#${id}`)?.addEventListener("change", saveQuizPrefs);
+    const el = $(`#${id}`);
+    el?.addEventListener("change", () => {
+      saveQuizPrefs();
+      if (id === "quiz-mode") syncQuizModeHint();
+    });
   }
   $("#quiz-pretest")?.addEventListener("change", saveQuizPrefs);
   $("#quiz-trap-only")?.addEventListener("change", saveQuizPrefs);
@@ -25916,28 +26105,34 @@ function fallbackReasoningForQuestion(q, sel) {
   }
   return "Revisa el temario del bloque y la normativa oficial para fijar la regla que resuelve este enunciado.";
 }
-function renderDeepenPanel(q, reasoningPlain = "") {
-  const blockTitle = topicBlockLabel(q.topicId);
-  const temarioHref = `#temario--${encodeURIComponent(q.topicId)}`;
+function renderDeepenPanel(q) {
+  const blockId = q.topicId;
+  const blockTitle = topicBlockLabel(blockId);
+  const enc = encodeURIComponent(blockId);
+  const sync = LIBRO_TEMA_TEORIA[blockId];
   const ureHref = q.part === 1 ? "https://www.ure.es/examenes/electricidad-y-radioelectricidad/" : "https://www.ure.es/legislacion-y-reglamentacion/";
   const ureLinkText = q.part === 1 ? "URE \xB7 Material de pr\xE1ctica (electricidad y radioelectricidad)" : "URE \xB7 Legislaci\xF3n y reglamentaci\xF3n";
-  const normativaHref = "#normativa--normativa-boe";
-  const pedagogy = usablePedagogy(q);
+  const rawExplain = typeof q.explain === "string" ? q.explain.trim() : "";
+  const showBankLiteral = rawExplain && !isWeakBankExplain(rawExplain) && !isGenericExplainText(rawExplain) && !isMisassignedPedagogicalExplain(q);
   const historical = typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-  const norm = (t) => String(t || "").toLowerCase().replace(/\s+/g, " ").trim();
-  const showPedagogy = pedagogy && norm(pedagogy) !== norm(reasoningPlain);
+  const resumen = sync?.resumenMemorizar?.length ? `<ul class="temario-list temario-list--compact">${sync.resumenMemorizar.slice(0, 4).map((x) => `<li>${escapeHtml2(x)}</li>`).join("")}</ul>` : "";
+  const pdfHint = sync?.partePdf ? `<p class="quiz-deepen__pdf muted">PDF local: <code>${escapeHtml2(sync.partePdf)}</code>${sync.paginasLibro && sync.paginasLibro !== "\u2014" ? ` \xB7 p\xE1ginas <strong>${escapeHtml2(sync.paginasLibro)}</strong> (${escapeHtml2(sync.capitulosLibro || "")})` : ""}</p>` : "";
+  const ocrDeepen = sync?.paginasLibro && sync.paginasLibro !== "\u2014" ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml2(LIBRO_TECNICA_OCR_BASE)}</code></p>` : "";
   const links = `<ul class="quiz-deepen__links">
-      <li><a href="${temarioHref}">Temario \xB7 ${escapeHtml2(blockTitle)}</a></li>
+      <li><a href="#temario--${enc}--sec-3">Temario \xB7 Libro oficial y pr\xE1ctica</a></li>
+      <li><a href="#temario--${enc}--sec-5">Temario \xB7 Teor\xEDa explicada del bloque</a></li>
+      <li><a href="#temario--${enc}">Temario \xB7 ${escapeHtml2(blockTitle)} (bloque completo)</a></li>
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml2(ureLinkText)}</a></li>
-      <li><a href="${normativaHref}">Normativa BOE</a></li>
+      <li><a href="#normativa--normativa-boe">Normativa BOE</a></li>
     </ul>`;
-  if (!showPedagogy && !historical) {
-    return `<div class="quiz-deepen quiz-deepen--links-only"><p class="quiz-deepen__note">Ampl\xEDa en el temario y contrasta con fuentes oficiales:</p>${links}</div>`;
-  }
   return `<div class="quiz-deepen">
-    ${showPedagogy ? `<p class="quiz-deepen__note"><strong>Ampliaci\xF3n:</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml2(pedagogy)}</p></blockquote>` : ""}
+    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicaci\xF3n larga del modo \xABcorrecci\xF3n inmediata\xBB.</p>
+    ${resumen ? `<p class="quiz-deepen__note"><strong>Resumen para memorizar (${escapeHtml2(blockTitle)}):</strong></p>${resumen}` : ""}
+    ${pdfHint}
+    ${ocrDeepen}
+    ${showBankLiteral ? `<p class="quiz-deepen__note"><strong>Texto del banco (literal):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml2(rawExplain)}</p></blockquote>` : ""}
     ${historical ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco hist\xF3rico)</summary><p class="muted">${escapeHtml2(historical)}</p></details>` : ""}
-    <p class="quiz-deepen__note">Fuentes para contrastar:</p>${links}
+    <p class="quiz-deepen__note">Abrir para contrastar:</p>${links}
   </div>`;
 }
 function focusConfidencePicker() {
@@ -26100,11 +26295,10 @@ function showStudyFeedback(q) {
   const label = `<p class="feedback__eyebrow">Correcci\xF3n</p>`;
   const reasoning = answerReasoningPanel(q, sel);
   const explainBlock = quizFeedbackExplainParagraph(q, reasoning);
-  const visibleForAbbr = [reasoning, explainBlock, quizState.studyFeedback === "deepen" ? String(q.explain || "") : ""].filter(Boolean).join(" ");
-  const abbr = questionAbbreviationPanel(q, visibleForAbbr);
+  const abbr = questionAbbreviationPanel(q, [reasoning, explainBlock].filter(Boolean).join(" "));
   if (quizState.studyFeedback === "deepen") {
-    const lead = ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q, buildAnswerReasoningDetail(q, sel)) + abbr + cal;
+    const lead = ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong> Abre el temario o el PDF para fijar la regla.</p>` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
+    fb.innerHTML = label + lead + renderDeepenPanel(q) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${reasoning}${explainBlock}${abbr}` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${reasoning}${explainBlock}${abbr}`) + cal;
@@ -26829,7 +27023,7 @@ function initMobileNav() {
   }
 }
 var A11Y_FONT_SCALE_MIN = 0.85;
-var A11Y_FONT_SCALE_MAX = 1.5;
+var A11Y_FONT_SCALE_MAX = 1.75;
 var A11Y_FONT_SCALE_STEP = 0.05;
 function normalizeA11yOpts(raw) {
   const defaults = {
@@ -26953,6 +27147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initQuizTopicSelect();
     initFcTopicSelect();
     applyQuizPrefsToForm();
+    syncQuizModeHint();
     initQuizPrefsAutosave();
     initQuizKeyboard();
     initTemarioFilter();

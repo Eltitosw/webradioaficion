@@ -1,0 +1,31 @@
+E2E funcional — 2026-05-21T23:09:27.488Z
+URL: http://localhost:5173
+Fallos: 0
+
+OK	global	bundle cargado	
+OK	global	sin errores JS al cargar	
+OK	inicio	navegación hash	RadioExamen · Inicio
+OK	temario	navegación hash	RadioExamen · Temario y repaso
+OK	temario	temario renderizado	
+OK	temario	expandir bloque	
+OK	temario	filtro búsqueda	
+OK	normativa	navegación hash	RadioExamen · Normativa BOE y enlaces
+OK	normativa	enlaces normativa	48 enlaces
+OK	metodologia	navegación hash	RadioExamen · Método de estudio
+OK	metodologia	método renderizado	
+OK	examen	navegación hash	RadioExamen · Simulacro de examen
+OK	examen	coach examen	
+OK	cuaderno	navegación hash	RadioExamen · Cuaderno de errores
+OK	cuaderno	cuaderno renderizado	
+OK	tarjetas	navegación hash	RadioExamen · Tarjetas
+OK	tarjetas	cargar tarjetas	
+OK	utilidades	navegación hash	RadioExamen · Utilidades
+OK	utilidades	utilidades renderizadas	
+OK	ayuda	navegación hash	RadioExamen · Ayuda
+OK	ayuda	ayuda renderizada	
+OK	practicar	navegación hash	RadioExamen · Practicar test
+OK	practicar	iniciar y responder	opts=4
+OK	practicar	modo study_deepen seleccionable	
+OK	guard	salir de quiz con confirmación	#cuaderno
+OK	a11y	modo claro toggle	
+OK	a11y	escala fuente	16px → 16.8px

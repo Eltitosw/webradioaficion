@@ -176,9 +176,10 @@ export default {
       "Filtros RC/RLC: frecuencia de corte conceptual según R, L, C."
     ],
     "expressBullets": [
-      "Diodo en directa conduce; en inversa bloquea (modelo ideal del test).",
-      "Condensador pasa altas (bloquea DC en coupling); bobina opondráse a cambios bruscos de I.",
-      "Puente rectificador: convierte AC en pulsante DC; después suele ir filtrado."
+      "Diodo PN: umbral → abierto; por encima → conduce. Media onda vs puente.",
+      "BJT emisor común = amplificar; FET = control por tensión (puerta).",
+      "Acoplador T/π: antena ≠ 50 Ω → presentar 50 Ω al TX.",
+      "Condensador pasa altas; bobina se opone a cambios bruscos de I."
     ],
     "readMore": [
       "Transistor bipolar: tiene emisor, base y colector; una pequeña señal en base controla una corriente mayor entre colector y emisor.",
@@ -198,28 +199,40 @@ export default {
       "El condensador almacena carga en un campo eléctrico. En continua, una vez cargado, se comporta idealmente como circuito abierto. En alterna presenta reactancia capacitiva, que disminuye al subir la frecuencia.",
       "La bobina almacena energía en un campo magnético. En continua ideal se comporta casi como un cortocircuito; en alterna presenta reactancia inductiva, que aumenta con la frecuencia.",
       "La resonancia aparece cuando reactancia inductiva y capacitiva se compensan. En circuitos sintonizados, el factor Q relaciona frecuencia de resonancia y ancho de banda: Q = f/B.",
-      "El diodo conduce principalmente en un sentido. El Zener se usa como referencia o regulación en inversa; el LED emite luz; el varicap se comporta como condensador variable controlado por tensión.",
+      "Semiconductores: germanio o silicio puro son aislantes; con impurezas donantes (tipo N, más electrones) o aceptoras (tipo P, huecos) aumenta la conductividad. El diodo es una unión PN: por debajo del umbral se comporta como circuito abierto; por encima conduce con muy baja resistencia.",
+      "Aplicaciones del diodo (libro cap. 3): rectificador de media onda (elimina semiciclo negativo, salida pulsante), puente de onda completa, Zener en inversa como referencia, LED y varicap (condensador 1–500 pF controlado por tensión inversa, mínimo ~1 V).",
       "El transformador acopla energía entre bobinas. La relación de espiras determina la relación de tensiones; si sube tensión en el secundario, idealmente baja la corriente disponible.",
-      "El transistor amplifica o conmuta: una pequeña señal en base o puerta controla una corriente mayor en colector/drenador. En examen basta distinguir función amplificar de rectificar (diodo).",
-      "Un puente rectificador convierte alterna en continua pulsante usando cuatro diodos. El filtro posterior (condensador) suaviza la tensión para alimentar etapas de CC."
+      "Transistor bipolar (NPN/PNP): emisor, base y colector. Emisor común (Fig. 64): entrada en base, salida en colector — alta ganancia de tensión y corriente. Base común: entrada en emisor, salida en colector. Colector común: entrada en base, salida en emisor — baja impedancia de salida.",
+      "FET/MOSFET: controlados por tensión en la puerta (casi sin corriente de entrada); corriente entre drenador y fuente. Bipolar: controlados por corriente de base. En examen: FET = interruptor/amplificador por tensión; bipolar = por corriente.",
+      "Curvas del transistor (Fig. 63): zona de corte (Ic ≈ 0), zona activa (Ic depende de Ib) y saturación (Ic deja de depender de Ib y depende de Vce). A altas frecuencias cae la ganancia.",
+      "Válvulas (histórico): cátodo emite electrones al calentarse; placa recoge corriente. Útil para entender que el diodo y el transistor evolucionan el mismo concepto de conducción unidireccional o controlada.",
+      "Adaptación de impedancias (pp. 58–59): la antena real rara vez es exactamente 50 Ω; acopladores en T o en π (condensadores + bobina) hacen resonar y presentar 50 Ω al transmisor. Los equipos modernos suelen llevar acoplador automático."
     ],
     "practiceDrills": [
-      "Haz tarjetas símbolo→función con los componentes que más caen: diodo conduce en un sentido, varicap equivale a capacidad controlada por tensión, Zener regula y electrolítico exige polaridad.",
-      "Resuelve tres 'por qué': resonancia cuando reactancia L y C se igualan, PTC sube resistencia con temperatura, NTC la baja. Después busca una pregunta del banco que use cada idea.",
-      "Para transformadores, no memorices una frase suelta: dibuja primario/secundario, cuenta espiras y deduce si sube o baja tensión antes de mirar respuestas."
+      "Libro pp. 48–59 (OCR 0048–0059): lee cap. 3 en PDF; dibuja unión PN, rectificador media onda y montaje emisor común. No copies el OCR literal — usa estas notas y las figuras del PDF.",
+      "Haz tarjetas símbolo→función: diodo rectifica, Zener regula en inversa, varicap = C variable, LED emite luz, BJT amplifica por corriente de base, FET por tensión de puerta.",
+      "Resuelve tres «por qué»: resonancia cuando Xl = Xc; PTC sube R con temperatura; saturación del transistor cuando Ic ya no sigue a Ib. Busca una pregunta del banco por cada idea.",
+      "Montajes BJT: escribe en una línea la entrada y la salida de emisor común, base común y colector común. Si el enunciado pide «máxima ganancia de tensión», piensa emisor común.",
+      "Acoplamiento antena: si ROE alta con antena real, el libro propone acoplador T o π — no confundas con el balun (balanceado/no balanceado)."
     ],
     "quickSession": [
       "Para comparar R, L y C: R disipa energía y se mide en ohmios; C almacena carga/campo eléctrico y se mide en faradios; L almacena campo magnético y se mide en henrios.",
       "Si sube la frecuencia, el condensador ofrece menos oposición porque su reactancia capacitiva baja. La bobina ofrece más oposición porque su reactancia inductiva sube.",
       "En resistencias en serie, suma directa: Rtotal = R1 + R2 + R3. En paralelo, el resultado siempre es menor que la resistencia más pequeña; para dos iguales, Req = R/2.",
       "En condensadores sucede al revés que en resistencias: en paralelo se suman capacidades; en serie la capacidad equivalente baja.",
-      "Para diodos, piensa en función: rectificador deja pasar semiciclos en una fuente, Zener estabiliza tensión en inversa, LED indica/emite luz y varicap actúa como condensador variable.",
-      "En transformadores, compara espiras. Si el secundario tiene más espiras que el primario, sube tensión; si tiene menos, baja tensión. Idealmente, al subir tensión baja corriente para conservar potencia."
+      "Diodo PN: por debajo del umbral ≈ abierto; por encima ≈ conductor. Rectificador media onda corta un semiciclo; puente de cuatro diodos da pulsos de ambos semiciclos.",
+      "Zener en inversa estabiliza tensión; varicap cambia capacidad con tensión (sintonía); LED convierte corriente en luz.",
+      "BJT emisor común: Ib pequeña controla Ic grande — es el montaje típico de amplificación. FET: V en puerta controla corriente drenador–fuente sin consumir corriente de puerta (ideal).",
+      "Saturación: Ic deja de crecer con Ib; corte: Ic ≈ 0. En examen, «zona activa» = amplificación lineal.",
+      "Transformador: V1/V2 = N1/N2. Acoplador T o π al final del cap. 3: presenta 50 Ω al TX cuando la antena no coincide."
     ],
     "examChecklist": [
       "Faradio = capacidad; henrio = inductancia; ohmio = resistencia.",
       "Diodo ideal conduce en directa y bloquea en inversa.",
       "Zener se usa como referencia/regulación en inversa controlada.",
+      "BJT emisor común: alta ganancia; FET: control por tensión en puerta.",
+      "Transistor: corte, activa, saturación (Fig. 63).",
+      "Acoplador T o π adapta impedancia de antena a 50 Ω.",
       "Factor Q aparece en bobinas/circuitos resonantes y selectividad.",
       "PTC sube resistencia al subir temperatura; NTC baja resistencia al subir temperatura."
     ],
@@ -266,17 +279,21 @@ export default {
   },
   "receptores-emisores": {
     "memoryHooks": [
-      "Superheterodino: mezclador + OL → FI fija; amplificar FI es más estable que a RF variable.",
-      "Detector: AM diodo/envelope; SSB product detector; FM discriminador (concepto).",
-      "Medición: vatímetro para potencia; ROE alto → desadaptación."
+      "Superheterodino: FI AM ~455 kHz, FM ~10,7 MHz; mezclador + OL en tándem con sintonía.",
+      "Galena: L-C + diodo detector (histórico; poca sensibilidad/selectividad).",
+      "TX: excitador → PA; mezcla bajo nivel + amplificadores lineales.",
+      "Medición: vatímetro potencia; ROE alta → desadaptación; osciloscopio → forma de onda."
     ],
     "expressBullets": [
-      "Cadena típica RX: entrada → mezclador → FI → detector → AF.",
-      "Transmisor: oscilador/mezclador → amplificación → filtrado/armónicos (según pregunta) → acoplo a antena.",
-      "Potencia reflejada alta con adaptación mala: ROE sube; en examen se asocia a desadaptación."
+      "Galena: L-C + diodo → audio (histórico). Superheterodino: FI fija tras mezclador.",
+      "Cadena RX: RF → mezclador+OL → FI → detector → AF. TX: oscilador → excitador → PA → filtro.",
+      "FI AM ~455 kHz; FM ~10,7 MHz. Sintonía en tándem: C variable acopla RF y OL.",
+      "Interferencias: armónicos, modulación cruzada, bloqueo → filtros rechazo / atenuador."
     ],
     "readMore": [
       "Estabilidad y selectividad: trabajar a FI fija permite filtros más eficaces y ganancia más controlada que intentar hacerlo todo a RF variable.",
+      "Frecuencia imagen: conviene FI suficientemente alta para separar frecuencia deseada e imagen; por eso no siempre se usa la FI más baja posible.",
+      "Mezcladores pasivos (diodos): mejor frente a intermodulación pero más ruidosos y exigen más señal del oscilador local; activos (FET) pueden ganar ~10 dB en conversión.",
       "Control AGC/CAG: reduce o aumenta ganancia automáticamente para que la salida no cambie demasiado cuando cambia la intensidad de señal.",
       "Emisiones no deseadas: armónicos, espurias e intermodulación se reducen con diseño lineal, filtrado y no sobreexcitar etapas."
     ],
@@ -289,39 +306,61 @@ export default {
       "Receptores y transmisores: superheterodino simple/doble, conversión directa, bloques de CW/AM/SSB/FM, FI, CAG, medidor S, silenciador, excitador, PA, filtro de salida y repetidores VHF/UHF."
     ],
     "bookGuide": [
-      "Un receptor transforma una señal de radio muy débil en información útil. En un superheterodino, la señal de RF se mezcla con un oscilador local para obtener una frecuencia intermedia fija.",
-      "La frecuencia intermedia permite usar filtros y amplificadores estables. Después llega la detección o demodulación: detector de envolvente para AM, detector de producto para SSB/CW y discriminador para FM.",
-      "La selectividad es la capacidad de separar señales próximas; la sensibilidad es la capacidad de recibir señales débiles; la estabilidad es la capacidad de mantenerse en frecuencia.",
-      "El CAG/AGC ajusta automáticamente la ganancia para evitar saturación con señales fuertes. El squelch silencia el audio cuando no hay señal suficiente.",
-      "Un transmisor genera o procesa la señal, la modula, la amplifica y la filtra antes de enviarla a la antena. El filtro de salida reduce armónicos y emisiones no deseadas.",
-      "Los instrumentos se asocian a magnitudes concretas: vatímetro para potencia, frecuencímetro para frecuencia, osciloscopio para formas de onda y analizador de espectro para componentes espectrales.",
-      "En SSB la potencia de referencia suele ser PEP (pico de la envolvente). No confundas PEP con potencia media en AM o con lectura de vatímetro sin el modo correcto.",
-      "El medidor de ROE se coloca entre transmisor y línea de antena. ROE alta indica reflexión por desadaptación; el acoplador puede ayudar a presentar carga adecuada al transmisor."
+      "Receptor de galena (cap. 6, Fig. 100–101): antena → circuito sintonizado L-C (C1, L1, C2) selecciona la emisora; diodo en una toma de L1 rectifica la RF; condensador de audio filtra y los auriculares reproducen la modulación. Poca sensibilidad y selectividad, pero ilustra la detección.",
+      "Los receptores de RF sintonizada fallaban en estabilidad y selectividad (filtros Q altos pero ancho de banda enorme en RF). El superheterodino convierte todas las señales a una FI constante y más baja antes de detectar.",
+      "Heterodinación: mezclador + oscilador local producen suma y diferencia. La FI es la frecuencia intermedia fija. Suele elegirse el producto inferior (o el que filtre la cadena). FI AM doméstica ~455 kHz (algunos textos 470 kHz); FM ~10,7 MHz.",
+      "Cadena superheterodino AM (libro): antena → amplificador RF → mezclador → amplificador FI → detector → amplificador de audio. La etapa de FI admite filtros LC, de cristal, mecánicos o DSP con gran selectividad.",
+      "Sección de entrada: circuitos sintonizados de alto Q por banda para atenuar emisoras fuertes de bandas adyacentes antes del mezclador.",
+      "Mezcladores activos (p. ej. FET) pueden ganar ~10 dB en conversión; pasivos con diodos pierden ~8 dB pero resisten mejor la intermodulación, a costa de más nivel de oscilador local. DBM y TBM (triple balanceado) mejoran el balanceo.",
+      "Frecuencia imagen: una FI más alta facilita separar señal deseada e imagen con el mismo filtro de RF. FI fija permite reutilizar el mismo filtro de FI para todas las estaciones de una banda.",
+      "Detectores: AM → envolvente (diode + constante de tiempo RC lenta para seguir la portadora); SSB/CW → producto + BFO; FM → discriminador o pendiente. SSB en TX exige filtro por banda lateral (mecánico o digital).",
+      "CAG/AGC y squelch: el AGC evita saturación con señales fuertes variando ganancia; el squelch corta audio sin señal útil. Limitadores de ruido analógicos y DNL (Digital Noise Limiter) suprimen picos que saturan etapas previas.",
+      "Sintonía en tándem: el mismo condensador variable (o ganged) sintoniza la entrada RF y el oscilador local manteniendo Δf = FI constante al girar el dial.",
+      "Transmisor elemental (cap. 7): oscilador directo monobanda/QRP; se añade etapa separadora/amplificadora para no cargar el oscilador. Transmisores serios usan cambio de frecuencia: osciladores, mezcladores y multiplicadores por etapa.",
+      "Excitador alimenta la etapa de potencia (PA) con señal ya modulada y filtrada. Mezclar a bajo nivel y amplificar en lineal reduce distorsión e intermodulación. Filtro de salida atenúa armónicos antes de la antena.",
+      "Transceptor multimodo: misma heterodinación en RX y TX; conmutadores seleccionan osciladores fijos por banda en la salida del mezclador. Manipulador Morse en CW interrumpe la portadora manualmente.",
+      "Interferencias (pp. 123–135): armónicos de emisoras >30 MHz, modulación cruzada en entornos urbanos, bloqueo por señal muy fuerte. Soluciones: filtros de rechazo, atenuadores, blindaje, antena más directiva.",
+      "Medidas (cap. 10, pp. 166–177): vatímetro en línea (potencia directa/reflejida); medidor ROE entre TX y línea; osciloscopio para formas de onda y tensiones (escala vertical calibrada); frecuencímetro; analizador de espectro para armónicos.",
+      "En SSB la potencia de referencia suele ser PEP. ROE alta = energía reflejada por desadaptación; acoplador o ajuste de antena la corrigen. S-meter: intensidad relativa recibida, no potencia transmitida."
     ],
     "practiceDrills": [
-      "Usa el índice del libro como propone el método de preparación: pregunta de FI → receptor → diagrama de bloques → respuesta. FI va después del mezclador en el superheterodino.",
-      "Dibuja dos cadenas y tápales un bloque: RX con RF, mezclador, FI, detector y audio; TX con oscilador/modulador, excitador, PA y filtro de salida. Completa el hueco como si fuera un test.",
-      "Empareja instrumento y magnitud: osciloscopio/formas de onda, frecuencímetro/frecuencia, vatímetro/potencia, S-meter/intensidad recibida, analizador de espectro/componentes espectrales."
+      "Sesión A (cap. 6, pp. 100–113, OCR 0100–0113): galena Fig. 100–101 → superheterodino Fig. bloques → marca FI tras mezclador. PDF obligatorio si OCR vacío (0109, 0115).",
+      "Sesión B (cap. 6, pp. 114–127): mezcladores activo/pasivo, AGC, interferencias. Lista: armónico / modulación cruzada / bloqueo → remedio.",
+      "Sesión C (cap. 7, pp. 114–127, OCR 0117–0120): TX oscilador directo vs cambio de frecuencia; excitador → PA → filtro SSB.",
+      "Dibuja RX y TX en paralelo y tapa un bloque al azar: antena, mezclador, FI, detector, PA, filtro. Recita la función antes de mirar solución.",
+      "Instrumentos: 6 parejas (osciloscopio, frecuencímetro, vatímetro, ROE, S-meter, analizador) × magnitud medida.",
+      "Cálculo rápido: RF 14 MHz + OL 13,545 MHz → FI 455 kHz. Repite con otras bandas hasta automatizar suma/diferencia."
     ],
     "quickSession": [
-      "Un receptor superheterodino se entiende como cadena: antena capta RF, filtro/entrada selecciona, mezclador con oscilador local convierte a FI, amplificador de FI aumenta, detector extrae audio y amplificador de BF lo lleva al altavoz.",
-      "La FI va después del mezclador. Si una pregunta pregunta dónde se conecta la etapa de FI, la respuesta esperada es a la salida del mezclador.",
-      "Un transmisor básico sigue la cadena inversa: oscilador o generador de señal, modulador, excitador, amplificador de potencia y filtro de salida antes de la antena.",
-      "El mezclador produce suma y diferencia de frecuencias. Si entran 14 MHz y 4 MHz, una salida posible es 10 MHz y otra 18 MHz; los filtros seleccionan la útil.",
-      "Cada detector depende del modo: AM usa detector de envolvente; SSB y CW usan detector de producto/BFO; FM usa discriminador o detector equivalente de frecuencia.",
-      "Instrumentos: osciloscopio para ver formas de onda; frecuencímetro para medir frecuencia; vatímetro para potencia; medidor de ROE para adaptación; analizador de espectro para armónicos y señales no deseadas."
+      "Galena: sintonía L-C, diodo rectifica RF en toma de bobina, audio en auriculares — base conceptual, no referencia moderna.",
+      "Superheterodino: antena → RF → mezclador (OL) → FI → detector → audio. FI = salida útil del mezclador (tras filtrar suma/imagen).",
+      "¿Por qué FI? Selectividad y ganancia estables; filtros estrechos en FI, no en cada frecuencia de RF.",
+      "FI típicas: AM 455 kHz; FM 10,7 MHz. Heterodinación: suma y diferencia; ejemplo 14 MHz ± 13,545 MHz → 455 kHz y 27,545 MHz.",
+      "Detectores: AM envolvente; SSB/CW producto+BFO; FM discriminador. TX SSB: filtro de una banda lateral.",
+      "AGC baja ganancia con señal fuerte; squelch silencia sin portadora. DNL limita picos de ruido digitales.",
+      "TX: oscilador → (mezclador/multiplicador) → excitador → PA → filtro → antena. QRP puede ser oscilador directo con buffer.",
+      "ROE en línea; vatímetro potencia; osciloscopio forma de onda. S-meter solo intensidad RX."
     ],
     "examChecklist": [
-      "Mezclador genera suma y diferencia de frecuencias.",
-      "FI = frecuencia intermedia; permite filtrado y ganancia estables.",
-      "CAG/AGC controla ganancia para señales fuertes o débiles.",
-      "Filtro de salida reduce armónicos/espurias antes de la antena.",
-      "Clase A baja distorsión; clase C más eficiente pero no lineal para señal de amplitud.",
-      "S-meter indica intensidad relativa de señal recibida, no potencia de salida del transmisor."
+      "FI se genera en el mezclador (OL + RF), no en el detector.",
+      "Galena ≠ superheterodino; ambos pueden usar diodo, pero galena no tiene FI.",
+      "Mezclador: suma y diferencia de frecuencias.",
+      "FI AM ~455 kHz; FM ~10,7 MHz (receptor doméstico).",
+      "Sintonía en tándem mantiene FI constante al sintonizar.",
+      "CAG/AGC = ganancia automática; no es AFC de frecuencia.",
+      "Excitador antes de PA; filtro de salida reduce armónicos.",
+      "Modulación cruzada / bloqueo / armónicos: causas y filtros de rechazo.",
+      "ROE alta = reflexión; S-meter = señal recibida relativa.",
+      "Osciloscopio = forma de onda; vatímetro = potencia en línea."
     ],
     "trapWarnings": [
       "Superheterodino: el mezclador con oscilador local genera la FI. No confundas FI con detector, audio o filtro de entrada.",
       "Mezclador: aparecen suma y diferencia. Si entran 14 MHz y 4 MHz, entre las salidas posibles está 10 MHz.",
+      "FI típica AM ~455 kHz y FM ~10,7 MHz en receptores domésticos: no confundas FI con frecuencia de la estación sintonizada.",
+      "Galena rectifica en la toma de la bobina; superheterodino no es un receptor de galena aunque también use diodo en detección.",
+      "Frecuencia imagen: no confundas con FI; la imagen es otra señal espuria separada por 2×FI del oscilador (concepto de examen).",
+      "Mezclador pasivo no implica «mejor sensibilidad»; suele perder conversión y exigir OL más potente.",
+      "Excitador ≠ amplificador de potencia: el excitador prepara la señal; la PA entrega potencia a la antena.",
       "dBµV es nivel de tensión, no potencia. dBm sí es potencia referida a 1 mW.",
       "Sensibilidad = capacidad de recibir señales débiles; selectividad = separar señales cercanas; margen dinámico = aguantar señales fuertes sin saturar.",
       "CAG/AGC mantiene nivel de audio más constante variando ganancia; no es control automático de frecuencia.",
@@ -357,9 +396,29 @@ export default {
       {
         "front": "SSB/CW frente a AM en demodulación",
         "back": "Detector de producto / BFO (no envolvente)"
+      },
+      {
+        "front": "FI típica en AM (receptor doméstico, libro)",
+        "back": "Unos 455 kHz (470 kHz en algunos textos)"
+      },
+      {
+        "front": "¿Dónde se genera la FI?",
+        "back": "En el mezclador (OL + señal de entrada), antes del amplificador de FI"
+      },
+      {
+        "front": "Galena: elementos clave",
+        "back": "Sintonía L-C, diodo en toma de bobina, audio en auriculares"
+      },
+      {
+        "front": "Mezclador activo vs pasivo (idea libro)",
+        "back": "Activo ~+10 dB conversión; pasivo diodos ~−8 dB, menos intermodulación"
+      },
+      {
+        "front": "¿Por qué FI relativamente alta?",
+        "back": "Separar señal deseada de frecuencia imagen con filtro de RF"
       }
     ],
-    "sources": "CEPT programa; bloques de receptor en guías URE y bancos de práctica."
+    "sources": "CEPT programa; libro oficial 1.ª parte caps. 6–7 y 10; guías URE."
   },
   "antenas-prop": {
     "memoryHooks": [
@@ -368,9 +427,10 @@ export default {
       "Línea coaxial: modo TEM; impedancia característica Zo (50/75 Ω típicos)."
     ],
     "expressBullets": [
-      "Propagación: HF ionosfera (saltos); VHF/UHF más línea de vista y obstáculos.",
-      "Ganancia en dBi vs dBd: diferencia fija 2,15 dB (2,15 dBi = 0 dBd) — suele aparecer como trampa/distractor.",
-      "Altura de antena: más altura suele mejorar horizonte radioeléctrico en VHF."
+      "λ ≈ 300/f(MHz); dipolo total ≈ λ/2.",
+      "ROE 1:1 = sin reflexión; balun vs acoplador T/π.",
+      "Yagi: reflector atrás, directores delante.",
+      "HF ionosfera; VHF troposfera + línea de vista. dBi = dBd + 2,15."
     ],
     "readMore": [
       "Ondas estacionarias: aparecen por reflexión en la línea cuando la carga no está adaptada. La ROE compara máximos y mínimos de tensión o corriente.",
@@ -385,35 +445,44 @@ export default {
       "Propagación: onda de tierra, espacio, visión directa, ionosfera, frecuencia crítica, MUF, frecuencia óptima, distancia de salto, saltos múltiples, desvanecimiento, troposfera, conducto, esporádica, auroras, meteoros, EME y ruido atmosférico/galáctico."
     ],
     "bookGuide": [
-      "La antena convierte corriente de radiofrecuencia en onda electromagnética y viceversa. Su longitud, forma, altura, polarización e impedancia determinan cómo radia y cómo recibe.",
-      "Un dipolo de media onda mide aproximadamente λ/2 en total; cada brazo es cercano a λ/4. Una vertical de cuarto de onda necesita plano de tierra o radiales para funcionar correctamente.",
-      "La impedancia de antena debe adaptarse a la línea y al transmisor para transferir potencia. Si hay desadaptación aparece potencia reflejada y aumenta la ROE.",
-      "Una línea de transmisión tiene impedancia característica y factor de velocidad. El coaxial típico de radioaficionado suele ser de 50 Ω; el balun adapta sistemas balanceados y no balanceados.",
-      "La Yagi es directiva y usa elemento excitado, reflector y directores. La relación delante-atrás compara radiación frontal y posterior; el ancho de haz describe la apertura del lóbulo principal.",
-      "En HF predomina la propagación ionosférica; en VHF/UHF domina la visión directa, aunque pueden aparecer propagación troposférica, esporádica E, meteoros, satélite o rebote lunar.",
-      "Ganancia en dBi se refiere al dipolo isotrópico; dBd al dipolo medio onda. La conversión aproximada es dBi = dBd + 2,15 dB. No confundas directividad con potencia del transmisor.",
-      "En ionosfera, capas D, E y F condicionan reflexión HF según hora y ciclo solar. En examen basta asociar HF a rebote ionosférico y VHF/UHF a trayectos más cortos y línea de vista."
+      "La antena convierte corriente de radiofrecuencia en onda electromagnética y viceversa. Su tamaño está ligado a la longitud de onda: suele ser un múltiplo o submúltiplo de λ (dipolo total ≈ λ/2; vertical ≈ λ/4 con radiales o plano de tierra).",
+      "En recepción, un campo electromagnético induce una FEM alterna en la antena; en transmisión ocurre el proceso inverso. La eficiencia compara potencia radiada real con la que entrega el transmisor.",
+      "Impedancia de antena y línea: el coaxial típico es 50 Ω. Si la carga absorbe toda la potencia sin reflexión, la línea está equilibrada (ROE 1:1). ROE alta indica desadaptación y energía reflejada hacia el transmisor.",
+      "Línea de transmisión: tiene L, C e impedancia característica Zo. Mayor diámetro del conductor → menor L; mayor separación entre conductores → menor C. Paralelo de dos hilos y coaxial son los más usados; también existe guía de onda.",
+      "Balun: adapta línea no balanceada (coaxial) a antena balanceada (dipolo) y reduce corrientes por la malla. Acoplador T o π (libro cap. 8): hace resonar y presentar 50 Ω cuando la antena real no coincide; muchos transmisores lo integran.",
+      "Yagi: reflector detrás del dipolo excitado, directores delante. Los elementos parásitos reradian energía hacia el excitado → mayor ganancia en el lóbulo frontal. Relación frente-espalda: Yagi 3 elementos ~20 dB; parabólica ~60 dB (no es lo mismo que ganancia en dBi).",
+      "ERP (Effective Radiated Power) referencia dipolo ideal; EIRP referencia antena isotrópica. dBi = dBd + 2,15 dB aprox. La ganancia concentra potencia en una dirección; no aumenta la potencia legal del transmisor.",
+      "Dipolo con trampas: en frecuencias bajas las trampas actúan como carga y «alargan» el dipolo; permiten acortar el elemento para la banda más alta. Esquema típico multibanda HF del libro.",
+      "Propagación (cap. 9): λ = v/f; periodo T = 1/f. Las ondas EM se reflejan y difractan como la luz. HF: ionosfera (capas D, E, F), MUF, saltos y desvanecimiento. VHF: visión directa limitada por curvatura terrestre y altura de antenas.",
+      "Dispersión troposférica en VHF: curva la trayectoria más allá del horizonte óptico; depende de cambios bruscos de humedad/temperatura. Conductos troposféricos (450–2000 m) pueden dar enlaces excepcionales en microondas/VHF.",
+      "Antena corta → resuena por encima de la frecuencia deseada → alargar para bajar frecuencia de resonancia. Antena larga → resuena por debajo → acortar.",
+      "Filtro de salida del transmisor (Chebyshev) está calculado para una carga concreta; si la antena no está adaptada, la señal puede distorsionarse — otro motivo para acoplar bien."
     ],
     "practiceDrills": [
-      "Pasa de la fórmula al caso real: para 40 m, el dipolo ronda 20 m totales; si la antena resuena demasiado alta, alargarla baja la frecuencia de resonancia.",
-      "Practica la cadena de adaptación completa: transmisor 50 Ω → medidor ROE → acoplador si procede → coaxial → balun/dipolo. Señala dónde aparece potencia reflejada.",
-      "Relaciona cada diagrama con una palabra: vertical máximo hacia horizonte, Yagi directiva, relación delante-atrás, ancho de haz y ROE 1:1 como adaptación ideal."
+      "Libro pp. 130–165 (OCR 0130–0165): sesión 1 cap. 8 (antenas, líneas, Yagi, ERP); sesión 2 cap. 9 (λ, periodo, ionosfera, troposfera). Abre PDF en paralelo a las figuras de radiación.",
+      "Calcula dipolo 7 MHz: λ ≈ 42,8 m → longitud total ≈ 21 m. Repite con 14 MHz y 145 MHz hasta hacerlo sin calculadora.",
+      "Cadena TX: transmisor 50 Ω → medidor ROE → acoplador (T/π o automático) → coaxial → balun si dipolo → antena. Marca en qué eslabón aparece reflexión si ROE > 1.",
+      "Tabla rápida: ERP vs EIRP; relación frente-espalda vs ganancia dBi; MUF vs línea coaxial (trampa habitual).",
+      "Yagi: dibuja reflector–excitado–directores y señala el lóbulo principal hacia los directores."
     ],
     "quickSession": [
-      "Para calcular un dipolo de media onda, primero calcula λ = 300/f(MHz) y después toma aproximadamente la mitad. Ejemplo: para 7 MHz, λ ≈ 42,8 m y el dipolo total ronda 21,4 m antes de ajustes prácticos.",
-      "Si una antena resuena por encima de la frecuencia deseada, está corta y hay que alargarla. Si resuena por debajo, está larga y hay que acortarla.",
-      "La ROE indica desadaptación entre transmisor, línea y antena. ROE 1:1 es adaptación ideal; cuanto mayor es, más energía se refleja hacia el transmisor.",
-      "El balun se usa cuando conectas una línea no balanceada, como coaxial, a una antena balanceada, como un dipolo. Ayuda a reducir corrientes indeseadas por la malla.",
-      "La propagación HF suele usar ionosfera para largas distancias. VHF y UHF dependen más de visión directa, altura de antena, obstáculos y repetidores.",
-      "La Yagi concentra energía en una dirección. El reflector va detrás del elemento excitado y los directores delante; por eso aumenta ganancia en el lóbulo frontal."
+      "λ(m) ≈ 300/f(MHz). Dipolo media onda: longitud total ≈ λ/2 (cada brazo ≈ λ/4). Vertical cuarto de onda: elemento λ/4 + radiales o plano de tierra.",
+      "ROE 1:1 = línea equilibrada, sin reflexión. ROE alta = desadaptación; revisa acoplador, longitud de antena y tipo de línea.",
+      "Coaxial 50 Ω habitual. Balun: coaxial → dipolo. Acoplador T/π: antena distinta de 50 Ω → presentar 50 Ω al TX.",
+      "Yagi: reflector atrás, directores delante, lóbulo hacia directores. Relación frente-espalda en dB (Yagi ~20 dB, parabólica mucho más).",
+      "ERP vs dipolo; EIRP vs isotrópica. dBi ≈ dBd + 2,15.",
+      "HF: ionosfera, MUF, desvanecimiento, saltos. VHF/UHF: línea de vista; dispersión troposférica extiende cobertura más allá del horizonte óptico.",
+      "Periodo T = 1/f. Reflexión y difracción aplican a ondas de radio como a la luz.",
+      "Antena corta (resuena alto) → alargar; antena larga (resuena bajo) → acortar."
     ],
     "examChecklist": [
       "Dipolo media onda: longitud total ≈ λ/2; cada brazo ≈ λ/4.",
       "Vertical cuarto de onda: máximo de radiación hacia el horizonte.",
-      "Yagi: antena directiva; relación delante/atrás compara lóbulo frontal y posterior.",
-      "ROE alta = desadaptación/reflexión; se corrige con adaptación, acoplador o antena ajustada.",
-      "MUF y frecuencia crítica son conceptos de ionosfera, no de línea coaxial.",
-      "Ganancia en dBi y dBd no son iguales: dBi referencia antena isotrópica; dBd referencia dipolo."
+      "Yagi: reflector detrás, directores delante; relación frente-espalda ≠ ganancia dBi.",
+      "ROE alta = desadaptación; acoplador T/π o balun según el caso.",
+      "ERP (dipolo); EIRP (isotrópica). λ = v/f; T = 1/f.",
+      "MUF y frecuencia crítica = ionosfera, no coaxial.",
+      "Antena corta → alargar para bajar frecuencia de resonancia."
     ],
     "trapWarnings": [
       "ROE elevada = desadaptación y potencia reflejada. No significa buen acoplamiento, robustez del equipo ni fallo del oscilador.",
@@ -751,7 +820,9 @@ export default {
   "instalaciones": {
     "memoryHooks": [
       "Antenas en comunidades: propiedad horizontal + normativa de antenas (Ley 19/1983 citada en el reglamento).",
-      "Instalador autorizado y seguros pueden aparecer según enunciado y vigencia."
+      "EMC: interferencia = respuesta no deseada; bloqueo = receptor saturado por señal fuerte.",
+      "Electricidad: RCD antes de fibrilación; tormenta → desconectar bajada, no quitar tierra.",
+      "Ajustes con TX encendido: herramientas aisladas; sin anillos ni relojes."
     ],
     "expressBullets": [
       "No existe “libertad total” ni “prohibido siempre” en opciones extremas: la norma suele exigir procedimientos y acuerdos.",
@@ -781,9 +852,15 @@ export default {
       "El RD 2623/1986 y sus instrucciones desarrollan requisitos de instalaciones de antenas de aficionado: documentación, condiciones técnicas y relación con la normativa de antenas en inmuebles. En test suele cruzarse con Ley 19/1983.",
       "Ante obras en el edificio, la norma puede exigir comunicación previa y plazos; la coletilla «excepto urgencia» cambia los márgenes. Si la antena impide obras de conservación, el titular debe permitirlas con garantía de restitución según el supuesto.",
       "Repetidores y balizas son estaciones desatendidas: requieren gestor responsable, identificación, límites de potencia y ubicación según reglamento. No las confundas con una estación fija operada en casa por el titular.",
-      "El seguro de antenas cubre responsabilidad civil por daños a terceros derivados de la instalación. La memoria descriptiva y el instalador autorizado pueden ser exigidos según el enunciado y la vigencia citada."
+      "El seguro de antenas cubre responsabilidad civil por daños a terceros derivados de la instalación. La memoria descriptiva y el instalador autorizado pueden ser exigidos según el enunciado y la vigencia citada.",
+      "Compatibilidad electromagnética (EMC): un equipo no debe perturbar a otros ni verse inutilizado por interferencias ajenas. En aficionado suelen aparecer armónicos, espurias o exceso de modulación por mal ajuste.",
+      "Bloqueo o desensibilización: una señal de campo muy intenso satura el receptor y puede dejarlo inoperativo aunque no sea la frecuencia deseada.",
+      "Riesgo eléctrico: el cuerpo se modela como impedancias de piel de entrada y salida más impedancia interna. Por encima de unos 50 V en CA la piel deja de proteger tanto; el interruptor diferencial debe actuar antes de la fibrilación.",
+      "Tormentas: el refugio seguro es el interior del edificio; entre fachadas no basta. Desconecta la bajada de antena y equipos, mantén la toma de tierra de protección.",
+      "Prácticas de taller (libro p. 207): no ajustar equipos energizados sin herramientas aisladas; quitar anillos, relojes y pulseras; instrumentos y puntas de prueba acordes a la tensión; manos secas."
     ],
     "practiceDrills": [
+      "Libro pp. 184–207: OCR 0184–0207 o PDF — cap. 11 EMC y cap. 12 seguridad; subraya bloqueo, RCD y tormentas.",
       "Semana 1 — banco: en Practicar elige «Instalaciones» y repite las ~12 preguntas del bloque tres veces en días distintos (objetivo: acertar casi todas la tercera vez). Son pocas en banco; el temario y el PDF compensan.",
       "Checklist de estación fija exterior (sin test): memoria descriptiva, croquis/ubicación, instalador si el enunciado lo exige, seguro de antenas, toma de tierra, riostras señalizadas y comunicación a la comunidad. Repásala en voz alta antes de abrir el PDF.",
       "Cruce con normativa: lee en el temario «Marco normativo» los apartados de Ley 19/1983 y RD 2623/1986, luego vuelve a las preguntas de instalaciones. Muchas trampas mezclan comunidad de propietarios, plazos de obras y cancelación de licencia.",
@@ -804,6 +881,8 @@ export default {
       "La instalación exterior no es libertad absoluta ni prohibición total: hay procedimiento legal.",
       "Toma de tierra y protecciones son seguridad, no accesorio opcional.",
       "Filtrado, desacoplo y apantallamiento son medidas contra interferencias.",
+      "Bloqueo del receptor por señal fuerte: no confundir con QRM de otra estación en el mismo canal.",
+      "Interruptor diferencial (RCD): protege personas; no sustituye la toma de tierra de la estación.",
       "Si se cancela licencia o hay obras, revisa condiciones de desmontaje o permanencia solo recepción según enunciado.",
       "Ante interferencia a servicios de seguridad, la respuesta prudente es cesar o corregir antes de seguir emitiendo."
     ],
@@ -816,9 +895,20 @@ export default {
       "RF en altavoces/equipos cercanos: medidas razonables son ferritas, filtros, apantallamiento, tierra y revisión de armónicos; aumentar potencia es justo lo contrario.",
       "Estación fija, portable, móvil, remota y desatendida no son sinónimos. Lee si el enunciado habla de ubicación, movimiento o control a distancia.",
       "Toma de tierra y protecciones no se eliminan para evitar tormentas; se desconectan bajadas/equipos cuando proceda manteniendo seguridad.",
-      "Si hay interferencia perjudicial a servicios protegidos o seguridad de la vida, cesar/corregir suele ser la opción segura."
+      "Si hay interferencia perjudicial a servicios protegidos o seguridad de la vida, cesar/corregir suele ser la opción segura.",
+      "EMC del libro: la interferencia degrada o destruye la señal útil; armónicos y sobremodulación son causas frecuentes en TX mal ajustado.",
+      "Entre edificios no estás protegido del rayo como en el interior; desconectar bajada no es eliminar tierra.",
+      "Ajustar un transmisor encendido sin herramientas aisladas y con anillos puestos son distractores claramente falsos en examen de seguridad."
     ],
     "flashcards": [
+      {
+        "front": "Bloqueo del receptor (libro cap. 11)",
+        "back": "Señal muy fuerte satura la entrada y reduce sensibilidad"
+      },
+      {
+        "front": "Tormenta eléctrica — refugio seguro",
+        "back": "Interior del edificio; desconectar bajada de antena/equipos"
+      },
       {
         "front": "Tema típico de antenas en edificios compartidos",
         "back": "Normativa de propiedad horizontal + normativa de antenas"

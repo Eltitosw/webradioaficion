@@ -1,4 +1,4 @@
-/** Explicaciones Quijotes (UTF-8). patch-historical-hedges.mjs */
+/** Explicaciones Quijotes (UTF-8). sync-boe-normative-explanations.mjs */
 export default {
   "quijotes-84-1810": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida máxima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). «50 W.».",
   "quijotes-84-1817": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Asociación de radioaficionados a la que pertenece.». (BOE-A-2013-7624).",
@@ -6,12 +6,14 @@ export default {
   "quijotes-84-1822": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos técnicos, formación y actividad propia del servicio, no tráfico ajeno. Por eso encaja «Comunicaciones relacionadas con el Servicio de Aficionados.». (BOE-A-2013-7624).",
   "quijotes-84-1828": "El art. 25 UIT regula comunicaciones entre aficionados, identificación y condiciones del servicio; las administraciones pueden notificar restricciones. «Se permitirán siempre, excepto si la Administración de uno de los países afectados ha notificado su oposición a dichas comunicaciones.». (BOE-A-2013-7624).",
   "quijotes-84-1829": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Suspender de inmediato las emisiones.».",
+  "quijotes-84-1833": "Lo que identifica al operador autorizado ante terceros en emisión es su distintivo de llamada asignado, no el DNI ni el domicilio. «Su distintivo de llamada asociado.». (BOE-A-2013-7624).",
   "quijotes-84-1842": "Un extranjero residente puede obtener autorización en España si acredita residencia y, según el supuesto, el certificado HAREC (armonización CEPT T/R 61-02). «Cuando sea titular de un certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02.». (BOE-A-2013-7624).",
   "quijotes-84-1843": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Valencia.».",
   "quijotes-84-1862": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Región 1. La respuesta correcta es «Por todo radioaficionado que opera en España.».",
   "quijotes-84-1864": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Palma de Mallorca.».",
   "quijotes-84-1867": "La revocación exige causas tasadas en el reglamento; el enunciado pide la opción que el banco considera correcta (a veces refleja normativa derogada: léelo como «según el banco»). «Ninguna de ellas, ya no es necesario comunicarlo.». (BOE-A-2013-7624).",
   "quijotes-84-1882": "La barra y el segundo indicativo indican operación con autorización de otro país (CEPT) o invitado según el patrón del enunciado (EA/IZ…, EA/…, EA…/R…). «Se trata de un radioaficionado con licencia expedida en otro país, operando ocasionalmente en una estación española.». (BOE-A-2013-7624).",
+  "quijotes-84-1892": "Interferir a sabiendas a otra estación está prohibido; es mala práctica e infracción. «Nunca.». (BOE-A-2013-7624).",
   "quijotes-84-1902": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC.».",
   "quijotes-84-1904": "La autorización y el indicativo condicionan quién puede operar, dónde y con qué requisitos. Para este enunciado, la respuesta correcta es «Almería.».",
   "quijotes-84-1905": "El diploma de operador acredita superar el examen oficial; no sustituye la licencia de estación ni el indicativo. «Es necesario estar en posesión del certificado HAREC para poder acceder a ellos.». (BOE-A-2013-7624).",

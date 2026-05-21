@@ -2,6 +2,7 @@ import topicsData from "./data/topics.js";
 import topicStudy from "./data/topics-study.js";
 import { LIBRO_OFICIAL_INTRO, TEMARIO_BLOCK_ENRICHMENT } from "./data/temario-book-map.mjs";
 import { LIBRO_TEMA_TEORIA } from "./data/libro-temario-sync.mjs";
+import { LIBRO_TECNICA_OCR_BASE } from "./data/libro-tecnica-indice.mjs";
 import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
 import questionsBancoEstudio from "./data/questions-banco-estudio.js";
@@ -555,7 +556,10 @@ async function onRoute() {
   if (raw.startsWith("temario--")) {
     const sub = raw.slice("temario--".length);
     id = "temario";
-    if (sub) scrollTargetId = `temario-${sub}`;
+    if (sub) {
+      const secMatch = /^(.+?)--sec-(\d+)$/.exec(sub);
+      scrollTargetId = secMatch ? `temario-${secMatch[1]}-sec-${secMatch[2]}` : `temario-${sub}`;
+    }
   } else if (raw.startsWith("normativa--")) {
     const sub = raw.slice("normativa--".length);
     id = "normativa";
@@ -745,6 +749,16 @@ function renderBlockEnrichment(blockId, questionCount) {
   const pdfPart = sync?.partePdf
     ? `<p class="muted">Archivo local: <code>${escapeHtml(sync.partePdf)}</code></p>`
     : "";
+  const paginasLibro =
+    sync?.paginasLibro && sync.paginasLibro !== "—"
+      ? `<p class="muted">Páginas del libro (1.ª parte · Técnica): <strong>pp. ${escapeHtml(sync.paginasLibro)}</strong>${sync.capitulosLibro ? ` · ${escapeHtml(sync.capitulosLibro)}` : ""}</p>`
+      : sync?.capitulosLibro
+        ? `<p class="muted">Libro: ${escapeHtml(sync.capitulosLibro)} (otra parte del PDF).</p>`
+        : "";
+  const ocrHint =
+    sync?.ocrCarpeta && sync.paginasLibro && sync.paginasLibro !== "—"
+      ? `<p class="muted">Texto OCR (tu PC): <code>${escapeHtml(sync.ocrCarpeta)}</code> — fichero <code>NNNN.txt</code> = página impresa (p. ej. 0022 = p. 22).</p>`
+      : "";
   const resumen = sync?.resumenMemorizar?.length
     ? `<h5 class="temario-study-group__title">Resumen para memorizar</h5>
        <p class="muted">Una página antes de abrir el PDF; contrasta con «Teoría explicada» (sección 5).</p>
@@ -767,6 +781,8 @@ function renderBlockEnrichment(blockId, questionCount) {
       <h5 class="temario-study-group__title">Libro oficial (PDF)</h5>
       <p><strong>${escapeHtml(en.libro)}</strong> — ${escapeHtml(en.capitulos)}</p>
       ${pdfPart}
+      ${paginasLibro}
+      ${ocrHint}
       <p class="muted">${escapeHtml(en.enfoque)}</p>
       ${resumen}
       ${lectura}
@@ -1466,7 +1482,7 @@ function quizDraftSessionLabel(/** @type {{ smartLabel?: string; sessionType?: s
   const type = s.sessionType === "teorico" ? "Examen tipo test" : "Práctica libre";
   if (s.mode === "exam") return `${type} · modo examen`;
   if (s.studyFeedback === "confidence") return `${type} · estudio con seguridad`;
-  if (s.studyFeedback === "deepen") return `${type} · estudio temario y libro`;
+  if (s.studyFeedback === "deepen") return `${type} · ampliar temario y PDF`;
   return `${type} · estudio`;
 }
 
@@ -2069,7 +2085,7 @@ function buildTemarioSearchIndex(blockId, blockMeta, study) {
     }
     const sync = LIBRO_TEMA_TEORIA[blockId];
     if (sync) {
-      bits.push(sync.partePdf || "");
+      bits.push(sync.partePdf || "", sync.paginasLibro || "", sync.capitulosLibro || "", sync.ocrCarpeta || "");
       if (sync.diagramasLibro) bits.push(String(sync.diagramasLibro));
       if (sync.resumenMemorizar) for (const x of sync.resumenMemorizar) bits.push(String(x));
       if (sync.lecturaOrden) for (const x of sync.lecturaOrden) bits.push(String(x));
@@ -2145,11 +2161,39 @@ function applyQuizPrefsToForm() {
   if (trapEl instanceof HTMLInputElement) trapEl.checked = !!p.trapOnly;
   syncPretestAvailability();
   validateTopicPartConsistency();
+  syncQuizModeHint();
+}
+
+const QUIZ_MODE_HINTS = {
+  study:
+    "Tras cada respuesta verás por qué encaja la opción y la explicación didáctica. Es el modo por defecto para aprender con el banco.",
+  study_deepen:
+    "Solo acierto o fallo aquí; el detalle está en el resumen del bloque, enlaces al temario (secciones 3 y 5) y PDF. No repite la explicación larga del modo anterior.",
+  study_confidence: "Antes de corregir marcas seguridad baja, media o alta; luego ves la explicación y una nota de calibración.",
+  exam: "Sin corrección hasta terminar las 30 preguntas (o la sesión libre completa).",
+};
+
+function syncQuizModeHint() {
+  const hint = $("#quiz-mode-hint");
+  const mode = $("#quiz-mode")?.value || "study";
+  if (!hint) return;
+  const text = QUIZ_MODE_HINTS[mode];
+  if (text) {
+    hint.textContent = text;
+    hint.hidden = false;
+  } else {
+    hint.textContent = "";
+    hint.hidden = true;
+  }
 }
 
 function initQuizPrefsAutosave() {
   for (const id of ["quiz-part", "quiz-topic", "quiz-session", "quiz-mode"]) {
-    $(`#${id}`)?.addEventListener("change", saveQuizPrefs);
+    const el = $(`#${id}`);
+    el?.addEventListener("change", () => {
+      saveQuizPrefs();
+      if (id === "quiz-mode") syncQuizModeHint();
+    });
   }
   $("#quiz-pretest")?.addEventListener("change", saveQuizPrefs);
   $("#quiz-trap-only")?.addEventListener("change", saveQuizPrefs);
@@ -3223,42 +3267,63 @@ function fallbackReasoningForQuestion(q, sel) {
   return "Revisa el temario del bloque y la normativa oficial para fijar la regla que resuelve este enunciado.";
 }
 
-/** Panel post-respuesta: explicación didáctica + nota histórica (si existe) + enlaces a temario. */
-function renderDeepenPanel(q, reasoningPlain = "") {
-  const blockTitle = topicBlockLabel(q.topicId);
-  const temarioHref = `#temario--${encodeURIComponent(q.topicId)}`;
+/** Panel post-respuesta (modo ampliar): temario, PDF y banco literal — sin repetir el bloque didáctico del modo inmediato. */
+function renderDeepenPanel(q) {
+  const blockId = q.topicId;
+  const blockTitle = topicBlockLabel(blockId);
+  const enc = encodeURIComponent(blockId);
+  const sync = LIBRO_TEMA_TEORIA[blockId];
   const ureHref =
     q.part === 1
       ? "https://www.ure.es/examenes/electricidad-y-radioelectricidad/"
       : "https://www.ure.es/legislacion-y-reglamentacion/";
   const ureLinkText =
     q.part === 1 ? "URE · Material de práctica (electricidad y radioelectricidad)" : "URE · Legislación y reglamentación";
-  const normativaHref = "#normativa--normativa-boe";
-  const pedagogy = usablePedagogy(q);
+  const rawExplain = typeof q.explain === "string" ? q.explain.trim() : "";
+  const showBankLiteral =
+    rawExplain &&
+    !isWeakBankExplain(rawExplain) &&
+    !isGenericExplainText(rawExplain) &&
+    !isMisassignedPedagogicalExplain(q);
   const historical =
     typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-  const norm = (t) =>
-    String(t || "")
-      .toLowerCase()
-      .replace(/\s+/g, " ")
-      .trim();
-  const showPedagogy = pedagogy && norm(pedagogy) !== norm(reasoningPlain);
+  const resumen =
+    sync?.resumenMemorizar?.length
+      ? `<ul class="temario-list temario-list--compact">${sync.resumenMemorizar
+          .slice(0, 4)
+          .map((x) => `<li>${escapeHtml(x)}</li>`)
+          .join("")}</ul>`
+      : "";
+  const pdfHint = sync?.partePdf
+    ? `<p class="quiz-deepen__pdf muted">PDF local: <code>${escapeHtml(sync.partePdf)}</code>${sync.paginasLibro && sync.paginasLibro !== "—" ? ` · páginas <strong>${escapeHtml(sync.paginasLibro)}</strong> (${escapeHtml(sync.capitulosLibro || "")})` : ""}</p>`
+    : "";
+  const ocrDeepen =
+    sync?.paginasLibro && sync.paginasLibro !== "—"
+      ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml(LIBRO_TECNICA_OCR_BASE)}</code></p>`
+      : "";
   const links = `<ul class="quiz-deepen__links">
-      <li><a href="${temarioHref}">Temario · ${escapeHtml(blockTitle)}</a></li>
+      <li><a href="#temario--${enc}--sec-3">Temario · Libro oficial y práctica</a></li>
+      <li><a href="#temario--${enc}--sec-5">Temario · Teoría explicada del bloque</a></li>
+      <li><a href="#temario--${enc}">Temario · ${escapeHtml(blockTitle)} (bloque completo)</a></li>
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
-      <li><a href="${normativaHref}">Normativa BOE</a></li>
+      <li><a href="#normativa--normativa-boe">Normativa BOE</a></li>
     </ul>`;
-  if (!showPedagogy && !historical) {
-    return `<div class="quiz-deepen quiz-deepen--links-only"><p class="quiz-deepen__note">Amplía en el temario y contrasta con fuentes oficiales:</p>${links}</div>`;
-  }
   return `<div class="quiz-deepen">
-    ${showPedagogy ? `<p class="quiz-deepen__note"><strong>Ampliación:</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(pedagogy)}</p></blockquote>` : ""}
+    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicación larga del modo «corrección inmediata».</p>
+    ${resumen ? `<p class="quiz-deepen__note"><strong>Resumen para memorizar (${escapeHtml(blockTitle)}):</strong></p>${resumen}` : ""}
+    ${pdfHint}
+    ${ocrDeepen}
+    ${
+      showBankLiteral
+        ? `<p class="quiz-deepen__note"><strong>Texto del banco (literal):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(rawExplain)}</p></blockquote>`
+        : ""
+    }
     ${
       historical
         ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco histórico)</summary><p class="muted">${escapeHtml(historical)}</p></details>`
         : ""
     }
-    <p class="quiz-deepen__note">Fuentes para contrastar:</p>${links}
+    <p class="quiz-deepen__note">Abrir para contrastar:</p>${links}
   </div>`;
 }
 
@@ -3471,15 +3536,12 @@ function showStudyFeedback(q) {
   const label = `<p class="feedback__eyebrow">Corrección</p>`;
   const reasoning = answerReasoningPanel(q, sel);
   const explainBlock = quizFeedbackExplainParagraph(q, reasoning);
-  const visibleForAbbr = [reasoning, explainBlock, quizState.studyFeedback === "deepen" ? String(q.explain || "") : ""]
-    .filter(Boolean)
-    .join(" ");
-  const abbr = questionAbbreviationPanel(q, visibleForAbbr);
+  const abbr = questionAbbreviationPanel(q, [reasoning, explainBlock].filter(Boolean).join(" "));
   if (quizState.studyFeedback === "deepen") {
     const lead = ok
-      ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
+      ? `<p class="quiz-fb-lead"><strong>Correcto.</strong> Abre el temario o el PDF para fijar la regla.</p>`
       : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + reasoning + renderDeepenPanel(q, buildAnswerReasoningDetail(q, sel)) + abbr + cal;
+    fb.innerHTML = label + lead + renderDeepenPanel(q) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok
@@ -4285,7 +4347,7 @@ function initMobileNav() {
 }
 
 const A11Y_FONT_SCALE_MIN = 0.85;
-const A11Y_FONT_SCALE_MAX = 1.5;
+const A11Y_FONT_SCALE_MAX = 1.75;
 const A11Y_FONT_SCALE_STEP = 0.05;
 
 function normalizeA11yOpts(raw) {
@@ -4426,6 +4488,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initQuizTopicSelect();
     initFcTopicSelect();
     applyQuizPrefsToForm();
+    syncQuizModeHint();
     initQuizPrefsAutosave();
     initQuizKeyboard();
     initTemarioFilter();

@@ -19,7 +19,7 @@ export const LIBRO_OFICIAL_INTRO = {
 export const TEMARIO_BLOCK_ENRICHMENT = {
   "electricidad-basica": {
     libro: "1.ª parte · Técnica",
-    capitulos: "Electricidad básica: magnitudes, Ohm, potencia, CC/CA, instrumentos, fuentes y decibelios.",
+    capitulos: "Electricidad básica: magnitudes, Ohm, CA, resonancia (libro pp. 22–47, caps. 1–2).",
     enfoque:
       "Bloque ampliado con URE, FEDI y propias (≈57 en banco). El PDF sigue siendo la referencia para diagramas y definiciones largas.",
     bankPractice: [
@@ -39,8 +39,9 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
   },
   componentes: {
     libro: "1.ª parte · Técnica",
-    capitulos: "Componentes pasivos y activos, diodos, transistores, etapas y medidas.",
-    enfoque: "Relaciona símbolo en esquema con función (rectificar, amplificar, filtrar).",
+    capitulos: "Cap. 3 (pp. 48–59): semiconductores, diodos, BJT/FET, acopladores.",
+    enfoque:
+      "Libro + OCR 0048–0059: unión PN, rectificadores, montajes BJT (emisor común = ganancia), FET por tensión, acoplador T/π a 50 Ω.",
     bankPractice: [
       "51 preguntas: conviene repasar por familias (R, L, C, diodo, transistor) y luego mezclar.",
       "Activa «preguntas trampa» cuando domines lo básico: confunden rectificar con limitar corriente.",
@@ -48,8 +49,9 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
   },
   "receptores-emisores": {
     libro: "1.ª parte · Técnica",
-    capitulos: "Receptores, transmisores, superheterodino, medición, potencia y seguridad de equipos.",
-    enfoque: "Aprende el orden de bloques del superheterodino y qué mide cada instrumento.",
+    capitulos: "Cap. 6–7 (pp. 100–127) + medidas cap. 10 (pp. 166–177).",
+    enfoque:
+      "Tres sesiones: galena+superheterodino (FI tras mezclador), TX excitador/PA/filtro SSB, instrumentos ROE/vatímetro. OCR 0100–0120; PDF si página vacía.",
     bankPractice: [
       "81 preguntas — el bloque más grande de la 1.ª prueba: divide en 2–3 sesiones de ~30.",
       "Figuras de esquema de receptor/transmisor: léelas con calma; el enunciado suele citar «siguiente esquema».",
@@ -57,8 +59,9 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
   },
   "antenas-prop": {
     libro: "1.ª parte · Técnica",
-    capitulos: "Antenas, líneas de transmisión, ROE, propagación HF/VHF y diagramas de radiación.",
-    enfoque: "ROE, dipolo, Yagi y balun son núcleo del examen técnico.",
+    capitulos: "Cap. 8–9 (pp. 130–165): antenas, líneas, propagación.",
+    enfoque:
+      "Dos sesiones: cap. 8 (dipolo, Yagi, ROE, ERP, acopladores) y cap. 9 (λ, ionosfera, troposfera). OCR 0130–0165 como apoyo; teoría curada en la app.",
     bankPractice: [
       "71 preguntas con varias figuras: practica primero las que piden diagrama de radiación o esquema de línea.",
       "Contrasta ROE alta (mala adaptación) frente a «buen acoplamiento» en distractores.",
@@ -97,7 +100,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     libro: "3.ª parte (antenas/instalaciones) + 1.ª parte (seguridad eléctrica)",
     capitulos: "Instalación exterior, comunidades, tierra, repetidores y compatibilidad electromagnética.",
     enfoque:
-      "Solo ~12 preguntas en banco: ~12 párrafos de teoría + Ley 19/1983 y RD 2623/1986 en resumen y PDF. El temario compensa el banco.",
+      "Solo ~12 preguntas en banco: teoría + caps. 11–12 del libro (EMC, bloqueo, RCD, p. 207 taller). PDF y temario compensan el banco.",
     bankPractice: [
       "Practica las ~12 preguntas varias veces; luego refuerza con checklist de instalación fija del temario.",
       "Relaciona cada pregunta con un ítem de «Errores típicos» (tierra, RF, comunidad de propietarios).",

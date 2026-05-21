@@ -1,14 +1,14 @@
 /**
  * Banco principal: examen oficial (ofic, FEDI examen, URE, Quijotes 84) + figuras certificadas.
  * Generado: 2026-05-21 · 563 preguntas · npm run build:banco
- * Cribado: 667 · En banco por id: 562 · Sustituidas por versión con figura: 105
- * Duplicados eliminados: 29 (19 exactos, 10 parafraseados)
+ * Cribado: 584 · En banco por id: 562 · Sustituidas por versión con figura: 22
+ * Duplicados eliminados: 19 (19 exactos, 0 parafraseados)
  * Relleno hasta ≥400: 0 añadidas (total tras relleno: 563)
  * Con figura: 30
  */
 
 export const BANCO_GENERATED_AT = "2026-05-21";
-export const BANCO_STATS = {"count":563,"cribadoPreferred":667,"cribadoById":562,"cribadoReplacedByFigure":105,"withFigure":30,"dedupeRemoved":29,"dedupeGroups":19,"paraphraseRemoved":10,"fillAdded":0,"sourceEntries":1129};
+export const BANCO_STATS = {"count":563,"cribadoPreferred":584,"cribadoById":562,"cribadoReplacedByFigure":22,"withFigure":30,"dedupeRemoved":19,"dedupeGroups":19,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1129};
 
 export default [
   {
@@ -1816,7 +1816,7 @@ export default [
       "La autorización de la Administración competente en espectro radioeléctrico para instalar la antena."
     ],
     "correctIndex": 1,
-    "explain": "Lo que identifica al operador autorizado ante terceros en emisión es su distintivo de llamada asignado, no el DNI ni el domicilio. «Su distintivo de llamada asociado.».",
+    "explain": "Lo que identifica al operador autorizado ante terceros en emisión es su distintivo de llamada asignado, no el DNI ni el domicilio. «Su distintivo de llamada asociado.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -1938,7 +1938,7 @@ export default [
       "Nunca."
     ],
     "correctIndex": 3,
-    "explain": "Interferir a sabiendas a otra estación está prohibido; es mala práctica e infracción. «Nunca.».",
+    "explain": "Interferir a sabiendas a otra estación está prohibido; es mala práctica e infracción. «Nunca.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {

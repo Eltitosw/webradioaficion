@@ -21,7 +21,7 @@ import quijotesExplanations from "../data/quijotes-explanations.js";
 import { CRIBADO_PREFERRED_IDS } from "../data/question-cribado.js";
 import { EXACT_FIGURE_QUESTION_IDS, EXCLUDED_UNTIL_EXACT_FIGURE_IDS } from "../data/question-policy.js";
 import { checkStemFigures } from "../lib/stem-figure-check.mjs";
-import { FIGURE_REQUIRED_STEM_RE, FIGURE_STEM_EXCLUDE_RE } from "../lib/import-question-utils.mjs";
+import { dedupeKey, FIGURE_REQUIRED_STEM_RE, FIGURE_STEM_EXCLUDE_RE } from "../lib/import-question-utils.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.join(__dirname, "..");
@@ -147,11 +147,7 @@ for (const id of Object.keys(quijotesExplanations)) {
 
 const bancoByStem = new Map();
 for (const q of all) {
-  const key = `${String(q.stem || "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim()}|${q.options.map((o) => String(o).toLowerCase().trim()).join("¦")}`;
-  bancoByStem.set(key, q);
+  bancoByStem.set(dedupeKey(q.stem, q.options), q);
 }
 
 for (const id of CRIBADO_PREFERRED_IDS) {
@@ -160,13 +156,8 @@ for (const id of CRIBADO_PREFERRED_IDS) {
     (q) => q.id === id,
   );
   if (!src) continue;
-  const key = `${String(src.stem || "")
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .trim()}|${src.options.map((o) => String(o).toLowerCase().trim()).join("¦")}`;
-  const alt = bancoByStem.get(key);
-  if (alt?.stemFigure) continue;
-  fail(`question-cribado: id "${id}" falta en questions-banco.js (sin sustituto con figura).`);
+  if (bancoByStem.has(dedupeKey(src.stem, src.options))) continue;
+  fail(`question-cribado: id "${id}" falta en questions-banco.js (sin sustituto equivalente).`);
 }
 
 const externalFigureReferenceRe = /(ver|consulta|consultar|consultarla|consultarlas)\s+(la\s+|el\s+|las\s+|los\s+)?(figura|gr[aá]fica|gr[aá]fico|esquema|circuito|forma de onda).{0,80}\b(URE|FEDI|web)\b/i;

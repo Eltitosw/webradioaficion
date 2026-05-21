@@ -1,8 +1,87 @@
 === Auditoría calidad banco (examen radioaficionado) ===
-Fecha: 2026-05-20
-Preguntas activas: 522
-Errores: 0 · Avisos: 0
+Fecha: 2026-05-21
+Preguntas activas: 563
+Errores: 24 · Avisos: 2
 Tier C (histórico FEDI bloques): 0 · Con drift: 0
 
 Resumen por código:
+  24	classification-drift
+  2	stem-incoherent
 
+--- ERRORES (no deberían publicarse) ---
+  [classification-drift] ofic-002 P1/electricidad-basica
+    Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:
+    → 1/electricidad-basica → 1/componentes (inferred-topic)
+  [classification-drift] ofic-003 P1/magnetismo-ondas
+    En modulación de frecuencia (FM), la magnitud de la portadora que varía con la señal moduladora es p
+    → 1/magnetismo-ondas → 1/receptores-emisores (inferred-topic)
+  [classification-drift] ofic-004 P1/magnetismo-ondas
+    Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:
+    → 1/magnetismo-ondas → 1/electricidad-basica (default-topic-ok)
+  [classification-drift] ofic-023 P2/operacion-seguridad
+    Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado mediante c
+    → 2/operacion-seguridad → 2/marco-normativo (p2-regulatory)
+  [classification-drift] ofic-024 P2/instalaciones
+    Durante una transmisión, tocar una antena o elementos próximos al sistema radiante:
+    → 2/instalaciones → 1/antenas-prop (p1-technical)
+  [classification-drift] ofic-025 P2/instalaciones
+    Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida técnica razonabl
+    → 2/instalaciones → 1/receptores-emisores (override)
+  [classification-drift] ofic-031 P2/licencias-indicativos
+    En bancos españoles de práctica, si se pide deletrear la letra N con la tabla fonética usada para in
+    → 2/licencias-indicativos → 2/operacion-seguridad (p2-regulatory)
+  [classification-drift] ofic-033 P2/marco-normativo
+    La designación internacional de una clase de emisión consta, en el esquema habitual, de:
+    → 2/marco-normativo → 1/magnetismo-ondas (override)
+  [classification-drift] ofic-037 P1/receptores-emisores
+    El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el 
+    → 1/receptores-emisores → 1/componentes (p1-technical)
+  [classification-drift] ofic-038 P1/magnetismo-ondas
+    Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:
+    → 1/magnetismo-ondas → 1/electricidad-basica (default-topic-ok)
+  [classification-drift] ofic-045 P2/operacion-seguridad
+    Antes de transmitir en una frecuencia, escuchar si la frecuencia está libre es:
+    → 2/operacion-seguridad → 1/magnetismo-ondas (p1-technical)
+  [classification-drift] ofic-046 P2/operacion-seguridad
+    En tráfico de radioaficionado, la abreviatura «CL» suele significar:
+    → 2/operacion-seguridad → 2/marco-normativo (p2-regulatory)
+  [classification-drift] ofic-048 P1/electricidad-basica
+    Dos resistencias iguales de valor R conectadas en paralelo equivalen a:
+    → 1/electricidad-basica → 1/componentes (inferred-topic)
+  [classification-drift] ofic-050 P1/electricidad-basica
+    La relación entre periodo T (segundos) y frecuencia f (hertzios) de una señal periódica es:
+    → 1/electricidad-basica → 1/magnetismo-ondas (p1-technical)
+  [classification-drift] ofic-051 P1/electricidad-basica
+    Para medir la tensión entre dos puntos de un circuito, el voltímetro debe conectarse:
+    → 1/electricidad-basica → 1/componentes (p1-technical)
+  [classification-drift] ofic-052 P1/electricidad-basica
+    La unidad dBm expresa potencia referida a:
+    → 1/electricidad-basica → 1/magnetismo-ondas (inferred-topic)
+  [classification-drift] ofic-053 P1/electricidad-basica
+    Una resistencia con bandas violeta–verde–rojo–oro (tolerancia oro) tiene un valor nominal aproximado
+    → 1/electricidad-basica → 1/componentes (inferred-topic)
+  [classification-drift] ofic-054 P1/electricidad-basica
+    Un condensador ideal en régimen permanente de corriente continua se comporta, en primera aproximació
+    → 1/electricidad-basica → 1/componentes (p1-technical)
+  [classification-drift] ofic-055 P1/electricidad-basica
+    Una bobina ideal en régimen permanente de corriente continua se comporta, en primera aproximación, c
+    → 1/electricidad-basica → 1/componentes (p1-technical)
+  [classification-drift] ofic-056 P1/electricidad-basica
+    4,7 kΩ expresado en ohmios (Ω) sin prefijo es:
+    → 1/electricidad-basica → 2/licencias-indicativos (p2-regulatory)
+  [classification-drift] ofic-057 P1/electricidad-basica
+    Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 Ω. Si la corriente de carga es 2 
+    → 1/electricidad-basica → 1/componentes (p1-technical)
+  [classification-drift] ofic-059 P1/electricidad-basica
+    La energía almacenada en un condensador cargado (modelo ideal) es proporcional a:
+    → 1/electricidad-basica → 1/componentes (p1-technical)
+  [classification-drift] ofic-060 P1/electricidad-basica
+    Para proteger un amperímetro de sobrecorriente suele usarse un resistencia shunt que:
+    → 1/electricidad-basica → 1/componentes (p1-technical)
+  [classification-drift] ofic-063 P1/electricidad-basica
+    Una onda de radio en el espacio libre se modela principalmente como:
+    → 1/electricidad-basica → 1/magnetismo-ondas (inferred-topic)
+
+--- AVISOS (revisar) ---
+  [stem-incoherent] ofic-026 p2-reg-over-tech
+  [stem-incoherent] ofic-033 override

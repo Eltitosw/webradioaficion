@@ -1,7 +1,7 @@
-Verificación de fuentes · 2026-05-19T14:46:36
+Verificación de fuentes · 2026-05-21T23:15:01
 
 === Catálogo (data/verification-sources.mjs) ===
-Entradas: 25
+Entradas: 26
 - binding: Vinculante (BOE, convocatoria, sede administrativa)
 - harmonization: Armonización CEPT/UIT (HAREC, licencia CEPT)
 - didactic: Didáctico (URE, manuales, guías, PDFs editoriales)
@@ -9,9 +9,9 @@ Entradas: 25
 - project: Proyecto (preguntas propias con sourceRef)
 
 === Preguntas del banco por nivel de fuente ===
-- didactic: 56
-- historical: 938
-- project: 46
+- didactic: 411
+- historical: 88
+- project: 64
 
 === Enlaces vinculantes (comprobación HTTP) ===
 - OK 200 https://www.boe.es/buscar/act.php?id=BOE-A-2013-7624
@@ -37,7 +37,6 @@ Avisos: 0
 === Por origen de pregunta ===
 - FEDI-EA: 0 fallos, 0 avisos
 - Propias RadioExamen: 0 fallos, 0 avisos
-- Otro/importado: 0 fallos, 0 avisos
 - Quijotes EA3RCQ: 0 fallos, 0 avisos
 - URE: 0 fallos, 0 avisos
 

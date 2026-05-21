@@ -1,26 +1,23 @@
 /**
  * Teoría alineada al libro oficial (PDF local, 4 partes).
  * Complementa topics-study.js: orden de lectura + resumen para memorizar.
+ * Índice de páginas/capítulos: libro-tecnica-indice.mjs (OCR audiobook).
  * Ver docs/LIBRO_OFICIAL_ESTUDIO.md
  */
+import { LIBRO_TECNICA_OCR_BASE, LIBRO_TEMA_PAGINAS } from "./libro-tecnica-indice.mjs";
+
 export const LIBRO_TEMA_TEORIA = {
   "electricidad-basica": {
     partePdf: "parte_02_Primera_parte__Técnica.pdf",
     resumenMemorizar: [
       "Magnitudes: V (tensión), I (intensidad), R (resistencia), P (potencia). Ohm V = I·R; potencia P = V·I.",
       "Serie suma R; paralelo: 1/Req = 1/R1 + 1/R2. CC estable: C ≈ abierto, L ideal ≈ corto.",
-      "CA: valor eficaz Vp ≈ √2·Vrms; T = 1/f. Instrumentos: voltímetro en paralelo, amperímetro en serie.",
-      "dB relación; dBm potencia respecto a 1 mW. Coulomb: fuerza ∝ producto de cargas.",
+      "CA: valor eficaz Vp ≈ √2·Vrms; T = 1/f. a(t) = A·sen(2πft + φ).",
+      "Inducción: regla de la mano derecha (B, movimiento → sentido de I). Alternador: E = B·l·v.",
+      "Coulomb: fuerza ∝ producto de cargas. dB y dBm según enunciado.",
     ],
-    lecturaOrden: [
-      "Magnitudes eléctricas y unidades del SI (voltio, amperio, ohmio, vatio, faradio, henrio).",
-      "Ley de Ohm y ley de Coulomb; resistencia, conductores y código de colores.",
-      "Potencia en CC y CA; valor eficaz, periodo y frecuencia.",
-      "Fuentes, FEM y resistencia interna; condensadores y bobinas en CC/CA.",
-      "Decibelios y medidas (voltímetro, amperímetro, óhmetro, osciloscopio).",
-      "Contrasta cada apartado con la sección «Teoría explicada» de este bloque en la app.",
-    ],
-    diagramasLibro: "Esquemas de divisor de tensión, serie/paralelo, forma de onda en osciloscopio, código de colores.",
+    diagramasLibro:
+      "Figs. 20–24 alternador y CA; circuitos R, L, C (Figs. 29–35); resonancia y filtros PI/T (Figs. 40–41).",
   },
   "magnetismo-ondas": {
     partePdf: "parte_02_Primera_parte__Técnica.pdf",
@@ -30,63 +27,45 @@ export const LIBRO_TEMA_TEORIA = {
       "Fundamental + armónicos en señales no sinusoidales. Nyquist: fs ≥ 2·fmax.",
       "+3 dB ≈ doble potencia; +10 dB ≈ ×10.",
     ],
-    lecturaOrden: [
-      "Ondas electromagnéticas: propagación, polarización, relación frecuencia–longitud de onda.",
-      "Señales sinusoidales y no sinusoidales (armónicos, ruido).",
-      "Modulaciones AM, FM, fase, SSB y CW; anchura de banda y sobremodulación.",
-      "Introducción a muestreo digital y criterio de Nyquist si aparece en el índice.",
-      "Repasa la tabla AM/FM/SSB del temario antes de cerrar el capítulo.",
-    ],
-    diagramasLibro: "Espectros AM/SSB, diagrama de onda modulada, gráfica f versus λ.",
+    diagramasLibro: "§2.7 ondas EM; Fig. 84 AM; espectros FM/SSB; muestreo digital (cap. 5).",
   },
   componentes: {
     partePdf: "parte_02_Primera_parte__Técnica.pdf",
     resumenMemorizar: [
       "R disipa; C almacena carga (Xc baja con f); L almacena campo (Xl sube con f).",
-      "Diodo: conduce en directa, bloquea en inversa (ideal). Zener regula en inversa.",
-      "Transistor: pequeña señal controla corriente mayor. Transformador: relación de espiras.",
-      "Resonancia L–C: Q = f/B. Código de colores en R y C.",
+      "Unión PN: por debajo del umbral ≈ abierto; por encima conduce. Rectificador media onda / puente.",
+      "Zener (inversa), LED, varicap (C variable 1–500 pF). Tipo N donante; tipo P aceptor (huecos).",
+      "BJT: emisor común = máxima ganancia; FET = control por tensión en puerta.",
+      "Zonas transistor: corte, activa, saturación (Fig. 63). Acoplador T o π → 50 Ω a la antena.",
     ],
-    lecturaOrden: [
-      "Resistencias: tipos, código de colores, PTC/NTC.",
-      "Condensadores: capacidad, reactancia, tipos y polaridad en electrolíticos.",
-      "Bobinas: inductancia, factor Q, núcleos.",
-      "Diodos (rectificador, Zener, LED, varicap) y transistores (bipolar, FET).",
-      "Transformadores y circuitos RLC; resonancia y filtros conceptuales.",
-    ],
-    diagramasLibro: "Símbolos esquemáticos, curva del diodo, puente rectificador, circuito resonante.",
+    diagramasLibro:
+      "Figs. 56–57 rectificadores; 63 curvas BJT; 64–66 montajes; acopladores T/π (pp. 58–59).",
   },
   "receptores-emisores": {
     partePdf: "parte_02_Primera_parte__Técnica.pdf",
     resumenMemorizar: [
-      "Superheterodino: antena → RF → mezclador+OL → FI fija → IF → detector → audio/AF.",
-      "Selectividad separa frecuencias; sensibilidad detecta señales débiles.",
-      "Potencia: PEP en SSB; medidores de ROE, vatímetro, analizador de espectro según enunciado.",
-      "Seguridad: no tocar antena en TX; EMC y puesta a tierra del equipo.",
+      "Galena Fig. 100–101: L-C + diodo → auriculares (histórico).",
+      "Superheterodino: RF → mezclador+OL → FI (455 kHz AM / 10,7 MHz FM) → detector → audio.",
+      "FI tras mezclador; suma y diferencia. FI alta ayuda contra frecuencia imagen.",
+      "Mezclador activo ~+10 dB; pasivo diodos ~−8 dB, menos intermodulación.",
+      "TX: excitador → PA → filtro. SSB: filtro banda lateral. AGC/squelch/DNL.",
+      "Interferencias: armónicos, mod. cruzada, bloqueo → filtro rechazo.",
+      "Cap. 10: vatímetro, ROE, osciloscopio, S-meter.",
     ],
-    lecturaOrden: [
-      "Bloques del receptor: entrada, mezclador, oscilador local, FI, demodulador, AF.",
-      "Transmisores: oscilador, amplificadores, acoplamiento a antena, filtros de armónicos.",
-      "Medidas de potencia y ROE; interpretación de esquemas de cadena.",
-      "Seguridad eléctrica y RF en estación (tierra, contactos, potencia máxima).",
-    ],
-    diagramasLibro: "Esquema superheterodino, cadena TX, pantalla de instrumento o s-meter.",
+    diagramasLibro:
+      "Figs. 100–101 galena; bloques superheterodino AM; mezcladores DBM/TBM; TX cap. 7; medidas cap. 10.",
   },
   "antenas-prop": {
     partePdf: "parte_02_Primera_parte__Técnica.pdf",
     resumenMemorizar: [
-      "λ total dipolo ≈ λ/2; cuarto de onda vertical. Yagi: reflector–excitado–directores.",
-      "ROE alta = mala adaptación (reflexión). Balun adapta línea 50 Ω a antena balanceada.",
-      "HF: ionosfera; VHF/UHF: más línea de vista. dBi vs dBd (+2,15 dB aprox.).",
-      "Antena corta → sube frecuencia de resonancia; alargar para bajar f.",
+      "Antena ↔ onda EM; tamaño ~ múltiplo de λ. Dipolo λ/2; vertical λ/4 + tierra.",
+      "Línea 50 Ω; ROE 1:1 sin reflexión. Balun (balanceado); acoplador T/π (impedancia).",
+      "Yagi: reflector–excitado–directores; frente-espalda ~20 dB (3 elem.). ERP/EIRP; dBi = dBd + 2,15.",
+      "Cap. 9: λ = v/f; T = 1/f; reflexión/difracción. HF ionosfera/MUF; VHF troposfera/visión directa.",
+      "Antena corta → resuena alto → alargar.",
     ],
-    lecturaOrden: [
-      "Tipos de antenas: dipolo, Yagi, vertical, loop; diagramas de radiación.",
-      "Líneas de transmisión, impedancia característica y ROE.",
-      "Propagación HF (ionosfera) y VHF/UHF (troposfera, obstáculos).",
-      "Adaptación, balun y medidas en antena analizador/ROE.",
-    ],
-    diagramasLibro: "Diagrama de radiación, esquema Yagi, curva ROE, capas ionosféricas.",
+    diagramasLibro:
+      "Diagramas radiación; Yagi; dipolo con trampas HF; Fig. 143 (λ, T, f); ionosfera y troposfera.",
   },
   "marco-normativo": {
     partePdf: "parte_04_Tercera_parte__Normativa_nacional_e_internacional.pdf",
@@ -151,16 +130,24 @@ export const LIBRO_TEMA_TEORIA = {
       "Comunidad: comunicación previa, obras, plazos; «excepto urgencia» cambia márgenes.",
       "Tipos: portátil, móvil, fija, remota, desatendida — no son sinónimos.",
       "RF en equipos: filtros, ferritas, tierra. No tocar antena en TX.",
-      "Interferencia a servicios protegidos → cesar o corregir. Cancelar licencia → antena puede exigir autorización.",
+      "Cap. 12: ajustes con equipo en marcha → herramientas aisladas; quitar anillos y relojes.",
+      "EMC (cap. 11): interferencia = respuesta no deseada; bloqueo por señal fuerte; armónicos/espurias.",
+      "Cap. 12: impedancia cuerpo (piel+interna); RCD dispara antes de fibrilación; tormenta: desconectar bajada.",
+      "p. 207: herramientas aisladas si ajustas en marcha; sin anillos ni relojes; primeros auxilios.",
     ],
-    lecturaOrden: [
-      "Ley 19/1983: derecho a instalar antenas y límites en fachadas (parte_04).",
-      "RD 2623/1986 e instrucciones: memoria, instalador, seguro, condiciones técnicas.",
-      "Puesta a tierra, protecciones y descargas (parte_02, capítulo seguridad).",
-      "Repetidores/desatendidas: gestor, identificación y potencias (cruce con marco normativo).",
-      "EMC: vías de entrada de RF y medidas (filtros, blindaje, ferritas).",
-      "Subraya procedimientos: pocas preguntas en banco; el PDF y el temario compensan.",
-    ],
-    diagramasLibro: "Croquis de instalación, esquema de toma de tierra, señalización de riostras.",
+    diagramasLibro: "Fig. 170 impedancia cuerpo; cap. 11 bloqueo/EMC; cap. 12 tablas tensión; p. 207 prácticas.",
   },
 };
+
+const LECTURA_CIERRE = "Contrasta con «Teoría explicada» (sección 5) en la app.";
+
+for (const [blockId, refs] of Object.entries(LIBRO_TEMA_PAGINAS)) {
+  const tema = LIBRO_TEMA_TEORIA[blockId];
+  if (!tema || !refs) continue;
+  tema.paginasLibro = refs.paginas;
+  tema.capitulosLibro = refs.capitulos;
+  tema.ocrCarpeta = LIBRO_TECNICA_OCR_BASE;
+  if (refs.lecturaCapitulos?.length) {
+    tema.lecturaOrden = [...refs.lecturaCapitulos, LECTURA_CIERRE];
+  }
+}

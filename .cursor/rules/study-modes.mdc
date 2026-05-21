@@ -37,7 +37,7 @@ Al tocar preguntas, `explain` o el build del banco, **no romper** esta matriz:
 |-------|-----|
 | `immediate` | «Por qué encaja» + bloque Explicación (`pedagogicalExplain`) |
 | `confidence` | Obliga marcar seguridad (baja/media/alta) antes de corregir; luego mismo feedback + calibración |
-| `deepen` | «Por qué encaja» + panel Ampliación (didáctica + `explainSourceNote` si hay plantilla histórica) + enlaces temario/URE |
+| `deepen` | Solo acierto/fallo + resumen del bloque (`LIBRO_TEMA_TEORIA`) + texto literal del banco (si aplica) + enlaces temario sec. 3/5, URE y PDF. **No** repite el bloque didáctico de `immediate`. |
 
 ## Campos de explicación en el banco
 

@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=2026.05.19g" />
+  <link rel="stylesheet" href="styles.css?v=2026.05.21a" />
   <script>
     (function () {
       try {
@@ -98,7 +98,7 @@
         <summary class="a11y-toolbar__summary">Accesibilidad</summary>
         <div class="a11y-toolbar__body">
           <p class="a11y-toolbar__intro">
-            Preferencias guardadas en este navegador. Ajusta el tamaño del texto según tu pantalla; el movimiento también respeta la configuración del sistema si está activada.
+            Preferencias guardadas en este navegador. El control <strong>Tamaño del texto</strong> (A− / A+) escala toda la app, incluido Practicar. Si en el móvil cambias el tamaño de fuente del sistema, recarga la página para que el navegador lo aplique; luego puedes afinar aquí hasta 175&nbsp;%.
           </p>
           <ul class="a11y-toolbar__list" role="list">
             <li class="a11y-toolbar__scale">
@@ -110,11 +110,11 @@
                   id="a11y-font-scale"
                   class="a11y-scale-range"
                   min="85"
-                  max="150"
+                  max="175"
                   step="5"
                   value="100"
                   aria-valuemin="85"
-                  aria-valuemax="150"
+                  aria-valuemax="175"
                   aria-valuenow="100"
                 />
                 <button type="button" class="btn btn--ghost btn--sm a11y-scale-btn" id="a11y-font-inc" aria-label="Aumentar tamaño del texto">A+</button>
@@ -221,7 +221,7 @@
             </li>
             <li>
               <a href="#practicar" data-nav="practicar"><strong>Practicar</strong></a>
-              — preguntas por tema, aleatorizadas, con modos de estudio: corrección inmediata, seguridad y temario/libro.
+              — preguntas por tema, aleatorizadas, con modos: explicación al responder, ampliar en temario/PDF, seguridad o examen.
             </li>
             <li>
               <a href="#examen" data-nav="examen"><strong>Examen</strong></a>
@@ -507,12 +507,13 @@
         </div>
         <div class="panel__row">
           <label for="quiz-mode">Modo</label>
-          <select id="quiz-mode" title="Estudio: corrección al responder. Mide tu seguridad: marcas baja/media/alta antes de ver el resultado. Temario y libro: explicación literal del banco y enlaces al temario y URE. Examen: sin corrección hasta el final.">
-            <option value="study">Estudio · corrección inmediata</option>
+          <select id="quiz-mode" title="Corrección inmediata: explicación didáctica al responder. Ampliar temario/PDF: solo acierto/fallo + resumen del bloque y enlaces (sin repetir la explicación larga). Seguridad: marcas baja/media/alta antes de corregir. Examen: sin corrección hasta el final.">
+            <option value="study">Estudio · corrección inmediata (explicación al responder)</option>
+            <option value="study_deepen">Estudio · ampliar en temario y PDF (enlaces + resumen)</option>
             <option value="study_confidence">Estudio · mide tu seguridad</option>
-            <option value="study_deepen">Estudio · temario y libro (explicación literal + enlaces)</option>
             <option value="exam">Examen · corrección al final</option>
           </select>
+          <p id="quiz-mode-hint" class="muted quiz-mode-hint" hidden></p>
         </div>
         <div class="panel__row panel__row--recovery" id="quiz-wrong-row" hidden>
           <label class="check">
@@ -813,6 +814,23 @@
           </details>
 
           <details class="help-faq">
+            <summary>El tamaño de texto en Accesibilidad no cambia nada</summary>
+            <p>
+              Usa los botones <strong>A−</strong> y <strong>A+</strong> o la barra deslizante (hasta 175&nbsp;%). El cambio debe verse en menú, temario y preguntas.
+              Si antes no notabas diferencia, recarga la página tras actualizar la app. En Android, si subes el tamaño de fuente del sistema, recarga la pestaña y luego ajusta aquí si hace falta.
+            </p>
+          </details>
+
+          <details class="help-faq">
+            <summary>¿«Corrección inmediata» y «Ampliar temario y PDF» hacen lo mismo?</summary>
+            <p>
+              <strong>No.</strong> Los dos corrigen al instante (acierto o fallo), pero el contenido es distinto.
+              <strong>Corrección inmediata</strong> muestra la explicación didáctica en pantalla («por qué encaja», explicación, abreviaturas): es el modo habitual para aprender con el banco.
+              <strong>Ampliar en temario y PDF</strong> no repite esa explicación larga: te dice si acertaste y te lleva al resumen del bloque, al PDF local y a las secciones del temario (libro y teoría). Úsalo cuando ya leíste el bloque y quieres contrastar con el libro oficial.
+            </p>
+          </details>
+
+          <details class="help-faq">
             <summary>¿Qué son las preguntas trampa?</summary>
             <p>Son preguntas con distractores típicos: unidades parecidas, siglas confundibles, excepciones legales o palabras casi iguales. Úsalas cuando ya hayas visto el bloque al menos una vez.</p>
           </details>
@@ -1085,6 +1103,6 @@
       });
     })();
   </script>
-  <script src="app.bundle.js?v=2026.05.18r" type="module"></script>
+  <script src="app.bundle.js?v=2026.05.21a" type="module"></script>
 </body>
 </html>

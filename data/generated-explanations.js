@@ -1,4 +1,4 @@
-/** Explicaciones generadas (UTF-8). patch-historical-hedges.mjs */
+/** Explicaciones generadas (UTF-8). sync-boe-normative-explanations.mjs */
 export default {
   "fedi-ag-001": "Un ohmio (Ω) es la resistencia entre dos puntos cuando 1 V produce 1 A (ley de Ohm). «1 voltio / 1 amperio».",
   "fedi-ag-002": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «200 pF».",
