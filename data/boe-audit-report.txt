@@ -1,29 +1,5 @@
-Auditoría BOE — banco activo (522 preguntas)
-Generado: 2026-05-20T23:04:45.996Z
+Auditoría BOE — banco activo (520 preguntas)
+Generado: 2026-05-21T21:10:17.480Z
 
-— ure-p2-q222
-  Obsoleto: Dirección General de Telecomunicaciones / DGTel (telecomunicaciones; no confundir con DGT de Tráfico)
-  Pendiente de applyBoeBankRules en fuentes/banco
-
-— ure-p2-q238
-  Obsoleto: 25 W como correcta fuera del casco urbano (BOE: 50 W art. 25.h)
-  Pendiente de applyBoeBankRules en fuentes/banco
-
-— ure-p2-q291
-  Obsoleto: «En ningún caso» en repetidor/desatendida
-  Pendiente de applyBoeBankRules en fuentes/banco
-
-— ure-p2-q468
-  Obsoleto: Dirección General de Telecomunicaciones / DGTel (telecomunicaciones; no confundir con DGT de Tráfico)
-  Pendiente de applyBoeBankRules en fuentes/banco
-
-— ure-p2-q515
-  Obsoleto: Dirección General de Telecomunicaciones / DGTel (telecomunicaciones; no confundir con DGT de Tráfico)
-  Pendiente de applyBoeBankRules en fuentes/banco
-
-— ure-p2-q523
-  Obsoleto: Dirección General de Telecomunicaciones / DGTel (telecomunicaciones; no confundir con DGT de Tráfico)
-  Pendiente de applyBoeBankRules en fuentes/banco
-
-Resumen: 6 con patrón obsoleto · 6 aún no alineadas por reglas
+Resumen: 0 con patrón obsoleto · 0 aún no alineadas por reglas
 Ejecutar: npm run apply:boe-bank && npm run build:banco

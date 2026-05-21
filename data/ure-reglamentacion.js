@@ -2,7 +2,7 @@
  * URE — Parte 2 · Reglamentación (pool completo URE).
  * Fuente: https://www.ure.es/examenes/reglamentacion/
  * Apartados: marco-normativo, licencias-indicativos, operacion-seguridad, instalaciones.
- * Generado: 2026-05-20 · 45 cargas aleatorias · ids ure-p2-q{sourceId}.
+ * Generado: 2026-05-21 · 45 cargas aleatorias · ids ure-p2-q{sourceId}.
  * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [
@@ -53,8 +53,6 @@ export default [
     part: 2,
     topicId: "instalaciones",
     stem: "Una comunidad de propietarios, ¿puede autorizar la instalación de antenas de radioaficionado?:",
-    stemFigure: "images/quiz/ure-p2-q103-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q103): Una comunidad de propietarios, ¿puede autorizar la instalación de antenas de radioaficionado?:",
     options: [
       "No, solo pronunciarse respecto a la idoneidad de la instalación",
       "Si, pues ella es la afectada",
@@ -111,8 +109,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "El indicativo de llamada ED3ZHO:",
-    stemFigure: "images/quiz/ure-p2-q107-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q107): El indicativo de llamada ED3ZHO:",
     options: [
       "Pertenece a una estación fija de la provincia de Zaragoza",
       "Tiene carácter temporal",
@@ -127,8 +123,6 @@ export default [
     part: 2,
     topicId: "instalaciones",
     stem: "En la instalación de una antena de radioaficionado y sus elementos anejos:",
-    stemFigure: "images/quiz/ure-p2-q108-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q108): En la instalación de una antena de radioaficionado y sus elementos anejos:",
     options: [
       "No es necesario tener en cuenta la proximidad de líneas eléctricas aéreas",
       "No es necesario señalizar los anclajes y riostras si la antena está situada en un lugar transitable",
@@ -395,8 +389,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "En relación con una estación de aficionado y su utilización es correcto significar que:",
-    stemFigure: "images/quiz/ure-p2-q161-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q161): En relación con una estación de aficionado y su utilización es correcto significar que:",
     options: [
       "El operador viene obligado a utilizar potencias altas para comunicaciones de corta distancia",
       "Deberá estar provista la estación de los elementos adecuados para comprobar que la emisión se realiza dentro de las bandas autorizadas",
@@ -439,8 +431,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
-    stemFigure: "images/quiz/ure-p2-q165-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q165): ¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
     options: [
       "Málaga, Murcia, Madrid, Vizcaya",
       "Cáceres, Cádiz, Cuenca, Ciudad Real",
@@ -511,8 +501,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "En relación con los distintivos de llamada, la provincia de Murcia se identifica por la cifra:",
-    stemFigure: "images/quiz/ure-p2-q170-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q170): En relación con los distintivos de llamada, la provincia de Murcia se identifica por la cifra:",
     options: [
       "7",
       "6",
@@ -555,8 +543,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "Los soportes de una antena de radioaficionado:",
-    stemFigure: "images/quiz/ure-p2-q174-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q174): Los soportes de una antena de radioaficionado:",
     options: [
       "Se podrán fijar a los anclajes de un pararrayos",
       "No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen",
@@ -641,8 +627,6 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "En el alfabeto fonético internacional la letra R se codifica como:",
-    stemFigure: "images/quiz/ure-p2-q206-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q206): En el alfabeto fonético internacional la letra R se codifica como:",
     options: [
       "Roger",
       "Romeo",
@@ -685,8 +669,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "La abreviatura TTT cuando es transmitida tres veces consecutivas, constituye la señal de:",
-    stemFigure: "images/quiz/ure-p2-q209-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q209): La abreviatura TTT cuando es transmitida tres veces consecutivas, constituye la señal de:",
     options: [
       "Socorro",
       "Urgencia",
@@ -701,8 +683,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "Las frecuencias de llamada:",
-    stemFigure: "images/quiz/ure-p2-q211-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q211): Las frecuencias de llamada:",
     options: [
       "Sólo se usan en HF",
       "Actualmente ya no se utilizan",
@@ -801,8 +781,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "Las comunicaciones entre estaciones de aficionados se identificarán mediante un distintivo de llamada al comienzo y al final de cada emisión. Esta norma puede verse modificada en el supuesto de que la emisión:",
-    stemFigure: "images/quiz/ure-p2-q219-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q219): Las comunicaciones entre estaciones de aficionados se identificarán mediante un distintivo de llamada al comienzo y al f",
     options: [
       "Se realice a partir de las 22 horas",
       "Sea demasiado extensa",
@@ -849,7 +827,7 @@ export default [
       "Tendrá que presentar nueva memoria",
       "Podrá instalarla nuevamente en condiciones similares a las anteriores",
       "Ha de pedir permiso a la comunidad de propietarios",
-      "Deberá comunicarlo a la Dirección General de Telecomunicaciones y Tecnología de la Información",
+      "Deberá comunicarlo a la Administración competente en espectro radioeléctrico y Tecnología de la Información",
     ],
     correctIndex: 1,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
@@ -873,8 +851,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "En las comunicaciones del servicio de aficionados, ¿cuál de las siguientes proposiciones es correcta?:",
-    stemFigure: "images/quiz/ure-p2-q224-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q224): En las comunicaciones del servicio de aficionados, ¿cuál de las siguientes proposiciones es correcta?:",
     options: [
       "En general está permitido la emisión de onda portadora no modulada",
       "Puede ser empleada arbitrariamente la señal de socorro \"SOS\"",
@@ -903,8 +879,6 @@ export default [
     part: 2,
     topicId: "instalaciones",
     stem: "En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o elemento de fijación de las riostras en la obra civil del inmueble, repartiendo los esfuerzos mecánicos, se conoce con el nombre de:",
-    stemFigure: "images/quiz/ure-p2-q226-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q226): En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o element",
     options: [
       "Mástil",
       "Soporte",
@@ -975,8 +949,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "¿Cuál de las siguientes alternativas es correcta?:",
-    stemFigure: "images/quiz/ure-p2-q231-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q231): ¿Cuál de las siguientes alternativas es correcta?:",
     options: [
       "La autorización especial del uso del espectro radioeléctrico por radioaficionados será nominativa",
       "Una autorización de radioaficionado no tiene por qué llevar asociado un distintivo de llamada",
@@ -1043,22 +1015,6 @@ export default [
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
   },
   {
-    id: "ure-p2-q236",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "El certificado HAREC:",
-    stemFigure: "images/quiz/ure-p2-q236-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q236): El certificado HAREC:",
-    options: [
-      "Se expedirá conjuntamente con el diploma de operador",
-      "Permite operar en frecuencias distintas a las autorizadas",
-      "No sirve para demostrar que se ha aprobado el examen de radioaficionado con un programa básico",
-      "Permite obtener licencia en cualquier país del mundo",
-    ],
-    correctIndex: 0,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
-  },
-  {
     id: "ure-p2-q237",
     part: 2,
     topicId: "marco-normativo",
@@ -1079,12 +1035,12 @@ export default [
     stem: "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF, cuando estén instaladas fuera del casco urbano, será:",
     options: [
       "Igual que la permitida en la banda de HF",
-      "25 W",
+      "50 W.",
       "Igual que la permitida a las instaladas en el interior del casco urbano",
       "35 W",
     ],
     correctIndex: 1,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
+    explain: "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «50 W.».",
   },
   {
     id: "ure-p2-q26",
@@ -1147,8 +1103,6 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "La señal de Socorro en radiotelefonía se compone de:",
-    stemFigure: "images/quiz/ure-p2-q271-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q271): La señal de Socorro en radiotelefonía se compone de:",
     options: [
       "MAYDAY (tres veces), la palabra AQUÍ o DE y el distintivo de llamada (tres veces)",
       "AQUÍ o DE, el distintivo de llamada (tres veces) y la palabra MAYDAY (tres veces)",
@@ -1156,20 +1110,6 @@ export default [
       "MAYDAY (una vez), la palabra AQUÍ o DE y el distintivo de llamada ( tres veces)",
     ],
     correctIndex: 0,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
-  },
-  {
-    id: "ure-p2-q272",
-    part: 2,
-    topicId: "licencias-indicativos",
-    stem: "¿Qué identifica a un radioaficionado titular de una autorización?:",
-    options: [
-      "La matrícula de su estación",
-      "Su distintivo de llamada asociado",
-      "El permiso de instalación de la antena",
-      "La autorización del Ministerio de Industria, Turismo y Comercio para instalar la antena",
-    ],
-    correctIndex: 1,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
   },
   {
@@ -1263,8 +1203,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Clubs respectivamente?:",
-    stemFigure: "images/quiz/ure-p2-q279-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q279): ¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Club",
     options: [
       "Los que comienzan por: DD; TT; XX",
       "Los que comienzan por: UR y RC o RK",
@@ -1377,8 +1315,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "Las autorizaciones especiales de uso del espectro radioeléctrico por aficionados:",
-    stemFigure: "images/quiz/ure-p2-q287-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q287): Las autorizaciones especiales de uso del espectro radioeléctrico por aficionados:",
     options: [
       "No están sujetas a ningún procedimiento",
       "Habilitan a sus titulares a un uso ilimitado y permanente",
@@ -1435,16 +1371,14 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:",
-    stemFigure: "images/quiz/ure-p2-q291-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q291): ¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:",
     options: [
       "Si únicamente realiza emisiones en bandas de HF",
       "Únicamente en localidades aisladas",
-      "En ningún caso",
+      "Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.",
       "Si dispone de diploma desde hace más de 15 años",
     ],
     correctIndex: 2,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
+    explain: "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones automáticas desatendidas con resolución administrativa. «Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.».",
   },
   {
     id: "ure-p2-q292",
@@ -1801,8 +1735,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
-    stemFigure: "images/quiz/ure-p2-q344-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q344): En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
     options: [
       "La gama de frecuencia de 3 a 30 GHz",
       "El símbolo MF",
@@ -1887,8 +1819,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
-    stemFigure: "images/quiz/ure-p2-q350-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q350): ¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
     options: [
       "No existe límite para estas autorizaciones",
       "Exclusivamente dos por provincia",
@@ -1933,12 +1863,12 @@ export default [
     stem: "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
     options: [
       "Si la antigüedad de su licencia es superior a 5 años",
-      "En ningún caso",
+      "Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.",
       "Únicamente en localidades de menos de 5000 habitantes",
       "Si la cota de su emplazamiento es inferior a 500 metros",
     ],
     correctIndex: 1,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
+    explain: "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones automáticas desatendidas con resolución administrativa. «Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.».",
   },
   {
     id: "ure-p2-q354",
@@ -1987,8 +1917,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "La Ley General de Telecomunicaciones tipifica como infracción grave:",
-    stemFigure: "images/quiz/ure-p2-q357-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q357): La Ley General de Telecomunicaciones tipifica como infracción grave:",
     options: [
       "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas",
       "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios por otros operadores",
@@ -2087,8 +2015,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "El distintivo de llamada de una estación de radioaficionado, estará constituido por:",
-    stemFigure: "images/quiz/ure-p2-q39-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q39): El distintivo de llamada de una estación de radioaficionado, estará constituido por:",
     options: [
       "Ondas decamétricas",
       "Por un grupo alfanumérico",
@@ -2103,8 +2029,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "Que está ocurriendo si un radioaficionado se identifica como: EA3/OK2HM:",
-    stemFigure: "images/quiz/ure-p2-q390-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q390): Que está ocurriendo si un radioaficionado se identifica como: EA3/OK2HM:",
     options: [
       "Se están realizando pruebas en el distrito 3",
       "Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3",
@@ -2112,20 +2036,6 @@ export default [
       "Se trata de una conexión con interferencias",
     ],
     correctIndex: 1,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
-  },
-  {
-    id: "ure-p2-q391",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Se puede interferir deliberadamente a otra estación de radioaficionado:",
-    options: [
-      "Si está operando ilegalmente",
-      "Para disminuir la ocupación de la banda",
-      "Si no ha emitido su indicativo",
-      "Nunca",
-    ],
-    correctIndex: 3,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
   },
   {
@@ -2203,8 +2113,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "Para la obtención de la licencia de estación de radioaficionado es necesario presentar:",
-    stemFigure: "images/quiz/ure-p2-q397-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q397): Para la obtención de la licencia de estación de radioaficionado es necesario presentar:",
     options: [
       "Solicitud adjuntando una memoria descriptiva del conjunto de la instalación",
       "Un escrito informando que se ha efectuado la instalación",
@@ -2317,8 +2225,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
-    stemFigure: "images/quiz/ure-p2-q406-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q406): El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
     options: [
       "Distrito, Sufijo, Prefijo",
       "Distrito, Prefijo, Sufijo",
@@ -2347,8 +2253,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "Al instalar una antena de radioaficionado se tendrá en cuenta que:",
-    stemFigure: "images/quiz/ure-p2-q408-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q408): Al instalar una antena de radioaficionado se tendrá en cuenta que:",
     options: [
       "No se pueden situar en azoteas o lugares transitables",
       "Es obligatorio fijar sus soportes a anclajes o soportes de pararrayos o de conducciones eléctricas",
@@ -2433,8 +2337,6 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "En el alfabeto fonético internacional con que palabra se identifica la letra M:",
-    stemFigure: "images/quiz/ure-p2-q413-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q413): En el alfabeto fonético internacional con que palabra se identifica la letra M:",
     options: [
       "Miko",
       "Mika",
@@ -2450,12 +2352,12 @@ export default [
     topicId: "marco-normativo",
     stem: "Por la comisión de una infracción grave tipificada en la Ley General de Telecomunicaciones se podrá imponer al infractor una multa por importe de hasta el duplo del beneficio bruto obtenido o, en el caso de que no resulte aplicable este criterio el límite máximo será de:",
     options: [
-      "5.000.000 €",
+      "500.000 €",
       "2.000.000 €",
       "1.000.000 €",
       "Ninguna de las anteriores",
     ],
-    correctIndex: 1,
+    correctIndex: 0,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
   },
   {
@@ -2470,7 +2372,7 @@ export default [
       "Menos grave",
     ],
     correctIndex: 0,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
+    explain: "Según la Ley 11/2022 (BOE-A-2022-10757), retrasar injustificadamente datos exigidos por la Administración puede ser infracción leve. «Leve».",
   },
   {
     id: "ure-p2-q43",
@@ -2617,8 +2519,6 @@ export default [
     part: 2,
     topicId: "operacion-seguridad",
     stem: "¿Qué grupo del código Q indica “su frecuencia varía”?:",
-    stemFigure: "images/quiz/ure-p2-q452-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q452): ¿Qué grupo del código Q indica “su frecuencia varía”?:",
     options: [
       "QRG",
       "QRF",
@@ -2717,8 +2617,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "En el servicio de aficionados, la radiobaliza:",
-    stemFigure: "images/quiz/ure-p2-q46-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q46): En el servicio de aficionados, la radiobaliza:",
     options: [
       "Es una estación individual de radioaficionado",
       "Puede ser utilizada con carácter temporal en ubicación distinta de la habitual",
@@ -2761,8 +2659,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "De entre las diversas obligaciones del gestor de una estación desatendida NO se encuentra la de:",
-    stemFigure: "images/quiz/ure-p2-q462-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q462): De entre las diversas obligaciones del gestor de una estación desatendida NO se encuentra la de:",
     options: [
       "Actualizar periódicamente la información existente",
       "Procurar que el mantenimiento técnico de la estación garantice el servicio continuo de la misma",
@@ -2805,8 +2701,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "La obtención de la Autorización de Aficionado por un extranjero residente en España precisará:",
-    stemFigure: "images/quiz/ure-p2-q465-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q465): La obtención de la Autorización de Aficionado por un extranjero residente en España precisará:",
     options: [
       "Que sea titular de un Diploma de operador expedido en España, o de un Certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02",
       "Que únicamente exista Acuerdo o Convenio de reciprocidad en la materia con su país de origen",
@@ -2836,9 +2730,9 @@ export default [
     topicId: "marco-normativo",
     stem: "El cambio de ubicación de una antena:",
     options: [
-      "No es necesario solicitarlo a la Dirección General de Telecomunicaciones",
-      "Se debe solicitar a la Dirección General de Telecomunicaciones y seguir un procedimiento distinto al de primera instalación",
-      "Se debe solicitar a la Dirección General de Telecomunicaciones y seguir el mismo procedimiento que si se tratase de primera instalación",
+      "No es necesario solicitarlo a la Administración competente en espectro radioeléctrico",
+      "Se debe solicitar a la Administración competente en espectro radioeléctrico y seguir un procedimiento distinto al de primera instalación",
+      "Se debe solicitar a la Administración competente en espectro radioeléctrico y seguir el mismo procedimiento que si se tratase de primera instalación",
       "Únicamente requiere ser notificado al Ayuntamiento de la localidad",
     ],
     correctIndex: 2,
@@ -2850,7 +2744,7 @@ export default [
     topicId: "marco-normativo",
     stem: "La Ley 19/1983, conocida como Ley de Antenas, regula:",
     options: [
-      "La obligación de comunicar la instalación de una antena a la Dirección General de Telecomunicaciones",
+      "La obligación de comunicar la instalación de una antena a la Administración competente en espectro radioeléctrico",
       "El derecho a instalar una antena de cualquier tamaño",
       "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles",
       "La exención de presentar memoria descriptiva de la instalación",
@@ -3059,8 +2953,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "El Reglamento de uso del dominio público radioeléctrico por aficionados:",
-    stemFigure: "images/quiz/ure-p2-q51-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q51): El Reglamento de uso del dominio público radioeléctrico por aficionados:",
     options: [
       "Tiene por objeto la regulación del uso privativo del dominio público radioeléctrico",
       "Garantiza el derecho a su mantenimiento en el tiempo",
@@ -3144,7 +3036,7 @@ export default [
     id: "ure-p2-q515",
     part: 2,
     topicId: "instalaciones",
-    stem: "La Dirección General de Telecomunicaciones debe informar al presidente de la comunidad de propietarios afectada siempre que:",
+    stem: "La Administración competente en espectro radioeléctrico debe informar al presidente de la comunidad de propietarios afectada siempre que:",
     options: [
       "Se pretenda cambiar las antenas",
       "Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble",
@@ -3215,8 +3107,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Cómo se deletrea la palabra MERO?",
-    stemFigure: "images/quiz/ure-p2-q52-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q52): ¿Cómo se deletrea la palabra MERO?",
     options: [
       "MADRID, ECHO, ROMA, OSCAR",
       "MIKE, ECHO, ROMA, OSCAR",
@@ -3245,8 +3135,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "Señale la proposición incorrecta:",
-    stemFigure: "images/quiz/ure-p2-q521-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q521): Señale la proposición incorrecta:",
     options: [
       "Las antenas y elementos anejos se instalarán de forma que no produzcan molestias, peligro o daño a personas o bienes",
       "En los casos en que las antenas se sitúen en azoteas o lugares transitables se señalizarán los anclajes y riostras",
@@ -3274,7 +3162,7 @@ export default [
     id: "ure-p2-q523",
     part: 2,
     topicId: "licencias-indicativos",
-    stem: "¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:",
+    stem: "¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo temporal?:",
     options: [
       "El Reglamento actual no contempla el uso de distintivos temporales",
       "Sólo para los extranjeros residentes en España",
@@ -3292,8 +3180,8 @@ export default [
     options: [
       "Nunca",
       "Sí, si el sistema es poco voluminosos",
-      "Siempre que lo autorice la Dirección General de Telecomunicaciones",
-      "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios, remitiendo una copia de dicha autorización a la Dirección General de Telecomunicaciones",
+      "Siempre que lo autorice la Administración competente en espectro radioeléctrico",
+      "Sólo en recepción, previa autorización por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios, remitiendo una copia de dicha autorización a la Administración competente en espectro radioeléctrico",
     ],
     correctIndex: 3,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
@@ -3429,8 +3317,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "Para operar estaciones en el país visitado temporalmente, el radioaficionado está obligado a:",
-    stemFigure: "images/quiz/ure-p2-q56-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q56): Para operar estaciones en el país visitado temporalmente, el radioaficionado está obligado a:",
     options: [
       "Pedir indicativo en dicho país",
       "Presentar copia de su expediente",
@@ -3445,8 +3331,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Se puede solicitar protección contra interferencias perjudiciales al operar estaciones en otro país con licencia CEPT?:",
-    stemFigure: "images/quiz/ure-p2-q57-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q57): ¿Se puede solicitar protección contra interferencias perjudiciales al operar estaciones en otro país con licencia CEPT?:",
     options: [
       "Sí",
       "No",
@@ -3461,8 +3345,6 @@ export default [
     part: 2,
     topicId: "licencias-indicativos",
     stem: "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
-    stemFigure: "images/quiz/ure-p2-q58-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q58): ¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
     options: [
       "Melilla",
       "Barcelona",
@@ -3484,20 +3366,6 @@ export default [
       "Socorro",
     ],
     correctIndex: 0,
-    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
-  },
-  {
-    id: "ure-p2-q60",
-    part: 2,
-    topicId: "marco-normativo",
-    stem: "Es obligatorio informar a las Jefatura Provinciales de Inspección de Telecomunicaciones de las modificaciones efectuadas en los sistemas radiantes:",
-    options: [
-      "En todos los casos",
-      "Solo si afecta al entorno radioeléctrico",
-      "Siempre y cuando dichas modificaciones sean permanentes",
-      "Cuando haya que presentar memoria descriptiva",
-    ],
-    correctIndex: 2,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
   },
   {
@@ -3603,8 +3471,6 @@ export default [
     part: 2,
     topicId: "marco-normativo",
     stem: "¿Cuál de las siguientes acciones está permitida realizar en el tráfico entre estaciones de aficionado?:",
-    stemFigure: "images/quiz/ure-p2-q93-original.jpg",
-    stemFigureAlt: "Figura original URE (ure-p2-q93): ¿Cuál de las siguientes acciones está permitida realizar en el tráfico entre estaciones de aficionado?:",
     options: [
       "Transmitir mensajes de naturaleza técnica sobre ensayos",
       "Transmitir propaganda electoral",
@@ -3626,6 +3492,20 @@ export default [
       "Informar sobre la intensidad de la señal recibida",
     ],
     correctIndex: 0,
+    explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
+  },
+  {
+    id: "ure-p2-q95",
+    part: 2,
+    topicId: "licencias-indicativos",
+    stem: "Los prefijos de los distintivos de llamada correspondientes a España son, entre otros:",
+    options: [
+      "FM-UHF",
+      "EA, EB, EC",
+      "UHM-ARG",
+      "No existen",
+    ],
+    correctIndex: 1,
     explain: "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio.",
   },
   {

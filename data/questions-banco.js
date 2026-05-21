@@ -1,14 +1,14 @@
 /**
  * Banco principal: examen oficial (ofic, FEDI examen, URE, Quijotes 84) + figuras certificadas.
- * Generado: 2026-05-20 · 522 preguntas · npm run build:banco
- * Cribado: 635 · En banco por id: 521 · Sustituidas por versión con figura: 114
- * Duplicados eliminados: 26 (16 exactos, 10 parafraseados)
- * Relleno hasta ≥400: 0 añadidas (total tras relleno: 522)
- * Con figura: 110
+ * Generado: 2026-05-21 · 563 preguntas · npm run build:banco
+ * Cribado: 667 · En banco por id: 562 · Sustituidas por versión con figura: 105
+ * Duplicados eliminados: 29 (19 exactos, 10 parafraseados)
+ * Relleno hasta ≥400: 0 añadidas (total tras relleno: 563)
+ * Con figura: 30
  */
 
-export const BANCO_GENERATED_AT = "2026-05-20";
-export const BANCO_STATS = {"count":522,"cribadoPreferred":635,"cribadoById":521,"cribadoReplacedByFigure":114,"withFigure":110,"dedupeRemoved":26,"dedupeGroups":16,"paraphraseRemoved":10,"fillAdded":0,"sourceEntries":1115};
+export const BANCO_GENERATED_AT = "2026-05-21";
+export const BANCO_STATS = {"count":563,"cribadoPreferred":667,"cribadoById":562,"cribadoReplacedByFigure":105,"withFigure":30,"dedupeRemoved":29,"dedupeGroups":19,"paraphraseRemoved":10,"fillAdded":0,"sourceEntries":1129};
 
 export default [
   {
@@ -68,6 +68,20 @@ export default [
     "explain": "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A–C vacías; aquí se ha normalizado el enunciado. FEDI-EA."
   },
   {
+    "id": "fedi-ag-005",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?",
+    "options": [
+      "Rectificación",
+      "Conversión",
+      "Demodulación",
+      "Realimentación"
+    ],
+    "correctIndex": 3,
+    "explain": "Esa definición corresponde a la realimentación (feedback). FEDI-EA."
+  },
+  {
     "id": "fedi-ag-006",
     "part": 1,
     "topicId": "electricidad-basica",
@@ -108,6 +122,22 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "La capacidad indica cuánta carga puede almacenar un condensador; en el SI la unidad es el faradio (F), con submúltiplos µF, nF o pF. «Faradios»."
+  },
+  {
+    "id": "fedi-ag-009",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Cómo se denomina el siguiente circuito eléctrico?",
+    "stemFigure": "images/quiz/fedi-ag-009-original.jpg",
+    "stemFigureAlt": "Figura original FEDI-EA ag-9: circuito eléctrico de detector de envolvente.",
+    "options": [
+      "Generador de audiofrecuencia",
+      "Detector de envolvente",
+      "Conversor de audiofrecuencia",
+      "Detector de fase"
+    ],
+    "correctIndex": 1,
+    "explain": "AM significa modulación de amplitud. El circuito mostrado es un detector de envolvente: el diodo rectifica la señal de RF y el filtro RC sigue la envolvente para recuperar el audio."
   },
   {
     "id": "fedi-ag-010",
@@ -743,7 +773,7 @@ export default [
   {
     "id": "ofic-002",
     "part": 1,
-    "topicId": "componentes",
+    "topicId": "electricidad-basica",
     "stem": "Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:",
     "options": [
       "R1 · R2 / (R1 + R2)",
@@ -758,7 +788,7 @@ export default [
   {
     "id": "ofic-003",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "magnetismo-ondas",
     "stem": "En modulación de frecuencia (FM), la magnitud de la portadora que varía con la señal moduladora es principalmente:",
     "options": [
       "La amplitud",
@@ -768,6 +798,21 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Sin modulación de información solo se transmite la portadora (potencia de portadora). La respuesta es «La frecuencia».",
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
+  },
+  {
+    "id": "ofic-004",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:",
+    "options": [
+      "Doblar la potencia",
+      "Mitad de potencia",
+      "Diez veces la potencia",
+      "Igual de potencia"
+    ],
+    "correctIndex": 0,
+    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «Doblar la potencia». (BOE-A-2013-7624). 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
@@ -1043,7 +1088,7 @@ export default [
   {
     "id": "ofic-023",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado mediante cifrado:",
     "options": [
       "Están permitidas si son entre amigos",
@@ -1057,8 +1102,8 @@ export default [
   },
   {
     "id": "ofic-024",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Durante una transmisión, tocar una antena o elementos próximos al sistema radiante:",
     "options": [
       "Es inocuo si la ROE es baja",
@@ -1072,8 +1117,8 @@ export default [
   },
   {
     "id": "ofic-025",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida técnica razonable es:",
     "options": [
       "Aumentar siempre la potencia",
@@ -1084,6 +1129,21 @@ export default [
     "correctIndex": 1,
     "explain": "La RF puede entrar por cables, alimentación o falta de apantallamiento. Las soluciones típicas son ferritas, filtros, desacoplos, cables blindados, buena puesta a tierra y revisión de armónicos.",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 / instalaciones, seguridad y EMC."
+  },
+  {
+    "id": "ofic-026",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El Cuadro Nacional de Atribución de Frecuencias (CNAF) sirve para:",
+    "options": [
+      "Asignar nombres fonéticos a las letras",
+      "Ordenar la atribución de bandas y condiciones de uso del espectro en España",
+      "Calcular la ROE de una antena",
+      "Sustituir al indicativo de llamada"
+    ],
+    "correctIndex": 1,
+    "explain": "El CNAF organiza qué servicios pueden usar cada banda y con qué condiciones dentro del marco español. Para el radioaficionado se complementa con el reglamento específico y sus anexos.",
+    "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacción vigente en BOE."
   },
   {
     "id": "ofic-027",
@@ -1148,7 +1208,7 @@ export default [
   {
     "id": "ofic-031",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "licencias-indicativos",
     "stem": "En bancos españoles de práctica, si se pide deletrear la letra N con la tabla fonética usada para indicativos, la respuesta esperada suele ser:",
     "options": [
       "Noviembre",
@@ -1177,8 +1237,8 @@ export default [
   },
   {
     "id": "ofic-033",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "La designación internacional de una clase de emisión consta, en el esquema habitual, de:",
     "options": [
       "Un solo dígito",
@@ -1223,7 +1283,7 @@ export default [
   {
     "id": "ofic-037",
     "part": 1,
-    "topicId": "componentes",
+    "topicId": "receptores-emisores",
     "stem": "El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el ancho de banda B como:",
     "options": [
       "Q = B / f",
@@ -1234,6 +1294,21 @@ export default [
     "correctIndex": 1,
     "explain": "Q = f/B: a mayor Q, más selectivo (menor ancho de banda relativo). Es fórmula frecuente en exámenes técnicos. La respuesta que marca el banco es «Q = f / B».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / receptores y emisores."
+  },
+  {
+    "id": "ofic-038",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:",
+    "options": [
+      "0 dBm",
+      "10 dBm",
+      "30 dBm",
+      "100 dBm"
+    ],
+    "correctIndex": 2,
+    "explain": "1 W = 1000 mW → 10·log10(1000) = 30 dBm. Confundir con 10 dBm (10 mW) es error típico de examen.",
+    "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
     "id": "ofic-039",
@@ -1327,8 +1402,8 @@ export default [
   },
   {
     "id": "ofic-045",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "Antes de transmitir en una frecuencia, escuchar si la frecuencia está libre es:",
     "options": [
       "Opcional y sin importancia",
@@ -1343,7 +1418,7 @@ export default [
   {
     "id": "ofic-046",
     "part": 2,
-    "topicId": "marco-normativo",
+    "topicId": "operacion-seguridad",
     "stem": "En tráfico de radioaficionado, la abreviatura «CL» suele significar:",
     "options": [
       "Cambio de polarización",
@@ -1354,6 +1429,291 @@ export default [
     "correctIndex": 1,
     "explain": "CL = Closing / cierre de estación. No confundir con QRT (cesar emisión) en todos los contextos, pero CL es cierre habitual.",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
+  },
+  {
+    "id": "ofic-047",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Según la ley de Coulomb, la fuerza entre dos cargas puntuales es directamente proporcional a:",
+    "options": [
+      "La suma de las cargas",
+      "El producto de las cargas",
+      "El cuadrado de la distancia entre cargas",
+      "La resistencia del medio"
+    ],
+    "correctIndex": 1,
+    "explain": "Coulomb: la fuerza crece con el producto de las cargas (q1·q2) y decrece con el cuadrado de la distancia. No confundas «producto de cargas» con «cuadrado de la distancia» en el enunciado.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-048",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Dos resistencias iguales de valor R conectadas en paralelo equivalen a:",
+    "options": [
+      "2R",
+      "R / 2",
+      "R²",
+      "1 / (2R)"
+    ],
+    "correctIndex": 1,
+    "explain": "En paralelo, resistencias iguales: Req = R/n. Con dos iguales, Req = R/2. En serie sería 2R.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-049",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En una señal sinusoidal, si el valor eficaz (RMS) de tensión es 10 V, el valor de pico aproximado es:",
+    "options": [
+      "5 V",
+      "10 V",
+      "14,1 V",
+      "20 V"
+    ],
+    "correctIndex": 2,
+    "explain": "Para sinusoidal: Vp ≈ √2 · Vrms. Con 10 V eficaces, Vp ≈ 14,1 V. El pico no coincide con el eficaz.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-050",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La relación entre periodo T (segundos) y frecuencia f (hertzios) de una señal periódica es:",
+    "options": [
+      "T = f",
+      "T = 1 / f",
+      "T = f²",
+      "T = 2πf"
+    ],
+    "correctIndex": 1,
+    "explain": "Periodo y frecuencia son inversos: T = 1/f. Si f duplica, el periodo se reduce a la mitad.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-051",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para medir la tensión entre dos puntos de un circuito, el voltímetro debe conectarse:",
+    "options": [
+      "En serie con la rama",
+      "En paralelo entre esos puntos",
+      "Sustituyendo la fuente",
+      "Con el circuito alimentado por corriente alterna únicamente"
+    ],
+    "correctIndex": 1,
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En paralelo entre esos puntos». El voltímetro mide diferencia de potencial en paralelo (alta impedancia de entrada). En serie mediría corriente, no tensión.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-052",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La unidad dBm expresa potencia referida a:",
+    "options": [
+      "1 vatio",
+      "1 miliwatio",
+      "1 voltio",
+      "1 ohmio"
+    ],
+    "correctIndex": 1,
+    "explain": "dBm es potencia absoluta respecto a 1 mW (miliwatio). No es tensión ni resistencia; dB sin «m» es relación entre potencias.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-053",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una resistencia con bandas violeta–verde–rojo–oro (tolerancia oro) tiene un valor nominal aproximado de:",
+    "options": [
+      "75 Ω",
+      "750 Ω",
+      "7500 Ω",
+      "75 kΩ"
+    ],
+    "correctIndex": 2,
+    "explain": "Violeta=7, verde=5, rojo=×100 → 75×100 = 7500 Ω. La banda oro suele indicar tolerancia ±5 %, no una cifra del valor.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-054",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un condensador ideal en régimen permanente de corriente continua se comporta, en primera aproximación, como:",
+    "options": [
+      "Un cortocircuito",
+      "Un circuito abierto",
+      "Una fuente de tensión constante",
+      "Una resistencia que crece con el tiempo indefinidamente"
+    ],
+    "correctIndex": 1,
+    "explain": "En CC estable el condensador está cargado y no circula corriente continua: modelo ideal = circuito abierto.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-055",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una bobina ideal en régimen permanente de corriente continua se comporta, en primera aproximación, como:",
+    "options": [
+      "Un circuito abierto",
+      "Un cortocircuito",
+      "Un condensador en serie",
+      "Una antena resonante"
+    ],
+    "correctIndex": 1,
+    "explain": "En CC estable la bobina ideal solo opondría la resistencia óhmica del hilo: se modela como cortocircuito (sin reactancia en continua).",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-056",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "4,7 kΩ expresado en ohmios (Ω) sin prefijo es:",
+    "options": [
+      "47 Ω",
+      "470 Ω",
+      "4700 Ω",
+      "47 000 Ω"
+    ],
+    "correctIndex": 2,
+    "explain": "El prefijo «k» multiplica por 1000: 4,7 kΩ = 4,7 × 10³ Ω = 4700 Ω. Convierte unidades antes de aplicar Ohm.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-057",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 Ω. Si la corriente de carga es 2 A, la tensión en bornes es aproximadamente:",
+    "options": [
+      "12 V",
+      "11 V",
+      "13 V",
+      "6 V"
+    ],
+    "correctIndex": 1,
+    "explain": "Caída interna: Vint = I·Ri = 2×0,5 = 1 V. Tensión en bornes ≈ FEM − Vint = 12 − 1 = 11 V (modelo serie).",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-058",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La intensidad de un campo eléctrico se expresa habitualmente en:",
+    "options": [
+      "Amperios por metro (A/m)",
+      "Voltios por metro (V/m)",
+      "Vatios por ohmio",
+      "Hertzios"
+    ],
+    "correctIndex": 1,
+    "explain": "Campo eléctrico E: unidad SI V/m (voltio por metro). A/m corresponde al campo magnético, no al eléctrico.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-059",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La energía almacenada en un condensador cargado (modelo ideal) es proporcional a:",
+    "options": [
+      "Solo a la capacidad C",
+      "C · V (lineal en V)",
+      "C · V²",
+      "V / C"
+    ],
+    "correctIndex": 2,
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «C · V²». Energía en condensador: W = ½·C·V². Aparece el cuadrado de la tensión; no confundas con P = V·I en vatios.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-060",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para proteger un amperímetro de sobrecorriente suele usarse un resistencia shunt que:",
+    "options": [
+      "Va en serie y es muy alta",
+      "Deriva la mayor parte de la corriente en paralelo de baja resistencia",
+      "Sustituye al voltímetro",
+      "Aumenta la FEM de la fuente"
+    ],
+    "correctIndex": 1,
+    "explain": "El shunt es una resistencia baja en paralelo: desvía corriente para que el instrumento no reciba toda la intensidad del circuito.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-061",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En corriente alterna, el factor de potencia (cos φ) relaciona principalmente:",
+    "options": [
+      "Tensión continua y resistencia",
+      "Potencia activa y potencia aparente",
+      "Frecuencia y longitud de onda",
+      "dBm y dBµV sin más"
+    ],
+    "correctIndex": 1,
+    "explain": "cos φ = Pactiva / Paparente en alterna con desfase. No es una fórmula de continua pura ni una relación de onda λ = c/f.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-062",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La intensidad de un campo eléctrico homogéneo se mide en unidades SI de:",
+    "options": [
+      "V/m",
+      "A/m",
+      "W/Ω",
+      "Hz"
+    ],
+    "correctIndex": 0,
+    "explain": "Campo eléctrico E: voltios por metro (V/m). A/m es campo magnético; Hz es frecuencia.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-063",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una onda de radio en el espacio libre se modela principalmente como:",
+    "options": [
+      "Solo onda sonora",
+      "Onda electromagnética (campos E y B acoplados)",
+      "Corriente continua en el vacío",
+      "Solo campo magnético estático"
+    ],
+    "correctIndex": 1,
+    "explain": "La radiación de RF se propaga como onda electromagnética: campos eléctrico y magnético variables y perpendiculares a la dirección de propagación. No es corriente continua ni solo sonido en el aire.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-064",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Si la tensión eficaz de una sinusoide es 230 V, el valor de pico aproximado es:",
+    "options": [
+      "115 V",
+      "230 V",
+      "325 V",
+      "460 V"
+    ],
+    "correctIndex": 2,
+    "explain": "Vp ≈ √2·Vrms. Con 230 V eficaces, Vp ≈ 325 V (red doméstica en alterna).",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
+  },
+  {
+    "id": "ofic-065",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para medir la diferencia de potencial entre dos nodos, el instrumento adecuado se conecta:",
+    "options": [
+      "En serie en la rama",
+      "Entre los dos nodos (derivación / paralelo)",
+      "Sustituyendo el fusible",
+      "Solo con la antena desconectada"
+    ],
+    "correctIndex": 1,
+    "explain": "El voltímetro mide tensión entre puntos: conexión en derivación (paralelo), no en serie.",
+    "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
   },
   {
     "id": "quijotes-84-1810",
@@ -1367,8 +1727,7 @@ export default [
       "50 W."
     ],
     "correctIndex": 3,
-    "explain": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida máxima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). «50 W.».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · quijotes, quiz 84, pregunta 1810). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida máxima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). «50 W.»."
   },
   {
     "id": "quijotes-84-1817",
@@ -1444,6 +1803,21 @@ export default [
     "correctIndex": 1,
     "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Suspender de inmediato las emisiones.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    "id": "quijotes-84-1833",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "¿Qué identifica a un radioaficionado titular de una autorización?:",
+    "options": [
+      "La matrícula de su estación.",
+      "Su distintivo de llamada asociado.",
+      "El permiso de instalación de la antena.",
+      "La autorización de la Administración competente en espectro radioeléctrico para instalar la antena."
+    ],
+    "correctIndex": 1,
+    "explain": "Lo que identifica al operador autorizado ante terceros en emisión es su distintivo de llamada asignado, no el DNI ni el domicilio. «Su distintivo de llamada asociado.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1836",
@@ -1553,19 +1927,19 @@ export default [
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1882). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-1902",
+    "id": "quijotes-84-1892",
     "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Los prefijos de los distintivos de llamada correspondientes a España son, entre otros:",
+    "topicId": "marco-normativo",
+    "stem": "Se puede interferir deliberadamente a otra estación de radioaficionado:",
     "options": [
-      "FM - UHF.",
-      "EA, EB, EC.",
-      "UHM - ARG.",
-      "No existen."
+      "Si está operando ilegalmente.",
+      "Para disminuir la ocupación de la banda.",
+      "Si no ha emitido su indicativo.",
+      "Nunca."
     ],
-    "correctIndex": 1,
-    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC.».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1902). Puede contener erratas; contrastar con BOE/convocatoria."
+    "correctIndex": 3,
+    "explain": "Interferir a sabiendas a otra estación está prohibido; es mala práctica e infracción. «Nunca.».",
+    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1904",
@@ -1613,19 +1987,18 @@ export default [
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1925). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-1937",
+    "id": "quijotes-84-1936",
     "part": 1,
     "topicId": "antenas-prop",
-    "stem": "La Ley 19/1986, conocida como Ley de Antenas, regula:",
+    "stem": "El cambio de ubicación de una antena:",
     "options": [
-      "La obligación de comunicar la instalación de una antena a la Administración competente en espectro radioeléctrico.",
-      "El derecho a instalar una antena de cualquier tamaño.",
-      "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.",
-      "La exención de presentar memoria descriptiva de la instalación."
+      "No es necesario solicitarlo a la Administración competente en espectro radioeléctrico.",
+      "Se debe solicitar a la Administración competente en espectro radioeléctrico y seguir un procedimiento distinto al de la primera instalación.",
+      "Se debe solicitar a la Administración competente en espectro radioeléctrico y seguir el mismo procedimiento que si se tratase de la primera instalación.",
+      "Únicamente requiere ser notificado al Ayuntamiento de la localidad."
     ],
     "correctIndex": 2,
-    "explain": "En «La Ley 19/1986, conocida como Ley de Antenas, regula:», la formulación que encaja según el banco de examen es «El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.». Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundió.",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1937). Puede contener erratas; contrastar con BOE/convocatoria."
+    "explain": "Cualquier modificación sustancial de la instalación exige comunicación o autorización ante la Administración competente, con el mismo procedimiento que una nueva instalación (BOE-A-2013-7624). «Se debe solicitar a la Administración competente y seguir el mismo procedimiento que si se tratase de la primera instalación.»."
   },
   {
     "id": "quijotes-84-1939",
@@ -1658,21 +2031,6 @@ export default [
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-1955",
-    "part": 2,
-    "topicId": "instalaciones",
-    "stem": "La Administración competente en espectro radioeléctrico debe informar al presidente de la comunidad de propietarios afectada siempre que:",
-    "options": [
-      "Se pretenda cambiar las antenas.",
-      "Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.",
-      "Se expida la autorización de radioaficionado a algún residente.",
-      "Se vayan a realizar obras por parte de la comunidad."
-    ],
-    "correctIndex": 1,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble.».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1955). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-1963",
     "part": 1,
     "topicId": "magnetismo-ondas",
@@ -1686,36 +2044,6 @@ export default [
     "correctIndex": 2,
     "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1964",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo temporal?:",
-    "options": [
-      "El Reglamento actual no contempla el uso de distintivos temporales.",
-      "Sólo para los extranjeros residentes en España.",
-      "Cuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.",
-      "En ningún caso, teniendo en cuenta que la autorización de radioaficionado ya lleva asociado un distintivo de llamada."
-    ],
-    "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Cuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1964). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2011",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Los prefijos de los distitivos de llamada correspondientes a España son, entre otros:",
-    "options": [
-      "FM-UHF",
-      "EA, EB, EC",
-      "UHM-ARG",
-      "No existen"
-    ],
-    "correctIndex": 1,
-    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC».",
-    "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2011). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2025",
@@ -1958,6 +2286,21 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q12",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "A una potencia de valor 1000 mW le corresponde un valor en dB de:",
+    "options": [
+      "30 dBm",
+      "3dBw",
+      "-3dBm",
+      "0 dBm"
+    ],
+    "correctIndex": 0,
+    "explain": "Los decibelios expresan relaciones logarítmicas; dBm referencia potencia a 1 mW. La respuesta es «30 dBm».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q122",
     "part": 2,
     "topicId": "marco-normativo",
@@ -2037,8 +2380,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "¿Qué potencia se disipará en una resistencia de 30 ohmios por la que circula una corriente eléctrica de 2 amperios?",
-    "stemFigure": "images/quiz/ure-p1-q127-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q127): ¿Qué potencia se disipará en una resistencia de 30 ohmios por la que circula una corriente eléctrica de 2 amperios?",
     "options": [
       "30 vatios",
       "60 vatios",
@@ -2047,6 +2388,21 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "En una resistencia, P = V·I = I²R = V²/R. Calcula V = I·R y luego la potencia disipada. «120 vatios». (BOE-A-2013-7624).",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q128",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La transferencia máxima de potencia entre dos circuitos se dará cuando:",
+    "options": [
+      "La antena esté bien despejada",
+      "La antena esté puesta a tierra",
+      "Exista adaptación de las impedancias",
+      "Haya ondas estacionarias"
+    ],
+    "correctIndex": 2,
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Exista adaptación de las impedancias».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2071,8 +2427,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Una antena dipolo doblado, en resonancia, presenta una impedancia respecto de la dipolo simple:",
-    "stemFigure": "images/quiz/ure-p1-q13-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q13): Una antena dipolo doblado, en resonancia, presenta una impedancia respecto de la dipolo simple:",
     "options": [
       "Mayor",
       "Menor",
@@ -2084,12 +2438,25 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q130",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Para qué se ponen \"circuitos de filtrado\" en la salidas de las fuentes de alimentación?:",
+    "options": [
+      "Para impedir señales espúreas en la entrada de la fuente",
+      "Para protección de los bobinados",
+      "Para reducir el rizado de la señal de salida y obtener un valor más constante de esta",
+      "Para igualar la señal de salida a la de entrada"
+    ],
+    "correctIndex": 2,
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «Para reducir el rizado de la señal de salida y obtener un valor más constante de esta».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q131",
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Modulación de señales radioeléctricas:",
-    "stemFigure": "images/quiz/ure-p1-q131-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q131): Modulación de señales radioeléctricas:",
     "options": [
       "La modulación AM hace variar la amplitud de la portadora",
       "La modulación AM hace variar fundamentalmente la frecuencia de la portadora",
@@ -2120,8 +2487,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "La sensibilidad de un receptor se define como:",
-    "stemFigure": "images/quiz/ure-p1-q133-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q133): La sensibilidad de un receptor se define como:",
     "options": [
       "La facultad que tiene para seleccionar una determinada señal y separarla de las restantes",
       "La capacidad que tiene de captar señales débiles y amplificarlas",
@@ -2137,8 +2502,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Dados dos receptores, A y B, con las siguientes curvas de respuesta en amplitud para cada uno de ellos, a una Frecuencia Intermedia de 455 kHz, se puede afirmar que:",
-    "stemFigure": "images/quiz/ure-p1-q134-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q134): Dados dos receptores, A y B, con las siguientes curvas de respuesta en amplitud para cada uno de ellos, a una Frecuencia",
     "options": [
       "El receptor B es más selectivo que el receptor A",
       "El receptor A es más selectivo que el receptor B",
@@ -2158,7 +2521,11 @@ export default [
       "14.4 MHz",
       "1 MHz",
       "200 MHz",
-      "10 MHz"
+      "10 MHz",
+      "",
+      "",
+      "",
+      ""
     ],
     "correctIndex": 3,
     "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «10 MHz».",
@@ -2260,8 +2627,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Las antenas Yagi:",
-    "stemFigure": "images/quiz/ure-p1-q142-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q142): Las antenas Yagi:",
     "options": [
       "Son directivas",
       "Son omnidireccionales",
@@ -2291,8 +2656,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Las radiaciones espurias de los transmisores:",
-    "stemFigure": "images/quiz/ure-p1-q147-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q147): Las radiaciones espurias de los transmisores:",
     "options": [
       "Son aquellas que no molestan a otros receptores",
       "Se anularán cuando la frecuencia de trabajo sea inferior a 30 MHz",
@@ -2321,12 +2684,25 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q149",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "En relación con las baterías es correcto afirmar que:",
+    "options": [
+      "No se pueden conectar en serie",
+      "Sólo se pueden conectar en paralelo",
+      "La tensión de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas",
+      "Transforman la energía eléctrica en magnética"
+    ],
+    "correctIndex": 2,
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «La tensión de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q15",
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Existen varias clases de amplificadores, A, B, AB y C:",
-    "stemFigure": "images/quiz/ure-p1-q15-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q15): Existen varias clases de amplificadores, A, B, AB y C:",
     "options": [
       "El de clase AB es una combinación de A y B",
       "El de clase A amplifica la señal en medio ciclo",
@@ -2342,8 +2718,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "La velocidad de propagación de las ondas electromagnéticas en el vacio es de:",
-    "stemFigure": "images/quiz/ure-p1-q150-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q150): La velocidad de propagación de las ondas electromagnéticas en el vacio es de:",
     "options": [
       "300.000 km/s",
       "300.000 km/h",
@@ -2359,8 +2733,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "El margen dinámico de un receptor queda determinado fundamentalmente en:",
-    "stemFigure": "images/quiz/ure-p1-q16-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q16): El margen dinámico de un receptor queda determinado fundamentalmente en:",
     "options": [
       "El primer mezclador de entrada",
       "El oscilador local",
@@ -2376,8 +2748,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Las etapas desde la antena hasta el altavoz de un receptor superheterodino son por el siguiente orden:",
-    "stemFigure": "images/quiz/ure-p1-q17-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q17): Las etapas desde la antena hasta el altavoz de un receptor superheterodino son por el siguiente orden:",
     "options": [
       "Mezclador, limitador, detector, amplificador de RF, amplificador de audio",
       "Amplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio",
@@ -2453,8 +2823,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "La velocidad de propagación de las ondas electromagnéticas siempre es igual a:",
-    "stemFigure": "images/quiz/ure-p1-q185-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q185): La velocidad de propagación de las ondas electromagnéticas siempre es igual a:",
     "options": [
       "La frecuencia dividida por la longitud de onda",
       "La longitud de onda dividida por la frecuencia",
@@ -2470,17 +2838,11 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Se denomina rendimiento de un transmisor:",
-    "stemFigure": "images/quiz/ure-p1-q186-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q186): Se denomina rendimiento de un transmisor:",
     "options": [
       "La relación entre la potencia entregada y la reflejada",
       "La capacidad de detectar señales cercanas al nivel de ruido",
       "La relación entre la potencia entregada al sistema radiante y la consumida",
-      "Al valor correspondiente al 99% de la potencia emitida por el transmisor",
-      "",
-      "",
-      "",
-      ""
+      "Al valor correspondiente al 99% de la potencia emitida por el transmisor"
     ],
     "correctIndex": 2,
     "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La relación entre la potencia entregada al sistema radiante y la consumida».",
@@ -2491,8 +2853,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B y se expresa con la fórmula:",
-    "stemFigure": "images/quiz/ure-p1-q187-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q187): El factor de calidad Q de un circuito, es la relación que hay entre la frecuencia de resonancia f y su ancho de banda B",
     "options": [
       "Q=f/B",
       "Q=f.B2",
@@ -2553,8 +2913,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Se denomina receptor superheterodino de doble conversión al:",
-    "stemFigure": "images/quiz/ure-p1-q190-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q190): Se denomina receptor superheterodino de doble conversión al:",
     "options": [
       "Receptor con dos frecuencias intermedias independientes",
       "Receptor con dos circuitos limitadores",
@@ -2585,8 +2943,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "Los condensadores de tipo electrolítico:",
-    "stemFigure": "images/quiz/ure-p1-q192-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q192): Los condensadores de tipo electrolítico:",
     "options": [
       "Deben conectarse respetando la polaridad indicada",
       "Varían su capacidad en función de la tensión aplicada",
@@ -2617,17 +2973,11 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "El ancho del haz de la antena:",
-    "stemFigure": "images/quiz/ure-p1-q194-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q194): El ancho del haz de la antena:",
     "options": [
       "Es la separación angular entre dos puntos de potencia radiada la mitad de la máxima",
       "Es una unidad que se expresa en dB",
       "No existe",
-      "Suele valer 13 dB",
-      "",
-      "",
-      "",
-      ""
+      "Suele valer 13 dB"
     ],
     "correctIndex": 0,
     "explain": "El ancho de haz es la apertura angular entre puntos de referencia del diagrama; antenas más directivas tienen haz más estrecho. «Es la separación angular entre dos puntos de potencia radiada la mitad de la máxima».",
@@ -2653,8 +3003,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Si se desea medir la frecuencia de un transmisor no se puede emplear:",
-    "stemFigure": "images/quiz/ure-p1-q197-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q197): Si se desea medir la frecuencia de un transmisor no se puede emplear:",
     "options": [
       "Un osciloscopio",
       "Un voltímetro de radiofrecuencia",
@@ -2670,8 +3018,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "La potencia de pico de un transmisor con modulación de amplitud es siempre:",
-    "stemFigure": "images/quiz/ure-p1-q198-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q198): La potencia de pico de un transmisor con modulación de amplitud es siempre:",
     "options": [
       "Constante",
       "Inferior a la potencia media del transmisor",
@@ -2687,8 +3033,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "Los armónicos son:",
-    "stemFigure": "images/quiz/ure-p1-q199-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q199): Los armónicos son:",
     "options": [
       "Batidos de frecuencias indeseadas",
       "Múltiplos de la frecuencia fundamental",
@@ -2718,8 +3062,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Una antena es resonante si:",
-    "stemFigure": "images/quiz/ure-p1-q20-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q20): Una antena es resonante si:",
     "options": [
       "La línea de alimentación y el transmisor tienen la misma impedancia",
       "Entre el transmisor y la antena se sitúa un acoplador de antenas",
@@ -2758,6 +3100,21 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "ROE significa relación de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la línea/antena. Si la adaptación es mala, aumenta la potencia reflejada y sube la ROE."
+  },
+  {
+    "id": "ure-p1-q204",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para medir intensidad del campo eléctrico se utilizan unidades de:",
+    "options": [
+      "dBV",
+      "dBW",
+      "dBV/m",
+      "dBW/ m2"
+    ],
+    "correctIndex": 2,
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «dBV/m».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p1-q205",
@@ -2872,10 +3229,29 @@ export default [
       "Un buen conductor",
       "Semiconductor",
       "Un aislante",
-      "Un condensador con polaridad"
+      "Un condensador con polaridad",
+      "",
+      "",
+      "",
+      ""
     ],
     "correctIndex": 2,
     "explain": "Un dieléctrico es un material aislante que puede almacenar carga en un condensador (constante dieléctrica ε). «Un aislante».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q242",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La diferencia de potencial eléctrico se mide en:",
+    "options": [
+      "Vatios",
+      "Faradios",
+      "Microfaradios",
+      "Voltios"
+    ],
+    "correctIndex": 3,
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Voltios».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2883,8 +3259,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "Para evitar interferencias en los altavoces de un equipo de baja frecuencia, se debe:",
-    "stemFigure": "images/quiz/ure-p1-q243-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q243): Para evitar interferencias en los altavoces de un equipo de baja frecuencia, se debe:",
     "options": [
       "Utilizar para su conexión cable de igual longitud de onda que la señal interferente",
       "Conectar a masa los terminales del altavoz",
@@ -2915,8 +3289,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "Las ondas de radio son de naturaleza:",
-    "stemFigure": "images/quiz/ure-p1-q245-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q245): Las ondas de radio son de naturaleza:",
     "options": [
       "Eléctrica",
       "Magnética",
@@ -2925,6 +3297,21 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Las ondas de radio son ondas electromagnéticas que se propagan en el espacio sin medio material. «Electromagnética»."
+  },
+  {
+    "id": "ure-p1-q246",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Si se reduce la sección de un conductor:",
+    "options": [
+      "La resistencia eléctrica aumenta",
+      "La resistencia eléctrica disminuye",
+      "Disminuye la temperatura del conductor",
+      "Aumenta el número de átomos por centímetro cuadrado"
+    ],
+    "correctIndex": 0,
+    "explain": "La resistencia depende de resistividad, longitud y sección: R = ρ·L/S. La pareja proporcional del enunciado es «La resistencia eléctrica aumenta».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p1-q247",
@@ -2991,8 +3378,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frecuencia es:",
-    "stemFigure": "images/quiz/ure-p1-q250-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q250): A la frecuencia de resonancia las reactancias inductiva y capacitiva de un circuito se igualan, el cuadrado de esta frec",
     "options": [
       "Directamente proporcional a la inductancia de la bobina",
       "Directamente proporcional a la capacidad del condensador",
@@ -3008,8 +3393,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "La etapa de detección de un receptor se emplea para:",
-    "stemFigure": "images/quiz/ure-p1-q251-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q251): La etapa de detección de un receptor se emplea para:",
     "options": [
       "Mezclar la señal recibida",
       "Demodular la señal recibida",
@@ -3130,8 +3513,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
-    "stemFigure": "images/quiz/ure-p1-q260-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q260): ¿Qué banda de frecuencias presenta mejores condiciones para la propagación por reflexión ionosférica?",
     "options": [
       "HF",
       "UHF",
@@ -3175,6 +3556,38 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q265",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué valor de los siguientes corresponde a la “tensión eficaz” de la señal representada?:",
+    "stemFigure": "images/quiz/ure-p1-q265-original.jpg",
+    "stemFigureAlt": "Figura original URE (ure-p1-q265): ¿Qué valor de los siguientes corresponde a la “tensión eficaz” de la señal representada?:",
+    "options": [
+      "20 V",
+      "7,071 V",
+      "10 V",
+      "3.14 V"
+    ],
+    "correctIndex": 1,
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «7,071 V».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q266",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "La capacidad de que un sistema electrónico no produzca interferencias que comprometan su funcionamiento o que afecten a su entorno, se denomina:",
+    "options": [
+      "Fiabilidad y baja distorsión interferente",
+      "Compatibilidad electromagnética",
+      "AMC (Ambiente Medido y Comprobado)",
+      "SLI (Sistema Libre de Interferencia)"
+    ],
+    "correctIndex": 1,
+    "explain": "En condensadores en paralelo se suman capacidades; en serie la capacidad equivalente baja. En CC estable el condensador ideal equivale a circuito abierto. «Compatibilidad electromagnética».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q268",
     "part": 1,
     "topicId": "electricidad-basica",
@@ -3209,8 +3622,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:",
-    "stemFigure": "images/quiz/ure-p1-q301-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q301): El riesgo de producir interferencias, al aumentar la potencia de transmisión, es:",
     "options": [
       "Mayor",
       "Menor",
@@ -3226,8 +3637,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "El control automático de ganancia (CAG) en un receptor tiene como objetivo:",
-    "stemFigure": "images/quiz/ure-p1-q303-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q303): El control automático de ganancia (CAG) en un receptor tiene como objetivo:",
     "options": [
       "Mantener constante la amplitud de la señal de salida",
       "Anular el control de volumen",
@@ -3258,8 +3667,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "El valor de la tolerancia de una resistencia viene indicada por la:",
-    "stemFigure": "images/quiz/ure-p1-q305-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q305): El valor de la tolerancia de una resistencia viene indicada por la:",
     "options": [
       "Primera línea de color",
       "Segunda línea de color",
@@ -3316,12 +3723,25 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q309",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una batería eléctrica es un dispositivo que convierte:",
+    "options": [
+      "Energía química en potencial negativo",
+      "Energía química en energía eléctrica",
+      "Energía cinética en energía potencial",
+      "Ninguna de las anteriores respuestas es válida"
+    ],
+    "correctIndex": 1,
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «Energía química en energía eléctrica».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q311",
     "part": 1,
     "topicId": "componentes",
     "stem": "Una resistencia en SHUNT se puede utilizar para:",
-    "stemFigure": "images/quiz/ure-p1-q311-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q311): Una resistencia en SHUNT se puede utilizar para:",
     "options": [
       "Adaptar la impedancia de la etapa final",
       "Adaptar la impedancia de la antena",
@@ -3330,23 +3750,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "La resistencia shunt va en paralelo con el galvanómetro para derivar corriente y ampliar el rango del amperímetro. «Proteger aparatos de medida»."
-  },
-  {
-    "id": "ure-p1-q312",
-    "part": 1,
-    "topicId": "receptores-emisores",
-    "stem": "En el siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de rechazar la frecuencia imagen?:",
-    "stemFigure": "images/quiz/ure-p1-q312-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q312): En el siguiente esquema de un receptor, ¿qué circuito incluiría en el cuadro con interrogantes al objeto de rechazar la",
-    "options": [
-      "Un discriminador de imagen",
-      "Un detector de video",
-      "Un amplificador de banda ancha",
-      "Un filtro"
-    ],
-    "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Un filtro».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p1-q313",
@@ -3400,8 +3803,6 @@ export default [
     "part": 2,
     "topicId": "marco-normativo",
     "stem": "¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?:",
-    "stemFigure": "images/quiz/ure-p1-q317-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q317): ¿Hay alguna limitación para las radiaciones espurias en el servicio de radioaficionados, en la banda HF?:",
     "options": [
       "No hay limitaciones",
       "Sí, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW",
@@ -3524,12 +3925,42 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q327",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para medir la potencia de una señal eléctrica, se emplea un:",
+    "options": [
+      "Vatímetro",
+      "Frecuencímetro",
+      "Puente se resonancia",
+      "Capacímetro"
+    ],
+    "correctIndex": 0,
+    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatímetro».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q360",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para evitar que un campo electromagnético externo interfiera al circuito electrónico de la figura se puede apantallar en una caja:",
+    "stemFigure": "images/quiz/ure-p1-q360-original.png",
+    "stemFigureAlt": "Figura original URE (ure-p1-q360): Para evitar que un campo electromagnético externo interfiera al circuito electrónico de la figura se puede apantallar en",
+    "options": [
+      "De cualquier material con conexión a tierra",
+      "Semiconductora a la frecuencia de la señal",
+      "Aislante para evitar las corrientes de circulación",
+      "Metálica, eléctricamente estanca y con conexión a tierra"
+    ],
+    "correctIndex": 3,
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Metálica, eléctricamente estanca y con conexión a tierra».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q361",
     "part": 1,
     "topicId": "electricidad-basica",
     "stem": "El período de una corriente alterna es:",
-    "stemFigure": "images/quiz/ure-p1-q361-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q361): El período de una corriente alterna es:",
     "options": [
       "El tiempo que tarda en empezar a circular la corriente",
       "El tiempo que está encendida una bombilla",
@@ -3684,11 +4115,7 @@ export default [
       "Polarización",
       "Relación delante-atrás",
       "Ancho de haz de radiación",
-      "Región de campo radiado",
-      "",
-      "",
-      "",
-      ""
+      "Región de campo radiado"
     ],
     "correctIndex": 2,
     "explain": "ROE alta indica energía reflejada por desadaptación; el balun adapta sistemas balanceados y no balanceados. «Ancho de haz de radiación».",
@@ -3713,8 +4140,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
-    "stemFigure": "images/quiz/ure-p1-q377-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q377): Qué circuito, dentro del cuadro discontinuo, se emplea para conectar un cable coaxial a un dipolo:",
     "options": [
       "Condensador variable",
       "Filtro paso banda",
@@ -3730,17 +4155,11 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "En que bandas de frecuencia predomina el modo de propagación por onda de superficie:",
-    "stemFigure": "images/quiz/ure-p1-q378-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q378): En que bandas de frecuencia predomina el modo de propagación por onda de superficie:",
     "options": [
       "VHF",
       "UHF",
       "MF",
-      "HF",
-      "",
-      "",
-      "",
-      ""
+      "HF"
     ],
     "correctIndex": 2,
     "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «MF».",
@@ -3817,7 +4236,11 @@ export default [
       "Su resistencia está en función de la corriente que la atraviesa",
       "Su valor aumenta con la temperatura",
       "Se usa como estabilizadora de corriente",
-      "Su valor disminuye al aumentar la temperatura"
+      "Su valor disminuye al aumentar la temperatura",
+      "",
+      "",
+      "",
+      ""
     ],
     "correctIndex": 1,
     "explain": "PTC: la resistencia sube con la temperatura; se usa en protección térmica. NTC baja con el calor. «Su valor aumenta con la temperatura».",
@@ -3828,8 +4251,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "¿Qué es el denominado “squelch” de un equipo?:",
-    "stemFigure": "images/quiz/ure-p1-q386-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q386): ¿Qué es el denominado “squelch” de un equipo?:",
     "options": [
       "Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel",
       "Un circuito amplificador para oír el sonido con mayor volumen que en la entrada",
@@ -3858,12 +4279,40 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q415",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Una batería almacena energía eléctrica mediante un proceso:",
+    "options": [
+      "Químico",
+      "Acústico",
+      "Mecánico",
+      "Fotovoltaico"
+    ],
+    "correctIndex": 0,
+    "explain": "Energía en un condensador o resistencia se relaciona con V, I y tiempo según el elemento; revisa la fórmula del temario. «Químico».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q416",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "De la batería de un portátil, donde figure la siguiente inscripción “DC 7.4 v - 1500 mAh”, se puede afirmar que podrá proporcionar:",
+    "options": [
+      "7,4 voltios y 1,5 amperios durante una hora",
+      "1,5 voltios y 7,4 amperios durante una hora",
+      "7,4 voltios y 1500 amperios durante una hora",
+      "7,4 voltios y 1500 amperios durante media hora"
+    ],
+    "correctIndex": 0,
+    "explain": "Una fuente ideal de tensión mantiene V constante; una de corriente mantiene I constante. «7,4 voltios y 1,5 amperios durante una hora».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q417",
     "part": 1,
     "topicId": "componentes",
     "stem": "El amperímetro se debe conectar:",
-    "stemFigure": "images/quiz/ure-p1-q417-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q417): El amperímetro se debe conectar:",
     "options": [
       "En serie",
       "En paralelo",
@@ -3887,6 +4336,23 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «Es mayor que el valor de cualquiera de las resistencias».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q420",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "El siguiente circuito eléctrico podría emplearse:",
+    "stemFigure": "images/quiz/ure-p1-q420-original.png",
+    "stemFigureAlt": "Figura original URE (ure-p1-q420): El siguiente circuito eléctrico podría emplearse:",
+    "options": [
+      "Como receptor de AM a la frecuencia de resonancia del circuito LC",
+      "Para nada, al no disponer de alimentación eléctrica",
+      "Como amplificador a la frecuencia de resonancia del circuito LC",
+      "Como oscilador a la frecuencia de resonancia del circuito LC"
+    ],
+    "correctIndex": 0,
+    "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «Como receptor de AM a la frecuencia de resonancia del circuito LC».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3941,8 +4407,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "¿Cual es la impedancia de salida típica en los transmisores de radioaficionado?:",
-    "stemFigure": "images/quiz/ure-p1-q426-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q426): ¿Cual es la impedancia de salida típica en los transmisores de radioaficionado?:",
     "options": [
       "1000 ohmios",
       "12´5 ohmios",
@@ -3973,8 +4437,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "El mezclador de un emisor, combina dos frecuencias f1 y f2 , de tal manera que a su salida se encuentra, entre otras la frecuencia:",
-    "stemFigure": "images/quiz/ure-p1-q428-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q428): El mezclador de un emisor, combina dos frecuencias f1 y f2 , de tal manera que a su salida se encuentra, entre otras la",
     "options": [
       "f 1 ∙ f 2",
       "f 1 ∕ f 2",
@@ -3990,17 +4452,11 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Un dipolo de media onda, para la banda de 40 metros, debe tener una longitud aproximada de:",
-    "stemFigure": "images/quiz/ure-p1-q429-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q429): Un dipolo de media onda, para la banda de 40 metros, debe tener una longitud aproximada de:",
     "options": [
       "10 m",
       "20 m",
       "40 m",
-      "80 m",
-      "",
-      "",
-      "",
-      ""
+      "80 m"
     ],
     "correctIndex": 1,
     "explain": "En 40 m (~7 MHz), λ ≈ 40 m; un dipolo de media onda mide del orden de λ/2 en total (unos 20 m de longitud física). «20 m».",
@@ -4011,8 +4467,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "En un transformador con relación 2:1 se puede afirmar que:",
-    "stemFigure": "images/quiz/ure-p1-q430-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q430): En un transformador con relación 2:1 se puede afirmar que:",
     "options": [
       "Uno de los devanados tiene el doble número de espiras que el otro",
       "Amplifica con un factor de cuatro la tensión de entrada",
@@ -4163,6 +4617,25 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q441",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "¿Qué magnitud se expresa en unidades “dBw”?:",
+    "options": [
+      "Resistencia",
+      "Energía",
+      "Ancho de banda",
+      "Potencia",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "correctIndex": 3,
+    "explain": "Los decibelios expresan relaciones logarítmicas; dBm referencia potencia a 1 mW. La respuesta es «Potencia».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q444",
     "part": 1,
     "topicId": "antenas-prop",
@@ -4181,8 +4654,6 @@ export default [
     "part": 1,
     "topicId": "receptores-emisores",
     "stem": "La radiodifusión sonora con Modulación de Frecuencia (FM), ¿qué banda de frecuencias utiliza?:",
-    "stemFigure": "images/quiz/ure-p1-q475-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q475): La radiodifusión sonora con Modulación de Frecuencia (FM), ¿qué banda de frecuencias utiliza?:",
     "options": [
       "SHF",
       "VHF",
@@ -4258,8 +4729,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
-    "stemFigure": "images/quiz/ure-p1-q482-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q482): Cuando se expresa una cantidad en dBm, ¿a qué magnitud se refiere?:",
     "options": [
       "Corriente eléctrica",
       "Diferencia de potencial eléctrico",
@@ -4376,12 +4845,25 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p1-q493",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Un elevado nivel de intensidad de campo eléctrico puede producir:",
+    "options": [
+      "La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones",
+      "Un aumento de la potencia entregada por la línea de alimentación a la antena",
+      "Una mejora en las condiciones de recepción debido al acoplamiento ferromagnético",
+      "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica"
+    ],
+    "correctIndex": 0,
+    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p1-q495",
     "part": 1,
     "topicId": "componentes",
     "stem": "Se conoce con el nombre genérico de \"diodo\" a:",
-    "stemFigure": "images/quiz/ure-p1-q495-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q495): Se conoce con el nombre genérico de \"diodo\" a:",
     "options": [
       "Un componente para amplificar señales",
       "Un diversificador de corriente",
@@ -4397,8 +4879,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "Para cualquier comunicación radioeléctrica en la banda UHF, se puede afirmar que:",
-    "stemFigure": "images/quiz/ure-p1-q497-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q497): Para cualquier comunicación radioeléctrica en la banda UHF, se puede afirmar que:",
     "options": [
       "A mayor frecuencia menor es el alcance conseguido",
       "A mayor altura de las antenas menor es el alcance conseguido",
@@ -4461,8 +4941,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "En una antena dipolo con trampas multibanda, las trampas están formadas por:",
-    "stemFigure": "images/quiz/ure-p1-q503-original.png",
-    "stemFigureAlt": "Figura original URE (ure-p1-q503): En una antena dipolo con trampas multibanda, las trampas están formadas por:",
     "options": [
       "Rectificadores supresores de ondas estacionarias",
       "Transformadores simétricos-asimétricos",
@@ -4493,8 +4971,6 @@ export default [
     "part": 1,
     "topicId": "electricidad-basica",
     "stem": "La ley de Coulomb dice que la fuerza entre dos cargas eléctricas es:",
-    "stemFigure": "images/quiz/ure-p1-q61-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q61): La ley de Coulomb dice que la fuerza entre dos cargas eléctricas es:",
     "options": [
       "Directamente proporcional a la distancia de separación",
       "Directamente proporcional al cuadrado de la distancia de separación",
@@ -4510,8 +4986,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "El ancho de banda ocupado es:",
-    "stemFigure": "images/quiz/ure-p1-q63-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q63): El ancho de banda ocupado es:",
     "options": [
       "El comprendido entre los límites superior e inferior de la señal modulada",
       "El ancho del canal en uso, más los adyacentes",
@@ -4706,8 +5180,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Relativo a la propagación de las ondas electromagnéticas, se llama \"frecuencia crítica\":",
-    "stemFigure": "images/quiz/ure-p1-q78-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q78): Relativo a la propagación de las ondas electromagnéticas, se llama \"frecuencia crítica\":",
     "options": [
       "A la frecuencia más sensible",
       "A la frecuencia mínima del receptor",
@@ -4738,8 +5210,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "Las bandas de colores en un condensador indican:",
-    "stemFigure": "images/quiz/ure-p1-q8-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q8): Las bandas de colores en un condensador indican:",
     "options": [
       "Los materiales de los que está hecho",
       "Su precio",
@@ -4770,8 +5240,6 @@ export default [
     "part": 1,
     "topicId": "componentes",
     "stem": "Para que un transformador reduzca la tensión, es necesario que:",
-    "stemFigure": "images/quiz/ure-p1-q82-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p1-q82): Para que un transformador reduzca la tensión, es necesario que:",
     "options": [
       "El secundario tenga menos espiras que el primario",
       "El secundario tenga más espiras que el primario",
@@ -4797,6 +5265,21 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Interpreta la figura junto con el enunciado: identifica qué magnitud, bloque o relación se pregunta. La opción que encaja es «F=14,2 MHz».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p1-q85",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Si se montan 4 pilas iguales en serie:",
+    "options": [
+      "La intensidad del conjunto es igual a la de una pila",
+      "La tensión del conjunto es igual a la de una pila",
+      "No se pueden montar en serie",
+      "Siempre se produce un cortocircuito"
+    ],
+    "correctIndex": 0,
+    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «La intensidad del conjunto es igual a la de una pila».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4864,8 +5347,6 @@ export default [
     "part": 2,
     "topicId": "instalaciones",
     "stem": "Una comunidad de propietarios, ¿puede autorizar la instalación de antenas de radioaficionado?:",
-    "stemFigure": "images/quiz/ure-p2-q103-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q103): Una comunidad de propietarios, ¿puede autorizar la instalación de antenas de radioaficionado?:",
     "options": [
       "No, solo pronunciarse respecto a la idoneidad de la instalación",
       "Si, pues ella es la afectada",
@@ -4926,8 +5407,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "El indicativo de llamada ED3ZHO:",
-    "stemFigure": "images/quiz/ure-p2-q107-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q107): El indicativo de llamada ED3ZHO:",
     "options": [
       "Pertenece a una estación fija de la provincia de Zaragoza",
       "Tiene carácter temporal",
@@ -4943,8 +5422,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "En la instalación de una antena de radioaficionado y sus elementos anejos:",
-    "stemFigure": "images/quiz/ure-p2-q108-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q108): En la instalación de una antena de radioaficionado y sus elementos anejos:",
     "options": [
       "No es necesario tener en cuenta la proximidad de líneas eléctricas aéreas",
       "No es necesario señalizar los anclajes y riostras si la antena está situada en un lugar transitable",
@@ -5215,8 +5692,6 @@ export default [
     "part": 2,
     "topicId": "marco-normativo",
     "stem": "En relación con una estación de aficionado y su utilización es correcto significar que:",
-    "stemFigure": "images/quiz/ure-p2-q161-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q161): En relación con una estación de aficionado y su utilización es correcto significar que:",
     "options": [
       "El operador viene obligado a utilizar potencias altas para comunicaciones de corta distancia",
       "Deberá estar provista la estación de los elementos adecuados para comprobar que la emisión se realiza dentro de las bandas autorizadas",
@@ -5262,8 +5737,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
-    "stemFigure": "images/quiz/ure-p2-q165-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q165): ¿Cuál de las siguientes proposiciones contiene mayor número de provincias adscritas al distrito 4?:",
     "options": [
       "Málaga, Murcia, Madrid, Vizcaya",
       "Cáceres, Cádiz, Cuenca, Ciudad Real",
@@ -5339,8 +5812,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "En relación con los distintivos de llamada, la provincia de Murcia se identifica por la cifra:",
-    "stemFigure": "images/quiz/ure-p2-q170-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q170): En relación con los distintivos de llamada, la provincia de Murcia se identifica por la cifra:",
     "options": [
       "7",
       "6",
@@ -5386,8 +5857,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Los soportes de una antena de radioaficionado:",
-    "stemFigure": "images/quiz/ure-p2-q174-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q174): Los soportes de una antena de radioaficionado:",
     "options": [
       "Se podrán fijar a los anclajes de un pararrayos",
       "No deberán deteriorar la resistencia mecánica de los elementos constructivos a los que se fijen",
@@ -5478,8 +5947,6 @@ export default [
     "part": 2,
     "topicId": "operacion-seguridad",
     "stem": "En el alfabeto fonético internacional la letra R se codifica como:",
-    "stemFigure": "images/quiz/ure-p2-q206-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q206): En el alfabeto fonético internacional la letra R se codifica como:",
     "options": [
       "Roger",
       "Romeo",
@@ -5525,8 +5992,6 @@ export default [
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "Las frecuencias de llamada:",
-    "stemFigure": "images/quiz/ure-p2-q211-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q211): Las frecuencias de llamada:",
     "options": [
       "Sólo se usan en HF",
       "Actualmente ya no se utilizan",
@@ -5602,8 +6067,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "Las comunicaciones entre estaciones de aficionados se identificarán mediante un distintivo de llamada al comienzo y al final de cada emisión. Esta norma puede verse modificada en el supuesto de que la emisión:",
-    "stemFigure": "images/quiz/ure-p2-q219-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q219): Las comunicaciones entre estaciones de aficionados se identificarán mediante un distintivo de llamada al comienzo y al f",
     "options": [
       "Se realice a partir de las 22 horas",
       "Sea demasiado extensa",
@@ -5638,7 +6101,7 @@ export default [
       "Tendrá que presentar nueva memoria",
       "Podrá instalarla nuevamente en condiciones similares a las anteriores",
       "Ha de pedir permiso a la comunidad de propietarios",
-      "Deberá comunicarlo a la Dirección General de Telecomunicaciones y Tecnología de la Información"
+      "Deberá comunicarlo a la Administración competente en espectro radioeléctrico y Tecnología de la Información"
     ],
     "correctIndex": 1,
     "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Podrá instalarla nuevamente en condiciones similares a las anteriores» es la formulación del banco.",
@@ -5679,8 +6142,6 @@ export default [
     "part": 2,
     "topicId": "instalaciones",
     "stem": "En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o elemento de fijación de las riostras en la obra civil del inmueble, repartiendo los esfuerzos mecánicos, se conoce con el nombre de:",
-    "stemFigure": "images/quiz/ure-p2-q226-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q226): En relación con la instalación en el exterior de un inmueble de una antena de estación de aficionado, el punto o element",
     "options": [
       "Mástil",
       "Soporte",
@@ -5797,23 +6258,6 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q236",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El certificado HAREC:",
-    "stemFigure": "images/quiz/ure-p2-q236-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q236): El certificado HAREC:",
-    "options": [
-      "Se expedirá conjuntamente con el diploma de operador",
-      "Permite operar en frecuencias distintas a las autorizadas",
-      "No sirve para demostrar que se ha aprobado el examen de radioaficionado con un programa básico",
-      "Permite obtener licencia en cualquier país del mundo"
-    ],
-    "correctIndex": 0,
-    "explain": "HAREC (T/R 61-02) acredita el programa de examen armonizado; facilita obtener autorización en países que lo reconocen. «Se expedirá conjuntamente con el diploma de operador».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
     "id": "ure-p2-q237",
     "part": 1,
     "topicId": "magnetismo-ondas",
@@ -5835,13 +6279,12 @@ export default [
     "stem": "Como norma general, la potencia máxima de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF, cuando estén instaladas fuera del casco urbano, será:",
     "options": [
       "Igual que la permitida en la banda de HF",
-      "25 W",
+      "50 W.",
       "Igual que la permitida a las instaladas en el interior del casco urbano",
       "35 W"
     ],
     "correctIndex": 1,
-    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «25 W».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «25 W»."
   },
   {
     "id": "ure-p2-q269",
@@ -5893,8 +6336,6 @@ export default [
     "part": 2,
     "topicId": "operacion-seguridad",
     "stem": "La señal de Socorro en radiotelefonía se compone de:",
-    "stemFigure": "images/quiz/ure-p2-q271-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q271): La señal de Socorro en radiotelefonía se compone de:",
     "options": [
       "MAYDAY (tres veces), la palabra AQUÍ o DE y el distintivo de llamada (tres veces)",
       "AQUÍ o DE, el distintivo de llamada (tres veces) y la palabra MAYDAY (tres veces)",
@@ -5985,8 +6426,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Clubs respectivamente?:",
-    "stemFigure": "images/quiz/ure-p2-q279-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q279): ¿Qué sufijos de tres letras están reservados para estaciones colectivas de Asociaciones de radioaficionados y Radio Club",
     "options": [
       "Los que comienzan por: DD; TT; XX",
       "Los que comienzan por: UR y RC o RK",
@@ -6092,8 +6531,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "Las autorizaciones especiales de uso del espectro radioeléctrico por aficionados:",
-    "stemFigure": "images/quiz/ure-p2-q287-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q287): Las autorizaciones especiales de uso del espectro radioeléctrico por aficionados:",
     "options": [
       "No están sujetas a ningún procedimiento",
       "Habilitan a sus titulares a un uso ilimitado y permanente",
@@ -6102,6 +6539,21 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "Las autorizaciones especiales son personales (nominativas) y limitan bandas, potencia o modalidad; no son transferibles. «Son nominativas y sólo habilitarán para la realización de emisiones a su titular».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q288",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Entre las obligaciones de un gestor de una estación desatendida no se encuentra la de:",
+    "options": [
+      "Actualizar periódicamente la información existente",
+      "Procurar que el mantenimiento técnico de la estación garantice el servicio continuo de la misma",
+      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación",
+      "Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto"
+    ],
+    "correctIndex": 2,
+    "explain": "El gestor debe cumplir requisitos técnicos y de supervisión que marca el reglamento; no «otorga» licencias a terceros en sentido administrativo. «Otorgar la autorización y conformidad del inicio del funcionamiento de la estación».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6124,17 +6576,14 @@ export default [
     "part": 2,
     "topicId": "marco-normativo",
     "stem": "¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:",
-    "stemFigure": "images/quiz/ure-p2-q291-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q291): ¿Un radioaficionado podrá ser autorizado a instalar una estación automática desatendida?:",
     "options": [
       "Si únicamente realiza emisiones en bandas de HF",
       "Únicamente en localidades aisladas",
-      "En ningún caso",
+      "Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.",
       "Si dispone de diploma desde hace más de 15 años"
     ],
     "correctIndex": 2,
-    "explain": "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones automáticas desatendidas con resolución administrativa; no están prohibidas. «En ningún caso».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones automáticas desatendidas con resolución administrativa; no están prohibidas. «En ningún caso»."
   },
   {
     "id": "ure-p2-q292",
@@ -6209,6 +6658,21 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Doble banda lateral con un solo canal con información analógica».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q298",
+    "part": 2,
+    "topicId": "operacion-seguridad",
+    "stem": "En el alfabeto fonético internacional con que palabra se identifica la letra U:",
+    "options": [
+      "Uniform",
+      "Unidad",
+      "Universal",
+      "Ungir"
+    ],
+    "correctIndex": 0,
+    "explain": "El alfabeto fonético ICAO evita confusiones entre letras parecidas (B/D, M/N) en tráfico de voz. La palabra correcta del enunciado es «Uniform».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6299,6 +6763,21 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "QRX indica que la estación volverá a llamar o está esperando. QRL significa «estoy ocupado». «QRX».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q331",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El distintivo de llamada estará constituido por un grupo alfanumérico del modo siguiente:",
+    "options": [
+      "Prefijo + 1 letra",
+      "UR + RC+ RK",
+      "Prefijo + Distrito + Sufijo",
+      "EA+EB+EC"
+    ],
+    "correctIndex": 2,
+    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Prefijo + Distrito + Sufijo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6437,27 +6916,10 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q343",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El acceso a los repetidores analógicos y digitales finales será necesariamente:",
-    "options": [
-      "Obligatorio",
-      "Condicionado",
-      "Libre y sí estuvieran dotados de código de acceso, este deberá ser público",
-      "Intermitente"
-    ],
-    "correctIndex": 2,
-    "explain": "El acceso a repetidores debe ser libre salvo código técnico justificado; no puede reservarse a un club sin base reglamentaria. «Libre y sí estuvieran dotados de código de acceso, este deberá ser público».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
     "id": "ure-p2-q344",
     "part": 1,
     "topicId": "magnetismo-ondas",
     "stem": "En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
-    "stemFigure": "images/quiz/ure-p2-q344-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q344): En la nomenclatura de las bandas de frecuencia las ondas métricas se relacionan con:",
     "options": [
       "La gama de frecuencia de 3 a 30 GHz",
       "El símbolo MF",
@@ -6548,8 +7010,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
-    "stemFigure": "images/quiz/ure-p2-q350-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q350): ¿Cuántas estaciones automáticas desatendidas podrán autorizarse en una zona?:",
     "options": [
       "No existe límite para estas autorizaciones",
       "Exclusivamente dos por provincia",
@@ -6559,6 +7019,35 @@ export default [
     "correctIndex": 2,
     "explain": "El número de desatendidas autorizadas depende de necesidades del servicio y criterio de la administración, no de un cupo fijo universal en el enunciado. «Se autorizarán en función de las necesidades del servicio».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q351",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "La Ley General de Telecomunicaciones tipifica como infracción muy grave:",
+    "options": [
+      "Carecer de los preceptivos cuadros de tarifas o de precios cuando su exhibición se exija por la normativa vigente",
+      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general",
+      "La distribución, venta o exposición para la venta de equipos o aparatos cuya conformidad con los requisitos esenciales aplicables no haya sido evaluada de acuerdo con lo dispuesto en el titulo IV de esta ley o con los acuerdos o convenios internacionales celebrados por el Estado español",
+      "La alteración, la manipulación o la omisión de las características técnicas, de las marcas, de las etiquetas, de los signos de identificación o de la documentación de los equipos o de los aparatos de telecomunicaciones"
+    ],
+    "correctIndex": 1,
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general» es la formulación del banco.",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q353",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "Un radioaficionado podrá ser autorizado a instalar un repetidor:",
+    "options": [
+      "Si la antigüedad de su licencia es superior a 5 años",
+      "Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.",
+      "Únicamente en localidades de menos de 5000 habitantes",
+      "Si la cota de su emplazamiento es inferior a 500 metros"
+    ],
+    "correctIndex": 1,
+    "explain": "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones automáticas desatendidas con resolución administrativa. «Sí, previa autorización administrativa conforme a los arts. 24 y 25 del reglamento.»."
   },
   {
     "id": "ure-p2-q354",
@@ -6603,23 +7092,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "En país visitado CEPT aplicas sus condiciones locales; la protección contra interferencias la rige la administración visitada. «No podrá solicitar protección contra interferencias perjudiciales».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
-    "id": "ure-p2-q357",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "La Ley General de Telecomunicaciones tipifica como infracción grave:",
-    "stemFigure": "images/quiz/ure-p2-q357-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q357): La Ley General de Telecomunicaciones tipifica como infracción grave:",
-    "options": [
-      "No facilitar los datos requeridos por la Administración o retrasar injustificadamente su aportación cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electrónicas",
-      "El uso, en condiciones distintas a las autorizadas, del espectro radioeléctrico que provoque alteraciones que impidan la correcta prestación de otros servicios por otros operadores",
-      "La emisión de señales de identificación falsas o engañosas",
-      "La interceptación, sin autorización, de telecomunicaciones no destinadas al público en general"
-    ],
-    "correctIndex": 2,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «La emisión de señales de identificación falsas o engañosas» es la formulación del banco.",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6702,8 +7174,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "El distintivo de llamada de una estación de radioaficionado, estará constituido por:",
-    "stemFigure": "images/quiz/ure-p2-q39-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q39): El distintivo de llamada de una estación de radioaficionado, estará constituido por:",
     "options": [
       "Ondas decamétricas",
       "Por un grupo alfanumérico",
@@ -6712,21 +7182,6 @@ export default [
     ],
     "correctIndex": 1,
     "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Por un grupo alfanumérico».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
-    "id": "ure-p2-q391",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "Se puede interferir deliberadamente a otra estación de radioaficionado:",
-    "options": [
-      "Si está operando ilegalmente",
-      "Para disminuir la ocupación de la banda",
-      "Si no ha emitido su indicativo",
-      "Nunca"
-    ],
-    "correctIndex": 3,
-    "explain": "Interferir a sabiendas a otra estación está prohibido; es mala práctica e infracción. «Nunca». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6808,8 +7263,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "Para la obtención de la licencia de estación de radioaficionado es necesario presentar:",
-    "stemFigure": "images/quiz/ure-p2-q397-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q397): Para la obtención de la licencia de estación de radioaficionado es necesario presentar:",
     "options": [
       "Solicitud adjuntando una memoria descriptiva del conjunto de la instalación",
       "Un escrito informando que se ha efectuado la instalación",
@@ -6926,23 +7379,6 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q406",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
-    "stemFigure": "images/quiz/ure-p2-q406-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q406): El distintivo de llamada estará constituido, secuencialmente, por un grupo alfanumérico del modo siguiente:",
-    "options": [
-      "Distrito, Sufijo, Prefijo",
-      "Distrito, Prefijo, Sufijo",
-      "Prefijo, Sufijo, Distrito",
-      "Prefijo, Distrito, Sufijo"
-    ],
-    "correctIndex": 3,
-    "explain": "El distintivo asignado es un grupo alfanumérico (prefijo, cifra de distrito y sufijo según el caso). «Prefijo, Distrito, Sufijo».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
     "id": "ure-p2-q407",
     "part": 2,
     "topicId": "licencias-indicativos",
@@ -6962,8 +7398,6 @@ export default [
     "part": 1,
     "topicId": "antenas-prop",
     "stem": "Al instalar una antena de radioaficionado se tendrá en cuenta que:",
-    "stemFigure": "images/quiz/ure-p2-q408-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q408): Al instalar una antena de radioaficionado se tendrá en cuenta que:",
     "options": [
       "No se pueden situar en azoteas o lugares transitables",
       "Es obligatorio fijar sus soportes a anclajes o soportes de pararrayos o de conducciones eléctricas",
@@ -7005,20 +7439,18 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q413",
+    "id": "ure-p2-q410",
     "part": 2,
-    "topicId": "operacion-seguridad",
-    "stem": "En el alfabeto fonético internacional con que palabra se identifica la letra M:",
-    "stemFigure": "images/quiz/ure-p2-q413-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q413): En el alfabeto fonético internacional con que palabra se identifica la letra M:",
+    "topicId": "licencias-indicativos",
+    "stem": "El certificado HAREC:",
     "options": [
-      "Miko",
-      "Mika",
-      "Mila",
-      "Mike"
+      "Sirve para obtener autorización de aficionado en cualquier país del mundo",
+      "En España únicamente se proporciona a ciudadanos no residentes",
+      "No se expide conjuntamente con el diploma de operador",
+      "Permite que un ciudadano extranjero residente en España pueda obtener una autorización de radioaficionado sin examinarse de nuevo"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Mike».",
+    "explain": "HAREC (T/R 61-02) acredita el programa de examen armonizado; facilita obtener autorización en países que lo reconocen. «Permite que un ciudadano extranjero residente en España pueda obtener una autorización de radioaficionado sin examinarse de nuevo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7027,13 +7459,13 @@ export default [
     "topicId": "marco-normativo",
     "stem": "Por la comisión de una infracción grave tipificada en la Ley General de Telecomunicaciones se podrá imponer al infractor una multa por importe de hasta el duplo del beneficio bruto obtenido o, en el caso de que no resulte aplicable este criterio el límite máximo será de:",
     "options": [
-      "5.000.000 €",
+      "500.000 €",
       "2.000.000 €",
       "1.000.000 €",
       "Ninguna de las anteriores"
     ],
-    "correctIndex": 1,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 €» es la formulación del banco.",
+    "correctIndex": 0,
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «500.000 €» es la formulación del banco. (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7048,8 +7480,7 @@ export default [
       "Menos grave"
     ],
     "correctIndex": 0,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Leve» es la formulación del banco.",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Leve» es la formulación del banco."
   },
   {
     "id": "ure-p2-q43",
@@ -7206,8 +7637,6 @@ export default [
     "part": 2,
     "topicId": "operacion-seguridad",
     "stem": "¿Qué grupo del código Q indica “su frecuencia varía”?:",
-    "stemFigure": "images/quiz/ure-p2-q452-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q452): ¿Qué grupo del código Q indica “su frecuencia varía”?:",
     "options": [
       "QRG",
       "QRF",
@@ -7216,6 +7645,21 @@ export default [
     ],
     "correctIndex": 3,
     "explain": "QRH indica que la frecuencia de la estación varía o es inestable. QSY es cambio voluntario de frecuencia de operación. «QRH».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q453",
+    "part": 2,
+    "topicId": "marco-normativo",
+    "stem": "El radioaficionado debe tener en cuenta que:",
+    "options": [
+      "No debe utilizar el código ICAO por no estar reconocido internacionalmente",
+      "Es muy conveniente dar el indicativo por partes (preferiblemente la parte final)",
+      "No es aconsejable inventar palabras para deletrear el mensaje",
+      "El código RST se utiliza para deletrear el mensaje"
+    ],
+    "correctIndex": 2,
+    "explain": "Usa siempre el alfabeto fonético reconocido; inventar palabras aumenta errores en fonía. «No es aconsejable inventar palabras para deletrear el mensaje».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7279,6 +7723,21 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p2-q460",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "El acceso a los repetidores analógicos y digitales finales será:",
+    "options": [
+      "Intermitente",
+      "Necesariamente libre",
+      "Obligatorio",
+      "Restringido, si la estación estuviera dotada de código de acceso"
+    ],
+    "correctIndex": 1,
+    "explain": "El acceso a repetidores debe ser libre salvo código técnico justificado; no puede reservarse a un club sin base reglamentaria. «Necesariamente libre».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p2-q461",
     "part": 2,
     "topicId": "licencias-indicativos",
@@ -7291,23 +7750,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «En todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el país visitado».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
-    "id": "ure-p2-q462",
-    "part": 2,
-    "topicId": "marco-normativo",
-    "stem": "De entre las diversas obligaciones del gestor de una estación desatendida NO se encuentra la de:",
-    "stemFigure": "images/quiz/ure-p2-q462-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q462): De entre las diversas obligaciones del gestor de una estación desatendida NO se encuentra la de:",
-    "options": [
-      "Actualizar periódicamente la información existente",
-      "Procurar que el mantenimiento técnico de la estación garantice el servicio continuo de la misma",
-      "Otorgar la autorización y conformidad del inicio del funcionamiento de la estación",
-      "Verificar que el tráfico de información se realice conforme a lo previsto por la normativa vigente al respecto"
-    ],
-    "correctIndex": 2,
-    "explain": "El gestor debe cumplir requisitos técnicos y de supervisión que marca el reglamento; no «otorga» licencias a terceros en sentido administrativo. «Otorgar la autorización y conformidad del inicio del funcionamiento de la estación».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7330,8 +7772,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "La obtención de la Autorización de Aficionado por un extranjero residente en España precisará:",
-    "stemFigure": "images/quiz/ure-p2-q465-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q465): La obtención de la Autorización de Aficionado por un extranjero residente en España precisará:",
     "options": [
       "Que sea titular de un Diploma de operador expedido en España, o de un Certificado HAREC expedido por cualquier país que aplique la Recomendación CEPT T/R 61-02",
       "Que únicamente exista Acuerdo o Convenio de reciprocidad en la materia con su país de origen",
@@ -7363,7 +7803,7 @@ export default [
     "topicId": "antenas-prop",
     "stem": "La Ley 19/1983, conocida como Ley de Antenas, regula:",
     "options": [
-      "La obligación de comunicar la instalación de una antena a la Dirección General de Telecomunicaciones",
+      "La obligación de comunicar la instalación de una antena a la Administración competente en espectro radioeléctrico",
       "El derecho a instalar una antena de cualquier tamaño",
       "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles",
       "La exención de presentar memoria descriptiva de la instalación"
@@ -7508,21 +7948,6 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q507",
-    "part": 2,
-    "topicId": "licencias-indicativos",
-    "stem": "Los distritos de los indicativos de llamada son:",
-    "options": [
-      "Nueve",
-      "Ilimitados",
-      "Todos los que se soliciten",
-      "Se han suprimido los distritos"
-    ],
-    "correctIndex": 0,
-    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «Nueve».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
     "id": "ure-p2-q508",
     "part": 1,
     "topicId": "magnetismo-ondas",
@@ -7542,8 +7967,6 @@ export default [
     "part": 2,
     "topicId": "marco-normativo",
     "stem": "El Reglamento de uso del dominio público radioeléctrico por aficionados:",
-    "stemFigure": "images/quiz/ure-p2-q51-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q51): El Reglamento de uso del dominio público radioeléctrico por aficionados:",
     "options": [
       "Tiene por objeto la regulación del uso privativo del dominio público radioeléctrico",
       "Garantiza el derecho a su mantenimiento en el tiempo",
@@ -7633,7 +8056,7 @@ export default [
     "id": "ure-p2-q515",
     "part": 2,
     "topicId": "instalaciones",
-    "stem": "La Dirección General de Telecomunicaciones debe informar al presidente de la comunidad de propietarios afectada siempre que:",
+    "stem": "La Administración competente en espectro radioeléctrico debe informar al presidente de la comunidad de propietarios afectada siempre que:",
     "options": [
       "Se pretenda cambiar las antenas",
       "Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble",
@@ -7709,8 +8132,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "¿Cómo se deletrea la palabra MERO?",
-    "stemFigure": "images/quiz/ure-p2-q52-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q52): ¿Cómo se deletrea la palabra MERO?",
     "options": [
       "MADRID, ECHO, ROMA, OSCAR",
       "MIKE, ECHO, ROMA, OSCAR",
@@ -7740,7 +8161,7 @@ export default [
     "id": "ure-p2-q523",
     "part": 2,
     "topicId": "licencias-indicativos",
-    "stem": "¿Cuándo se puede solicitar a la Dirección General de Telecomunicaciones un distintivo temporal?:",
+    "stem": "¿Cuándo se puede solicitar a la Administración competente en espectro radioeléctrico un distintivo temporal?:",
     "options": [
       "El Reglamento actual no contempla el uso de distintivos temporales",
       "Sólo para los extranjeros residentes en España",
@@ -7846,8 +8267,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "Para operar estaciones en el país visitado temporalmente, el radioaficionado está obligado a:",
-    "stemFigure": "images/quiz/ure-p2-q56-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q56): Para operar estaciones en el país visitado temporalmente, el radioaficionado está obligado a:",
     "options": [
       "Pedir indicativo en dicho país",
       "Presentar copia de su expediente",
@@ -7863,8 +8282,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "¿Se puede solicitar protección contra interferencias perjudiciales al operar estaciones en otro país con licencia CEPT?:",
-    "stemFigure": "images/quiz/ure-p2-q57-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q57): ¿Se puede solicitar protección contra interferencias perjudiciales al operar estaciones en otro país con licencia CEPT?:",
     "options": [
       "Sí",
       "No",
@@ -7880,8 +8297,6 @@ export default [
     "part": 2,
     "topicId": "licencias-indicativos",
     "stem": "¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
-    "stemFigure": "images/quiz/ure-p2-q58-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q58): ¿Cuál de las siguientes ciudades se encuentra adscrita al distrito 9?:",
     "options": [
       "Melilla",
       "Barcelona",
@@ -7953,12 +8368,25 @@ export default [
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
+    "id": "ure-p2-q92",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Los distritos de los indicativos de llamada son:",
+    "options": [
+      "9 (nueve)",
+      "Ilimitados",
+      "Todos los que se soliciten",
+      "Se han suprimido los distritos"
+    ],
+    "correctIndex": 0,
+    "explain": "El indicativo español combina prefijo E, cifra de distrito y sufijo asignado por la administración. La opción válida es «9 (nueve)».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
     "id": "ure-p2-q93",
     "part": 2,
     "topicId": "marco-normativo",
     "stem": "¿Cuál de las siguientes acciones está permitida realizar en el tráfico entre estaciones de aficionado?:",
-    "stemFigure": "images/quiz/ure-p2-q93-original.jpg",
-    "stemFigureAlt": "Figura original URE (ure-p2-q93): ¿Cuál de las siguientes acciones está permitida realizar en el tráfico entre estaciones de aficionado?:",
     "options": [
       "Transmitir mensajes de naturaleza técnica sobre ensayos",
       "Transmitir propaganda electoral",
@@ -7982,6 +8410,21 @@ export default [
     ],
     "correctIndex": 0,
     "explain": "El alfabeto fonético ICAO deletrea letras para evitar errores en tráfico de voz. La secuencia correcta es «Deletrear el mensaje».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q95",
+    "part": 2,
+    "topicId": "licencias-indicativos",
+    "stem": "Los prefijos de los distintivos de llamada correspondientes a España son, entre otros:",
+    "options": [
+      "FM-UHF",
+      "EA, EB, EC",
+      "UHM-ARG",
+      "No existen"
+    ],
+    "correctIndex": 1,
+    "explain": "Los indicativos españoles empiezan por E: EA (aficionados), EB y EC según tipo de estación o autorización. «EA, EB, EC».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {

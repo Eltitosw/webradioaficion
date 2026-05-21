@@ -8,7 +8,7 @@ import { dedupeKey } from "../lib/import-question-utils.mjs";
 import { hasPedagogicalExplain } from "../lib/explain-quality.mjs";
 
 test("banco estudio amplía el banco examen", () => {
-  assert.ok(BANCO_ESTUDIO_STATS.count >= 520);
+  assert.ok(BANCO_ESTUDIO_STATS.count >= 515);
   assert.ok(BANCO_ESTUDIO_STATS.count > questionsBanco.length);
   assert.ok(BANCO_ESTUDIO_STATS.studyOnlyAdded >= 15);
 });

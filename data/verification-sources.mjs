@@ -93,6 +93,14 @@ export const SOURCES_CATALOG = [
     note: "Importado parcialmente; contrastar normativa con BOE.",
   },
   {
+    id: "libro-oficial-examen-pdf",
+    tier: "didactic",
+    title: "Libro oficial de examen (4 partes PDF, estudio local)",
+    href: "https://avance.digital.gob.es/espectro/radioaficionados/Paginas/examenes-radioaficionado.aspx",
+    format: "PDF editorial",
+    note: "Capítulos técnicos y normativos; ver docs/LIBRO_OFICIAL_ESTUDIO.md. No redistribuido en RadioExamen.",
+  },
+  {
     id: "pdf-radiomania-temario",
     tier: "didactic",
     title: "Radiomanía · Temario simplificado (PDF comercial)",

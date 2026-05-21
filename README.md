@@ -24,7 +24,7 @@ Abre `http://localhost:3000` (o el puerto que indique el servidor).
 npm run verify:all
 ```
 
-Incluye integridad del banco (**481 preguntas** publicadas, sin material TETRA/Tráfico), BOE, explicaciones y tests.
+Incluye integridad del banco (**563 preguntas** simulacro, **587** estudio; URE/FEDI importados de web), BOE, explicaciones y tests.
 
 ```bash
 npm run audit:exam-ready   # ¿proyecto listo para su cometido?

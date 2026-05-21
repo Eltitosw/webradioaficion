@@ -14,7 +14,9 @@ import ure from "../data/ure-electricidad.js";
 import ureExtra from "../data/ure-electricidad-extra.js";
 import ureReg from "../data/ure-reglamentacion.js";
 import fedi from "../data/fediea-2011.js";
+import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
+import { isExamAlignedSourceId } from "../lib/exam-aligned-sources.mjs";
 import figures from "../data/questions-figures.js";
 import questionsBanco from "../data/questions-banco.js";
 import quijotesExplanations from "../data/quijotes-explanations.js";
@@ -35,6 +37,8 @@ import { enrichFromExisting } from "../lib/figure-import.mjs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(__dirname, "..", "data", "questions-banco-estudio.js");
 
+const fediBloquesExam = fediBloques.filter((q) => q?.id && isExamAlignedSourceId(q.id));
+
 const byId = new Map();
 for (const q of [
   ...questions,
@@ -43,6 +47,7 @@ for (const q of [
   ...ureExtra,
   ...ureReg,
   ...fedi,
+  ...fediBloquesExam,
   ...quijotes,
   ...figures,
 ]) {

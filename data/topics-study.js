@@ -27,16 +27,22 @@ export default {
     ],
     "bookGuide": [
       "La tensión o diferencia de potencial es la energía disponible para mover carga eléctrica y se mide en voltios. La corriente es el paso de carga por segundo y se mide en amperios. La resistencia se opone al paso de corriente y se mide en ohmios.",
+      "La ley de Coulomb describe la fuerza entre cargas puntuales: es proporcional al producto de las cargas e inversamente proporcional al cuadrado de la distancia. En el test suele aparecer la proporcionalidad al producto de cargas, no confundirla con la distancia al cuadrado en el enunciado.",
       "La ley de Ohm une las tres magnitudes básicas: V = I·R. De ella salen R = V/I e I = V/R. En un conductor, al disminuir la sección o aumentar la temperatura, normalmente aumenta la resistencia.",
       "La potencia indica energía por unidad de tiempo y se mide en vatios: P = V·I. Combinada con Ohm: P = I²R y P = V²/R. No confundas voltio (tensión) con vatio (potencia).",
+      "El dieléctrico aísla entre placas del condensador; la capacidad depende del área, la distancia entre placas y la constante del material. La bobina almacena energía en un campo magnético.",
       "En corriente alterna sinusoidal importa distinguir valor máximo, valor eficaz y periodo. El valor eficaz es el que equivale térmicamente a una continua; por eso se usa en medidas de red y potencia.",
       "Las fuentes tienen fuerza electromotriz y resistencia interna. En serie se suman tensiones; en paralelo se conserva la tensión si son iguales y aumenta la capacidad de entregar corriente.",
-      "El decibelio expresa relaciones. En potencia, +3 dB equivale aproximadamente al doble, +10 dB a diez veces y +20 dB a cien veces. dBm es potencia absoluta referida a 1 mW."
+      "El decibelio expresa relaciones. En potencia, +3 dB equivale aproximadamente al doble, +10 dB a diez veces y +20 dB a cien veces. dBm es potencia absoluta referida a 1 mW.",
+      "El factor de potencia (coseno φ) relaciona potencia activa y aparente en alterna; no es una fórmula de continua pura. El código de colores en resistencias y condensadores traduce valor y tolerancia."
     ],
     "practiceDrills": [
-      "Método test→libro: toma una pregunta de Ohm/potencia, apunta datos, fórmula, unidad y distractor. Ejemplo: 13 V por 1 A son 13 W; si respondes voltios, has cambiado magnitud.",
-      "Convierte preguntas frecuentes del libro en mini-casos: kΩ a Ω, amperímetro en serie, resistencia shunt para proteger instrumentos, batería 7,4 V / 1500 mAh y conductor más fino con más resistencia.",
-      "Al corregir, escribe una explicación de una línea: qué principio usa la respuesta correcta y qué palabra hace falsa a cada alternativa."
+      "Semana 1 — banco: en Practicar elige «Electricidad básica» y repite el bloque completo hasta acertar al menos el 80 % sin mirar apuntes. Pulsa «Nueva sesión» cada día para no memorizar el orden de opciones.",
+      "Día 2 y día 4 — solo fallos: vuelve a las que fallaste, lee la explicación de la app y anota en una línea: datos → fórmula → unidad. Ejemplo: 13 V × 1 A = 13 W; si marcas voltios, confundiste magnitud.",
+      "Método test→libro: tras cada sesión, abre el capítulo de electricidad del PDF (1.ª parte · Técnica) y busca el mismo tema (Ohm, potencia, instrumentos, dB). El banco no cubre todo el programa; el PDF compensa Coulomb, campos y código de colores.",
+      "Tarjetas y trampas: repasa las cuatro tarjetas del bloque y la sección «Preguntas trampa» antes de dar por cerrado el tema.",
+      "Semana 2 — simulacro real: pasa a Practicar con «Todos los temas» (1.ª prueba, 30 preguntas). Electricidad será solo una fracción del simulacro; si fallas ahí, vuelve un día al tema «Electricidad básica» y repite el simulacro al día siguiente.",
+      "Convierte enunciados del libro en mini-casos sin opciones: kΩ→Ω, amperímetro en serie, batería 7,4 V / 1500 mAh, conductor más fino con más R. Resuélvelos a mano y luego contrasta con el temario «Teoría explicada»."
     ],
     "quickSession": [
       "Para resolver Ohm, identifica primero qué dos datos te dan y qué magnitud falta. Si conoces tensión y resistencia, usa I = V/R; si conoces corriente y resistencia, usa V = I·R; si conoces tensión y corriente, usa R = V/I.",
@@ -79,7 +85,7 @@ export default {
         "back": "Amperio (A)"
       }
     ],
-    "sources": "Programa HAREC / electricidad básica; manuales URE de 1.ª parte; BOE solo para aspectos reglados de equipos si aplica."
+    "sources": "Programa HAREC / electricidad básica; libro oficial 1.ª parte Técnica (PDF local); BOE solo para aspectos reglados de equipos si aplica."
   },
   "magnetismo-ondas": {
     "memoryHooks": [
@@ -110,7 +116,9 @@ export default {
       "Una señal sinusoidal se describe por amplitud, frecuencia, periodo y fase. Las señales no sinusoidales contienen una fundamental y armónicos; por eso pueden ocupar más anchura de banda.",
       "Modular es variar una portadora con información. En AM cambia la amplitud; en FM cambia la frecuencia; en fase cambia la fase; en SSB se transmite una sola banda lateral, normalmente sin portadora.",
       "En FM, el índice de modulación relaciona desviación máxima y frecuencia moduladora. La sobremodulación o exceso de desviación ensancha la señal y puede causar interferencias.",
-      "El muestreo digital convierte señales analógicas en datos. Para evitar aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal (criterio de Nyquist)."
+      "El muestreo digital convierte señales analógicas en datos. Para evitar aliasing, la frecuencia de muestreo debe ser al menos el doble de la frecuencia máxima de la señal (criterio de Nyquist).",
+      "La polarización describe la orientación del campo eléctrico de la onda. Antenas vertical y horizontal deben coincidir razonablemente; polarización cruzada aumenta pérdidas.",
+      "Anchura de banda y espectro: una portadora modulada no ocupa solo una frecuencia; AM y FM ensanchan la señal según modulación. Más ancho de banda del receptor suele admitir más ruido."
     ],
     "practiceDrills": [
       "Antes de mirar opciones, di si el enunciado habla de propagación, modulación o forma de onda. Así separas trampas como velocidad constante, frecuencia crítica, fading y ancho de banda.",
@@ -191,7 +199,9 @@ export default {
       "La bobina almacena energía en un campo magnético. En continua ideal se comporta casi como un cortocircuito; en alterna presenta reactancia inductiva, que aumenta con la frecuencia.",
       "La resonancia aparece cuando reactancia inductiva y capacitiva se compensan. En circuitos sintonizados, el factor Q relaciona frecuencia de resonancia y ancho de banda: Q = f/B.",
       "El diodo conduce principalmente en un sentido. El Zener se usa como referencia o regulación en inversa; el LED emite luz; el varicap se comporta como condensador variable controlado por tensión.",
-      "El transformador acopla energía entre bobinas. La relación de espiras determina la relación de tensiones; si sube tensión en el secundario, idealmente baja la corriente disponible."
+      "El transformador acopla energía entre bobinas. La relación de espiras determina la relación de tensiones; si sube tensión en el secundario, idealmente baja la corriente disponible.",
+      "El transistor amplifica o conmuta: una pequeña señal en base o puerta controla una corriente mayor en colector/drenador. En examen basta distinguir función amplificar de rectificar (diodo).",
+      "Un puente rectificador convierte alterna en continua pulsante usando cuatro diodos. El filtro posterior (condensador) suaviza la tensión para alimentar etapas de CC."
     ],
     "practiceDrills": [
       "Haz tarjetas símbolo→función con los componentes que más caen: diodo conduce en un sentido, varicap equivale a capacidad controlada por tensión, Zener regula y electrolítico exige polaridad.",
@@ -284,7 +294,9 @@ export default {
       "La selectividad es la capacidad de separar señales próximas; la sensibilidad es la capacidad de recibir señales débiles; la estabilidad es la capacidad de mantenerse en frecuencia.",
       "El CAG/AGC ajusta automáticamente la ganancia para evitar saturación con señales fuertes. El squelch silencia el audio cuando no hay señal suficiente.",
       "Un transmisor genera o procesa la señal, la modula, la amplifica y la filtra antes de enviarla a la antena. El filtro de salida reduce armónicos y emisiones no deseadas.",
-      "Los instrumentos se asocian a magnitudes concretas: vatímetro para potencia, frecuencímetro para frecuencia, osciloscopio para formas de onda y analizador de espectro para componentes espectrales."
+      "Los instrumentos se asocian a magnitudes concretas: vatímetro para potencia, frecuencímetro para frecuencia, osciloscopio para formas de onda y analizador de espectro para componentes espectrales.",
+      "En SSB la potencia de referencia suele ser PEP (pico de la envolvente). No confundas PEP con potencia media en AM o con lectura de vatímetro sin el modo correcto.",
+      "El medidor de ROE se coloca entre transmisor y línea de antena. ROE alta indica reflexión por desadaptación; el acoplador puede ayudar a presentar carga adecuada al transmisor."
     ],
     "practiceDrills": [
       "Usa el índice del libro como propone el método de preparación: pregunta de FI → receptor → diagrama de bloques → respuesta. FI va después del mezclador en el superheterodino.",
@@ -378,7 +390,9 @@ export default {
       "La impedancia de antena debe adaptarse a la línea y al transmisor para transferir potencia. Si hay desadaptación aparece potencia reflejada y aumenta la ROE.",
       "Una línea de transmisión tiene impedancia característica y factor de velocidad. El coaxial típico de radioaficionado suele ser de 50 Ω; el balun adapta sistemas balanceados y no balanceados.",
       "La Yagi es directiva y usa elemento excitado, reflector y directores. La relación delante-atrás compara radiación frontal y posterior; el ancho de haz describe la apertura del lóbulo principal.",
-      "En HF predomina la propagación ionosférica; en VHF/UHF domina la visión directa, aunque pueden aparecer propagación troposférica, esporádica E, meteoros, satélite o rebote lunar."
+      "En HF predomina la propagación ionosférica; en VHF/UHF domina la visión directa, aunque pueden aparecer propagación troposférica, esporádica E, meteoros, satélite o rebote lunar.",
+      "Ganancia en dBi se refiere al dipolo isotrópico; dBd al dipolo medio onda. La conversión aproximada es dBi = dBd + 2,15 dB. No confundas directividad con potencia del transmisor.",
+      "En ionosfera, capas D, E y F condicionan reflexión HF según hora y ciclo solar. En examen basta asociar HF a rebote ionosférico y VHF/UHF a trayectos más cortos y línea de vista."
     ],
     "practiceDrills": [
       "Pasa de la fórmula al caso real: para 40 m, el dipolo ronda 20 m totales; si la antena resuena demasiado alta, alargarla baja la frecuencia de resonancia.",
@@ -473,7 +487,9 @@ export default {
       "CEPT T/R 61-01 trata el uso temporal de licencias en países adheridos. CEPT T/R 61-02 define el programa armonizado de examen HAREC.",
       "La UIT define servicios, regiones y conceptos internacionales. España está en Región 1. La IARU propone planes de banda que ordenan usos recomendados, modos y segmentos.",
       "El CNAF atribuye bandas y condiciones de uso en España. Las potencias, restricciones geográficas, estaciones desatendidas y emisiones especiales deben comprobarse en la norma vigente.",
-      "Ante interferencias o incumplimientos, el titular debe actuar con responsabilidad técnica y administrativa. La inspección y el régimen sancionador dependen de la legislación de telecomunicaciones."
+      "Ante interferencias o incumplimientos, el titular debe actuar con responsabilidad técnica y administrativa. La inspección y el régimen sancionador dependen de la legislación de telecomunicaciones.",
+      "El anexo I del reglamento español fija bandas, potencias máximas, clases de emisión permitidas y restricciones (zonas, desatendidas, segmentos). Ante cifras concretas, prioriza la redacción BOE vigente.",
+      "La Ley General de Telecomunicaciones y normas de desarrollo regulan infracciones, inspección y sanciones. El radioaficionado opera dentro del servicio de aficionados, no como servicio comercial ni de radiodifusión."
     ],
     "practiceDrills": [
       "Entrena con columnas: organismo/documento, para qué sirve y palabra trampa. Ejemplo: IARU recomienda planes de banda; la Administración fija condiciones legales.",
@@ -559,12 +575,17 @@ export default {
       "Un visitante CEPT debe cumplir las condiciones del país donde opera. Un extranjero en España o un español en el extranjero se identifica siguiendo las reglas CEPT y nacionales aplicables.",
       "El alfabeto fonético evita confusiones al deletrear indicativos. En bancos españoles puede aparecer la adaptación de examen: Alfa, Bravo, Charlie, Delta, Echo, Foxtrot, Golf, Hotel, India, Juliett, Kilo, Lima, Mike, Noviembre, Oscar, Papa, Quebec, Romeo, Sierra, Tango, Uniform, Victor, Whiskey, X-ray, Yankee, Zulu.",
       "Para las cifras, en el examen español se aceptan formas claras en castellano: cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho y nueve. En operación internacional pueden verse formas inglesas como November, pero si el test nacional usa la adaptación castellana suele esperar Noviembre.",
-      "Intensifica el repaso cuando veas distractores muy parecidos: Noviembre/November, Alfa/Alpha, Juliett/Juliet, Quebec/Quebec sin tilde ni traducción, y palabras inventadas como Norte o Madrid. Son fallos de atención, no de cálculo."
+      "Intensifica el repaso cuando veas distractores muy parecidos: Noviembre/November, Alfa/Alpha, Juliett/Juliet, Quebec/Quebec sin tilde ni traducción, y palabras inventadas como Norte o Madrid. Son fallos de atención, no de cálculo.",
+      "Clases de emisión describen el tipo de señal: F3E es telefonía FM habitual; A3E AM; J3E SSB; A1A CW. En test suele bastar reconocer la letra que indica modulación (F, A, J) y el número de canal de información.",
+      "Estación fija, portátil, móvil, remota y desatendida no comparten definición: la fija tiene ubicación estable; la portátil lleva antena y alimentación propias; la móvil opera en movimiento; la remota se controla a distancia; la desatendida (repetidor, baliza) funciona sin operador permanente.",
+      "Distritos orientativos para memorizar: 1 Madrid y centro; 2 norte peninsular; 3 este y sur peninsular; 4 Andalucía y Extremadura; 5 Levante y Murcia; 6 Baleares; 7 noroeste; 8 Canarias; 9 Ceuta y Melilla. La cifra del indicativo no es el sufijo.",
+      "EG y otros prefijos temporales se asocian a eventos o usos especiales; ED a estaciones automáticas desatendidas en supuestos reglados. Lee siempre el prefijo antes de interpretar el indicativo completo."
     ],
     "practiceDrills": [
       "Desmonta cada indicativo en prefijo+distrito+sufijo: EA5RCA, ED5ZAA, EG5XXX y EA6/OK2HM. Después explica qué pista da cada parte.",
       "Memoriza distritos con ejemplos propios: 5 Valencia/Alicante/Castellón/Albacete/Murcia, 6 Baleares, 8 Canarias y 9 Ceuta/Melilla; contrasta el resto en el manual.",
-      "Haz dictados cortos con ICAO: deletrea el indicativo, escribe lo oído y revisa letras problemáticas como J/Juliett, N/Noviembre, Q/Quebec, V/Victor y Z/Zulu."
+      "Haz dictados cortos con ICAO: deletrea el indicativo, escribe lo oído y revisa letras problemáticas como J/Juliett, N/Noviembre, Q/Quebec, V/Victor y Z/Zulu.",
+      "Tras leer el resumen de la sección 3, abre parte_04 del PDF en distritos y parte_03 en fonético; cierra con las siete tarjetas del bloque."
     ],
     "quickSession": [
       "Para analizar un indicativo, sepáralo en prefijo, cifra y sufijo. Ejemplo: EA5RCA tiene prefijo EA, distrito 5 y sufijo RCA.",
@@ -609,6 +630,18 @@ export default {
       {
         "front": "Trampa frecuente: letra N en fonético de test español",
         "back": "Noviembre (no November si el test pide forma castellana)"
+      },
+      {
+        "front": "Cifra 5 en indicativo español (distrito)",
+        "back": "Levante: Valencia, Alicante, Castellón, Albacete, Murcia"
+      },
+      {
+        "front": "Prefijo ED en uso habitual de examen",
+        "back": "Estación automática desatendida (repetidor/baliza según reglamento)"
+      },
+      {
+        "front": "F3E en clases de emisión",
+        "back": "Telefonía con modulación de frecuencia (FM de voz)"
       }
     ],
     "sources": "Reglamento IET/1311/2013 (titulares, estaciones); CEPT T/R 61-01."
@@ -642,7 +675,10 @@ export default {
       "El código RST informa legibilidad, intensidad y tono. En telefonía se usan normalmente R y S; en telegrafía se añade T.",
       "Las señales de prioridad se ordenan por gravedad: Mayday para socorro, Pan Pan para urgencia y Sécurité/Securite para seguridad. El tráfico prioritario debe respetarse sin interferir.",
       "El radioaficionado debe evitar interferencias deliberadas, usar la potencia necesaria, respetar planes de banda y ceder la frecuencia cuando proceda.",
-      "Las transmisiones deben hacerse en lenguaje claro. No se deben ocultar significados ni transmitir contenidos ajenos a la finalidad del servicio de aficionados."
+      "Las transmisiones deben hacerse en lenguaje claro. No se deben ocultar significados ni transmitir contenidos ajenos a la finalidad del servicio de aficionados.",
+      "QRZ pregunta quién llama; QSL confirma recepción o intercambio de tarjeta; QTH indica ubicación. CQ es llamada general; DX indica larga distancia; PSE por favor; AR fin de mensaje en telegrafía.",
+      "El servicio de radioaficionado no es la banda ciudadana (CB): distintas bandas, reglamento y finalidad. Los distractores que mezclan CB con HF/VHF de aficionado suelen ser trampas de lectura.",
+      "La identificación periódica y al inicio y fin de comunicación es obligación operativa habitual. No basta con emitir potencia alta: hay que identificarse según reglas y no interferir deliberadamente."
     ],
     "practiceDrills": [
       "Agrupa códigos Q por uso: interferencia/ruido (QRM, QRN), potencia (QRO, QRP), contacto (QSO, QSL, QRZ) y movimiento (QSY, QRT, QRX).",
@@ -692,6 +728,22 @@ export default {
       {
         "front": "QSY",
         "back": "Cambiar de frecuencia o desplazarse en la banda"
+      },
+      {
+        "front": "QRT",
+        "back": "Cesar transmisión / dejar de emitir"
+      },
+      {
+        "front": "Mayday",
+        "back": "Señal de socorro (prioridad máxima)"
+      },
+      {
+        "front": "Pan-Pan",
+        "back": "Urgencia (no es socorro; prioridad inferior a Mayday)"
+      },
+      {
+        "front": "QSL",
+        "back": "Confirmar recepción o intercambio de confirmación de contacto"
       }
     ],
     "sources": "Reglamento de operación; práctica URE; códigos Q en manuales de operador."
@@ -719,16 +771,26 @@ export default {
     ],
     "bookGuide": [
       "Una instalación fija exterior exige cumplir condiciones técnicas y administrativas: ubicación del sistema radiante, memoria descriptiva cuando proceda, seguridad mecánica, seguro y responsabilidades del titular.",
+      "Ley 19/1983 (antenas en fachadas) y RD 2623/1986 marco el derecho y los requisitos de instalación de antenas de aficionado; en test suelen mezclarse con comunidad de propietarios, plazos de obras y comunicación previa — no con extremos de «libre siempre» o «prohibido siempre».",
       "La toma de tierra protege al operador y ayuda a controlar corrientes no deseadas. Los chasis metálicos de los equipos deben conectarse de forma correcta y segura.",
       "Las antenas y riostras no deben crear peligro para personas o bienes. En zonas transitables deben señalizarse anclajes y elementos que puedan suponer riesgo.",
       "Las interferencias pueden entrar por antena, red eléctrica, cables de audio, falta de apantallamiento o emisiones no deseadas. Las soluciones típicas son filtros, desacoplos, ferritas, apantallamiento y buena puesta a tierra.",
       "Una estación portátil lleva antena y alimentación propias; una móvil se usa en movimiento; una fija se instala en una ubicación; una remota se controla a distancia; una desatendida funciona sin intervención directa continua.",
-      "Si una emisión causa interferencia perjudicial a servicios protegidos, especialmente seguridad de la vida humana, debe cesarse o corregirse hasta resolver el problema."
+      "Si una emisión causa interferencia perjudicial a servicios protegidos, especialmente seguridad de la vida humana, debe cesarse o corregirse hasta resolver el problema.",
+      "Tras cancelar la licencia, dejar el sistema radiante solo para recepción puede exigir autorización de la propiedad o comunidad; no asumas que la antena puede permanecer sin más.",
+      "El RD 2623/1986 y sus instrucciones desarrollan requisitos de instalaciones de antenas de aficionado: documentación, condiciones técnicas y relación con la normativa de antenas en inmuebles. En test suele cruzarse con Ley 19/1983.",
+      "Ante obras en el edificio, la norma puede exigir comunicación previa y plazos; la coletilla «excepto urgencia» cambia los márgenes. Si la antena impide obras de conservación, el titular debe permitirlas con garantía de restitución según el supuesto.",
+      "Repetidores y balizas son estaciones desatendidas: requieren gestor responsable, identificación, límites de potencia y ubicación según reglamento. No las confundas con una estación fija operada en casa por el titular.",
+      "El seguro de antenas cubre responsabilidad civil por daños a terceros derivados de la instalación. La memoria descriptiva y el instalador autorizado pueden ser exigidos según el enunciado y la vigencia citada."
     ],
     "practiceDrills": [
-      "Haz una checklist de estación fija exterior: memoria descriptiva, ubicación/croquis, instalador si procede, seguro de antenas, tierra, riostras señalizadas y comunicación a la comunidad.",
-      "Convierte cada riesgo en medida: RF en altavoces→cable blindado/filtro, RF en red eléctrica→filtro de línea, chasis metálicos→tierra común, antena transmitiendo→no tocar.",
-      "Diferencia casos de examen: portátil con antena propia, fija con sistema radiante, portable temporal, estación remota, repetidor/radiobaliza desatendida y estación colectiva."
+      "Semana 1 — banco: en Practicar elige «Instalaciones» y repite las ~12 preguntas del bloque tres veces en días distintos (objetivo: acertar casi todas la tercera vez). Son pocas en banco; el temario y el PDF compensan.",
+      "Checklist de estación fija exterior (sin test): memoria descriptiva, croquis/ubicación, instalador si el enunciado lo exige, seguro de antenas, toma de tierra, riostras señalizadas y comunicación a la comunidad. Repásala en voz alta antes de abrir el PDF.",
+      "Cruce con normativa: lee en el temario «Marco normativo» los apartados de Ley 19/1983 y RD 2623/1986, luego vuelve a las preguntas de instalaciones. Muchas trampas mezclan comunidad de propietarios, plazos de obras y cancelación de licencia.",
+      "Riesgo → medida (tabla mental): RF en altavoces → cable blindado o filtro; RF en red eléctrica → filtro de línea; chasis metálicos → tierra común; antena en TX → no tocar. Una fila por fallo en Practicar.",
+      "PDF: 3.ª parte · Normativa (antenas en inmuebles) + repaso de seguridad eléctrica en 1.ª parte · Técnica (tierra, descargas, protecciones). El banco no sustituye esos capítulos.",
+      "Semana 2 — simulacro 2.ª prueba: Practicar con «Todos los temas» (30 preguntas). Instalaciones saldrá poco; si fallas por confundir fija/portátil/móvil/remota/desatendida, repasa la rutina de tipos de estación y repite solo este bloque al día siguiente.",
+      "Tipos de estación (dictado): portátil = antena y alimentación propias; móvil = en movimiento; fija = ubicación fija; remota = control a distancia; desatendida/repetidor = sin operador permanente. Di un ejemplo (EA5RCA en casa, activación portable, etc.) por cada tipo."
     ],
     "quickSession": [
       "Una instalación exterior debe pensarse en tres planos: legal, mecánico y eléctrico. Legal: autorización y documentación. Mecánico: soportes, anclajes y seguridad. Eléctrico: tierra, protecciones e interferencias.",
@@ -790,6 +852,6 @@ export default {
         "back": "Puede exigir autorización escrita de propiedad/comunidad (lee el enunciado)"
       }
     ],
-    "sources": "BOE reglamento IET/1311/2013; Ley 19/1983 (antenas); vista Normativa."
+    "sources": "BOE reglamento IET/1311/2013; Ley 19/1983 (antenas); libro oficial 3.ª parte Normativa; vista Normativa de esta app."
   }
 };

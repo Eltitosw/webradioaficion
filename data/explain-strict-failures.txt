@@ -1,6 +1,6 @@
-Verificación estricta · 2026-05-20T23:12:56
-Banco: 522
-OK: 522
+Verificación estricta · 2026-05-21T21:50:09
+Banco: 563
+OK: 563
 Inaceptables: 0
 Solo plantilla: 0
 Frases sospechosas (pass 3): 0

@@ -11,7 +11,9 @@ import ure from "../data/ure-electricidad.js";
 import ureExtra from "../data/ure-electricidad-extra.js";
 import ureReg from "../data/ure-reglamentacion.js";
 import fedi from "../data/fediea-2011.js";
+import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
+import { isExamAlignedSourceId } from "../lib/exam-aligned-sources.mjs";
 import quijotesExplanations from "../data/quijotes-explanations.js";
 import generatedExplanations from "../data/generated-explanations.js";
 import figures from "../data/questions-figures.js";
@@ -34,6 +36,8 @@ const OUT = path.join(__dirname, "..", "data", "questions-banco.js");
 const FIGURE_IDS_OUT = path.join(__dirname, "..", "data", "question-figure-ids.js");
 const FIGURES_OUT = path.join(__dirname, "..", "data", "questions-figures.js");
 
+const fediBloquesExam = fediBloques.filter((q) => q?.id && isExamAlignedSourceId(q.id));
+
 const all = [
   ...questions,
   ...propias,
@@ -41,6 +45,7 @@ const all = [
   ...ureExtra,
   ...ureReg,
   ...fedi,
+  ...fediBloquesExam,
   ...quijotes,
   ...figures,
 ];
@@ -157,6 +162,7 @@ const sourceList = [
   ...ureExtra,
   ...ureReg,
   ...fedi,
+  ...fediBloquesExam,
   ...quijotes,
   ...figures,
 ];

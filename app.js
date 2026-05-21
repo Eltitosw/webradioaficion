@@ -1,5 +1,7 @@
 import topicsData from "./data/topics.js";
 import topicStudy from "./data/topics-study.js";
+import { LIBRO_OFICIAL_INTRO, TEMARIO_BLOCK_ENRICHMENT } from "./data/temario-book-map.mjs";
+import { LIBRO_TEMA_TEORIA } from "./data/libro-temario-sync.mjs";
 import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
 import questionsBancoEstudio from "./data/questions-banco-estudio.js";
@@ -220,7 +222,7 @@ function questionIsPlayable(q) {
   return q.options.filter((o) => String(o ?? "").trim().length > 0).length >= 2;
 }
 
-/** Simulacro tipo test: banco examen estricto (481). */
+/** Simulacro tipo test: banco examen estricto (563). */
 const examQuestions = [...questionsBanco].filter(questionIsPlayable);
 
 /** Practicar, tarjetas, repaso: banco ampliado con más ítems y explicaciones. */
@@ -717,7 +719,64 @@ function temarioDetailsSection(blockId, num, title, bodyHtml, openDefault = true
           </details>`;
 }
 
-function renderBlockStudy(blockId) {
+function renderTemarioLibroPanel() {
+  const intro = LIBRO_OFICIAL_INTRO;
+  const partsList = intro.parts
+    .map((p) => `<li><strong>${escapeHtml(p.label)}</strong> — <code class="temario-path">${escapeHtml(p.file)}</code></li>`)
+    .join("");
+  return `
+    <aside class="panel temario-libro" aria-labelledby="temario-libro-title">
+      <h2 id="temario-libro-title" class="temario-libro__title">${escapeHtml(intro.title)}</h2>
+      <p class="muted">${escapeHtml(intro.studyRoute)}</p>
+      <p class="temario-libro__path muted">Carpeta local (tu PC): <code>${escapeHtml(intro.pathHint)}</code></p>
+      <ul class="temario-list temario-list--compact">${partsList}</ul>
+      <p class="muted">Detalle de capítulos por bloque en cada tema. No se incluyen los PDF en la web pública por tamaño y copyright.</p>
+    </aside>`;
+}
+
+function renderBlockEnrichment(blockId, questionCount) {
+  const en = TEMARIO_BLOCK_ENRICHMENT[blockId];
+  if (!en) return "";
+  const sync = LIBRO_TEMA_TEORIA[blockId];
+  const listItems = (items) =>
+    items?.length
+      ? `<ul class="temario-list">${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`
+      : "";
+  const pdfPart = sync?.partePdf
+    ? `<p class="muted">Archivo local: <code>${escapeHtml(sync.partePdf)}</code></p>`
+    : "";
+  const resumen = sync?.resumenMemorizar?.length
+    ? `<h5 class="temario-study-group__title">Resumen para memorizar</h5>
+       <p class="muted">Una página antes de abrir el PDF; contrasta con «Teoría explicada» (sección 5).</p>
+       ${listItems(sync.resumenMemorizar)}`
+    : "";
+  const lectura = sync?.lecturaOrden?.length
+    ? `<h5 class="temario-study-group__title">Orden de lectura en el PDF</h5>
+       ${listItems(sync.lecturaOrden)}`
+    : "";
+  const diagramas = sync?.diagramasLibro
+    ? `<h5 class="temario-study-group__title">Diagramas a buscar en el PDF</h5>
+       <p>${escapeHtml(sync.diagramasLibro)}</p>`
+    : "";
+  const bank =
+    en.bankPractice?.length
+      ? `<ul class="temario-list">${en.bankPractice.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>`
+      : `<p class="muted">${questionCount} preguntas en el banco de simulacro con este tema.</p>`;
+  return `
+    <section class="temario-enrich" aria-label="Libro oficial y teoría para memorizar">
+      <h5 class="temario-study-group__title">Libro oficial (PDF)</h5>
+      <p><strong>${escapeHtml(en.libro)}</strong> — ${escapeHtml(en.capitulos)}</p>
+      ${pdfPart}
+      <p class="muted">${escapeHtml(en.enfoque)}</p>
+      ${resumen}
+      ${lectura}
+      ${diagramas}
+      <h5 class="temario-study-group__title">Practicar en la app</h5>
+      ${bank}
+    </section>`;
+}
+
+function renderBlockStudy(blockId, questionCount = 0) {
   const study = topicStudy[blockId];
   if (!study) return "";
   const listItems = (items) =>
@@ -737,6 +796,13 @@ function renderBlockStudy(blockId) {
           <ul class="temario-list">${items.map((x) => `<li>${escapeHtml(x)}</li>`).join("")}</ul>
         </section>`
       : "";
+  const enrichment = renderBlockEnrichment(blockId, questionCount);
+  const enrichmentSection = enrichment
+    ? temarioDetailsSection(blockId, 3, "Libro oficial, memorizar y práctica", enrichment)
+    : "";
+  const practiceDrills = study.practiceDrills?.length
+    ? temarioDetailsSection(blockId, 4, "Rutina de práctica dirigida", listItems(study.practiceDrills))
+    : "";
   const detailHtml = [
     detailGroup("A. Teoría explicada del bloque", study.bookGuide || []),
     detailGroup("B. Ejemplos guiados y aplicación", study.quickSession || []),
@@ -744,15 +810,15 @@ function renderBlockStudy(blockId) {
     detailGroup("D. Programa de examen que cubre", study.fedieaSyllabus || []),
   ].join("");
   const readMore = detailHtml
-    ? temarioDetailsSection(blockId, 3, "Aprender el tema: teoría, ejemplos y programa", detailHtml)
+    ? temarioDetailsSection(blockId, 5, "Aprender el tema: teoría, ejemplos y programa", detailHtml)
     : "";
   const trapWarnings = study.trapWarnings?.length
-    ? temarioDetailsSection(blockId, 4, "Preguntas trampa para estudiar a fondo", listItems(study.trapWarnings))
+    ? temarioDetailsSection(blockId, 6, "Preguntas trampa para estudiar a fondo", listItems(study.trapWarnings))
     : "";
   const examChecklist = study.examChecklist?.length
     ? temarioDetailsSection(
         blockId,
-        5,
+        7,
         "Errores típicos y puntos de examen",
         listItems(study.examChecklist),
       )
@@ -794,6 +860,8 @@ function renderBlockStudy(blockId) {
           )}</p>
           ${hooks ? temarioDetailsSection(blockId, 1, "Idea clave para memorizar", hooks) : ""}
           ${express ? temarioDetailsSection(blockId, 2, "Repaso express, uno a tres minutos", express) : ""}
+          ${enrichmentSection}
+          ${practiceDrills}
           ${readMore}
           ${trapWarnings}
           ${examChecklist}
@@ -928,6 +996,7 @@ function renderTemario() {
     const counts = questionCountByTopic();
     const topicStats = loadTopicQuizStats();
     root.innerHTML =
+      renderTemarioLibroPanel() +
       renderTemarioToc() +
       topicsData.parts
     .map(
@@ -954,7 +1023,7 @@ function renderTemario() {
                 ${escapeHtml(progress.detail)}
               </span>
             </div>
-            ${renderBlockStudy(b.id)}
+            ${renderBlockStudy(b.id, nq)}
           </li>`;
           })
           .join("")}
@@ -1993,12 +2062,25 @@ function topicProgressState(st) {
 function buildTemarioSearchIndex(blockId, blockMeta, study) {
   const bits = [blockId, blockMeta.title, blockMeta.hint];
   if (study && typeof study === "object") {
+    const en = TEMARIO_BLOCK_ENRICHMENT[blockId];
+    if (en) {
+      bits.push(en.libro, en.capitulos, en.enfoque);
+      if (en.bankPractice) for (const x of en.bankPractice) bits.push(String(x));
+    }
+    const sync = LIBRO_TEMA_TEORIA[blockId];
+    if (sync) {
+      bits.push(sync.partePdf || "");
+      if (sync.diagramasLibro) bits.push(String(sync.diagramasLibro));
+      if (sync.resumenMemorizar) for (const x of sync.resumenMemorizar) bits.push(String(x));
+      if (sync.lecturaOrden) for (const x of sync.lecturaOrden) bits.push(String(x));
+    }
     for (const k of [
       "memoryHooks",
       "expressBullets",
       "readMore",
       "fedieaSyllabus",
       "bookGuide",
+      "practiceDrills",
       "quickSession",
       "examChecklist",
       "trapWarnings",
@@ -3505,13 +3587,14 @@ function resultNextActionPanel(good, total, wrong) {
       <p>Activa preguntas trampa, cambia de bloque o mide nivel con un simulacro sin pistas.</p>
       <div class="result-next__actions">
         <a class="btn btn--primary btn--sm" href="#examen" data-nav="examen">Hacer simulacro</a>
-        <a class="btn btn--ghost btn--sm" href="#practicar" data-nav="practicar">Otra práctica</a>
+        <button type="button" class="btn btn--ghost btn--sm" data-result-new-practice>Otra práctica</button>
       </div>
     </div>`;
 }
 
 function bindResultActions() {
-  $("#quiz-feedback")?.querySelector("[data-result-repeat-wrong]")?.addEventListener("click", () => {
+  const feedback = $("#quiz-feedback");
+  feedback?.querySelector("[data-result-repeat-wrong]")?.addEventListener("click", () => {
     const wrongEl = $("#quiz-wrong-only");
     const trapEl = $("#quiz-trap-only");
     const modeEl = $("#quiz-mode");
@@ -3521,6 +3604,18 @@ function bindResultActions() {
     if (modeEl instanceof HTMLSelectElement) modeEl.value = "study";
     if (sessionEl instanceof HTMLSelectElement) sessionEl.value = "libre";
     saveQuizPrefs();
+    startQuiz();
+    requestAnimationFrame(() => {
+      $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+  feedback?.querySelector("[data-result-new-practice]")?.addEventListener("click", () => {
+    if ($("#view-practicar")?.hidden) {
+      location.hash = "practicar";
+      showView("practicar");
+      updateDocumentTitle("practicar");
+      announceRoute("practicar");
+    }
     startQuiz();
     requestAnimationFrame(() => {
       $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });

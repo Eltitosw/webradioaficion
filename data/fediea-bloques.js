@@ -1,5 +1,7 @@
 /**
- * FEDI-EA bloques históricos.
+ * FEDI-EA — bloques históricos de práctica (001-592 y exámenes 2007-2011).
+ * Índice: https://fediea.org/examen/ejercicios/
+ * Advertencia FEDI: pueden contener fallos u obsolescencia.
  * Generado por `pnpm run import:banks` — no editar el bloque masivo a mano.
  */
 export default [
@@ -3219,6 +3221,20 @@ export default [
       "Ondas métricas",
       "Ondas centimétricas",
       "Ondas kilométricas",
+    ],
+    correctIndex: 3,
+    explain: "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente.",
+  },
+  {
+    id: "fedi-b-239",
+    part: 2,
+    topicId: "marco-normativo",
+    stem: "LAS ESTACIONES DE AFICIONADO QUEDAN SOMETIDAS A LA INSPECCIÓN DE:",
+    options: [
+      "La Delegación de Industria",
+      "El Ministerio de Trabajo",
+      "La Dirección General de Radio y TV",
+      "la Administración competente en espectro radioeléctrico",
     ],
     correctIndex: 3,
     explain: "Práctica histórica (Fuente: FEDI-EA bloque b). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente.",

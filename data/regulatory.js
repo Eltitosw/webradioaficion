@@ -123,6 +123,12 @@ export default {
         "Material didáctico de editoriales, asociaciones y particulares. Las URLs pueden cambiar; el criterio legal y técnico sigue en el BOE y en la convocatoria oficial. Contrasta fechas y cifras (potencias, bandas) con el reglamento consolidado.",
       links: [
         {
+          label: "Libro oficial de examen (programa HAREC, PDF en 4 partes)",
+          href: "https://avance.digital.gob.es/espectro/radioaficionados/Paginas/examenes-radioaficionado.aspx",
+          note:
+            "Guía editorial del examen: 1.ª parte Técnica, 2.ª Normas y procedimientos, 3.ª Normativa. Puedes guardar los capítulos en local (ver docs/LIBRO_OFICIAL_ESTUDIO.md en el repositorio); no se redistribuyen desde RadioExamen.",
+        },
+        {
           label: "PDF · Temario simplificado del libro de examen (tienda Radiomanía)",
           href: "https://radiomania.net/WebRoot/Store14/Shops/a460337c-7435-4ca8-a697-f50605a3ed82/58C2/A070/5BDC/3557/4836/0A48/3534/C9F6/89754710-Temario-Simplificado-Del-Libro-de-Examen-de-Radio-Aficionado.pdf",
           note: "Descarga comercial; úsalo como resumen, no como sustituto del anexo II del BOE ni del programa HAREC.",

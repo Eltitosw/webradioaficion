@@ -1,0 +1,51 @@
+=== Auditoría libro oficial ↔ banco ===
+Fecha: 2026-05-21
+Banco activo: 543 preguntas
+
+Cobertura por bloque (preguntas en banco vs temario):
+────────────────────────────────────────────────────────────────────────
+electricidad-basica      37 preg   libro: 1.ª parte · Técnica
+magnetismo-ondas         50 preg   libro: 1.ª parte · Técnica
+componentes              49 preg   libro: 1.ª parte · Técnica
+receptores-emisores      80 preg   libro: 1.ª parte · Técnica
+antenas-prop             70 preg   libro: 1.ª parte · Técnica
+marco-normativo          81 preg   libro: 3.ª parte · Normativa nacional e internacional
+licencias-indicativos   130 preg   libro: 3.ª parte · Normativa + 2.ª parte (procedimientos)
+operacion-seguridad      34 preg   libro: 2.ª parte · Normas y procedimientos de operación
+instalaciones            12 preg   libro: 3.ª parte (antenas/instalaciones) + 1.ª parte (seguridad eléctrica) ⚠ poco banco
+
+Electricidad básica: 37 preguntas en banco
+
+Temas del libro (1.ª parte · electricidad) vs preguntas del banco:
+────────────────────────────────────────────────────────────────────────
+Ley de Coulomb / cargas              6 pregunta(s)
+Campo eléctrico (V/m)                2 pregunta(s)
+    · ofic-058: La intensidad de un campo eléctrico se expresa habitualmente en:…
+    · ofic-062: La intensidad de un campo eléctrico homogéneo se mide en unidades SI d…
+Campo electromagnético / onda        1 pregunta(s)
+    · ofic-063: Una onda de radio en el espacio libre se modela principalmente como:…
+Código de colores                    1 pregunta(s)
+    · ofic-053: Una resistencia con bandas violeta–verde–rojo–oro (tolerancia oro) tie…
+Valor eficaz vs pico                 3 pregunta(s)
+Periodo y frecuencia T=1/f           8 pregunta(s)
+Factor de potencia / cos φ           2 pregunta(s)
+    · fedi-ag-018: En una instalación eléctrica, el "factor de potencia" o coseno φ es:…
+    · ofic-061: En corriente alterna, el factor de potencia (cos φ) relaciona principa…
+dBm vs dB                            3 pregunta(s)
+Instrumentos (V/I/R)                 5 pregunta(s)
+Condensador en CC estable            4 pregunta(s)
+Bobina en CC estable                 2 pregunta(s)
+    · ofic-054: Un condensador ideal en régimen permanente de corriente continua se co…
+    · ofic-055: Una bobina ideal en régimen permanente de corriente continua se compor…
+Energía en condensador               4 pregunta(s)
+FEM y resistencia interna            2 pregunta(s)
+    · ofic-057: Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 Ω. …
+    · ofic-060: Para proteger un amperímetro de sobrecorriente suele usarse un resiste…
+Prefijos k, m (unidades)             26 pregunta(s)
+
+Todos los temas clave del libro tienen al menos una pregunta en el banco.
+
+Notas:
+  • El libro no se importa automáticamente (PDF escaneo); las propias citan HAREC + capítulo del libro.
+  • Tras añadir ofic-047… ejecuta: node scripts/cribado-recencia.mjs --examen && node scripts/build-banco-principal.mjs
+  • Objetivo electricidad: ~30–35 preguntas tras ampliación (sin duplicar enunciados URE).

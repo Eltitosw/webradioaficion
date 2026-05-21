@@ -66,4 +66,17 @@ describe("banco-quality — publicación estricta", () => {
       true,
     );
   });
+
+  it("acepta URE electricidad con default-topic-ok si el enunciado encaja", () => {
+    const q = {
+      id: "ure-p1-q999",
+      part: 1,
+      topicId: "electricidad-basica",
+      stem: "El campo eléctrico se expresa en:",
+      options: ["V/m", "A/m", "Hz", "Ω"],
+      correctIndex: 0,
+      explain: "La intensidad del campo eléctrico se mide en voltios por metro (V/m).",
+    };
+    assert.equal(isPublishableBankQuestion(q), true);
+  });
 });

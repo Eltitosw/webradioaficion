@@ -3799,6 +3799,34 @@ html.a11y-reduce-motion .flashcard__inner {
   }
 }
 
+.temario-libro {
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--accent);
+}
+
+.temario-libro__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.temario-libro__path code {
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
+.temario-path {
+  font-size: 0.82em;
+  word-break: break-all;
+}
+
+.temario-enrich {
+  margin: 0;
+}
+
+.temario-enrich .temario-study-group__title:first-child {
+  margin-top: 0;
+}
+
 .temario-toc {
   margin-bottom: 1.25rem;
 }

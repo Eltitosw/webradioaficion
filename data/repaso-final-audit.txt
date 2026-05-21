@@ -1,7 +1,7 @@
 === Repaso final del banco ===
-Fecha: 2026-05-20T23:12:47.371Z
+Fecha: 2026-05-21T21:09:53.396Z
 
-## Banco EXAMEN (simulacro) (522 preguntas)
+## Banco EXAMEN (simulacro) (520 preguntas)
   ✓ Sin duplicados exactos (enunciado+opciones)
   ✓ Sin parafraseos cercanos
   ✓ Nada fuera de ámbito radioaficionado
@@ -9,7 +9,7 @@ Fecha: 2026-05-20T23:12:47.371Z
   ✓ Sin fugas de lista de exclusión
   ✓ UTF-8 OK
 
-## Banco ESTUDIO (practicar) (542 preguntas)
+## Banco ESTUDIO (practicar) (539 preguntas)
   ✓ Sin duplicados exactos (enunciado+opciones)
   ✓ Sin parafraseos cercanos
   ✓ Nada fuera de ámbito radioaficionado
