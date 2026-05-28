@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { isTemplateOnlyExplain, pedagogicalExplain } from "../lib/explain-quality.mjs";
+import { isTemplateOnlyExplain, pedagogicalExplain, stripExplainBoilerplate } from "../lib/explain-quality.mjs";
 
 test("isTemplateOnlyExplain detecta plantilla FEDI", () => {
   assert.equal(
@@ -24,6 +24,13 @@ test("pedagogicalExplain extrae texto antes de la cola histórica", () => {
   };
   assert.match(pedagogicalExplain(q), /realimentación/);
   assert.doesNotMatch(pedagogicalExplain(q), /Práctica histórica/);
+});
+
+test("stripExplainBoilerplate quita prefijo V=IR y deja el texto útil", () => {
+  const raw =
+    "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En paralelo entre esos puntos». El voltímetro mide en paralelo.";
+  assert.match(stripExplainBoilerplate(raw), /voltímetro.*paralelo/i);
+  assert.doesNotMatch(stripExplainBoilerplate(raw), /relaciones base del examen/i);
 });
 
 test("pedagogicalExplain ignora explainSourceNote en el campo explain", () => {

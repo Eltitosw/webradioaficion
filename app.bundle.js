@@ -2944,7 +2944,7 @@ var questions_banco_default = [
       "Con el circuito alimentado por corriente alterna \xFAnicamente"
     ],
     "correctIndex": 1,
-    "explain": "En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xABEn paralelo entre esos puntos\xBB. El volt\xEDmetro mide diferencia de potencial en paralelo (alta impedancia de entrada). En serie medir\xEDa corriente, no tensi\xF3n.",
+    "explain": "El volt\xEDmetro mide diferencia de potencial entre dos puntos y va en paralelo (alta impedancia de entrada). En serie medir\xEDa corriente, no tensi\xF3n. \xABEn paralelo entre esos puntos\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -4542,21 +4542,6 @@ var questions_banco_default = [
     ],
     "correctIndex": 2,
     "explain": "ROE significa relaci\xF3n de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la l\xEDnea/antena. Si la adaptaci\xF3n es mala, aumenta la potencia reflejada y sube la ROE."
-  },
-  {
-    "id": "ure-p1-q204",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Para medir intensidad del campo el\xE9ctrico se utilizan unidades de:",
-    "options": [
-      "dBV",
-      "dBW",
-      "dBV/m",
-      "dBW/ m2"
-    ],
-    "correctIndex": 2,
-    "explain": "En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xABdBV/m\xBB.",
-    "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p1-q205",
@@ -6298,7 +6283,7 @@ var questions_banco_default = [
       "Mejoras en la puesta a tierra de los equipos que componen la estaci\xF3n radioel\xE9ctrica"
     ],
     "correctIndex": 0,
-    "explain": "En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xABLa desensibilizaci\xF3n o bloqueo de los diferentes equipos electr\xF3nicos que se encuentren en las inmediaciones\xBB.",
+    "explain": "Un campo el\xE9ctrico intenso puede acoplar energ\xEDa a circuitos cercanos y saturar entradas de RF: aparece desensibilizaci\xF3n o bloqueo en equipos electr\xF3nicos de las inmediaciones. No aumenta la potencia hacia la antena ni \xABmejora\xBB la recepci\xF3n. \xABLa desensibilizaci\xF3n o bloqueo de los diferentes equipos electr\xF3nicos que se encuentren en las inmediaciones\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -19432,6 +19417,13 @@ function buildQuestionList(allQuestions2, partValue, sessionType, topicFilter = 
 
 // lib/explain-quality.mjs
 var GENERIC_BANK_RE = /^Pregunta sobre .+ La opción que responde al criterio del banco es «/i;
+var OHM_BOILERPLATE_RE = /^En corriente continua, V = I·R y P = V·I son las relaciones base del examen\.\s*(?:La magnitud o fórmula correcta aquí es «[^»]+»\.?\s*)?/i;
+function stripExplainBoilerplate(text) {
+  return String(text || "").trim().replace(OHM_BOILERPLATE_RE, "").trim();
+}
+function hasOhmBoilerplatePrefix(text) {
+  return OHM_BOILERPLATE_RE.test(String(text || "").trim());
+}
 function isTemplateOnlyExplain(explain) {
   const s = String(explain || "").trim();
   if (!s) return true;
@@ -19453,6 +19445,9 @@ function pedagogicalExplain(q) {
   const core = cut > 0 ? raw.slice(0, cut).trim() : raw;
   if (!core || isTemplateOnlyExplain(core)) return "";
   if (GENERIC_BANK_RE.test(core) && core.length < 220) return "";
+  const stripped = stripExplainBoilerplate(core);
+  if (stripped.length >= 24) return stripped;
+  if (hasOhmBoilerplatePrefix(core) && stripped.length < 24) return "";
   return core;
 }
 
@@ -21424,6 +21419,8 @@ var curated_explanations_default = {
   "fedi-ag-005": "Tomar parte de la salida y reinyectarla a la entrada es realimentaci\xF3n (feedback): puede estabilizar o modificar la ganancia del circuito. No confundir con rectificaci\xF3n ni demodulaci\xF3n. \xABRealimentaci\xF3n\xBB.",
   "ure-p1-q85": "Con pilas id\xE9nticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensi\xF3n total es la suma de las de cada pila. No confundir con resistencias en serie. \xABLa intensidad del conjunto es igual a la de una pila\xBB.",
   "ure-p1-q128": "La m\xE1xima transferencia de potencia entre dos circuitos se produce cuando las impedancias est\xE1n adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que \xABantena despejada\xBB. \xABExista adaptaci\xF3n de las impedancias\xBB.",
+  "ure-p1-q493": "Un campo el\xE9ctrico intenso puede acoplar energ\xEDa a circuitos cercanos y saturar entradas de RF: aparece desensibilizaci\xF3n o bloqueo en equipos electr\xF3nicos de las inmediaciones. No aumenta la potencia hacia la antena ni \xABmejora\xBB la recepci\xF3n. \xABLa desensibilizaci\xF3n o bloqueo de los diferentes equipos electr\xF3nicos que se encuentren en las inmediaciones\xBB.",
+  "ofic-051": "El volt\xEDmetro mide diferencia de potencial entre dos puntos y va en paralelo (alta impedancia de entrada). En serie medir\xEDa corriente, no tensi\xF3n. \xABEn paralelo entre esos puntos\xBB.",
   "fedi-ag-006": "La resistencia se mide sin tensi\xF3n aplicada (fuera de circuito o en banco de prueba). En paralelo la tensi\xF3n es com\xFAn; en serie, la intensidad. Las tres primeras afirmaciones del enunciado no son correctas en conjunto. \xABNinguna de las respuestas anteriores es correcta\xBB.",
   "fedi-ag-008": "La capacidad almacena carga el\xE9ctrica; en el SI se mide en faradios (F) y subm\xFAltiplos (\xB5F, nF, pF). \xABFaradios\xBB.",
   "fedi-ag-009": "En el esquema, el diodo en serie con la carga y el condensador forman un detector de envolvente: rectifica la RF y la constante de tiempo RC extrae la envolvente AM. No es oscilador ni conversor de frecuencia. \xABDetector de envolvente\xBB.",
@@ -23434,6 +23431,7 @@ function isWeakBankExplain(text, q = null) {
   if (isGenericExplainText(t)) return true;
   if (/la respuesta que marca el banco|responde al criterio del banco/i.test(t)) return true;
   if (/\. Es[,]?\s*["']?\s*$/.test(t)) return true;
+  if (hasOhmBoilerplatePrefix(t) && stripExplainBoilerplate(t).length < 40) return true;
   const stem = String(q?.stem || "").toLowerCase();
   if (stem && /pilas|bater[ií]as/.test(stem) && /resistencias se suman/i.test(t)) return true;
   if (stem && /transferencia m[aá]xima de potencia/.test(stem) && /^Potencia es energía por unidad de tiempo; en CC P = V·I\. Identifica/i.test(t)) {

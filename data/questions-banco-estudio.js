@@ -2,13 +2,13 @@
  * Banco de ESTUDIO: repaso, memorización y explicaciones (Practicar, Tarjetas, Cuaderno).
  * Incluye el banco examen + preguntas extra sin duplicar enunciado+opciones.
  * Generado: 2026-05-28 · 587 preguntas · node scripts/build-banco-estudio.mjs
- * Examen estricto: 563 preguntas en questions-banco.js (simulacro tipo test).
- * Añadidas solo estudio (antes dedupe): 150
+ * Examen estricto: 562 preguntas en questions-banco.js (simulacro tipo test).
+ * Añadidas solo estudio (antes dedupe): 151
  * Parafraseos eliminados: 126 (713 → 587)
  */
 
 export const BANCO_ESTUDIO_GENERATED_AT = "2026-05-28";
-export const BANCO_ESTUDIO_STATS = {"count":587,"examSubset":563,"studyOnlyAdded":24,"paraphraseRemoved":126,"withFigure":30,"withPedagogicalExplain":580};
+export const BANCO_ESTUDIO_STATS = {"count":587,"examSubset":562,"studyOnlyAdded":25,"paraphraseRemoved":126,"withFigure":30,"withPedagogicalExplain":580};
 
 export default [
   {
@@ -1277,7 +1277,7 @@ export default [
       "Ignorarla si la ROE es baja"
     ],
     "correctIndex": 1,
-    "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución.",
+    "explain": "La seguridad de personas prevalece: cesar la emisión que causa o agrava la interferencia y cooperar en su resolución. La respuesta correcta es «Dejar de emitir hasta resolver el problema».",
     "sourceRef": "Elaboración propia (2026) · Orden IET/1311/2013 y buenas prácticas operativas (IARU / URE)."
   },
   {
@@ -1517,7 +1517,7 @@ export default [
       "Con el circuito alimentado por corriente alterna únicamente"
     ],
     "correctIndex": 1,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En paralelo entre esos puntos». El voltímetro mide diferencia de potencial en paralelo (alta impedancia de entrada). En serie mediría corriente, no tensión.",
+    "explain": "El voltímetro mide diferencia de potencial entre dos puntos y va en paralelo (alta impedancia de entrada). En serie mediría corriente, no tensión. «En paralelo entre esos puntos».",
     "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
   },
   {
@@ -2655,7 +2655,7 @@ export default [
       "Haya ondas estacionarias"
     ],
     "correctIndex": 2,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Exista adaptación de las impedancias».",
+    "explain": "La máxima transferencia de potencia entre dos circuitos se produce cuando las impedancias están adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que «antena despejada». «Exista adaptación de las impedancias».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3380,8 +3380,7 @@ export default [
       "dBW/ m2"
     ],
     "correctIndex": 2,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «dBV/m».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La intensidad de campo eléctrico en un punto se expresa en V/m (dBV/m en dB). dBW es potencia; dBV es tensión. «dBV/m»."
   },
   {
     "id": "ure-p1-q205",
@@ -5151,7 +5150,7 @@ export default [
       "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica"
     ],
     "correctIndex": 0,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
+    "explain": "Un campo eléctrico intenso puede acoplar energía a circuitos cercanos y saturar entradas de RF: aparece desensibilización o bloqueo en equipos electrónicos de las inmediaciones. No aumenta la potencia hacia la antena ni «mejora» la recepción. «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5588,7 +5587,7 @@ export default [
       "Siempre se produce un cortocircuito"
     ],
     "correctIndex": 0,
-    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «La intensidad del conjunto es igual a la de una pila».",
+    "explain": "Con pilas idénticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensión total es la suma de las de cada pila. No confundir con resistencias en serie. «La intensidad del conjunto es igual a la de una pila».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {

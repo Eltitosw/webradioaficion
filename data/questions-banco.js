@@ -1,14 +1,14 @@
 /**
  * Banco principal: examen oficial (ofic, FEDI examen, URE, Quijotes 84) + figuras certificadas.
- * Generado: 2026-05-28 · 563 preguntas · npm run build:banco
- * Cribado: 584 · En banco por id: 562 · Sustituidas por versión con figura: 22
+ * Generado: 2026-05-28 · 562 preguntas · npm run build:banco
+ * Cribado: 584 · En banco por id: 561 · Sustituidas por versión con figura: 23
  * Duplicados eliminados: 19 (19 exactos, 0 parafraseados)
- * Relleno hasta ≥400: 0 añadidas (total tras relleno: 563)
+ * Relleno hasta ≥400: 0 añadidas (total tras relleno: 562)
  * Con figura: 30
  */
 
 export const BANCO_GENERATED_AT = "2026-05-28";
-export const BANCO_STATS = {"count":563,"cribadoPreferred":584,"cribadoById":562,"cribadoReplacedByFigure":22,"withFigure":30,"dedupeRemoved":19,"dedupeGroups":19,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1129};
+export const BANCO_STATS = {"count":562,"cribadoPreferred":584,"cribadoById":561,"cribadoReplacedByFigure":23,"withFigure":30,"dedupeRemoved":19,"dedupeGroups":19,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1129};
 
 export default [
   {
@@ -1502,7 +1502,7 @@ export default [
       "Con el circuito alimentado por corriente alterna únicamente"
     ],
     "correctIndex": 1,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «En paralelo entre esos puntos». El voltímetro mide diferencia de potencial en paralelo (alta impedancia de entrada). En serie mediría corriente, no tensión.",
+    "explain": "El voltímetro mide diferencia de potencial entre dos puntos y va en paralelo (alta impedancia de entrada). En serie mediría corriente, no tensión. «En paralelo entre esos puntos».",
     "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
   },
   {
@@ -3100,21 +3100,6 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "ROE significa relación de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la línea/antena. Si la adaptación es mala, aumenta la potencia reflejada y sube la ROE."
-  },
-  {
-    "id": "ure-p1-q204",
-    "part": 1,
-    "topicId": "electricidad-basica",
-    "stem": "Para medir intensidad del campo eléctrico se utilizan unidades de:",
-    "options": [
-      "dBV",
-      "dBW",
-      "dBV/m",
-      "dBW/ m2"
-    ],
-    "correctIndex": 2,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «dBV/m».",
-    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p1-q205",
@@ -4856,7 +4841,7 @@ export default [
       "Mejoras en la puesta a tierra de los equipos que componen la estación radioeléctrica"
     ],
     "correctIndex": 0,
-    "explain": "En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
+    "explain": "Un campo eléctrico intenso puede acoplar energía a circuitos cercanos y saturar entradas de RF: aparece desensibilización o bloqueo en equipos electrónicos de las inmediaciones. No aumenta la potencia hacia la antena ni «mejora» la recepción. «La desensibilización o bloqueo de los diferentes equipos electrónicos que se encuentren en las inmediaciones».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
