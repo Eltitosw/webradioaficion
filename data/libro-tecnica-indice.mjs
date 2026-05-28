@@ -3,8 +3,14 @@
  * Carpeta: …/audiobook/parte_02_Primera_parte__Técnica/ocr-pages/NNNN.txt
  * El número del fichero coincide con la página impresa del libro (p. ej. 0022 → p. 22).
  */
+/** Ruta OCR para scripts (`repair:ocr`). Override: `LIBRO_OCR_DIR` o `--dir=`. */
 export const LIBRO_TECNICA_OCR_BASE =
+  (typeof process !== "undefined" && process.env?.LIBRO_OCR_DIR) ||
   "C:\\Users\\joanc\\Documents\\output\\audiobook\\parte_02_Primera_parte__Técnica\\ocr-pages";
+
+/** Texto en la app (sin ruta personal del desarrollador). */
+export const LIBRO_TECNICA_OCR_HINT =
+  "audiobook/parte_02_Primera_parte__Técnica/ocr-pages (ver docs/LIBRO_OFICIAL_ESTUDIO.md)";
 
 /** @type {{ n: number; titulo: string; pagDesde: number; pagHasta: number; bloques: string[] }} */
 export const LIBRO_PARTE02_CAPITULOS = [

@@ -2,7 +2,7 @@ import topicsData from "./data/topics.js";
 import topicStudy from "./data/topics-study.js";
 import { LIBRO_OFICIAL_INTRO, TEMARIO_BLOCK_ENRICHMENT } from "./data/temario-book-map.mjs";
 import { LIBRO_TEMA_TEORIA } from "./data/libro-temario-sync.mjs";
-import { LIBRO_TECNICA_OCR_BASE } from "./data/libro-tecnica-indice.mjs";
+import { LIBRO_TECNICA_OCR_HINT } from "./data/libro-tecnica-indice.mjs";
 import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
 import questionsBancoEstudio from "./data/questions-banco-estudio.js";
@@ -3299,7 +3299,7 @@ function renderDeepenPanel(q) {
     : "";
   const ocrDeepen =
     sync?.paginasLibro && sync.paginasLibro !== "—"
-      ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml(LIBRO_TECNICA_OCR_BASE)}</code></p>`
+      ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml(LIBRO_TECNICA_OCR_HINT)}</code></p>`
       : "";
   const links = `<ul class="quiz-deepen__links">
       <li><a href="#temario--${enc}--sec-3">Temario · Libro oficial y práctica</a></li>

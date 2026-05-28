@@ -4,7 +4,8 @@
  */
 export const LIBRO_OFICIAL_INTRO = {
   title: "Libro oficial de examen (PDF en 4 partes)",
-  pathHint: "C:\\Users\\joanc\\Documents\\output\\chapters\\",
+  pathHint:
+    "Carpeta local con los 4 PDF del libro oficial (no van en Git). Ver docs/LIBRO_OFICIAL_ESTUDIO.md.",
   parts: [
     { file: "parte_01_Portada__introducción_e_índice.pdf", label: "Portada, introducción e índice (~20 pp)" },
     { file: "parte_02_Primera_parte__Técnica.pdf", label: "1.ª parte · Técnica (~207 pp)" },
@@ -33,7 +34,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Ondas electromagnéticas, propagación, modulaciones AM/FM/SSB, espectro y muestreo.",
     enfoque: "Memoriza λ = 300/f(MHz) y la diferencia AM vs FM antes de leer opciones largas.",
     bankPractice: [
-      "49 preguntas en simulacro de 1.ª prueba; en Practicar por tema puedes hacer sesiones largas mezclando solo ondas.",
+      "50 preguntas en simulacro de 1.ª prueba; en Practicar por tema puedes hacer sesiones largas mezclando solo ondas.",
       "Prioriza preguntas con «gráfica», «espectro» o «modulación» — suelen llevar figura didáctica en el banco.",
     ],
   },
@@ -43,7 +44,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     enfoque:
       "Libro + OCR 0048–0059: unión PN, rectificadores, montajes BJT (emisor común = ganancia), FET por tensión, acoplador T/π a 50 Ω.",
     bankPractice: [
-      "51 preguntas: conviene repasar por familias (R, L, C, diodo, transistor) y luego mezclar.",
+      "49 preguntas: conviene repasar por familias (R, L, C, diodo, transistor) y luego mezclar.",
       "Activa «preguntas trampa» cuando domines lo básico: confunden rectificar con limitar corriente.",
     ],
   },
@@ -53,7 +54,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     enfoque:
       "Tres sesiones: galena+superheterodino (FI tras mezclador), TX excitador/PA/filtro SSB, instrumentos ROE/vatímetro. OCR 0100–0120; PDF si página vacía.",
     bankPractice: [
-      "81 preguntas — el bloque más grande de la 1.ª prueba: divide en 2–3 sesiones de ~30.",
+      "79 preguntas — el bloque más grande de la 1.ª prueba: divide en 2–3 sesiones de ~30.",
       "Figuras de esquema de receptor/transmisor: léelas con calma; el enunciado suele citar «siguiente esquema».",
     ],
   },
@@ -63,7 +64,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     enfoque:
       "Dos sesiones: cap. 8 (dipolo, Yagi, ROE, ERP, acopladores) y cap. 9 (λ, ionosfera, troposfera). OCR 0130–0165 como apoyo; teoría curada en la app.",
     bankPractice: [
-      "71 preguntas con varias figuras: practica primero las que piden diagrama de radiación o esquema de línea.",
+      "70 preguntas con varias figuras: practica primero las que piden diagrama de radiación o esquema de línea.",
       "Contrasta ROE alta (mala adaptación) frente a «buen acoplamiento» en distractores.",
     ],
   },
@@ -72,7 +73,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Reglamento español, UIT, CEPT, CNAF, HAREC, planes IARU e inspección.",
     enfoque: "Tabla mental: documento → función → trampa (HAREC ≠ licencia CEPT).",
     bankPractice: [
-      "81 preguntas de reglamentación: mezcla con «Todos los temas» en 2.ª prueba para simulacro real.",
+      "83 preguntas de reglamentación: mezcla con «Todos los temas» en 2.ª prueba para simulacro real.",
       "Normativa sensible: si el banco histórico contradice el BOE, sigue la explicación corregida de la app.",
     ],
   },
@@ -92,7 +93,7 @@ export const TEMARIO_BLOCK_ENRICHMENT = {
     enfoque:
       "Teoría alineada al PDF (~9 párrafos + resumen Q/códigos). QRM/QRN y QRO/QRP son parejas trampa; Mayday ≠ Pan-Pan; CB ≠ aficionado.",
     bankPractice: [
-      "32 preguntas: repite hasta automatizar códigos Q más frecuentes.",
+      "34 preguntas: repite hasta automatizar códigos Q más frecuentes.",
       "Ensaya una QSO de 30 s en voz: identificación, reporte, cambio, cierre.",
     ],
   },

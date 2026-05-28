@@ -1012,7 +1012,7 @@ var topics_study_default = {
 // data/temario-book-map.mjs
 var LIBRO_OFICIAL_INTRO = {
   title: "Libro oficial de examen (PDF en 4 partes)",
-  pathHint: "C:\\Users\\joanc\\Documents\\output\\chapters\\",
+  pathHint: "Carpeta local con los 4 PDF del libro oficial (no van en Git). Ver docs/LIBRO_OFICIAL_ESTUDIO.md.",
   parts: [
     { file: "parte_01_Portada__introducci\xF3n_e_\xEDndice.pdf", label: "Portada, introducci\xF3n e \xEDndice (~20 pp)" },
     { file: "parte_02_Primera_parte__T\xE9cnica.pdf", label: "1.\xAA parte \xB7 T\xE9cnica (~207 pp)" },
@@ -1037,7 +1037,7 @@ var TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Ondas electromagn\xE9ticas, propagaci\xF3n, modulaciones AM/FM/SSB, espectro y muestreo.",
     enfoque: "Memoriza \u03BB = 300/f(MHz) y la diferencia AM vs FM antes de leer opciones largas.",
     bankPractice: [
-      "49 preguntas en simulacro de 1.\xAA prueba; en Practicar por tema puedes hacer sesiones largas mezclando solo ondas.",
+      "50 preguntas en simulacro de 1.\xAA prueba; en Practicar por tema puedes hacer sesiones largas mezclando solo ondas.",
       "Prioriza preguntas con \xABgr\xE1fica\xBB, \xABespectro\xBB o \xABmodulaci\xF3n\xBB \u2014 suelen llevar figura did\xE1ctica en el banco."
     ]
   },
@@ -1046,7 +1046,7 @@ var TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Cap. 3 (pp. 48\u201359): semiconductores, diodos, BJT/FET, acopladores.",
     enfoque: "Libro + OCR 0048\u20130059: uni\xF3n PN, rectificadores, montajes BJT (emisor com\xFAn = ganancia), FET por tensi\xF3n, acoplador T/\u03C0 a 50 \u03A9.",
     bankPractice: [
-      "51 preguntas: conviene repasar por familias (R, L, C, diodo, transistor) y luego mezclar.",
+      "49 preguntas: conviene repasar por familias (R, L, C, diodo, transistor) y luego mezclar.",
       "Activa \xABpreguntas trampa\xBB cuando domines lo b\xE1sico: confunden rectificar con limitar corriente."
     ]
   },
@@ -1055,7 +1055,7 @@ var TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Cap. 6\u20137 (pp. 100\u2013127) + medidas cap. 10 (pp. 166\u2013177).",
     enfoque: "Tres sesiones: galena+superheterodino (FI tras mezclador), TX excitador/PA/filtro SSB, instrumentos ROE/vat\xEDmetro. OCR 0100\u20130120; PDF si p\xE1gina vac\xEDa.",
     bankPractice: [
-      "81 preguntas \u2014 el bloque m\xE1s grande de la 1.\xAA prueba: divide en 2\u20133 sesiones de ~30.",
+      "79 preguntas \u2014 el bloque m\xE1s grande de la 1.\xAA prueba: divide en 2\u20133 sesiones de ~30.",
       "Figuras de esquema de receptor/transmisor: l\xE9elas con calma; el enunciado suele citar \xABsiguiente esquema\xBB."
     ]
   },
@@ -1064,7 +1064,7 @@ var TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Cap. 8\u20139 (pp. 130\u2013165): antenas, l\xEDneas, propagaci\xF3n.",
     enfoque: "Dos sesiones: cap. 8 (dipolo, Yagi, ROE, ERP, acopladores) y cap. 9 (\u03BB, ionosfera, troposfera). OCR 0130\u20130165 como apoyo; teor\xEDa curada en la app.",
     bankPractice: [
-      "71 preguntas con varias figuras: practica primero las que piden diagrama de radiaci\xF3n o esquema de l\xEDnea.",
+      "70 preguntas con varias figuras: practica primero las que piden diagrama de radiaci\xF3n o esquema de l\xEDnea.",
       "Contrasta ROE alta (mala adaptaci\xF3n) frente a \xABbuen acoplamiento\xBB en distractores."
     ]
   },
@@ -1073,7 +1073,7 @@ var TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "Reglamento espa\xF1ol, UIT, CEPT, CNAF, HAREC, planes IARU e inspecci\xF3n.",
     enfoque: "Tabla mental: documento \u2192 funci\xF3n \u2192 trampa (HAREC \u2260 licencia CEPT).",
     bankPractice: [
-      "81 preguntas de reglamentaci\xF3n: mezcla con \xABTodos los temas\xBB en 2.\xAA prueba para simulacro real.",
+      "83 preguntas de reglamentaci\xF3n: mezcla con \xABTodos los temas\xBB en 2.\xAA prueba para simulacro real.",
       "Normativa sensible: si el banco hist\xF3rico contradice el BOE, sigue la explicaci\xF3n corregida de la app."
     ]
   },
@@ -1091,7 +1091,7 @@ var TEMARIO_BLOCK_ENRICHMENT = {
     capitulos: "C\xF3digo Q, RST, procedimiento en fon\xEDa/CW, emergencias y buenas pr\xE1cticas.",
     enfoque: "Teor\xEDa alineada al PDF (~9 p\xE1rrafos + resumen Q/c\xF3digos). QRM/QRN y QRO/QRP son parejas trampa; Mayday \u2260 Pan-Pan; CB \u2260 aficionado.",
     bankPractice: [
-      "32 preguntas: repite hasta automatizar c\xF3digos Q m\xE1s frecuentes.",
+      "34 preguntas: repite hasta automatizar c\xF3digos Q m\xE1s frecuentes.",
       "Ensaya una QSO de 30 s en voz: identificaci\xF3n, reporte, cambio, cierre."
     ]
   },
@@ -1107,7 +1107,8 @@ var TEMARIO_BLOCK_ENRICHMENT = {
 };
 
 // data/libro-tecnica-indice.mjs
-var LIBRO_TECNICA_OCR_BASE = "C:\\Users\\joanc\\Documents\\output\\audiobook\\parte_02_Primera_parte__T\xE9cnica\\ocr-pages";
+var LIBRO_TECNICA_OCR_BASE = typeof process !== "undefined" && process.env?.LIBRO_OCR_DIR || "C:\\Users\\joanc\\Documents\\output\\audiobook\\parte_02_Primera_parte__T\xE9cnica\\ocr-pages";
+var LIBRO_TECNICA_OCR_HINT = "audiobook/parte_02_Primera_parte__T\xE9cnica/ocr-pages (ver docs/LIBRO_OFICIAL_ESTUDIO.md)";
 var LIBRO_TEMA_PAGINAS = {
   "electricidad-basica": {
     paginas: "22\u201347",
@@ -1365,7 +1366,7 @@ var questions_banco_default = [
       "100 pF"
     ],
     "correctIndex": 0,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB200 pF\xBB."
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB200 pF\xBB. No confundir con el distractor del mismo bloque tem\xE1tico."
   },
   {
     "id": "fedi-ag-003",
@@ -1407,7 +1408,7 @@ var questions_banco_default = [
       "Realimentaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "Esa definici\xF3n corresponde a la realimentaci\xF3n (feedback). FEDI-EA."
+    "explain": "Tomar parte de la salida y reinyectarla a la entrada es realimentaci\xF3n (feedback): puede estabilizar o modificar la ganancia del circuito. No confundir con rectificaci\xF3n ni demodulaci\xF3n. \xABRealimentaci\xF3n\xBB."
   },
   {
     "id": "fedi-ag-006",
@@ -1421,7 +1422,7 @@ var questions_banco_default = [
       "Ninguna de las respuestas anteriores es correcta"
     ],
     "correctIndex": 3,
-    "explain": "Tensi\xF3n en paralelo, intensidad en serie; la resistencia se mide sin alimentaci\xF3n en circuito. La respuesta que marca el banco es \xABNinguna de las respuestas anteriores es correcta\xBB."
+    "explain": "La resistencia se mide sin tensi\xF3n aplicada (fuera de circuito o en banco de prueba). En paralelo la tensi\xF3n es com\xFAn; en serie, la intensidad. Las tres primeras afirmaciones del enunciado no son correctas en conjunto. \xABNinguna de las respuestas anteriores es correcta\xBB."
   },
   {
     "id": "fedi-ag-007",
@@ -1449,7 +1450,7 @@ var questions_banco_default = [
       "Decibelios"
     ],
     "correctIndex": 1,
-    "explain": "La capacidad indica cu\xE1nta carga puede almacenar un condensador; en el SI la unidad es el faradio (F), con subm\xFAltiplos \xB5F, nF o pF. \xABFaradios\xBB."
+    "explain": "La capacidad almacena carga el\xE9ctrica; en el SI se mide en faradios (F) y subm\xFAltiplos (\xB5F, nF, pF). \xABFaradios\xBB."
   },
   {
     "id": "fedi-ag-009",
@@ -1465,7 +1466,7 @@ var questions_banco_default = [
       "Detector de fase"
     ],
     "correctIndex": 1,
-    "explain": "AM significa modulaci\xF3n de amplitud. El circuito mostrado es un detector de envolvente: el diodo rectifica la se\xF1al de RF y el filtro RC sigue la envolvente para recuperar el audio."
+    "explain": "En el esquema, el diodo en serie con la carga y el condensador forman un detector de envolvente: rectifica la RF y la constante de tiempo RC extrae la envolvente AM. No es oscilador ni conversor de frecuencia. \xABDetector de envolvente\xBB."
   },
   {
     "id": "fedi-ag-010",
@@ -1479,7 +1480,7 @@ var questions_banco_default = [
       "Parte del transmisor que reduce los ruidos"
     ],
     "correctIndex": 0,
-    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDispositivo que convierte la corriente continua en alterna\xBB."
+    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDispositivo que convierte la corriente continua en alterna\xBB. No confundir con el distractor del mismo bloque tem\xE1tico."
   },
   {
     "id": "fedi-ag-011",
@@ -1489,13 +1490,13 @@ var questions_banco_default = [
     "stemFigure": "images/quiz/fedi-ag-011-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA ag-011 (ag-11.jpg): Indique el orden de los elementos de una fuente de alimentaci\xF3n lineal:",
     "options": [
-      "A Transformador, B Rectificador, C Regulador, D Filtro.",
-      "A Rectificador, B Transformador, C Filtro, D Regulador.",
-      "A Regulador, B Filtro, C Transformador, D Rectificador.",
-      "A Filtro, B Transformador, C Regulador, D Rectificador."
+      "Transformador \u2192 rectificador \u2192 filtro \u2192 regulador",
+      "Rectificador \u2192 transformador \u2192 filtro \u2192 regulador",
+      "Regulador \u2192 filtro \u2192 transformador \u2192 rectificador",
+      "Filtro \u2192 transformador \u2192 regulador \u2192 rectificador"
     ],
     "correctIndex": 0,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABA Transformador, B Rectificador, C Regulador, D Filtro.\xBB."
+    "explain": "En la figura de la fuente lineal, el flujo es: transformador (adapta y a\xEDsla), rectificador (CA\u2192CC pulsante), filtro (suaviza rizado) y regulador (tensi\xF3n estable). \xABTransformador \u2192 rectificador \u2192 filtro \u2192 regulador\xBB."
   },
   {
     "id": "fedi-ag-013",
@@ -1511,7 +1512,7 @@ var questions_banco_default = [
       "Las se\xF1ales 1 y 3."
     ],
     "correctIndex": 2,
-    "explain": "La frecuencia cr\xEDtica es el l\xEDmite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometr\xEDa. En el esquema, la se\xF1al 3 atraviesa la capa en lugar de regresar: por eso es la que est\xE1 por encima de la frecuencia cr\xEDtica. FEDI-EA."
+    "explain": "La frecuencia cr\xEDtica es el l\xEDmite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometr\xEDa. En el esquema, la se\xF1al 3 atraviesa la capa en lugar de regresar: por eso est\xE1 por encima de la frecuencia cr\xEDtica. \xABLa se\xF1al 3.\xBB."
   },
   {
     "id": "fedi-ag-014",
@@ -1527,7 +1528,7 @@ var questions_banco_default = [
       "9."
     ],
     "correctIndex": 3,
-    "explain": "En corriente continua y en r\xE9gimen permanente, el condensador ideal se comporta como circuito abierto: no circula corriente por \xE9l, pero queda cargado a la tensi\xF3n entre sus bornes. Como est\xE1 en paralelo con la rama inferior del divisor, su tensi\xF3n es la de esa rama: 9 V. FEDI-EA."
+    "explain": "En r\xE9gimen permanente el condensador ideal no conduce en CC: queda a la tensi\xF3n de la rama en paralelo. En el divisor de la figura la rama inferior marca 9 V, no 12 V ni 0 V. \xAB9.\xBB."
   },
   {
     "id": "fedi-ag-015",
@@ -1557,7 +1558,7 @@ var questions_banco_default = [
       "Variador de potencia."
     ],
     "correctIndex": 2,
-    "explain": "Un receptor de conversi\xF3n directa mezcla la se\xF1al de RF recibida con una se\xF1al generada localmente para obtener directamente audio o una frecuencia muy baja. El bloque que alimenta al mezclador debe ser, por tanto, el oscilador local. FEDI-EA."
+    "explain": "En conversi\xF3n directa el mezclador necesita una se\xF1al local estable; el bloque con interrogantes alimenta al mezclador y es el oscilador local, no un amplificador RF ni un variador. \xABOscilador local.\xBB."
   },
   {
     "id": "fedi-ag-018",
@@ -1585,7 +1586,7 @@ var questions_banco_default = [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 0,
-    "explain": "Diodo: conducci\xF3n preferente en un sentido. La respuesta que marca el banco es \xABPermiten el paso de la corriente en una \xFAnica direcci\xF3n\xBB."
+    "explain": "Un diodo conduce bien en polarizaci\xF3n directa y bloquea en inversa; por eso rectifica y protege etapas. No confundir con un transistor o una resistencia. \xABPermiten el paso de la corriente en una \xFAnica direcci\xF3n\xBB."
   },
   {
     "id": "fedi-ag-020",
@@ -1601,7 +1602,7 @@ var questions_banco_default = [
       "Una reducci\xF3n del ruido captado por la antena."
     ],
     "correctIndex": 2,
-    "explain": "Los radiales influyen en la impedancia vista en la base. La respuesta que marca el banco es \xABUna variaci\xF3n de la impedancia de entrada.\xBB."
+    "explain": "La figura muestra radiales bajo la vertical \u03BB/4: al variar su inclinaci\xF3n cambia la impedancia de entrada vista desde el coaxial, sin cambiar por s\xED sola la polarizaci\xF3n emitida. \xABUna variaci\xF3n de la impedancia de entrada.\xBB."
   },
   {
     "id": "fedi-ag-021",
@@ -1615,7 +1616,7 @@ var questions_banco_default = [
       "Excesivo nivel de se\xF1al en la antena"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Se\xF1ales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. La respuesta que marca el banco es \xABExcesivo nivel de se\xF1al en la antena\xBB."
+    "explain": "RF es radiofrecuencia; la FI (frecuencia intermedia) se amplifica antes de detectar. Un nivel excesivo en antena puede saturar el mezclador o la FI y empeorar la sensibilidad (desensibilizaci\xF3n). \xABExcesivo nivel de se\xF1al en la antena\xBB."
   },
   {
     "id": "fedi-ag-022",
@@ -1629,7 +1630,7 @@ var questions_banco_default = [
       "No se puede calcular"
     ],
     "correctIndex": 0,
-    "explain": "En el c\xF3digo de colores, violeta = 7, verde = 5, rojo = multiplicador \xD710\xB2 y oro = tolerancia 5 %. Por tanto 75 \xD7 100 = 7500 \u03A9, es decir 7,5 k\u03A9 con 5 % de tolerancia. La respuesta que marca el banco es \xAB7.500 \u03A9 y 5 %\xBB."
+    "explain": "C\xF3digo de colores: violeta = 7, verde = 5, rojo = \xD710\xB2, oro = tolerancia \xB15 %. Valor 75 \xD7 100 = 7500 \u03A9 = 7,5 k\u03A9. \xAB7.500 \u03A9 y 5 %\xBB."
   },
   {
     "id": "fedi-ag-023",
@@ -1659,7 +1660,7 @@ var questions_banco_default = [
       "Un valor de impedancia pr\xF3ximo a 50&Omega; y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional."
     ],
     "correctIndex": 3,
-    "explain": "Con \xE1ngulo ~45\xB0 suele acercarse a 50 \u03A9 y el diagrama horizontal es m\xE1s redondeado. La respuesta que marca el banco es \xABUn valor de impedancia pr\xF3ximo a 50&Omega; y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional.\xBB."
+    "explain": "El dipolo en V invertida de la figura suele resonar cerca de 50 \u03A9 y el diagrama en horizontal es casi omnidireccional, frente a una Yagi muy directiva o 75 \u03A9. \xABUn valor de impedancia pr\xF3ximo a 50 \u03A9 y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional.\xBB."
   },
   {
     "id": "fedi-ag-025",
@@ -1673,7 +1674,7 @@ var questions_banco_default = [
       "Tomas de tierra y condensadores"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y l\xEDneas donde no debe. La respuesta que marca el banco es \xABTomas de tierra y condensadores\xBB."
+    "explain": "La RF puede acoplarse a masas y cables de audio. Tomas de tierra en el chasis y condensadores de desacoplo en alimentaci\xF3n limitan ese acoplamiento. \xABTomas de tierra y condensadores\xBB."
   },
   {
     "id": "fedi-ag-027",
@@ -1687,7 +1688,7 @@ var questions_banco_default = [
       "Frecuencia"
     ],
     "correctIndex": 3,
-    "explain": "La longitud el\xE9ctrica de una antena resonante depende de la longitud de onda \u03BB, y \u03BB = c/f: a mayor frecuencia, antena m\xE1s corta. \xABFrecuencia\xBB."
+    "explain": "La longitud el\xE9ctrica de una antena resonante depende de la longitud de onda \u03BB, y \u03BB = c/f: a mayor frecuencia, antena m\xE1s corta. \xABFrecuencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico."
   },
   {
     "id": "fedi-ag-028",
@@ -1703,7 +1704,7 @@ var questions_banco_default = [
       "Refracci\xF3n."
     ],
     "correctIndex": 0,
-    "explain": "La difracci\xF3n permite que la onda rodee obst\xE1culos cuando el obst\xE1culo es comparable en tama\xF1o a la longitud de onda. \xABDifracci\xF3n.\xBB."
+    "explain": "Cuando la onda rodea un obst\xE1culo comparable a su longitud de onda, se curva: ese fen\xF3meno es la difracci\xF3n, no reflexi\xF3n ni refracci\xF3n ionosf\xE9rica. \xABDifracci\xF3n.\xBB."
   },
   {
     "id": "fedi-ag-029",
@@ -1717,7 +1718,7 @@ var questions_banco_default = [
       "Suprimiendo la portadora"
     ],
     "correctIndex": 1,
-    "explain": "EMI significa interferencia electromagn\xE9tica y RF significa radiofrecuencia. Los filtros de l\xEDnea en la alimentaci\xF3n reducen interferencias conducidas. La respuesta que marca el banco es \xABColocando un filtro apropiado\xBB."
+    "explain": "EMI es interferencia electromagn\xE9tica conducida o radiada. Un filtro de l\xEDnea en la alimentaci\xF3n aten\xFAa componentes RF que entran o salen por la red. \xABColocando un filtro apropiado\xBB."
   },
   {
     "id": "fedi-ag-030",
@@ -1759,7 +1760,7 @@ var questions_banco_default = [
       "No est\xE1n permitidos en la reglamentaci\xF3n vigente"
     ],
     "correctIndex": 0,
-    "explain": "Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignaci\xF3n. La respuesta que marca el banco es \xABSe reservan para concursos internacionales de alta competitividad\xBB."
+    "explain": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB."
   },
   {
     "id": "fedi-ah-033",
@@ -1773,7 +1774,7 @@ var questions_banco_default = [
       "Empieza siempre por la letra Q"
     ],
     "correctIndex": 3,
-    "explain": "Los c\xF3digos Q son grupos de tres letras empezando por Q. La respuesta que marca el banco es \xABEmpieza siempre por la letra Q\xBB."
+    "explain": "Los c\xF3digos Q son abreviaturas de tres letras que empiezan por Q (QTH ubicaci\xF3n, QRM interferencia, etc.). Por eso la regla mnemot\xE9cnica del examen es que \xABEmpieza siempre por la letra Q\xBB."
   },
   {
     "id": "fedi-ah-034",
@@ -1899,7 +1900,7 @@ var questions_banco_default = [
       "El deletreo no est\xE1 permitido"
     ],
     "correctIndex": 0,
-    "explain": "En espa\xF1ol se usan nombres ICAO en castellano (Noviembre, no November). La respuesta que marca el banco es \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB."
+    "explain": "En Espa\xF1a se usa el alfabeto fon\xE9tico en castellano (Alfa, Noviembre\u2026), no la pronunciaci\xF3n inglesa de ICAO. Por eso la deletreado correcto es \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB."
   },
   {
     "id": "fedi-ah-043",
@@ -1913,7 +1914,7 @@ var questions_banco_default = [
       "18 meses"
     ],
     "correctIndex": 1,
-    "explain": "Plazo del enunciado FEDI; verifica con reglamento vigente. La respuesta que marca el banco es \xAB12 meses\xBB."
+    "explain": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos. Verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB."
   },
   {
     "id": "fedi-ah-044",
@@ -1955,7 +1956,7 @@ var questions_banco_default = [
       "Periodo de validez"
     ],
     "correctIndex": 2,
-    "explain": "No es requisito CEPT listar la asociaci\xF3n del titular. La respuesta que marca el banco es \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB."
+    "explain": "El certificado CEPT no exige indicar la asociaci\xF3n del titular en el formato habitual del diploma. Por eso no es la respuesta correcta \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB."
   },
   {
     "id": "fedi-ah-049",
@@ -2039,7 +2040,7 @@ var questions_banco_default = [
       "Est\xE1 prohibida"
     ],
     "correctIndex": 2,
-    "explain": "La ayuda en cat\xE1strofes es voluntaria; el radioaficionado no est\xE1 obligado por el reglamento (BOE-A-2013-7624) a prestar servicios de emergencia. \xABEs voluntaria\xBB."
+    "explain": "La colaboraci\xF3n con servicios de emergencia en cat\xE1strofes es voluntaria: el radioaficionado puede ayudar, pero el reglamento no le impone esa obligaci\xF3n. Por eso la respuesta es \xABEs voluntaria\xBB."
   },
   {
     "id": "fedi-ah-057",
@@ -2053,7 +2054,7 @@ var questions_banco_default = [
       "200 W"
     ],
     "correctIndex": 0,
-    "explain": "Las potencias m\xE1ximas por banda est\xE1n en el anexo I del reglamento de aficionados (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta la banda del enunciado con el anexo I vigente. La respuesta que marca el banco es \xAB50 W\xBB."
+    "explain": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB."
   },
   {
     "id": "fedi-ah-059",
@@ -2081,7 +2082,7 @@ var questions_banco_default = [
       "Seguir emitiendo"
     ],
     "correctIndex": 1,
-    "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. La respuesta que marca el banco es \xABSuspender de inmediato las emisiones\xBB."
+    "explain": "Si causas interferencias perjudiciales debes cesar la emisi\xF3n de inmediato hasta resolver la causa. Es buena pr\xE1ctica y deber reglamentario. \xABSuspender de inmediato las emisiones\xBB."
   },
   {
     "id": "ofic-001",
@@ -2095,7 +2096,7 @@ var questions_banco_default = [
       "P = V + I"
     ],
     "correctIndex": 1,
-    "explain": "Potencia en CC: P = V\xB7I (vatios). Es f\xF3rmula b\xE1sica del programa de electricidad. La respuesta que marca el banco es \xABP = V \xB7 I\xBB.",
+    "explain": "En corriente continua la potencia disipada o entregada es P = V\xB7I (vatios). Es la relaci\xF3n b\xE1sica del bloque de electricidad. \xABP = V \xB7 I\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / electricidad b\xE1sica; contrastar con manuales URE."
   },
   {
@@ -2125,7 +2126,7 @@ var questions_banco_default = [
       "La impedancia del vac\xEDo"
     ],
     "correctIndex": 1,
-    "explain": "Sin modulaci\xF3n de informaci\xF3n solo se transmite la portadora (potencia de portadora). La respuesta es \xABLa frecuencia\xBB.",
+    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -2155,7 +2156,7 @@ var questions_banco_default = [
       "Dos longitudes de onda"
     ],
     "correctIndex": 1,
-    "explain": "Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xABMedia longitud de onda\xBB.",
+    "explain": "Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xABMedia longitud de onda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / antenas y propagaci\xF3n."
   },
   {
@@ -2170,7 +2171,7 @@ var questions_banco_default = [
       "Una fuente de tensi\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABUn circuito abierto\xBB.",
+    "explain": "En corriente continua y en r\xE9gimen permanente, un condensador ideal no deja pasar corriente continua: equivale a circuito abierto entre bornes (se carga hasta la tensi\xF3n aplicada). No confundir con cortocircuito. \xABUn circuito abierto\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / componentes y circuitos."
   },
   {
@@ -2200,7 +2201,7 @@ var questions_banco_default = [
       "Un acuerdo de club local"
     ],
     "correctIndex": 0,
-    "explain": "El marco habitual es la Orden IET/1311/2013, que aprueba el Reglamento de aficionados publicado en el BOE; el texto vinculante est\xE1 en el BOE.",
+    "explain": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacci\xF3n vigente en BOE."
   },
   {
@@ -2215,7 +2216,7 @@ var questions_banco_default = [
       "Solo pr\xE1ctica oral sin test"
     ],
     "correctIndex": 1,
-    "explain": "El esquema habitual es dos pruebas independientes alineadas con el programa (electricidad y reglamentaci\xF3n), reflejado en el reglamento y en la convocatoria.",
+    "explain": "La convocatoria oficial define dos pruebas independientes (t\xE9cnica y reglamentaci\xF3n), alineadas con el programa de examen. La respuesta es \xABDos partes independientes (electricidad/radioelectricidad y reglamentaci\xF3n)\xBB. (BOE-A-2013-7624).",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacci\xF3n vigente en BOE."
   },
   {
@@ -2275,7 +2276,7 @@ var questions_banco_default = [
       "f0 = \u221A(L/C)"
     ],
     "correctIndex": 1,
-    "explain": "En un circuito LC ideal, la frecuencia de resonancia es f0 = 1/(2\u03C0\u221A(LC)); en paralelo o serie cambia la forma de la impedancia en resonancia. \xABf0 = 1/(2\u03C0\u221A(LC))\xBB.",
+    "explain": "La resonancia en LC ocurre cuando las reactancias de L y C se equilibran; f0 = 1/(2\u03C0\u221A(LC)) en el modelo ideal. \xABf0 = 1/(2\u03C0\u221A(LC))\xBB. Por eso la respuesta del enunciado es.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -2425,7 +2426,7 @@ var questions_banco_default = [
       "Son obligatorias en DX"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con t\xE9cnica, experimentaci\xF3n y aprendizaje. No debe usarse para tr\xE1fico secreto, comercial o ajeno a la finalidad del servicio. La respuesta que marca el banco es \xABNo son propias del servicio y deben evitarse\xBB.",
+    "explain": "El servicio de radioaficionado es t\xE9cnico y abierto: no se usan comunicaciones encubiertas ni fines ajenos al servicio (comercial, secreto, etc.). \xABNo son propias del servicio y deben evitarse\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 y buenas pr\xE1cticas operativas (IARU / URE)."
   },
   {
@@ -2605,7 +2606,7 @@ var questions_banco_default = [
       "Solo importa la resistencia"
     ],
     "correctIndex": 1,
-    "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente). La respuesta que marca el banco es \xABSe igualan en magnitud y se cancelan\xBB.",
+    "explain": "En resonancia serie |XL| = |XC|; las reactancias se cancelan y la impedancia queda esencialmente resistiva. Por eso la respuesta es \xABSe igualan en magnitud y se cancelan\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / componentes y circuitos."
   },
   {
@@ -2620,7 +2621,7 @@ var questions_banco_default = [
       "Q = f + B"
     ],
     "correctIndex": 1,
-    "explain": "Q = f/B: a mayor Q, m\xE1s selectivo (menor ancho de banda relativo). Es f\xF3rmula frecuente en ex\xE1menes t\xE9cnicos. La respuesta que marca el banco es \xABQ = f / B\xBB.",
+    "explain": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -2650,7 +2651,7 @@ var questions_banco_default = [
       "Generar la portadora"
     ],
     "correctIndex": 1,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABSuprimir el audio cuando no hay se\xF1al \xFAtil de RF\xBB.",
+    "explain": "El silenciador (squelch) corta el audio cuando no hay portadora o se\xF1al \xFAtil de RF, evitando ruido de fondo en el altavoz. No es AGC ni medici\xF3n de ROE. \xABSuprimir el audio cuando no hay se\xF1al \xFAtil de RF\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -2695,7 +2696,7 @@ var questions_banco_default = [
       "Dos antenas obligatoriamente"
     ],
     "correctIndex": 1,
-    "explain": "La doble conversi\xF3n mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas. La respuesta que marca el banco es \xABDos frecuencias intermedias en cadena\xBB.",
+    "explain": "La doble superheterodina usa dos mezclas a FI distintas para mejorar selectividad y suprimir imagen en bandas altas. Por eso encaja \xABDos frecuencias intermedias en cadena\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -2710,7 +2711,7 @@ var questions_banco_default = [
       "El c\xF3digo Q"
     ],
     "correctIndex": 1,
-    "explain": "Relaci\xF3n delante-atr\xE1s: cu\xE1nto m\xE1s radiada o recibida hay en el l\xF3bulo principal frente a la parte trasera (en dB). La respuesta que marca el banco es \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
+    "explain": "La relaci\xF3n delante\u2013atr\xE1s (F/B) compara radiaci\xF3n o recepci\xF3n del l\xF3bulo principal frente a la parte trasera, en dB. Por eso se define como \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / antenas y propagaci\xF3n."
   },
   {
@@ -2725,7 +2726,7 @@ var questions_banco_default = [
       "Un altavoz"
     ],
     "correctIndex": 1,
-    "explain": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB.",
+    "explain": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / componentes y circuitos."
   },
   {
@@ -2890,7 +2891,7 @@ var questions_banco_default = [
       "Una antena resonante"
     ],
     "correctIndex": 1,
-    "explain": "En CC estable la bobina ideal solo opondr\xEDa la resistencia \xF3hmica del hilo: se modela como cortocircuito (sin reactancia en continua).",
+    "explain": "La bobina almacena energ\xEDa en campo magn\xE9tico; en CC estable se comporta como cortocircuito ideal tras el transitorio. \xABUn cortocircuito\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -2965,7 +2966,7 @@ var questions_banco_default = [
       "Aumenta la FEM de la fuente"
     ],
     "correctIndex": 1,
-    "explain": "El shunt es una resistencia baja en paralelo: desv\xEDa corriente para que el instrumento no reciba toda la intensidad del circuito.",
+    "explain": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABDeriva la mayor parte de la corriente en paralelo de baja resistencia\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -3040,7 +3041,7 @@ var questions_banco_default = [
       "Solo con la antena desconectada"
     ],
     "correctIndex": 1,
-    "explain": "El volt\xEDmetro mide tensi\xF3n entre puntos: conexi\xF3n en derivaci\xF3n (paralelo), no en serie.",
+    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEntre los dos nodos (derivaci\xF3n / paralelo)\xBB. (BOE-A-2013-7624).",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -3191,7 +3192,7 @@ var questions_banco_default = [
       "Zamora."
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABValencia.\xBB.",
+    "explain": "El prefijo EA5 corresponde a radioaficionados con distrito de residencia en Comunidad Valenciana; el distintivo EA5EYR encaja con Valencia. No confundir EA6 (Baleares) ni EA7 (Arag\xF3n). \xABValencia.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1843). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3221,7 +3222,7 @@ var questions_banco_default = [
       "Bilbao."
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABPalma de Mallorca.\xBB.",
+    "explain": "EA6 es la serie de las Islas Baleares; EA6PDM puede corresponder a estaciones en Mallorca, como Palma. Lleida es EA3, Huelva EA7. \xABPalma de Mallorca.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1864). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3266,7 +3267,7 @@ var questions_banco_default = [
       "Nunca."
     ],
     "correctIndex": 3,
-    "explain": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca.\xBB. (BOE-A-2013-7624).",
+    "explain": "Interferir deliberadamente a otra estaci\xF3n est\xE1 prohibido: es mala pr\xE1ctica y puede ser infracci\xF3n seg\xFAn el reglamento (BOE-A-2013-7624). Por eso la opci\xF3n correcta es \xABNunca.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3460,7 +3461,7 @@ var questions_banco_default = [
       "Solo en caso de emergencia"
     ],
     "correctIndex": 0,
-    "explain": "La opci\xF3n correcta recoge el r\xE9gimen temporal andorrano indicado por el banco: un radioaficionado con licencia extranjera v\xE1lida puede solicitar operar temporalmente all\xED.",
+    "explain": "Seg\xFAn el r\xE9gimen andorrano del banco, un radioaficionado con licencia extranjera vigente en su pa\xEDs de residencia puede obtener autorizaci\xF3n temporal para operar en territorio andorrano. \xABSi, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el pa\xEDs en el que residen habitualmente, pueden obtener una licencia temporal para usar su estaci\xF3n en territorio andorrano.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3490,7 +3491,7 @@ var questions_banco_default = [
       "Su titular reside en Catalu\xF1a."
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABNo se puede asignar.\xBB.",
+    "explain": "En Espa\xF1a los distintivos de aficionado usan prefijos EA/EB/EC y formato del reglamento; \xABAM3SOS\xBB no encaja en esa estructura de asignaci\xF3n nacional. Por eso \xABNo se puede asignar.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2069). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3595,7 +3596,7 @@ var questions_banco_default = [
       "PPN"
     ],
     "correctIndex": 0,
-    "explain": "Los BJT comerciales son NPN o PNP seg\xFAn el material y dopado; NNP, PNN o PPN no son designaciones v\xE1lidas. \xABNPN\xBB.",
+    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABNPN\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3610,7 +3611,7 @@ var questions_banco_default = [
       "\xBDC.V\xB2"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB\xBDC.V\xB2\xBB.",
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB\xBDC.V\xB2\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3625,7 +3626,7 @@ var questions_banco_default = [
       "0 dBm"
     ],
     "correctIndex": 0,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB.",
+    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3640,7 +3641,7 @@ var questions_banco_default = [
       "Tener un sintonizador muy fino"
     ],
     "correctIndex": 2,
-    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB.",
+    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3655,7 +3656,7 @@ var questions_banco_default = [
       "No se puede calcular"
     ],
     "correctIndex": 2,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABEs el tiempo que transcurre entre dos m\xEDnimos consecutivos\xBB.",
+    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABEs el tiempo que transcurre entre dos m\xEDnimos consecutivos\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3685,7 +3686,7 @@ var questions_banco_default = [
       "Dos bobinas acopladas"
     ],
     "correctIndex": 3,
-    "explain": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABDos bobinas acopladas\xBB.",
+    "explain": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABDos bobinas acopladas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3700,7 +3701,7 @@ var questions_banco_default = [
       "Filtro de l\xEDnea de desacoplo"
     ],
     "correctIndex": 3,
-    "explain": "El filtro de l\xEDnea de desacoplo evita que RF del equipo entre en la red el\xE9ctrica dom\xE9stica. \xABFiltro de l\xEDnea de desacoplo\xBB.",
+    "explain": "El filtro de l\xEDnea de desacoplo evita que RF del equipo entre en la red el\xE9ctrica dom\xE9stica. \xABFiltro de l\xEDnea de desacoplo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3715,7 +3716,7 @@ var questions_banco_default = [
       "15 vatios"
     ],
     "correctIndex": 2,
-    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB. (BOE-A-2013-7624).",
+    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3747,7 +3748,7 @@ var questions_banco_default = [
       "Fase por portadora"
     ],
     "correctIndex": 1,
-    "explain": "Cada instrumento mide una magnitud: potencia (vat\xEDmetro), forma de onda (osciloscopio), frecuencia (frecuenc\xEDmetro) o espectro (analizador). \xABAmplitud\xBB.",
+    "explain": "El espectro muestra una portadora central y dos bandas laterales sim\xE9tricas: es t\xEDpico de modulaci\xF3n de amplitud (AM). En FM el ancho ser\xEDa distinto; en SSB solo un lateral. \xABAmplitud\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3762,7 +3763,7 @@ var questions_banco_default = [
       "Nula"
     ],
     "correctIndex": 0,
-    "explain": "El dipolo doblado (folded) presenta en resonancia una impedancia de entrada mayor que el dipolo simple (del orden de cuatro veces en el centro). \xABMayor\xBB.",
+    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABMayor\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3777,7 +3778,7 @@ var questions_banco_default = [
       "Para igualar la se\xF1al de salida a la de entrada"
     ],
     "correctIndex": 2,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABPara reducir el rizado de la se\xF1al de salida y obtener un valor m\xE1s constante de esta\xBB.",
+    "explain": "Tras el rectificador la salida de una fuente de alimentaci\xF3n tiene rizado (ripple); el filtro (condensadores, a veces inductores) lo aten\xFAa para dejar una tensi\xF3n de salida m\xE1s estable. \xABPara reducir el rizado de la se\xF1al de salida y obtener un valor m\xE1s constante de esta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3792,7 +3793,7 @@ var questions_banco_default = [
       "Las siglas AM significan modulaci\xF3n de arm\xF3nicos"
     ],
     "correctIndex": 0,
-    "explain": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABLa modulaci\xF3n AM hace variar la amplitud de la portadora\xBB.",
+    "explain": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABLa modulaci\xF3n AM hace variar la amplitud de la portadora\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3822,7 +3823,7 @@ var questions_banco_default = [
       "No es correcta ninguna de las anteriores respuestas"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad que tiene de captar se\xF1ales d\xE9biles y amplificarlas\xBB.",
+    "explain": "La sensibilidad mide la capacidad de detectar se\xF1ales d\xE9biles (umbral m\xEDnimo \xFAtil). La selectividad separa frecuencias pr\xF3ximas; la fidelidad se refiere a poca distorsi\xF3n. \xABLa capacidad que tiene de captar se\xF1ales d\xE9biles y amplificarlas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3837,7 +3838,7 @@ var questions_banco_default = [
       "El receptor B es m\xE1s estable que el receptor A"
     ],
     "correctIndex": 1,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABEl receptor A es m\xE1s selectivo que el receptor B\xBB.",
+    "explain": "Las curvas de respuesta en FI muestran el ancho de banda \xFAtil: la curva m\xE1s estrecha separa emisoras adyacentes (mayor selectividad). En 455 kHz, A es m\xE1s selectivo que B. \xABEl receptor A es m\xE1s selectivo que el receptor B\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3856,7 +3857,7 @@ var questions_banco_default = [
       ""
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xAB10 MHz\xBB.",
+    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xAB10 MHz\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3947,7 +3948,7 @@ var questions_banco_default = [
       "Isotr\xF3pica"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABDirectiva\xBB.",
+    "explain": "El diagrama presenta un l\xF3bulo principal estrecho y l\xF3bulos secundarios peque\xF1os: patr\xF3n de antena directiva. Omnidireccional ser\xEDa casi circular en el plano horizontal. \xABDirectiva\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3962,7 +3963,7 @@ var questions_banco_default = [
       "Solo tienen dipolo y directores"
     ],
     "correctIndex": 0,
-    "explain": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABSon directivas\xBB.",
+    "explain": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABSon directivas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4008,7 +4009,7 @@ var questions_banco_default = [
       "A es la amplitud y B es el periodo de la se\xF1al"
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABA es la amplitud y B es el periodo de la se\xF1al\xBB.",
+    "explain": "En la traza del osciloscopio, A es la altura pico a pico (amplitud) y B la distancia entre dos picos iguales sucesivos (periodo T=1/f). No confundir periodo con frecuencia en Hz. \xABA es la amplitud y B es el periodo de la se\xF1al\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4023,7 +4024,7 @@ var questions_banco_default = [
       "Transforman la energ\xEDa el\xE9ctrica en magn\xE9tica"
     ],
     "correctIndex": 2,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABLa tensi\xF3n de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas\xBB.",
+    "explain": "En serie las tensiones de cada pila o bater\xEDa se suman; en paralelo se suman capacidades de corriente manteniendo la misma tensi\xF3n nominal. \xABLa tensi\xF3n de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4038,7 +4039,7 @@ var questions_banco_default = [
       "El de clase A tiene una distorsi\xF3n elevada"
     ],
     "correctIndex": 0,
-    "explain": "Clase A conduce todo el ciclo (lineal, ineficiente); B/AB/C recortan conducci\xF3n para mayor eficiencia en RF. \xABEl de clase AB es una combinaci\xF3n de A y B\xBB.",
+    "explain": "Clase A conduce todo el ciclo (lineal, ineficiente); B/AB/C recortan conducci\xF3n para mayor eficiencia en RF. \xABEl de clase AB es una combinaci\xF3n de A y B\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4083,7 +4084,7 @@ var questions_banco_default = [
       "Amplificador de FI, detector, mezclador, amplificador de audio"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABAmplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio\xBB.",
+    "explain": "En un superheterodino la se\xF1al pasa: antena \u2192 amplificador RF \u2192 mezclador (+ oscilador) \u2192 amplificador FI \u2192 demodulador \u2192 audio. Ese es el flujo est\xE1ndar del temario. \xABAmplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4143,7 +4144,7 @@ var questions_banco_default = [
       "Dispositivo limitador de potencia"
     ],
     "correctIndex": 1,
-    "explain": "El diodo de estado s\xF3lido conduce preferentemente en un sentido y bloquea en el otro. \xABDispositivo que permite el paso de la corriente el\xE9ctrica en un s\xF3lo sentido\xBB.",
+    "explain": "El diodo de estado s\xF3lido conduce preferentemente en un sentido y bloquea en el otro; por eso rectifica y protege etapas. No confundir con resistencia o condensador. \xABDispositivo que permite el paso de la corriente el\xE9ctrica en un s\xF3lo sentido\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4188,7 +4189,7 @@ var questions_banco_default = [
       "Q=B/f"
     ],
     "correctIndex": 0,
-    "explain": "Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xABQ=f/B\xBB.",
+    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABQ=f/B\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4218,7 +4219,7 @@ var questions_banco_default = [
       "Parab\xF3lica"
     ],
     "correctIndex": 1,
-    "explain": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABDirectiva\xBB.",
+    "explain": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABDirectiva\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4323,7 +4324,7 @@ var questions_banco_default = [
       "La carga atmosf\xE9rica del camino recorrido por la onda"
     ],
     "correctIndex": 0,
-    "explain": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABLa direcci\xF3n del campo el\xE9ctrico\xBB.",
+    "explain": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABLa direcci\xF3n del campo el\xE9ctrico\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4412,7 +4413,7 @@ var questions_banco_default = [
       "dB"
     ],
     "correctIndex": 3,
-    "explain": "La ganancia de una antena se expresa en decibelios (dB) respecto a un dipolo (dBd) o a una is\xF3tropa (dBi). \xABdB\xBB.",
+    "explain": "La ganancia de una antena se expresa en decibelios (dB) respecto a un dipolo (dBd) o a una is\xF3tropa (dBi). \xABdB\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4486,7 +4487,7 @@ var questions_banco_default = [
       "Recibir en banda lateral \xFAnica"
     ],
     "correctIndex": 2,
-    "explain": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABCaracterizar etapas de radiofrecuencia\xBB.",
+    "explain": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABCaracterizar etapas de radiofrecuencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4501,7 +4502,7 @@ var questions_banco_default = [
       "Aumentar la selectividad del receptor"
     ],
     "correctIndex": 2,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABSuprimir el audio si no hay se\xF1al de RF\xBB.",
+    "explain": "El silenciador (squelch) corta la salida de audio cuando desaparece la portadora o se\xF1al \xFAtil de RF, para no escuchar ruido de fondo. No es AGC (regula ganancia) ni selectividad. \xABSuprimir el audio si no hay se\xF1al de RF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4516,7 +4517,7 @@ var questions_banco_default = [
       "Habr\xE1 que adaptarla con un balun relaci\xF3n 1:1"
     ],
     "correctIndex": 0,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABSe transfiere la m\xE1xima energ\xEDa a la antena\xBB.",
+    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABSe transfiere la m\xE1xima energ\xEDa a la antena\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4564,7 +4565,7 @@ var questions_banco_default = [
       ""
     ],
     "correctIndex": 2,
-    "explain": "Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xABUn aislante\xBB.",
+    "explain": "Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xABUn aislante\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4609,7 +4610,7 @@ var questions_banco_default = [
       "La suma de las intensidades de cada una de las ramas"
     ],
     "correctIndex": 3,
-    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABLa suma de las intensidades de cada una de las ramas\xBB.",
+    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABLa suma de las intensidades de cada una de las ramas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4624,7 +4625,7 @@ var questions_banco_default = [
       "Ac\xFAstica"
     ],
     "correctIndex": 2,
-    "explain": "Las ondas de radio son ondas electromagn\xE9ticas que se propagan en el espacio sin medio material. \xABElectromagn\xE9tica\xBB."
+    "explain": "Las ondas de radio son ondas electromagn\xE9ticas que se propagan en el espacio sin medio material. \xABElectromagn\xE9tica\xBB. Por eso la respuesta del enunciado es."
   },
   {
     "id": "ure-p1-q246",
@@ -4653,7 +4654,7 @@ var questions_banco_default = [
       "Amplificadores y filtros"
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABAmplificadores y filtros\xBB.",
+    "explain": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABAmplificadores y filtros\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4668,7 +4669,7 @@ var questions_banco_default = [
       "Balun"
     ],
     "correctIndex": 3,
-    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xABBalun\xBB.",
+    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABBalun\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4683,7 +4684,7 @@ var questions_banco_default = [
       "Nunca podr\xE1 conectarse una resistencia en SHUNT"
     ],
     "correctIndex": 2,
-    "explain": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABEn paralelo\xBB.",
+    "explain": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABEn paralelo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4698,7 +4699,7 @@ var questions_banco_default = [
       "Un filtro de frecuencia de corte variable"
     ],
     "correctIndex": 2,
-    "explain": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB.",
+    "explain": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4728,7 +4729,7 @@ var questions_banco_default = [
       "Amplificar la se\xF1al recibida"
     ],
     "correctIndex": 1,
-    "explain": "La etapa de detecci\xF3n (demodulador) extrae audio o datos de la portadora o FI ya filtrada. \xABDemodular la se\xF1al recibida\xBB.",
+    "explain": "La etapa de detecci\xF3n (demodulador) extrae audio o datos de la portadora o FI ya filtrada. \xABDemodular la se\xF1al recibida\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4745,7 +4746,7 @@ var questions_banco_default = [
       "Control autom\xE1tico de audio"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABControl autom\xE1tico de ganancia\xBB.",
+    "explain": "El enunciado pide nivel de audio constante pese a variaciones de se\xF1al en antena: es funci\xF3n del AGC (CAG), que regula la ganancia en RF/FI. CAF mantiene frecuencia; no es squelch. \xABControl autom\xE1tico de ganancia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4775,7 +4776,7 @@ var questions_banco_default = [
       "Tensi\xF3n el\xE9ctrica"
     ],
     "correctIndex": 3,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABTensi\xF3n el\xE9ctrica\xBB."
+    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABTensi\xF3n el\xE9ctrica\xBB."
   },
   {
     "id": "ure-p1-q255",
@@ -4789,7 +4790,7 @@ var questions_banco_default = [
       "Redes de desplazamiento de fase"
     ],
     "correctIndex": 0,
-    "explain": "QSY solicita o indica cambio de frecuencia de operaci\xF3n. \xABUn oscilador de frecuencia variable\xBB.",
+    "explain": "QSY solicita o indica cambio de frecuencia de operaci\xF3n. \xABUn oscilador de frecuencia variable\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4804,7 +4805,7 @@ var questions_banco_default = [
       "Su capacidad para rechazar se\xF1ales fuertes"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABSu capacidad para recibir se\xF1ales d\xE9biles\xBB.",
+    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABSu capacidad para recibir se\xF1ales d\xE9biles\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4819,7 +4820,7 @@ var questions_banco_default = [
       "Permiten aumentar el ancho de banda de emisi\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "Una antena directiva concentra radiaci\xF3n o recepci\xF3n en una direcci\xF3n preferente. \xABProporcionan directividad\xBB.",
+    "explain": "Una antena directiva concentra radiaci\xF3n o recepci\xF3n en una direcci\xF3n preferente. \xABProporcionan directividad\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4834,7 +4835,7 @@ var questions_banco_default = [
       "La impedancia es constante con la frecuencia"
     ],
     "correctIndex": 2,
-    "explain": "Por reciprocidad, el diagrama de radiaci\xF3n de una antena pasiva es el mismo en transmisi\xF3n y recepci\xF3n. \xABLos diagramas de radiaci\xF3n en transmisi\xF3n y en recepci\xF3n son iguales\xBB."
+    "explain": "Una antena pasiva no amplifica: solo irradia o captura; por reciprocidad los diagramas de radiaci\xF3n en transmisi\xF3n y recepci\xF3n son iguales para la misma antena. \xABLos diagramas de radiaci\xF3n en transmisi\xF3n y en recepci\xF3n son iguales\xBB."
   },
   {
     "id": "ure-p1-q260",
@@ -4863,7 +4864,7 @@ var questions_banco_default = [
       "Un filtro paso bajo o paso banda"
     ],
     "correctIndex": 3,
-    "explain": "Antes de la toma de antena suele haber protecci\xF3n o interruptor para seguridad y mantenimiento. \xABUn filtro paso bajo o paso banda\xBB.",
+    "explain": "Antes de la toma de antena suele haber protecci\xF3n o interruptor para seguridad y mantenimiento. \xABUn filtro paso bajo o paso banda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4880,7 +4881,7 @@ var questions_banco_default = [
       "Evitar el uso del balun"
     ],
     "correctIndex": 2,
-    "explain": "Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xABIncrementar la longitud el\xE9ctrica de antena\xBB.",
+    "explain": "Las bobinas en serie en los brazos del dipolo a\xF1aden inductancia y alargan la longitud el\xE9ctrica sin aumentar tanto el tama\xF1o f\xEDsico (antena con carga inductiva). \xABIncrementar la longitud el\xE9ctrica de antena\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4897,7 +4898,7 @@ var questions_banco_default = [
       "3.14 V"
     ],
     "correctIndex": 1,
-    "explain": "En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xAB7,071 V\xBB.",
+    "explain": "La onda sinusoidal de la figura tiene valor de pico 10 V; la tensi\xF3n eficaz es Vrms = Vp/\u221A2 \u2248 7,071 V. 10 V ser\xEDa el pico, no la eficaz. \xAB7,071 V\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4942,7 +4943,7 @@ var questions_banco_default = [
       "Modulaci\xF3n cruzada"
     ],
     "correctIndex": 2,
-    "explain": "La selectividad permite separar se\xF1ales de frecuencias muy pr\xF3ximas; la sensibilidad es captar se\xF1ales d\xE9biles. \xABSelectividad\xBB.",
+    "explain": "La selectividad es la capacidad de discriminar emisoras o se\xF1ales de frecuencias muy cercanas (filtros y FI estrecha). La sensibilidad es captar se\xF1ales d\xE9biles, no confundir ambos conceptos. \xABSelectividad\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4957,7 +4958,7 @@ var questions_banco_default = [
       "No existe"
     ],
     "correctIndex": 0,
-    "explain": "A mayor potencia de transmisi\xF3n aumenta la probabilidad de interferir a otros receptores si no hay filtros, ubicaci\xF3n y buenas pr\xE1cticas. \xABMayor\xBB.",
+    "explain": "A mayor potencia de transmisi\xF3n aumenta la probabilidad de interferir a otros receptores si no hay filtros, ubicaci\xF3n y buenas pr\xE1cticas. \xABMayor\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5047,7 +5048,7 @@ var questions_banco_default = [
       "Un dato irrelevante para el filtro"
     ],
     "correctIndex": 2,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia que delimita la banda de paso o no paso por el filtro\xBB.",
+    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia que delimita la banda de paso o no paso por el filtro\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5062,7 +5063,7 @@ var questions_banco_default = [
       "Ninguna de las anteriores respuestas es v\xE1lida"
     ],
     "correctIndex": 1,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABEnerg\xEDa qu\xEDmica en energ\xEDa el\xE9ctrica\xBB.",
+    "explain": "Una pila o bater\xEDa convierte energ\xEDa qu\xEDmica almacenada en energ\xEDa el\xE9ctrica mediante reacciones en sus electrodos (FEM). Por eso la transformaci\xF3n correcta es \xABEnerg\xEDa qu\xEDmica en energ\xEDa el\xE9ctrica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5077,7 +5078,7 @@ var questions_banco_default = [
       "Nada de lo anterior"
     ],
     "correctIndex": 2,
-    "explain": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABProteger aparatos de medida\xBB."
+    "explain": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABProteger aparatos de medida\xBB. No confundir con el distractor del mismo bloque tem\xE1tico."
   },
   {
     "id": "ure-p1-q313",
@@ -5123,7 +5124,7 @@ var questions_banco_default = [
       "Control autom\xE1tico de saturaci\xF3n o CAS"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABControl autom\xE1tico de nivel o ALC\xBB.",
+    "explain": "En un transmisor SSB el ALC limita la excitaci\xF3n de la etapa de potencia y reduce distorsi\xF3n e interferencias cuando sube el nivel de entrada. CAF estabiliza frecuencia; CAG es del receptor. \xABControl autom\xE1tico de nivel o ALC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5153,7 +5154,7 @@ var questions_banco_default = [
       "El \xEDndice modulaci\xF3n es superior al 100%"
     ],
     "correctIndex": 3,
-    "explain": "Sobremodulaci\xF3n distorsiona la envolvente AM cuando el \xEDndice de modulaci\xF3n supera el l\xEDmite lineal. \xABEl \xEDndice modulaci\xF3n es superior al 100%\xBB.",
+    "explain": "Sobremodulaci\xF3n distorsiona la envolvente AM cuando el \xEDndice de modulaci\xF3n supera el l\xEDmite lineal. \xABEl \xEDndice modulaci\xF3n es superior al 100%\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5168,7 +5169,7 @@ var questions_banco_default = [
       "Hacia tierra"
     ],
     "correctIndex": 2,
-    "explain": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABEn el plano horizontal\xBB.",
+    "explain": "Una antena vertical de cuarto de onda radiencia con m\xE1ximo en el plano horizontal perpendicular al m\xE1stil, no hacia el zenit. No confundir con el efecto de inclinar radiales (impedancia). \xABEn el plano horizontal\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5185,7 +5186,7 @@ var questions_banco_default = [
       "La potencia reflejada es superior a la potencia directa"
     ],
     "correctIndex": 0,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABLa potencia reflejada es cero\xBB.",
+    "explain": "Si transmisor, l\xEDnea y antena est\xE1n adaptados (misma impedancia), no hay reflexiones: la potencia reflejada del vat\xEDmetro es cero. Con desadaptaci\xF3n la reflejada ser\xEDa notable. \xABLa potencia reflejada es cero\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5215,7 +5216,7 @@ var questions_banco_default = [
       "En serie, la resistencia total siempre es mayor que cualquiera de ellas"
     ],
     "correctIndex": 3,
-    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEn serie, la resistencia total siempre es mayor que cualquiera de ellas\xBB.",
+    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEn serie, la resistencia total siempre es mayor que cualquiera de ellas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5232,7 +5233,7 @@ var questions_banco_default = [
       "Impedancia"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABRelaci\xF3n delante-atr\xE1s\xBB.",
+    "explain": "En diagramas polares, la relaci\xF3n delante-atr\xE1s compara el nivel de radiaci\xF3n del l\xF3bulo principal (punto 1) frente al opuesto (punto 2), en dB. No es ganancia absoluta ni impedancia. \xABRelaci\xF3n delante-atr\xE1s\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5249,7 +5250,7 @@ var questions_banco_default = [
       "Atenuador"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABAcoplador de antena\xBB.",
+    "explain": "El circuito entre transmisor y antena con elementos L y C en \u03C0 o T es un acoplador (antenna tuner) para adaptar impedancias y minimizar ROE. No es discriminador ni atenuador fijo. \xABAcoplador de antena\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5281,7 +5282,7 @@ var questions_banco_default = [
       "Met\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra"
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABMet\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra\xBB.",
+    "explain": "La caja de apantallamiento tipo jaula de Faraday debe ser conductora, continua y a tierra para derivar corrientes inducidas; aislante o grietas dejan pasar el campo externo. \xABMet\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5326,7 +5327,7 @@ var questions_banco_default = [
       "Modulada en banda lateral \xFAnica"
     ],
     "correctIndex": 0,
-    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDe frecuencia muy estable\xBB.",
+    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDe frecuencia muy estable\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5384,7 +5385,7 @@ var questions_banco_default = [
       "Certificado de Alta Garant\xEDa"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABControl Autom\xE1tico de Ganancia\xBB.",
+    "explain": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABControl Autom\xE1tico de Ganancia\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5429,7 +5430,7 @@ var questions_banco_default = [
       "El n\xFAmero de espiras del primario y del secundario"
     ],
     "correctIndex": 3,
-    "explain": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABEl n\xFAmero de espiras del primario y del secundario\xBB.",
+    "explain": "En el transformador ideal la relaci\xF3n de tensiones depende del n\xFAmero de espiras N1/N2; el n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento. No confundir con la frecuencia de trabajo. \xABEl n\xFAmero de espiras del primario y del secundario\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5446,7 +5447,7 @@ var questions_banco_default = [
       "Regi\xF3n de campo radiado"
     ],
     "correctIndex": 2,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABAncho de haz de radiaci\xF3n\xBB.",
+    "explain": "Entre las dos l\xEDneas a \u22123 dB del l\xF3bulo principal se mide el ancho de haz (beamwidth): \xE1ngulo donde la radiaci\xF3n cae a la mitad de potencia respecto al m\xE1ximo. \xABAncho de haz de radiaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5475,7 +5476,7 @@ var questions_banco_default = [
       "Balun"
     ],
     "correctIndex": 3,
-    "explain": "El balun adapta la l\xEDnea coaxial (no balanceada) al dipolo (balanceado) y puede transformar impedancia. \xABBalun\xBB.",
+    "explain": "El balun adapta la l\xEDnea coaxial (no balanceada) al dipolo (balanceado) y puede transformar impedancia. \xABBalun\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5507,7 +5508,7 @@ var questions_banco_default = [
       "El valor de la R.O.E. es 1"
     ],
     "correctIndex": 1,
-    "explain": "Potencia reflejada en el vat\xEDmetro indica desadaptaci\xF3n (ROE > 1): el transmisor no entrega toda la energ\xEDa a la antena. \xABEl transmisor no est\xE1 adaptado a la antena\xBB.",
+    "explain": "Si el vat\xEDmetro muestra potencia reflejada apreciable, hay desadaptaci\xF3n entre transmisor y antena (ROE > 1). Adaptado, la reflejada ser\xEDa m\xEDnima y la directa m\xE1xima. \xABEl transmisor no est\xE1 adaptado a la antena\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5522,7 +5523,7 @@ var questions_banco_default = [
       "Un pol\xEDmetro digital"
     ],
     "correctIndex": 0,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABUn medidor de ROE\xBB.",
+    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABUn medidor de ROE\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5537,7 +5538,7 @@ var questions_banco_default = [
       "Ser utilizado para comunicaciones de corta distancia"
     ],
     "correctIndex": 0,
-    "explain": "El osciloscopio muestra se\xF1ales en el dominio del tiempo (forma de onda), no el espectro en frecuencia. \xABLa representaci\xF3n gr\xE1fica de las formas de onda\xBB.",
+    "explain": "El osciloscopio muestra se\xF1ales en el dominio del tiempo (forma de onda), no el espectro en frecuencia. \xABLa representaci\xF3n gr\xE1fica de las formas de onda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5603,7 +5604,7 @@ var questions_banco_default = [
       "No se puede utilizar como receptor, al no disponer de etapa de frecuencia intermedia"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABSSB y CW\xBB.",
+    "explain": "El esquema muestra mezclador y filtro de producto t\xEDpicos de un receptor que demodula SSB y CW (telegraf\xEDa). No es un circuito solo FM ni un bloque in\xFAtil en el diagrama. \xABSSB y CW\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5633,7 +5634,7 @@ var questions_banco_default = [
       "7,4 voltios y 1500 amperios durante media hora"
     ],
     "correctIndex": 0,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xAB7,4 voltios y 1,5 amperios durante una hora\xBB.",
+    "explain": "7,4 V es la tensi\xF3n nominal; 1500 mAh indica que puede entregar 1500 mA (1,5 A) durante una hora aproximadamente si la descarga es nominal (capacidad en miliamperios-hora). \xAB7,4 voltios y 1,5 amperios durante una hora\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5648,7 +5649,7 @@ var questions_banco_default = [
       "Con una carga artificial"
     ],
     "correctIndex": 0,
-    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama a medir; nunca en paralelo como un volt\xEDmetro. \xABEn serie\xBB.",
+    "explain": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABEn serie\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5663,7 +5664,7 @@ var questions_banco_default = [
       "Es igual al valor de la menor de las resistencias"
     ],
     "correctIndex": 0,
-    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEs mayor que el valor de cualquiera de las resistencias\xBB.",
+    "explain": "En serie las resistencias se suman: Req = R1 + R2 + \u2026 La tensi\xF3n se reparte seg\xFAn cada R. \xABEs mayor que el valor de cualquiera de las resistencias\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5680,7 +5681,7 @@ var questions_banco_default = [
       "Como oscilador a la frecuencia de resonancia del circuito LC"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
+    "explain": "El LC en paralelo con diodo forma un circuito resonante selectivo en la frecuencia de resonancia: puede actuar como receptor AM pasivo. No es amplificador ni oscilador alimentado. \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5697,7 +5698,7 @@ var questions_banco_default = [
       "Rectificador de onda completa"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABDetector de envolvente\xBB.",
+    "explain": "El diodo en serie con resistencia de carga y condensador rectifica y filtra la envolvente de una se\xF1al modulada: act\xFAa como detector de envolvente, no como limitador. \xABDetector de envolvente\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5712,7 +5713,7 @@ var questions_banco_default = [
       "La capacidad de rechazar frecuencias superiores a la frecuencia intermedia"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad de separar dos se\xF1ales muy pr\xF3ximas en frecuencia\xBB.",
+    "explain": "La selectividad es la capacidad de discriminar se\xF1ales de frecuencias muy pr\xF3ximas; la sensibilidad es detectar se\xF1ales d\xE9biles. \xABLa capacidad de separar dos se\xF1ales muy pr\xF3ximas en frecuencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5742,7 +5743,7 @@ var questions_banco_default = [
       "125 ohmios"
     ],
     "correctIndex": 2,
-    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB50 ohmios\xBB.",
+    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB50 ohmios\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5772,7 +5773,7 @@ var questions_banco_default = [
       "(f 1 - f 2 ) \u2215 (f 1 +f 2 )"
     ],
     "correctIndex": 2,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABf 1 + f 2\xBB.",
+    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABf 1 + f 2\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5787,7 +5788,7 @@ var questions_banco_default = [
       "80 m"
     ],
     "correctIndex": 1,
-    "explain": "En 40 m (~7 MHz), \u03BB \u2248 40 m; un dipolo de media onda mide del orden de \u03BB/2 en total (unos 20 m de longitud f\xEDsica). \xAB20 m\xBB.",
+    "explain": "En 40 m (~7 MHz), \u03BB \u2248 40 m; un dipolo de media onda mide del orden de \u03BB/2 en total (unos 20 m de longitud f\xEDsica). \xAB20 m\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5802,7 +5803,7 @@ var questions_banco_default = [
       "Duplica la potencia que se le entrega"
     ],
     "correctIndex": 0,
-    "explain": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABUno de los devanados tiene el doble n\xFAmero de espiras que el otro\xBB.",
+    "explain": "La relaci\xF3n de espiras N1:N2 = 2:1 implica que un devanado tiene el doble de espiras que el otro (tensi\xF3n y corriente se transforman seg\xFAn esa relaci\xF3n en el transformador ideal). \xABUno de los devanados tiene el doble n\xFAmero de espiras que el otro\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5817,7 +5818,7 @@ var questions_banco_default = [
       "Tiene varios elementos denominados par\xE1sitos"
     ],
     "correctIndex": 1,
-    "explain": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABPermite obtener resonancia en varias frecuencias\xBB.",
+    "explain": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABPermite obtener resonancia en varias frecuencias\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5864,7 +5865,7 @@ var questions_banco_default = [
       "Un detector de envolvente"
     ],
     "correctIndex": 2,
-    "explain": "La superheterodinia FM necesita oscilador local para mezclar a frecuencia intermedia; sin ese bloque el diagrama est\xE1 incompleto. \xABUn oscilador\xBB.",
+    "explain": "Un receptor de FM en superheterodino necesita oscilador local para trasladar la se\xF1al a FI; el recuadro vac\xEDo del diagrama es ese bloque. \xABUn oscilador\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5909,7 +5910,7 @@ var questions_banco_default = [
       "El consumo de potencia de alimentaci\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "El S-meter indica nivel de se\xF1al recibida (intensidad relativa), no potencia transmitida ni frecuencia. \xABLa intensidad de la se\xF1al de entrada del receptor\xBB.",
+    "explain": "El S-meter indica nivel de se\xF1al recibida (intensidad relativa), no potencia transmitida ni frecuencia. \xABLa intensidad de la se\xF1al de entrada del receptor\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5926,7 +5927,7 @@ var questions_banco_default = [
       "El doble de la disipada en el circuito L-C"
     ],
     "correctIndex": 2,
-    "explain": "En resonancia serie el LC presenta impedancia m\xEDnima y puede desviar potencia: el vat\xEDmetro lee un valor m\xEDnimo hacia la carga. \xABM\xEDnima\xBB.",
+    "explain": "Si el LC resuena a la frecuencia del transmisor, la impedancia vista puede hacer que el vat\xEDmetro lea potencia m\xEDnima hacia la carga (energ\xEDa desviada o absorbida en el resonador). \xABM\xEDnima\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5941,7 +5942,7 @@ var questions_banco_default = [
       "Disponen de rejilla"
     ],
     "correctIndex": 2,
-    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xABTienen tres terminales\xBB.",
+    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABTienen tres terminales\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5960,7 +5961,7 @@ var questions_banco_default = [
       ""
     ],
     "correctIndex": 3,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABPotencia\xBB.",
+    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABPotencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5975,7 +5976,7 @@ var questions_banco_default = [
       "Colocarle un plano de tierra"
     ],
     "correctIndex": 2,
-    "explain": "Para bajar la frecuencia de resonancia hay que alargar el dipolo (mayor longitud el\xE9ctrica). \xABAlargarla\xBB."
+    "explain": "Bajar frecuencia de resonancia exige mayor longitud el\xE9ctrica (alargar); subir frecuencia, acortar. \xABAlargarla\xBB. No confundir con el distractor del mismo bloque tem\xE1tico."
   },
   {
     "id": "ure-p1-q475",
@@ -6019,7 +6020,7 @@ var questions_banco_default = [
       "S\xF3lo se pueden conectar en paralelo"
     ],
     "correctIndex": 1,
-    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEl valor de la conexi\xF3n de dos resistencias en paralelo da un valor resultante menor que cualquiera de ellas\xBB.",
+    "explain": "Dos resistencias en paralelo dan una resistencia equivalente menor que cualquiera de ellas; en serie ser\xEDa mayor. Los termistores PTC/NTC var\xEDan R con la temperatura. \xABEl valor de la conexi\xF3n de dos resistencias en paralelo da un valor resultante menor que cualquiera de ellas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6034,7 +6035,7 @@ var questions_banco_default = [
       "S\xF3lo cuando el suelo este lo suficientemente seco"
     ],
     "correctIndex": 1,
-    "explain": "No se debe tocar una antena en transmisi\xF3n: tensiones RF y corrientes de antena pueden causar quemaduras. \xABNo se debe tocar una antena trasmitiendo\xBB.",
+    "explain": "No se debe tocar una antena en transmisi\xF3n: tensiones RF y corrientes de antena pueden causar quemaduras. \xABNo se debe tocar una antena trasmitiendo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6078,7 +6079,7 @@ var questions_banco_default = [
       "Al oscilador local"
     ],
     "correctIndex": 2,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABA la salida del mezclador\xBB.",
+    "explain": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABA la salida del mezclador\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6109,7 +6110,7 @@ var questions_banco_default = [
       "S\xF3lo existe potencia reflejada siendo nula la potencia directa"
     ],
     "correctIndex": 1,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABLa potencia directa es superior a la potencia reflejada\xBB.",
+    "explain": "Con impedancias iguales la energ\xEDa se transfiere hacia la antena: en el vat\xEDmetro la potencia hacia delante supera a la reflejada. Con desadaptaci\xF3n la reflejada ser\xEDa comparable. \xABLa potencia directa es superior a la potencia reflejada\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6124,7 +6125,7 @@ var questions_banco_default = [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABVHF\xBB.",
+    "explain": "Las comunicaciones por sat\xE9lite de radioaficionado (SO-50, etc.) usan bandas VHF/UHF con enlaces l\xEDnea de vista al sat\xE9lite; HF depende de ion\xF3sfera y MF/LF no son el caso t\xEDpico. \xABVHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6169,7 +6170,7 @@ var questions_banco_default = [
       "Estabilidad"
     ],
     "correctIndex": 3,
-    "explain": "Una antena sintonizada resuena a la frecuencia de la se\xF1al y acopla mejor la energ\xEDa radiada. \xABEstabilidad\xBB.",
+    "explain": "Una antena sintonizada resuena a la frecuencia de la se\xF1al y acopla mejor la energ\xEDa radiada. \xABEstabilidad\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6199,7 +6200,7 @@ var questions_banco_default = [
       "Una antena de TV"
     ],
     "correctIndex": 2,
-    "explain": "El diodo es un componente de dos terminales que permite el paso de corriente en un solo sentido. \xABUn dispositivo que permite el paso de la comente el\xE9ctrica en un \xFAnico sentido\xBB.",
+    "explain": "El diodo es un dispositivo de uni\xF3n PN que conduce preferentemente en un sentido y bloquea en inversa; por eso rectifica y protege etapas. \xABUn dispositivo que permite el paso de la comente el\xE9ctrica en un \xFAnico sentido\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6229,7 +6230,7 @@ var questions_banco_default = [
       "Emisor, colector y puerta"
     ],
     "correctIndex": 1,
-    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xABEmisor, base y colector\xBB.",
+    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABEmisor, base y colector\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6246,7 +6247,7 @@ var questions_banco_default = [
       "Ninguna de las anteriores ya que la potencia s\xF3lo se puede medir con un vat\xEDmetro"
     ],
     "correctIndex": 0,
-    "explain": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABLos conmutadores en la posici\xF3n 1\xBB.",
+    "explain": "El vat\xEDmetro en figura mide en la resistencia de prueba: en la posici\xF3n 1 los conmutadores conectan correctamente sensor directo/reflejado a esa resistencia. \xABLos conmutadores en la posici\xF3n 1\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6261,7 +6262,7 @@ var questions_banco_default = [
       "Componentes de campo ajustados a impedancia nula"
     ],
     "correctIndex": 0,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABInterferencias\xBB.",
+    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABInterferencias\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6276,7 +6277,7 @@ var questions_banco_default = [
       "Aisladores para corrientes inversas"
     ],
     "correctIndex": 2,
-    "explain": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABCircuitos resonantes\xBB.",
+    "explain": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABCircuitos resonantes\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6291,7 +6292,7 @@ var questions_banco_default = [
       "No existen"
     ],
     "correctIndex": 0,
-    "explain": "En anal\xF3gico, la se\xF1al puede tomar infinitos valores intermedios entre m\xEDnimo y m\xE1ximo. \xABPueden tener infinitos valores\xBB.",
+    "explain": "En transmisi\xF3n anal\xF3gica la se\xF1al puede tomar infinitos valores intermedios entre extremos (continua en amplitud). La digital usa s\xEDmbolos discretos. \xABPueden tener infinitos valores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6336,7 +6337,7 @@ var questions_banco_default = [
       "No almacena nada"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABCarga el\xE9ctrica\xBB.",
+    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABCarga el\xE9ctrica\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6351,7 +6352,7 @@ var questions_banco_default = [
       "100 voltios"
     ],
     "correctIndex": 0,
-    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB. (BOE-A-2013-7624).",
+    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6441,7 +6442,7 @@ var questions_banco_default = [
       "La ganancia de modulaci\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "El \xEDndice de modulaci\xF3n m es t\xEDpico de AM; este enunciado se refiere al tipo de modulaci\xF3n. \xABLa modulaci\xF3n de frecuencia\xBB."
+    "explain": "En FM, el \xEDndice de modulaci\xF3n \u03B2 = \u0394f_m\xE1x / f_mod. Con \u0394f = 25 kHz y f_mod = 10 kHz, \u03B2 = 2,5. \xABLa modulaci\xF3n de frecuencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico."
   },
   {
     "id": "ure-p1-q74",
@@ -6455,7 +6456,7 @@ var questions_banco_default = [
       "No es necesario conectarlo a tierra"
     ],
     "correctIndex": 2,
-    "explain": "La protecci\xF3n y la toma de tierra siguen reglas de seguridad el\xE9ctrica; no confundas con fusibles de l\xEDnea. \xABProteger al operador de descargas\xBB.",
+    "explain": "La protecci\xF3n y la toma de tierra siguen reglas de seguridad el\xE9ctrica; no confundas con fusibles de l\xEDnea. \xABProteger al operador de descargas\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6470,7 +6471,7 @@ var questions_banco_default = [
       "Elementos que viven a costa de los dem\xE1s"
     ],
     "correctIndex": 1,
-    "explain": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABComponentes de la antena no activos\xBB.",
+    "explain": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABComponentes de la antena no activos\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6485,7 +6486,7 @@ var questions_banco_default = [
       "La orientaci\xF3n del campo magn\xE9tico transmitido"
     ],
     "correctIndex": 1,
-    "explain": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABLa orientaci\xF3n del campo el\xE9ctrico transmitido\xBB.",
+    "explain": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABLa orientaci\xF3n del campo el\xE9ctrico transmitido\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6500,7 +6501,7 @@ var questions_banco_default = [
       "Igual a la de la antena y a la del transmisor"
     ],
     "correctIndex": 3,
-    "explain": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABIgual a la de la antena y a la del transmisor\xBB.",
+    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABIgual a la de la antena y a la del transmisor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6575,7 +6576,7 @@ var questions_banco_default = [
       "El transformador sea muy peque\xF1o"
     ],
     "correctIndex": 0,
-    "explain": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABEl secundario tenga menos espiras que el primario\xBB.",
+    "explain": "En un transformador reductor el secundario tiene menos espiras que el primario (V2 < V1 en ideal). El n\xFAcleo ferromagn\xE9tico mejora el acoplamiento magn\xE9tico. \xABEl secundario tenga menos espiras que el primario\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6592,7 +6593,7 @@ var questions_banco_default = [
       "F=13,5 MHz"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABF=14,2 MHz\xBB.",
+    "explain": "A partir del circuito resonante y del esquema del superheterodino de la figura, la frecuencia de sinton\xEDa calculada coincide con 14,2 MHz (relaci\xF3n entre oscilador, FI y RF). \xABF=14,2 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6637,7 +6638,7 @@ var questions_banco_default = [
       "URGENCE"
     ],
     "correctIndex": 0,
-    "explain": "Pan-Pan (tres veces) es la se\xF1al de urgencia sin peligro grave inmediato; Mayday reserva el socorro. \xABPAN PAN\xBB.",
+    "explain": "Pan-Pan (tres veces) es la se\xF1al de urgencia radiotelef\xF3nica cuando hay riesgo sin peligro grave inmediato. Mayday (tres veces) reserva el socorro inminente. \xABPAN PAN\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6652,7 +6653,7 @@ var questions_banco_default = [
       "1.100 kHz y 650 kHz"
     ],
     "correctIndex": 0,
-    "explain": "La se\xF1al de alarma en radiotelefon\xEDa usa dos tonos alternos; en el banco son aproximadamente 2.220 Hz y 1.300 Hz. \xAB2.220 Hz y 1.300 Hz\xBB.",
+    "explain": "La se\xF1al de alarma en radiotelefon\xEDa usa dos tonos alternos; en el banco son aproximadamente 2.220 Hz y 1.300 Hz. \xAB2.220 Hz y 1.300 Hz\xBB. Por eso la respuesta del enunciado es.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6667,7 +6668,7 @@ var questions_banco_default = [
       "Una de las condiciones para su adjudicaci\xF3n es que el radioaficionado no haya sido sometido a expediente sancionador en los \xFAltimos cinco a\xF1os"
     ],
     "correctIndex": 2,
-    "explain": "Lee qu\xE9 afirmaci\xF3n es falsa: el banco no reserva los sufijos de dos letras solo a estaciones colectivas. \xABSe reservan \xFAnicamente para estaciones colectivas\xBB.",
+    "explain": "Marca la afirmaci\xF3n falsa: los sufijos de dos letras no est\xE1n reservados \xFAnicamente a estaciones colectivas en la normativa del banco. Por eso la opci\xF3n incorrecta es \xABSe reservan \xFAnicamente para estaciones colectivas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6742,7 +6743,7 @@ var questions_banco_default = [
       "No se puede adjudicar a estaci\xF3n colectiva alguna"
     ],
     "correctIndex": 2,
-    "explain": "Los indicativos ED\u2026 en el banco identifican estaciones desatendidas seg\xFAn el tipo (anal\xF3gica o digital). \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB.",
+    "explain": "Los indicativos ED\u2026 identifican estaciones autom\xE1ticas desatendidas en el esquema espa\xF1ol (anal\xF3gicas o digitales seg\xFAn el caso). ED3ZHO encaja en ese tipo. \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6772,7 +6773,7 @@ var questions_banco_default = [
       "Es que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a"
     ],
     "correctIndex": 3,
-    "explain": "EA m\xE1s cifra de distrito y barra indica un titular CEPT extranjero operando temporalmente en Espa\xF1a. \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB.",
+    "explain": "EA seguido de cifra de distrito (1\u20139) y barra indica operador con licencia CEPT extranjero emitiendo temporalmente en Espa\xF1a, no un indicativo fijo espa\xF1ol ordinario. \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6787,7 +6788,7 @@ var questions_banco_default = [
       "Queda inhabilitado a perpetuidad a ser radioaficionado"
     ],
     "correctIndex": 2,
-    "explain": "Revocada la autorizaci\xF3n, no puedes operar hasta obtener una nueva si la normativa lo permite. \xABHasta una nueva autorizaci\xF3n no podr\xE1 ejercer la actividad de la radioafici\xF3n\xBB.",
+    "explain": "Revocada la autorizaci\xF3n, no puedes operar hasta obtener una nueva si la normativa lo permite. \xABHasta una nueva autorizaci\xF3n no podr\xE1 ejercer la actividad de la radioafici\xF3n\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6817,7 +6818,7 @@ var questions_banco_default = [
       "No se exigen requisitos previos para solicitarla"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABCuando se conceda, a la vez se otorgar\xE1 el distintivo de llamada\xBB.",
+    "explain": "La autorizaci\xF3n de espectro para aficionados conlleva la asignaci\xF3n del indicativo al concederse; no es gratuita ni sin requisitos previos. \xABCuando se conceda, a la vez se otorgar\xE1 el distintivo de llamada\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6847,7 +6848,7 @@ var questions_banco_default = [
       "Siempre y cuando no est\xE9 en contradicci\xF3n con la nuestra"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSiempre\xBB.",
+    "explain": "Con licencia CEPT debes cumplir la reglamentaci\xF3n del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6862,7 +6863,7 @@ var questions_banco_default = [
       "En d\xFAplex"
     ],
     "correctIndex": 1,
-    "explain": "Emisiones fuera de banda son componentes espectrales adyacentes no deseadas (arm\xF3nicos, splatter). \xABFuera de banda\xBB.",
+    "explain": "Emisiones fuera de banda son componentes espectrales adyacentes no deseadas (arm\xF3nicos, splatter). \xABFuera de banda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6877,7 +6878,7 @@ var questions_banco_default = [
       "Pan"
     ],
     "correctIndex": 2,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMayday\xBB.",
+    "explain": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6982,7 +6983,7 @@ var questions_banco_default = [
       "Solo el Diploma de Operador"
     ],
     "correctIndex": 1,
-    "explain": "Hace falta licencia de estaci\xF3n (y autorizaci\xF3n de operador vigente); no basta con comprar equipo. \xABLicencia de Estaci\xF3n\xBB.",
+    "explain": "Hace falta licencia de estaci\xF3n (y autorizaci\xF3n de operador vigente); no basta con comprar equipo. \xABLicencia de Estaci\xF3n\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6997,7 +6998,7 @@ var questions_banco_default = [
       "Sabadell (Barcelona)"
     ],
     "correctIndex": 1,
-    "explain": "El prefijo EA9 corresponde a Ceuta y Melilla en la numeraci\xF3n de indicativos espa\xF1oles. \xABCeuta\xBB.",
+    "explain": "El prefijo EA9 identifica estaciones en Ceuta y Melilla dentro de la numeraci\xF3n de indicativos espa\xF1oles. Por eso EA9ADI corresponde a \xABCeuta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7012,7 +7013,7 @@ var questions_banco_default = [
       "Sancionable seg\xFAn la reglamentaci\xF3n vigente"
     ],
     "correctIndex": 0,
-    "explain": "En fon\xEDa se usa \xABcambio\xBB al ceder el turno de palabra; es buena pr\xE1ctica operativa. \xABRecomendable\xBB.",
+    "explain": "En fon\xEDa se usa \xABcambio\xBB al ceder el turno de palabra; es buena pr\xE1ctica operativa. \xABRecomendable\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7042,7 +7043,7 @@ var questions_banco_default = [
       "Quince d\xEDas"
     ],
     "correctIndex": 0,
-    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado.",
+    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7057,7 +7058,7 @@ var questions_banco_default = [
       "Vid"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABVictor\xBB.",
+    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABVictor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7132,7 +7133,7 @@ var questions_banco_default = [
       "Radiobaliza"
     ],
     "correctIndex": 3,
-    "explain": "Una estaci\xF3n colectiva para experimentaci\xF3n de propagaci\xF3n puede ser una radiobaliza u otra estaci\xF3n autom\xE1tica desatendida seg\xFAn el supuesto. \xABRadiobaliza\xBB.",
+    "explain": "Una estaci\xF3n colectiva para experimentaci\xF3n de propagaci\xF3n puede ser una radiobaliza u otra estaci\xF3n autom\xE1tica desatendida seg\xFAn el supuesto. \xABRadiobaliza\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7147,7 +7148,7 @@ var questions_banco_default = [
       "4"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xAB5\xBB.",
+    "explain": "La cifra del indicativo espa\xF1ol identifica el distrito geogr\xE1fico de la estaci\xF3n seg\xFAn la tabla oficial. Para este enunciado corresponde \xAB5\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7177,7 +7178,7 @@ var questions_banco_default = [
       "/MM"
     ],
     "correctIndex": 3,
-    "explain": "Las estaciones m\xF3viles mar\xEDtimas usan indicativos y procedimientos del servicio mar\xEDtimo (UIT/OMI), distintos del indicativo EA de aficionado terrestre. \xAB/MM\xBB.",
+    "explain": "Las estaciones m\xF3viles mar\xEDtimas a\xF1aden el sufijo /MM al distintivo para indicar operaci\xF3n a bordo, seg\xFAn pr\xE1ctica internacional de identificaci\xF3n en radiocomunicaciones mar\xEDtimas. No confundir con /P (port\xE1til) ni con indicativos terrestres EA. \xAB/MM\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7222,7 +7223,7 @@ var questions_banco_default = [
       "Siempre y cuando no est\xE9 en contradicci\xF3n con la nuestra"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSiempre\xBB.",
+    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos, pero siempre debes respetar la reglamentaci\xF3n local del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7237,7 +7238,7 @@ var questions_banco_default = [
       "No permiten la utilizaci\xF3n de equipos de construcci\xF3n propia"
     ],
     "correctIndex": 2,
-    "explain": "Las autorizaciones en bandas restringidas tienen plazo limitado; el enunciado fija el m\xE1ximo legal aplicable. \xABSe otorgar\xE1n por un plazo m\xE1ximo de dieciocho meses\xBB.",
+    "explain": "Las autorizaciones en bandas de uso restringido tienen caducidad; el enunciado fija un m\xE1ximo de dieciocho meses renovable seg\xFAn tr\xE1mite. \xABSe otorgar\xE1n por un plazo m\xE1ximo de dieciocho meses\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7267,7 +7268,7 @@ var questions_banco_default = [
       "QSA"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABQRT\xBB.",
+    "explain": "QRT indica cese de transmisi\xF3n; QRP es baja potencia y QSA la fuerza de la se\xF1al recibida. \xABQRT\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7282,7 +7283,7 @@ var questions_banco_default = [
       "Radio"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABRomeo\xBB.",
+    "explain": "El alfabeto fon\xE9tico ICAO (NATO) asigna una palabra a cada letra para deletrear con claridad en fon\xEDa. La letra del enunciado corresponde a \xABRomeo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7327,7 +7328,7 @@ var questions_banco_default = [
       "Nunca se usan en VHF"
     ],
     "correctIndex": 2,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABPermiten contactar con otros operadores que utilizan el mismo modo\xBB.",
+    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABPermiten contactar con otros operadores que utilizan el mismo modo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7372,7 +7373,7 @@ var questions_banco_default = [
       "Acuse recibo"
     ],
     "correctIndex": 1,
-    "explain": "Los c\xF3digos Q abrevian situaciones en tr\xE1fico: QRL ocupado, QRX espera, QSY cambio de frecuencia, QRT cese, QRM interferencia, QRN ruido atmosf\xE9rico. \xABDeje de transmitir\xBB.",
+    "explain": "QRT significa cese de transmisi\xF3n (\xABdeje de transmitir\xBB). No confundir con QSY (cambio de frecuencia) ni QRX (espera). \xABDeje de transmitir\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7387,7 +7388,7 @@ var questions_banco_default = [
       "Al comienzo y final de cada emisi\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABAl comienzo y final de cada emisi\xF3n\xBB.",
+    "explain": "El distintivo debe identificar la estaci\xF3n al inicio y al final de cada comunicaci\xF3n para que la contraparte sepa qui\xE9n emite. Es obligaci\xF3n de buena pr\xE1ctica y del reglamento del servicio de aficionados. \xABAl comienzo y final de cada emisi\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7402,7 +7403,7 @@ var questions_banco_default = [
       "Sea de un corresponsal extranjero"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSea demasiado extensa\xBB.",
+    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSea demasiado extensa\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7567,7 +7568,7 @@ var questions_banco_default = [
       "Auxilio"
     ],
     "correctIndex": 2,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMayday\xBB.",
+    "explain": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7597,7 +7598,7 @@ var questions_banco_default = [
       "Radiocomunicaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "Radiocomunicaci\xF3n es toda telecomunicaci\xF3n realizada mediante ondas radioel\xE9ctricas. \xABRadiocomunicaci\xF3n\xBB.",
+    "explain": "Radiocomunicaci\xF3n es toda telecomunicaci\xF3n realizada mediante ondas radioel\xE9ctricas. \xABRadiocomunicaci\xF3n\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7641,7 +7642,7 @@ var questions_banco_default = [
       "QRA"
     ],
     "correctIndex": 0,
-    "explain": "QRM indica interferencia de origen artificial (otras emisiones o equipos). QRN es ruido atmosf\xE9rico. \xABQRM\xBB.",
+    "explain": "QRM indica interferencia de origen artificial (otras emisiones, equipos cercanos). QRN es ruido atmosf\xE9rico natural. Por eso la abreviatura de interferencia es \xABQRM\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7656,7 +7657,7 @@ var questions_banco_default = [
       "AR"
     ],
     "correctIndex": 3,
-    "explain": "En telegraf\xEDa, AR (end of message) marca el fin del mensaje. VA (end of work) indica fin de la comunicaci\xF3n. \xABAR\xBB.",
+    "explain": "En telegraf\xEDa, AR (end of message) marca el fin del mensaje. VA (end of work) indica fin de la comunicaci\xF3n. \xABAR\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7701,7 +7702,7 @@ var questions_banco_default = [
       "Permiso de un radio club"
     ],
     "correctIndex": 2,
-    "explain": "Sin superar la prueba de operador (diploma) no se concede la autorizaci\xF3n de radioaficionado. \xABDiploma de operador\xBB.",
+    "explain": "Sin superar la prueba de operador (diploma) no se concede la autorizaci\xF3n de radioaficionado. \xABDiploma de operador\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7746,7 +7747,7 @@ var questions_banco_default = [
       "El c\xF3digo de deletreo ICAO"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB.",
+    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7761,7 +7762,7 @@ var questions_banco_default = [
       "Los que comienzan por: EEE, EDD, EFF"
     ],
     "correctIndex": 1,
-    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB.",
+    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7776,7 +7777,7 @@ var questions_banco_default = [
       "Seis semanas"
     ],
     "correctIndex": 3,
-    "explain": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB.",
+    "explain": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7806,7 +7807,7 @@ var questions_banco_default = [
       "Guadalajara"
     ],
     "correctIndex": 1,
-    "explain": "EB indica estaci\xF3n de aficionado en Espa\xF1a; la cifra de distrito identifica la provincia (EB1 incluye \xC1vila en el banco). \xAB\xC1vila\xBB.",
+    "explain": "EB es prefijo de estaci\xF3n de aficionado en Espa\xF1a; la cifra de distrito (EB1) asocia la provincia en el banco de examen. EB1VZY corresponde a \xAB\xC1vila\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8045,7 +8046,7 @@ var questions_banco_default = [
       "No se puede asignar"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABNo se puede asignar\xBB.",
+    "explain": "Los distintivos espa\xF1oles de aficionado siguen el formato EA/EB/EC + distrito + sufijo; \xABAM8SOS\xBB no es un formato asignable en ese esquema. \xABNo se puede asignar\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8105,7 +8106,7 @@ var questions_banco_default = [
       "EA+EB+EC"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPrefijo + Distrito + Sufijo\xBB.",
+    "explain": "El distintivo espa\xF1ol combina prefijo nacional (E\u2026), cifra de distrito y sufijo asignado por la administraci\xF3n. Por eso la estructura es \xABPrefijo + Distrito + Sufijo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8135,7 +8136,7 @@ var questions_banco_default = [
       "Bilbao"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABPalma de Mallorca\xBB.",
+    "explain": "El prefijo EA6 corresponde a las Islas Baleares en la numeraci\xF3n de indicativos espa\xF1oles. Por eso un distintivo EA6\u2026 asociado al archipi\xE9lago puede corresponder a \xABPalma de Mallorca\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8165,7 +8166,7 @@ var questions_banco_default = [
       "EPA, EQZ, EAA"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABEA, EB, EC\xBB.",
+    "explain": "Espa\xF1a tiene prefijos ITU EA, EB y EC para estaciones amateur. FM/FN son franc\xE9s; KN americano. \xABEA, EB, EC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8195,7 +8196,7 @@ var questions_banco_default = [
       "Estaci\xF3n de control"
     ],
     "correctIndex": 0,
-    "explain": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB.",
+    "explain": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8225,7 +8226,7 @@ var questions_banco_default = [
       "La se\xF1al de seguridad Securite"
     ],
     "correctIndex": 3,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABLa se\xF1al de seguridad Securite\xBB.",
+    "explain": "Un mensaje de socorro usa Mayday o se\xF1ales de socorro, no Securit\xE9 (se\xF1al de seguridad para avisos que no son socorro). Por eso no incluye \xABLa se\xF1al de seguridad Securite\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8285,7 +8286,7 @@ var questions_banco_default = [
       "Toda la gama de frecuencias que pueda utilizar"
     ],
     "correctIndex": 2,
-    "explain": "Sin titular con autorizaci\xF3n de radioaficionado (y licencia de estaci\xF3n cuando proceda) no hay instalaci\xF3n regular. \xABLa autorizaci\xF3n de radioaficionado de su titular\xBB.",
+    "explain": "Sin titular con autorizaci\xF3n de radioaficionado (y licencia de estaci\xF3n cuando proceda) no hay instalaci\xF3n regular. \xABLa autorizaci\xF3n de radioaficionado de su titular\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8315,7 +8316,7 @@ var questions_banco_default = [
       "Detectar y reducir interferencias dentro de un \xE1rea determinada"
     ],
     "correctIndex": 1,
-    "explain": "El repetidor ampl\xEDa cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tr\xE1fico ajeno al servicio. \xABAmpliar el alcance de las comunicaciones\xBB.",
+    "explain": "El repetidor ampl\xEDa cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tr\xE1fico ajeno al servicio. \xABAmpliar el alcance de las comunicaciones\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8434,7 +8435,7 @@ var questions_banco_default = [
       "Neun"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABNine\xBB.",
+    "explain": "En el alfabeto fon\xE9tico ICAO internacional el d\xEDgito 9 se deletrea \xABNine\xBB (ingl\xE9s). En tr\xE1fico espa\xF1ol se usan equivalencias en castellano en otros enunciados.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8479,7 +8480,7 @@ var questions_banco_default = [
       "Las posibles p\xE9rdidas de radiofrecuencia"
     ],
     "correctIndex": 0,
-    "explain": "El seguro de antenas cubre da\xF1os a terceros por la instalaci\xF3n; es parte de la responsabilidad del titular. \xABLa responsabilidad civil del titular\xBB.",
+    "explain": "El seguro de antenas cubre da\xF1os a terceros por la instalaci\xF3n; es parte de la responsabilidad del titular. \xABLa responsabilidad civil del titular\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8494,7 +8495,7 @@ var questions_banco_default = [
       "La secuencia no se contempla en el reglamento vigente"
     ],
     "correctIndex": 0,
-    "explain": "Los indicativos ED\u2026 en el banco identifican estaciones desatendidas seg\xFAn el tipo (anal\xF3gica o digital). \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica\xBB.",
+    "explain": "ED1YBD es un indicativo de estaci\xF3n desatendida anal\xF3gica en la nomenclatura del banco (prefijo ED + numeraci\xF3n de repetidor/desatendida). \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8509,7 +8510,7 @@ var questions_banco_default = [
       "Sin sufijo"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPor un grupo alfanum\xE9rico\xBB.",
+    "explain": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPor un grupo alfanum\xE9rico\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8524,7 +8525,7 @@ var questions_banco_default = [
       "Doce palabras por minuto"
     ],
     "correctIndex": 1,
-    "explain": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB.",
+    "explain": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8539,7 +8540,7 @@ var questions_banco_default = [
       "Se trata de un distintivo solicitado por una Escuela Universitaria"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEst\xE1 emitiendo desde Andaluc\xEDa\xBB.",
+    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEst\xE1 emitiendo desde Andaluc\xEDa\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8569,7 +8570,7 @@ var questions_banco_default = [
       "QRX"
     ],
     "correctIndex": 0,
-    "explain": "QRN indica ruido atmosf\xE9rico o natural (tormentas, est\xE1tica). QRM es interferencia de origen artificial. \xABQRN\xBB.",
+    "explain": "QRN indica perturbaci\xF3n por ruido atmosf\xE9rico (tormentas, descargas). QRM es interferencia artificial. Por eso el c\xF3digo Q atmosf\xE9rico es \xABQRN\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8658,7 +8659,7 @@ var questions_banco_default = [
       "Cuadro Nacional de Atribuci\xF3n de Frecuencias"
     ],
     "correctIndex": 3,
-    "explain": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB.",
+    "explain": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8867,7 +8868,7 @@ var questions_banco_default = [
       "12 dB"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB.",
+    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8927,7 +8928,7 @@ var questions_banco_default = [
       "50,000-51,000 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xAB10,00-10,5 GHz\xBB.",
+    "explain": "La banda 10,00\u201310,5 GHz entre aficionados requiere autorizaci\xF3n especial de uso seg\xFAn el cuadro nacional del BOE; 14 MHz y 50 MHz son bandas habituales sin ese requisito adicional. \xAB10,00-10,5 GHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9002,7 +9003,7 @@ var questions_banco_default = [
       "Nueve horas"
     ],
     "correctIndex": 0,
-    "explain": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB.",
+    "explain": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9032,7 +9033,7 @@ var questions_banco_default = [
       "Las iniciales y fecha de nacimiento del titular"
     ],
     "correctIndex": 1,
-    "explain": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo\xBB.",
+    "explain": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9062,7 +9063,7 @@ var questions_banco_default = [
       "Restringido, si la estaci\xF3n estuviera dotada de c\xF3digo de acceso"
     ],
     "correctIndex": 1,
-    "explain": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB.",
+    "explain": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9242,7 +9243,7 @@ var questions_banco_default = [
       "Six"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSeven\xBB.",
+    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSeven\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9272,7 +9273,7 @@ var questions_banco_default = [
       "QRP"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABQRO\xBB.",
+    "explain": "QRO solicita aumentar potencia de transmisi\xF3n; QRP pedir\xEDa reducirla. \xABQRO\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9347,7 +9348,7 @@ var questions_banco_default = [
       "Si su titular crea interferencias"
     ],
     "correctIndex": 0,
-    "explain": "Un distintivo liberado puede reasignarse cuando se cancela la autorizaci\xF3n previa; no se hereda autom\xE1ticamente por familiaridad. \xABSi se cancela la autorizaci\xF3n correspondiente\xBB.",
+    "explain": "Un distintivo puede reutilizarse cuando se cancela la autorizaci\xF3n anterior que lo ten\xEDa asignado; no queda reservado para siempre al titular previo. \xABSi se cancela la autorizaci\xF3n correspondiente\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9362,7 +9363,7 @@ var questions_banco_default = [
       "Informar sobre la intensidad de la se\xF1al recibida"
     ],
     "correctIndex": 3,
-    "explain": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABInformar sobre la intensidad de la se\xF1al recibida\xBB.",
+    "explain": "RST informa legibilidad (R), intensidad de se\xF1al (S) y tono (T) en fon\xEDa; no es un c\xF3digo Q ni una se\xF1al de socorro. \xABInformar sobre la intensidad de la se\xF1al recibida\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9407,7 +9408,7 @@ var questions_banco_default = [
       'De la palabra "pan" repetido tres veces'
     ],
     "correctIndex": 1,
-    "explain": 'Pan-Pan (tres veces) es la se\xF1al de urgencia sin peligro grave inmediato; Mayday reserva el socorro. \xABDel grupo "pan pan" repetido tres veces\xBB.',
+    "explain": 'Pan-Pan (tres veces) es urgencia sin peligro grave inmediato. Mayday reserva el socorro grave. \xABDel grupo "pan pan" repetido tres veces\xBB.',
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9437,7 +9438,7 @@ var questions_banco_default = [
       "Acredite documentalmente su condici\xF3n de residente en Espa\xF1a"
     ],
     "correctIndex": 3,
-    "explain": "Sin acreditar residencia legal en Espa\xF1a no procede la autorizaci\xF3n de extranjero residente. \xABAcredite documentalmente su condici\xF3n de residente en Espa\xF1a\xBB.",
+    "explain": "Sin acreditar residencia legal en Espa\xF1a no procede la autorizaci\xF3n de extranjero residente. \xABAcredite documentalmente su condici\xF3n de residente en Espa\xF1a\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9452,7 +9453,7 @@ var questions_banco_default = [
       "T/R 61-03"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABT/R 61-02\xBB.",
+    "explain": "El certificado HAREC acredita el examen de operador armonizado entre administraciones CEPT. Se vincula a la Recomendaci\xF3n T/R 61-02, distinta de T/R 61-01 (licencia CEPT para operar en el extranjero). \xABT/R 61-02\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9482,7 +9483,7 @@ var questions_banco_default = [
       "Normas b\xE1sicas del r\xE9gimen de prensa, radio y televisi\xF3n"
     ],
     "correctIndex": 0,
-    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB.",
+    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9527,7 +9528,7 @@ var questions_banco_default = [
       "Cualquier titular de licencia CEPT"
     ],
     "correctIndex": 2,
-    "explain": "Suelen autorizarse a asociaciones de aficionados legalmente constituidas, no a particulares sin estructura de gesti\xF3n. \xABUna asociaci\xF3n de radioaficionados reconocida\xBB.",
+    "explain": "Suelen autorizarse a asociaciones de aficionados legalmente constituidas, no a particulares sin estructura de gesti\xF3n. \xABUna asociaci\xF3n de radioaficionados reconocida\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9572,7 +9573,7 @@ var questions_banco_default = [
       "Sierra, Lima"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSierra, Lima\xBB.",
+    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSierra, Lima\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9617,7 +9618,7 @@ var questions_banco_default = [
       "Solo en casos muy graves"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABNo\xBB.",
+    "explain": "La licencia CEPT permite operar temporalmente en otro pa\xEDs adherido, pero no garantiza protecci\xF3n administrativa contra interferencias ajenas all\xED. Por eso \xABNo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9647,7 +9648,7 @@ var questions_banco_default = [
       "Canarias se encuentra en la Regi\xF3n 2"
     ],
     "correctIndex": 2,
-    "explain": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB.",
+    "explain": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9677,7 +9678,7 @@ var questions_banco_default = [
       "La participaci\xF3n en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "Los distintivos temporales de una letra se reservan a concursos internacionales de alta competitividad. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+    "explain": "Los distintivos temporales de una sola letra se reservan a concursos internacionales de alta competitividad seg\xFAn el criterio del banco/reglamento hist\xF3rico. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9722,7 +9723,7 @@ var questions_banco_default = [
       "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABTransmitir mensajes de naturaleza t\xE9cnica sobre ensayos\xBB.",
+    "explain": "En tr\xE1fico entre aficionados est\xE1n permitidos mensajes t\xE9cnicos de ensayos; no propaganda comercial ni usar indicativo ajeno sin permiso. \xABTransmitir mensajes de naturaleza t\xE9cnica sobre ensayos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9752,7 +9753,7 @@ var questions_banco_default = [
       "No existen"
     ],
     "correctIndex": 1,
-    "explain": "Los indicativos espa\xF1oles empiezan por E: EA (aficionados), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n. \xABEA, EB, EC\xBB.",
+    "explain": "Los prefijos de indicativos espa\xF1oles en el servicio de aficionado incluyen EA (aficionado), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n en territorio nacional. Por eso la terna habitual del banco es \xABEA, EB, EC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9767,7 +9768,7 @@ var questions_banco_default = [
       "QTR"
     ],
     "correctIndex": 0,
-    "explain": "QTH es la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY indica cambio de frecuencia. \xABQTH\xBB.",
+    "explain": "QTH indica la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY es cambio de frecuencia y QSL confirma contacto. \xABQTH\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9782,7 +9783,7 @@ var questions_banco_default = [
       "El propietario de la vivienda si esta es de alquiler"
     ],
     "correctIndex": 1,
-    "explain": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB.",
+    "explain": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   }
 ];
@@ -9858,7 +9859,7 @@ var questions_banco_estudio_default = [
       "Realimentaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "Esa definici\xF3n corresponde a la realimentaci\xF3n (feedback). FEDI-EA."
+    "explain": "Tomar parte de la salida y reinyectarla a la entrada es realimentaci\xF3n (feedback): puede estabilizar o modificar la ganancia del circuito. No confundir con rectificaci\xF3n ni demodulaci\xF3n. \xABRealimentaci\xF3n\xBB."
   },
   {
     "id": "fedi-ag-006",
@@ -9872,7 +9873,7 @@ var questions_banco_estudio_default = [
       "Ninguna de las respuestas anteriores es correcta"
     ],
     "correctIndex": 3,
-    "explain": "Tensi\xF3n en paralelo, intensidad en serie; la resistencia se mide sin alimentaci\xF3n en circuito. La respuesta que marca el banco es \xABNinguna de las respuestas anteriores es correcta\xBB."
+    "explain": "La resistencia se mide sin tensi\xF3n aplicada (fuera de circuito o en banco de prueba). En paralelo la tensi\xF3n es com\xFAn; en serie, la intensidad. Las tres primeras afirmaciones del enunciado no son correctas en conjunto. \xABNinguna de las respuestas anteriores es correcta\xBB."
   },
   {
     "id": "fedi-ag-007",
@@ -9916,7 +9917,7 @@ var questions_banco_estudio_default = [
       "Detector de fase"
     ],
     "correctIndex": 1,
-    "explain": "AM significa modulaci\xF3n de amplitud. El circuito mostrado es un detector de envolvente: el diodo rectifica la se\xF1al de RF y el filtro RC sigue la envolvente para recuperar el audio."
+    "explain": "En el esquema, el diodo en serie con la carga y el condensador forman un detector de envolvente: rectifica la RF y la constante de tiempo RC extrae la envolvente AM. No es oscilador ni conversor de frecuencia. \xABDetector de envolvente\xBB."
   },
   {
     "id": "fedi-ag-010",
@@ -9940,13 +9941,13 @@ var questions_banco_estudio_default = [
     "stemFigure": "images/quiz/fedi-ag-011-original.jpg",
     "stemFigureAlt": "Figura original FEDI-EA ag-011 (ag-11.jpg): Indique el orden de los elementos de una fuente de alimentaci\xF3n lineal:",
     "options": [
-      "A Transformador, B Rectificador, C Regulador, D Filtro.",
-      "A Rectificador, B Transformador, C Filtro, D Regulador.",
-      "A Regulador, B Filtro, C Transformador, D Rectificador.",
-      "A Filtro, B Transformador, C Regulador, D Rectificador."
+      "Transformador \u2192 rectificador \u2192 filtro \u2192 regulador",
+      "Rectificador \u2192 transformador \u2192 filtro \u2192 regulador",
+      "Regulador \u2192 filtro \u2192 transformador \u2192 rectificador",
+      "Filtro \u2192 transformador \u2192 regulador \u2192 rectificador"
     ],
     "correctIndex": 0,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABA Transformador, B Rectificador, C Regulador, D Filtro.\xBB."
+    "explain": "En una fuente lineal: el transformador adapta y a\xEDsla la CA de red, el rectificador convierte a CC pulsante, el filtro suaviza el rizado y el regulador estabiliza la tensi\xF3n de salida. El orden habitual es transformador \u2192 rectificador \u2192 filtro \u2192 regulador. \xABTransformador \u2192 rectificador \u2192 filtro \u2192 regulador\xBB."
   },
   {
     "id": "fedi-ag-013",
@@ -10036,7 +10037,7 @@ var questions_banco_estudio_default = [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 0,
-    "explain": "Diodo: conducci\xF3n preferente en un sentido. La respuesta que marca el banco es \xABPermiten el paso de la corriente en una \xFAnica direcci\xF3n\xBB."
+    "explain": "Un diodo conduce bien en polarizaci\xF3n directa y bloquea en inversa; por eso rectifica y protege etapas. No confundir con un transistor o una resistencia. \xABPermiten el paso de la corriente en una \xFAnica direcci\xF3n\xBB."
   },
   {
     "id": "fedi-ag-020",
@@ -10052,7 +10053,7 @@ var questions_banco_estudio_default = [
       "Una reducci\xF3n del ruido captado por la antena."
     ],
     "correctIndex": 2,
-    "explain": "Los radiales influyen en la impedancia vista en la base. La respuesta que marca el banco es \xABUna variaci\xF3n de la impedancia de entrada.\xBB."
+    "explain": "En una vertical de cuarto de onda los radiales simulan el plano de tierra y modifican la impedancia de entrada seg\xFAn su longitud e inclinaci\xF3n. \xABUna variaci\xF3n de la impedancia de entrada.\xBB."
   },
   {
     "id": "fedi-ag-021",
@@ -10066,7 +10067,7 @@ var questions_banco_estudio_default = [
       "Excesivo nivel de se\xF1al en la antena"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia e IF/FI significa frecuencia intermedia. Se\xF1ales muy fuertes pueden saturar esas primeras etapas del receptor y empeorar la sensibilidad aparente. La respuesta que marca el banco es \xABExcesivo nivel de se\xF1al en la antena\xBB."
+    "explain": "RF es radiofrecuencia; la FI (frecuencia intermedia) se amplifica antes de detectar. Un nivel excesivo en antena puede saturar el mezclador o la FI y empeorar la sensibilidad (desensibilizaci\xF3n). \xABExcesivo nivel de se\xF1al en la antena\xBB."
   },
   {
     "id": "fedi-ag-022",
@@ -10080,7 +10081,7 @@ var questions_banco_estudio_default = [
       "No se puede calcular"
     ],
     "correctIndex": 0,
-    "explain": "En el c\xF3digo de colores, violeta = 7, verde = 5, rojo = multiplicador \xD710\xB2 y oro = tolerancia 5 %. Por tanto 75 \xD7 100 = 7500 \u03A9, es decir 7,5 k\u03A9 con 5 % de tolerancia. La respuesta que marca el banco es \xAB7.500 \u03A9 y 5 %\xBB."
+    "explain": "C\xF3digo de colores: violeta = 7, verde = 5, rojo = \xD710\xB2, oro = tolerancia \xB15 %. Valor 75 \xD7 100 = 7500 \u03A9 = 7,5 k\u03A9. \xAB7.500 \u03A9 y 5 %\xBB."
   },
   {
     "id": "fedi-ag-023",
@@ -10110,7 +10111,7 @@ var questions_banco_estudio_default = [
       "Un valor de impedancia pr\xF3ximo a 50&Omega; y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional."
     ],
     "correctIndex": 3,
-    "explain": "Con \xE1ngulo ~45\xB0 suele acercarse a 50 \u03A9 y el diagrama horizontal es m\xE1s redondeado. La respuesta que marca el banco es \xABUn valor de impedancia pr\xF3ximo a 50&Omega; y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional.\xBB."
+    "explain": "Radiales a ~45\xB0 suelen acercar la impedancia de la vertical a unos 50 \u03A9 y el diagrama en horizontal se aproxima al omnidireccional. \xABUn valor de impedancia pr\xF3ximo a 50 \u03A9 y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional.\xBB."
   },
   {
     "id": "fedi-ag-025",
@@ -10124,7 +10125,7 @@ var questions_banco_estudio_default = [
       "Tomas de tierra y condensadores"
     ],
     "correctIndex": 3,
-    "explain": "RF significa radiofrecuencia. El filtrado y el desacoplo a masa ayudan a evitar que la radiofrecuencia circule por masas y l\xEDneas donde no debe. La respuesta que marca el banco es \xABTomas de tierra y condensadores\xBB."
+    "explain": "La RF puede acoplarse a masas y cables de audio. Tomas de tierra en el chasis y condensadores de desacoplo en alimentaci\xF3n limitan ese acoplamiento. \xABTomas de tierra y condensadores\xBB."
   },
   {
     "id": "fedi-ag-027",
@@ -10168,7 +10169,7 @@ var questions_banco_estudio_default = [
       "Suprimiendo la portadora"
     ],
     "correctIndex": 1,
-    "explain": "EMI significa interferencia electromagn\xE9tica y RF significa radiofrecuencia. Los filtros de l\xEDnea en la alimentaci\xF3n reducen interferencias conducidas. La respuesta que marca el banco es \xABColocando un filtro apropiado\xBB."
+    "explain": "EMI es interferencia electromagn\xE9tica conducida o radiada. Un filtro de l\xEDnea en la alimentaci\xF3n aten\xFAa componentes RF que entran o salen por la red. \xABColocando un filtro apropiado\xBB."
   },
   {
     "id": "fedi-ag-030",
@@ -10210,7 +10211,7 @@ var questions_banco_estudio_default = [
       "No est\xE1n permitidos en la reglamentaci\xF3n vigente"
     ],
     "correctIndex": 0,
-    "explain": "Criterio del enunciado original (2011); contrasta con normativa y criterios actuales de asignaci\xF3n. La respuesta que marca el banco es \xABSe reservan para concursos internacionales de alta competitividad\xBB."
+    "explain": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB."
   },
   {
     "id": "fedi-ah-033",
@@ -10224,7 +10225,7 @@ var questions_banco_estudio_default = [
       "Empieza siempre por la letra Q"
     ],
     "correctIndex": 3,
-    "explain": "Los c\xF3digos Q son grupos de tres letras empezando por Q. La respuesta que marca el banco es \xABEmpieza siempre por la letra Q\xBB."
+    "explain": "Los c\xF3digos Q son abreviaturas de tres letras que empiezan por Q (QTH ubicaci\xF3n, QRM interferencia, etc.). \xABEmpieza siempre por la letra Q\xBB."
   },
   {
     "id": "fedi-ah-034",
@@ -10350,7 +10351,7 @@ var questions_banco_estudio_default = [
       "El deletreo no est\xE1 permitido"
     ],
     "correctIndex": 0,
-    "explain": "En espa\xF1ol se usan nombres ICAO en castellano (Noviembre, no November). La respuesta que marca el banco es \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB."
+    "explain": "En Espa\xF1a se usa el alfabeto fon\xE9tico en castellano (Alfa, Noviembre\u2026), no la pronunciaci\xF3n inglesa de ICAO. \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB."
   },
   {
     "id": "fedi-ah-043",
@@ -10364,7 +10365,7 @@ var questions_banco_estudio_default = [
       "18 meses"
     ],
     "correctIndex": 1,
-    "explain": "Plazo del enunciado FEDI; verifica con reglamento vigente. La respuesta que marca el banco es \xAB12 meses\xBB."
+    "explain": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos; verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB."
   },
   {
     "id": "fedi-ah-044",
@@ -10406,7 +10407,7 @@ var questions_banco_estudio_default = [
       "Periodo de validez"
     ],
     "correctIndex": 2,
-    "explain": "No es requisito CEPT listar la asociaci\xF3n del titular. La respuesta que marca el banco es \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB."
+    "explain": "El certificado CEPT no exige indicar la asociaci\xF3n del titular en el formato habitual del diploma. \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB."
   },
   {
     "id": "fedi-ah-049",
@@ -10504,7 +10505,7 @@ var questions_banco_estudio_default = [
       "200 W"
     ],
     "correctIndex": 0,
-    "explain": "Las potencias m\xE1ximas por banda est\xE1n en el anexo I del reglamento de aficionados (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta la banda del enunciado con el anexo I vigente. La respuesta que marca el banco es \xAB50 W\xBB."
+    "explain": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB."
   },
   {
     "id": "fedi-ah-059",
@@ -10532,7 +10533,7 @@ var questions_banco_estudio_default = [
       "Seguir emitiendo"
     ],
     "correctIndex": 1,
-    "explain": "Ante interferencias perjudiciales, cesar emisiones hasta resolver. La respuesta que marca el banco es \xABSuspender de inmediato las emisiones\xBB."
+    "explain": "Si causas interferencias perjudiciales debes cesar la emisi\xF3n de inmediato hasta resolver la causa (buena pr\xE1ctica y deber reglamentario). \xABSuspender de inmediato las emisiones\xBB."
   },
   {
     "id": "ofic-001",
@@ -10546,7 +10547,7 @@ var questions_banco_estudio_default = [
       "P = V + I"
     ],
     "correctIndex": 1,
-    "explain": "Potencia en CC: P = V\xB7I (vatios). Es f\xF3rmula b\xE1sica del programa de electricidad. La respuesta que marca el banco es \xABP = V \xB7 I\xBB.",
+    "explain": "En corriente continua la potencia disipada o entregada es P = V\xB7I (vatios). Es la relaci\xF3n b\xE1sica del bloque de electricidad. \xABP = V \xB7 I\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / electricidad b\xE1sica; contrastar con manuales URE."
   },
   {
@@ -10876,7 +10877,7 @@ var questions_banco_estudio_default = [
       "Son obligatorias en DX"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionados se basa en comunicaciones abiertas relacionadas con t\xE9cnica, experimentaci\xF3n y aprendizaje. No debe usarse para tr\xE1fico secreto, comercial o ajeno a la finalidad del servicio. La respuesta que marca el banco es \xABNo son propias del servicio y deben evitarse\xBB.",
+    "explain": "El servicio de radioaficionado es t\xE9cnico y abierto: no se usan comunicaciones encubiertas ni fines ajenos al servicio (comercial, secreto, etc.). \xABNo son propias del servicio y deben evitarse\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 y buenas pr\xE1cticas operativas (IARU / URE)."
   },
   {
@@ -11071,7 +11072,7 @@ var questions_banco_estudio_default = [
       "Solo importa la resistencia"
     ],
     "correctIndex": 1,
-    "explain": "En resonancia |Xc| = |XL|; las reactancias se compensan y la impedancia serie queda resistiva (idealmente). La respuesta que marca el banco es \xABSe igualan en magnitud y se cancelan\xBB.",
+    "explain": "En resonancia serie |XL| = |XC|; las reactancias se cancelan y la impedancia queda esencialmente resistiva. \xABSe igualan en magnitud y se cancelan\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / componentes y circuitos."
   },
   {
@@ -11086,7 +11087,7 @@ var questions_banco_estudio_default = [
       "Q = f + B"
     ],
     "correctIndex": 1,
-    "explain": "Q = f/B: a mayor Q, m\xE1s selectivo (menor ancho de banda relativo). Es f\xF3rmula frecuente en ex\xE1menes t\xE9cnicos. La respuesta que marca el banco es \xABQ = f / B\xBB.",
+    "explain": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -11161,7 +11162,7 @@ var questions_banco_estudio_default = [
       "Dos antenas obligatoriamente"
     ],
     "correctIndex": 1,
-    "explain": "La doble conversi\xF3n mezcla dos veces hacia FI distintas para mejorar selectividad o suprimir problemas de imagen en bandas altas. La respuesta que marca el banco es \xABDos frecuencias intermedias en cadena\xBB.",
+    "explain": "La doble superheterodina usa dos mezclas a FI distintas para mejorar selectividad y suprimir imagen en bandas altas. \xABDos frecuencias intermedias en cadena\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -11176,7 +11177,7 @@ var questions_banco_estudio_default = [
       "El c\xF3digo Q"
     ],
     "correctIndex": 1,
-    "explain": "Relaci\xF3n delante-atr\xE1s: cu\xE1nto m\xE1s radiada o recibida hay en el l\xF3bulo principal frente a la parte trasera (en dB). La respuesta que marca el banco es \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
+    "explain": "La relaci\xF3n delante\u2013atr\xE1s (F/B) compara radiaci\xF3n o recepci\xF3n del l\xF3bulo principal frente a la parte trasera, en dB. \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / antenas y propagaci\xF3n."
   },
   {
@@ -11356,7 +11357,7 @@ var questions_banco_estudio_default = [
       "Una antena resonante"
     ],
     "correctIndex": 1,
-    "explain": "En CC estable la bobina ideal solo opondr\xEDa la resistencia \xF3hmica del hilo: se modela como cortocircuito (sin reactancia en continua).",
+    "explain": "La bobina almacena energ\xEDa en campo magn\xE9tico; en CC estable se comporta como cortocircuito ideal tras el transitorio. \xABUn cortocircuito\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -11431,7 +11432,7 @@ var questions_banco_estudio_default = [
       "Aumenta la FEM de la fuente"
     ],
     "correctIndex": 1,
-    "explain": "El shunt es una resistencia baja en paralelo: desv\xEDa corriente para que el instrumento no reciba toda la intensidad del circuito.",
+    "explain": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABDeriva la mayor parte de la corriente en paralelo de baja resistencia\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -11506,7 +11507,7 @@ var questions_banco_estudio_default = [
       "Solo con la antena desconectada"
     ],
     "correctIndex": 1,
-    "explain": "El volt\xEDmetro mide tensi\xF3n entre puntos: conexi\xF3n en derivaci\xF3n (paralelo), no en serie.",
+    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEntre los dos nodos (derivaci\xF3n / paralelo)\xBB. (BOE-A-2013-7624).",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -11750,7 +11751,7 @@ var questions_banco_estudio_default = [
       "La autorizaci\xF3n de la Administraci\xF3n competente en espectro radioel\xE9ctrico para instalar la antena."
     ],
     "correctIndex": 1,
-    "explain": "Lo que identifica al operador autorizado ante terceros en emisi\xF3n es su distintivo de llamada asignado, no el DNI ni el domicilio. \xABSu distintivo de llamada asociado.\xBB.",
+    "explain": "Lo que identifica al operador autorizado ante terceros en emisi\xF3n es su distintivo de llamada asignado, no el DNI ni el domicilio. \xABSu distintivo de llamada asociado.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1833). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11900,7 +11901,7 @@ var questions_banco_estudio_default = [
       "Nunca."
     ],
     "correctIndex": 3,
-    "explain": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca.\xBB.",
+    "explain": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12329,7 +12330,7 @@ var questions_banco_estudio_default = [
       "0 dBm"
     ],
     "correctIndex": 0,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB.",
+    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12481,7 +12482,7 @@ var questions_banco_estudio_default = [
       "Para igualar la se\xF1al de salida a la de entrada"
     ],
     "correctIndex": 2,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABPara reducir el rizado de la se\xF1al de salida y obtener un valor m\xE1s constante de esta\xBB.",
+    "explain": "Tras el rectificador la salida de una fuente de alimentaci\xF3n tiene rizado (ripple); el filtro (condensadores, a veces inductores) lo aten\xFAa para dejar una tensi\xF3n de salida m\xE1s estable. \xABPara reducir el rizado de la se\xF1al de salida y obtener un valor m\xE1s constante de esta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12651,7 +12652,7 @@ var questions_banco_estudio_default = [
       "Isotr\xF3pica"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABDirectiva\xBB.",
+    "explain": "El diagrama presenta un l\xF3bulo principal estrecho y l\xF3bulos secundarios peque\xF1os: patr\xF3n de antena directiva. Omnidireccional ser\xEDa casi circular en el plano horizontal. \xABDirectiva\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12712,7 +12713,7 @@ var questions_banco_estudio_default = [
       "A es la amplitud y B es el periodo de la se\xF1al"
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABA es la amplitud y B es el periodo de la se\xF1al\xBB.",
+    "explain": "En la traza del osciloscopio, A es la altura pico a pico (amplitud) y B la distancia entre dos picos iguales sucesivos (periodo T=1/f). No confundir periodo con frecuencia en Hz. \xABA es la amplitud y B es el periodo de la se\xF1al\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12727,7 +12728,7 @@ var questions_banco_estudio_default = [
       "Transforman la energ\xEDa el\xE9ctrica en magn\xE9tica"
     ],
     "correctIndex": 2,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABLa tensi\xF3n de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas\xBB.",
+    "explain": "En serie las tensiones de cada pila o bater\xEDa se suman; en paralelo se suman capacidades de corriente manteniendo la misma tensi\xF3n nominal. \xABLa tensi\xF3n de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12787,7 +12788,7 @@ var questions_banco_estudio_default = [
       "Amplificador de FI, detector, mezclador, amplificador de audio"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABAmplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio\xBB.",
+    "explain": "En un superheterodino la se\xF1al pasa: antena \u2192 amplificador RF \u2192 mezclador (+ oscilador) \u2192 amplificador FI \u2192 demodulador \u2192 audio. Ese es el flujo est\xE1ndar del temario. \xABAmplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13463,7 +13464,7 @@ var questions_banco_estudio_default = [
       "Control autom\xE1tico de audio"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABControl autom\xE1tico de ganancia\xBB.",
+    "explain": "El enunciado pide nivel de audio constante pese a variaciones de se\xF1al en antena: es funci\xF3n del AGC (CAG), que regula la ganancia en RF/FI. CAF mantiene frecuencia; no es squelch. \xABControl autom\xE1tico de ganancia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13615,7 +13616,7 @@ var questions_banco_estudio_default = [
       "3.14 V"
     ],
     "correctIndex": 1,
-    "explain": "En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xAB7,071 V\xBB.",
+    "explain": "La onda sinusoidal de la figura tiene valor de pico 10 V; la tensi\xF3n eficaz es Vrms = Vp/\u221A2 \u2248 7,071 V. 10 V ser\xEDa el pico, no la eficaz. \xAB7,071 V\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13794,7 +13795,7 @@ var questions_banco_estudio_default = [
       "Ninguna de las anteriores respuestas es v\xE1lida"
     ],
     "correctIndex": 1,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xABEnerg\xEDa qu\xEDmica en energ\xEDa el\xE9ctrica\xBB.",
+    "explain": "Una pila o bater\xEDa convierte energ\xEDa qu\xEDmica almacenada en energ\xEDa el\xE9ctrica mediante reacciones en sus electrodos (FEM). Por eso la transformaci\xF3n correcta es \xABEnerg\xEDa qu\xEDmica en energ\xEDa el\xE9ctrica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13964,7 +13965,7 @@ var questions_banco_estudio_default = [
       "Impedancia"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABRelaci\xF3n delante-atr\xE1s\xBB.",
+    "explain": "En diagramas polares, la relaci\xF3n delante-atr\xE1s compara el nivel de radiaci\xF3n del l\xF3bulo principal (punto 1) frente al opuesto (punto 2), en dB. No es ganancia absoluta ni impedancia. \xABRelaci\xF3n delante-atr\xE1s\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13981,7 +13982,7 @@ var questions_banco_estudio_default = [
       "Atenuador"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABAcoplador de antena\xBB.",
+    "explain": "El circuito entre transmisor y antena con elementos L y C en \u03C0 o T es un acoplador (antenna tuner) para adaptar impedancias y minimizar ROE. No es discriminador ni atenuador fijo. \xABAcoplador de antena\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14013,7 +14014,7 @@ var questions_banco_estudio_default = [
       "Met\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra"
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABMet\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra\xBB.",
+    "explain": "La caja de apantallamiento tipo jaula de Faraday debe ser conductora, continua y a tierra para derivar corrientes inducidas; aislante o grietas dejan pasar el campo externo. \xABMet\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14335,7 +14336,7 @@ var questions_banco_estudio_default = [
       "No se puede utilizar como receptor, al no disponer de etapa de frecuencia intermedia"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABSSB y CW\xBB.",
+    "explain": "El esquema muestra mezclador y filtro de producto t\xEDpicos de un receptor que demodula SSB y CW (telegraf\xEDa). No es un circuito solo FM ni un bloque in\xFAtil en el diagrama. \xABSSB y CW\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14365,7 +14366,7 @@ var questions_banco_estudio_default = [
       "7,4 voltios y 1500 amperios durante media hora"
     ],
     "correctIndex": 0,
-    "explain": "Una fuente ideal de tensi\xF3n mantiene V constante; una de corriente mantiene I constante. \xAB7,4 voltios y 1,5 amperios durante una hora\xBB.",
+    "explain": "7,4 V es la tensi\xF3n nominal; 1500 mAh indica que puede entregar 1500 mA (1,5 A) durante una hora aproximadamente si la descarga es nominal (capacidad en miliamperios-hora). \xAB7,4 voltios y 1,5 amperios durante una hora\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14426,7 +14427,7 @@ var questions_banco_estudio_default = [
       "Como oscilador a la frecuencia de resonancia del circuito LC"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
+    "explain": "El LC en paralelo con diodo forma un circuito resonante selectivo en la frecuencia de resonancia: puede actuar como receptor AM pasivo. No es amplificador ni oscilador alimentado. \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14443,7 +14444,7 @@ var questions_banco_estudio_default = [
       "Rectificador de onda completa"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABDetector de envolvente\xBB.",
+    "explain": "El diodo en serie con resistencia de carga y condensador rectifica y filtra la envolvente de una se\xF1al modulada: act\xFAa como detector de envolvente, no como limitador. \xABDetector de envolvente\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14706,7 +14707,7 @@ var questions_banco_estudio_default = [
       ""
     ],
     "correctIndex": 3,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABPotencia\xBB.",
+    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABPotencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14870,7 +14871,7 @@ var questions_banco_estudio_default = [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABVHF\xBB.",
+    "explain": "Las comunicaciones por sat\xE9lite de radioaficionado (SO-50, etc.) usan bandas VHF/UHF con enlaces l\xEDnea de vista al sat\xE9lite; HF depende de ion\xF3sfera y MF/LF no son el caso t\xEDpico. \xABVHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15352,7 +15353,7 @@ var questions_banco_estudio_default = [
       "F=13,5 MHz"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABF=14,2 MHz\xBB.",
+    "explain": "A partir del circuito resonante y del esquema del superheterodino de la figura, la frecuencia de sinton\xEDa calculada coincide con 14,2 MHz (relaci\xF3n entre oscilador, FI y RF). \xABF=14,2 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15577,7 +15578,7 @@ var questions_banco_estudio_default = [
       "No se exigen requisitos previos para solicitarla"
     ],
     "correctIndex": 2,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABCuando se conceda, a la vez se otorgar\xE1 el distintivo de llamada\xBB.",
+    "explain": "La autorizaci\xF3n de espectro para aficionados conlleva la asignaci\xF3n del indicativo al concederse; no es gratuita ni sin requisitos previos. \xABCuando se conceda, a la vez se otorgar\xE1 el distintivo de llamada\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16027,7 +16028,7 @@ var questions_banco_estudio_default = [
       "QSA"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABQRT\xBB.",
+    "explain": "QRT indica cese de transmisi\xF3n; QRP es baja potencia y QSA la fuerza de la se\xF1al recibida. \xABQRT\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16865,7 +16866,7 @@ var questions_banco_estudio_default = [
       "EA+EB+EC"
     ],
     "correctIndex": 2,
-    "explain": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPrefijo + Distrito + Sufijo\xBB.",
+    "explain": "El distintivo espa\xF1ol combina prefijo nacional (E\u2026), cifra de distrito y sufijo asignado por la administraci\xF3n. Por eso la estructura es \xABPrefijo + Distrito + Sufijo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16925,7 +16926,7 @@ var questions_banco_estudio_default = [
       "EPA, EQZ, EAA"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABEA, EB, EC\xBB.",
+    "explain": "Espa\xF1a tiene prefijos ITU EA, EB y EC para estaciones amateur. FM/FN son franc\xE9s; KN americano. \xABEA, EB, EC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17715,7 +17716,7 @@ var questions_banco_estudio_default = [
       "50,000-51,000 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xAB10,00-10,5 GHz\xBB.",
+    "explain": "La banda 10,00\u201310,5 GHz entre aficionados requiere autorizaci\xF3n especial de uso seg\xFAn el cuadro nacional del BOE; 14 MHz y 50 MHz son bandas habituales sin ese requisito adicional. \xAB10,00-10,5 GHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17850,7 +17851,7 @@ var questions_banco_estudio_default = [
       "Restringido, si la estaci\xF3n estuviera dotada de c\xF3digo de acceso"
     ],
     "correctIndex": 1,
-    "explain": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB.",
+    "explain": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18060,7 +18061,7 @@ var questions_banco_estudio_default = [
       "QRP"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABQRO\xBB.",
+    "explain": "QRO solicita aumentar potencia de transmisi\xF3n; QRP pedir\xEDa reducirla. \xABQRO\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18510,7 +18511,7 @@ var questions_banco_estudio_default = [
       "Emitir con el distintivo de llamada de otro radioaficionado sin su permiso"
     ],
     "correctIndex": 0,
-    "explain": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABTransmitir mensajes de naturaleza t\xE9cnica sobre ensayos\xBB.",
+    "explain": "En tr\xE1fico entre aficionados est\xE1n permitidos mensajes t\xE9cnicos de ensayos; no propaganda comercial ni usar indicativo ajeno sin permiso. \xABTransmitir mensajes de naturaleza t\xE9cnica sobre ensayos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18540,7 +18541,7 @@ var questions_banco_estudio_default = [
       "No existen"
     ],
     "correctIndex": 1,
-    "explain": "Los indicativos espa\xF1oles empiezan por E: EA (aficionados), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n. \xABEA, EB, EC\xBB.",
+    "explain": "Los prefijos de indicativos espa\xF1oles en el servicio de aficionado incluyen EA (aficionado), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n en territorio nacional. Por eso la terna habitual del banco es \xABEA, EB, EC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -19475,6 +19476,12 @@ function isStemExplainTopicConflict(ped, stem) {
   if (/rectificador/.test(s) && /funci[oó]n|consiste/.test(s) && /^Cada diodo tiene función distinta/i.test(p)) {
     return true;
   }
+  if (/fuente de alimentaci[oó]n lineal|orden de los elementos.*lineal|elementos de una fuente.*lineal/i.test(s) && /fuente ideal de tensi[oó]n|fuente ideal de corriente|mantiene v constante.*mantiene i constante/i.test(p)) {
+    return true;
+  }
+  if (/fuente ideal de tensi[oó]n|fuente ideal de corriente|mantiene v constante.*mantiene i constante/i.test(p) && !/fuente ideal|tensi[oó]n ideal|corriente ideal|modelo ideal de (tensi|corriente)/i.test(s)) {
+    return true;
+  }
   if (/asignar (el )?sufijo|sufijo\s+(pan|mm|mo)\b/i.test(s) && /identifica la estaci[oó]n y debe usarse/i.test(p)) {
     return true;
   }
@@ -20220,6 +20227,9 @@ function synthesizeReason(stem, correct, topicId) {
   if (/digital display|dial de presentaci[oó]n|frecuencia de trabajo/i.test(s)) {
     return `El display digital del transceptor indica la frecuencia de sinton\xEDa o trabajo del equipo. \xAB${c}\xBB.`;
   }
+  if (/fuente de alimentaci[oó]n lineal|orden de los elementos.*lineal|elementos de una fuente.*lineal/i.test(s)) {
+    return `Cadena t\xEDpica: transformador (adapta y a\xEDsla CA), rectificador (CA\u2192CC pulsante), filtro (suaviza rizado) y regulador (tensi\xF3n estable). \xAB${c}\xBB.`;
+  }
   if (/voltio.*amperio|producto de un voltio/i.test(s)) {
     return `Potencia el\xE9ctrica P = V\xB7I; un voltio multiplicado por un amperio es un vatio (W). \xAB${c}\xBB.`;
   }
@@ -20876,6 +20886,9 @@ function stemCrossTopicExplain(stem, correct) {
   if (/modulaci[oó]n de frecuencia.*fon[ií]a|s[ií]mbolo.*frecuencia.*fon/i.test(s)) {
     return `En fon\xEDa, la clase F3E designa emisi\xF3n de voz en FM (modulaci\xF3n de frecuencia). A3E corresponde a AM con doble banda lateral. \xAB${c}\xBB.`;
   }
+  if (/fuente de alimentaci[oó]n lineal|orden de los elementos.*lineal|elementos de una fuente.*lineal/i.test(s)) {
+    return `Cadena t\xEDpica: transformador (adapta y a\xEDsla CA), rectificador (CA\u2192CC pulsante), filtro (suaviza rizado) y regulador (tensi\xF3n estable). \xAB${c}\xBB.`;
+  }
   if (/corriente continua.*intensidad|cc:.*intensidad/.test(s)) {
     return `En CC la intensidad es la misma en serie en un lazo simple; tensiones se reparten seg\xFAn resistencias. \xAB${c}\xBB.`;
   }
@@ -21026,6 +21039,12 @@ function generatePedagogicalExplain(q) {
   const out = finalizeExplain(stem, correct, draft);
   if (!out || out.length < 48) return fallbackExplain(q);
   return out;
+}
+
+// lib/explain-exam-grade.mjs
+var TAUTOLOGY_RE = /la respuesta que marca el banco|responde al criterio del banco|opción que responde al criterio del banco|formulación del banco es «/i;
+function isTautologicalExplain(ped) {
+  return TAUTOLOGY_RE.test(String(ped || ""));
 }
 
 // data/verification-sources.mjs
@@ -21262,6 +21281,7 @@ function isExplainAcceptable(q, text) {
   if (!ped || ped.length < 35) return false;
   if (/\. Es[,]?\s*["']?\s*$/.test(ped)) return false;
   if (isGenericExplainText(ped)) return false;
+  if (isTautologicalExplain(ped)) return false;
   if (!correct || !explainMentionsCorrect(ped, correct)) return false;
   const probe = { ...q, explain: ped };
   if (isMisassignedPedagogicalExplain(probe)) return false;
@@ -22510,6 +22530,7 @@ function isWeakBankExplain(text) {
   if (isLazyDiodeListExplain(t)) return true;
   if (isRespectoTemplateExplain(t)) return true;
   if (isGenericExplainText(t)) return true;
+  if (/la respuesta que marca el banco|responde al criterio del banco/i.test(t)) return true;
   if (/\. Es[,]?\s*["']?\s*$/.test(t)) return true;
   return false;
 }
@@ -26117,7 +26138,7 @@ function renderDeepenPanel(q) {
   const historical = typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
   const resumen = sync?.resumenMemorizar?.length ? `<ul class="temario-list temario-list--compact">${sync.resumenMemorizar.slice(0, 4).map((x) => `<li>${escapeHtml2(x)}</li>`).join("")}</ul>` : "";
   const pdfHint = sync?.partePdf ? `<p class="quiz-deepen__pdf muted">PDF local: <code>${escapeHtml2(sync.partePdf)}</code>${sync.paginasLibro && sync.paginasLibro !== "\u2014" ? ` \xB7 p\xE1ginas <strong>${escapeHtml2(sync.paginasLibro)}</strong> (${escapeHtml2(sync.capitulosLibro || "")})` : ""}</p>` : "";
-  const ocrDeepen = sync?.paginasLibro && sync.paginasLibro !== "\u2014" ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml2(LIBRO_TECNICA_OCR_BASE)}</code></p>` : "";
+  const ocrDeepen = sync?.paginasLibro && sync.paginasLibro !== "\u2014" ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml2(LIBRO_TECNICA_OCR_HINT)}</code></p>` : "";
   const links = `<ul class="quiz-deepen__links">
       <li><a href="#temario--${enc}--sec-3">Temario \xB7 Libro oficial y pr\xE1ctica</a></li>
       <li><a href="#temario--${enc}--sec-5">Temario \xB7 Teor\xEDa explicada del bloque</a></li>

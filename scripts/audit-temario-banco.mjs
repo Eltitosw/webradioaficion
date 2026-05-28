@@ -26,7 +26,7 @@ const push = (s = "") => lines.push(s);
 
 push("=== Auditoría temario ↔ banco ===");
 push(`Fecha: ${new Date().toISOString().slice(0, 10)}`);
-push(`Banco activo: ${questionsBanco.length} preguntas (mín. 900)`);
+push(`Banco activo: ${questionsBanco.length} preguntas (examen curado)`);
 push(`Figuras certificadas: ${BANCO_STATS.withFigure ?? "?"}`);
 push("");
 

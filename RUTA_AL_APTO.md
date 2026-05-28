@@ -40,7 +40,7 @@ pnpm run build:web
 
 ## Huecos conocidos (no bloquean, pero repasa aparte)
 
-- ~6 preguntas del banco piden figura y aún no tienen diagrama importado.
+- **30 preguntas** del banco de examen llevan figura original certificada (`images/quiz/*-original.*`); el resto del programa se cubre con texto y temario.
 - Tema con pocas preguntas en banco: **instalaciones** (~12) — refuerzo obligatorio por temario y libro oficial. Electricidad básica ya está ampliada en banco (~57).
 - Pool URE completo en web &gt; preguntas en banco (cribado estricto); el simulador prioriza calidad sobre cantidad bruta.
 
