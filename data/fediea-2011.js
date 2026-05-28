@@ -157,7 +157,7 @@ export default [
       "Filtro → transformador → regulador → rectificador",
     ],
     correctIndex: 0,
-    explain: "Primero AC adecuada (trafo), rectificación, suavizado y por último regulación. FEDI-EA.",
+    explain: "En una fuente lineal: el transformador adapta y aísla la CA de red, el rectificador convierte a CC pulsante, el filtro suaviza el rizado y el regulador estabiliza la tensión de salida. El orden habitual es transformador → rectificador → filtro → regulador.",
   },
   {
     id: "fedi-ag-012",

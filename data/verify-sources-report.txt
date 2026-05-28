@@ -1,4 +1,4 @@
-Verificación de fuentes · 2026-05-21T23:15:01
+Verificación de fuentes · 2026-05-28T21:00:47
 
 === Catálogo (data/verification-sources.mjs) ===
 Entradas: 26

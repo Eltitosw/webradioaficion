@@ -17,6 +17,7 @@ const ROOT = path.join(__dirname, "..");
 const SOURCE_FILES = [
   "data/fediea-bloques.js",
   "data/fediea-2011.js",
+  "data/questions-figures.js",
   "data/quijotes-ea3rcq.js",
   "data/ure-reglamentacion.js",
 ];

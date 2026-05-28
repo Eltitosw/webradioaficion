@@ -14,8 +14,7 @@ import fedi from "../data/fediea-2011.js";
 import fediBloques from "../data/fediea-bloques.js";
 import quijotes from "../data/quijotes-ea3rcq.js";
 import { isExamAlignedSourceId } from "../lib/exam-aligned-sources.mjs";
-import quijotesExplanations from "../data/quijotes-explanations.js";
-import generatedExplanations from "../data/generated-explanations.js";
+import { lookupStoredExplain } from "../lib/lookup-explanation.mjs";
 import figures from "../data/questions-figures.js";
 import { CRIBADO_PREFERRED_IDS, CRIBADO_STATS } from "../data/question-cribado.js";
 import { dedupeKey, writeQuestionModule, writeUtf8File } from "../lib/import-question-utils.mjs";
@@ -67,7 +66,7 @@ function applyExamClassification(q) {
 function withPedagogicalExplain(q) {
   let out = repairQuestionFields(applyExamClassification(q));
   const prev = typeof out.explain === "string" ? out.explain.trim() : "";
-  const curated = quijotesExplanations[out.id] || generatedExplanations[out.id] || "";
+  const curated = lookupStoredExplain(out.id);
 
   if (curated && isExplainAcceptable(out, curated)) {
     out = { ...out, explain: curated };

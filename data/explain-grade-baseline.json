@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "updated": "2026-05-28",
+  "note": "Actualizado con verify-explain-exam-grade --update-baseline",
+  "maxFails": 0,
+  "maxFailsByCode": {}
+}

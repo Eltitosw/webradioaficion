@@ -12,13 +12,13 @@ export default [
     stemFigure: "images/quiz/fedi-ag-011-original.jpg",
     stemFigureAlt: "Figura original FEDI-EA ag-011 (ag-11.jpg): Indique el orden de los elementos de una fuente de alimentación lineal:",
     options: [
-      "A Transformador, B Rectificador, C Regulador, D Filtro.",
-      "A Rectificador, B Transformador, C Filtro, D Regulador.",
-      "A Regulador, B Filtro, C Transformador, D Rectificador.",
-      "A Filtro, B Transformador, C Regulador, D Rectificador.",
+      "Transformador → rectificador → filtro → regulador",
+      "Rectificador → transformador → filtro → regulador",
+      "Regulador → filtro → transformador → rectificador",
+      "Filtro → transformador → regulador → rectificador",
     ],
     correctIndex: 0,
-    explain: "Primero AC adecuada (trafo), rectificación, suavizado y por último regulación. FEDI-EA.",
+    explain: "En una fuente lineal: el transformador adapta y aísla la CA de red, el rectificador convierte a CC pulsante, el filtro suaviza el rizado y el regulador estabiliza la tensión de salida. El orden habitual es transformador → rectificador → filtro → regulador.",
   },
   {
     id: "fedi-ag-013",

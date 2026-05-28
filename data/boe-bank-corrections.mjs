@@ -104,4 +104,15 @@ export const QUESTION_CORRECTIONS = {
   "quijotes-84-1936": {
     explain: `Cualquier modificación sustancial de la instalación exige comunicación o autorización ante la Administración competente, con el mismo procedimiento que una nueva instalación (${BOE_REF}). «Se debe solicitar a la Administración competente y seguir el mismo procedimiento que si se tratase de la primera instalación.».`,
   },
+  "fedi-ag-011": {
+    optionPatches: [
+      { index: 0, text: "Transformador → rectificador → filtro → regulador" },
+      { index: 1, text: "Rectificador → transformador → filtro → regulador" },
+      { index: 2, text: "Regulador → filtro → transformador → rectificador" },
+      { index: 3, text: "Filtro → transformador → regulador → rectificador" },
+    ],
+    correctIndex: 0,
+    explain:
+      "En una fuente lineal: el transformador adapta y aísla la CA de red, el rectificador convierte a CC pulsante, el filtro suaviza el rizado y el regulador estabiliza la tensión de salida. El orden habitual es transformador → rectificador → filtro → regulador.",
+  },
 };

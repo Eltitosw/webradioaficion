@@ -1,4 +1,4 @@
-/** Explicaciones Quijotes (UTF-8). sync-boe-normative-explanations.mjs */
+/** Explicaciones Quijotes (UTF-8). expand-explanations-exam-needed.mjs */
 export default {
   "quijotes-84-1810": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida máxima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). «50 W.».",
   "quijotes-84-1817": "La licencia CEPT (T/R 61-01) permite operar temporalmente en países adheridos aplicando sus bandas locales, no las del país de origen si difieren. «Asociación de radioaficionados a la que pertenece.». (BOE-A-2013-7624).",

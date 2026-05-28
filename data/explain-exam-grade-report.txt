@@ -1,0 +1,10 @@
+=== Auditoría calidad explicaciones (grado examen) ===
+Fecha: 2026-05-28
+Banco: 563 preguntas
+OK: 563
+Fallos: 0
+Avisos: 257
+
+Por código:
+  short_no_reason: 254
+  very_short: 3

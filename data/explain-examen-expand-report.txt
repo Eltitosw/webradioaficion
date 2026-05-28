@@ -1,5 +1,24 @@
-Expansión selectiva · banco EXAMEN · 2026-05-20T22:56:20
+Expansión selectiva · banco EXAMEN · 2026-05-28T20:54:39
 
-Candidatas: 0
-Ampliadas: 0
-Siguen necesitando expansión: 0
+✓ ofic-062 · 85 → 122 chars
+  P: La intensidad de un campo eléctrico homogéneo se mide en unidades SI de:
+  E: En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «V/m».
+
+✓ ofic-064 · 72 → 124 chars
+  P: Si la tensión eficaz de una sinusoide es 230 V, el valor de pico aproximado es:
+  E: En corriente continua, V = I·R y P = V·I son las relaciones base del examen. La magnitud o fórmula correcta aquí es «325 V».
+
+✓ ofic-065 · 88 → 167 chars
+  P: Para medir la diferencia de potencial entre dos nodos, el instrumento adecuado se conecta:
+  E: Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Entre los dos nodos (derivación / paralelo)». (BOE-A-2013-7624).
+
+✓ ure-p2-q414 · 161 → 209 chars
+  P: Por la comisión de una infracción grave tipificada en la Ley General de Telecomunicaciones se p
+  E: La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «2.000.000 €» es la formulación del banco. La respuesta que marca el banco es «50
+
+Candidatas: 5
+Ampliadas: 4
+Siguen necesitando expansión: 1
+
+IDs:
+fedi-ag-005
