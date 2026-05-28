@@ -3,6 +3,8 @@
 export default {
   "fedi-ag-002": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «200 pF». No confundir con el distractor del mismo bloque temático.",
   "fedi-ag-005": "Tomar parte de la salida y reinyectarla a la entrada es realimentación (feedback): puede estabilizar o modificar la ganancia del circuito. No confundir con rectificación ni demodulación. «Realimentación».",
+  "ure-p1-q85": "Con pilas idénticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensión total es la suma de las de cada pila. No confundir con resistencias en serie. «La intensidad del conjunto es igual a la de una pila».",
+  "ure-p1-q128": "La máxima transferencia de potencia entre dos circuitos se produce cuando las impedancias están adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que «antena despejada». «Exista adaptación de las impedancias».",
   "fedi-ag-006": "La resistencia se mide sin tensión aplicada (fuera de circuito o en banco de prueba). En paralelo la tensión es común; en serie, la intensidad. Las tres primeras afirmaciones del enunciado no son correctas en conjunto. «Ninguna de las respuestas anteriores es correcta».",
   "fedi-ag-008": "La capacidad almacena carga eléctrica; en el SI se mide en faradios (F) y submúltiplos (µF, nF, pF). «Faradios».",
   "fedi-ag-009": "En el esquema, el diodo en serie con la carga y el condensador forman un detector de envolvente: rectifica la RF y la constante de tiempo RC extrae la envolvente AM. No es oscilador ni conversor de frecuencia. «Detector de envolvente».",

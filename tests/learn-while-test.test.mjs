@@ -38,6 +38,21 @@ test("buildWhyWrong detecta limitador de corriente", () => {
   assert.match(w, /fusibles|limitador/i);
 });
 
+test("buildWhyCorrect prioriza explicación del banco frente a plantilla genérica", () => {
+  const t = buildWhyCorrect({
+    id: "fedi-ag-005",
+    part: 1,
+    topicId: "electricidad-basica",
+    stem: "¿Cómo se denomina al proceso de tomar parte de la señal de salida de un circuito para introducirla de nuevo en su entrada?",
+    options: ["Rectificación", "Conversión", "Demodulación", "Realimentación"],
+    correctIndex: 3,
+    explain:
+      "Tomar parte de la salida y reinyectarla a la entrada es realimentación (feedback): puede estabilizar o modificar la ganancia del circuito. No confundir con rectificación ni demodulación. «Realimentación».",
+  });
+  assert.match(t, /realimentaci[oó]n|feedback/i);
+  assert.doesNotMatch(t, /criterio de examen apunta/i);
+});
+
 test("buildStructuredFeedbackHtml para todo el banco (rectificador)", () => {
   const html = buildStructuredFeedbackHtml(RECTIFIER_Q, 0);
   assert.match(html, /quiz-fb-reasoning--structured/);

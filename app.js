@@ -3,6 +3,7 @@ import topicStudy from "./data/topics-study.js";
 import { LIBRO_OFICIAL_INTRO, TEMARIO_BLOCK_ENRICHMENT } from "./data/temario-book-map.mjs";
 import { LIBRO_TEMA_TEORIA } from "./data/libro-temario-sync.mjs";
 import { LIBRO_TECNICA_OCR_HINT } from "./data/libro-tecnica-indice.mjs";
+import { pickDeepenFocusLines } from "./lib/quiz-deepen-focus.mjs";
 import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
 import questionsBancoEstudio from "./data/questions-banco-estudio.js";
@@ -2168,7 +2169,7 @@ const QUIZ_MODE_HINTS = {
   study:
     "Tras cada respuesta verás por qué encaja la opción y la explicación didáctica. Es el modo por defecto para aprender con el banco.",
   study_deepen:
-    "Solo acierto o fallo aquí; el detalle está en el resumen del bloque, enlaces al temario (secciones 3 y 5) y PDF. No repite la explicación larga del modo anterior.",
+    "Acierto o fallo, regla del banco (si existe) y 2–3 viñetas del temario ligadas a este enunciado — no el resumen genérico del bloque. Enlaces al PDF y secciones 3 y 5.",
   study_confidence: "Antes de corregir marcas seguridad baja, media o alta; luego ves la explicación y una nota de calibración.",
   exam: "Sin corrección hasta terminar las 30 preguntas (o la sesión libre completa).",
 };
@@ -3228,20 +3229,20 @@ function quizFeedbackTemarioHint(q) {
 
 /** Explicación didáctica usable (sin plantillas genéricas ni LF/RST mal asignados). */
 function usablePedagogy(q) {
-  const live = buildWhyCorrect(q);
-  if (live && !isWeakBankExplain(live) && !isMisassignedPedagogicalExplain(q)) {
-    if (!isStemExplainTopicConflict(live, q.stem)) return live;
-  }
   const fromBank = pedagogicalExplain(q);
   if (
     fromBank &&
-    !isWeakBankExplain(fromBank) &&
+    !isWeakBankExplain(fromBank, q) &&
     !isMisassignedPedagogicalExplain(q) &&
     !isStemExplainTopicConflict(fromBank, q.stem)
   ) {
     return fromBank;
   }
-  return live || "";
+  const live = buildWhyCorrect(q);
+  if (live && !isWeakBankExplain(live, q) && !isMisassignedPedagogicalExplain({ ...q, explain: live })) {
+    if (!isStemExplainTopicConflict(live, q.stem)) return live;
+  }
+  return live || fromBank || "";
 }
 
 function normFeedbackText(t) {
@@ -3282,15 +3283,15 @@ function renderDeepenPanel(q) {
   const rawExplain = typeof q.explain === "string" ? q.explain.trim() : "";
   const showBankLiteral =
     rawExplain &&
-    !isWeakBankExplain(rawExplain) &&
+    !isWeakBankExplain(rawExplain, q) &&
     !isGenericExplainText(rawExplain) &&
     !isMisassignedPedagogicalExplain(q);
   const historical =
     typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-  const resumen =
-    sync?.resumenMemorizar?.length
-      ? `<ul class="temario-list temario-list--compact">${sync.resumenMemorizar
-          .slice(0, 4)
+  const focusLines = pickDeepenFocusLines(q, { max: 3, minScore: 2 });
+  const focusList =
+    focusLines.length > 0
+      ? `<ul class="temario-list temario-list--compact">${focusLines
           .map((x) => `<li>${escapeHtml(x)}</li>`)
           .join("")}</ul>`
       : "";
@@ -3310,14 +3311,18 @@ function renderDeepenPanel(q) {
     </ul>`;
   return `<div class="quiz-deepen">
     <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicación larga del modo «corrección inmediata».</p>
-    ${resumen ? `<p class="quiz-deepen__note"><strong>Resumen para memorizar (${escapeHtml(blockTitle)}):</strong></p>${resumen}` : ""}
-    ${pdfHint}
-    ${ocrDeepen}
     ${
       showBankLiteral
-        ? `<p class="quiz-deepen__note"><strong>Texto del banco (literal):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(rawExplain)}</p></blockquote>`
+        ? `<p class="quiz-deepen__note"><strong>Regla de esta pregunta (banco):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(rawExplain)}</p></blockquote>`
         : ""
     }
+    ${
+      focusList
+        ? `<p class="quiz-deepen__note"><strong>Repaso del temario relacionado con este enunciado:</strong></p>${focusList}`
+        : `<p class="quiz-deepen__note muted">Abre el temario del bloque «${escapeHtml(blockTitle)}» (secciones 3 y 5) para contrastar la regla con el PDF.</p>`
+    }
+    ${pdfHint}
+    ${ocrDeepen}
     ${
       historical
         ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco histórico)</summary><p class="muted">${escapeHtml(historical)}</p></details>`

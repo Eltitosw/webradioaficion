@@ -2402,7 +2402,7 @@ export default [
       "Haya ondas estacionarias"
     ],
     "correctIndex": 2,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Exista adaptación de las impedancias».",
+    "explain": "La máxima transferencia de potencia entre dos circuitos se produce cuando las impedancias están adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que «antena despejada». «Exista adaptación de las impedancias».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5279,7 +5279,7 @@ export default [
       "Siempre se produce un cortocircuito"
     ],
     "correctIndex": 0,
-    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es «La intensidad del conjunto es igual a la de una pila».",
+    "explain": "Con pilas idénticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensión total es la suma de las de cada pila. No confundir con resistencias en serie. «La intensidad del conjunto es igual a la de una pila».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {

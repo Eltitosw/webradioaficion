@@ -1338,6 +1338,119 @@ for (const [blockId, refs] of Object.entries(LIBRO_TEMA_PAGINAS)) {
   }
 }
 
+// lib/quiz-deepen-focus.mjs
+var STOP = /* @__PURE__ */ new Set([
+  "que",
+  "con",
+  "por",
+  "para",
+  "del",
+  "las",
+  "los",
+  "una",
+  "uno",
+  "son",
+  "ser",
+  "est",
+  "esta",
+  "este",
+  "como",
+  "cual",
+  "cu\xE1l",
+  "siguiente",
+  "puede",
+  "debe",
+  "tiene",
+  "entre",
+  "sobre",
+  "desde",
+  "hasta",
+  "donde",
+  "cuando",
+  "cada",
+  "otro",
+  "otra",
+  "m\xE1s",
+  "menos",
+  "solo",
+  "sola",
+  "toda",
+  "todo",
+  "todos",
+  "todas",
+  "pregunta",
+  "respuesta",
+  "opci\xF3n",
+  "opciones",
+  "correcta",
+  "afirmar",
+  "indique",
+  "se\xF1ale",
+  "se\xF1alar",
+  "calcular",
+  "corresponde",
+  "corresponden",
+  "figura",
+  "gr\xE1fica",
+  "gr\xE1fico",
+  "esquema",
+  "diagrama",
+  "pantalla"
+]);
+function tokens(text) {
+  return String(text || "").toLowerCase().normalize("NFD").replace(/\p{M}/gu, "").match(/[a-z0-9áéíóúüñ]{3,}/gi)?.filter((t) => !STOP.has(t)) ?? [];
+}
+function scoreLine(line, stemSet, extra) {
+  const lt = new Set(tokens(line));
+  let s = 0;
+  for (const t of stemSet) if (lt.has(t)) s += 2;
+  for (const t of extra) if (lt.has(t)) s += 1;
+  return s;
+}
+function collectCandidateLines(study, libroResumen) {
+  const out = [];
+  const push = (arr) => {
+    if (!Array.isArray(arr)) return;
+    for (const item of arr) {
+      if (typeof item === "string" && item.trim()) out.push(item.trim());
+    }
+  };
+  push(study?.trapWarnings);
+  push(study?.expressBullets);
+  push(study?.memoryHooks);
+  if (Array.isArray(study?.quickSession)) {
+    for (const para of study.quickSession) {
+      const parts = String(para).split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter((s) => s.length >= 24);
+      out.push(...parts);
+    }
+  }
+  push(libroResumen);
+  return out;
+}
+function pickDeepenFocusLines(q, opts = {}) {
+  const max = opts.max ?? 3;
+  const minScore = opts.minScore ?? 2;
+  const blockId = String(q?.topicId ?? "");
+  const study = topics_study_default[blockId];
+  const libroResumen = LIBRO_TEMA_TEORIA[blockId]?.resumenMemorizar;
+  const candidates = collectCandidateLines(study, libroResumen);
+  if (!candidates.length) return [];
+  const correct = typeof q?.correctIndex === "number" && Array.isArray(q?.options) ? String(q.options[q.correctIndex] ?? "") : "";
+  const stemSet = /* @__PURE__ */ new Set([...tokens(q?.stem), ...tokens(correct)]);
+  const extra = new Set(tokens(q?.stemFigureAlt));
+  const ranked = candidates.map((line) => ({ line, score: scoreLine(line, stemSet, extra) })).filter((x) => x.score >= minScore).sort((a, b) => b.score - a.score);
+  const seen = /* @__PURE__ */ new Set();
+  const picked = [];
+  for (const { line } of ranked) {
+    const key = line.slice(0, 72);
+    if (seen.has(key)) continue;
+    seen.add(key);
+    picked.push(line);
+    if (picked.length >= max) break;
+  }
+  return picked;
+}
+
 // data/questions-banco.js
 var questions_banco_default = [
   {
@@ -3731,7 +3844,7 @@ var questions_banco_default = [
       "Haya ondas estacionarias"
     ],
     "correctIndex": 2,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABExista adaptaci\xF3n de las impedancias\xBB.",
+    "explain": "La m\xE1xima transferencia de potencia entre dos circuitos se produce cuando las impedancias est\xE1n adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que \xABantena despejada\xBB. \xABExista adaptaci\xF3n de las impedancias\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6608,7 +6721,7 @@ var questions_banco_default = [
       "Siempre se produce un cortocircuito"
     ],
     "correctIndex": 0,
-    "explain": "En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es \xABLa intensidad del conjunto es igual a la de una pila\xBB.",
+    "explain": "Con pilas id\xE9nticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensi\xF3n total es la suma de las de cada pila. No confundir con resistencias en serie. \xABLa intensidad del conjunto es igual a la de una pila\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -20527,10 +20640,24 @@ function explainElectricidad(stem, correct) {
   if (/distorsi[oó]n/.test(s)) {
     return `La distorsi\xF3n altera la forma de la se\xF1al: la salida ya no replica fielmente la entrada (arm\xF3nicos, recorte o saturaci\xF3n). La opci\xF3n correcta es \xAB${c}\xBB.`;
   }
+  if (/realimentaci[oó]n|feedback|reinyect|salida.*entrada|entrada.*salida/.test(s)) {
+    return `Tomar parte de la salida y reinyectarla a la entrada es realimentaci\xF3n (feedback): puede estabilizar o modificar la ganancia. No confundir con rectificaci\xF3n ni demodulaci\xF3n. \xAB${c}\xBB.`;
+  }
+  if (/transferencia m[aá]xima de potencia|m[aá]xima.*potencia.*entre/i.test(s)) {
+    return `La m\xE1xima transferencia de potencia entre dos circuitos se produce cuando las impedancias est\xE1n adaptadas (carga y fuente acopladas seg\xFAn el temario). No confundir con ondas estacionarias ni con \xABantena despejada\xBB. \xAB${c}\xBB.`;
+  }
+  if (/pilas|bater[ií]as/.test(s) && /serie/.test(s)) {
+    if (/intensidad/i.test(c)) {
+      return `Con pilas id\xE9nticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensi\xF3n total es la suma de las de cada pila. \xAB${c}\xBB.`;
+    }
+    if (/tensi[oó]n/i.test(c)) {
+      return `En serie las tensiones de cada pila se suman; la intensidad es la misma en todo el circuito serie. \xAB${c}\xBB.`;
+    }
+  }
   if (/ohm|ley de ohm|v\s*=\s*i|intensidad|tensi[oó]n|resistencia/.test(s)) {
     return `En corriente continua, V = I\xB7R y P = V\xB7I son las relaciones base del examen. La magnitud o f\xF3rmula correcta aqu\xED es \xAB${c}\xBB.`;
   }
-  if (/resistencias en serie|resistencias en paralelo|equivalente|paralelo|serie/.test(s)) {
+  if (/resistencias en serie|resistencias en paralelo|equivalente/.test(s) && !/pilas|bater[ií]as/.test(s)) {
     return `En serie las resistencias se suman; en paralelo la inversa de la equivalente es la suma de inversas. La respuesta es \xAB${c}\xBB.`;
   }
   if (/condensador|capacidad|faradio|microfaradio/.test(s)) {
@@ -21291,6 +21418,779 @@ function isExplainAcceptable(q, text) {
   return true;
 }
 
+// data/curated-explanations.js
+var curated_explanations_default = {
+  "fedi-ag-002": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB200 pF\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "fedi-ag-005": "Tomar parte de la salida y reinyectarla a la entrada es realimentaci\xF3n (feedback): puede estabilizar o modificar la ganancia del circuito. No confundir con rectificaci\xF3n ni demodulaci\xF3n. \xABRealimentaci\xF3n\xBB.",
+  "ure-p1-q85": "Con pilas id\xE9nticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensi\xF3n total es la suma de las de cada pila. No confundir con resistencias en serie. \xABLa intensidad del conjunto es igual a la de una pila\xBB.",
+  "ure-p1-q128": "La m\xE1xima transferencia de potencia entre dos circuitos se produce cuando las impedancias est\xE1n adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que \xABantena despejada\xBB. \xABExista adaptaci\xF3n de las impedancias\xBB.",
+  "fedi-ag-006": "La resistencia se mide sin tensi\xF3n aplicada (fuera de circuito o en banco de prueba). En paralelo la tensi\xF3n es com\xFAn; en serie, la intensidad. Las tres primeras afirmaciones del enunciado no son correctas en conjunto. \xABNinguna de las respuestas anteriores es correcta\xBB.",
+  "fedi-ag-008": "La capacidad almacena carga el\xE9ctrica; en el SI se mide en faradios (F) y subm\xFAltiplos (\xB5F, nF, pF). \xABFaradios\xBB.",
+  "fedi-ag-009": "En el esquema, el diodo en serie con la carga y el condensador forman un detector de envolvente: rectifica la RF y la constante de tiempo RC extrae la envolvente AM. No es oscilador ni conversor de frecuencia. \xABDetector de envolvente\xBB.",
+  "fedi-ag-010": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDispositivo que convierte la corriente continua en alterna\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "fedi-ag-011": "En la figura de la fuente lineal, el flujo es: transformador (adapta y a\xEDsla), rectificador (CA\u2192CC pulsante), filtro (suaviza rizado) y regulador (tensi\xF3n estable). \xABTransformador \u2192 rectificador \u2192 filtro \u2192 regulador\xBB.",
+  "fedi-ag-013": "La frecuencia cr\xEDtica es el l\xEDmite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometr\xEDa. En el esquema, la se\xF1al 3 atraviesa la capa en lugar de regresar: por eso est\xE1 por encima de la frecuencia cr\xEDtica. \xABLa se\xF1al 3.\xBB.",
+  "fedi-ag-014": "En r\xE9gimen permanente el condensador ideal no conduce en CC: queda a la tensi\xF3n de la rama en paralelo. En el divisor de la figura la rama inferior marca 9 V, no 12 V ni 0 V. \xAB9.\xBB.",
+  "fedi-ag-016": "En conversi\xF3n directa el mezclador necesita una se\xF1al local estable; el bloque con interrogantes alimenta al mezclador y es el oscilador local, no un amplificador RF ni un variador. \xABOscilador local.\xBB.",
+  "fedi-ag-019": "Un diodo conduce bien en polarizaci\xF3n directa y bloquea en inversa; por eso rectifica y protege etapas. No confundir con un transistor o una resistencia. \xABPermiten el paso de la corriente en una \xFAnica direcci\xF3n\xBB.",
+  "fedi-ag-020": "La figura muestra radiales bajo la vertical \u03BB/4: al variar su inclinaci\xF3n cambia la impedancia de entrada vista desde el coaxial, sin cambiar por s\xED sola la polarizaci\xF3n emitida. \xABUna variaci\xF3n de la impedancia de entrada.\xBB.",
+  "fedi-ag-021": "RF es radiofrecuencia; la FI (frecuencia intermedia) se amplifica antes de detectar. Un nivel excesivo en antena puede saturar el mezclador o la FI y empeorar la sensibilidad (desensibilizaci\xF3n). \xABExcesivo nivel de se\xF1al en la antena\xBB.",
+  "fedi-ag-022": "C\xF3digo de colores: violeta = 7, verde = 5, rojo = \xD710\xB2, oro = tolerancia \xB15 %. Valor 75 \xD7 100 = 7500 \u03A9 = 7,5 k\u03A9. \xAB7.500 \u03A9 y 5 %\xBB.",
+  "fedi-ag-024": "El dipolo en V invertida de la figura suele resonar cerca de 50 \u03A9 y el diagrama en horizontal es casi omnidireccional, frente a una Yagi muy directiva o 75 \u03A9. \xABUn valor de impedancia pr\xF3ximo a 50 \u03A9 y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional.\xBB.",
+  "fedi-ag-025": "La RF puede acoplarse a masas y cables de audio. Tomas de tierra en el chasis y condensadores de desacoplo en alimentaci\xF3n limitan ese acoplamiento. \xABTomas de tierra y condensadores\xBB.",
+  "fedi-ag-027": "La longitud el\xE9ctrica de una antena resonante depende de la longitud de onda \u03BB, y \u03BB = c/f: a mayor frecuencia, antena m\xE1s corta. \xABFrecuencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "fedi-ag-028": "Cuando la onda rodea un obst\xE1culo comparable a su longitud de onda, se curva: ese fen\xF3meno es la difracci\xF3n, no reflexi\xF3n ni refracci\xF3n ionosf\xE9rica. \xABDifracci\xF3n.\xBB.",
+  "fedi-ag-029": "EMI es interferencia electromagn\xE9tica conducida o radiada. Un filtro de l\xEDnea en la alimentaci\xF3n aten\xFAa componentes RF que entran o salen por la red. \xABColocando un filtro apropiado\xBB.",
+  "fedi-ah-032": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB.",
+  "fedi-ah-033": "Los c\xF3digos Q son abreviaturas de tres letras que empiezan por Q (QTH ubicaci\xF3n, QRM interferencia, etc.). Por eso la regla mnemot\xE9cnica del examen es que \xABEmpieza siempre por la letra Q\xBB.",
+  "fedi-ah-042": "En Espa\xF1a se usa el alfabeto fon\xE9tico en castellano (Alfa, Noviembre\u2026), no la pronunciaci\xF3n inglesa de ICAO. Por eso la deletreado correcto es \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB.",
+  "fedi-ah-043": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos. Verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB.",
+  "fedi-ah-047": "El certificado CEPT no exige indicar la asociaci\xF3n del titular en el formato habitual del diploma. Por eso no es la respuesta correcta \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB.",
+  "fedi-ah-056": "La colaboraci\xF3n con servicios de emergencia en cat\xE1strofes es voluntaria: el radioaficionado puede ayudar, pero el reglamento no le impone esa obligaci\xF3n. Por eso la respuesta es \xABEs voluntaria\xBB.",
+  "fedi-ah-057": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB.",
+  "fedi-ah-060": "Si causas interferencias perjudiciales debes cesar la emisi\xF3n de inmediato hasta resolver la causa. Es buena pr\xE1ctica y deber reglamentario. \xABSuspender de inmediato las emisiones\xBB.",
+  "ofic-001": "En corriente continua la potencia disipada o entregada es P = V\xB7I (vatios). Es la relaci\xF3n b\xE1sica del bloque de electricidad. \xABP = V \xB7 I\xBB.",
+  "ofic-003": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia\xBB.",
+  "ofic-005": "Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xABMedia longitud de onda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ofic-006": "En corriente continua y en r\xE9gimen permanente, un condensador ideal no deja pasar corriente continua: equivale a circuito abierto entre bornes (se carga hasta la tensi\xF3n aplicada). No confundir con cortocircuito. \xABUn circuito abierto\xBB.",
+  "ofic-008": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
+  "ofic-009": "La convocatoria oficial define dos pruebas independientes (t\xE9cnica y reglamentaci\xF3n), alineadas con el programa de examen. La respuesta es \xABDos partes independientes (electricidad/radioelectricidad y reglamentaci\xF3n)\xBB. (BOE-A-2013-7624).",
+  "ofic-013": "La resonancia en LC ocurre cuando las reactancias de L y C se equilibran; f0 = 1/(2\u03C0\u221A(LC)) en el modelo ideal. \xABf0 = 1/(2\u03C0\u221A(LC))\xBB. Por eso la respuesta del enunciado es.",
+  "ofic-023": "El servicio de radioaficionado es t\xE9cnico y abierto: no se usan comunicaciones encubiertas ni fines ajenos al servicio (comercial, secreto, etc.). \xABNo son propias del servicio y deben evitarse\xBB.",
+  "ofic-036": "En resonancia serie |XL| = |XC|; las reactancias se cancelan y la impedancia queda esencialmente resistiva. Por eso la respuesta es \xABSe igualan en magnitud y se cancelan\xBB.",
+  "ofic-037": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
+  "ofic-039": "El silenciador (squelch) corta el audio cuando no hay portadora o se\xF1al \xFAtil de RF, evitando ruido de fondo en el altavoz. No es AGC ni medici\xF3n de ROE. \xABSuprimir el audio cuando no hay se\xF1al \xFAtil de RF\xBB.",
+  "ofic-042": "La doble superheterodina usa dos mezclas a FI distintas para mejorar selectividad y suprimir imagen en bandas altas. Por eso encaja \xABDos frecuencias intermedias en cadena\xBB.",
+  "ofic-043": "La relaci\xF3n delante\u2013atr\xE1s (F/B) compara radiaci\xF3n o recepci\xF3n del l\xF3bulo principal frente a la parte trasera, en dB. Por eso se define como \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
+  "ofic-044": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ofic-055": "La bobina almacena energ\xEDa en campo magn\xE9tico; en CC estable se comporta como cortocircuito ideal tras el transitorio. \xABUn cortocircuito\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ofic-060": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABDeriva la mayor parte de la corriente en paralelo de baja resistencia\xBB.",
+  "ofic-065": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEntre los dos nodos (derivaci\xF3n / paralelo)\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1836": "El mapa del enunciado corresponde al distrito EA5 (Comunidad Valenciana y Murcia en la tabla de residencia del BOE-A-2013-7624). La cifra 5 identifica ese distrito geogr\xE1fico. \xABDistrito 5.\xBB.",
+  "quijotes-84-1843": "El prefijo EA5 corresponde a radioaficionados con distrito de residencia en Comunidad Valenciana; el distintivo EA5EYR encaja con Valencia. No confundir EA6 (Baleares) ni EA7 (Arag\xF3n). \xABValencia.\xBB.",
+  "quijotes-84-1864": "EA6 es la serie de las Islas Baleares; EA6PDM puede corresponder a estaciones en Mallorca, como Palma. Lleida es EA3, Huelva EA7. \xABPalma de Mallorca.\xBB.",
+  "quijotes-84-1892": "Interferir deliberadamente a otra estaci\xF3n est\xE1 prohibido: es mala pr\xE1ctica y puede ser infracci\xF3n seg\xFAn el reglamento (BOE-A-2013-7624). Por eso la opci\xF3n correcta es \xABNunca.\xBB.",
+  "quijotes-84-2057": "Seg\xFAn el r\xE9gimen andorrano del banco, un radioaficionado con licencia extranjera vigente en su pa\xEDs de residencia puede obtener autorizaci\xF3n temporal para operar en territorio andorrano. \xABSi, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el pa\xEDs en el que residen habitualmente, pueden obtener una licencia temporal para usar su estaci\xF3n en territorio andorrano.\xBB.",
+  "quijotes-84-2069": "En Espa\xF1a los distintivos de aficionado usan prefijos EA/EB/EC y formato del reglamento; \xABAM3SOS\xBB no encaja en esa estructura de asignaci\xF3n nacional. Por eso \xABNo se puede asignar.\xBB.",
+  "ure-p1-q10": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABNPN\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q11": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB\xBDC.V\xB2\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q12": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q122": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q123": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABEs el tiempo que transcurre entre dos m\xEDnimos consecutivos\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q125": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABDos bobinas acopladas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q126": "El filtro de l\xEDnea de desacoplo evita que RF del equipo entre en la red el\xE9ctrica dom\xE9stica. \xABFiltro de l\xEDnea de desacoplo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q127": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB.",
+  "ure-p1-q129": "El espectro muestra una portadora central y dos bandas laterales sim\xE9tricas: es t\xEDpico de modulaci\xF3n de amplitud (AM). En FM el ancho ser\xEDa distinto; en SSB solo un lateral. \xABAmplitud\xBB.",
+  "ure-p1-q13": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABMayor\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q130": "Tras el rectificador la salida de una fuente de alimentaci\xF3n tiene rizado (ripple); el filtro (condensadores, a veces inductores) lo aten\xFAa para dejar una tensi\xF3n de salida m\xE1s estable. \xABPara reducir el rizado de la se\xF1al de salida y obtener un valor m\xE1s constante de esta\xBB.",
+  "ure-p1-q131": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABLa modulaci\xF3n AM hace variar la amplitud de la portadora\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q133": "La sensibilidad mide la capacidad de detectar se\xF1ales d\xE9biles (umbral m\xEDnimo \xFAtil). La selectividad separa frecuencias pr\xF3ximas; la fidelidad se refiere a poca distorsi\xF3n. \xABLa capacidad que tiene de captar se\xF1ales d\xE9biles y amplificarlas\xBB.",
+  "ure-p1-q134": "Las curvas de respuesta en FI muestran el ancho de banda \xFAtil: la curva m\xE1s estrecha separa emisoras adyacentes (mayor selectividad). En 455 kHz, A es m\xE1s selectivo que B. \xABEl receptor A es m\xE1s selectivo que el receptor B\xBB.",
+  "ure-p1-q135": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xAB10 MHz\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q140": "El diagrama presenta un l\xF3bulo principal estrecho y l\xF3bulos secundarios peque\xF1os: patr\xF3n de antena directiva. Omnidireccional ser\xEDa casi circular en el plano horizontal. \xABDirectiva\xBB.",
+  "ure-p1-q142": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABSon directivas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q148": "En la traza del osciloscopio, A es la altura pico a pico (amplitud) y B la distancia entre dos picos iguales sucesivos (periodo T=1/f). No confundir periodo con frecuencia en Hz. \xABA es la amplitud y B es el periodo de la se\xF1al\xBB.",
+  "ure-p1-q149": "En serie las tensiones de cada pila o bater\xEDa se suman; en paralelo se suman capacidades de corriente manteniendo la misma tensi\xF3n nominal. \xABLa tensi\xF3n de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas\xBB.",
+  "ure-p1-q15": "Clase A conduce todo el ciclo (lineal, ineficiente); B/AB/C recortan conducci\xF3n para mayor eficiencia en RF. \xABEl de clase AB es una combinaci\xF3n de A y B\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q17": "En un superheterodino la se\xF1al pasa: antena \u2192 amplificador RF \u2192 mezclador (+ oscilador) \u2192 amplificador FI \u2192 demodulador \u2192 audio. Ese es el flujo est\xE1ndar del temario. \xABAmplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio\xBB.",
+  "ure-p1-q184": "El diodo de estado s\xF3lido conduce preferentemente en un sentido y bloquea en el otro; por eso rectifica y protege etapas. No confundir con resistencia o condensador. \xABDispositivo que permite el paso de la corriente el\xE9ctrica en un s\xF3lo sentido\xBB.",
+  "ure-p1-q187": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABQ=f/B\xBB.",
+  "ure-p1-q189": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABDirectiva\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q195": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABLa direcci\xF3n del campo el\xE9ctrico\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q202": "La ganancia de una antena se expresa en decibelios (dB) respecto a un dipolo (dBd) o a una is\xF3tropa (dBi). \xABdB\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q22": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABCaracterizar etapas de radiofrecuencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q23": "El silenciador (squelch) corta la salida de audio cuando desaparece la portadora o se\xF1al \xFAtil de RF, para no escuchar ruido de fondo. No es AGC (regula ganancia) ni selectividad. \xABSuprimir el audio si no hay se\xF1al de RF\xBB.",
+  "ure-p1-q239": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABSe transfiere la m\xE1xima energ\xEDa a la antena\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q241": "Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xABUn aislante\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q244": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABLa suma de las intensidades de cada una de las ramas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q245": "Las ondas de radio son ondas electromagn\xE9ticas que se propagan en el espacio sin medio material. \xABElectromagn\xE9tica\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q247": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABAmplificadores y filtros\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q248": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABBalun\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q249": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABEn paralelo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q25": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q251": "La etapa de detecci\xF3n (demodulador) extrae audio o datos de la portadora o FI ya filtrada. \xABDemodular la se\xF1al recibida\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q252": "El enunciado pide nivel de audio constante pese a variaciones de se\xF1al en antena: es funci\xF3n del AGC (CAG), que regula la ganancia en RF/FI. CAF mantiene frecuencia; no es squelch. \xABControl autom\xE1tico de ganancia\xBB.",
+  "ure-p1-q254": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABTensi\xF3n el\xE9ctrica\xBB.",
+  "ure-p1-q255": "QSY solicita o indica cambio de frecuencia de operaci\xF3n. \xABUn oscilador de frecuencia variable\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q257": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABSu capacidad para recibir se\xF1ales d\xE9biles\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q258": "Una antena directiva concentra radiaci\xF3n o recepci\xF3n en una direcci\xF3n preferente. \xABProporcionan directividad\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q259": "Una antena pasiva no amplifica: solo irradia o captura; por reciprocidad los diagramas de radiaci\xF3n en transmisi\xF3n y recepci\xF3n son iguales para la misma antena. \xABLos diagramas de radiaci\xF3n en transmisi\xF3n y en recepci\xF3n son iguales\xBB.",
+  "ure-p1-q261": "Antes de la toma de antena suele haber protecci\xF3n o interruptor para seguridad y mantenimiento. \xABUn filtro paso bajo o paso banda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q262": "Las bobinas en serie en los brazos del dipolo a\xF1aden inductancia y alargan la longitud el\xE9ctrica sin aumentar tanto el tama\xF1o f\xEDsico (antena con carga inductiva). \xABIncrementar la longitud el\xE9ctrica de antena\xBB.",
+  "ure-p1-q265": "La onda sinusoidal de la figura tiene valor de pico 10 V; la tensi\xF3n eficaz es Vrms = Vp/\u221A2 \u2248 7,071 V. 10 V ser\xEDa el pico, no la eficaz. \xAB7,071 V\xBB.",
+  "ure-p1-q3": "La selectividad es la capacidad de discriminar emisoras o se\xF1ales de frecuencias muy cercanas (filtros y FI estrecha). La sensibilidad es captar se\xF1ales d\xE9biles, no confundir ambos conceptos. \xABSelectividad\xBB.",
+  "ure-p1-q301": "A mayor potencia de transmisi\xF3n aumenta la probabilidad de interferir a otros receptores si no hay filtros, ubicaci\xF3n y buenas pr\xE1cticas. \xABMayor\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q308": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia que delimita la banda de paso o no paso por el filtro\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q309": "Una pila o bater\xEDa convierte energ\xEDa qu\xEDmica almacenada en energ\xEDa el\xE9ctrica mediante reacciones en sus electrodos (FEM). Por eso la transformaci\xF3n correcta es \xABEnerg\xEDa qu\xEDmica en energ\xEDa el\xE9ctrica\xBB.",
+  "ure-p1-q311": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABProteger aparatos de medida\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q316": "En un transmisor SSB el ALC limita la excitaci\xF3n de la etapa de potencia y reduce distorsi\xF3n e interferencias cuando sube el nivel de entrada. CAF estabiliza frecuencia; CAG es del receptor. \xABControl autom\xE1tico de nivel o ALC\xBB.",
+  "ure-p1-q319": "Sobremodulaci\xF3n distorsiona la envolvente AM cuando el \xEDndice de modulaci\xF3n supera el l\xEDmite lineal. \xABEl \xEDndice modulaci\xF3n es superior al 100%\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q320": "Una antena vertical de cuarto de onda radiencia con m\xE1ximo en el plano horizontal perpendicular al m\xE1stil, no hacia el zenit. No confundir con el efecto de inclinar radiales (impedancia). \xABEn el plano horizontal\xBB.",
+  "ure-p1-q322": "Si transmisor, l\xEDnea y antena est\xE1n adaptados (misma impedancia), no hay reflexiones: la potencia reflejada del vat\xEDmetro es cero. Con desadaptaci\xF3n la reflejada ser\xEDa notable. \xABLa potencia reflejada es cero\xBB.",
+  "ure-p1-q324": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEn serie, la resistencia total siempre es mayor que cualquiera de ellas\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q325": "En diagramas polares, la relaci\xF3n delante-atr\xE1s compara el nivel de radiaci\xF3n del l\xF3bulo principal (punto 1) frente al opuesto (punto 2), en dB. No es ganancia absoluta ni impedancia. \xABRelaci\xF3n delante-atr\xE1s\xBB.",
+  "ure-p1-q326": "El circuito entre transmisor y antena con elementos L y C en \u03C0 o T es un acoplador (antenna tuner) para adaptar impedancias y minimizar ROE. No es discriminador ni atenuador fijo. \xABAcoplador de antena\xBB.",
+  "ure-p1-q360": "La caja de apantallamiento tipo jaula de Faraday debe ser conductora, continua y a tierra para derivar corrientes inducidas; aislante o grietas dejan pasar el campo externo. \xABMet\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra\xBB.",
+  "ure-p1-q365": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDe frecuencia muy estable\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q369": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABControl Autom\xE1tico de Ganancia\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q373": "En el transformador ideal la relaci\xF3n de tensiones depende del n\xFAmero de espiras N1/N2; el n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento. No confundir con la frecuencia de trabajo. \xABEl n\xFAmero de espiras del primario y del secundario\xBB.",
+  "ure-p1-q375": "Entre las dos l\xEDneas a \u22123 dB del l\xF3bulo principal se mide el ancho de haz (beamwidth): \xE1ngulo donde la radiaci\xF3n cae a la mitad de potencia respecto al m\xE1ximo. \xABAncho de haz de radiaci\xF3n\xBB.",
+  "ure-p1-q377": "El balun adapta la l\xEDnea coaxial (no balanceada) al dipolo (balanceado) y puede transformar impedancia. \xABBalun\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q379": "Si el vat\xEDmetro muestra potencia reflejada apreciable, hay desadaptaci\xF3n entre transmisor y antena (ROE > 1). Adaptado, la reflejada ser\xEDa m\xEDnima y la directa m\xE1xima. \xABEl transmisor no est\xE1 adaptado a la antena\xBB.",
+  "ure-p1-q380": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABUn medidor de ROE\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q381": "El osciloscopio muestra se\xF1ales en el dominio del tiempo (forma de onda), no el espectro en frecuencia. \xABLa representaci\xF3n gr\xE1fica de las formas de onda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q387": "El esquema muestra mezclador y filtro de producto t\xEDpicos de un receptor que demodula SSB y CW (telegraf\xEDa). No es un circuito solo FM ni un bloque in\xFAtil en el diagrama. \xABSSB y CW\xBB.",
+  "ure-p1-q416": "7,4 V es la tensi\xF3n nominal; 1500 mAh indica que puede entregar 1500 mA (1,5 A) durante una hora aproximadamente si la descarga es nominal (capacidad en miliamperios-hora). \xAB7,4 voltios y 1,5 amperios durante una hora\xBB.",
+  "ure-p1-q417": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama que quieres medir. \xABEn serie\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q418": "En serie las resistencias se suman: Req = R1 + R2 + \u2026 La tensi\xF3n se reparte seg\xFAn cada R. \xABEs mayor que el valor de cualquiera de las resistencias\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q420": "El LC en paralelo con diodo forma un circuito resonante selectivo en la frecuencia de resonancia: puede actuar como receptor AM pasivo. No es amplificador ni oscilador alimentado. \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
+  "ure-p1-q422": "El diodo en serie con resistencia de carga y condensador rectifica y filtra la envolvente de una se\xF1al modulada: act\xFAa como detector de envolvente, no como limitador. \xABDetector de envolvente\xBB.",
+  "ure-p1-q424": "La selectividad es la capacidad de discriminar se\xF1ales de frecuencias muy pr\xF3ximas; la sensibilidad es detectar se\xF1ales d\xE9biles. \xABLa capacidad de separar dos se\xF1ales muy pr\xF3ximas en frecuencia\xBB.",
+  "ure-p1-q426": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB50 ohmios\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q428": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABf 1 + f 2\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q429": "En 40 m (~7 MHz), \u03BB \u2248 40 m; un dipolo de media onda mide del orden de \u03BB/2 en total (unos 20 m de longitud f\xEDsica). \xAB20 m\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q430": "La relaci\xF3n de espiras N1:N2 = 2:1 implica que un devanado tiene el doble de espiras que el otro (tensi\xF3n y corriente se transforman seg\xFAn esa relaci\xF3n en el transformador ideal). \xABUno de los devanados tiene el doble n\xFAmero de espiras que el otro\xBB.",
+  "ure-p1-q431": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABPermite obtener resonancia en varias frecuencias\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q434": "Un receptor de FM en superheterodino necesita oscilador local para trasladar la se\xF1al a FI; el recuadro vac\xEDo del diagrama es ese bloque. \xABUn oscilador\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q438": "El S-meter indica nivel de se\xF1al recibida (intensidad relativa), no potencia transmitida ni frecuencia. \xABLa intensidad de la se\xF1al de entrada del receptor\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q439": "Si el LC resuena a la frecuencia del transmisor, la impedancia vista puede hacer que el vat\xEDmetro lea potencia m\xEDnima hacia la carga (energ\xEDa desviada o absorbida en el resonador). \xABM\xEDnima\xBB.",
+  "ure-p1-q440": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABTienen tres terminales\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q441": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABPotencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q444": "Bajar frecuencia de resonancia exige mayor longitud el\xE9ctrica (alargar); subir frecuencia, acortar. \xABAlargarla\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q478": "Dos resistencias en paralelo dan una resistencia equivalente menor que cualquiera de ellas; en serie ser\xEDa mayor. Los termistores PTC/NTC var\xEDan R con la temperatura. \xABEl valor de la conexi\xF3n de dos resistencias en paralelo da un valor resultante menor que cualquiera de ellas\xBB.",
+  "ure-p1-q479": "No se debe tocar una antena en transmisi\xF3n: tensiones RF y corrientes de antena pueden causar quemaduras. \xABNo se debe tocar una antena trasmitiendo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q483": "La superheterodinia traslada la se\xF1al a frecuencia intermedia para filtrar y amplificar; facilita el control autom\xE1tico de ganancia. \xABA la salida del mezclador\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q486": "Con impedancias iguales la energ\xEDa se transfiere hacia la antena: en el vat\xEDmetro la potencia hacia delante supera a la reflejada. Con desadaptaci\xF3n la reflejada ser\xEDa comparable. \xABLa potencia directa es superior a la potencia reflejada\xBB.",
+  "ure-p1-q488": "Las comunicaciones por sat\xE9lite de radioaficionado (SO-50, etc.) usan bandas VHF/UHF con enlaces l\xEDnea de vista al sat\xE9lite; HF depende de ion\xF3sfera y MF/LF no son el caso t\xEDpico. \xABVHF\xBB.",
+  "ure-p1-q492": "Una antena sintonizada resuena a la frecuencia de la se\xF1al y acopla mejor la energ\xEDa radiada. \xABEstabilidad\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q495": "El diodo es un dispositivo de uni\xF3n PN que conduce preferentemente en un sentido y bloquea en inversa; por eso rectifica y protege etapas. \xABUn dispositivo que permite el paso de la comente el\xE9ctrica en un \xFAnico sentido\xBB.",
+  "ure-p1-q498": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. \xABEmisor, base y colector\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q499": "El vat\xEDmetro en figura mide en la resistencia de prueba: en la posici\xF3n 1 los conmutadores conectan correctamente sensor directo/reflejado a esa resistencia. \xABLos conmutadores en la posici\xF3n 1\xBB.",
+  "ure-p1-q502": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABInterferencias\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q503": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABCircuitos resonantes\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q6": "En transmisi\xF3n anal\xF3gica la se\xF1al puede tomar infinitos valores intermedios entre extremos (continua en amplitud). La digital usa s\xEDmbolos discretos. \xABPueden tener infinitos valores\xBB.",
+  "ure-p1-q64": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABCarga el\xE9ctrica\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q65": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB.",
+  "ure-p1-q71": "En FM, el \xEDndice de modulaci\xF3n \u03B2 = \u0394f_m\xE1x / f_mod. Con \u0394f = 25 kHz y f_mod = 10 kHz, \u03B2 = 2,5. \xABLa modulaci\xF3n de frecuencia\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q74": "La protecci\xF3n y la toma de tierra siguen reglas de seguridad el\xE9ctrica; no confundas con fusibles de l\xEDnea. \xABProteger al operador de descargas\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p1-q75": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABComponentes de la antena no activos\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q76": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABLa orientaci\xF3n del campo el\xE9ctrico transmitido\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p1-q77": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABIgual a la de la antena y a la del transmisor\xBB.",
+  "ure-p1-q82": "En un transformador reductor el secundario tiene menos espiras que el primario (V2 < V1 en ideal). El n\xFAcleo ferromagn\xE9tico mejora el acoplamiento magn\xE9tico. \xABEl secundario tenga menos espiras que el primario\xBB.",
+  "ure-p1-q84": "A partir del circuito resonante y del esquema del superheterodino de la figura, la frecuencia de sinton\xEDa calculada coincide con 14,2 MHz (relaci\xF3n entre oscilador, FI y RF). \xABF=14,2 MHz\xBB.",
+  "ure-p2-q100": "Pan-Pan (tres veces) es la se\xF1al de urgencia radiotelef\xF3nica cuando hay riesgo sin peligro grave inmediato. Mayday (tres veces) reserva el socorro inminente. \xABPAN PAN\xBB.",
+  "ure-p2-q101": "La se\xF1al de alarma en radiotelefon\xEDa usa dos tonos alternos; en el banco son aproximadamente 2.220 Hz y 1.300 Hz. \xAB2.220 Hz y 1.300 Hz\xBB. Por eso la respuesta del enunciado es.",
+  "ure-p2-q102": "Marca la afirmaci\xF3n falsa: los sufijos de dos letras no est\xE1n reservados \xFAnicamente a estaciones colectivas en la normativa del banco. Por eso la opci\xF3n incorrecta es \xABSe reservan \xFAnicamente para estaciones colectivas\xBB.",
+  "ure-p2-q107": "Los indicativos ED\u2026 identifican estaciones autom\xE1ticas desatendidas en el esquema espa\xF1ol (anal\xF3gicas o digitales seg\xFAn el caso). ED3ZHO encaja en ese tipo. \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB.",
+  "ure-p2-q111": "EA seguido de cifra de distrito (1\u20139) y barra indica operador con licencia CEPT extranjero emitiendo temporalmente en Espa\xF1a, no un indicativo fijo espa\xF1ol ordinario. \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB.",
+  "ure-p2-q112": "Revocada la autorizaci\xF3n, no puedes operar hasta obtener una nueva si la normativa lo permite. \xABHasta una nueva autorizaci\xF3n no podr\xE1 ejercer la actividad de la radioafici\xF3n\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q115": "La autorizaci\xF3n de espectro para aficionados conlleva la asignaci\xF3n del indicativo al concederse; no es gratuita ni sin requisitos previos. \xABCuando se conceda, a la vez se otorgar\xE1 el distintivo de llamada\xBB.",
+  "ure-p2-q117": "Con licencia CEPT debes cumplir la reglamentaci\xF3n del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
+  "ure-p2-q119": "Emisiones fuera de banda son componentes espectrales adyacentes no deseadas (arm\xF3nicos, splatter). \xABFuera de banda\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q120": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+  "ure-p2-q157": "Hace falta licencia de estaci\xF3n (y autorizaci\xF3n de operador vigente); no basta con comprar equipo. \xABLicencia de Estaci\xF3n\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q158": "El prefijo EA9 identifica estaciones en Ceuta y Melilla dentro de la numeraci\xF3n de indicativos espa\xF1oles. Por eso EA9ADI corresponde a \xABCeuta\xBB.",
+  "ure-p2-q160": "En fon\xEDa se usa \xABcambio\xBB al ceder el turno de palabra; es buena pr\xE1ctica operativa. \xABRecomendable\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q162": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado. (BOE-A-2013-7624).",
+  "ure-p2-q163": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABVictor\xBB.",
+  "ure-p2-q169": "Una estaci\xF3n colectiva para experimentaci\xF3n de propagaci\xF3n puede ser una radiobaliza u otra estaci\xF3n autom\xE1tica desatendida seg\xFAn el supuesto. \xABRadiobaliza\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q170": "La cifra del indicativo espa\xF1ol identifica el distrito geogr\xE1fico de la estaci\xF3n seg\xFAn la tabla oficial. Para este enunciado corresponde \xAB5\xBB.",
+  "ure-p2-q172": "Las estaciones m\xF3viles mar\xEDtimas a\xF1aden el sufijo /MM al distintivo para indicar operaci\xF3n a bordo, seg\xFAn pr\xE1ctica internacional de identificaci\xF3n en radiocomunicaciones mar\xEDtimas. No confundir con /P (port\xE1til) ni con indicativos terrestres EA. \xAB/MM\xBB.",
+  "ure-p2-q176": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos, pero siempre debes respetar la reglamentaci\xF3n local del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
+  "ure-p2-q177": "Las autorizaciones en bandas de uso restringido tienen caducidad; el enunciado fija un m\xE1ximo de dieciocho meses renovable seg\xFAn tr\xE1mite. \xABSe otorgar\xE1n por un plazo m\xE1ximo de dieciocho meses\xBB.",
+  "ure-p2-q180": "QRT indica cese de transmisi\xF3n; QRP es baja potencia y QSA la fuerza de la se\xF1al recibida. \xABQRT\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q206": "El alfabeto fon\xE9tico ICAO (NATO) asigna una palabra a cada letra para deletrear con claridad en fon\xEDa. La letra del enunciado corresponde a \xABRomeo\xBB.",
+  "ure-p2-q211": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABPermiten contactar con otros operadores que utilizan el mismo modo\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q215": "QRT significa cese de transmisi\xF3n (\xABdeje de transmitir\xBB). No confundir con QSY (cambio de frecuencia) ni QRX (espera). \xABDeje de transmitir\xBB.",
+  "ure-p2-q216": "El distintivo debe identificar la estaci\xF3n al inicio y al final de cada comunicaci\xF3n para que la contraparte sepa qui\xE9n emite. Es obligaci\xF3n de buena pr\xE1ctica y del reglamento del servicio de aficionados. \xABAl comienzo y final de cada emisi\xF3n\xBB.",
+  "ure-p2-q219": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSea demasiado extensa\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q233": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+  "ure-p2-q237": "Radiocomunicaci\xF3n es toda telecomunicaci\xF3n realizada mediante ondas radioel\xE9ctricas. \xABRadiocomunicaci\xF3n\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q27": "QRM indica interferencia de origen artificial (otras emisiones, equipos cercanos). QRN es ruido atmosf\xE9rico natural. Por eso la abreviatura de interferencia es \xABQRM\xBB.",
+  "ure-p2-q270": "En telegraf\xEDa, AR (end of message) marca el fin del mensaje. VA (end of work) indica fin de la comunicaci\xF3n. \xABAR\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q274": "Sin superar la prueba de operador (diploma) no se concede la autorizaci\xF3n de radioaficionado. \xABDiploma de operador\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q278": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q279": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q280": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q282": "EB es prefijo de estaci\xF3n de aficionado en Espa\xF1a; la cifra de distrito (EB1) asocia la provincia en el banco de examen. EB1VZY corresponde a \xAB\xC1vila\xBB.",
+  "ure-p2-q32": "Los distintivos espa\xF1oles de aficionado siguen el formato EA/EB/EC + distrito + sufijo; \xABAM8SOS\xBB no es un formato asignable en ese esquema. \xABNo se puede asignar\xBB.",
+  "ure-p2-q331": "El distintivo espa\xF1ol combina prefijo nacional (E\u2026), cifra de distrito y sufijo asignado por la administraci\xF3n. Por eso la estructura es \xABPrefijo + Distrito + Sufijo\xBB.",
+  "ure-p2-q334": "El prefijo EA6 corresponde a las Islas Baleares en la numeraci\xF3n de indicativos espa\xF1oles. Por eso un distintivo EA6\u2026 asociado al archipi\xE9lago puede corresponder a \xABPalma de Mallorca\xBB.",
+  "ure-p2-q336": "Espa\xF1a tiene prefijos ITU EA, EB y EC para estaciones amateur. FM/FN son franc\xE9s; KN americano. \xABEA, EB, EC\xBB.",
+  "ure-p2-q339": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q340": "Un mensaje de socorro usa Mayday o se\xF1ales de socorro, no Securit\xE9 (se\xF1al de seguridad para avisos que no son socorro). Por eso no incluye \xABLa se\xF1al de seguridad Securite\xBB.",
+  "ure-p2-q347": "Sin titular con autorizaci\xF3n de radioaficionado (y licencia de estaci\xF3n cuando proceda) no hay instalaci\xF3n regular. \xABLa autorizaci\xF3n de radioaficionado de su titular\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q349": "El repetidor ampl\xEDa cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tr\xE1fico ajeno al servicio. \xABAmpliar el alcance de las comunicaciones\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q358": "En el alfabeto fon\xE9tico ICAO internacional el d\xEDgito 9 se deletrea \xABNine\xBB (ingl\xE9s). En tr\xE1fico espa\xF1ol se usan equivalencias en castellano en otros enunciados.",
+  "ure-p2-q38": "El seguro de antenas cubre da\xF1os a terceros por la instalaci\xF3n; es parte de la responsabilidad del titular. \xABLa responsabilidad civil del titular\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q389": "ED1YBD es un indicativo de estaci\xF3n desatendida anal\xF3gica en la nomenclatura del banco (prefijo ED + numeraci\xF3n de repetidor/desatendida). \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica\xBB.",
+  "ure-p2-q39": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPor un grupo alfanum\xE9rico\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q392": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q393": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEst\xE1 emitiendo desde Andaluc\xEDa\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q395": "QRN indica perturbaci\xF3n por ruido atmosf\xE9rico (tormentas, descargas). QRM es interferencia artificial. Por eso el c\xF3digo Q atmosf\xE9rico es \xABQRN\xBB.",
+  "ure-p2-q400": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q446": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q45": "La banda 10,00\u201310,5 GHz entre aficionados requiere autorizaci\xF3n especial de uso seg\xFAn el cuadro nacional del BOE; 14 MHz y 50 MHz son bandas habituales sin ese requisito adicional. \xAB10,00-10,5 GHz\xBB.",
+  "ure-p2-q454": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q458": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q460": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q504": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSeven\xBB.",
+  "ure-p2-q506": "QRO solicita aumentar potencia de transmisi\xF3n; QRP pedir\xEDa reducirla. \xABQRO\xBB. No confundir con el distractor del mismo bloque tem\xE1tico.",
+  "ure-p2-q512": "Un distintivo puede reutilizarse cuando se cancela la autorizaci\xF3n anterior que lo ten\xEDa asignado; no queda reservado para siempre al titular previo. \xABSi se cancela la autorizaci\xF3n correspondiente\xBB.",
+  "ure-p2-q513": "RST informa legibilidad (R), intensidad de se\xF1al (S) y tono (T) en fon\xEDa; no es un c\xF3digo Q ni una se\xF1al de socorro. \xABInformar sobre la intensidad de la se\xF1al recibida\xBB.",
+  "ure-p2-q516": 'Pan-Pan (tres veces) es urgencia sin peligro grave inmediato. Mayday reserva el socorro grave. \xABDel grupo "pan pan" repetido tres veces\xBB.',
+  "ure-p2-q518": "Sin acreditar residencia legal en Espa\xF1a no procede la autorizaci\xF3n de extranjero residente. \xABAcredite documentalmente su condici\xF3n de residente en Espa\xF1a\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q519": "El certificado HAREC acredita el examen de operador armonizado entre administraciones CEPT. Se vincula a la Recomendaci\xF3n T/R 61-02, distinta de T/R 61-01 (licencia CEPT para operar en el extranjero). \xABT/R 61-02\xBB.",
+  "ure-p2-q520": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q526": "Suelen autorizarse a asociaciones de aficionados legalmente constituidas, no a particulares sin estructura de gesti\xF3n. \xABUna asociaci\xF3n de radioaficionados reconocida\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q531": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSierra, Lima\xBB.",
+  "ure-p2-q57": "La licencia CEPT permite operar temporalmente en otro pa\xEDs adherido, pero no garantiza protecci\xF3n administrativa contra interferencias ajenas all\xED. Por eso \xABNo\xBB.",
+  "ure-p2-q87": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q90": "Los distintivos temporales de una sola letra se reservan a concursos internacionales de alta competitividad seg\xFAn el criterio del banco/reglamento hist\xF3rico. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+  "ure-p2-q93": "En tr\xE1fico entre aficionados est\xE1n permitidos mensajes t\xE9cnicos de ensayos; no propaganda comercial ni usar indicativo ajeno sin permiso. \xABTransmitir mensajes de naturaleza t\xE9cnica sobre ensayos\xBB.",
+  "ure-p2-q95": "Los prefijos de indicativos espa\xF1oles en el servicio de aficionado incluyen EA (aficionado), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n en territorio nacional. Por eso la terna habitual del banco es \xABEA, EB, EC\xBB.",
+  "ure-p2-q96": "QTH indica la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY es cambio de frecuencia y QSL confirma contacto. \xABQTH\xBB.",
+  "ure-p2-q97": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB. (BOE-A-2013-7624)."
+};
+
+// data/quijotes-explanations.js
+var quijotes_explanations_default = {
+  "quijotes-84-1810": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida m\xE1xima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). \xAB50 W.\xBB.",
+  "quijotes-84-1817": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABAsociaci\xF3n de radioaficionados a la que pertenece.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1819": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABDispone del Certificado HAREC.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1822": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xABComunicaciones relacionadas con el Servicio de Aficionados.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1828": "El art. 25 UIT regula comunicaciones entre aficionados, identificaci\xF3n y condiciones del servicio; las administraciones pueden notificar restricciones. \xABSe permitir\xE1n siempre, excepto si la Administraci\xF3n de uno de los pa\xEDses afectados ha notificado su oposici\xF3n a dichas comunicaciones.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1829": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSuspender de inmediato las emisiones.\xBB.",
+  "quijotes-84-1833": "Lo que identifica al operador autorizado ante terceros en emisi\xF3n es su distintivo de llamada asignado, no el DNI ni el domicilio. \xABSu distintivo de llamada asociado.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1842": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABCuando sea titular de un certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1843": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABValencia.\xBB.",
+  "quijotes-84-1862": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPor todo radioaficionado que opera en Espa\xF1a.\xBB.",
+  "quijotes-84-1864": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABPalma de Mallorca.\xBB.",
+  "quijotes-84-1867": "La revocaci\xF3n exige causas tasadas en el reglamento; el enunciado pide la opci\xF3n que el banco considera correcta (a veces refleja normativa derogada: l\xE9elo como \xABseg\xFAn el banco\xBB). \xABNinguna de ellas, ya no es necesario comunicarlo.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1882": "La barra y el segundo indicativo indican operaci\xF3n con autorizaci\xF3n de otro pa\xEDs (CEPT) o invitado seg\xFAn el patr\xF3n del enunciado (EA/IZ\u2026, EA/\u2026, EA\u2026/R\u2026). \xABSe trata de un radioaficionado con licencia expedida en otro pa\xEDs, operando ocasionalmente en una estaci\xF3n espa\xF1ola.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1892": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1902": "Los indicativos espa\xF1oles empiezan por E: EA (aficionados), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n. \xABEA, EB, EC.\xBB.",
+  "quijotes-84-1904": "La autorizaci\xF3n y el indicativo condicionan qui\xE9n puede operar, d\xF3nde y con qu\xE9 requisitos. Para este enunciado, la respuesta correcta es \xABAlmer\xEDa.\xBB.",
+  "quijotes-84-1905": "El diploma de operador acredita superar el examen oficial; no sustituye la licencia de estaci\xF3n ni el indicativo. \xABEs necesario estar en posesi\xF3n del certificado HAREC para poder acceder a ellos.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1906": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABEl titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico.\xBB.",
+  "quijotes-84-1925": "Como norma general el montaje lo realiza un instalador inscrito en el registro de empresas instaladoras (art. 19.e, BOE-A-2013-7624). \xABPor un instalador de telecomunicaciones inscrito en el Registro de Empresas Instaladoras de Telecomunicaci\xF3n.\xBB.",
+  "quijotes-84-1936": "Cualquier modificaci\xF3n sustancial de la instalaci\xF3n exige comunicaci\xF3n o autorizaci\xF3n ante la Administraci\xF3n competente, con el mismo procedimiento que una nueva instalaci\xF3n (BOE-A-2013-7624). \xABSe debe solicitar a la Administraci\xF3n competente y seguir el mismo procedimiento que si se tratase de la primera instalaci\xF3n.\xBB.",
+  "quijotes-84-1937": "En \xABLa Ley 19/1986, conocida como Ley de Antenas, regula:\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles.\xBB. Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundi\xF3.",
+  "quijotes-84-1939": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1952": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABEl interesado podr\xE1 solicitar mantener su sufijo, si este estuviera disponible. Caso contrario le ser\xE1 asignado un nuevo sufijo siguiendo el orden establecido.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1955": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble.\xBB.",
+  "quijotes-84-1963": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
+  "quijotes-84-1964": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos.\xBB.",
+  "quijotes-84-2011": "Los indicativos espa\xF1oles empiezan por E: EA (aficionados), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n. \xABEA, EB, EC\xBB.",
+  "quijotes-84-2025": "Algunos tr\xE1mites de comunicaci\xF3n previa han sido simplificados en normativa reciente; el banco puede reflejar la redacci\xF3n hist\xF3rica \xABya no hay que comunicarlo\xBB. \xABYa no hay que comunicarlo\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-2034": "La nota 5.141C UIT reserva segmentos en HF; contrasta el cuadro de atribuciones con el CNAF y el reglamento vigente. \xABLa banda 7100 a 7200 kHz est\xE1 atribuida a titulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-2043": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
+  "quijotes-84-2048": "El art. 25 UIT regula comunicaciones entre aficionados, identificaci\xF3n y condiciones del servicio; las administraciones pueden notificar restricciones. \xABLas transmisiones entre estaciones de aficionado de diferentes pa\xEDses no deber\xE1n codificarse para ocultar su significado.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-2051": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas en fon\xEDa. La secuencia correcta del enunciado es \xABGolf, oscar, lima, foxtrot.\xBB.",
+  "quijotes-84-2057": "La opci\xF3n correcta recoge el r\xE9gimen temporal andorrano indicado por el banco: un radioaficionado con licencia extranjera v\xE1lida puede solicitar operar temporalmente all\xED.",
+  "quijotes-84-2060": "En \xABAl conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomi\u2026\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABNo deseadas.\xBB. Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundi\xF3.",
+  "quijotes-84-2069": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABNo se puede asignar.\xBB.",
+  "quijotes-84-2072": "El prefijo EF identifica un indicativo especial temporal. En este caso el banco lo asocia a un evento no especialmente significativo.",
+  "quijotes-84-2094": 'En fon\xEDa es buena pr\xE1ctica cerrar con \xABcambio\xBB o \xABout\xBB para indicar fin de transmisi\xF3n; no sustituye la identificaci\xF3n con distintivo. \xABEs recomendable finalizar la emisi\xF3n con la palabra "cambio".\xBB. (BOE-A-2013-7624).',
+  "quijotes-84-2104": "En 160 m el l\xEDmite de potencia del banco hist\xF3rico puede ser 50 W PEP; verifica en anexo I (BOE-A-2013-7624) la banda exacta. \xAB50 w\xBB.",
+  "quijotes-84-2203": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xAB2.187,5 kHz\xBB.",
+  "quijotes-84-2210": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSon los planes de la IARU Regi\xF3n 1, utilizados como norma general.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-2214": "En 40 m fon\xEDa el modo habitual es LSB; el enunciado pide el modo no permitido seg\xFAn el plan del banco. \xABLSB\xBB. (BOE-A-2013-7624)."
+};
+
+// data/generated-explanations.js
+var generated_explanations_default = {
+  "fedi-ag-001": "Un ohmio (\u03A9) es la resistencia entre dos puntos cuando 1 V produce 1 A (ley de Ohm). \xAB1 voltio / 1 amperio\xBB.",
+  "fedi-ag-002": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB200 pF\xBB.",
+  "fedi-ag-003": "AM significa modulaci\xF3n de amplitud: la informaci\xF3n viaja en los cambios de amplitud de la portadora. Un detector de envolvente con diodo y filtro RC sigue esa envolvente para recuperar el audio. No sirve como detector principal de FM (modulaci\xF3n de frecuencia), PM (modulaci\xF3n de fase) o SSB (banda lateral \xFAnica).",
+  "fedi-ag-004": "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A\u2013C vac\xEDas; aqu\xED se ha normalizado el enunciado. FEDI-EA.",
+  "fedi-ag-006": "La resistencia se mide sin tensi\xF3n aplicada (fuera de circuito o en banco de prueba). En paralelo la tensi\xF3n es com\xFAn; en serie, la intensidad. Las tres primeras afirmaciones del enunciado no son correctas en conjunto. \xABNinguna de las respuestas anteriores es correcta\xBB.",
+  "fedi-ag-007": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABLa anchura de banda estrictamente suficiente para transmitir la informaci\xF3n en condiciones adecuadas\xBB.",
+  "fedi-ag-008": "La capacidad indica cu\xE1nta carga puede almacenar un condensador; en el SI la unidad es el faradio (F), con subm\xFAltiplos \xB5F, nF o pF. \xABFaradios\xBB.",
+  "fedi-ag-010": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDispositivo que convierte la corriente continua en alterna\xBB.",
+  "fedi-ag-011": "En una fuente lineal: el transformador adapta y a\xEDsla la CA de red, el rectificador convierte a CC pulsante, el filtro suaviza el rizado y el regulador estabiliza la tensi\xF3n de salida. El orden habitual es transformador \u2192 rectificador \u2192 filtro \u2192 regulador. \xABTransformador \u2192 rectificador \u2192 filtro \u2192 regulador\xBB.",
+  "fedi-ag-013": "La frecuencia cr\xEDtica es el l\xEDmite a partir del cual la onda ya no vuelve refractada por la ionosfera con esa geometr\xEDa. En el esquema, la se\xF1al 3 atraviesa la capa en lugar de regresar: por eso es la que est\xE1 por encima de la frecuencia cr\xEDtica. FEDI-EA.",
+  "fedi-ag-014": "En corriente continua y en r\xE9gimen permanente, el condensador ideal se comporta como circuito abierto: no circula corriente por \xE9l, pero queda cargado a la tensi\xF3n entre sus bornes. Como est\xE1 en paralelo con la rama inferior del divisor, su tensi\xF3n es la de esa rama: 9 V. FEDI-EA.",
+  "fedi-ag-015": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABPotencia de portadora\xBB. (BOE-A-2013-7624).",
+  "fedi-ag-016": "Un receptor de conversi\xF3n directa mezcla la se\xF1al de RF recibida con una se\xF1al generada localmente para obtener directamente audio o una frecuencia muy baja. El bloque que alimenta al mezclador debe ser, por tanto, el oscilador local. FEDI-EA.",
+  "fedi-ag-018": "El factor de potencia (coseno \u03C6) relaciona potencia activa y aparente en CA y refleja el desfase entre tensi\xF3n y corriente. \xABIndicador del desfasaje entre tensi\xF3n y corriente\xBB. (BOE-A-2013-7624).",
+  "fedi-ag-019": "Un diodo conduce bien en polarizaci\xF3n directa y bloquea en inversa; por eso rectifica y protege etapas. No confundir con un transistor o una resistencia. \xABPermiten el paso de la corriente en una \xFAnica direcci\xF3n\xBB.",
+  "fedi-ag-020": "En una vertical de cuarto de onda los radiales simulan el plano de tierra y modifican la impedancia de entrada seg\xFAn su longitud e inclinaci\xF3n. \xABUna variaci\xF3n de la impedancia de entrada.\xBB.",
+  "fedi-ag-021": "RF es radiofrecuencia; la FI (frecuencia intermedia) se amplifica antes de detectar. Un nivel excesivo en antena puede saturar el mezclador o la FI y empeorar la sensibilidad (desensibilizaci\xF3n). \xABExcesivo nivel de se\xF1al en la antena\xBB.",
+  "fedi-ag-022": "C\xF3digo de colores: violeta = 7, verde = 5, rojo = \xD710\xB2, oro = tolerancia \xB15 %. Valor 75 \xD7 100 = 7500 \u03A9 = 7,5 k\u03A9. \xAB7.500 \u03A9 y 5 %\xBB.",
+  "fedi-ag-023": "El excitador genera y modula la se\xF1al de RF de baja potencia que alimenta la etapa de potencia del transmisor. \xABSuministra la potencia necesaria a la etapa amplificadora de potencia\xBB.",
+  "fedi-ag-024": "Radiales a ~45\xB0 suelen acercar la impedancia de la vertical a unos 50 \u03A9 y el diagrama en horizontal se aproxima al omnidireccional. \xABUn valor de impedancia pr\xF3ximo a 50 \u03A9 y un diagrama de radiaci\xF3n pr\xE1cticamente omnidireccional.\xBB.",
+  "fedi-ag-025": "La RF puede acoplarse a masas y cables de audio. Tomas de tierra en el chasis y condensadores de desacoplo en alimentaci\xF3n limitan ese acoplamiento. \xABTomas de tierra y condensadores\xBB.",
+  "fedi-ag-027": "La longitud el\xE9ctrica de una antena resonante depende de la longitud de onda \u03BB, y \u03BB = c/f: a mayor frecuencia, antena m\xE1s corta. \xABFrecuencia\xBB.",
+  "fedi-ag-028": "La difracci\xF3n permite que la onda rodee obst\xE1culos cuando el obst\xE1culo es comparable en tama\xF1o a la longitud de onda. \xABDifracci\xF3n.\xBB.",
+  "fedi-ag-029": "EMI es interferencia electromagn\xE9tica conducida o radiada. Un filtro de l\xEDnea en la alimentaci\xF3n aten\xFAa componentes RF que entran o salen por la red. \xABColocando un filtro apropiado\xBB.",
+  "fedi-ag-030": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABIonosfera\xBB.",
+  "fedi-ah-031": "La convocatoria oficial define dos pruebas independientes (t\xE9cnica y reglamentaci\xF3n), alineadas con el programa de examen. La respuesta es \xABEval\xFAa la capacidad de la persona para operar estaciones radioel\xE9ctricas del Servicio de Aficionados y Servicio de Aficionados por Sat\xE9lite\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-032": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB.",
+  "fedi-ah-033": "Los c\xF3digos Q son abreviaturas de tres letras que empiezan por Q (QTH ubicaci\xF3n, QRM interferencia, etc.). \xABEmpieza siempre por la letra Q\xBB.",
+  "fedi-ah-034": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABTres meses\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-035": "No cualquiera puede operar una estaci\xF3n ajena: debe ser titular de autorizaci\xF3n de radioaficionado (o invitado con permiso del titular seg\xFAn otro enunciado). \xABCualquier titular de autorizaci\xF3n de radioaficionado, con permiso de su propietario\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-036": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xAB1 mes\xBB para este enunciado. (BOE-A-2013-7624).",
+  "fedi-ah-037": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABSiempre\xBB es la formulaci\xF3n del banco. (BOE-A-2013-7624).",
+  "fedi-ah-038": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSe utiliza para el deletreo de palabras\xBB.",
+  "fedi-ah-039": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABGuip\xFAzcoa\xBB.",
+  "fedi-ah-040": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB50 W\xBB.",
+  "fedi-ah-041": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-042": "En Espa\xF1a se usa el alfabeto fon\xE9tico en castellano (Alfa, Noviembre\u2026), no la pronunciaci\xF3n inglesa de ICAO. \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB.",
+  "fedi-ah-043": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos; verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB.",
+  "fedi-ah-044": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSiempre\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-045": "La autorizaci\xF3n de radioaficionado acredita al titular para emitir en las bandas y condiciones que permite el reglamento vigente (BOE-A-2013-7624), no sustituye la licencia de estaci\xF3n cuando esta sea exigible. \xABEmitir en las bandas y con las caracter\xEDsticas del reglamento\xBB.",
+  "fedi-ah-047": "El certificado CEPT no exige indicar la asociaci\xF3n del titular en el formato habitual del diploma. \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB.",
+  "fedi-ah-049": "En pa\xEDses que aplican T/R 61-02 (HAREC), el certificado facilita el reconocimiento de tu formaci\xF3n; cada administraci\xF3n mantiene su tr\xE1mite de autorizaci\xF3n local. \xABDispone del certificado HAREC\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-051": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABTTT\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-052": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABDebe estar formalizado antes de la expedici\xF3n de la licencia de estaci\xF3n\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-053": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xABComunicaciones relacionadas con el servicio de aficionados\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-055": "En la nomenclatura ITU, MF (Medium Frequency) designa el tramo aproximado de 300\u20133000 kHz. Para este enunciado la respuesta correcta es \xABOndas hectom\xE9tricas\xBB.",
+  "fedi-ah-056": "La ayuda en cat\xE1strofes es voluntaria; el radioaficionado no est\xE1 obligado por el reglamento (BOE-A-2013-7624) a prestar servicios de emergencia. \xABEs voluntaria\xBB.",
+  "fedi-ah-057": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB.",
+  "fedi-ah-059": "El art. 25 UIT regula comunicaciones entre aficionados, identificaci\xF3n y condiciones del servicio; las administraciones pueden notificar restricciones. \xABSe permiten salvo que una Administraci\xF3n notifique oposici\xF3n\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-060": "Si causas interferencias perjudiciales debes cesar la emisi\xF3n de inmediato hasta resolver la causa (buena pr\xE1ctica y deber reglamentario). \xABSuspender de inmediato las emisiones\xBB.",
+  "ofic-001": "En corriente continua la potencia disipada o entregada es P = V\xB7I (vatios). Es la relaci\xF3n b\xE1sica del bloque de electricidad. \xABP = V \xB7 I\xBB.",
+  "ofic-002": "En serie las resistencias se suman: Req = R1 + R2 + \u2026 La tensi\xF3n se reparte seg\xFAn cada R. \xABR1 + R2\xBB.",
+  "ofic-003": "Sin modulaci\xF3n de informaci\xF3n solo se transmite la portadora (potencia de portadora). La respuesta es \xABLa frecuencia\xBB.",
+  "ofic-005": "Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xABMedia longitud de onda\xBB.",
+  "ofic-006": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABUn circuito abierto\xBB.",
+  "ofic-007": "FI significa frecuencia intermedia. En un receptor superheterodino, el mezclador combina la se\xF1al de antena con el oscilador local para trasladarla a una FI fija, donde resulta m\xE1s f\xE1cil filtrar y amplificar.",
+  "ofic-008": "El marco habitual es la Orden IET/1311/2013, que aprueba el Reglamento de aficionados publicado en el BOE; el texto vinculante est\xE1 en el BOE.",
+  "ofic-009": "El esquema habitual es dos pruebas independientes alineadas con el programa (electricidad y reglamentaci\xF3n), reflejado en el reglamento y en la convocatoria.",
+  "ofic-010": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABT/R 61-01\xBB. (BOE-A-2013-7624).",
+  "ofic-011": "El art. 25.h distingue dentro/fuera del casco urbano; dentro del urbano el l\xEDmite orientativo citado en el propio texto es 10 W de salida (fuera suele ser mayor; ver tabla y redacci\xF3n vigente).",
+  "ofic-012": "El anexo I desarrolla condiciones t\xE9cnicas (incluye tablas de potencias por banda, etc.); es referencia obligada ante dudas de enunciados.",
+  "ofic-013": "En un circuito LC ideal, la frecuencia de resonancia es f0 = 1/(2\u03C0\u221A(LC)); en paralelo o serie cambia la forma de la impedancia en resonancia. \xABf0 = 1/(2\u03C0\u221A(LC))\xBB.",
+  "ofic-014": "Los c\xF3digos Q abrevian situaciones en tr\xE1fico: QRL ocupado, QRX espera, QSY cambio de frecuencia, QRT cese, QRM interferencia, QRN ruido atmosf\xE9rico. \xABCambiar de frecuencia o canal\xBB. (BOE-A-2013-7624).",
+  "ofic-015": "La reactancia capacitiva es Xc = 1/(2\u03C0fC). Si f aumenta y C permanece constante, Xc disminuye. Por eso los condensadores dejan pasar mejor las componentes de alta frecuencia que la corriente continua.",
+  "ofic-016": "El Zener trabaja polarizado en inversa dentro de su zona Zener, con corriente limitada, y mantiene aproximadamente una tensi\xF3n fija. En examen suele asociarse a referencia o regulaci\xF3n de tensi\xF3n.",
+  "ofic-017": "Tras la etapa de potencia pueden aparecer arm\xF3nicos o espurias. El filtro de salida aten\xFAa esas componentes antes de la antena, reduciendo interferencias y manteniendo la emisi\xF3n dentro del espectro permitido.",
+  "ofic-018": "El criterio de Nyquist exige muestrear al menos al doble de la frecuencia m\xE1xima presente. Si se muestrea por debajo, aparecen componentes falsas por aliasing; por eso tambi\xE9n se usan filtros antialias.",
+  "ofic-019": "En una Yagi, el reflector queda detr\xE1s del elemento excitado y los directores se sit\xFAan hacia delante. La m\xE1xima radiaci\xF3n o recepci\xF3n se produce en la direcci\xF3n de los directores.",
+  "ofic-020": "dBd expresa ganancia respecto a un dipolo de media onda. dBi expresa ganancia respecto a una antena isotr\xF3pica; entre ambas referencias hay aproximadamente 2,15 dB.",
+  "ofic-021": "Mayday se reserva para socorro. Pan Pan indica urgencia, por ejemplo una situaci\xF3n que requiere prioridad pero no implica necesariamente peligro grave e inmediato para la vida. S\xE9curit\xE9/Securite se asocia a avisos de seguridad.",
+  "ofic-022": "RST resume Readability, Strength y Tone: legibilidad, intensidad de se\xF1al y tono. En telefon\xEDa suelen usarse R y S; en telegraf\xEDa se a\xF1ade T para valorar el tono.",
+  "ofic-023": "El servicio de radioaficionado es t\xE9cnico y abierto: no se usan comunicaciones encubiertas ni fines ajenos al servicio (comercial, secreto, etc.). \xABNo son propias del servicio y deben evitarse\xBB.",
+  "ofic-024": "En transmisi\xF3n puede haber tensiones y corrientes de radiofrecuencia elevadas en antena, acoplador o l\xEDnea. La seguridad exige no tocar elementos radiantes, mantener distancias y cuidar tierra y protecciones.",
+  "ofic-025": "La RF puede entrar por cables, alimentaci\xF3n o falta de apantallamiento. Las soluciones t\xEDpicas son ferritas, filtros, desacoplos, cables blindados, buena puesta a tierra y revisi\xF3n de arm\xF3nicos.",
+  "ofic-027": "Los planes de banda IARU ayudan a convivir en el espectro recomendando segmentos para modos, anchos de banda o actividades. No sustituyen la autorizaci\xF3n, el reglamento espa\xF1ol ni el CNAF.",
+  "ofic-028": "La licencia CEPT facilita operaci\xF3n temporal, pero el operador se somete a las bandas, potencias, prefijos y condiciones del pa\xEDs donde transmite. No basta con aplicar solo la normativa espa\xF1ola.",
+  "ofic-029": "El S-meter es un indicador de nivel o intensidad relativa de se\xF1al recibida. No mide la potencia de salida del transmisor ni sustituye a un vat\xEDmetro o medidor de ROE.",
+  "ofic-030": "La SSB transmite una sola banda lateral y normalmente suprime la portadora. As\xED reduce anchura de banda y concentra mejor la potencia \xFAtil respecto a una AM con portadora y dos bandas laterales.",
+  "ofic-031": "Es una pregunta trampa habitual: en operaci\xF3n internacional puede verse la forma inglesa November, pero algunos bancos espa\xF1oles formulan el deletreo con la adaptaci\xF3n usada en castellano: N = Noviembre. No inventes palabras como Norte o N\xE1utico.",
+  "ofic-032": "En HF interesa la ionosfera y sus subcapas (D, E, F1, F2). La troposfera influye m\xE1s en VHF/UHF; no confundir con capas meteorol\xF3gicas.",
+  "ofic-033": "El formato cl\xE1sico es letra-n\xFAmero-letra (p. ej. modulaci\xF3n y tipo de se\xF1al). En examen suele preguntarse la estructura, no memorizar todas las clases.",
+  "ofic-034": "ED/EE/EF suelen reservarse a usos temporales especiales. EG/EH se relacionan con eventos regionales; AM/AN/AO con relevancia nacional o internacional (tablas de estudio espa\xF1olas).",
+  "ofic-036": "En resonancia serie |XL| = |XC|; las reactancias se cancelan y la impedancia queda esencialmente resistiva. \xABSe igualan en magnitud y se cancelan\xBB.",
+  "ofic-037": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
+  "ofic-039": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABSuprimir el audio cuando no hay se\xF1al \xFAtil de RF\xBB.",
+  "ofic-040": "QRX indica que la estaci\xF3n volver\xE1 a llamar o est\xE1 esperando. QRL significa \xABestoy ocupado\xBB. \xABSe volver\xE1 a llamar m\xE1s tarde\xBB.",
+  "ofic-041": "EG/EH se vinculan a eventos regionales o locales. AM/AN/AO suelen usarse en eventos de mayor relevancia; ED/EE/EF en otros usos temporales.",
+  "ofic-042": "La doble superheterodina usa dos mezclas a FI distintas para mejorar selectividad y suprimir imagen en bandas altas. \xABDos frecuencias intermedias en cadena\xBB.",
+  "ofic-043": "La relaci\xF3n delante\u2013atr\xE1s (F/B) compara radiaci\xF3n o recepci\xF3n del l\xF3bulo principal frente a la parte trasera, en dB. \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
+  "ofic-044": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB.",
+  "ofic-045": "Evita interferir a comunicaciones en curso. Es buena pr\xE1ctica aunque el reglamento tambi\xE9n exija identificarse y respetar bandas.",
+  "ofic-046": "CL = Closing / cierre de estaci\xF3n. No confundir con QRT (cesar emisi\xF3n) en todos los contextos, pero CL es cierre habitual.",
+  "q1": "En CC la intensidad es la misma en serie en un lazo simple; tensiones se reparten seg\xFAn resistencias. \xABV = I \xB7 R\xBB.",
+  "q10": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABAcreditar superaci\xF3n de examen de competencias de aficionado\xBB.",
+  "q11": "En comunidades de propietarios suelen aplicarse l\xEDmites, comunicaci\xF3n y acuerdos seg\xFAn normativa y estatutos. \xABPueden existir l\xEDmites y requisitos de comunicaci\xF3n/acuerdos seg\xFAn normativa y estatutos\xBB.",
+  "q3": "En el vac\xEDo, \u03BB = c/f (c \u2248 3\xB710\u2078 m/s). A mayor frecuencia, menor longitud de onda. \xAB\u03BB = c / f\xBB.",
+  "q4": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. \xABLa amplitud\xBB.",
+  "q5": "En polarizaci\xF3n directa el diodo conduce con baja resistencia din\xE1mica; en inversa bloquea (modelo ideal). \xABConduce en un sentido con baja resistencia\xBB.",
+  "q6": "ROE elevada indica reflexiones por desadaptaci\xF3n de impedancias en la l\xEDnea o antena. \xABDesadaptaci\xF3n de impedancias\xBB.",
+  "q7": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABE\xBB. (BOE-A-2013-7624).",
+  "q8": "QRM indica interferencia de origen artificial (otras emisiones o equipos). QRN es ruido atmosf\xE9rico. \xABQRM\xBB.",
+  "q9": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMike\xBB.",
+  "quijotes-84-1836": "El mapa del enunciado corresponde al distrito EA5 (Comunidad Valenciana y Murcia en la tabla de residencia del BOE-A-2013-7624). La cifra 5 identifica ese distrito geogr\xE1fico. \xABDistrito 5.\xBB.",
+  "ure-p1-q10": "Los BJT comerciales son NPN o PNP seg\xFAn el material y dopado; NNP, PNN o PPN no son designaciones v\xE1lidas. \xABNPN\xBB.",
+  "ure-p1-q11": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xAB\xBDC.V\xB2\xBB.",
+  "ure-p1-q122": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB.",
+  "ure-p1-q123": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABEs el tiempo que transcurre entre dos m\xEDnimos consecutivos\xBB.",
+  "ure-p1-q124": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABPotencia\xBB.",
+  "ure-p1-q125": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABDos bobinas acopladas\xBB.",
+  "ure-p1-q126": "El filtro de l\xEDnea de desacoplo evita que RF del equipo entre en la red el\xE9ctrica dom\xE9stica. \xABFiltro de l\xEDnea de desacoplo\xBB.",
+  "ure-p1-q127": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q129": "Cada instrumento mide una magnitud: potencia (vat\xEDmetro), forma de onda (osciloscopio), frecuencia (frecuenc\xEDmetro) o espectro (analizador). \xABAmplitud\xBB.",
+  "ure-p1-q13": "El dipolo doblado (folded) presenta en resonancia una impedancia de entrada mayor que el dipolo simple (del orden de cuatro veces en el centro). \xABMayor\xBB.",
+  "ure-p1-q131": "Modular es variar alg\xFAn par\xE1metro de la portadora (amplitud, frecuencia o fase) seg\xFAn la se\xF1al de informaci\xF3n. \xABLa modulaci\xF3n AM hace variar la amplitud de la portadora\xBB.",
+  "ure-p1-q132": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABLa suma de las capacidades individuales\xBB.",
+  "ure-p1-q133": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad que tiene de captar se\xF1ales d\xE9biles y amplificarlas\xBB.",
+  "ure-p1-q134": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABEl receptor A es m\xE1s selectivo que el receptor B\xBB.",
+  "ure-p1-q135": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xAB10 MHz\xBB.",
+  "ure-p1-q136": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABPara distancias cortas\xBB.",
+  "ure-p1-q137": "NB (noise blanker) aten\xFAa ruidos impulsivos en recepci\xF3n; no es el silenciador por falta de se\xF1al (squelch). \xABSuprimir ruidos impulsivos\xBB.",
+  "ure-p1-q138": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABUna antena dipolo con circuitos resonantes instalados sim\xE9tricamente, en cada rama, desde el centro, para su utilizaci\xF3n en una banda de frecuencias m\xE1s amplia\xBB.",
+  "ure-p1-q139": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia por debajo de la cual no es posible la transmisi\xF3n en la gu\xEDa de onda\xBB.",
+  "ure-p1-q14": "La capacidad indica cu\xE1nta carga puede almacenar un condensador; en el SI la unidad es el faradio (F), con subm\xFAltiplos \xB5F, nF o pF. \xABDe la geometr\xEDa y disposici\xF3n de sus placas adem\xE1s de la naturaleza del diel\xE9ctrico\xBB.",
+  "ure-p1-q142": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABSon directivas\xBB.",
+  "ure-p1-q143": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABLa se\xF1al radioel\xE9ctrica se propaga siguiendo la curvatura terrestre\xBB.",
+  "ure-p1-q147": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABPara frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB\xBB.",
+  "ure-p1-q15": "Clase A conduce todo el ciclo (lineal, ineficiente); B/AB/C recortan conducci\xF3n para mayor eficiencia en RF. \xABEl de clase AB es una combinaci\xF3n de A y B\xBB.",
+  "ure-p1-q150": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xAB300.000 km/s\xBB.",
+  "ure-p1-q16": "RF significa radiofrecuencia. El margen din\xE1mico suele quedar limitado en las primeras etapas de RF y mezcla, donde aparecen compresi\xF3n e intermodulaci\xF3n. IP3 es el punto de intercepci\xF3n de tercer orden, una medida usada para valorar esa intermodulaci\xF3n.",
+  "ure-p1-q18": "El acoplador adapta impedancias entre transmisor y l\xEDnea o antena para minimizar reflexiones. \xABAdaptar la impedancia de la etapa final de potencia a la l\xEDnea de transmisi\xF3n y antena\xBB.",
+  "ure-p1-q181": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEl vatio\xBB.",
+  "ure-p1-q183": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+  "ure-p1-q184": "El diodo de estado s\xF3lido conduce preferentemente en un sentido y bloquea en el otro. \xABDispositivo que permite el paso de la corriente el\xE9ctrica en un s\xF3lo sentido\xBB.",
+  "ure-p1-q185": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABLa longitud de onda multiplicada por la frecuencia\xBB.",
+  "ure-p1-q186": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABLa relaci\xF3n entre la potencia entregada al sistema radiante y la consumida\xBB.",
+  "ure-p1-q187": "Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xABQ=f/B\xBB.",
+  "ure-p1-q188": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad que tiene para separar dos se\xF1ales de frecuencias pr\xF3ximas\xBB.",
+  "ure-p1-q189": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABDirectiva\xBB.",
+  "ure-p1-q19": "Las frecuencias imagen aparecen en superheterodinos por el mezclado (portadora \xB1 FI); deben filtrarse en FI. \xABA las frecuencias dos veces mayor que las intermedias, por encima y por debajo de las frecuencias centrales originales\xBB.",
+  "ure-p1-q190": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABReceptor con dos frecuencias intermedias independientes\xBB.",
+  "ure-p1-q191": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABEs la suficiente para permitir la transmisi\xF3n a la velocidad y calidad requeridas\xBB.",
+  "ure-p1-q192": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABDeben conectarse respetando la polaridad indicada\xBB.",
+  "ure-p1-q193": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
+  "ure-p1-q194": "El ancho de haz es la apertura angular entre puntos de referencia del diagrama; antenas m\xE1s directivas tienen haz m\xE1s estrecho. \xABEs la separaci\xF3n angular entre dos puntos de potencia radiada la mitad de la m\xE1xima\xBB.",
+  "ure-p1-q195": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABLa direcci\xF3n del campo el\xE9ctrico\xBB.",
+  "ure-p1-q197": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABUn volt\xEDmetro de radiofrecuencia\xBB.",
+  "ure-p1-q198": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABSuperior a la potencia media del transmisor\xBB.",
+  "ure-p1-q199": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABM\xFAltiplos de la frecuencia fundamental\xBB.",
+  "ure-p1-q2": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABElimina las frecuencias no deseadas\xBB.",
+  "ure-p1-q20": "En resonancia la reactancia se anula: la impedancia de alimentaci\xF3n es pr\xE1cticamente resistiva pura. Fuente: URE (pr\xE1ctica web).",
+  "ure-p1-q202": "La ganancia de una antena se expresa en decibelios (dB) respecto a un dipolo (dBd) o a una is\xF3tropa (dBi). \xABdB\xBB.",
+  "ure-p1-q203": "ROE significa relaci\xF3n de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la l\xEDnea/antena. Si la adaptaci\xF3n es mala, aumenta la potencia reflejada y sube la ROE.",
+  "ure-p1-q205": "El fading es variaci\xF3n r\xE1pida de nivel por multipath o propagaci\xF3n; no es arm\xF3nico ni selectividad. \xABEl desvanecimiento transitorio de una se\xF1al electromagn\xE9tica que se propaga\xBB.",
+  "ure-p1-q21": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABS\xED, siempre\xBB.",
+  "ure-p1-q22": "Las ondas EM combinan campo el\xE9ctrico y magn\xE9tico; la luz y la RF son el mismo fen\xF3meno a distinta frecuencia. \xABCaracterizar etapas de radiofrecuencia\xBB.",
+  "ure-p1-q23": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABSuprimir el audio si no hay se\xF1al de RF\xBB.",
+  "ure-p1-q239": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABSe transfiere la m\xE1xima energ\xEDa a la antena\xBB.",
+  "ure-p1-q24": "La cantidad de electricidad (carga) se mide en culombios (C), no en amperios ni vatios. \xABEs correcto\xBB.",
+  "ure-p1-q240": "DSP significa procesador digital de se\xF1al. En un transceptor permite aplicar filtros digitales, reducci\xF3n de ruido y procesado avanzado de recepci\xF3n/transmisi\xF3n; no aumenta por s\xED mismo la potencia ni elimina la ROE.",
+  "ure-p1-q241": "Un diel\xE9ctrico es un material aislante que puede almacenar carga en un condensador (constante diel\xE9ctrica \u03B5). \xABUn aislante\xBB.",
+  "ure-p1-q243": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABUtilizar para su conexi\xF3n cable blindado\xBB.",
+  "ure-p1-q244": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABLa suma de las intensidades de cada una de las ramas\xBB.",
+  "ure-p1-q245": "Las ondas de radio son ondas electromagn\xE9ticas que se propagan en el espacio sin medio material. \xABElectromagn\xE9tica\xBB.",
+  "ure-p1-q247": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABAmplificadores y filtros\xBB.",
+  "ure-p1-q248": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xABBalun\xBB.",
+  "ure-p1-q249": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABEn paralelo\xBB.",
+  "ure-p1-q25": "El varicap se comporta como condensador variable controlado por la tensi\xF3n inversa aplicada. \xABUn condensador variable controlado por tensi\xF3n\xBB.",
+  "ure-p1-q250": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABInversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador\xBB.",
+  "ure-p1-q251": "La etapa de detecci\xF3n (demodulador) extrae audio o datos de la portadora o FI ya filtrada. \xABDemodular la se\xF1al recibida\xBB.",
+  "ure-p1-q253": "El factor Q mide la selectividad del resonador: a mayor Q, pico m\xE1s estrecho y m\xE1s selectividad. \xABLa relaci\xF3n que existe entre la frecuencia de resonancia de ese circuito y su ancho de banda\xBB.",
+  "ure-p1-q254": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABTensi\xF3n el\xE9ctrica\xBB.",
+  "ure-p1-q255": "QSY solicita o indica cambio de frecuencia de operaci\xF3n. \xABUn oscilador de frecuencia variable\xBB.",
+  "ure-p1-q257": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABSu capacidad para recibir se\xF1ales d\xE9biles\xBB.",
+  "ure-p1-q258": "Una antena directiva concentra radiaci\xF3n o recepci\xF3n en una direcci\xF3n preferente. \xABProporcionan directividad\xBB.",
+  "ure-p1-q259": "Por reciprocidad, el diagrama de radiaci\xF3n de una antena pasiva es el mismo en transmisi\xF3n y recepci\xF3n. \xABLos diagramas de radiaci\xF3n en transmisi\xF3n y en recepci\xF3n son iguales\xBB.",
+  "ure-p1-q260": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABHF\xBB.",
+  "ure-p1-q261": "Antes de la toma de antena suele haber protecci\xF3n o interruptor para seguridad y mantenimiento. \xABUn filtro paso bajo o paso banda\xBB.",
+  "ure-p1-q262": "Un dipolo de media onda mide del orden de \u03BB/2 en total; vertical de \u03BB/4 necesita plano de tierra o radiales. \xABIncrementar la longitud el\xE9ctrica de antena\xBB.",
+  "ure-p1-q268": "La protecci\xF3n y la toma de tierra siguen reglas de seguridad el\xE9ctrica; no confundas con fusibles de l\xEDnea. \xABDeben tener un valor nominal superior al m\xE1ximo consumo previsto para el equipo\xBB.",
+  "ure-p1-q3": "La selectividad permite separar se\xF1ales de frecuencias muy pr\xF3ximas; la sensibilidad es captar se\xF1ales d\xE9biles. \xABSelectividad\xBB.",
+  "ure-p1-q301": "A mayor potencia de transmisi\xF3n aumenta la probabilidad de interferir a otros receptores si no hay filtros, ubicaci\xF3n y buenas pr\xE1cticas. \xABMayor\xBB.",
+  "ure-p1-q303": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABMantener constante la amplitud de la se\xF1al de salida\xBB.",
+  "ure-p1-q304": "Kilo = 10\xB3 y mega = 10\u2076; un kiloohmio son 1000 \u03A9 y un megaohmio son 10\u2076 \u03A9. La equivalencia del enunciado es \xABMil ohmios\xBB.",
+  "ure-p1-q305": "En el c\xF3digo de colores, la tolerancia suele indicarse en la \xFAltima banda (p. ej. oro \xB15 %, plata \xB110 %). \xABCuarta l\xEDnea de color\xBB.",
+  "ure-p1-q306": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABLa relaci\xF3n entre el n\xFAmero de espiras del primario y el n\xFAmero de espiras del secundario\xBB.",
+  "ure-p1-q307": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABQue las impedancias capacitiva e inductiva se igualen\xBB.",
+  "ure-p1-q308": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia que delimita la banda de paso o no paso por el filtro\xBB.",
+  "ure-p1-q311": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABProteger aparatos de medida\xBB.",
+  "ure-p1-q312": "Interpreta la figura junto con el enunciado: identifica qu\xE9 magnitud, bloque o relaci\xF3n se pregunta. La opci\xF3n que encaja es \xABUn filtro\xBB.",
+  "ure-p1-q313": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABEs una caracter\xEDstica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)\xBB.",
+  "ure-p1-q314": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABEs un indicador del grado de adaptaci\xF3n de impedancias entre el transmisor y la antena\xBB.",
+  "ure-p1-q316": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABControl autom\xE1tico de nivel o ALC\xBB.",
+  "ure-p1-q317": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xABS\xED, 40 dB por debajo de la potencia media, dentro de la anchura de banda necesaria y no superar el valor de 50 mW\xBB.",
+  "ure-p1-q319": "Sobremodulaci\xF3n distorsiona la envolvente AM cuando el \xEDndice de modulaci\xF3n supera el l\xEDmite lineal. \xABEl \xEDndice modulaci\xF3n es superior al 100%\xBB.",
+  "ure-p1-q320": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABEn el plano horizontal\xBB.",
+  "ure-p1-q322": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABLa potencia reflejada es cero\xBB.",
+  "ure-p1-q323": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABHF\xBB.",
+  "ure-p1-q324": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEn serie, la resistencia total siempre es mayor que cualquiera de ellas\xBB.",
+  "ure-p1-q361": "En CA sinusoidal distinguimos valor m\xE1ximo, eficaz y periodo; el eficaz es el que equivale t\xE9rmicamente a una continua. \xABEl tiempo que transcurre entre dos valores m\xE1ximos consecutivos\xBB.",
+  "ure-p1-q362": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABSi la frecuencia es 0, su valor es 0\xBB.",
+  "ure-p1-q365": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resoluci\xF3n de frecuencia. \xABDe frecuencia muy estable\xBB.",
+  "ure-p1-q366": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABEs constante en un determinado medio\xBB.",
+  "ure-p1-q367": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. \xABSe tiene una sola banda lateral sin portadora\xBB.",
+  "ure-p1-q368": "NBFM significa Narrow Band Frequency Modulation, es decir, modulaci\xF3n de frecuencia de banda estrecha. En el material de examen espa\xF1ol suele asociarse a una excursi\xF3n o desviaci\xF3n m\xE1xima de 12 kHz frente a la FM ancha.",
+  "ure-p1-q369": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABControl Autom\xE1tico de Ganancia\xBB.",
+  "ure-p1-q370": "Clase A conduce todo el ciclo (lineal, ineficiente); B/AB/C recortan conducci\xF3n para mayor eficiencia en RF. \xABClase A\xBB.",
+  "ure-p1-q372": "40 dB de ganancia equivalen a un factor de potencia de 10\u2074 (10 elevado a 40/10). La relaci\xF3n num\xE9rica del banco es \xAB10000\xBB.",
+  "ure-p1-q373": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABEl n\xFAmero de espiras del primario y del secundario\xBB.",
+  "ure-p1-q375": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABAncho de haz de radiaci\xF3n\xBB.",
+  "ure-p1-q376": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABOnda directa\xBB.",
+  "ure-p1-q377": "El balun adapta la l\xEDnea coaxial (no balanceada) al dipolo (balanceado) y puede transformar impedancia. \xABBalun\xBB.",
+  "ure-p1-q378": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMF\xBB.",
+  "ure-p1-q379": "Potencia reflejada en el vat\xEDmetro indica desadaptaci\xF3n (ROE > 1): el transmisor no entrega toda la energ\xEDa a la antena. \xABEl transmisor no est\xE1 adaptado a la antena\xBB.",
+  "ure-p1-q380": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABUn medidor de ROE\xBB.",
+  "ure-p1-q381": "El osciloscopio muestra se\xF1ales en el dominio del tiempo (forma de onda), no el espectro en frecuencia. \xABLa representaci\xF3n gr\xE1fica de las formas de onda\xBB.",
+  "ure-p1-q382": "El enunciado del banco asocia aqu\xED las interferencias a \xABAmplificadores lineales de potencia\xBB frente a AM, antenas directivas o receptores convencionales. Contrastar con el temario URE.",
+  "ure-p1-q385": "PTC: la resistencia sube con la temperatura; se usa en protecci\xF3n t\xE9rmica. NTC baja con el calor. \xABSu valor aumenta con la temperatura\xBB.",
+  "ure-p1-q386": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABUn circuito para suprimir la salida de sonido de un receptor cuando la se\xF1al de entrada a este no supera un determinado nivel\xBB.",
+  "ure-p1-q417": "El amper\xEDmetro mide intensidad y debe ir en serie con la rama a medir; nunca en paralelo como un volt\xEDmetro. \xABEn serie\xBB.",
+  "ure-p1-q418": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEs mayor que el valor de cualquiera de las resistencias\xBB.",
+  "ure-p1-q424": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad de separar dos se\xF1ales muy pr\xF3ximas en frecuencia\xBB.",
+  "ure-p1-q425": "En FM, el \xEDndice de modulaci\xF3n \u03B2 = \u0394f_m\xE1x / f_mod. Con \u0394f = 25 kHz y f_mod = 10 kHz, \u03B2 = 2,5. \xAB2\xB45\xBB.",
+  "ure-p1-q426": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB50 ohmios\xBB.",
+  "ure-p1-q427": "En fon\xEDa, la clase F3E designa emisi\xF3n de voz en FM (modulaci\xF3n de frecuencia). A3E corresponde a AM con doble banda lateral. \xABF3E\xBB.",
+  "ure-p1-q428": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABf 1 + f 2\xBB.",
+  "ure-p1-q429": "En 40 m (~7 MHz), \u03BB \u2248 40 m; un dipolo de media onda mide del orden de \u03BB/2 en total (unos 20 m de longitud f\xEDsica). \xAB20 m\xBB.",
+  "ure-p1-q430": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABUno de los devanados tiene el doble n\xFAmero de espiras que el otro\xBB.",
+  "ure-p1-q431": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABPermite obtener resonancia en varias frecuencias\xBB.",
+  "ure-p1-q432": "El fading es variaci\xF3n r\xE1pida de nivel por multipath o propagaci\xF3n; no es arm\xF3nico ni selectividad. \xABLa intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor\xBB.",
+  "ure-p1-q433": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABRadiaci\xF3n electromagn\xE9tica\xBB.",
+  "ure-p1-q434": "La superheterodinia FM necesita oscilador local para mezclar a frecuencia intermedia; sin ese bloque el diagrama est\xE1 incompleto. \xABUn oscilador\xBB.",
+  "ure-p1-q435": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xABVHF y superiores\xBB.",
+  "ure-p1-q437": "Tensi\xF3n en paralelo, intensidad en serie; resistencia sin tensi\xF3n de trabajo en el circuito. Para esta pregunta: \xABLa impedancia de la antena\xBB.",
+  "ure-p1-q438": "El S-meter indica nivel de se\xF1al recibida (intensidad relativa), no potencia transmitida ni frecuencia. \xABLa intensidad de la se\xF1al de entrada del receptor\xBB.",
+  "ure-p1-q439": "En resonancia serie el LC presenta impedancia m\xEDnima y puede desviar potencia: el vat\xEDmetro lee un valor m\xEDnimo hacia la carga. \xABM\xEDnima\xBB.",
+  "ure-p1-q440": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xABTienen tres terminales\xBB.",
+  "ure-p1-q444": "Para bajar la frecuencia de resonancia hay que alargar el dipolo (mayor longitud el\xE9ctrica). \xABAlargarla\xBB.",
+  "ure-p1-q475": "La radiodifusi\xF3n sonora FM en Espa\xF1a utiliza bandas VHF (aprox. 88\u2013108 MHz); no confundir con segmentos de aficionado en HF. \xABVHF\xBB.",
+  "ure-p1-q477": "Potencia el\xE9ctrica P = V\xB7I; un voltio multiplicado por un amperio es un vatio (W). \xAB13 vatios\xBB.",
+  "ure-p1-q478": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABEl valor de la conexi\xF3n de dos resistencias en paralelo da un valor resultante menor que cualquiera de ellas\xBB.",
+  "ure-p1-q479": "No se debe tocar una antena en transmisi\xF3n: tensiones RF y corrientes de antena pueden causar quemaduras. \xABNo se debe tocar una antena trasmitiendo\xBB.",
+  "ure-p1-q481": "En un circuito CC simple, la intensidad es la misma en serie; no confundir con reparto de tensi\xF3n. \xABLa intensidad est\xE1 en raz\xF3n directa a la tensi\xF3n\xBB.",
+  "ure-p1-q482": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABPotencia el\xE9ctrica\xBB.",
+  "ure-p1-q483": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABA la salida del mezclador\xBB.",
+  "ure-p1-q485": "FI significa frecuencia intermedia: la frecuencia fija a la que el receptor traslada la se\xF1al para trabajarla mejor. En un mezclador cl\xE1sico, |fLO \u2212 fRF| = fFI: oscilador local menos radiofrecuencia recibida debe dar 9 MHz. Por tanto, |fLO \u2212 7| = 9 y la soluci\xF3n \xFAtil es fLO = 16 MHz.",
+  "ure-p1-q486": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABLa potencia directa es superior a la potencia reflejada\xBB.",
+  "ure-p1-q490": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xAB20 W\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q491": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABUno\xBB.",
+  "ure-p1-q492": "Una antena sintonizada resuena a la frecuencia de la se\xF1al y acopla mejor la energ\xEDa radiada. \xABEstabilidad\xBB.",
+  "ure-p1-q495": "El diodo es un componente de dos terminales que permite el paso de corriente en un solo sentido. \xABUn dispositivo que permite el paso de la comente el\xE9ctrica en un \xFAnico sentido\xBB.",
+  "ure-p1-q497": "En la nomenclatura ITU, UHF designa el tramo aproximado de 300\u20133000 MHz. Para este enunciado la respuesta correcta es \xABA mayor frecuencia menor es el alcance conseguido\xBB.",
+  "ure-p1-q498": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xABEmisor, base y colector\xBB.",
+  "ure-p1-q499": "R disipa energ\xEDa; PTC sube R con temperatura y NTC la baja. \xABLos conmutadores en la posici\xF3n 1\xBB.",
+  "ure-p1-q502": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABInterferencias\xBB.",
+  "ure-p1-q503": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena f\xEDsicamente. \xABCircuitos resonantes\xBB.",
+  "ure-p1-q6": "En anal\xF3gico, la se\xF1al puede tomar infinitos valores intermedios entre m\xEDnimo y m\xE1ximo. \xABPueden tener infinitos valores\xBB.",
+  "ure-p1-q61": "La carga se mide en culombios; intensidad es carga por segundo. La opci\xF3n correcta es \xABDirectamente proporcional al producto de las cargas\xBB.",
+  "ure-p1-q63": "Al estrechar el ancho de banda del receptor se filtran m\xE1s se\xF1ales fuera del canal deseado; suele aumentar la selectividad. \xABEl comprendido entre los l\xEDmites superior e inferior de la se\xF1al modulada\xBB.",
+  "ure-p1-q64": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABCarga el\xE9ctrica\xBB.",
+  "ure-p1-q65": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q67": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMayor alcance que el meramente visual entre las antenas transmisora y receptora\xBB.",
+  "ure-p1-q68": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMenores\xBB.",
+  "ure-p1-q69": "En conversi\xF3n directa (homodino) se mezcla la RF con un oscilador para obtener audio o FI muy baja en un solo paso. \xABMezclan directamente la se\xF1al recibida para obtener una se\xF1al de audiofrecuencia\xBB.",
+  "ure-p1-q7": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+  "ure-p1-q70": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABIncrementar la frecuencia de un oscilador\xBB.",
+  "ure-p1-q71": "El \xEDndice de modulaci\xF3n m es t\xEDpico de AM; este enunciado se refiere al tipo de modulaci\xF3n. \xABLa modulaci\xF3n de frecuencia\xBB.",
+  "ure-p1-q74": "La protecci\xF3n y la toma de tierra siguen reglas de seguridad el\xE9ctrica; no confundas con fusibles de l\xEDnea. \xABProteger al operador de descargas\xBB.",
+  "ure-p1-q75": "Antenas directivas concentran radiaci\xF3n; Yagi usa reflector y directores, parab\xF3licas enfocan por apertura. \xABComponentes de la antena no activos\xBB.",
+  "ure-p1-q76": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABLa orientaci\xF3n del campo el\xE9ctrico transmitido\xBB.",
+  "ure-p1-q77": "ROE alta indica energ\xEDa reflejada por desadaptaci\xF3n; el balun adapta sistemas balanceados y no balanceados. \xABIgual a la de la antena y a la del transmisor\xBB.",
+  "ure-p1-q78": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABA la frecuencia por encima de la cual no hay reflexiones en la ionosfera\xBB.",
+  "ure-p1-q79": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen arm\xF3nicos. Clase C es eficiente pero no lineal para AM. \xABLa frecuencia de los de segundo orden es doble de la fundamental\xBB.",
+  "ure-p1-q8": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABSu capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo\xBB.",
+  "ure-p1-q80": "La intensidad de campo se mide con sonda o medidor de campo (V/m o dB\xB5V/m), no con vat\xEDmetro de potencia directa. \xABUn medidor de campo\xBB.",
+  "ure-p1-q82": "En el transformador ideal V1/V2 = N1/N2; un n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento y la inductancia. \xABEl secundario tenga menos espiras que el primario\xBB.",
+  "ure-p1-q9": "La ROE (relaci\xF3n de ondas estacionarias) compara componentes de la onda estacionaria en la l\xEDnea; no es cociente de intensidades de campo del diagrama. Si el banco mezcla conceptos, elige la definici\xF3n que marca \xABIntensidad m\xE1xima / intensidad m\xEDnima\xBB.",
+  "ure-p2-q100": "Pan-Pan (tres veces) es la se\xF1al de urgencia sin peligro grave inmediato; Mayday reserva el socorro. \xABPAN PAN\xBB.",
+  "ure-p2-q101": "La se\xF1al de alarma en radiotelefon\xEDa usa dos tonos alternos; en el banco son aproximadamente 2.220 Hz y 1.300 Hz. \xAB2.220 Hz y 1.300 Hz\xBB.",
+  "ure-p2-q102": "Lee qu\xE9 afirmaci\xF3n es falsa: el banco no reserva los sufijos de dos letras solo a estaciones colectivas. \xABSe reservan \xFAnicamente para estaciones colectivas\xBB.",
+  "ure-p2-q103": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABNo, solo pronunciarse respecto a la idoneidad de la instalaci\xF3n\xBB.",
+  "ure-p2-q104": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABPermite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pa\xEDs visitado que se haya adherido a la Recomendaci\xF3n T/R61-01 de la CEPT\xBB.",
+  "ure-p2-q105": "La cifra de distrito coincide con la residencia del titular seg\xFAn la divisi\xF3n geogr\xE1fica del reglamento de aficionados. \xABEs la cifra coincidente con el n\xFAmero de distrito de residencia del titular, con arreglo a la divisi\xF3n geogr\xE1fica que se especifica en el Reglamento de Aficionados en vigor\xBB.",
+  "ure-p2-q106": "Deben poder ejecutarse obras de mantenimiento del edificio, aunque obligue a desmontar temporalmente la antena autorizada. \xABSe podr\xE1n realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalaci\xF3n de la antena\xBB.",
+  "ure-p2-q107": "Los indicativos ED\u2026 en el banco identifican estaciones desatendidas seg\xFAn el tipo (anal\xF3gica o digital). \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB.",
+  "ure-p2-q108": "Debes coordinar la instalaci\xF3n con otros servicios y usuarios del espectro; evitar interferencias y respetar normativa de antenas. \xABEs necesario tener en cuenta las instalaciones y antenas de otros servicios\xBB.",
+  "ure-p2-q111": "EA m\xE1s cifra de distrito y barra indica un titular CEPT extranjero operando temporalmente en Espa\xF1a. \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB.",
+  "ure-p2-q112": "Revocada la autorizaci\xF3n, no puedes operar hasta obtener una nueva si la normativa lo permite. \xABHasta una nueva autorizaci\xF3n no podr\xE1 ejercer la actividad de la radioafici\xF3n\xBB.",
+  "ure-p2-q114": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABDeber\xE1 expedirse en formato biling\xFCe, si as\xED lo solicita el interesado\xBB.",
+  "ure-p2-q116": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLa licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n\xBB.",
+  "ure-p2-q117": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSiempre\xBB.",
+  "ure-p2-q119": "Emisiones fuera de banda son componentes espectrales adyacentes no deseadas (arm\xF3nicos, splatter). \xABFuera de banda\xBB.",
+  "ure-p2-q120": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMayday\xBB.",
+  "ure-p2-q151": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABTango, Oscar, Papa\xBB.",
+  "ure-p2-q152": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xABHF\xBB.",
+  "ure-p2-q153": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABTodos los pa\xEDses pertenezcan, o no, a la CEPT\xBB.",
+  "ure-p2-q154": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABA cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional\xBB.",
+  "ure-p2-q155": 'Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABLa palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)\xBB.',
+  "ure-p2-q156": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABED\xBB.",
+  "ure-p2-q157": "Hace falta licencia de estaci\xF3n (y autorizaci\xF3n de operador vigente); no basta con comprar equipo. \xABLicencia de Estaci\xF3n\xBB.",
+  "ure-p2-q158": "El prefijo EA9 corresponde a Ceuta y Melilla en la numeraci\xF3n de indicativos espa\xF1oles. \xABCeuta\xBB.",
+  "ure-p2-q160": "En fon\xEDa se usa \xABcambio\xBB al ceder el turno de palabra; es buena pr\xE1ctica operativa. \xABRecomendable\xBB.",
+  "ure-p2-q161": "La estaci\xF3n debe disponer de medios para verificar que emite dentro de las bandas y condiciones autorizadas (anexo I, BOE-A-2013-7624). \xABDeber\xE1 estar provista la estaci\xF3n de los elementos adecuados para comprobar que la emisi\xF3n se realiza dentro de las bandas autorizadas\xBB.",
+  "ure-p2-q162": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado.",
+  "ure-p2-q163": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABVictor\xBB.",
+  "ure-p2-q165": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABC\xE1ceres, C\xE1diz, Cuenca, Ciudad Real\xBB.",
+  "ure-p2-q166": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABCuando exista Acuerdo o Convenio de reciprocidad en la materia con el pa\xEDs de origen del radioaficionado\xBB.",
+  "ure-p2-q167": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABCon motivos de actos que sean inaugurados o visitados por Su Majestad el Rey\xBB.",
+  "ure-p2-q168": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABFecha de superaci\xF3n del examen\xBB.",
+  "ure-p2-q169": "Una estaci\xF3n colectiva para experimentaci\xF3n de propagaci\xF3n puede ser una radiobaliza u otra estaci\xF3n autom\xE1tica desatendida seg\xFAn el supuesto. \xABRadiobaliza\xBB.",
+  "ure-p2-q170": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xAB5\xBB.",
+  "ure-p2-q171": "Es una estaci\xF3n colectiva que funciona sin operador presente, con identificaci\xF3n autom\xE1tica y supervisi\xF3n del gestor. \xABEstaci\xF3n colectiva de aficionado, que para su funcionamiento habitual no requiere la intervenci\xF3n directa del operador\xBB.",
+  "ure-p2-q172": "Las estaciones m\xF3viles mar\xEDtimas usan indicativos y procedimientos del servicio mar\xEDtimo (UIT/OMI), distintos del indicativo EA de aficionado terrestre. \xAB/MM\xBB.",
+  "ure-p2-q174": "Los soportes deben mantener la resistencia mec\xE1nica del edificio y cumplir normativa de seguridad estructural. \xABNo deber\xE1n deteriorar la resistencia mec\xE1nica de los elementos constructivos a los que se fijen\xBB.",
+  "ure-p2-q175": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABEstaci\xF3n fija de aficionado que puede ser accionada a distancia\xBB.",
+  "ure-p2-q176": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSiempre\xBB.",
+  "ure-p2-q177": "Las autorizaciones en bandas restringidas tienen plazo limitado; el enunciado fija el m\xE1ximo legal aplicable. \xABSe otorgar\xE1n por un plazo m\xE1ximo de dieciocho meses\xBB.",
+  "ure-p2-q179": "El art. 25 UIT regula comunicaciones entre aficionados, identificaci\xF3n y condiciones del servicio; las administraciones pueden notificar restricciones. \xABEn el transcurso de sus emisiones, las estaciones de aficionado deber\xE1n transmitir su indicativo a intervalos cortos\xBB.",
+  "ure-p2-q206": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABRomeo\xBB.",
+  "ure-p2-q207": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABConcursos internacionales de alta competitividad\xBB.",
+  "ure-p2-q208": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPueden ser distintos en cada Regi\xF3n\xBB.",
+  "ure-p2-q211": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABPermiten contactar con otros operadores que utilizan el mismo modo\xBB.",
+  "ure-p2-q212": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABLos producidos con motivo de la instalaci\xF3n, mantenimiento y desmontaje de la antena\xBB.",
+  "ure-p2-q213": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMike, Alfa, Romeo\xBB.",
+  "ure-p2-q215": "Los c\xF3digos Q abrevian situaciones en tr\xE1fico: QRL ocupado, QRX espera, QSY cambio de frecuencia, QRT cese, QRM interferencia, QRN ruido atmosf\xE9rico. \xABDeje de transmitir\xBB.",
+  "ure-p2-q216": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABAl comienzo y final de cada emisi\xF3n\xBB.",
+  "ure-p2-q219": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSea demasiado extensa\xBB.",
+  "ure-p2-q220": "La estaci\xF3n port\xE1til es una estaci\xF3n fija usada temporalmente fuera del emplazamiento habitual del titular (anexo I, BOE-A-2013-7624). \xABEs una estaci\xF3n fija, que puede ser utilizada temporalmente en ubicaci\xF3n distinta de la habitual\xBB.",
+  "ure-p2-q222": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q223": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xAB3 a 30 MHz\xBB.",
+  "ure-p2-q225": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABGolf, oscar, lima, foxtrot\xBB.",
+  "ure-p2-q226": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABAnclaje\xBB.",
+  "ure-p2-q227": "Port\xE1til y port\xE1til de mano son categor\xEDas del reglamento: una estaci\xF3n port\xE1til puede ser tambi\xE9n \xABportable\xBB seg\xFAn el desplazamiento del enunciado. \xABEs a la vez una estaci\xF3n portable de aficionado\xBB.",
+  "ure-p2-q228": "Otro titular de autorizaci\xF3n puede operar la estaci\xF3n del titular si este lo autoriza; en emisi\xF3n se identifican ambos seg\xFAn el reglamento. \xABCualquier otro titular de autorizaci\xF3n de radioaficionado\xBB.",
+  "ure-p2-q229": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLe permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n\xBB.",
+  "ure-p2-q230": "Con licencia CEPT u homologaci\xF3n, en el pa\xEDs visitado debes poder acreditar tu autorizaci\xF3n si la administraci\xF3n lo solicita. \xABPresentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen\xBB.",
+  "ure-p2-q232": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABEn cualquier momento a petici\xF3n del titular\xBB.",
+  "ure-p2-q233": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMayday\xBB.",
+  "ure-p2-q234": "Primero se obtiene el diploma de operador (prueba de capacidad); la autorizaci\xF3n de radioaficionado es el paso previo o paralelo seg\xFAn el tr\xE1mite del enunciado. \xABPara su obtenci\xF3n se requerir\xE1 la posesi\xF3n previa del diploma de operador\xBB.",
+  "ure-p2-q236": "HAREC (T/R 61-02) acredita el programa de examen armonizado; facilita obtener autorizaci\xF3n en pa\xEDses que lo reconocen. \xABSe expedir\xE1 conjuntamente con el diploma de operador\xBB.",
+  "ure-p2-q237": "Radiocomunicaci\xF3n es toda telecomunicaci\xF3n realizada mediante ondas radioel\xE9ctricas. \xABRadiocomunicaci\xF3n\xBB.",
+  "ure-p2-q238": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB25 W\xBB.",
+  "ure-p2-q269": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABFoxtrot, India, November\xBB.",
+  "ure-p2-q27": "QRM indica interferencia de origen artificial (otras emisiones o equipos). QRN es ruido atmosf\xE9rico. \xABQRM\xBB.",
+  "ure-p2-q270": "En telegraf\xEDa, AR (end of message) marca el fin del mensaje. VA (end of work) indica fin de la comunicaci\xF3n. \xABAR\xBB.",
+  "ure-p2-q271": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMAYDAY (tres veces), la palabra AQU\xCD o DE y el distintivo de llamada (tres veces)\xBB.",
+  "ure-p2-q272": "Lo que identifica al operador autorizado ante terceros en emisi\xF3n es su distintivo de llamada asignado, no el DNI ni el domicilio. \xABSu distintivo de llamada asociado\xBB.",
+  "ure-p2-q273": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
+  "ure-p2-q274": "Sin superar la prueba de operador (diploma) no se concede la autorizaci\xF3n de radioaficionado. \xABDiploma de operador\xBB.",
+  "ure-p2-q276": "QRK califica la inteligibilidad de la se\xF1al recibida (claridad del mensaje). No confundir con QRM (interferencia) ni QRN (ruido natural). \xABQRK\xBB.",
+  "ure-p2-q277": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLas estaciones autom\xE1ticas desatendidas anal\xF3gicas y digitales respectivamente\xBB.",
+  "ure-p2-q278": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB.",
+  "ure-p2-q279": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB.",
+  "ure-p2-q280": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB.",
+  "ure-p2-q281": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABSean titulares del Certificado HAREC\xBB.",
+  "ure-p2-q282": "EB indica estaci\xF3n de aficionado en Espa\xF1a; la cifra de distrito identifica la provincia (EB1 incluye \xC1vila en el banco). \xAB\xC1vila\xBB.",
+  "ure-p2-q283": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABEEE\xBB.",
+  "ure-p2-q284": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABCertificado de empadronamiento\xBB.",
+  "ure-p2-q285": "En la nomenclatura ITU, LF (Low Frequency) designa el tramo aproximado de 30\u2013300 kHz. Para este enunciado la respuesta correcta es \xAB30 a 300 kHz\xBB.",
+  "ure-p2-q287": "Las autorizaciones especiales son personales (nominativas) y limitan bandas, potencia o modalidad; no son transferibles. \xABSon nominativas y s\xF3lo habilitar\xE1n para la realizaci\xF3n de emisiones a su titular\xBB.",
+  "ure-p2-q289": "Las ondas m\xE9tricas (30\u2013300 MHz) se asocian al s\xEDmbolo VHF en la nomenclatura habitual del examen. \xABM\xE9tricas\xBB.",
+  "ure-p2-q291": "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones autom\xE1ticas desatendidas con resoluci\xF3n administrativa; no est\xE1n prohibidas. \xABEn ning\xFAn caso\xBB.",
+  "ure-p2-q292": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABNo es obligatorio disponer de estaci\xF3n fija\xBB.",
+  "ure-p2-q293": "Si la nueva residencia est\xE1 en otro distrito (otra cifra EA), no puedes conservar el mismo indicativo sin tr\xE1mite. \xABSu nueva provincia de residencia pertenece a un distrito distinto\xBB.",
+  "ure-p2-q294": "Pertenecer a una asociaci\xF3n puede ser \xFAtil, pero no es requisito legal para operar con autorizaci\xF3n vigente. Por eso \xABNo\xBB.",
+  "ure-p2-q295": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABCroacia aplica la Recomendaci\xF3n T/R 61-02 de la CEPT\xBB.",
+  "ure-p2-q296": "Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+  "ure-p2-q30": "La revocaci\xF3n requiere causas legales concretas; no tener todav\xEDa estaci\xF3n montada no es, por s\xED solo, motivo de revocaci\xF3n en este supuesto. \xABNo adquirir una estaci\xF3n radioel\xE9ctrica de aficionado\xBB.",
+  "ure-p2-q31": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABAlbacete\xBB.",
+  "ure-p2-q32": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABNo se puede asignar\xBB.",
+  "ure-p2-q329": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABBravo, Oscar, Juliett\xBB.",
+  "ure-p2-q33": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB145,0000 - 145,1875 MHz\xBB.",
+  "ure-p2-q330": "QRX indica que la estaci\xF3n volver\xE1 a llamar o est\xE1 esperando. QRL significa \xABestoy ocupado\xBB. \xABQRX\xBB.",
+  "ure-p2-q332": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPor todo radioaficionado que opere en Espa\xF1a\xBB.",
+  "ure-p2-q334": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABPalma de Mallorca\xBB.",
+  "ure-p2-q335": "Antes de transmitir conviene escuchar la frecuencia (QRL/QRY) para no interferir: buena pr\xE1ctica operativa. \xABUna pr\xE1ctica de operar adecuada\xBB.",
+  "ure-p2-q338": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local\xBB.",
+  "ure-p2-q339": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB.",
+  "ure-p2-q34": "Las emisiones deben limitarse a finalidades del servicio de aficionados (t\xE9cnicas, ensayos, intercambio entre operadores). \xABSe limitar\xE1 a temas relacionados con el servicio de aficionados y a observaciones de car\xE1cter personal\xBB.",
+  "ure-p2-q340": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABLa se\xF1al de seguridad Securite\xBB.",
+  "ure-p2-q341": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABNo respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci\xF3n vigente en el pa\xEDs de origen\xBB.",
+  "ure-p2-q343": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABLibre y s\xED estuvieran dotados de c\xF3digo de acceso, este deber\xE1 ser p\xFAblico\xBB.",
+  "ure-p2-q344": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa abreviatura m\xE9trica B. m.\xBB.",
+  "ure-p2-q346": "Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xABTelefon\xEDa con un solo canal\xBB.",
+  "ure-p2-q347": "Sin titular con autorizaci\xF3n de radioaficionado (y licencia de estaci\xF3n cuando proceda) no hay instalaci\xF3n regular. \xABLa autorizaci\xF3n de radioaficionado de su titular\xBB.",
+  "ure-p2-q348": "Una estaci\xF3n colectiva de aficionados s\xED puede ser autom\xE1tica desatendida si cumple requisitos; el enunciado pide la opci\xF3n que no encaja con la definici\xF3n. \xABColectiva de aficionado\xBB.",
+  "ure-p2-q349": "El repetidor ampl\xEDa cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tr\xE1fico ajeno al servicio. \xABAmpliar el alcance de las comunicaciones\xBB.",
+  "ure-p2-q35": "EF marca distintivo temporal para eventos o autorizaciones no permanentes seg\xFAn el supuesto del banco. \xABEs concedido para uso temporal por un evento no especialmente significado\xBB.",
+  "ure-p2-q350": "El n\xFAmero de desatendidas autorizadas depende de necesidades del servicio y criterio de la administraci\xF3n, no de un cupo fijo universal en el enunciado. \xABSe autorizar\xE1n en funci\xF3n de las necesidades del servicio\xBB.",
+  "ure-p2-q354": "Como norma general el montaje del sistema radiante lo realiza un instalador inscrito en el registro correspondiente. \xABComo norma general, por un instalador de telecomunicaciones autorizado\xBB.",
+  "ure-p2-q355": "El titular puede usar zonas comunes o fachada del inmueble donde tiene derecho, respetando normativa de antenas y comunidad de propietarios. \xABEst\xE1 legitimado para usar de la totalidad o parte del mismo y ha obtenido la autorizaci\xF3n reglamentaria\xBB.",
+  "ure-p2-q356": "En pa\xEDs visitado CEPT aplicas sus condiciones locales; la protecci\xF3n contra interferencias la rige la administraci\xF3n visitada. \xABNo podr\xE1 solicitar protecci\xF3n contra interferencias perjudiciales\xBB.",
+  "ure-p2-q357": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABLa emisi\xF3n de se\xF1ales de identificaci\xF3n falsas o enga\xF1osas\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q358": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABNine\xBB.",
+  "ure-p2-q36": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB500.000 euros\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q37": "La polarizaci\xF3n de la antena debe alinearse con la de la onda para m\xE1xima transferencia. \xABSe comunicar\xE1 a la Administraci\xF3n la direcci\xF3n del presidente de la comunidad de propietarios\xBB.",
+  "ure-p2-q38": "El seguro de antenas cubre da\xF1os a terceros por la instalaci\xF3n; es parte de la responsabilidad del titular. \xABLa responsabilidad civil del titular\xBB.",
+  "ure-p2-q389": "Los indicativos ED\u2026 en el banco identifican estaciones desatendidas seg\xFAn el tipo (anal\xF3gica o digital). \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica\xBB.",
+  "ure-p2-q39": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPor un grupo alfanum\xE9rico\xBB.",
+  "ure-p2-q391": "Interferir a sabiendas a otra estaci\xF3n est\xE1 prohibido; es mala pr\xE1ctica e infracci\xF3n. \xABNunca\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q392": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB.",
+  "ure-p2-q393": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEst\xE1 emitiendo desde Andaluc\xEDa\xBB.",
+  "ure-p2-q394": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
+  "ure-p2-q395": "QRN indica ruido atmosf\xE9rico o natural (tormentas, est\xE1tica). QRM es interferencia de origen artificial. \xABQRN\xBB.",
+  "ure-p2-q396": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB10 W\xBB.",
+  "ure-p2-q397": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABSolicitud adjuntando una memoria descriptiva del conjunto de la instalaci\xF3n\xBB.",
+  "ure-p2-q398": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB50 W\xBB.",
+  "ure-p2-q399": "Las emisiones experimentales fuera del cuadro habitual requieren autorizaci\xF3n especial (art. 17, BOE-A-2013-7624). \xABRequerir\xE1n una autorizaci\xF3n especial\xBB.",
+  "ure-p2-q40": "La Ley de 19 julio 1983 sobre inmobiliaria y antenas regula el derecho a instalar en fachadas y cubiertas con l\xEDmites de seguridad y est\xE9tica. \xABEl derecho a instalar las antenas en el exterior de los inmuebles\xBB.",
+  "ure-p2-q400": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB.",
+  "ure-p2-q401": "La licencia de estaci\xF3n suele expedirse una vez presentada la memoria o comprobado el montaje, no antes de tener instalaci\xF3n real. \xABFinalizado el montaje de la instalaci\xF3n y presentada la documentaci\xF3n requerida en cada caso\xBB.",
+  "ure-p2-q404": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABAsturias, \xC1vila, Le\xF3n\xBB.",
+  "ure-p2-q405": "Los menores necesitan autorizaci\xF3n fehaciente de padres o tutores adem\xE1s de cumplir requisitos de edad y examen. \xABAportar un escrito de autorizaci\xF3n, en forma fehaciente de sus padres o personas que ostenten su custodia legal, en el que asumir\xE1n las responsabilidades que correspondan al menor titular de la licencia\xBB.",
+  "ure-p2-q406": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPrefijo, Distrito, Sufijo\xBB.",
+  "ure-p2-q407": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABEl acceso ser\xE1 necesariamente libre y si la estaci\xF3n estuviera dotada de c\xF3digo de acceso \xE9ste deber\xE1 ser p\xFAblicamente conocido\xBB.",
+  "ure-p2-q408": "Debes garantizar seguridad estructural, EMC y derechos de terceros; no basta con \xABtener se\xF1al\xBB. \xABSe debe garantizar el derecho de terceros a no sufrir da\xF1os en su propiedad derivados de la instalaci\xF3n\xBB.",
+  "ure-p2-q409": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABRealizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01\xBB.",
+  "ure-p2-q41": "La repetidora desatendida retransmite se\xF1ales para ampliar alcance; debe identificarse y cumplir l\xEDmites t\xE9cnicos del reglamento. \xABTiene por objeto ampliar el alcance de las comunicaciones\xBB.",
+  "ure-p2-q413": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMike\xBB.",
+  "ure-p2-q414": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB2.000.000 \u20AC\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q42": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABLeve\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q43": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEspeciales de relevancia internacional\xBB.",
+  "ure-p2-q44": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABNo\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q445": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABCharlie, India, Delta\xBB.",
+  "ure-p2-q446": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB.",
+  "ure-p2-q447": "Las estaciones autom\xE1ticas desatendidas colectivas suelen vincularse a asociaciones legalmente constituidas, no a cualquier particular sin m\xE1s. \xABA cualquier Asociaci\xF3n de Aficionado legamente reconocida\xBB.",
+  "ure-p2-q448": "La se\xF1al radiotelef\xF3nica internacional de seguridad es la palabra \xABSecurit\xE9\xBB repetida tres veces (ITU). No confundir con Mayday ni con RST. \xABDe la palabra \u201CSecurit\xE9\u201D repetida tres veces\xBB.",
+  "ure-p2-q449": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones\xBB.",
+  "ure-p2-q450": "La solicitud de distintivo temporal se presenta a la administraci\xF3n competente, no la autoriza por s\xED sola el radio club. La opci\xF3n err\xF3nea es la que dice lo contrario. \xABDirigida a la Asociaci\xF3n o Radio Club de aficionados correspondiente, que ser\xE1 la que autorice\xBB.",
+  "ure-p2-q451": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABProporcionan informaci\xF3n sobre el modo recomendado de utilizaci\xF3n en cada banda de frecuencias\xBB.",
+  "ure-p2-q452": "QRH indica que la frecuencia de la estaci\xF3n var\xEDa o es inestable. QSY es cambio voluntario de frecuencia de operaci\xF3n. \xABQRH\xBB.",
+  "ure-p2-q454": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB.",
+  "ure-p2-q457": "Las ondas m\xE9tricas (30\u2013300 MHz) se asocian al s\xEDmbolo VHF en la nomenclatura habitual del examen. \xABVHF\xBB.",
+  "ure-p2-q458": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo\xBB.",
+  "ure-p2-q459": "Entre las reglas est\xE1 no cifrar mensajes de forma opaca y ce\xF1irse al objeto del servicio de aficionados. \xABLas transmisiones entre estaciones no deber\xE1n codificarse para ocultar su significado\xBB.",
+  "ure-p2-q461": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEn todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el pa\xEDs visitado\xBB.",
+  "ure-p2-q462": "El gestor debe cumplir requisitos t\xE9cnicos y de supervisi\xF3n que marca el reglamento; no \xABotorga\xBB licencias a terceros en sentido administrativo. \xABOtorgar la autorizaci\xF3n y conformidad del inicio del funcionamiento de la estaci\xF3n\xBB.",
+  "ure-p2-q464": "Un distintivo liberado puede reasignarse cuando se cancela la autorizaci\xF3n previa; no se hereda autom\xE1ticamente por familiaridad. \xABEn caso de fallecimiento del titular, a familiares en primer grado\xBB.",
+  "ure-p2-q465": "El extranjero residente debe aportar diploma de operador v\xE1lido (o equivalente reconocido) adem\xE1s de la residencia. \xABQue sea titular de un Diploma de operador expedido en Espa\xF1a, o de un Certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02\xBB.",
+  "ure-p2-q466": "Estaci\xF3n digital: conjunto de equipos que permiten modos digitales en las bandas autorizadas, con las mismas obligaciones de identificaci\xF3n. \xABDotada de un conjunto de dispositivos que permiten la realizaci\xF3n de emisiones con t\xE9cnicas digitales\xBB.",
+  "ure-p2-q467": "En este enunciado (\xABEl cambio de ubicaci\xF3n de una antena:\xBB), el criterio de examen apunta a \xABSe debe solicitar a la Direcci\xF3n General de Telecomunicaciones y seguir el mismo procedimiento que si se tratase de primera instalaci\xF3n\xBB. Repasa antenas, l\xEDneas y propagaci\xF3n en el temario y fija qu\xE9 regla o magnitud distingue la opci\xF3n correcta de los distractores.",
+  "ure-p2-q468": "La Ley de 19 julio 1983 sobre inmobiliaria y antenas regula el derecho a instalar en fachadas y cubiertas con l\xEDmites de seguridad y est\xE9tica. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
+  "ure-p2-q47": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABPodr\xE1 ser utilizada con car\xE1cter temporal como portable\xBB.",
+  "ure-p2-q471": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABMantendr\xE1n sin variaci\xF3n el resto del distintivo asignado con car\xE1cter permanente al radioaficionado\xBB.",
+  "ure-p2-q473": "La UIT define la estaci\xF3n de aficionado como parte del servicio de aficionados, bajo supervisi\xF3n de un operador acreditado. \xABUna estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados\xBB.",
+  "ure-p2-q474": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABNo facilitar los datos requeridos por la Administraci\xF3n o retrasar injustificadamente su aportaci\xF3n cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electr\xF3nicas\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q48": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEn cualquier pa\xEDs que haya adoptado la Recomendaci\xF3n T/R 61-01\xBB.",
+  "ure-p2-q49": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABA los dos a\xF1os\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q504": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSeven\xBB.",
+  "ure-p2-q505": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABEl Servicio de Aficionados por Sat\xE9lite utiliza estaciones espaciales situadas en sat\xE9lites\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q507": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABNueve\xBB.",
+  "ure-p2-q508": "En la nomenclatura ITU, SHF designa el tramo aproximado de 3\u201330 GHz (tabla ITU). Para este enunciado la respuesta correcta es \xAB3 y 30 GHz\xBB.",
+  "ure-p2-q51": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABPrev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos\xBB.",
+  "ure-p2-q510": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABHasta tres letras que se asignar\xE1n ordenadas alfab\xE9ticamente por turno riguroso de expedici\xF3n\xBB.",
+  "ure-p2-q511": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABGoza de equiparaci\xF3n a la autorizaci\xF3n de aficionado nacional, en los t\xE9rminos recogidos en el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados\xBB.",
+  "ure-p2-q512": "Un distintivo liberado puede reasignarse cuando se cancela la autorizaci\xF3n previa; no se hereda autom\xE1ticamente por familiaridad. \xABSi se cancela la autorizaci\xF3n correspondiente\xBB.",
+  "ure-p2-q513": "RST resume legibilidad, intensidad y tono; en fon\xEDa se usan normalmente R y S. \xABInformar sobre la intensidad de la se\xF1al recibida\xBB.",
+  "ure-p2-q514": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABTienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT\xBB.",
+  "ure-p2-q515": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB es la formulaci\xF3n del banco.",
+  "ure-p2-q516": 'Pan-Pan (tres veces) es la se\xF1al de urgencia sin peligro grave inmediato; Mayday reserva el socorro. \xABDel grupo "pan pan" repetido tres veces\xBB.',
+  "ure-p2-q517": "No toda antena exige proyecto complejo: las de baja complejidad pueden autorizarse por procedimiento simplificado seg\xFAn el reglamento de antenas. \xABSolo aquellas que por su simplicidad as\xED lo autorice el Jefe Provincial de Inspecci\xF3n de Telecomunicaciones\xBB.",
+  "ure-p2-q518": "Sin acreditar residencia legal en Espa\xF1a no procede la autorizaci\xF3n de extranjero residente. \xABAcredite documentalmente su condici\xF3n de residente en Espa\xF1a\xBB.",
+  "ure-p2-q519": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABT/R 61-02\xBB.",
+  "ure-p2-q52": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMIKE, ECHO, ROMEO, OSCAR\xBB.",
+  "ure-p2-q520": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB.",
+  "ure-p2-q523": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos\xBB.",
+  "ure-p2-q524": "Tras cancelar la licencia, el uso del equipo puede limitarse a recepci\xF3n y solo con autorizaci\xF3n expresa, no a emitir con el distintivo anterior. \xABS\xF3lo en recepci\xF3n, previa autorizaci\xF3n por escrito de la propiedad del inmueble o, en su caso, de la comunidad de propietarios, remitiendo una copia de dicha autorizaci\xF3n a la Direcci\xF3n General de Telecomunicaciones\xBB.",
+  "ure-p2-q525": "El operador invitado se identifica con su distintivo tras el del titular, con permiso de este. \xABSe identificar\xE1, con autorizaci\xF3n del titular, mediante su propio distintivo precedido del distintivo del titular de la estaci\xF3n operada\xBB.",
+  "ure-p2-q526": "Suelen autorizarse a asociaciones de aficionados legalmente constituidas, no a particulares sin estructura de gesti\xF3n. \xABUna asociaci\xF3n de radioaficionados reconocida\xBB.",
+  "ure-p2-q527": "En este enunciado (\xABLa reglamentaci\xF3n vigente permite:\xBB), el criterio de examen apunta a \xABDisponer de distintivo de llamada sin tener una licencia de estaci\xF3n\xBB. Repasa la normativa de aficionados y el BOE vigente en el temario y fija qu\xE9 regla o magnitud distingue la opci\xF3n correcta de los distractores.",
+  "ure-p2-q53": "El diploma acredita que superaste la prueba de capacidad para operar estaciones del servicio. \xABCertifica la capacidad de su titular para operar estaciones radioel\xE9ctricas del servicio de aficionados\xBB.",
+  "ure-p2-q530": "Las radiobalizas de emergencia usan bandas asignadas en VHF (p. ej. 144\u2013146 MHz en el banco). \xAB144 -146 MHz\xBB.",
+  "ure-p2-q531": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSierra, Lima\xBB.",
+  "ure-p2-q54": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLa utilizaci\xF3n a que habilita es de forma temporal\xBB.",
+  "ure-p2-q56": "Con licencia CEPT u homologaci\xF3n, en el pa\xEDs visitado debes poder acreditar tu autorizaci\xF3n si la administraci\xF3n lo solicita. \xABPresentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades\xBB.",
+  "ure-p2-q57": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABNo\xBB.",
+  "ure-p2-q58": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABMelilla\xBB.",
+  "ure-p2-q60": "En este enunciado (\xABEs obligatorio informar a las Jefatura Provinciales de Inspecci\xF3n de Tel\u2026\xBB), el criterio de examen apunta a \xABSiempre y cuando dichas modificaciones sean permanentes\xBB. Repasa licencias, indicativos y procedimientos CEPT en el temario y fija qu\xE9 regla o magnitud distingue la opci\xF3n correcta de los distractores.",
+  "ure-p2-q87": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB.",
+  "ure-p2-q88": "El distintivo de llamada es el grupo de caracteres que identifica la estaci\xF3n en las emisiones. \xABGrupo de caracteres que constituye la se\xF1al de identificaci\xF3n del radioaficionado\xBB.",
+  "ure-p2-q90": "Los distintivos temporales de una letra se reservan a concursos internacionales de alta competitividad. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+  "ure-p2-q91": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABRomeo, Echo, Yankee\xBB.",
+  "ure-p2-q94": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABDeletrear el mensaje\xBB.",
+  "ure-p2-q96": "QTH es la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY indica cambio de frecuencia. \xABQTH\xBB.",
+  "ure-p2-q97": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB."
+};
+
+// lib/lookup-explanation.mjs
+function lookupStoredExplain(id) {
+  return curated_explanations_default[id] || quijotes_explanations_default[id] || generated_explanations_default[id] || "";
+}
+
 // lib/source-hedge.mjs
 function ensureHistoricalSourceHedge(q, text) {
   let ped = String(text || "").trim().replace(/\s*FEDI-EA\.?\s*$/i, "").replace(/\s*Práctica histórica[^.]*\.\s*/gi, "").trim();
@@ -21312,6 +22212,8 @@ function buildBestExplain(q) {
     const t = String(text || "").trim();
     if (t && !isGenericExplainText(t)) candidates.push(t);
   };
+  push(pedagogicalExplain(q));
+  push(lookupStoredExplain(q?.id));
   push(generatePedagogicalExplain(q));
   push(refreshExplainForQuestion(q, ""));
   push(synthesizeReason(stem, correct, topic));
@@ -22524,7 +23426,7 @@ function explainWrongOptionForStem(stem, wrong, correct) {
   if (stemMsg) return stemMsg;
   return "";
 }
-function isWeakBankExplain(text) {
+function isWeakBankExplain(text, q = null) {
   const t = String(text || "").trim();
   if (!t) return true;
   if (isLazyDiodeListExplain(t)) return true;
@@ -22532,7 +23434,19 @@ function isWeakBankExplain(text) {
   if (isGenericExplainText(t)) return true;
   if (/la respuesta que marca el banco|responde al criterio del banco/i.test(t)) return true;
   if (/\. Es[,]?\s*["']?\s*$/.test(t)) return true;
+  const stem = String(q?.stem || "").toLowerCase();
+  if (stem && /pilas|bater[ií]as/.test(stem) && /resistencias se suman/i.test(t)) return true;
+  if (stem && /transferencia m[aá]xima de potencia/.test(stem) && /^Potencia es energía por unidad de tiempo; en CC P = V·I\. Identifica/i.test(t)) {
+    return true;
+  }
   return false;
+}
+function pickUsableExplain(q, text) {
+  const stem = String(q?.stem || "");
+  const t = String(text || "").trim();
+  if (!t || isWeakBankExplain(t, q) || isStemExplainTopicConflict(t, stem)) return "";
+  if (isMisassignedPedagogicalExplain({ ...q, explain: t })) return "";
+  return t;
 }
 function buildWhyCorrect(q) {
   const stem = String(q?.stem || "");
@@ -22540,15 +23454,19 @@ function buildWhyCorrect(q) {
   if (!correct) return "";
   const rect = explainRectifierFunction(stem, correct);
   if (rect) return rect;
+  const fromBank = pickUsableExplain(q, pedagogicalExplain(q));
+  if (fromBank) return fromBank;
+  const stored = pickUsableExplain(q, lookupStoredExplain(q?.id));
+  if (stored) return stored;
   const gen = generatePedagogicalExplain(q);
-  if (gen && !isWeakBankExplain(gen) && !isStemExplainTopicConflict(gen, stem)) {
+  if (gen && !isWeakBankExplain(gen, q) && !isStemExplainTopicConflict(gen, stem)) {
     if (isExplainAcceptable(q, gen)) return gen;
   }
   const best = buildBestExplain(q);
-  if (best && !isWeakBankExplain(best) && !isStemExplainTopicConflict(best, stem)) {
+  if (best && !isWeakBankExplain(best, q) && !isStemExplainTopicConflict(best, stem)) {
     if (isExplainAcceptable(q, best)) return best;
   }
-  return gen && !isWeakBankExplain(gen) ? gen : best;
+  return gen && !isWeakBankExplain(gen, q) ? gen : best;
 }
 function buildWhyWrong(stem, wrong, correct, topicId) {
   const specific = explainWrongOptionForStem(stem, wrong, correct);
@@ -25162,7 +26080,7 @@ function applyQuizPrefsToForm() {
 }
 var QUIZ_MODE_HINTS = {
   study: "Tras cada respuesta ver\xE1s por qu\xE9 encaja la opci\xF3n y la explicaci\xF3n did\xE1ctica. Es el modo por defecto para aprender con el banco.",
-  study_deepen: "Solo acierto o fallo aqu\xED; el detalle est\xE1 en el resumen del bloque, enlaces al temario (secciones 3 y 5) y PDF. No repite la explicaci\xF3n larga del modo anterior.",
+  study_deepen: "Acierto o fallo, regla del banco (si existe) y 2\u20133 vi\xF1etas del temario ligadas a este enunciado \u2014 no el resumen gen\xE9rico del bloque. Enlaces al PDF y secciones 3 y 5.",
   study_confidence: "Antes de corregir marcas seguridad baja, media o alta; luego ves la explicaci\xF3n y una nota de calibraci\xF3n.",
   exam: "Sin correcci\xF3n hasta terminar las 30 preguntas (o la sesi\xF3n libre completa)."
 };
@@ -26102,15 +27020,15 @@ function quizFeedbackTemarioHint(q) {
   return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> ampl\xEDa en el bloque \xAB${escapeHtml2(label)}\xBB del <a href="${href}">temario</a> (ganchos y vi\xF1etas de estudio).</p>`;
 }
 function usablePedagogy(q) {
-  const live = buildWhyCorrect(q);
-  if (live && !isWeakBankExplain(live) && !isMisassignedPedagogicalExplain(q)) {
-    if (!isStemExplainTopicConflict(live, q.stem)) return live;
-  }
   const fromBank = pedagogicalExplain(q);
-  if (fromBank && !isWeakBankExplain(fromBank) && !isMisassignedPedagogicalExplain(q) && !isStemExplainTopicConflict(fromBank, q.stem)) {
+  if (fromBank && !isWeakBankExplain(fromBank, q) && !isMisassignedPedagogicalExplain(q) && !isStemExplainTopicConflict(fromBank, q.stem)) {
     return fromBank;
   }
-  return live || "";
+  const live = buildWhyCorrect(q);
+  if (live && !isWeakBankExplain(live, q) && !isMisassignedPedagogicalExplain({ ...q, explain: live })) {
+    if (!isStemExplainTopicConflict(live, q.stem)) return live;
+  }
+  return live || fromBank || "";
 }
 function normFeedbackText(t) {
   return String(t || "").toLowerCase().replace(/\s+/g, " ").replace(/[«»"']/g, "").trim();
@@ -26134,9 +27052,10 @@ function renderDeepenPanel(q) {
   const ureHref = q.part === 1 ? "https://www.ure.es/examenes/electricidad-y-radioelectricidad/" : "https://www.ure.es/legislacion-y-reglamentacion/";
   const ureLinkText = q.part === 1 ? "URE \xB7 Material de pr\xE1ctica (electricidad y radioelectricidad)" : "URE \xB7 Legislaci\xF3n y reglamentaci\xF3n";
   const rawExplain = typeof q.explain === "string" ? q.explain.trim() : "";
-  const showBankLiteral = rawExplain && !isWeakBankExplain(rawExplain) && !isGenericExplainText(rawExplain) && !isMisassignedPedagogicalExplain(q);
+  const showBankLiteral = rawExplain && !isWeakBankExplain(rawExplain, q) && !isGenericExplainText(rawExplain) && !isMisassignedPedagogicalExplain(q);
   const historical = typeof q.explainSourceNote === "string" && q.explainSourceNote.trim() ? q.explainSourceNote.trim() : "";
-  const resumen = sync?.resumenMemorizar?.length ? `<ul class="temario-list temario-list--compact">${sync.resumenMemorizar.slice(0, 4).map((x) => `<li>${escapeHtml2(x)}</li>`).join("")}</ul>` : "";
+  const focusLines = pickDeepenFocusLines(q, { max: 3, minScore: 2 });
+  const focusList = focusLines.length > 0 ? `<ul class="temario-list temario-list--compact">${focusLines.map((x) => `<li>${escapeHtml2(x)}</li>`).join("")}</ul>` : "";
   const pdfHint = sync?.partePdf ? `<p class="quiz-deepen__pdf muted">PDF local: <code>${escapeHtml2(sync.partePdf)}</code>${sync.paginasLibro && sync.paginasLibro !== "\u2014" ? ` \xB7 p\xE1ginas <strong>${escapeHtml2(sync.paginasLibro)}</strong> (${escapeHtml2(sync.capitulosLibro || "")})` : ""}</p>` : "";
   const ocrDeepen = sync?.paginasLibro && sync.paginasLibro !== "\u2014" ? `<p class="quiz-deepen__pdf muted">OCR: <code>${escapeHtml2(LIBRO_TECNICA_OCR_HINT)}</code></p>` : "";
   const links = `<ul class="quiz-deepen__links">
@@ -26148,10 +27067,10 @@ function renderDeepenPanel(q) {
     </ul>`;
   return `<div class="quiz-deepen">
     <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicaci\xF3n larga del modo \xABcorrecci\xF3n inmediata\xBB.</p>
-    ${resumen ? `<p class="quiz-deepen__note"><strong>Resumen para memorizar (${escapeHtml2(blockTitle)}):</strong></p>${resumen}` : ""}
+    ${showBankLiteral ? `<p class="quiz-deepen__note"><strong>Regla de esta pregunta (banco):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml2(rawExplain)}</p></blockquote>` : ""}
+    ${focusList ? `<p class="quiz-deepen__note"><strong>Repaso del temario relacionado con este enunciado:</strong></p>${focusList}` : `<p class="quiz-deepen__note muted">Abre el temario del bloque \xAB${escapeHtml2(blockTitle)}\xBB (secciones 3 y 5) para contrastar la regla con el PDF.</p>`}
     ${pdfHint}
     ${ocrDeepen}
-    ${showBankLiteral ? `<p class="quiz-deepen__note"><strong>Texto del banco (literal):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml2(rawExplain)}</p></blockquote>` : ""}
     ${historical ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco hist\xF3rico)</summary><p class="muted">${escapeHtml2(historical)}</p></details>` : ""}
     <p class="quiz-deepen__note">Abrir para contrastar:</p>${links}
   </div>`;
