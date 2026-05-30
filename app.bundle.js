@@ -1530,7 +1530,7 @@ var questions_banco_default = [
       "Ninguna de las anteriores es correcta"
     ],
     "correctIndex": 0,
-    "explain": "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A\u2013C vac\xEDas; aqu\xED se ha normalizado el enunciado. FEDI-EA."
+    "explain": "En un transformador ideal, la tensi\xF3n cambia en la misma proporci\xF3n que el n\xFAmero de espiras. Si el primario tiene el doble de espiras que el secundario, tambi\xE9n tendr\xE1 el doble de tensi\xF3n. Por eso se cumple \xABV1 / V2 = N1 / N2\xBB."
   },
   {
     "id": "fedi-ag-005",
@@ -1896,7 +1896,7 @@ var questions_banco_default = [
       "No est\xE1n permitidos en la reglamentaci\xF3n vigente"
     ],
     "correctIndex": 0,
-    "explain": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB."
+    "explain": "Un sufijo de una sola letra es un distintivo muy corto y llamativo. Se reserva para usos especiales, especialmente concursos internacionales de alta competitividad, donde interesa un indicativo r\xE1pido y f\xE1cil de copiar."
   },
   {
     "id": "fedi-ah-033",
@@ -1952,7 +1952,7 @@ var questions_banco_default = [
       "Ninguno"
     ],
     "correctIndex": 0,
-    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xAB1 mes\xBB para este enunciado. (BOE-A-2013-7624)."
+    "explain": "Una autorizaci\xF3n especial no se pide el mismo d\xEDa que se va a emitir: hay que solicitarla con antelaci\xF3n para que la Administraci\xF3n pueda revisarla. En este caso, el plazo que debes recordar es \xAB1 mes\xBB."
   },
   {
     "id": "fedi-ah-037",
@@ -1966,7 +1966,7 @@ var questions_banco_default = [
       "\xDAnicamente si emite con m\xE1s de 500 W de potencia"
     ],
     "correctIndex": 2,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABSiempre\xBB es la formulaci\xF3n del banco. (BOE-A-2013-7624)."
+    "explain": "Las estaciones de aficionado pueden ser inspeccionadas porque usan espectro radioel\xE9ctrico y deben cumplir las condiciones t\xE9cnicas y legales. Tener autorizaci\xF3n no elimina ese control: quedan sometidas a inspecci\xF3n \xABSiempre\xBB."
   },
   {
     "id": "fedi-ah-038",
@@ -2050,7 +2050,7 @@ var questions_banco_default = [
       "18 meses"
     ],
     "correctIndex": 1,
-    "explain": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos. Verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB."
+    "explain": "Una autorizaci\xF3n especial sirve para una actividad concreta y temporal. No es indefinida: dura lo que duren las pruebas o emisiones autorizadas, con un l\xEDmite m\xE1ximo de \xAB12 meses\xBB."
   },
   {
     "id": "fedi-ah-044",
@@ -2134,7 +2134,7 @@ var questions_banco_default = [
       "Al solicitar la autorizaci\xF3n de radioaficionado"
     ],
     "correctIndex": 2,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABDebe estar formalizado antes de la expedici\xF3n de la licencia de estaci\xF3n\xBB. (BOE-A-2013-7624)."
+    "explain": "El seguro debe existir antes de que la estaci\xF3n quede autorizada, porque cubre posibles da\xF1os a terceros desde el primer momento. Por eso debe estar formalizado \xABantes de la expedici\xF3n de la licencia de estaci\xF3n\xBB."
   },
   {
     "id": "fedi-ah-053",
@@ -2190,7 +2190,7 @@ var questions_banco_default = [
       "200 W"
     ],
     "correctIndex": 0,
-    "explain": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB."
+    "explain": "La pregunta pide la potencia m\xE1xima permitida en la banda 50,0-51,0 MHz. Para este supuesto del reglamento, el valor que hay que recordar es \xAB50 W\xBB."
   },
   {
     "id": "fedi-ah-059",
@@ -2412,7 +2412,7 @@ var questions_banco_default = [
       "f0 = \u221A(L/C)"
     ],
     "correctIndex": 1,
-    "explain": "En un circuito LC ideal la resonancia ocurre cuando se igualan las reactancias de bobina y condensador; al despejar esa condici\xF3n se obtiene la f\xF3rmula f0 = 1/(2\u03C0\u221A(LC)). \xABf0 = 1/(2\u03C0\u221A(LC))\xBB.",
+    "explain": "En un circuito LC, la bobina y el condensador se turnan la energ\xEDa. La resonancia aparece cuando ese intercambio encaja. La f\xF3rmula correcta tiene una divisi\xF3n y una ra\xEDz: \xABf0 = 1/(2\u03C0\u221A(LC))\xBB. Las otras opciones fallan porque ponen LC multiplicando, dividiendo mal o sin la ra\xEDz adecuada.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -2442,7 +2442,7 @@ var questions_banco_default = [
       "Se convierte en resistencia pura"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia capacitiva es Xc = 1/(2\u03C0fC). Si f aumenta y C permanece constante, Xc disminuye. Por eso los condensadores dejan pasar mejor las componentes de alta frecuencia que la corriente continua.",
+    "explain": "En un condensador, cuanto m\xE1s alta es la frecuencia, menos oposici\xF3n presenta al paso de la se\xF1al alterna. Por eso su reactancia \xABDisminuye\xBB. No se vuelve resistencia pura ni permanece constante.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / componentes y circuitos."
   },
   {
@@ -2517,7 +2517,7 @@ var questions_banco_default = [
       "La potencia del transmisor"
     ],
     "correctIndex": 1,
-    "explain": "dBd expresa ganancia respecto a un dipolo de media onda. dBi expresa ganancia respecto a una antena isotr\xF3pica; entre ambas referencias hay aproximadamente 2,15 dB.",
+    "explain": "En dBd, la d final recuerda dipolo. La ganancia se compara con un dipolo de media onda, no con una antena isotr\xF3pica (dBi), ni con tierra ni con la potencia del transmisor. Por eso la referencia es \xABUn dipolo de media onda\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / antenas y propagaci\xF3n."
   },
   {
@@ -2757,7 +2757,7 @@ var questions_banco_default = [
       "Q = f + B"
     ],
     "correctIndex": 1,
-    "explain": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
+    "explain": "Q mide lo estrecho o selectivo que es un circuito resonante. Si una frecuencia central f tiene un ancho de banda B peque\xF1o, selecciona mejor. Por eso Q se calcula como \xABQ = f / B\xBB, no al rev\xE9s ni multiplicando.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -2772,7 +2772,7 @@ var questions_banco_default = [
       "100 dBm"
     ],
     "correctIndex": 2,
-    "explain": "1 W = 1000 mW \u2192 10\xB7log10(1000) = 30 dBm. Confundir con 10 dBm (10 mW) es error t\xEDpico de examen.",
+    "explain": "1000 mW es mil veces 1 mW. En dBm, cada x10 suma 10 dB: 10 mW son 10 dBm, 100 mW son 20 dBm y 1000 mW son \xAB30 dBm\xBB. No es 0 dBm, porque 0 dBm ser\xEDa solo 1 mW.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -2892,7 +2892,7 @@ var questions_banco_default = [
       "Control de ganancia"
     ],
     "correctIndex": 1,
-    "explain": "CL = Closing / cierre de estaci\xF3n. No confundir con QRT (cesar emisi\xF3n) en todos los contextos, pero CL es cierre habitual.",
+    "explain": "CL significa cierre de estaci\xF3n. Las otras opciones son de temas distintos: polarizaci\xF3n, licencia CEPT o control de ganancia. En tr\xE1fico, CL se usa para indicar que se cierra.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 y buenas pr\xE1cticas operativas (IARU / URE)."
   },
   {
@@ -2982,7 +2982,7 @@ var questions_banco_default = [
       "1 ohmio"
     ],
     "correctIndex": 1,
-    "explain": "dBm es potencia absoluta respecto a 1 mW (miliwatio). No es tensi\xF3n ni resistencia; dB sin \xABm\xBB es relaci\xF3n entre potencias.",
+    "explain": "dBm mide potencia tomando como referencia 1 miliwatio. La m ayuda: miliwatio. No se refiere a 1 W, ni a voltios, ni a ohmios. Por eso la respuesta es \xAB1 miliwatio\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -3192,7 +3192,7 @@ var questions_banco_default = [
       "50 W."
     ],
     "correctIndex": 3,
-    "explain": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida m\xE1xima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). \xAB50 W.\xBB."
+    "explain": "La pregunta distingue potencias para estaciones autom\xE1ticas desatendidas fuera del casco urbano. Entre 10, 15, 20 y 50 W, el l\xEDmite general que hay que recordar aqu\xED es \xAB50 W.\xBB."
   },
   {
     "id": "quijotes-84-1817",
@@ -3206,7 +3206,7 @@ var questions_banco_default = [
       "Periodo de validez."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABAsociaci\xF3n de radioaficionados a la que pertenece.\xBB. (BOE-A-2013-7624).",
+    "explain": "La licencia CEPT debe incluir datos oficiales como autoridad emisora, distintivo y validez. La asociaci\xF3n del radioaficionado no es un dato necesario de la licencia. Por eso, como pide la incorrecta, la respuesta es \xABAsociaci\xF3n de radioaficionados a la que pertenece.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3221,7 +3221,7 @@ var questions_banco_default = [
       "Obtiene la nacionalidad del pa\xEDs donde resida."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABDispone del Certificado HAREC.\xBB. (BOE-A-2013-7624).",
+    "explain": "Para mudarte a un pa\xEDs que aplica CEPT T/R 61-02, lo que acredita tu capacitaci\xF3n es HAREC. No hace falta nacionalidad ni 10 a\xF1os de experiencia; la opci\xF3n clave es \xABDispone del Certificado HAREC.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3373,7 +3373,7 @@ var questions_banco_default = [
       "Ninguna de ellas, ya no es necesario comunicarlo."
     ],
     "correctIndex": 3,
-    "explain": "La revocaci\xF3n exige causas tasadas en el reglamento; el enunciado pide la opci\xF3n que el banco considera correcta (a veces refleja normativa derogada: l\xE9elo como \xABseg\xFAn el banco\xBB). \xABNinguna de ellas, ya no es necesario comunicarlo.\xBB. (BOE-A-2013-7624).",
+    "explain": "La revocaci\xF3n de una autorizaci\xF3n no se produce por cualquier motivo: debe estar prevista por la norma. En este enunciado, ninguna de las opciones propuestas es una causa espec\xEDfica v\xE1lida, por eso la respuesta es \xABNinguna de ellas, ya no es necesario comunicarlo\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3433,7 +3433,7 @@ var questions_banco_default = [
       "El titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico."
     ],
     "correctIndex": 3,
-    "explain": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABEl titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico.\xBB.",
+    "explain": "La pregunta trata de si el titular debe comunicar peri\xF3dicamente que quiere seguir usando el espectro. En la formulaci\xF3n actual del banco, esa comunicaci\xF3n peri\xF3dica ya no se exige, por eso la respuesta es \xABEl titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3522,7 +3522,7 @@ var questions_banco_default = [
       "Diez a\xF1os"
     ],
     "correctIndex": 0,
-    "explain": "Algunos tr\xE1mites de comunicaci\xF3n previa han sido simplificados en normativa reciente; el banco puede reflejar la redacci\xF3n hist\xF3rica \xABya no hay que comunicarlo\xBB. \xABYa no hay que comunicarlo\xBB. (BOE-A-2013-7624).",
+    "explain": "La pregunta pregunta cada cu\xE1nto hay que comunicar la intenci\xF3n de seguir usando el dominio p\xFAblico radioel\xE9ctrico. En este supuesto no hay una renovaci\xF3n peri\xF3dica que comunicar, as\xED que la respuesta es \xABYa no hay que comunicarlo\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3537,7 +3537,7 @@ var questions_banco_default = [
       "La banda 7100 - 7200 kHz no est\xE1 atribuida a ning\xFAn servicio"
     ],
     "correctIndex": 0,
-    "explain": "La nota 5.141C UIT reserva segmentos en HF; contrasta el cuadro de atribuciones con el CNAF y el reglamento vigente. \xABLa banda 7100 a 7200 kHz est\xE1 atribuida a titulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009\xBB. (BOE-A-2013-7624).",
+    "explain": "La nota 5.141C se refiere al reparto de uso de la banda 7100-7200 kHz en una etapa concreta. La frase que debes reconocer es que esa banda estaba atribuida a t\xEDtulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3612,7 +3612,7 @@ var questions_banco_default = [
       "Por conversi\xF3n de frecuencias."
     ],
     "correctIndex": 2,
-    "explain": "En \xABAl conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomi\u2026\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABNo deseadas.\xBB. Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundi\xF3.",
+    "explain": "Las emisiones no esenciales y las emisiones fuera de banda son se\xF1ales que salen fuera de lo que se pretende transmitir. En conjunto se llaman emisiones \xABNo deseadas\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3672,7 +3672,7 @@ var questions_banco_default = [
       "1000 w"
     ],
     "correctIndex": 1,
-    "explain": "En 160 m el l\xEDmite de potencia del banco hist\xF3rico puede ser 50 W PEP; verifica en anexo I (BOE-A-2013-7624) la banda exacta. \xAB50 w\xBB.",
+    "explain": "La banda 1.830-1.850 kHz est\xE1 en 160 metros. La pregunta solo pide recordar el l\xEDmite de potencia: frente a 5 W, 75 W o 1000 W, el valor correcto es \xAB50 w\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3702,7 +3702,7 @@ var questions_banco_default = [
       "No tienen ninguna relaci\xF3n con la UIT."
     ],
     "correctIndex": 2,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSon los planes de la IARU Regi\xF3n 1, utilizados como norma general.\xBB. (BOE-A-2013-7624).",
+    "explain": "Los planes de banda son una gu\xEDa de uso para ordenar modos y frecuencias. En Espa\xF1a se siguen como referencia los de la IARU Regi\xF3n 1. No los fijan asociaciones locales ni son independientes de la UIT. La respuesta es \xABSon los planes de la IARU Regi\xF3n 1, utilizados como norma general.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3762,7 +3762,7 @@ var questions_banco_default = [
       "0 dBm"
     ],
     "correctIndex": 0,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB. (BOE-A-2013-7624).",
+    "explain": "dBm compara con 1 mW. 1000 mW son mil veces esa referencia, y mil veces equivale a 30 dB. Por eso la respuesta es \xAB30 dBm\xBB, no 0 dBm ni -3 dBm.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3777,7 +3777,7 @@ var questions_banco_default = [
       "Tener un sintonizador muy fino"
     ],
     "correctIndex": 2,
-    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB. (BOE-A-2013-7624).",
+    "explain": "Una ROE baja indica que la antena est\xE1 bien adaptada y devuelve poca energ\xEDa hacia el equipo. Eso ayuda a emitir m\xE1s limpio y reducir interferencias. Por eso conviene \xABTener una ROE baja\xBB, no alta ni simplemente m\xE1s potencia.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4426,7 +4426,7 @@ var questions_banco_default = [
       "La frecuencia de valor constante utilizada en los receptores superheterodinos"
     ],
     "correctIndex": 3,
-    "explain": "La frecuencia intermedia es una frecuencia fija a la que el superheterodino traslada todas las se\xF1ales para filtrarlas y amplificarlas con ganancia y selectividad constantes. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
+    "explain": "En un superheterodino, se\xF1ales distintas se convierten a una frecuencia fija para filtrarlas mejor. Esa frecuencia fija se llama frecuencia intermedia. No es la del oscilador local ni la de conversi\xF3n directa. Es \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5252,7 +5252,7 @@ var questions_banco_default = [
       "Control autom\xE1tico de saturaci\xF3n o CAS"
     ],
     "correctIndex": 2,
-    "explain": "En un transmisor SSB el ALC limita la excitaci\xF3n de la etapa de potencia y reduce distorsi\xF3n e interferencias cuando sube el nivel de entrada. CAF estabiliza frecuencia; CAG es del receptor. \xABControl autom\xE1tico de nivel o ALC\xBB.",
+    "explain": "En SSB, si la se\xF1al entra demasiado fuerte, puede deformarse y generar interferencias. El ALC baja autom\xE1ticamente el nivel para evitarlo. CAF corrige frecuencia y CAG es t\xEDpico del receptor; aqu\xED toca \xABControl autom\xE1tico de nivel o ALC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5681,7 +5681,7 @@ var questions_banco_default = [
       "Receptores convencionales"
     ],
     "correctIndex": 2,
-    "explain": "El enunciado del banco asocia aqu\xED las interferencias a \xABAmplificadores lineales de potencia\xBB frente a AM, antenas directivas o receptores convencionales. Contrastar con el temario URE.",
+    "explain": "Cuanta m\xE1s potencia se maneja, m\xE1s cuidado hay que tener con filtros, adaptaci\xF3n y ajuste. Un amplificador lineal de potencia trabaja con se\xF1ales fuertes y, si est\xE1 mal ajustado o se satura, es m\xE1s f\xE1cil que genere interferencias.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5805,7 +5805,7 @@ var questions_banco_default = [
       "Como oscilador a la frecuencia de resonancia del circuito LC"
     ],
     "correctIndex": 0,
-    "explain": "El LC en paralelo con diodo forma un circuito resonante selectivo en la frecuencia de resonancia: puede actuar como receptor AM pasivo. No es amplificador ni oscilador alimentado. \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
+    "explain": "La bobina y el condensador seleccionan una frecuencia, y el diodo permite detectar AM. Como no hay alimentaci\xF3n, no puede ser amplificador ni oscilador. Por eso sirve \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5867,7 +5867,7 @@ var questions_banco_default = [
       "125 ohmios"
     ],
     "correctIndex": 2,
-    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB50 ohmios\xBB. (BOE-A-2013-7624).",
+    "explain": "Los transmisores de radioaficionado suelen estar dise\xF1ados para trabajar con l\xEDneas coaxiales y antenas de \xAB50 ohmios\xBB. Si transmisor, cable y antena comparten esa impedancia, la energ\xEDa se transfiere mejor y hay menos problemas de adaptaci\xF3n.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6260,7 +6260,7 @@ var questions_banco_default = [
       "20,2 W"
     ],
     "correctIndex": 2,
-    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xAB20 W\xBB. (BOE-A-2013-7624).",
+    "explain": "Una ganancia de 20 dB en potencia equivale a multiplicar por 100. Si entran 0,2 W, la salida ser\xE1 0,2 x 100 = 20 W. Por eso la respuesta correcta es \xAB20 W\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6713,7 +6713,7 @@ var questions_banco_default = [
       "F=13,5 MHz"
     ],
     "correctIndex": 2,
-    "explain": "A partir del circuito resonante y del esquema del superheterodino de la figura, la frecuencia de sinton\xEDa calculada coincide con 14,2 MHz (relaci\xF3n entre oscilador, FI y RF). \xABF=14,2 MHz\xBB.",
+    "explain": "En el esquema de receptor, hay que combinar la frecuencia del oscilador con la frecuencia intermedia para obtener la frecuencia sintonizada. Aplicando esa relaci\xF3n, la opci\xF3n que encaja es \xABF=14,2 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6743,7 +6743,7 @@ var questions_banco_default = [
       "Intensidad m\xE1xima / intensidad m\xEDnima"
     ],
     "correctIndex": 3,
-    "explain": "La ROE (relaci\xF3n de ondas estacionarias) compara componentes de la onda estacionaria en la l\xEDnea; no es cociente de intensidades de campo del diagrama. Si el banco mezcla conceptos, elige la definici\xF3n que marca \xABIntensidad m\xE1xima / intensidad m\xEDnima\xBB.",
+    "explain": "La ROE compara el m\xE1ximo y el m\xEDnimo de la onda estacionaria en la l\xEDnea. Por eso el orden correcto es \xABIntensidad m\xE1xima / intensidad m\xEDnima\xBB. No es al rev\xE9s, ni siempre vale 1 salvo adaptaci\xF3n ideal.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7163,7 +7163,7 @@ var questions_banco_default = [
       "Quince d\xEDas"
     ],
     "correctIndex": 0,
-    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado. (BOE-A-2013-7624).",
+    "explain": "Este plazo es el tiempo que tiene la Administraci\xF3n para resolver una solicitud de autorizaci\xF3n de radioaficionado. Para este enunciado, el dato que debes memorizar es \xABSeis semanas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7852,7 +7852,7 @@ var questions_banco_default = [
       "El c\xF3digo de deletreo ICAO"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB. (BOE-A-2013-7624).",
+    "explain": "Al deletrear un indicativo no conviene inventar palabras, porque la otra estaci\xF3n podr\xEDa entender otra letra. Se usa el alfabeto ICAO, con palabras fijas como Alfa, Bravo, Charlie, para que cada letra quede clara.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7867,7 +7867,7 @@ var questions_banco_default = [
       "Los que comienzan por: EEE, EDD, EFF"
     ],
     "correctIndex": 1,
-    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB. (BOE-A-2013-7624).",
+    "explain": "Los sufijos ayudan a distinguir tipos de estaciones. Para estaciones colectivas de asociaciones de radioaficionados y radioclubs, la opci\xF3n completa que debes reconocer es \xABLos que comienzan por: UR y RC o RK\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7882,7 +7882,7 @@ var questions_banco_default = [
       "Seis semanas"
     ],
     "correctIndex": 3,
-    "explain": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB. (BOE-A-2013-7624).",
+    "explain": "La pregunta pide el plazo para resolver y notificar solicitudes de autorizaciones de radioaficionado. El valor que hay que recordar para este supuesto es \xABSeis semanas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7957,7 +7957,7 @@ var questions_banco_default = [
       "30 a 300 MHz"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, LF (Low Frequency) designa el tramo aproximado de 30\u2013300 kHz. Para este enunciado la respuesta correcta es \xAB30 a 300 kHz\xBB.",
+    "explain": "LF significa Low Frequency. En la tabla de bandas, LF va de \xAB30 a 300 kHz\xBB. Las otras opciones saltan a MHz o GHz, que son rangos mucho m\xE1s altos.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8017,7 +8017,7 @@ var questions_banco_default = [
       "Si dispone de diploma desde hace m\xE1s de 15 a\xF1os"
     ],
     "correctIndex": 2,
-    "explain": "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones autom\xE1ticas desatendidas con resoluci\xF3n administrativa; no est\xE1n prohibidas. \xABEn ning\xFAn caso\xBB."
+    "explain": "Una estaci\xF3n autom\xE1tica desatendida no queda prohibida por ser autom\xE1tica, pero necesita autorizaci\xF3n administrativa previa. La clave es esa autorizaci\xF3n: por eso la respuesta correcta es \xABS\xED, previa autorizaci\xF3n administrativa conforme a los arts. 24 y 25 del reglamento\xBB."
   },
   {
     "id": "ure-p2-q292",
@@ -8091,7 +8091,7 @@ var questions_banco_default = [
       "Banda lateral \xFAnica con portadora reducida"
     ],
     "correctIndex": 1,
-    "explain": "En la nomenclatura ITU, A3E designa una emisi\xF3n de amplitud con doble banda lateral y un solo canal de informaci\xF3n anal\xF3gica (telefon\xEDa AM cl\xE1sica). \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+    "explain": "A3E corresponde a AM cl\xE1sica de voz: doble banda lateral y un solo canal anal\xF3gico. No es FM, no es banda lateral \xFAnica y no es ausencia de se\xF1al moduladora. Por eso la respuesta es \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8181,7 +8181,7 @@ var questions_banco_default = [
       "431,050 - 431,825 MHz"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB145,0000 - 145,1875 MHz\xBB.",
+    "explain": "Un repetidor de VHF de radioaficionado usa la zona de 2 metros, alrededor de 145 MHz. Entre las opciones, el subtramo correcto es \xAB145,0000 - 145,1875 MHz\xBB, no las bandas de UHF de 430 MHz.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8301,7 +8301,7 @@ var questions_banco_default = [
       "Estaci\xF3n de control"
     ],
     "correctIndex": 0,
-    "explain": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB. (BOE-A-2013-7624).",
+    "explain": "CL viene de closing: cierre. No significa repetir, interferencia RF ni estaci\xF3n de control. En este contexto, significa \xABCierre de la estaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8376,7 +8376,7 @@ var questions_banco_default = [
       "Telefon\xEDa con un solo canal"
     ],
     "correctIndex": 3,
-    "explain": "Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xABTelefon\xEDa con un solo canal\xBB.",
+    "explain": "En las clases de emisi\xF3n, F3E identifica telefon\xEDa de un solo canal, t\xEDpica de voz en FM. No es telegraf\xEDa, televisi\xF3n ni telefon\xEDa multicanal. Por eso la respuesta es \xABTelefon\xEDa con un solo canal\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8466,7 +8466,7 @@ var questions_banco_default = [
       "La alteraci\xF3n, la manipulaci\xF3n o la omisi\xF3n de las caracter\xEDsticas t\xE9cnicas, de las marcas, de las etiquetas, de los signos de identificaci\xF3n o de la documentaci\xF3n de los equipos o de los aparatos de telecomunicaciones"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABLa interceptaci\xF3n, sin autorizaci\xF3n, de telecomunicaciones no destinadas al p\xFAblico en general\xBB es la formulaci\xF3n del banco.",
+    "explain": "Interceptar comunicaciones que no van destinadas al p\xFAblico es una conducta especialmente grave porque invade comunicaciones ajenas. Por eso la Ley General de Telecomunicaciones la trata como infracci\xF3n \xABmuy grave\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8525,7 +8525,7 @@ var questions_banco_default = [
       "\xDAnicamente puede emitir en frecuencias de HF"
     ],
     "correctIndex": 2,
-    "explain": "En pa\xEDs visitado CEPT aplicas sus condiciones locales; la protecci\xF3n contra interferencias la rige la administraci\xF3n visitada. \xABNo podr\xE1 solicitar protecci\xF3n contra interferencias perjudiciales\xBB.",
+    "explain": "Con licencia CEPT puedes operar temporalmente en el pa\xEDs visitado, respetando sus condiciones. Pero no te da derecho a pedir protecci\xF3n administrativa contra interferencias all\xED. Por eso la correcta es \xABNo podr\xE1 solicitar protecci\xF3n contra interferencias perjudiciales\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8540,7 +8540,7 @@ var questions_banco_default = [
       "Neun"
     ],
     "correctIndex": 2,
-    "explain": "En el alfabeto fon\xE9tico ICAO internacional el d\xEDgito 9 se deletrea \xABNine\xBB (ingl\xE9s). En tr\xE1fico espa\xF1ol se usan equivalencias en castellano en otros enunciados.",
+    "explain": "En el alfabeto fon\xE9tico internacional, el n\xFAmero 9 se dice \xABNine\xBB. Las otras opciones son formas en otros idiomas, pero no la palabra normalizada que pide la pregunta.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8555,7 +8555,7 @@ var questions_banco_default = [
       "500.000 euros"
     ],
     "correctIndex": 3,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB500.000 euros\xBB es la formulaci\xF3n del banco.",
+    "explain": "La pregunta pide el l\xEDmite de multa para infracciones graves. Entre las opciones, la cifra que corresponde es \xAB500.000 euros\xBB. No confundas grave con muy grave, que puede tener sanciones m\xE1s altas.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8630,7 +8630,7 @@ var questions_banco_default = [
       "Doce palabras por minuto"
     ],
     "correctIndex": 1,
-    "explain": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB. (BOE-A-2013-7624).",
+    "explain": "Los repetidores deben identificarse autom\xE1ticamente. Si lo hacen en Morse, la velocidad indicada por esta pregunta es \xABDiez palabras por minuto\xBB, no nueve, once ni doce.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8764,7 +8764,7 @@ var questions_banco_default = [
       "Cuadro Nacional de Atribuci\xF3n de Frecuencias"
     ],
     "correctIndex": 3,
-    "explain": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB. (BOE-A-2013-7624).",
+    "explain": "El CNAF es el mapa oficial espa\xF1ol de frecuencias: dice qu\xE9 servicios pueden usar cada banda. Sus siglas significan \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8884,7 +8884,7 @@ var questions_banco_default = [
       "Permite que un ciudadano extranjero residente en Espa\xF1a pueda obtener una autorizaci\xF3n de radioaficionado sin examinarse de nuevo"
     ],
     "correctIndex": 3,
-    "explain": "HAREC (T/R 61-02) acredita el programa de examen armonizado; facilita obtener autorizaci\xF3n en pa\xEDses que lo reconocen. \xABPermite que un ciudadano extranjero residente en Espa\xF1a pueda obtener una autorizaci\xF3n de radioaficionado sin examinarse de nuevo\xBB.",
+    "explain": "HAREC demuestra que ya tienes la capacitaci\xF3n de operador reconocida. Por eso permite a un extranjero residente obtener autorizaci\xF3n sin repetir examen. No sirve para cualquier pa\xEDs del mundo ni solo para no residentes.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8899,7 +8899,7 @@ var questions_banco_default = [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 0,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB500.000 \u20AC\xBB es la formulaci\xF3n del banco. (BOE-A-2013-7624).",
+    "explain": "Cuando se calcula una sanci\xF3n grave puede usarse el beneficio obtenido; si ese criterio no sirve, se aplica un l\xEDmite fijo. En este enunciado, ese l\xEDmite m\xE1ximo es \xAB500.000 \u20AC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8914,7 +8914,7 @@ var questions_banco_default = [
       "Menos grave"
     ],
     "correctIndex": 0,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABLeve\xBB es la formulaci\xF3n del banco."
+    "explain": "Retrasar sin justificaci\xF3n la entrega de datos pedidos por la Administraci\xF3n es una infracci\xF3n, pero dentro de las opciones no llega a grave ni muy grave. En este supuesto se clasifica como \xABLeve\xBB."
   },
   {
     "id": "ure-p2-q43",
@@ -8973,7 +8973,7 @@ var questions_banco_default = [
       "12 dB"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB. (BOE-A-2013-7624).",
+    "explain": "La ganancia del sistema radiante indica cu\xE1nto concentra la antena la se\xF1al. Para estaciones desatendidas en VHF/UHF, el l\xEDmite de esta pregunta es \xAB6 dB\xBB, no 8, 10 ni 12.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9078,7 +9078,7 @@ var questions_banco_default = [
       "QRH"
     ],
     "correctIndex": 3,
-    "explain": "QRH indica que la frecuencia de la estaci\xF3n var\xEDa o es inestable. QSY es cambio voluntario de frecuencia de operaci\xF3n. \xABQRH\xBB.",
+    "explain": "QRH significa que la frecuencia var\xEDa o no est\xE1 estable. QTH es ubicaci\xF3n, y QRG se relaciona con frecuencia exacta. Para \u201Csu frecuencia var\xEDa\u201D, la respuesta es \xABQRH\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9108,7 +9108,7 @@ var questions_banco_default = [
       "Nueve horas"
     ],
     "correctIndex": 0,
-    "explain": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB. (BOE-A-2013-7624).",
+    "explain": "Los repetidores y radiobalizas deben poder seguir funcionando si falla la alimentaci\xF3n externa. Por eso se exige una alimentaci\xF3n ininterrumpida m\xEDnima; en este enunciado, el tiempo que debes recordar es \xABSeis horas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9123,7 +9123,7 @@ var questions_banco_default = [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Las ondas m\xE9tricas, de longitud de onda en torno al metro, se representan con el s\xEDmbolo VHF (30\u2013300 MHz). \xABVHF\xBB.",
+    "explain": "Las ondas m\xE9tricas tienen longitudes de onda del orden de metros. En nomenclatura de bandas corresponden a \xABVHF\xBB. LF es m\xE1s baja, UHF m\xE1s alta y EHF mucho m\xE1s alta.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9213,7 +9213,7 @@ var questions_banco_default = [
       "Que se haya examinado en Espa\xF1a exclusivamente de la Reglamentaci\xF3n Nacional"
     ],
     "correctIndex": 0,
-    "explain": "El extranjero residente debe aportar diploma de operador v\xE1lido (o equivalente reconocido) adem\xE1s de la residencia. \xABQue sea titular de un Diploma de operador expedido en Espa\xF1a, o de un Certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02\xBB.",
+    "explain": "Un extranjero residente debe demostrar capacitaci\xF3n. Puede hacerlo con diploma espa\xF1ol o con HAREC de un pa\xEDs que aplique CEPT T/R 61-02. No basta con reciprocidad ni con examinarse solo de reglamentaci\xF3n nacional. La respuesta correcta es \xABQue sea titular de un Diploma de operador expedido en Espa\xF1a, o de un Certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9288,7 +9288,7 @@ var questions_banco_default = [
       "Una estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados"
     ],
     "correctIndex": 3,
-    "explain": "La UIT define la estaci\xF3n de aficionado como parte del servicio de aficionados, bajo supervisi\xF3n de un operador acreditado. \xABUna estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados\xBB.",
+    "explain": "La UIT clasifica servicios de radio. Una estaci\xF3n de aficionado pertenece al Servicio de Aficionados. Las otras opciones niegan servicios o bandas que s\xED existen o son demasiado absolutas. Por eso la respuesta es \xABUna estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9303,7 +9303,7 @@ var questions_banco_default = [
       "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioel\xE9ctricas, en los supuestos de producci\xF3n de interferencias"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABNo facilitar los datos requeridos por la Administraci\xF3n o retrasar injustificadamente su aportaci\xF3n cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electr\xF3nicas\xBB es la formulaci\xF3n del banco.",
+    "explain": "No facilitar datos requeridos por la Administraci\xF3n, o retrasarlos sin motivo cuando son obligatorios, es una infracci\xF3n leve. La clave es que se incumple una obligaci\xF3n administrativa, aunque no sea una conducta tan grave como emitir sin autorizaci\xF3n o causar interferencias.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9333,7 +9333,7 @@ var questions_banco_default = [
       "A los tres a\xF1os"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABA los dos a\xF1os\xBB es la formulaci\xF3n del banco.",
+    "explain": "La prescripci\xF3n es el tiempo tras el cual una sanci\xF3n ya no puede exigirse. Para una sanci\xF3n por falta grave, el plazo que debes recordar en esta pregunta es \xABA los dos a\xF1os\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9363,7 +9363,7 @@ var questions_banco_default = [
       "Los equipos receptores de radio no forman parte de una estaci\xF3n radioel\xE9ctrica"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABEl Servicio de Aficionados por Sat\xE9lite utiliza estaciones espaciales situadas en sat\xE9lites\xBB es la formulaci\xF3n del banco.",
+    "explain": "El servicio de aficionados por sat\xE9lite es la parte del servicio de radioaficionados que usa estaciones situadas en sat\xE9lites. Por eso la opci\xF3n correcta dice que utiliza estaciones espaciales situadas en sat\xE9lites.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9393,7 +9393,7 @@ var questions_banco_default = [
       "300 y 3.000 MHz"
     ],
     "correctIndex": 2,
-    "explain": "En la nomenclatura ITU, SHF designa el tramo aproximado de 3\u201330 GHz (tabla ITU). Para este enunciado la respuesta correcta es \xAB3 y 30 GHz\xBB.",
+    "explain": "SHF significa Super High Frequency. En la tabla de bandas corresponde a \xAB3 y 30 GHz\xBB. MHz y kHz son rangos m\xE1s bajos, as\xED que las otras opciones no encajan.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9558,7 +9558,7 @@ var questions_banco_default = [
       "T/R 61-03"
     ],
     "correctIndex": 2,
-    "explain": "El certificado HAREC acredita el examen de operador armonizado entre administraciones CEPT. Se vincula a la Recomendaci\xF3n T/R 61-02, distinta de T/R 61-01 (licencia CEPT para operar en el extranjero). \xABT/R 61-02\xBB.",
+    "explain": "HAREC va ligado a CEPT T/R 61-02, que trata el certificado armonizado de examen. T/R 61-01 es la licencia CEPT para operar temporalmente en otros pa\xEDses. Por eso aqu\xED es \xABT/R 61-02\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9588,7 +9588,7 @@ var questions_banco_default = [
       "Normas b\xE1sicas del r\xE9gimen de prensa, radio y televisi\xF3n"
     ],
     "correctIndex": 0,
-    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB. (BOE-A-2013-7624).",
+    "explain": "El art\xEDculo citado de la Constituci\xF3n reserva al Estado la competencia exclusiva en telecomunicaciones. Por eso el reglamento de radioaficionados se apoya en esa competencia estatal: la respuesta es \xABTelecomunicaciones\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9663,7 +9663,7 @@ var questions_banco_default = [
       "87,5 -108 MHz con potencia m\xE1xima de 10 mW"
     ],
     "correctIndex": 2,
-    "explain": "Las radiobalizas de emergencia usan bandas asignadas en VHF (p. ej. 144\u2013146 MHz en el banco). \xAB144 -146 MHz\xBB.",
+    "explain": "Las radiobalizas de aficionado se permiten en bandas de radioaficionado, no en FM comercial ni CB. Entre las opciones, la banda correcta es \xAB144 -146 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9753,7 +9753,7 @@ var questions_banco_default = [
       "Canarias se encuentra en la Regi\xF3n 2"
     ],
     "correctIndex": 2,
-    "explain": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB. (BOE-A-2013-7624).",
+    "explain": "La UIT divide el mundo en regiones para atribuir frecuencias. Espa\xF1a est\xE1 en la Regi\xF3n 1, junto con Europa. No hay Regi\xF3n 4, y Canarias no pasa a Regi\xF3n 2. La respuesta es \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9783,7 +9783,7 @@ var questions_banco_default = [
       "La participaci\xF3n en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "Los distintivos temporales de una sola letra se reservan a concursos internacionales de alta competitividad seg\xFAn el criterio del banco/reglamento hist\xF3rico. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+    "explain": "Los distintivos temporales con sufijo de una sola letra son muy breves y f\xE1ciles de copiar. Por eso se reservan para actividades donde cuenta mucho la rapidez, como concursos internacionales de alta competitividad.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9873,7 +9873,7 @@ var questions_banco_default = [
       "QTR"
     ],
     "correctIndex": 0,
-    "explain": "QTH indica la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY es cambio de frecuencia y QSL confirma contacto. \xABQTH\xBB.",
+    "explain": "QTH es el c\xF3digo Q usado para indicar ubicaci\xF3n o situaci\xF3n. QTR es hora, QRS pide transmitir m\xE1s despacio y QTW no es la respuesta esperada aqu\xED. Por eso la respuesta es \xABQTH\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9950,7 +9950,7 @@ var questions_banco_estudio_default = [
       "Ninguna de las anteriores es correcta"
     ],
     "correctIndex": 0,
-    "explain": "En el transformador ideal V1/V2 = N1/N2 (equivalente a V1/N1 = V2/N2). En la web FEDI la tabla original mostraba opciones A\u2013C vac\xEDas; aqu\xED se ha normalizado el enunciado. FEDI-EA."
+    "explain": "En un transformador ideal, la tensi\xF3n cambia en la misma proporci\xF3n que el n\xFAmero de espiras. Si el primario tiene el doble de espiras que el secundario, tambi\xE9n tendr\xE1 el doble de tensi\xF3n. Por eso se cumple \xABV1 / V2 = N1 / N2\xBB."
   },
   {
     "id": "fedi-ag-005",
@@ -10316,7 +10316,7 @@ var questions_banco_estudio_default = [
       "No est\xE1n permitidos en la reglamentaci\xF3n vigente"
     ],
     "correctIndex": 0,
-    "explain": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB."
+    "explain": "Un sufijo de una sola letra es un distintivo muy corto y llamativo. Se reserva para usos especiales, especialmente concursos internacionales de alta competitividad, donde interesa un indicativo r\xE1pido y f\xE1cil de copiar."
   },
   {
     "id": "fedi-ah-033",
@@ -10372,7 +10372,7 @@ var questions_banco_estudio_default = [
       "Ninguno"
     ],
     "correctIndex": 0,
-    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xAB1 mes\xBB para este enunciado. (BOE-A-2013-7624)."
+    "explain": "Una autorizaci\xF3n especial no se pide el mismo d\xEDa que se va a emitir: hay que solicitarla con antelaci\xF3n para que la Administraci\xF3n pueda revisarla. En este caso, el plazo que debes recordar es \xAB1 mes\xBB."
   },
   {
     "id": "fedi-ah-037",
@@ -10386,7 +10386,7 @@ var questions_banco_estudio_default = [
       "\xDAnicamente si emite con m\xE1s de 500 W de potencia"
     ],
     "correctIndex": 2,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABSiempre\xBB es la formulaci\xF3n del banco. (BOE-A-2013-7624)."
+    "explain": "Las estaciones de aficionado pueden ser inspeccionadas porque usan espectro radioel\xE9ctrico y deben cumplir las condiciones t\xE9cnicas y legales. Tener autorizaci\xF3n no elimina ese control: quedan sometidas a inspecci\xF3n \xABSiempre\xBB."
   },
   {
     "id": "fedi-ah-038",
@@ -10470,7 +10470,7 @@ var questions_banco_estudio_default = [
       "18 meses"
     ],
     "correctIndex": 1,
-    "explain": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos. Verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB."
+    "explain": "Una autorizaci\xF3n especial sirve para una actividad concreta y temporal. No es indefinida: dura lo que duren las pruebas o emisiones autorizadas, con un l\xEDmite m\xE1ximo de \xAB12 meses\xBB."
   },
   {
     "id": "fedi-ah-044",
@@ -10554,7 +10554,7 @@ var questions_banco_estudio_default = [
       "Al solicitar la autorizaci\xF3n de radioaficionado"
     ],
     "correctIndex": 2,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABDebe estar formalizado antes de la expedici\xF3n de la licencia de estaci\xF3n\xBB. (BOE-A-2013-7624)."
+    "explain": "El seguro debe existir antes de que la estaci\xF3n quede autorizada, porque cubre posibles da\xF1os a terceros desde el primer momento. Por eso debe estar formalizado \xABantes de la expedici\xF3n de la licencia de estaci\xF3n\xBB."
   },
   {
     "id": "fedi-ah-053",
@@ -10610,7 +10610,7 @@ var questions_banco_estudio_default = [
       "200 W"
     ],
     "correctIndex": 0,
-    "explain": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB."
+    "explain": "La pregunta pide la potencia m\xE1xima permitida en la banda 50,0-51,0 MHz. Para este supuesto del reglamento, el valor que hay que recordar es \xAB50 W\xBB."
   },
   {
     "id": "fedi-ah-059",
@@ -10832,7 +10832,7 @@ var questions_banco_estudio_default = [
       "f0 = \u221A(L/C)"
     ],
     "correctIndex": 1,
-    "explain": "En un circuito LC ideal la resonancia ocurre cuando se igualan las reactancias de bobina y condensador; al despejar esa condici\xF3n se obtiene la f\xF3rmula f0 = 1/(2\u03C0\u221A(LC)). \xABf0 = 1/(2\u03C0\u221A(LC))\xBB.",
+    "explain": "En un circuito LC, la bobina y el condensador se turnan la energ\xEDa. La resonancia aparece cuando ese intercambio encaja. La f\xF3rmula correcta tiene una divisi\xF3n y una ra\xEDz: \xABf0 = 1/(2\u03C0\u221A(LC))\xBB. Las otras opciones fallan porque ponen LC multiplicando, dividiendo mal o sin la ra\xEDz adecuada.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -10862,7 +10862,7 @@ var questions_banco_estudio_default = [
       "Se convierte en resistencia pura"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia capacitiva es Xc = 1/(2\u03C0fC). Si f aumenta y C permanece constante, Xc disminuye. Por eso los condensadores dejan pasar mejor las componentes de alta frecuencia que la corriente continua.",
+    "explain": "En un condensador, cuanto m\xE1s alta es la frecuencia, menos oposici\xF3n presenta al paso de la se\xF1al alterna. Por eso su reactancia \xABDisminuye\xBB. No se vuelve resistencia pura ni permanece constante.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / componentes y circuitos."
   },
   {
@@ -10937,7 +10937,7 @@ var questions_banco_estudio_default = [
       "La potencia del transmisor"
     ],
     "correctIndex": 1,
-    "explain": "dBd expresa ganancia respecto a un dipolo de media onda. dBi expresa ganancia respecto a una antena isotr\xF3pica; entre ambas referencias hay aproximadamente 2,15 dB.",
+    "explain": "En dBd, la d final recuerda dipolo. La ganancia se compara con un dipolo de media onda, no con una antena isotr\xF3pica (dBi), ni con tierra ni con la potencia del transmisor. Por eso la referencia es \xABUn dipolo de media onda\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / antenas y propagaci\xF3n."
   },
   {
@@ -11192,7 +11192,7 @@ var questions_banco_estudio_default = [
       "Q = f + B"
     ],
     "correctIndex": 1,
-    "explain": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
+    "explain": "Q mide lo estrecho o selectivo que es un circuito resonante. Si una frecuencia central f tiene un ancho de banda B peque\xF1o, selecciona mejor. Por eso Q se calcula como \xABQ = f / B\xBB, no al rev\xE9s ni multiplicando.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / receptores y emisores."
   },
   {
@@ -11207,7 +11207,7 @@ var questions_banco_estudio_default = [
       "100 dBm"
     ],
     "correctIndex": 2,
-    "explain": "1 W = 1000 mW \u2192 10\xB7log10(1000) = 30 dBm. Confundir con 10 dBm (10 mW) es error t\xEDpico de examen.",
+    "explain": "1000 mW es mil veces 1 mW. En dBm, cada x10 suma 10 dB: 10 mW son 10 dBm, 100 mW son 20 dBm y 1000 mW son \xAB30 dBm\xBB. No es 0 dBm, porque 0 dBm ser\xEDa solo 1 mW.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -11327,7 +11327,7 @@ var questions_banco_estudio_default = [
       "Control de ganancia"
     ],
     "correctIndex": 1,
-    "explain": "CL = Closing / cierre de estaci\xF3n. No confundir con QRT (cesar emisi\xF3n) en todos los contextos, pero CL es cierre habitual.",
+    "explain": "CL significa cierre de estaci\xF3n. Las otras opciones son de temas distintos: polarizaci\xF3n, licencia CEPT o control de ganancia. En tr\xE1fico, CL se usa para indicar que se cierra.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 y buenas pr\xE1cticas operativas (IARU / URE)."
   },
   {
@@ -11417,7 +11417,7 @@ var questions_banco_estudio_default = [
       "1 ohmio"
     ],
     "correctIndex": 1,
-    "explain": "dBm es potencia absoluta respecto a 1 mW (miliwatio). No es tensi\xF3n ni resistencia; dB sin \xABm\xBB es relaci\xF3n entre potencias.",
+    "explain": "dBm mide potencia tomando como referencia 1 miliwatio. La m ayuda: miliwatio. No se refiere a 1 W, ni a voltios, ni a ohmios. Por eso la respuesta es \xAB1 miliwatio\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 libro oficial 1.\xAA parte T\xE9cnica (electricidad); programa HAREC / electricidad b\xE1sica."
   },
   {
@@ -11641,7 +11641,7 @@ var questions_banco_estudio_default = [
       "Licencia de radio comercial"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABAcreditar superaci\xF3n de examen de competencias de aficionado\xBB."
+    "explain": "HAREC acredita que has superado conocimientos de operador de radioaficionado. No autoriza torres sin l\xEDmite, no elimina la obligaci\xF3n de identificarte y no es licencia comercial. La clave es \xABAcreditar superaci\xF3n de examen de competencias de aficionado\xBB."
   },
   {
     "id": "q11",
@@ -11711,7 +11711,7 @@ var questions_banco_estudio_default = [
       "Modulaci\xF3n excesiva"
     ],
     "correctIndex": 1,
-    "explain": "ROE elevada indica reflexiones por desadaptaci\xF3n de impedancias en la l\xEDnea o antena. \xABDesadaptaci\xF3n de impedancias\xBB."
+    "explain": "Una ROE alta significa que parte de la energ\xEDa rebota porque antena, cable y transmisor no encajan bien. Eso es \xABDesadaptaci\xF3n de impedancias\xBB. Si hubiese buen acoplamiento, la ROE ser\xEDa baja."
   },
   {
     "id": "q7",
@@ -11739,7 +11739,7 @@ var questions_banco_estudio_default = [
       "QSB"
     ],
     "correctIndex": 1,
-    "explain": "QRM indica interferencia de origen artificial (otras emisiones o equipos). QRN es ruido atmosf\xE9rico. \xABQRM\xBB."
+    "explain": "QRM es interferencia producida por otras se\xF1ales o equipos. QRN es ruido natural, QRP habla de baja potencia y QSB de desvanecimiento. Para interferencias de otras se\xF1ales: \xABQRM\xBB."
   },
   {
     "id": "q9",
@@ -11753,7 +11753,7 @@ var questions_banco_estudio_default = [
       "Maestro"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMike\xBB."
+    "explain": "En el alfabeto fon\xE9tico internacional, la M se deletrea \xABMike\xBB. Madrid, Metro o Maestro pueden sonar l\xF3gicas en espa\xF1ol, pero no son la palabra normalizada."
   },
   {
     "id": "quijotes-84-1810",
@@ -11767,7 +11767,7 @@ var questions_banco_estudio_default = [
       "50 W."
     ],
     "correctIndex": 3,
-    "explain": "Art. 25.h (BOE-A-2013-7624): fuera del casco urbano, potencia de salida m\xE1xima de 50 W en VHF/UHF desatendidas (salvo circunstancias especiales motivadas). \xAB50 W.\xBB."
+    "explain": "La pregunta distingue potencias para estaciones autom\xE1ticas desatendidas fuera del casco urbano. Entre 10, 15, 20 y 50 W, el l\xEDmite general que hay que recordar aqu\xED es \xAB50 W.\xBB."
   },
   {
     "id": "quijotes-84-1817",
@@ -11781,7 +11781,7 @@ var questions_banco_estudio_default = [
       "Periodo de validez."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABAsociaci\xF3n de radioaficionados a la que pertenece.\xBB. (BOE-A-2013-7624).",
+    "explain": "La licencia CEPT debe incluir datos oficiales como autoridad emisora, distintivo y validez. La asociaci\xF3n del radioaficionado no es un dato necesario de la licencia. Por eso, como pide la incorrecta, la respuesta es \xABAsociaci\xF3n de radioaficionados a la que pertenece.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1817). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11796,7 +11796,7 @@ var questions_banco_estudio_default = [
       "Obtiene la nacionalidad del pa\xEDs donde resida."
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABDispone del Certificado HAREC.\xBB. (BOE-A-2013-7624).",
+    "explain": "Para mudarte a un pa\xEDs que aplica CEPT T/R 61-02, lo que acredita tu capacitaci\xF3n es HAREC. No hace falta nacionalidad ni 10 a\xF1os de experiencia; la opci\xF3n clave es \xABDispone del Certificado HAREC.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1819). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11962,7 +11962,7 @@ var questions_banco_estudio_default = [
       "Ninguna de ellas, ya no es necesario comunicarlo."
     ],
     "correctIndex": 3,
-    "explain": "La revocaci\xF3n exige causas tasadas en el reglamento; el enunciado pide la opci\xF3n que el banco considera correcta (a veces refleja normativa derogada: l\xE9elo como \xABseg\xFAn el banco\xBB). \xABNinguna de ellas, ya no es necesario comunicarlo.\xBB. (BOE-A-2013-7624).",
+    "explain": "La revocaci\xF3n de una autorizaci\xF3n no se produce por cualquier motivo: debe estar prevista por la norma. En este enunciado, ninguna de las opciones propuestas es una causa espec\xEDfica v\xE1lida, por eso la respuesta es \xABNinguna de ellas, ya no es necesario comunicarlo\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1867). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12064,7 +12064,7 @@ var questions_banco_estudio_default = [
       "El titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico."
     ],
     "correctIndex": 3,
-    "explain": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABEl titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico.\xBB.",
+    "explain": "La pregunta trata de si el titular debe comunicar peri\xF3dicamente que quiere seguir usando el espectro. En la formulaci\xF3n actual del banco, esa comunicaci\xF3n peri\xF3dica ya no se exige, por eso la respuesta es \xABEl titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1906). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12108,7 +12108,7 @@ var questions_banco_estudio_default = [
       "La exenci\xF3n de presentar memoria descriptiva de la instalaci\xF3n."
     ],
     "correctIndex": 2,
-    "explain": "En \xABLa Ley 19/1986, conocida como Ley de Antenas, regula:\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles.\xBB. Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundi\xF3."
+    "explain": "La llamada Ley de Antenas reconoce el derecho del radioaficionado a instalar antenas en el exterior del inmueble, siguiendo el procedimiento que corresponda. La idea clave es el derecho de instalaci\xF3n, no una autorizaci\xF3n libre sin tr\xE1mites."
   },
   {
     "id": "quijotes-84-1939",
@@ -12209,7 +12209,7 @@ var questions_banco_estudio_default = [
       "Diez a\xF1os"
     ],
     "correctIndex": 0,
-    "explain": "Algunos tr\xE1mites de comunicaci\xF3n previa han sido simplificados en normativa reciente; el banco puede reflejar la redacci\xF3n hist\xF3rica \xABya no hay que comunicarlo\xBB. \xABYa no hay que comunicarlo\xBB. (BOE-A-2013-7624).",
+    "explain": "La pregunta pregunta cada cu\xE1nto hay que comunicar la intenci\xF3n de seguir usando el dominio p\xFAblico radioel\xE9ctrico. En este supuesto no hay una renovaci\xF3n peri\xF3dica que comunicar, as\xED que la respuesta es \xABYa no hay que comunicarlo\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2025). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12224,7 +12224,7 @@ var questions_banco_estudio_default = [
       "La banda 7100 - 7200 kHz no est\xE1 atribuida a ning\xFAn servicio"
     ],
     "correctIndex": 0,
-    "explain": "La nota 5.141C UIT reserva segmentos en HF; contrasta el cuadro de atribuciones con el CNAF y el reglamento vigente. \xABLa banda 7100 a 7200 kHz est\xE1 atribuida a titulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009\xBB. (BOE-A-2013-7624).",
+    "explain": "La nota 5.141C se refiere al reparto de uso de la banda 7100-7200 kHz en una etapa concreta. La frase que debes reconocer es que esa banda estaba atribuida a t\xEDtulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12313,7 +12313,7 @@ var questions_banco_estudio_default = [
       "Por conversi\xF3n de frecuencias."
     ],
     "correctIndex": 2,
-    "explain": "En \xABAl conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomi\u2026\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABNo deseadas.\xBB. Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundi\xF3.",
+    "explain": "Las emisiones no esenciales y las emisiones fuera de banda son se\xF1ales que salen fuera de lo que se pretende transmitir. En conjunto se llaman emisiones \xABNo deseadas\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12401,7 +12401,7 @@ var questions_banco_estudio_default = [
       "1000 w"
     ],
     "correctIndex": 1,
-    "explain": "En 160 m el l\xEDmite de potencia del banco hist\xF3rico puede ser 50 W PEP; verifica en anexo I (BOE-A-2013-7624) la banda exacta. \xAB50 w\xBB.",
+    "explain": "La banda 1.830-1.850 kHz est\xE1 en 160 metros. La pregunta solo pide recordar el l\xEDmite de potencia: frente a 5 W, 75 W o 1000 W, el valor correcto es \xAB50 w\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12431,7 +12431,7 @@ var questions_banco_estudio_default = [
       "No tienen ninguna relaci\xF3n con la UIT."
     ],
     "correctIndex": 2,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSon los planes de la IARU Regi\xF3n 1, utilizados como norma general.\xBB. (BOE-A-2013-7624).",
+    "explain": "Los planes de banda son una gu\xEDa de uso para ordenar modos y frecuencias. En Espa\xF1a se siguen como referencia los de la IARU Regi\xF3n 1. No los fijan asociaciones locales ni son independientes de la UIT. La respuesta es \xABSon los planes de la IARU Regi\xF3n 1, utilizados como norma general.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2210). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12505,7 +12505,7 @@ var questions_banco_estudio_default = [
       "0 dBm"
     ],
     "correctIndex": 0,
-    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB. (BOE-A-2013-7624).",
+    "explain": "dBm compara con 1 mW. 1000 mW son mil veces esa referencia, y mil veces equivale a 30 dB. Por eso la respuesta es \xAB30 dBm\xBB, no 0 dBm ni -3 dBm.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12520,7 +12520,7 @@ var questions_banco_estudio_default = [
       "Tener un sintonizador muy fino"
     ],
     "correctIndex": 2,
-    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB. (BOE-A-2013-7624).",
+    "explain": "Una ROE baja indica que la antena est\xE1 bien adaptada y devuelve poca energ\xEDa hacia el equipo. Eso ayuda a emitir m\xE1s limpio y reducir interferencias. Por eso conviene \xABTener una ROE baja\xBB, no alta ni simplemente m\xE1s potencia.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13183,7 +13183,7 @@ var questions_banco_estudio_default = [
       "La frecuencia de valor constante utilizada en los receptores superheterodinos"
     ],
     "correctIndex": 3,
-    "explain": "La frecuencia intermedia es una frecuencia fija a la que el superheterodino traslada todas las se\xF1ales para filtrarlas y amplificarlas con ganancia y selectividad constantes. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
+    "explain": "En un superheterodino, se\xF1ales distintas se convierten a una frecuencia fija para filtrarlas mejor. Esa frecuencia fija se llama frecuencia intermedia. No es la del oscilador local ni la de conversi\xF3n directa. Es \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14023,7 +14023,7 @@ var questions_banco_estudio_default = [
       "Control autom\xE1tico de saturaci\xF3n o CAS"
     ],
     "correctIndex": 2,
-    "explain": "En un transmisor SSB el ALC limita la excitaci\xF3n de la etapa de potencia y reduce distorsi\xF3n e interferencias cuando sube el nivel de entrada. CAF estabiliza frecuencia; CAG es del receptor. \xABControl autom\xE1tico de nivel o ALC\xBB.",
+    "explain": "En SSB, si la se\xF1al entra demasiado fuerte, puede deformarse y generar interferencias. El ALC baja autom\xE1ticamente el nivel para evitarlo. CAF corrige frecuencia y CAG es t\xEDpico del receptor; aqu\xED toca \xABControl autom\xE1tico de nivel o ALC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14452,7 +14452,7 @@ var questions_banco_estudio_default = [
       "Receptores convencionales"
     ],
     "correctIndex": 2,
-    "explain": "El enunciado del banco asocia aqu\xED las interferencias a \xABAmplificadores lineales de potencia\xBB frente a AM, antenas directivas o receptores convencionales. Contrastar con el temario URE.",
+    "explain": "Cuanta m\xE1s potencia se maneja, m\xE1s cuidado hay que tener con filtros, adaptaci\xF3n y ajuste. Un amplificador lineal de potencia trabaja con se\xF1ales fuertes y, si est\xE1 mal ajustado o se satura, es m\xE1s f\xE1cil que genere interferencias.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14590,7 +14590,7 @@ var questions_banco_estudio_default = [
       "Como oscilador a la frecuencia de resonancia del circuito LC"
     ],
     "correctIndex": 0,
-    "explain": "El LC en paralelo con diodo forma un circuito resonante selectivo en la frecuencia de resonancia: puede actuar como receptor AM pasivo. No es amplificador ni oscilador alimentado. \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
+    "explain": "La bobina y el condensador seleccionan una frecuencia, y el diodo permite detectar AM. Como no hay alimentaci\xF3n, no puede ser amplificador ni oscilador. Por eso sirve \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14652,7 +14652,7 @@ var questions_banco_estudio_default = [
       "125 ohmios"
     ],
     "correctIndex": 2,
-    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xAB50 ohmios\xBB. (BOE-A-2013-7624).",
+    "explain": "Los transmisores de radioaficionado suelen estar dise\xF1ados para trabajar con l\xEDneas coaxiales y antenas de \xAB50 ohmios\xBB. Si transmisor, cable y antena comparten esa impedancia, la energ\xEDa se transfiere mejor y hay menos problemas de adaptaci\xF3n.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15045,7 +15045,7 @@ var questions_banco_estudio_default = [
       "20,2 W"
     ],
     "correctIndex": 2,
-    "explain": "Transistores amplifican o conmutan con corriente de base/puerta; la clase de polarizaci\xF3n define linealidad y eficiencia. \xAB20 W\xBB. (BOE-A-2013-7624).",
+    "explain": "Una ganancia de 20 dB en potencia equivale a multiplicar por 100. Si entran 0,2 W, la salida ser\xE1 0,2 x 100 = 20 W. Por eso la respuesta correcta es \xAB20 W\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15512,7 +15512,7 @@ var questions_banco_estudio_default = [
       "F=13,5 MHz"
     ],
     "correctIndex": 2,
-    "explain": "A partir del circuito resonante y del esquema del superheterodino de la figura, la frecuencia de sinton\xEDa calculada coincide con 14,2 MHz (relaci\xF3n entre oscilador, FI y RF). \xABF=14,2 MHz\xBB.",
+    "explain": "En el esquema de receptor, hay que combinar la frecuencia del oscilador con la frecuencia intermedia para obtener la frecuencia sintonizada. Aplicando esa relaci\xF3n, la opci\xF3n que encaja es \xABF=14,2 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15542,7 +15542,7 @@ var questions_banco_estudio_default = [
       "Intensidad m\xE1xima / intensidad m\xEDnima"
     ],
     "correctIndex": 3,
-    "explain": "La ROE (relaci\xF3n de ondas estacionarias) compara componentes de la onda estacionaria en la l\xEDnea; no es cociente de intensidades de campo del diagrama. Si el banco mezcla conceptos, elige la definici\xF3n que marca \xABIntensidad m\xE1xima / intensidad m\xEDnima\xBB.",
+    "explain": "La ROE compara el m\xE1ximo y el m\xEDnimo de la onda estacionaria en la l\xEDnea. Por eso el orden correcto es \xABIntensidad m\xE1xima / intensidad m\xEDnima\xBB. No es al rev\xE9s, ni siempre vale 1 salvo adaptaci\xF3n ideal.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15962,7 +15962,7 @@ var questions_banco_estudio_default = [
       "Quince d\xEDas"
     ],
     "correctIndex": 0,
-    "explain": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado. (BOE-A-2013-7624).",
+    "explain": "Este plazo es el tiempo que tiene la Administraci\xF3n para resolver una solicitud de autorizaci\xF3n de radioaficionado. Para este enunciado, el dato que debes memorizar es \xABSeis semanas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16665,7 +16665,7 @@ var questions_banco_estudio_default = [
       "El c\xF3digo de deletreo ICAO"
     ],
     "correctIndex": 3,
-    "explain": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB. (BOE-A-2013-7624).",
+    "explain": "Al deletrear un indicativo no conviene inventar palabras, porque la otra estaci\xF3n podr\xEDa entender otra letra. Se usa el alfabeto ICAO, con palabras fijas como Alfa, Bravo, Charlie, para que cada letra quede clara.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16680,7 +16680,7 @@ var questions_banco_estudio_default = [
       "Los que comienzan por: EEE, EDD, EFF"
     ],
     "correctIndex": 1,
-    "explain": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB. (BOE-A-2013-7624).",
+    "explain": "Los sufijos ayudan a distinguir tipos de estaciones. Para estaciones colectivas de asociaciones de radioaficionados y radioclubs, la opci\xF3n completa que debes reconocer es \xABLos que comienzan por: UR y RC o RK\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16695,7 +16695,7 @@ var questions_banco_estudio_default = [
       "Seis semanas"
     ],
     "correctIndex": 3,
-    "explain": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB. (BOE-A-2013-7624).",
+    "explain": "La pregunta pide el plazo para resolver y notificar solicitudes de autorizaciones de radioaficionado. El valor que hay que recordar para este supuesto es \xABSeis semanas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16770,7 +16770,7 @@ var questions_banco_estudio_default = [
       "30 a 300 MHz"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, LF (Low Frequency) designa el tramo aproximado de 30\u2013300 kHz. Para este enunciado la respuesta correcta es \xAB30 a 300 kHz\xBB.",
+    "explain": "LF significa Low Frequency. En la tabla de bandas, LF va de \xAB30 a 300 kHz\xBB. Las otras opciones saltan a MHz o GHz, que son rangos mucho m\xE1s altos.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16830,7 +16830,7 @@ var questions_banco_estudio_default = [
       "Si dispone de diploma desde hace m\xE1s de 15 a\xF1os"
     ],
     "correctIndex": 2,
-    "explain": "El reglamento (BOE-A-2013-7624, arts. 24-25) autoriza repetidores y estaciones autom\xE1ticas desatendidas con resoluci\xF3n administrativa; no est\xE1n prohibidas. \xABEn ning\xFAn caso\xBB."
+    "explain": "Una estaci\xF3n autom\xE1tica desatendida no queda prohibida por ser autom\xE1tica, pero necesita autorizaci\xF3n administrativa previa. La clave es esa autorizaci\xF3n: por eso la respuesta correcta es \xABS\xED, previa autorizaci\xF3n administrativa conforme a los arts. 24 y 25 del reglamento\xBB."
   },
   {
     "id": "ure-p2-q292",
@@ -16904,7 +16904,7 @@ var questions_banco_estudio_default = [
       "Banda lateral \xFAnica con portadora reducida"
     ],
     "correctIndex": 1,
-    "explain": "En la nomenclatura ITU, A3E designa una emisi\xF3n de amplitud con doble banda lateral y un solo canal de informaci\xF3n anal\xF3gica (telefon\xEDa AM cl\xE1sica). \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+    "explain": "A3E corresponde a AM cl\xE1sica de voz: doble banda lateral y un solo canal anal\xF3gico. No es FM, no es banda lateral \xFAnica y no es ausencia de se\xF1al moduladora. Por eso la respuesta es \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16994,7 +16994,7 @@ var questions_banco_estudio_default = [
       "431,050 - 431,825 MHz"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB145,0000 - 145,1875 MHz\xBB.",
+    "explain": "Un repetidor de VHF de radioaficionado usa la zona de 2 metros, alrededor de 145 MHz. Entre las opciones, el subtramo correcto es \xAB145,0000 - 145,1875 MHz\xBB, no las bandas de UHF de 430 MHz.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17114,7 +17114,7 @@ var questions_banco_estudio_default = [
       "Estaci\xF3n de control"
     ],
     "correctIndex": 0,
-    "explain": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB. (BOE-A-2013-7624).",
+    "explain": "CL viene de closing: cierre. No significa repetir, interferencia RF ni estaci\xF3n de control. En este contexto, significa \xABCierre de la estaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17189,7 +17189,7 @@ var questions_banco_estudio_default = [
       "Telefon\xEDa con un solo canal"
     ],
     "correctIndex": 3,
-    "explain": "Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xABTelefon\xEDa con un solo canal\xBB.",
+    "explain": "En las clases de emisi\xF3n, F3E identifica telefon\xEDa de un solo canal, t\xEDpica de voz en FM. No es telegraf\xEDa, televisi\xF3n ni telefon\xEDa multicanal. Por eso la respuesta es \xABTelefon\xEDa con un solo canal\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17279,7 +17279,7 @@ var questions_banco_estudio_default = [
       "La alteraci\xF3n, la manipulaci\xF3n o la omisi\xF3n de las caracter\xEDsticas t\xE9cnicas, de las marcas, de las etiquetas, de los signos de identificaci\xF3n o de la documentaci\xF3n de los equipos o de los aparatos de telecomunicaciones"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABLa interceptaci\xF3n, sin autorizaci\xF3n, de telecomunicaciones no destinadas al p\xFAblico en general\xBB es la formulaci\xF3n del banco.",
+    "explain": "Interceptar comunicaciones que no van destinadas al p\xFAblico es una conducta especialmente grave porque invade comunicaciones ajenas. Por eso la Ley General de Telecomunicaciones la trata como infracci\xF3n \xABmuy grave\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17352,7 +17352,7 @@ var questions_banco_estudio_default = [
       "\xDAnicamente puede emitir en frecuencias de HF"
     ],
     "correctIndex": 2,
-    "explain": "En pa\xEDs visitado CEPT aplicas sus condiciones locales; la protecci\xF3n contra interferencias la rige la administraci\xF3n visitada. \xABNo podr\xE1 solicitar protecci\xF3n contra interferencias perjudiciales\xBB.",
+    "explain": "Con licencia CEPT puedes operar temporalmente en el pa\xEDs visitado, respetando sus condiciones. Pero no te da derecho a pedir protecci\xF3n administrativa contra interferencias all\xED. Por eso la correcta es \xABNo podr\xE1 solicitar protecci\xF3n contra interferencias perjudiciales\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17367,7 +17367,7 @@ var questions_banco_estudio_default = [
       "Neun"
     ],
     "correctIndex": 2,
-    "explain": "En el alfabeto fon\xE9tico ICAO internacional el d\xEDgito 9 se deletrea \xABNine\xBB (ingl\xE9s). En tr\xE1fico espa\xF1ol se usan equivalencias en castellano en otros enunciados.",
+    "explain": "En el alfabeto fon\xE9tico internacional, el n\xFAmero 9 se dice \xABNine\xBB. Las otras opciones son formas en otros idiomas, pero no la palabra normalizada que pide la pregunta.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17382,7 +17382,7 @@ var questions_banco_estudio_default = [
       "500.000 euros"
     ],
     "correctIndex": 3,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB500.000 euros\xBB es la formulaci\xF3n del banco.",
+    "explain": "La pregunta pide el l\xEDmite de multa para infracciones graves. Entre las opciones, la cifra que corresponde es \xAB500.000 euros\xBB. No confundas grave con muy grave, que puede tener sanciones m\xE1s altas.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17471,7 +17471,7 @@ var questions_banco_estudio_default = [
       "Doce palabras por minuto"
     ],
     "correctIndex": 1,
-    "explain": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB. (BOE-A-2013-7624).",
+    "explain": "Los repetidores deben identificarse autom\xE1ticamente. Si lo hacen en Morse, la velocidad indicada por esta pregunta es \xABDiez palabras por minuto\xBB, no nueve, once ni doce.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17605,7 +17605,7 @@ var questions_banco_estudio_default = [
       "Cuadro Nacional de Atribuci\xF3n de Frecuencias"
     ],
     "correctIndex": 3,
-    "explain": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB. (BOE-A-2013-7624).",
+    "explain": "El CNAF es el mapa oficial espa\xF1ol de frecuencias: dice qu\xE9 servicios pueden usar cada banda. Sus siglas significan \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17725,7 +17725,7 @@ var questions_banco_estudio_default = [
       "Permite que un ciudadano extranjero residente en Espa\xF1a pueda obtener una autorizaci\xF3n de radioaficionado sin examinarse de nuevo"
     ],
     "correctIndex": 3,
-    "explain": "HAREC (T/R 61-02) acredita el programa de examen armonizado; facilita obtener autorizaci\xF3n en pa\xEDses que lo reconocen. \xABPermite que un ciudadano extranjero residente en Espa\xF1a pueda obtener una autorizaci\xF3n de radioaficionado sin examinarse de nuevo\xBB.",
+    "explain": "HAREC demuestra que ya tienes la capacitaci\xF3n de operador reconocida. Por eso permite a un extranjero residente obtener autorizaci\xF3n sin repetir examen. No sirve para cualquier pa\xEDs del mundo ni solo para no residentes.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17740,7 +17740,7 @@ var questions_banco_estudio_default = [
       "Ninguna de las anteriores"
     ],
     "correctIndex": 0,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xAB500.000 \u20AC\xBB es la formulaci\xF3n del banco. (BOE-A-2013-7624).",
+    "explain": "Cuando se calcula una sanci\xF3n grave puede usarse el beneficio obtenido; si ese criterio no sirve, se aplica un l\xEDmite fijo. En este enunciado, ese l\xEDmite m\xE1ximo es \xAB500.000 \u20AC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17755,7 +17755,7 @@ var questions_banco_estudio_default = [
       "Menos grave"
     ],
     "correctIndex": 0,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABLeve\xBB es la formulaci\xF3n del banco."
+    "explain": "Retrasar sin justificaci\xF3n la entrega de datos pedidos por la Administraci\xF3n es una infracci\xF3n, pero dentro de las opciones no llega a grave ni muy grave. En este supuesto se clasifica como \xABLeve\xBB."
   },
   {
     "id": "ure-p2-q43",
@@ -17814,7 +17814,7 @@ var questions_banco_estudio_default = [
       "12 dB"
     ],
     "correctIndex": 0,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB. (BOE-A-2013-7624).",
+    "explain": "La ganancia del sistema radiante indica cu\xE1nto concentra la antena la se\xF1al. Para estaciones desatendidas en VHF/UHF, el l\xEDmite de esta pregunta es \xAB6 dB\xBB, no 8, 10 ni 12.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17919,7 +17919,7 @@ var questions_banco_estudio_default = [
       "QRH"
     ],
     "correctIndex": 3,
-    "explain": "QRH indica que la frecuencia de la estaci\xF3n var\xEDa o es inestable. QSY es cambio voluntario de frecuencia de operaci\xF3n. \xABQRH\xBB.",
+    "explain": "QRH significa que la frecuencia var\xEDa o no est\xE1 estable. QTH es ubicaci\xF3n, y QRG se relaciona con frecuencia exacta. Para \u201Csu frecuencia var\xEDa\u201D, la respuesta es \xABQRH\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17949,7 +17949,7 @@ var questions_banco_estudio_default = [
       "Nueve horas"
     ],
     "correctIndex": 0,
-    "explain": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB. (BOE-A-2013-7624).",
+    "explain": "Los repetidores y radiobalizas deben poder seguir funcionando si falla la alimentaci\xF3n externa. Por eso se exige una alimentaci\xF3n ininterrumpida m\xEDnima; en este enunciado, el tiempo que debes recordar es \xABSeis horas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17964,7 +17964,7 @@ var questions_banco_estudio_default = [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Las ondas m\xE9tricas, de longitud de onda en torno al metro, se representan con el s\xEDmbolo VHF (30\u2013300 MHz). \xABVHF\xBB.",
+    "explain": "Las ondas m\xE9tricas tienen longitudes de onda del orden de metros. En nomenclatura de bandas corresponden a \xABVHF\xBB. LF es m\xE1s baja, UHF m\xE1s alta y EHF mucho m\xE1s alta.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18054,7 +18054,7 @@ var questions_banco_estudio_default = [
       "Que se haya examinado en Espa\xF1a exclusivamente de la Reglamentaci\xF3n Nacional"
     ],
     "correctIndex": 0,
-    "explain": "El extranjero residente debe aportar diploma de operador v\xE1lido (o equivalente reconocido) adem\xE1s de la residencia. \xABQue sea titular de un Diploma de operador expedido en Espa\xF1a, o de un Certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02\xBB.",
+    "explain": "Un extranjero residente debe demostrar capacitaci\xF3n. Puede hacerlo con diploma espa\xF1ol o con HAREC de un pa\xEDs que aplique CEPT T/R 61-02. No basta con reciprocidad ni con examinarse solo de reglamentaci\xF3n nacional. La respuesta correcta es \xABQue sea titular de un Diploma de operador expedido en Espa\xF1a, o de un Certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18129,7 +18129,7 @@ var questions_banco_estudio_default = [
       "Una estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados"
     ],
     "correctIndex": 3,
-    "explain": "La UIT define la estaci\xF3n de aficionado como parte del servicio de aficionados, bajo supervisi\xF3n de un operador acreditado. \xABUna estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados\xBB.",
+    "explain": "La UIT clasifica servicios de radio. Una estaci\xF3n de aficionado pertenece al Servicio de Aficionados. Las otras opciones niegan servicios o bandas que s\xED existen o son demasiado absolutas. Por eso la respuesta es \xABUna estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18144,7 +18144,7 @@ var questions_banco_estudio_default = [
       "No atender el requerimiento hecho por la autoridad competente para el cese de las emisiones radioel\xE9ctricas, en los supuestos de producci\xF3n de interferencias"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABNo facilitar los datos requeridos por la Administraci\xF3n o retrasar injustificadamente su aportaci\xF3n cuando resulte exigible conforme a lo previsto por la normativa reguladora de las comunicaciones electr\xF3nicas\xBB es la formulaci\xF3n del banco.",
+    "explain": "No facilitar datos requeridos por la Administraci\xF3n, o retrasarlos sin motivo cuando son obligatorios, es una infracci\xF3n leve. La clave es que se incumple una obligaci\xF3n administrativa, aunque no sea una conducta tan grave como emitir sin autorizaci\xF3n o causar interferencias.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18174,7 +18174,7 @@ var questions_banco_estudio_default = [
       "A los tres a\xF1os"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABA los dos a\xF1os\xBB es la formulaci\xF3n del banco.",
+    "explain": "La prescripci\xF3n es el tiempo tras el cual una sanci\xF3n ya no puede exigirse. Para una sanci\xF3n por falta grave, el plazo que debes recordar en esta pregunta es \xABA los dos a\xF1os\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18204,7 +18204,7 @@ var questions_banco_estudio_default = [
       "Los equipos receptores de radio no forman parte de una estaci\xF3n radioel\xE9ctrica"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABEl Servicio de Aficionados por Sat\xE9lite utiliza estaciones espaciales situadas en sat\xE9lites\xBB es la formulaci\xF3n del banco.",
+    "explain": "El servicio de aficionados por sat\xE9lite es la parte del servicio de radioaficionados que usa estaciones situadas en sat\xE9lites. Por eso la opci\xF3n correcta dice que utiliza estaciones espaciales situadas en sat\xE9lites.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18234,7 +18234,7 @@ var questions_banco_estudio_default = [
       "300 y 3.000 MHz"
     ],
     "correctIndex": 2,
-    "explain": "En la nomenclatura ITU, SHF designa el tramo aproximado de 3\u201330 GHz (tabla ITU). Para este enunciado la respuesta correcta es \xAB3 y 30 GHz\xBB.",
+    "explain": "SHF significa Super High Frequency. En la tabla de bandas corresponde a \xAB3 y 30 GHz\xBB. MHz y kHz son rangos m\xE1s bajos, as\xED que las otras opciones no encajan.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18399,7 +18399,7 @@ var questions_banco_estudio_default = [
       "T/R 61-03"
     ],
     "correctIndex": 2,
-    "explain": "El certificado HAREC acredita el examen de operador armonizado entre administraciones CEPT. Se vincula a la Recomendaci\xF3n T/R 61-02, distinta de T/R 61-01 (licencia CEPT para operar en el extranjero). \xABT/R 61-02\xBB.",
+    "explain": "HAREC va ligado a CEPT T/R 61-02, que trata el certificado armonizado de examen. T/R 61-01 es la licencia CEPT para operar temporalmente en otros pa\xEDses. Por eso aqu\xED es \xABT/R 61-02\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18429,7 +18429,7 @@ var questions_banco_estudio_default = [
       "Normas b\xE1sicas del r\xE9gimen de prensa, radio y televisi\xF3n"
     ],
     "correctIndex": 0,
-    "explain": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB. (BOE-A-2013-7624).",
+    "explain": "El art\xEDculo citado de la Constituci\xF3n reserva al Estado la competencia exclusiva en telecomunicaciones. Por eso el reglamento de radioaficionados se apoya en esa competencia estatal: la respuesta es \xABTelecomunicaciones\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18504,7 +18504,7 @@ var questions_banco_estudio_default = [
       "87,5 -108 MHz con potencia m\xE1xima de 10 mW"
     ],
     "correctIndex": 2,
-    "explain": "Las radiobalizas de emergencia usan bandas asignadas en VHF (p. ej. 144\u2013146 MHz en el banco). \xAB144 -146 MHz\xBB.",
+    "explain": "Las radiobalizas de aficionado se permiten en bandas de radioaficionado, no en FM comercial ni CB. Entre las opciones, la banda correcta es \xAB144 -146 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18594,7 +18594,7 @@ var questions_banco_estudio_default = [
       "Canarias se encuentra en la Regi\xF3n 2"
     ],
     "correctIndex": 2,
-    "explain": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB. (BOE-A-2013-7624).",
+    "explain": "La UIT divide el mundo en regiones para atribuir frecuencias. Espa\xF1a est\xE1 en la Regi\xF3n 1, junto con Europa. No hay Regi\xF3n 4, y Canarias no pasa a Regi\xF3n 2. La respuesta es \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18624,7 +18624,7 @@ var questions_banco_estudio_default = [
       "La participaci\xF3n en concursos internacionales de alta competitividad"
     ],
     "correctIndex": 3,
-    "explain": "Los distintivos temporales de una sola letra se reservan a concursos internacionales de alta competitividad seg\xFAn el criterio del banco/reglamento hist\xF3rico. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+    "explain": "Los distintivos temporales con sufijo de una sola letra son muy breves y f\xE1ciles de copiar. Por eso se reservan para actividades donde cuenta mucho la rapidez, como concursos internacionales de alta competitividad.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18714,7 +18714,7 @@ var questions_banco_estudio_default = [
       "QTR"
     ],
     "correctIndex": 0,
-    "explain": "QTH indica la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY es cambio de frecuencia y QSL confirma contacto. \xABQTH\xBB.",
+    "explain": "QTH es el c\xF3digo Q usado para indicar ubicaci\xF3n o situaci\xF3n. QTR es hora, QRS pide transmitir m\xE1s despacio y QTW no es la respuesta esperada aqu\xED. Por eso la respuesta es \xABQTH\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -21852,7 +21852,81 @@ var curated_explanations_default = {
   "ure-p2-q94": "El alfabeto fon\xE9tico evita confusiones entre letras de sonido parecido al transmitir en fon\xEDa. Por eso sirve para \xABDeletrear el mensaje\xBB.",
   "ure-p2-q95": "Los prefijos de indicativos espa\xF1oles en el servicio de aficionado incluyen EA (aficionado), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n en territorio nacional. Por eso la terna habitual del banco es \xABEA, EB, EC\xBB.",
   "ure-p2-q96": "QTH indica la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY es cambio de frecuencia y QSL confirma contacto. \xABQTH\xBB.",
-  "ure-p2-q97": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB. (BOE-A-2013-7624)."
+  "ure-p2-q97": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB. (BOE-A-2013-7624).",
+  "fedi-ag-004": "En un transformador ideal, la tensi\xF3n cambia en la misma proporci\xF3n que el n\xFAmero de espiras. Si el primario tiene el doble de espiras que el secundario, tambi\xE9n tendr\xE1 el doble de tensi\xF3n. Por eso se cumple \xABV1 / V2 = N1 / N2\xBB.",
+  "fedi-ah-032": "Un sufijo de una sola letra es un distintivo muy corto y llamativo. Se reserva para usos especiales, especialmente concursos internacionales de alta competitividad, donde interesa un indicativo r\xE1pido y f\xE1cil de copiar.",
+  "fedi-ah-036": "Una autorizaci\xF3n especial no se pide el mismo d\xEDa que se va a emitir: hay que solicitarla con antelaci\xF3n para que la Administraci\xF3n pueda revisarla. En este caso, el plazo que debes recordar es \xAB1 mes\xBB.",
+  "fedi-ah-037": "Las estaciones de aficionado pueden ser inspeccionadas porque usan espectro radioel\xE9ctrico y deben cumplir las condiciones t\xE9cnicas y legales. Tener autorizaci\xF3n no elimina ese control: quedan sometidas a inspecci\xF3n \xABSiempre\xBB.",
+  "fedi-ah-043": "Una autorizaci\xF3n especial sirve para una actividad concreta y temporal. No es indefinida: dura lo que duren las pruebas o emisiones autorizadas, con un l\xEDmite m\xE1ximo de \xAB12 meses\xBB.",
+  "fedi-ah-052": "El seguro debe existir antes de que la estaci\xF3n quede autorizada, porque cubre posibles da\xF1os a terceros desde el primer momento. Por eso debe estar formalizado \xABantes de la expedici\xF3n de la licencia de estaci\xF3n\xBB.",
+  "fedi-ah-057": "La pregunta pide la potencia m\xE1xima permitida en la banda 50,0-51,0 MHz. Para este supuesto del reglamento, el valor que hay que recordar es \xAB50 W\xBB.",
+  "quijotes-84-1867": "La revocaci\xF3n de una autorizaci\xF3n no se produce por cualquier motivo: debe estar prevista por la norma. En este enunciado, ninguna de las opciones propuestas es una causa espec\xEDfica v\xE1lida, por eso la respuesta es \xABNinguna de ellas, ya no es necesario comunicarlo\xBB.",
+  "quijotes-84-1906": "La pregunta trata de si el titular debe comunicar peri\xF3dicamente que quiere seguir usando el espectro. En la formulaci\xF3n actual del banco, esa comunicaci\xF3n peri\xF3dica ya no se exige, por eso la respuesta es \xABEl titular no tendr\xE1 que comunicar en ning\xFAn momento su intenci\xF3n de continuar utilizando el espectro radioel\xE9ctrico\xBB.",
+  "quijotes-84-1937": "La llamada Ley de Antenas reconoce el derecho del radioaficionado a instalar antenas en el exterior del inmueble, siguiendo el procedimiento que corresponda. La idea clave es el derecho de instalaci\xF3n, no una autorizaci\xF3n libre sin tr\xE1mites.",
+  "quijotes-84-2025": "La pregunta pregunta cada cu\xE1nto hay que comunicar la intenci\xF3n de seguir usando el dominio p\xFAblico radioel\xE9ctrico. En este supuesto no hay una renovaci\xF3n peri\xF3dica que comunicar, as\xED que la respuesta es \xABYa no hay que comunicarlo\xBB.",
+  "quijotes-84-2034": "La nota 5.141C se refiere al reparto de uso de la banda 7100-7200 kHz en una etapa concreta. La frase que debes reconocer es que esa banda estaba atribuida a t\xEDtulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009.",
+  "quijotes-84-2060": "Las emisiones no esenciales y las emisiones fuera de banda son se\xF1ales que salen fuera de lo que se pretende transmitir. En conjunto se llaman emisiones \xABNo deseadas\xBB.",
+  "quijotes-84-2104": "La banda 1.830-1.850 kHz est\xE1 en 160 metros. La pregunta solo pide recordar el l\xEDmite de potencia: frente a 5 W, 75 W o 1000 W, el valor correcto es \xAB50 w\xBB.",
+  "ure-p1-q382": "Cuanta m\xE1s potencia se maneja, m\xE1s cuidado hay que tener con filtros, adaptaci\xF3n y ajuste. Un amplificador lineal de potencia trabaja con se\xF1ales fuertes y, si est\xE1 mal ajustado o se satura, es m\xE1s f\xE1cil que genere interferencias.",
+  "ure-p1-q426": "Los transmisores de radioaficionado suelen estar dise\xF1ados para trabajar con l\xEDneas coaxiales y antenas de \xAB50 ohmios\xBB. Si transmisor, cable y antena comparten esa impedancia, la energ\xEDa se transfiere mejor y hay menos problemas de adaptaci\xF3n.",
+  "ure-p1-q490": "Una ganancia de 20 dB en potencia equivale a multiplicar por 100. Si entran 0,2 W, la salida ser\xE1 0,2 x 100 = 20 W. Por eso la respuesta correcta es \xAB20 W\xBB.",
+  "ure-p2-q90": "Los distintivos temporales con sufijo de una sola letra son muy breves y f\xE1ciles de copiar. Por eso se reservan para actividades donde cuenta mucho la rapidez, como concursos internacionales de alta competitividad.",
+  "ure-p2-q162": "Este plazo es el tiempo que tiene la Administraci\xF3n para resolver una solicitud de autorizaci\xF3n de radioaficionado. Para este enunciado, el dato que debes memorizar es \xABSeis semanas\xBB.",
+  "ure-p2-q278": "Al deletrear un indicativo no conviene inventar palabras, porque la otra estaci\xF3n podr\xEDa entender otra letra. Se usa el alfabeto ICAO, con palabras fijas como Alfa, Bravo, Charlie, para que cada letra quede clara.",
+  "ure-p2-q279": "Los sufijos ayudan a distinguir tipos de estaciones. Para estaciones colectivas de asociaciones de radioaficionados y radioclubs, la opci\xF3n completa que debes reconocer es \xABLos que comienzan por: UR y RC o RK\xBB.",
+  "ure-p2-q280": "La pregunta pide el plazo para resolver y notificar solicitudes de autorizaciones de radioaficionado. El valor que hay que recordar para este supuesto es \xABSeis semanas\xBB.",
+  "ure-p2-q291": "Una estaci\xF3n autom\xE1tica desatendida no queda prohibida por ser autom\xE1tica, pero necesita autorizaci\xF3n administrativa previa. La clave es esa autorizaci\xF3n: por eso la respuesta correcta es \xABS\xED, previa autorizaci\xF3n administrativa conforme a los arts. 24 y 25 del reglamento\xBB.",
+  "ure-p2-q351": "Interceptar comunicaciones que no van destinadas al p\xFAblico es una conducta especialmente grave porque invade comunicaciones ajenas. Por eso la Ley General de Telecomunicaciones la trata como infracci\xF3n \xABmuy grave\xBB.",
+  "ure-p2-q36": "La pregunta pide el l\xEDmite de multa para infracciones graves. Entre las opciones, la cifra que corresponde es \xAB500.000 euros\xBB. No confundas grave con muy grave, que puede tener sanciones m\xE1s altas.",
+  "ure-p2-q414": "Cuando se calcula una sanci\xF3n grave puede usarse el beneficio obtenido; si ese criterio no sirve, se aplica un l\xEDmite fijo. En este enunciado, ese l\xEDmite m\xE1ximo es \xAB500.000 \u20AC\xBB.",
+  "ure-p2-q42": "Retrasar sin justificaci\xF3n la entrega de datos pedidos por la Administraci\xF3n es una infracci\xF3n, pero dentro de las opciones no llega a grave ni muy grave. En este supuesto se clasifica como \xABLeve\xBB.",
+  "ure-p2-q446": "La ganancia del sistema radiante indica cu\xE1nto concentra la antena la se\xF1al. Para estaciones desatendidas en VHF/UHF, el l\xEDmite de esta pregunta es \xAB6 dB\xBB, no 8, 10 ni 12.",
+  "ure-p2-q454": "Los repetidores y radiobalizas deben poder seguir funcionando si falla la alimentaci\xF3n externa. Por eso se exige una alimentaci\xF3n ininterrumpida m\xEDnima; en este enunciado, el tiempo que debes recordar es \xABSeis horas\xBB.",
+  "ure-p2-q474": "No facilitar datos requeridos por la Administraci\xF3n, o retrasarlos sin motivo cuando son obligatorios, es una infracci\xF3n leve. La clave es que se incumple una obligaci\xF3n administrativa, aunque no sea una conducta tan grave como emitir sin autorizaci\xF3n o causar interferencias.",
+  "ure-p2-q49": "La prescripci\xF3n es el tiempo tras el cual una sanci\xF3n ya no puede exigirse. Para una sanci\xF3n por falta grave, el plazo que debes recordar en esta pregunta es \xABA los dos a\xF1os\xBB.",
+  "ure-p2-q505": "El servicio de aficionados por sat\xE9lite es la parte del servicio de radioaficionados que usa estaciones situadas en sat\xE9lites. Por eso la opci\xF3n correcta dice que utiliza estaciones espaciales situadas en sat\xE9lites.",
+  "ure-p2-q520": "El art\xEDculo citado de la Constituci\xF3n reserva al Estado la competencia exclusiva en telecomunicaciones. Por eso el reglamento de radioaficionados se apoya en esa competencia estatal: la respuesta es \xABTelecomunicaciones\xBB.",
+  "ofic-013": "En un circuito LC, la bobina y el condensador se turnan la energ\xEDa. La resonancia aparece cuando ese intercambio encaja. La f\xF3rmula correcta tiene una divisi\xF3n y una ra\xEDz: \xABf0 = 1/(2\u03C0\u221A(LC))\xBB. Las otras opciones fallan porque ponen LC multiplicando, dividiendo mal o sin la ra\xEDz adecuada.",
+  "ofic-037": "Q mide lo estrecho o selectivo que es un circuito resonante. Si una frecuencia central f tiene un ancho de banda B peque\xF1o, selecciona mejor. Por eso Q se calcula como \xABQ = f / B\xBB, no al rev\xE9s ni multiplicando.",
+  "ofic-038": "1000 mW es mil veces 1 mW. En dBm, cada x10 suma 10 dB: 10 mW son 10 dBm, 100 mW son 20 dBm y 1000 mW son \xAB30 dBm\xBB. No es 0 dBm, porque 0 dBm ser\xEDa solo 1 mW.",
+  "ofic-020": "En dBd, la d final recuerda dipolo. La ganancia se compara con un dipolo de media onda, no con una antena isotr\xF3pica (dBi), ni con tierra ni con la potencia del transmisor. Por eso la referencia es \xABUn dipolo de media onda\xBB.",
+  "ofic-052": "dBm mide potencia tomando como referencia 1 miliwatio. La m ayuda: miliwatio. No se refiere a 1 W, ni a voltios, ni a ohmios. Por eso la respuesta es \xAB1 miliwatio\xBB.",
+  "q10": "HAREC acredita que has superado conocimientos de operador de radioaficionado. No autoriza torres sin l\xEDmite, no elimina la obligaci\xF3n de identificarte y no es licencia comercial. La clave es \xABAcreditar superaci\xF3n de examen de competencias de aficionado\xBB.",
+  "q6": "Una ROE alta significa que parte de la energ\xEDa rebota porque antena, cable y transmisor no encajan bien. Eso es \xABDesadaptaci\xF3n de impedancias\xBB. Si hubiese buen acoplamiento, la ROE ser\xEDa baja.",
+  "q8": "QRM es interferencia producida por otras se\xF1ales o equipos. QRN es ruido natural, QRP habla de baja potencia y QSB de desvanecimiento. Para interferencias de otras se\xF1ales: \xABQRM\xBB.",
+  "q9": "En el alfabeto fon\xE9tico internacional, la M se deletrea \xABMike\xBB. Madrid, Metro o Maestro pueden sonar l\xF3gicas en espa\xF1ol, pero no son la palabra normalizada.",
+  "quijotes-84-1810": "La pregunta distingue potencias para estaciones autom\xE1ticas desatendidas fuera del casco urbano. Entre 10, 15, 20 y 50 W, el l\xEDmite general que hay que recordar aqu\xED es \xAB50 W.\xBB.",
+  "quijotes-84-1817": "La licencia CEPT debe incluir datos oficiales como autoridad emisora, distintivo y validez. La asociaci\xF3n del radioaficionado no es un dato necesario de la licencia. Por eso, como pide la incorrecta, la respuesta es \xABAsociaci\xF3n de radioaficionados a la que pertenece.\xBB.",
+  "quijotes-84-1819": "Para mudarte a un pa\xEDs que aplica CEPT T/R 61-02, lo que acredita tu capacitaci\xF3n es HAREC. No hace falta nacionalidad ni 10 a\xF1os de experiencia; la opci\xF3n clave es \xABDispone del Certificado HAREC.\xBB.",
+  "quijotes-84-2210": "Los planes de banda son una gu\xEDa de uso para ordenar modos y frecuencias. En Espa\xF1a se siguen como referencia los de la IARU Regi\xF3n 1. No los fijan asociaciones locales ni son independientes de la UIT. La respuesta es \xABSon los planes de la IARU Regi\xF3n 1, utilizados como norma general.\xBB.",
+  "ure-p1-q12": "dBm compara con 1 mW. 1000 mW son mil veces esa referencia, y mil veces equivale a 30 dB. Por eso la respuesta es \xAB30 dBm\xBB, no 0 dBm ni -3 dBm.",
+  "ure-p1-q122": "Una ROE baja indica que la antena est\xE1 bien adaptada y devuelve poca energ\xEDa hacia el equipo. Eso ayuda a emitir m\xE1s limpio y reducir interferencias. Por eso conviene \xABTener una ROE baja\xBB, no alta ni simplemente m\xE1s potencia.",
+  "ure-p1-q193": "En un superheterodino, se\xF1ales distintas se convierten a una frecuencia fija para filtrarlas mejor. Esa frecuencia fija se llama frecuencia intermedia. No es la del oscilador local ni la de conversi\xF3n directa. Es \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
+  "ure-p1-q316": "En SSB, si la se\xF1al entra demasiado fuerte, puede deformarse y generar interferencias. El ALC baja autom\xE1ticamente el nivel para evitarlo. CAF corrige frecuencia y CAG es t\xEDpico del receptor; aqu\xED toca \xABControl autom\xE1tico de nivel o ALC\xBB.",
+  "ure-p1-q420": "La bobina y el condensador seleccionan una frecuencia, y el diodo permite detectar AM. Como no hay alimentaci\xF3n, no puede ser amplificador ni oscilador. Por eso sirve \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
+  "ure-p1-q84": "En el esquema de receptor, hay que combinar la frecuencia del oscilador con la frecuencia intermedia para obtener la frecuencia sintonizada. Aplicando esa relaci\xF3n, la opci\xF3n que encaja es \xABF=14,2 MHz\xBB.",
+  "ure-p1-q9": "La ROE compara el m\xE1ximo y el m\xEDnimo de la onda estacionaria en la l\xEDnea. Por eso el orden correcto es \xABIntensidad m\xE1xima / intensidad m\xEDnima\xBB. No es al rev\xE9s, ni siempre vale 1 salvo adaptaci\xF3n ideal.",
+  "ure-p2-q285": "LF significa Low Frequency. En la tabla de bandas, LF va de \xAB30 a 300 kHz\xBB. Las otras opciones saltan a MHz o GHz, que son rangos mucho m\xE1s altos.",
+  "ure-p2-q296": "A3E corresponde a AM cl\xE1sica de voz: doble banda lateral y un solo canal anal\xF3gico. No es FM, no es banda lateral \xFAnica y no es ausencia de se\xF1al moduladora. Por eso la respuesta es \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+  "ure-p2-q33": "Un repetidor de VHF de radioaficionado usa la zona de 2 metros, alrededor de 145 MHz. Entre las opciones, el subtramo correcto es \xAB145,0000 - 145,1875 MHz\xBB, no las bandas de UHF de 430 MHz.",
+  "ure-p2-q339": "CL viene de closing: cierre. No significa repetir, interferencia RF ni estaci\xF3n de control. En este contexto, significa \xABCierre de la estaci\xF3n\xBB.",
+  "ure-p2-q346": "En las clases de emisi\xF3n, F3E identifica telefon\xEDa de un solo canal, t\xEDpica de voz en FM. No es telegraf\xEDa, televisi\xF3n ni telefon\xEDa multicanal. Por eso la respuesta es \xABTelefon\xEDa con un solo canal\xBB.",
+  "ure-p2-q356": "Con licencia CEPT puedes operar temporalmente en el pa\xEDs visitado, respetando sus condiciones. Pero no te da derecho a pedir protecci\xF3n administrativa contra interferencias all\xED. Por eso la correcta es \xABNo podr\xE1 solicitar protecci\xF3n contra interferencias perjudiciales\xBB.",
+  "ure-p2-q358": "En el alfabeto fon\xE9tico internacional, el n\xFAmero 9 se dice \xABNine\xBB. Las otras opciones son formas en otros idiomas, pero no la palabra normalizada que pide la pregunta.",
+  "ure-p2-q392": "Los repetidores deben identificarse autom\xE1ticamente. Si lo hacen en Morse, la velocidad indicada por esta pregunta es \xABDiez palabras por minuto\xBB, no nueve, once ni doce.",
+  "ure-p2-q400": "El CNAF es el mapa oficial espa\xF1ol de frecuencias: dice qu\xE9 servicios pueden usar cada banda. Sus siglas significan \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB.",
+  "ure-p2-q410": "HAREC demuestra que ya tienes la capacitaci\xF3n de operador reconocida. Por eso permite a un extranjero residente obtener autorizaci\xF3n sin repetir examen. No sirve para cualquier pa\xEDs del mundo ni solo para no residentes.",
+  "ure-p2-q452": "QRH significa que la frecuencia var\xEDa o no est\xE1 estable. QTH es ubicaci\xF3n, y QRG se relaciona con frecuencia exacta. Para \u201Csu frecuencia var\xEDa\u201D, la respuesta es \xABQRH\xBB.",
+  "ure-p2-q457": "Las ondas m\xE9tricas tienen longitudes de onda del orden de metros. En nomenclatura de bandas corresponden a \xABVHF\xBB. LF es m\xE1s baja, UHF m\xE1s alta y EHF mucho m\xE1s alta.",
+  "ure-p2-q465": "Un extranjero residente debe demostrar capacitaci\xF3n. Puede hacerlo con diploma espa\xF1ol o con HAREC de un pa\xEDs que aplique CEPT T/R 61-02. No basta con reciprocidad ni con examinarse solo de reglamentaci\xF3n nacional. La respuesta correcta es \xABQue sea titular de un Diploma de operador expedido en Espa\xF1a, o de un Certificado HAREC expedido por cualquier pa\xEDs que aplique la Recomendaci\xF3n CEPT T/R 61-02\xBB.",
+  "ure-p2-q473": "La UIT clasifica servicios de radio. Una estaci\xF3n de aficionado pertenece al Servicio de Aficionados. Las otras opciones niegan servicios o bandas que s\xED existen o son demasiado absolutas. Por eso la respuesta es \xABUna estaci\xF3n de aficionado es una estaci\xF3n del Servicio de Aficionados\xBB.",
+  "ure-p2-q508": "SHF significa Super High Frequency. En la tabla de bandas corresponde a \xAB3 y 30 GHz\xBB. MHz y kHz son rangos m\xE1s bajos, as\xED que las otras opciones no encajan.",
+  "ure-p2-q519": "HAREC va ligado a CEPT T/R 61-02, que trata el certificado armonizado de examen. T/R 61-01 es la licencia CEPT para operar temporalmente en otros pa\xEDses. Por eso aqu\xED es \xABT/R 61-02\xBB.",
+  "ure-p2-q530": "Las radiobalizas de aficionado se permiten en bandas de radioaficionado, no en FM comercial ni CB. Entre las opciones, la banda correcta es \xAB144 -146 MHz\xBB.",
+  "ure-p2-q87": "La UIT divide el mundo en regiones para atribuir frecuencias. Espa\xF1a est\xE1 en la Regi\xF3n 1, junto con Europa. No hay Regi\xF3n 4, y Canarias no pasa a Regi\xF3n 2. La respuesta es \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB.",
+  "ure-p2-q96": "QTH es el c\xF3digo Q usado para indicar ubicaci\xF3n o situaci\xF3n. QTR es hora, QRS pide transmitir m\xE1s despacio y QTW no es la respuesta esperada aqu\xED. Por eso la respuesta es \xABQTH\xBB.",
+  "ofic-015": "En un condensador, cuanto m\xE1s alta es la frecuencia, menos oposici\xF3n presenta al paso de la se\xF1al alterna. Por eso su reactancia \xABDisminuye\xBB. No se vuelve resistencia pura ni permanece constante.",
+  "ofic-046": "CL significa cierre de estaci\xF3n. Las otras opciones son de temas distintos: polarizaci\xF3n, licencia CEPT o control de ganancia. En tr\xE1fico, CL se usa para indicar que se cierra."
 };
 
 // data/quijotes-explanations.js
@@ -25468,7 +25542,7 @@ var quizState = {
   /** Solo en estudio: inmediato, confianza (JOL) o panel temario/libro con texto literal del banco. */
   studyFeedback: (
     /** @type {"immediate"|"confidence"|"deepen"} */
-    "immediate"
+    "deepen"
   ),
   sessionType: (
     /** @type {"libre"|"teorico"} */
@@ -25578,7 +25652,7 @@ function readQuizSetupFromForm() {
     part: $("#quiz-part")?.value || "1",
     topic: $("#quiz-topic")?.value || "all",
     session: $("#quiz-session")?.value === "teorico" ? "teorico" : "libre",
-    mode: $("#quiz-mode")?.value || "study",
+    mode: $("#quiz-mode")?.value || "study_deepen",
     pretest: !!$("#quiz-pretest")?.checked,
     wrongOnly: !!$("#quiz-wrong-only")?.checked,
     trapOnly: !!$("#quiz-trap-only")?.checked
@@ -25595,7 +25669,11 @@ function applyQuizSetupToForm(setup) {
   const sessEl = $("#quiz-session");
   if (sessEl instanceof HTMLSelectElement && typeof setup.session === "string") sessEl.value = setup.session;
   const modeEl = $("#quiz-mode");
-  if (modeEl instanceof HTMLSelectElement && typeof setup.mode === "string") modeEl.value = setup.mode;
+  if (modeEl instanceof HTMLSelectElement && typeof setup.mode === "string") {
+    const mode = setup.mode === "study" ? "study_deepen" : setup.mode;
+    if ([...modeEl.options].some((o) => o.value === mode)) modeEl.value = mode;
+    else if ([...modeEl.options].some((o) => o.value === "study_deepen")) modeEl.value = "study_deepen";
+  }
   const preEl = $("#quiz-pretest");
   if (preEl instanceof HTMLInputElement) preEl.checked = !!setup.pretest;
   const wrongEl = $("#quiz-wrong-only");
@@ -25637,7 +25715,7 @@ function quizDraftSessionLabel(s) {
   const type = s.sessionType === "teorico" ? "Examen tipo test" : "Pr\xE1ctica libre";
   if (s.mode === "exam") return `${type} \xB7 modo examen`;
   if (s.studyFeedback === "confidence") return `${type} \xB7 estudio con seguridad`;
-  if (s.studyFeedback === "deepen") return `${type} \xB7 ampliar temario y PDF`;
+  if (s.studyFeedback === "deepen") return `${type} \xB7 estudio con temario y PDF`;
   return `${type} \xB7 estudio`;
 }
 function validateQuizDraft(draft) {
@@ -25800,7 +25878,7 @@ function resumeQuizSession() {
   s.list;
   quizState.index = typeof s.index === "number" ? s.index : 0;
   quizState.mode = s.mode === "exam" ? "exam" : "study";
-  quizState.studyFeedback = s.studyFeedback === "confidence" || s.studyFeedback === "deepen" ? s.studyFeedback : "immediate";
+  quizState.studyFeedback = s.studyFeedback === "confidence" ? "confidence" : "deepen";
   quizState.sessionType = s.sessionType === "teorico" ? "teorico" : "libre";
   quizState.answers = /** @type {Record<string, number|null>} */
   s.answers || {};
@@ -25864,19 +25942,16 @@ async function startQuiz() {
   if (!await confirmReplaceQuizDraft()) return;
   syncPretestAvailability();
   const part = $("#quiz-part")?.value || "1";
-  const modeVal = $("#quiz-mode")?.value || "study";
+  const modeVal = $("#quiz-mode")?.value || "study_deepen";
   if (modeVal === "exam") {
     quizState.mode = "exam";
     quizState.studyFeedback = "immediate";
   } else if (modeVal === "study_confidence") {
     quizState.mode = "study";
     quizState.studyFeedback = "confidence";
-  } else if (modeVal === "study_deepen") {
-    quizState.mode = "study";
-    quizState.studyFeedback = "deepen";
   } else {
     quizState.mode = "study";
-    quizState.studyFeedback = "immediate";
+    quizState.studyFeedback = "deepen";
   }
   quizState.sessionType = $("#quiz-session")?.value === "teorico" ? "teorico" : "libre";
   quizState.smartLabel = "";
@@ -26255,7 +26330,7 @@ function saveQuizPrefs() {
   const part = $("#quiz-part")?.value || "1";
   const topic = $("#quiz-topic")?.value || "all";
   const session = $("#quiz-session")?.value || "libre";
-  const mode = $("#quiz-mode")?.value || "study";
+  const mode = $("#quiz-mode")?.value || "study_deepen";
   const pretest = !!$("#quiz-pretest")?.checked;
   const trapOnly = !!$("#quiz-trap-only")?.checked;
   localStorage.setItem(QUIZ_PREFS_KEY, JSON.stringify({ part, topic, session, mode, pretest, trapOnly }));
@@ -26272,7 +26347,11 @@ function applyQuizPrefsToForm() {
   const sessEl = $("#quiz-session");
   if (sessEl instanceof HTMLSelectElement && typeof p.session === "string") sessEl.value = p.session;
   const modeEl = $("#quiz-mode");
-  if (modeEl instanceof HTMLSelectElement && typeof p.mode === "string") modeEl.value = p.mode;
+  if (modeEl instanceof HTMLSelectElement && typeof p.mode === "string") {
+    const mode = p.mode === "study" ? "study_deepen" : p.mode;
+    if ([...modeEl.options].some((o) => o.value === mode)) modeEl.value = mode;
+    else if ([...modeEl.options].some((o) => o.value === "study_deepen")) modeEl.value = "study_deepen";
+  }
   const preEl = $("#quiz-pretest");
   if (preEl instanceof HTMLInputElement) preEl.checked = !!p.pretest;
   const trapEl = $("#quiz-trap-only");
@@ -26282,14 +26361,13 @@ function applyQuizPrefsToForm() {
   syncQuizModeHint();
 }
 var QUIZ_MODE_HINTS = {
-  study: "Tras cada respuesta ver\xE1s por qu\xE9 encaja la opci\xF3n y la explicaci\xF3n did\xE1ctica. Es el modo por defecto para aprender con el banco.",
-  study_deepen: "Acierto o fallo, regla del banco (si existe) y 2\u20133 vi\xF1etas del temario ligadas a este enunciado \u2014 no el resumen gen\xE9rico del bloque. Enlaces al PDF y secciones 3 y 5.",
+  study_deepen: "Tras cada respuesta: por qu\xE9 encaja, explicaci\xF3n did\xE1ctica, vi\xF1etas del temario ligadas al enunciado y enlaces al PDF (secciones 3 y 5). Modo por defecto para aprender.",
   study_confidence: "Antes de corregir marcas seguridad baja, media o alta; luego ves la explicaci\xF3n y una nota de calibraci\xF3n.",
   exam: "Sin correcci\xF3n hasta terminar las 30 preguntas (o la sesi\xF3n libre completa)."
 };
 function syncQuizModeHint() {
   const hint = $("#quiz-mode-hint");
-  const mode = $("#quiz-mode")?.value || "study";
+  const mode = $("#quiz-mode")?.value || "study_deepen";
   if (!hint) return;
   const text = QUIZ_MODE_HINTS[mode];
   if (text) {
@@ -26587,7 +26665,7 @@ function pickTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal) {
     return {
       tag: "Cobertura",
       title: "Hoy ampl\xEDa cobertura por bloques",
-      text: `Has practicado ${blocksTouched}/${blocksTotal} bloques. Elige un tema de ${weakPart} y trabaja en modo estudio con correcci\xF3n inmediata.`,
+      text: `Has practicado ${blocksTouched}/${blocksTotal} bloques. Elige un tema de ${weakPart} y trabaja en modo estudio con temario y PDF.`,
       href: "#practicar",
       cta: "Practicar un bloque",
       secondaryHref: "#temario",
@@ -27058,7 +27136,7 @@ function renderQuizPracticeGuide() {
   const trapOnly = !!$("#quiz-trap-only")?.checked;
   const trapCount = trapOnly ? buildQuestionList(allQuestions, part, "libre", topic, allQuestions.length, TRAP_QUESTION_IDS).length : 0;
   const generic = [
-    "Si eres nuevo, no cambies todo: elige una parte, un tema y deja el modo Estudio \xB7 correcci\xF3n inmediata.",
+    "Si eres nuevo, no cambies todo: elige una parte, un tema y deja el modo Estudio \xB7 correcci\xF3n inmediata + temario y PDF.",
     "Responde sin mirar apuntes y corrige con calma: primero entiende por qu\xE9 la opci\xF3n correcta encaja.",
     "Cuando falles, vuelve al bloque correspondiente del Temario y escribe la regla en una frase.",
     "Cuando quieras subir dificultad, activa preguntas trampa, falladas o usa Examen para simular sin pistas."
@@ -27269,7 +27347,7 @@ function renderDeepenPanel(q) {
       <li><a href="#normativa--normativa-boe">Normativa BOE</a></li>
     </ul>`;
   return `<div class="quiz-deepen">
-    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicaci\xF3n larga del modo \xABcorrecci\xF3n inmediata\xBB.</p>
+    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> contrasta la regla en el temario o en el PDF del bloque.</p>
     ${showBankLiteral ? `<p class="quiz-deepen__note"><strong>Regla de esta pregunta (banco):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml2(rawExplain)}</p></blockquote>` : ""}
     ${focusList ? `<p class="quiz-deepen__note"><strong>Repaso del temario relacionado con este enunciado:</strong></p>${focusList}` : `<p class="quiz-deepen__note muted">Abre el temario del bloque \xAB${escapeHtml2(blockTitle)}\xBB (secciones 3 y 5) para contrastar la regla con el PDF.</p>`}
     ${pdfHint}
@@ -27440,8 +27518,8 @@ function showStudyFeedback(q) {
   const explainBlock = quizFeedbackExplainParagraph(q, reasoning);
   const abbr = questionAbbreviationPanel(q, [reasoning, explainBlock].filter(Boolean).join(" "));
   if (quizState.studyFeedback === "deepen") {
-    const lead = ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong> Abre el temario o el PDF para fijar la regla.</p>` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + renderDeepenPanel(q) + abbr + cal;
+    const lead = ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
+    fb.innerHTML = label + lead + reasoning + explainBlock + renderDeepenPanel(q) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>${reasoning}${explainBlock}${abbr}` : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}${reasoning}${explainBlock}${abbr}`) + cal;
@@ -27553,7 +27631,7 @@ function bindResultActions() {
     const sessionEl = $("#quiz-session");
     if (wrongEl instanceof HTMLInputElement) wrongEl.checked = true;
     if (trapEl instanceof HTMLInputElement) trapEl.checked = false;
-    if (modeEl instanceof HTMLSelectElement) modeEl.value = "study";
+    if (modeEl instanceof HTMLSelectElement) modeEl.value = "study_deepen";
     if (sessionEl instanceof HTMLSelectElement) sessionEl.value = "libre";
     saveQuizPrefs();
     startQuiz();

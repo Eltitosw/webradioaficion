@@ -1321,7 +1321,7 @@ const quizState = {
   index: 0,
   mode: /** @type {"study"|"exam"} */ ("study"),
   /** Solo en estudio: inmediato, confianza (JOL) o panel temario/libro con texto literal del banco. */
-  studyFeedback: /** @type {"immediate"|"confidence"|"deepen"} */ ("immediate"),
+  studyFeedback: /** @type {"immediate"|"confidence"|"deepen"} */ ("deepen"),
   sessionType: /** @type {"libre"|"teorico"} */ ("libre"),
   answers: /** @type {Record<string, number|null>} */ ({}),
   /** 0 baja · 1 media · 2 alta — solo modo confianza, tras elegir opción. */
@@ -1413,7 +1413,7 @@ function readQuizSetupFromForm() {
     part: $("#quiz-part")?.value || "1",
     topic: $("#quiz-topic")?.value || "all",
     session: $("#quiz-session")?.value === "teorico" ? "teorico" : "libre",
-    mode: $("#quiz-mode")?.value || "study",
+    mode: $("#quiz-mode")?.value || "study_deepen",
     pretest: !!$("#quiz-pretest")?.checked,
     wrongOnly: !!$("#quiz-wrong-only")?.checked,
     trapOnly: !!$("#quiz-trap-only")?.checked,
@@ -1431,7 +1431,11 @@ function applyQuizSetupToForm(/** @type {Record<string, unknown>} */ setup) {
   const sessEl = $("#quiz-session");
   if (sessEl instanceof HTMLSelectElement && typeof setup.session === "string") sessEl.value = setup.session;
   const modeEl = $("#quiz-mode");
-  if (modeEl instanceof HTMLSelectElement && typeof setup.mode === "string") modeEl.value = setup.mode;
+  if (modeEl instanceof HTMLSelectElement && typeof setup.mode === "string") {
+    const mode = setup.mode === "study" ? "study_deepen" : setup.mode;
+    if ([...modeEl.options].some((o) => o.value === mode)) modeEl.value = mode;
+    else if ([...modeEl.options].some((o) => o.value === "study_deepen")) modeEl.value = "study_deepen";
+  }
   const preEl = $("#quiz-pretest");
   if (preEl instanceof HTMLInputElement) preEl.checked = !!setup.pretest;
   const wrongEl = $("#quiz-wrong-only");
@@ -1483,7 +1487,7 @@ function quizDraftSessionLabel(/** @type {{ smartLabel?: string; sessionType?: s
   const type = s.sessionType === "teorico" ? "Examen tipo test" : "Práctica libre";
   if (s.mode === "exam") return `${type} · modo examen`;
   if (s.studyFeedback === "confidence") return `${type} · estudio con seguridad`;
-  if (s.studyFeedback === "deepen") return `${type} · ampliar temario y PDF`;
+  if (s.studyFeedback === "deepen") return `${type} · estudio con temario y PDF`;
   return `${type} · estudio`;
 }
 
@@ -1629,8 +1633,7 @@ function resumeQuizSession() {
   quizState.list = /** @type {typeof quizState.list} */ (s.list);
   quizState.index = typeof s.index === "number" ? s.index : 0;
   quizState.mode = s.mode === "exam" ? "exam" : "study";
-  quizState.studyFeedback =
-    s.studyFeedback === "confidence" || s.studyFeedback === "deepen" ? s.studyFeedback : "immediate";
+  quizState.studyFeedback = s.studyFeedback === "confidence" ? "confidence" : "deepen";
   quizState.sessionType = s.sessionType === "teorico" ? "teorico" : "libre";
   quizState.answers = /** @type {Record<string, number|null>} */ (s.answers || {});
   quizState.confidence = /** @type {Record<string, number>} */ (s.confidence || {});
@@ -1700,19 +1703,16 @@ async function startQuiz() {
   if (!(await confirmReplaceQuizDraft())) return;
   syncPretestAvailability();
   const part = $("#quiz-part")?.value || "1";
-  const modeVal = $("#quiz-mode")?.value || "study";
+  const modeVal = $("#quiz-mode")?.value || "study_deepen";
   if (modeVal === "exam") {
     quizState.mode = "exam";
     quizState.studyFeedback = "immediate";
   } else if (modeVal === "study_confidence") {
     quizState.mode = "study";
     quizState.studyFeedback = "confidence";
-  } else if (modeVal === "study_deepen") {
-    quizState.mode = "study";
-    quizState.studyFeedback = "deepen";
   } else {
     quizState.mode = "study";
-    quizState.studyFeedback = "immediate";
+    quizState.studyFeedback = "deepen";
   }
   quizState.sessionType = $("#quiz-session")?.value === "teorico" ? "teorico" : "libre";
   quizState.smartLabel = "";
@@ -2137,7 +2137,7 @@ function saveQuizPrefs() {
   const part = $("#quiz-part")?.value || "1";
   const topic = $("#quiz-topic")?.value || "all";
   const session = $("#quiz-session")?.value || "libre";
-  const mode = $("#quiz-mode")?.value || "study";
+  const mode = $("#quiz-mode")?.value || "study_deepen";
   const pretest = !!$("#quiz-pretest")?.checked;
   const trapOnly = !!$("#quiz-trap-only")?.checked;
   localStorage.setItem(QUIZ_PREFS_KEY, JSON.stringify({ part, topic, session, mode, pretest, trapOnly }));
@@ -2155,7 +2155,11 @@ function applyQuizPrefsToForm() {
   const sessEl = $("#quiz-session");
   if (sessEl instanceof HTMLSelectElement && typeof p.session === "string") sessEl.value = p.session;
   const modeEl = $("#quiz-mode");
-  if (modeEl instanceof HTMLSelectElement && typeof p.mode === "string") modeEl.value = p.mode;
+  if (modeEl instanceof HTMLSelectElement && typeof p.mode === "string") {
+    const mode = p.mode === "study" ? "study_deepen" : p.mode;
+    if ([...modeEl.options].some((o) => o.value === mode)) modeEl.value = mode;
+    else if ([...modeEl.options].some((o) => o.value === "study_deepen")) modeEl.value = "study_deepen";
+  }
   const preEl = $("#quiz-pretest");
   if (preEl instanceof HTMLInputElement) preEl.checked = !!p.pretest;
   const trapEl = $("#quiz-trap-only");
@@ -2166,17 +2170,15 @@ function applyQuizPrefsToForm() {
 }
 
 const QUIZ_MODE_HINTS = {
-  study:
-    "Tras cada respuesta verás por qué encaja la opción y la explicación didáctica. Es el modo por defecto para aprender con el banco.",
   study_deepen:
-    "Acierto o fallo, regla del banco (si existe) y 2–3 viñetas del temario ligadas a este enunciado — no el resumen genérico del bloque. Enlaces al PDF y secciones 3 y 5.",
+    "Tras cada respuesta: por qué encaja, explicación didáctica, viñetas del temario ligadas al enunciado y enlaces al PDF (secciones 3 y 5). Modo por defecto para aprender.",
   study_confidence: "Antes de corregir marcas seguridad baja, media o alta; luego ves la explicación y una nota de calibración.",
   exam: "Sin corrección hasta terminar las 30 preguntas (o la sesión libre completa).",
 };
 
 function syncQuizModeHint() {
   const hint = $("#quiz-mode-hint");
-  const mode = $("#quiz-mode")?.value || "study";
+  const mode = $("#quiz-mode")?.value || "study_deepen";
   if (!hint) return;
   const text = QUIZ_MODE_HINTS[mode];
   if (text) {
@@ -2497,7 +2499,7 @@ function pickTodayPlan(u, topicStats, coverage, blocksTouched, blocksTotal) {
     return {
       tag: "Cobertura",
       title: "Hoy amplía cobertura por bloques",
-      text: `Has practicado ${blocksTouched}/${blocksTotal} bloques. Elige un tema de ${weakPart} y trabaja en modo estudio con corrección inmediata.`,
+      text: `Has practicado ${blocksTouched}/${blocksTotal} bloques. Elige un tema de ${weakPart} y trabaja en modo estudio con temario y PDF.`,
       href: "#practicar",
       cta: "Practicar un bloque",
       secondaryHref: "#temario",
@@ -3038,7 +3040,7 @@ function renderQuizPracticeGuide() {
     ? buildQuestionList(allQuestions, part, "libre", topic, allQuestions.length, TRAP_QUESTION_IDS).length
     : 0;
   const generic = [
-    "Si eres nuevo, no cambies todo: elige una parte, un tema y deja el modo Estudio · corrección inmediata.",
+    "Si eres nuevo, no cambies todo: elige una parte, un tema y deja el modo Estudio · corrección inmediata + temario y PDF.",
     "Responde sin mirar apuntes y corrige con calma: primero entiende por qué la opción correcta encaja.",
     "Cuando falles, vuelve al bloque correspondiente del Temario y escribe la regla en una frase.",
     "Cuando quieras subir dificultad, activa preguntas trampa, falladas o usa Examen para simular sin pistas.",
@@ -3310,7 +3312,7 @@ function renderDeepenPanel(q) {
       <li><a href="#normativa--normativa-boe">Normativa BOE</a></li>
     </ul>`;
   return `<div class="quiz-deepen">
-    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicación larga del modo «corrección inmediata».</p>
+    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> contrasta la regla en el temario o en el PDF del bloque.</p>
     ${
       showBankLiteral
         ? `<p class="quiz-deepen__note"><strong>Regla de esta pregunta (banco):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(rawExplain)}</p></blockquote>`
@@ -3544,9 +3546,9 @@ function showStudyFeedback(q) {
   const abbr = questionAbbreviationPanel(q, [reasoning, explainBlock].filter(Boolean).join(" "));
   if (quizState.studyFeedback === "deepen") {
     const lead = ok
-      ? `<p class="quiz-fb-lead"><strong>Correcto.</strong> Abre el temario o el PDF para fijar la regla.</p>`
+      ? `<p class="quiz-fb-lead"><strong>Correcto.</strong></p>`
       : `<p class="quiz-fb-lead"><strong>Incorrecto.</strong></p>${selectedAnswerParagraph(q, sel)}${correctAnswerParagraph(q)}`;
-    fb.innerHTML = label + lead + renderDeepenPanel(q) + abbr + cal;
+    fb.innerHTML = label + lead + reasoning + explainBlock + renderDeepenPanel(q) + abbr + cal;
     return;
   }
   fb.innerHTML = label + (ok
@@ -3668,7 +3670,7 @@ function bindResultActions() {
     const sessionEl = $("#quiz-session");
     if (wrongEl instanceof HTMLInputElement) wrongEl.checked = true;
     if (trapEl instanceof HTMLInputElement) trapEl.checked = false;
-    if (modeEl instanceof HTMLSelectElement) modeEl.value = "study";
+    if (modeEl instanceof HTMLSelectElement) modeEl.value = "study_deepen";
     if (sessionEl instanceof HTMLSelectElement) sessionEl.value = "libre";
     saveQuizPrefs();
     startQuiz();

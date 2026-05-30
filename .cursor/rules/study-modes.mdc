@@ -35,9 +35,9 @@ Al tocar preguntas, `explain` o el build del banco, **no romper** esta matriz:
 
 | Valor | UI |
 |-------|-----|
-| `immediate` | «Por qué encaja» + bloque Explicación (`pedagogicalExplain`) |
-| `confidence` | Obliga marcar seguridad (baja/media/alta) antes de corregir; luego mismo feedback + calibración |
-| `deepen` | Solo acierto/fallo + resumen del bloque (`LIBRO_TEMA_TEORIA`) + texto literal del banco (si aplica) + enlaces temario sec. 3/5, URE y PDF. **No** repite el bloque didáctico de `immediate`. |
+| `deepen` | Modo estudio por defecto (`study_deepen` en el selector): acierto/fallo + «Por qué encaja» + Explicación (`pedagogicalExplain`) + panel temario/PDF (`renderDeepenPanel`: viñetas del bloque, regla del banco si aplica, enlaces sec. 3/5, URE y PDF). |
+| `confidence` | Obliga marcar seguridad (baja/media/alta) antes de corregir; luego feedback inmediato (sin panel deepen) + calibración |
+| `immediate` | Solo interno en modo `exam` (sin feedback durante la sesión) |
 
 ## Campos de explicación en el banco
 
