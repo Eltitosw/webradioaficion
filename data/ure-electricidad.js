@@ -264,7 +264,7 @@ export default [
     id: "ure-p1-q134",
     part: 1,
     topicId: "receptores-emisores",
-    stem: "Dados dos receptores, A y B, con las siguientes curvas de respuesta en amplitud para cada uno de ellos, a una Frecuencia Intermedia de 455 kHz, se puede afirmar que:",
+    stem: "Dados dos receptores, A y B, cuyas curvas de respuesta en amplitud a una Frecuencia Intermedia de 455 kHz muestran que la del receptor A es más estrecha y aguda que la del receptor B, se puede afirmar que:",
     options: [
       "El receptor B es más selectivo que el receptor A",
       "El receptor A es más selectivo que el receptor B",

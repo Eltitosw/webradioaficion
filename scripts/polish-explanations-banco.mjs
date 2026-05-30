@@ -10,13 +10,12 @@ import curated from "../data/curated-explanations.js";
 import generated from "../data/generated-explanations.js";
 import { FIGURE_EXPLAINS } from "../data/figure-explanations.mjs";
 import {
+  MISASSIGNED_EXPLAIN_FIXES,
   PADDING_REMNANT_FIXES,
   TEMPLATE_EXPLAIN_FIXES,
 } from "../data/template-explain-fixes.mjs";
-import {
-  EXAM_GRADE_MIN_CHARS,
-  passesExamGradeExplain,
-} from "../lib/explain-exam-grade.mjs";
+import { TECNICA_EXPLAIN_REWRITES } from "../data/tecnica-explain-rewrites.mjs";
+import { passesExamGradeExplain } from "../lib/explain-exam-grade.mjs";
 import {
   isFigureTemplateExplain,
   polishExplainText,
@@ -39,6 +38,8 @@ const fixIds = new Set([
   ...Object.keys(FIGURE_EXPLAINS),
   ...Object.keys(TEMPLATE_EXPLAIN_FIXES),
   ...Object.keys(PADDING_REMNANT_FIXES),
+  ...Object.keys(MISASSIGNED_EXPLAIN_FIXES),
+  ...Object.keys(TECNICA_EXPLAIN_REWRITES),
 ]);
 
 let mergedFixes = 0;
@@ -46,6 +47,8 @@ for (const [id, text] of Object.entries({
   ...FIGURE_EXPLAINS,
   ...TEMPLATE_EXPLAIN_FIXES,
   ...PADDING_REMNANT_FIXES,
+  ...MISASSIGNED_EXPLAIN_FIXES,
+  ...TECNICA_EXPLAIN_REWRITES,
 })) {
   nextCurated[id] = text;
   mergedFixes += 1;
@@ -69,17 +72,8 @@ function safePolishCurated(id, text, requirePass) {
   const probe = (t) => passesExamGradeExplain({ ...q, explain: t });
   if (probe(polished)) return polished;
 
-  if (polished.length < EXAM_GRADE_MIN_CHARS + 40 && !polished.includes("No confundir")) {
-    const withContrast = polished.includes(`«${correct}»`)
-      ? `${polished} No confundir con el distractor del mismo bloque temático.`
-      : correct
-        ? `${polished} No confundir con el distractor del mismo bloque temático. «${correct}».`
-        : polished;
-    if (probe(withContrast)) return withContrast;
-  }
-
-  if (probe(before)) return before;
-
+  // No reintroducimos coletillas genéricas: si tras limpiar no pasa el gate,
+  // se considera pendiente de curación real (se reporta abajo).
   if (requirePass) return null;
   return polished;
 }

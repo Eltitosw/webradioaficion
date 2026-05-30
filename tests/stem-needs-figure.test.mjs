@@ -22,4 +22,17 @@ test("stemNeedsFigure: detecta enunciados con diagrama real", () => {
   );
   assert.equal(stemNeedsFigure("En la siguiente gráfica de la pantalla de un osciloscopio"), true);
   assert.equal(stemNeedsFigure("El vatímetro de la figura conectado entre un transmisor y una antena"), true);
+  assert.equal(
+    stemNeedsFigure("Dados dos receptores con las siguientes curvas de respuesta en amplitud"),
+    true,
+  );
+});
+
+test("stemNeedsFigure: no marca curvas ya descritas en el propio enunciado", () => {
+  assert.equal(
+    stemNeedsFigure(
+      "Dados dos receptores A y B cuyas curvas de respuesta muestran que la de A es más estrecha que la de B",
+    ),
+    false,
+  );
 });

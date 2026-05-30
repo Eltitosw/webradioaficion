@@ -21,6 +21,7 @@ import figures from "../data/questions-figures.js";
 import questionsBanco from "../data/questions-banco.js";
 import quijotesExplanations from "../data/quijotes-explanations.js";
 import generatedExplanations from "../data/generated-explanations.js";
+import curatedExplanations from "../data/curated-explanations.js";
 import { dedupeKey, writeUtf8File } from "../lib/import-question-utils.mjs";
 import { dedupeBankByParaphrase } from "../lib/banco-dedupe.mjs";
 import { isPublishableBankQuestion, prepareBankQuestion } from "../lib/banco-quality.mjs";
@@ -57,6 +58,11 @@ for (const q of [
 /** @param {object} q */
 function withExplain(q) {
   let out = repairQuestionFields(q);
+  // curated tiene prioridad absoluta (revisado a mano); luego quijotes y generado.
+  const handPicked = curatedExplanations[out.id];
+  if (handPicked) {
+    return { ...out, explain: handPicked };
+  }
   const curated =
     quijotesExplanations[out.id] || generatedExplanations[out.id] || "";
 

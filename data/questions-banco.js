@@ -1,14 +1,14 @@
 /**
  * Banco principal: examen oficial (ofic, FEDI examen, URE, Quijotes 84) + figuras certificadas.
- * Generado: 2026-05-28 · 562 preguntas · npm run build:banco
- * Cribado: 584 · En banco por id: 561 · Sustituidas por versión con figura: 23
+ * Generado: 2026-05-30 · 563 preguntas · npm run build:banco
+ * Cribado: 584 · En banco por id: 562 · Sustituidas por versión con figura: 22
  * Duplicados eliminados: 19 (19 exactos, 0 parafraseados)
- * Relleno hasta ≥400: 0 añadidas (total tras relleno: 562)
+ * Relleno hasta ≥400: 0 añadidas (total tras relleno: 563)
  * Con figura: 30
  */
 
-export const BANCO_GENERATED_AT = "2026-05-28";
-export const BANCO_STATS = {"count":562,"cribadoPreferred":584,"cribadoById":561,"cribadoReplacedByFigure":23,"withFigure":30,"dedupeRemoved":19,"dedupeGroups":19,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1129};
+export const BANCO_GENERATED_AT = "2026-05-30";
+export const BANCO_STATS = {"count":563,"cribadoPreferred":584,"cribadoById":562,"cribadoReplacedByFigure":22,"withFigure":30,"dedupeRemoved":19,"dedupeGroups":19,"paraphraseRemoved":0,"fillAdded":0,"sourceEntries":1129};
 
 export default [
   {
@@ -37,7 +37,7 @@ export default [
       "100 pF"
     ],
     "correctIndex": 0,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «200 pF». No confundir con el distractor del mismo bloque temático."
+    "explain": "En paralelo las capacidades se suman: C_total = C1 + C2 + C3. Con 400 pF de total y dos condensadores de 100 pF, el tercero vale 400 − 100 − 100 = 200 pF. «200 pF»."
   },
   {
     "id": "fedi-ag-003",
@@ -107,7 +107,7 @@ export default [
       "La dependencia del margen de frecuencias de la antena sin acoplador"
     ],
     "correctIndex": 0,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La anchura de banda estrictamente suficiente para transmitir la información en condiciones adecuadas»."
+    "explain": "El ancho de banda necesario es el mínimo imprescindible para transmitir la información con la calidad requerida; usar más desperdicia espectro e interfiere a otros usuarios. «La anchura de banda estrictamente suficiente para transmitir la información en condiciones adecuadas»."
   },
   {
     "id": "fedi-ag-008",
@@ -151,7 +151,7 @@ export default [
       "Parte del transmisor que reduce los ruidos"
     ],
     "correctIndex": 0,
-    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resolución de frecuencia. «Dispositivo que convierte la corriente continua en alterna». No confundir con el distractor del mismo bloque temático."
+    "explain": "Un oscilador toma energía de corriente continua y la entrega como una señal alterna periódica a una frecuencia determinada, sin necesidad de señal de entrada. Por eso es un «Dispositivo que convierte la corriente continua en alterna»."
   },
   {
     "id": "fedi-ag-011",
@@ -359,7 +359,7 @@ export default [
       "Frecuencia"
     ],
     "correctIndex": 3,
-    "explain": "La longitud eléctrica de una antena resonante depende de la longitud de onda λ, y λ = c/f: a mayor frecuencia, antena más corta. «Frecuencia». No confundir con el distractor del mismo bloque temático."
+    "explain": "El tamaño físico de una antena resonante es proporcional a la longitud de onda, y como λ = c/f, a mayor frecuencia la antena es más corta. Por eso su tamaño depende de la «Frecuencia»."
   },
   {
     "id": "fedi-ag-028",
@@ -827,7 +827,7 @@ export default [
       "Dos longitudes de onda"
     ],
     "correctIndex": 1,
-    "explain": "Un dipolo de media onda mide del orden de λ/2 en total; vertical de λ/4 necesita plano de tierra o radiales. «Media longitud de onda». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un dipolo de media onda mide eléctricamente, como indica su nombre, λ/2 en total, repartido en dos brazos de λ/4. Por eso su longitud es «Media longitud de onda».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / antenas y propagación."
   },
   {
@@ -947,7 +947,7 @@ export default [
       "f0 = √(L/C)"
     ],
     "correctIndex": 1,
-    "explain": "La resonancia en LC ocurre cuando las reactancias de L y C se equilibran; f0 = 1/(2π√(LC)) en el modelo ideal. «f0 = 1/(2π√(LC))». Por eso la respuesta del enunciado es.",
+    "explain": "En un circuito LC ideal la resonancia ocurre cuando se igualan las reactancias de bobina y condensador; al despejar esa condición se obtiene la fórmula f0 = 1/(2π√(LC)). «f0 = 1/(2π√(LC))».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
@@ -1397,7 +1397,7 @@ export default [
       "Un altavoz"
     ],
     "correctIndex": 1,
-    "explain": "El varicap se comporta como condensador variable controlado por la tensión inversa aplicada. «Un condensador variable controlado por tensión». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El diodo varicap aprovecha que la capacidad de su unión polarizada en inversa cambia con la tensión aplicada. Por eso se emplea como condensador variable controlado por tensión en circuitos de sintonía. «Un condensador variable controlado por tensión».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / componentes y circuitos."
   },
   {
@@ -1562,7 +1562,7 @@ export default [
       "Una antena resonante"
     ],
     "correctIndex": 1,
-    "explain": "La bobina almacena energía en campo magnético; en CC estable se comporta como cortocircuito ideal tras el transitorio. «Un cortocircuito». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Una bobina solo se opone a las variaciones de corriente; en corriente continua estable no hay variación, así que no presenta reactancia y equivale a un cortocircuito. «Un cortocircuito».",
     "sourceRef": "Elaboración propia (2026) · libro oficial 1.ª parte Técnica (electricidad); programa HAREC / electricidad básica."
   },
   {
@@ -2267,7 +2267,7 @@ export default [
       "PPN"
     ],
     "correctIndex": 0,
-    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. «NPN». Por eso la respuesta del enunciado es.",
+    "explain": "Los transistores bipolares se fabrican en dos polaridades según el dopado de sus uniones: NPN y PNP. Por eso uno de los tipos válidos es «NPN».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2282,7 +2282,7 @@ export default [
       "½C.V²"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «½C.V²». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La energía almacenada en un condensador depende de su capacidad y del cuadrado de la tensión, según la fórmula E = ½·C·V². Por eso la expresión correcta es «½C.V²».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2327,7 +2327,7 @@ export default [
       "No se puede calcular"
     ],
     "correctIndex": 2,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Es el tiempo que transcurre entre dos mínimos consecutivos». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El periodo es el tiempo que tarda la onda en completar un ciclo, es decir, el intervalo entre dos puntos equivalentes consecutivos (dos máximos o dos mínimos). «Es el tiempo que transcurre entre dos mínimos consecutivos».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2357,7 +2357,7 @@ export default [
       "Dos bobinas acopladas"
     ],
     "correctIndex": 3,
-    "explain": "En el transformador ideal V1/V2 = N1/N2; un núcleo ferromagnético aumenta el acoplamiento y la inductancia. «Dos bobinas acopladas». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un transformador necesita como mínimo un primario y un secundario que transfieren energía por inducción. Por eso está formado al menos por «Dos bobinas acopladas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2372,7 +2372,7 @@ export default [
       "Filtro de línea de desacoplo"
     ],
     "correctIndex": 3,
-    "explain": "El filtro de línea de desacoplo evita que RF del equipo entre en la red eléctrica doméstica. «Filtro de línea de desacoplo». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Para impedir que la RF del equipo salga hacia la red eléctrica se intercala un filtro de línea de desacoplo, que bloquea la radiofrecuencia y deja pasar los 50 Hz de la alimentación. «Filtro de línea de desacoplo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2434,7 +2434,7 @@ export default [
       "Nula"
     ],
     "correctIndex": 0,
-    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «Mayor». Por eso la respuesta del enunciado es.",
+    "explain": "El dipolo doblado presenta una impedancia unas cuatro veces mayor que el dipolo simple (del orden de 300 Ω frente a 75 Ω). Por eso, respecto al dipolo simple, su impedancia es «Mayor».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2464,7 +2464,7 @@ export default [
       "Las siglas AM significan modulación de armónicos"
     ],
     "correctIndex": 0,
-    "explain": "Modular es variar algún parámetro de la portadora (amplitud, frecuencia o fase) según la señal de información. «La modulación AM hace variar la amplitud de la portadora». Por eso la respuesta del enunciado es.",
+    "explain": "Modular es variar un parámetro de la portadora con la información a transmitir; en amplitud modulada (AM) lo que varía es precisamente la amplitud de la portadora siguiendo la señal moduladora. «La modulación AM hace variar la amplitud de la portadora».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2501,7 +2501,7 @@ export default [
     "id": "ure-p1-q134",
     "part": 1,
     "topicId": "receptores-emisores",
-    "stem": "Dados dos receptores, A y B, con las siguientes curvas de respuesta en amplitud para cada uno de ellos, a una Frecuencia Intermedia de 455 kHz, se puede afirmar que:",
+    "stem": "Dados dos receptores, A y B, cuyas curvas de respuesta en amplitud a una Frecuencia Intermedia de 455 kHz muestran que la del receptor A es más estrecha y aguda que la del receptor B, se puede afirmar que:",
     "options": [
       "El receptor B es más selectivo que el receptor A",
       "El receptor A es más selectivo que el receptor B",
@@ -2528,7 +2528,7 @@ export default [
       ""
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «10 MHz». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un mezclador genera a su salida la suma y la diferencia de las frecuencias de entrada: 14 + 4 = 18 MHz y 14 − 4 = 10 MHz. De las opciones, la válida es la diferencia: «10 MHz».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2543,7 +2543,7 @@ export default [
       "No se pueden utilizar"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Para distancias cortas».",
+    "explain": "En VHF la propagación es básicamente de visión directa (línea de vista), por lo que los enlaces son de alcance local o regional, no DX intercontinental como en HF. «Para distancias cortas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2634,7 +2634,7 @@ export default [
       "Solo tienen dipolo y directores"
     ],
     "correctIndex": 0,
-    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «Son directivas». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La Yagi concentra la radiación en una dirección gracias a sus elementos parásitos (reflector y directores), lo que le da ganancia hacia delante. Por eso «Son directivas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2663,7 +2663,7 @@ export default [
       "Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB"
     ],
     "correctIndex": 3,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB».",
+    "explain": "El reglamento exige que las radiaciones espurias por debajo de 30 MHz estén atenuadas al menos 40 dB respecto a la potencia de la frecuencia fundamental. «Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2710,7 +2710,7 @@ export default [
       "El de clase A tiene una distorsión elevada"
     ],
     "correctIndex": 0,
-    "explain": "Clase A conduce todo el ciclo (lineal, ineficiente); B/AB/C recortan conducción para mayor eficiencia en RF. «El de clase AB es una combinación de A y B». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La clase AB conduce algo más de medio ciclo: combina la buena linealidad de la clase A con la mayor eficiencia de la clase B, reduciendo la distorsión de cruce. «El de clase AB es una combinación de A y B».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2845,7 +2845,7 @@ export default [
       "Al valor correspondiente al 99% de la potencia emitida por el transmisor"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La relación entre la potencia entregada al sistema radiante y la consumida».",
+    "explain": "El rendimiento de un transmisor es la relación entre la potencia entregada al sistema radiante y la potencia consumida de la fuente; mide la eficiencia, no la potencia reflejada. «La relación entre la potencia entregada al sistema radiante y la consumida».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2890,7 +2890,7 @@ export default [
       "Parabólica"
     ],
     "correctIndex": 1,
-    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «Directiva». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Una Yagi enfoca la energía hacia delante mediante su reflector y sus directores, lo que le da ganancia en una dirección concreta. Por eso es una antena «Directiva».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2935,7 +2935,7 @@ export default [
       "Es aquella que contiene el 99% de la potencia emitida por el transmisor"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas».",
+    "explain": "La anchura de banda necesaria es la justa para transmitir a la velocidad y calidad requeridas; ni la máxima permitida ni la que contiene el 99% de la potencia. «Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2995,7 +2995,7 @@ export default [
       "La carga atmosférica del camino recorrido por la onda"
     ],
     "correctIndex": 0,
-    "explain": "Las ondas EM combinan campo eléctrico y magnético; la luz y la RF son el mismo fenómeno a distinta frecuencia. «La dirección del campo eléctrico». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La polarización de una onda electromagnética se define por la dirección en la que oscila su campo eléctrico (vertical, horizontal o circular). «La dirección del campo eléctrico».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3010,7 +3010,7 @@ export default [
       "Un frecuencímetro"
     ],
     "correctIndex": 1,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Un voltímetro de radiofrecuencia».",
+    "explain": "Un voltímetro de RF mide tensión, no frecuencia; para medir la frecuencia se emplea un frecuencímetro, un osciloscopio o un analizador de espectro. «Un voltímetro de radiofrecuencia».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3025,7 +3025,7 @@ export default [
       "Igual a la potencia media del transmisor"
     ],
     "correctIndex": 2,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Superior a la potencia media del transmisor».",
+    "explain": "La potencia de pico de envolvente (PEP) en AM es siempre superior a la potencia media, porque la envolvente alcanza valores instantáneos mayores que el promedio. «Superior a la potencia media del transmisor».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3040,7 +3040,7 @@ export default [
       "La energía de radiofrecuencia que retorna por el cable de bajada"
     ],
     "correctIndex": 1,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Múltiplos de la frecuencia fundamental»."
+    "explain": "Los armónicos son múltiplos enteros de la frecuencia fundamental (2f, 3f, …); aparecen en circuitos no lineales y deben filtrarse para no emitir espurias. «Múltiplos de la frecuencia fundamental»."
   },
   {
     "id": "ure-p1-q2",
@@ -3054,7 +3054,7 @@ export default [
       "Elimina la portadora en los transmisores de banda lateral única"
     ],
     "correctIndex": 0,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Elimina las frecuencias no deseadas».",
+    "explain": "El filtro de salida del transmisor atenúa armónicos y emisiones fuera de banda y deja pasar la frecuencia útil: elimina las frecuencias no deseadas antes de la antena. «Elimina las frecuencias no deseadas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3084,7 +3084,7 @@ export default [
       "dB"
     ],
     "correctIndex": 3,
-    "explain": "La ganancia de una antena se expresa en decibelios (dB) respecto a un dipolo (dBd) o a una isótropa (dBi). «dB». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La ganancia de una antena es una relación de potencias; por tanto se expresa en decibelios, referida a un dipolo (dBd) o a una antena isótropa (dBi). «dB».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3100,6 +3100,21 @@ export default [
     ],
     "correctIndex": 2,
     "explain": "ROE significa relación de ondas estacionarias; SWR es su sigla inglesa. Compara la onda incidente con la reflejada en la línea/antena. Si la adaptación es mala, aumenta la potencia reflejada y sube la ROE."
+  },
+  {
+    "id": "ure-p1-q204",
+    "part": 1,
+    "topicId": "electricidad-basica",
+    "stem": "Para medir intensidad del campo eléctrico se utilizan unidades de:",
+    "options": [
+      "dBV",
+      "dBW",
+      "dBV/m",
+      "dBW/ m2"
+    ],
+    "correctIndex": 2,
+    "explain": "La intensidad de campo eléctrico en un punto se expresa en V/m (dBV/m en dB). dBW es potencia; dBV es tensión. «dBV/m».",
+    "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p1-q205",
@@ -3143,7 +3158,7 @@ export default [
       "Recibir en banda lateral única"
     ],
     "correctIndex": 2,
-    "explain": "Las ondas EM combinan campo eléctrico y magnético; la luz y la RF son el mismo fenómeno a distinta frecuencia. «Caracterizar etapas de radiofrecuencia». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un generador de señal de RF entrega una señal patrón de frecuencia y nivel conocidos; se inyecta en un equipo para medir, ajustar y caracterizar sus etapas de radiofrecuencia. «Caracterizar etapas de radiofrecuencia».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3173,7 +3188,7 @@ export default [
       "Habrá que adaptarla con un balun relación 1:1"
     ],
     "correctIndex": 0,
-    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «Se transfiere la máxima energía a la antena». Por eso la respuesta del enunciado es.",
+    "explain": "Cuando coinciden las impedancias del emisor, la línea y la antena hay adaptación: no aparece onda reflejada y se transfiere la máxima potencia a la antena. «Se transfiere la máxima energía a la antena».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3221,7 +3236,7 @@ export default [
       ""
     ],
     "correctIndex": 2,
-    "explain": "Un dieléctrico es un material aislante que puede almacenar carga en un condensador (constante dieléctrica ε). «Un aislante». Por eso la respuesta del enunciado es.",
+    "explain": "Un dieléctrico no conduce la corriente pero sí puede polarizarse, y se usa entre las armaduras de los condensadores. Por eso, en esencia, es «Un aislante».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3266,7 +3281,7 @@ export default [
       "La suma de las intensidades de cada una de las ramas"
     ],
     "correctIndex": 3,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «La suma de las intensidades de cada una de las ramas». No confundir con el distractor del mismo bloque temático.",
+    "explain": "En un montaje en paralelo la corriente se reparte por cada rama; por la ley de nudos de Kirchhoff, la intensidad total es la suma de las intensidades de cada rama. «La suma de las intensidades de cada una de las ramas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3281,7 +3296,7 @@ export default [
       "Acústica"
     ],
     "correctIndex": 2,
-    "explain": "Las ondas de radio son ondas electromagnéticas que se propagan en el espacio sin medio material. «Electromagnética». Por eso la respuesta del enunciado es."
+    "explain": "Las ondas de radio son campos eléctrico y magnético acoplados que se propagan por el espacio sin necesidad de medio material. Por eso su naturaleza es «Electromagnética»."
   },
   {
     "id": "ure-p1-q246",
@@ -3310,7 +3325,7 @@ export default [
       "Amplificadores y filtros"
     ],
     "correctIndex": 3,
-    "explain": "La superheterodinia traslada la señal a frecuencia intermedia para filtrar y amplificar; facilita el control automático de ganancia. «Amplificadores y filtros». Por eso la respuesta del enunciado es.",
+    "explain": "La etapa de frecuencia intermedia se construye con amplificadores sintonizados y filtros, que aportan la mayor parte de la ganancia y de la selectividad del receptor. «Amplificadores y filtros».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3325,7 +3340,7 @@ export default [
       "Balun"
     ],
     "correctIndex": 3,
-    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. «Balun». Por eso la respuesta del enunciado es.",
+    "explain": "El transistor sirve para amplificar, conmutar u oscilar, pero no para adaptar líneas balanceadas y no balanceadas; de eso se encarga un balun, que es un componente pasivo. «Balun».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3340,7 +3355,7 @@ export default [
       "Nunca podrá conectarse una resistencia en SHUNT"
     ],
     "correctIndex": 2,
-    "explain": "La resistencia shunt va en paralelo con el galvanómetro para derivar corriente y ampliar el rango del amperímetro. «En paralelo». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La resistencia shunt deriva parte de la corriente para poder medir intensidades mayores, y para ello se conecta junto al aparato de medida. Por eso va «En paralelo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3355,7 +3370,7 @@ export default [
       "Un filtro de frecuencia de corte variable"
     ],
     "correctIndex": 2,
-    "explain": "El varicap se comporta como condensador variable controlado por la tensión inversa aplicada. «Un condensador variable controlado por tensión». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El varicap es un diodo polarizado en inversa cuya capacidad de unión cambia con la tensión aplicada; por eso equivale a un condensador variable controlado por tensión. «Un condensador variable controlado por tensión».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3385,7 +3400,7 @@ export default [
       "Amplificar la señal recibida"
     ],
     "correctIndex": 1,
-    "explain": "La etapa de detección (demodulador) extrae audio o datos de la portadora o FI ya filtrada. «Demodular la señal recibida». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La etapa de detección recupera la información (audio o datos) que viajaba montada sobre la portadora ya filtrada y amplificada. Por eso sirve para «Demodular la señal recibida».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3446,7 +3461,7 @@ export default [
       "Redes de desplazamiento de fase"
     ],
     "correctIndex": 0,
-    "explain": "QSY solicita o indica cambio de frecuencia de operación. «Un oscilador de frecuencia variable». Por eso la respuesta del enunciado es.",
+    "explain": "Para cambiar la frecuencia de emisión hace falta un oscilador de frecuencia variable (VFO o sintetizador) que fije en cada momento la frecuencia de trabajo. «Un oscilador de frecuencia variable».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3461,7 +3476,7 @@ export default [
       "Su capacidad para rechazar señales fuertes"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Su capacidad para recibir señales débiles». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La sensibilidad mide la señal mínima que el receptor puede aprovechar con calidad: cuanta menos señal necesita, más sensible es y mejor capta señales débiles. «Su capacidad para recibir señales débiles».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3476,7 +3491,7 @@ export default [
       "Permiten aumentar el ancho de banda de emisión"
     ],
     "correctIndex": 2,
-    "explain": "Una antena directiva concentra radiación o recepción en una dirección preferente. «Proporcionan directividad». Por eso la respuesta del enunciado es.",
+    "explain": "Los elementos parásitos de una Yagi (reflector y directores) no están alimentados, pero reradian la señal con la fase adecuada para reforzar la radiación hacia delante: dan directividad. «Proporcionan directividad».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3520,7 +3535,7 @@ export default [
       "Un filtro paso bajo o paso banda"
     ],
     "correctIndex": 3,
-    "explain": "Antes de la toma de antena suele haber protección o interruptor para seguridad y mantenimiento. «Un filtro paso bajo o paso banda». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Antes de la toma de antena conviene un filtro paso bajo o paso banda que atenúe armónicos y emisiones no deseadas para que no lleguen a radiarse. «Un filtro paso bajo o paso banda».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3704,7 +3719,7 @@ export default [
       "Un dato irrelevante para el filtro"
     ],
     "correctIndex": 2,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La frecuencia que delimita la banda de paso o no paso por el filtro». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La frecuencia de corte es aquella en la que el filtro pasa de dejar pasar la señal a atenuarla (caída de 3 dB); marca el límite entre la banda de paso y la de rechazo. «La frecuencia que delimita la banda de paso o no paso por el filtro».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3734,7 +3749,7 @@ export default [
       "Nada de lo anterior"
     ],
     "correctIndex": 2,
-    "explain": "La resistencia shunt va en paralelo con el galvanómetro para derivar corriente y ampliar el rango del amperímetro. «Proteger aparatos de medida». No confundir con el distractor del mismo bloque temático."
+    "explain": "Colocada en paralelo con el instrumento, la resistencia shunt deriva el exceso de corriente y amplía la escala, protegiendo así los aparatos de medida frente a sobreintensidades. «Proteger aparatos de medida»."
   },
   {
     "id": "ure-p1-q313",
@@ -3810,7 +3825,7 @@ export default [
       "El índice modulación es superior al 100%"
     ],
     "correctIndex": 3,
-    "explain": "Sobremodulación distorsiona la envolvente AM cuando el índice de modulación supera el límite lineal. «El índice modulación es superior al 100%». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Hay sobremodulación cuando el índice de modulación de AM supera el 100%: la envolvente se recorta y aparecen distorsión y emisiones espurias. «El índice modulación es superior al 100%».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3872,7 +3887,7 @@ export default [
       "En serie, la resistencia total siempre es mayor que cualquiera de ellas"
     ],
     "correctIndex": 3,
-    "explain": "R disipa energía; PTC sube R con temperatura y NTC la baja. «En serie, la resistencia total siempre es mayor que cualquiera de ellas». No confundir con el distractor del mismo bloque temático.",
+    "explain": "En serie las resistencias se suman (Req = R1 + R2 + …), de modo que la resistencia total siempre resulta mayor que cualquiera de las individuales. «En serie, la resistencia total siempre es mayor que cualquiera de ellas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3983,7 +3998,7 @@ export default [
       "Modulada en banda lateral única"
     ],
     "correctIndex": 0,
-    "explain": "Osciladores generan portadora; PLL y DDS mejoran estabilidad y resolución de frecuencia. «De frecuencia muy estable». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El cristal de cuarzo tiene una resonancia mecánica muy precisa y poco sensible a la temperatura; por eso los osciladores a cuarzo generan una frecuencia muy estable. «De frecuencia muy estable».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4041,7 +4056,7 @@ export default [
       "Certificado de Alta Garantía"
     ],
     "correctIndex": 0,
-    "explain": "La superheterodinia traslada la señal a frecuencia intermedia para filtrar y amplificar; facilita el control automático de ganancia. «Control Automático de Ganancia». Por eso la respuesta del enunciado es.",
+    "explain": "CAG son las siglas de Control Automático de Ganancia: ajusta la ganancia del receptor en función del nivel de señal para mantener el volumen del audio aproximadamente constante. «Control Automático de Ganancia».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4132,7 +4147,7 @@ export default [
       "Balun"
     ],
     "correctIndex": 3,
-    "explain": "El balun adapta la línea coaxial (no balanceada) al dipolo (balanceado) y puede transformar impedancia. «Balun». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El balun adapta la línea coaxial (no balanceada) al dipolo (balanceado), evitando corrientes parásitas por la malla del cable. Por eso el circuito buscado es el «Balun».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4179,7 +4194,7 @@ export default [
       "Un polímetro digital"
     ],
     "correctIndex": 0,
-    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «Un medidor de ROE». Por eso la respuesta del enunciado es.",
+    "explain": "La onda reflejada por la desadaptación se compara con la directa para cuantificarla. Por eso se usa «Un medidor de ROE», que da la relación de onda estacionaria entre transmisor y antena.",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4194,7 +4209,7 @@ export default [
       "Ser utilizado para comunicaciones de corta distancia"
     ],
     "correctIndex": 0,
-    "explain": "El osciloscopio muestra señales en el dominio del tiempo (forma de onda), no el espectro en frecuencia. «La representación gráfica de las formas de onda». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El osciloscopio representa la señal en el dominio del tiempo, mostrando gráficamente su forma de onda (amplitud frente a tiempo). «La representación gráfica de las formas de onda».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4305,7 +4320,7 @@ export default [
       "Con una carga artificial"
     ],
     "correctIndex": 0,
-    "explain": "El amperímetro mide intensidad y debe ir en serie con la rama que quieres medir. «En serie». Por eso la respuesta del enunciado es.",
+    "explain": "El amperímetro mide la corriente que circula, de modo que esa misma corriente debe atravesarlo. Por eso se intercala «En serie» en la rama que se quiere medir.",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4320,7 +4335,7 @@ export default [
       "Es igual al valor de la menor de las resistencias"
     ],
     "correctIndex": 0,
-    "explain": "En serie las resistencias se suman: Req = R1 + R2 + … La tensión se reparte según cada R. «Es mayor que el valor de cualquiera de las resistencias». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Al asociar resistencias en serie sus valores se suman (Req = R1 + R2 + …), por lo que el total siempre supera al de cualquiera de ellas. «Es mayor que el valor de cualquiera de las resistencias».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4429,7 +4444,7 @@ export default [
       "(f 1 - f 2 ) ∕ (f 1 +f 2 )"
     ],
     "correctIndex": 2,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «f 1 + f 2». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un mezclador produce a su salida la suma y la diferencia de las frecuencias de entrada. Por eso entre las componentes resultantes aparece la suma «f 1 + f 2».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4444,7 +4459,7 @@ export default [
       "80 m"
     ],
     "correctIndex": 1,
-    "explain": "En 40 m (~7 MHz), λ ≈ 40 m; un dipolo de media onda mide del orden de λ/2 en total (unos 20 m de longitud física). «20 m». No confundir con el distractor del mismo bloque temático.",
+    "explain": "En la banda de 40 m la longitud de onda es de unos 40 m, y un dipolo de media onda mide λ/2. Por eso su longitud física es de aproximadamente «20 m».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4474,7 +4489,7 @@ export default [
       "Tiene varios elementos denominados parásitos"
     ],
     "correctIndex": 1,
-    "explain": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena físicamente. «Permite obtener resonancia en varias frecuencias». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Las trampas (circuitos LC) aíslan tramos del dipolo según la banda en uso, de manera que la misma antena puede resonar en varias frecuencias. «Permite obtener resonancia en varias frecuencias».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4504,7 +4519,7 @@ export default [
       "Rayos gamma"
     ],
     "correctIndex": 0,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «Radiación electromagnética».",
+    "explain": "Un transmisor de RF radia su energía en forma de onda electromagnética a través de la antena; no es emisión térmica ni rayos gamma. «Radiación electromagnética».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4521,7 +4536,7 @@ export default [
       "Un detector de envolvente"
     ],
     "correctIndex": 2,
-    "explain": "Un receptor de FM en superheterodino necesita oscilador local para trasladar la señal a FI; el recuadro vacío del diagrama es ese bloque. «Un oscilador». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un receptor superheterodino de FM necesita un oscilador local para mezclar y trasladar la señal a frecuencia intermedia. Por eso el bloque que falta en el diagrama es «Un oscilador».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4566,7 +4581,7 @@ export default [
       "El consumo de potencia de alimentación"
     ],
     "correctIndex": 2,
-    "explain": "El S-meter indica nivel de señal recibida (intensidad relativa), no potencia transmitida ni frecuencia. «La intensidad de la señal de entrada del receptor». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El S-meter mide el nivel relativo de la señal que llega al receptor (la fuerza de la señal recibida), no la potencia transmitida ni la frecuencia. «La intensidad de la señal de entrada del receptor».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4598,7 +4613,7 @@ export default [
       "Disponen de rejilla"
     ],
     "correctIndex": 2,
-    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. «Tienen tres terminales». Por eso la respuesta del enunciado es.",
+    "explain": "El transistor bipolar controla la corriente entre dos de sus patillas mediante una tercera. Por eso son dispositivos que «Tienen tres terminales»: emisor, base y colector.",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4617,7 +4632,7 @@ export default [
       ""
     ],
     "correctIndex": 3,
-    "explain": "Los decibelios expresan relaciones logarítmicas; dBm referencia potencia a 1 mW. La respuesta es «Potencia». No confundir con el distractor del mismo bloque temático.",
+    "explain": "El dBW es una medida logarítmica de potencia referida a 1 vatio; por tanto, la magnitud que expresa es la potencia. «Potencia».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4632,7 +4647,7 @@ export default [
       "Colocarle un plano de tierra"
     ],
     "correctIndex": 2,
-    "explain": "Bajar frecuencia de resonancia exige mayor longitud eléctrica (alargar); subir frecuencia, acortar. «Alargarla». No confundir con el distractor del mismo bloque temático."
+    "explain": "Para bajar la frecuencia de resonancia hay que aumentar la longitud eléctrica de la antena, y 28.500 kHz es menor que 29.900 kHz. Por eso la solución es «Alargarla»."
   },
   {
     "id": "ure-p1-q475",
@@ -4691,7 +4706,7 @@ export default [
       "Sólo cuando el suelo este lo suficientemente seco"
     ],
     "correctIndex": 1,
-    "explain": "No se debe tocar una antena en transmisión: tensiones RF y corrientes de antena pueden causar quemaduras. «No se debe tocar una antena trasmitiendo». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Con la antena transmitiendo existen tensiones y corrientes de RF elevadas que pueden producir quemaduras; por seguridad no se debe tocar mientras se emite. «No se debe tocar una antena trasmitiendo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4735,7 +4750,7 @@ export default [
       "Al oscilador local"
     ],
     "correctIndex": 2,
-    "explain": "La superheterodinia traslada la señal a frecuencia intermedia para filtrar y amplificar; facilita el control automático de ganancia. «A la salida del mezclador». Por eso la respuesta del enunciado es.",
+    "explain": "El mezclador traslada la señal a la frecuencia intermedia; la etapa de FI se conecta justo a su salida para amplificar y filtrar esa FI antes de la detección. «A la salida del mezclador».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4826,7 +4841,7 @@ export default [
       "Estabilidad"
     ],
     "correctIndex": 3,
-    "explain": "Una antena sintonizada resuena a la frecuencia de la señal y acopla mejor la energía radiada. «Estabilidad». Por eso la respuesta del enunciado es.",
+    "explain": "La estabilidad de un receptor se define como su capacidad de mantener la frecuencia sintonizada sin derivas con el paso del tiempo o los cambios de temperatura. «Estabilidad».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4886,7 +4901,7 @@ export default [
       "Emisor, colector y puerta"
     ],
     "correctIndex": 1,
-    "explain": "Los transistores son dispositivos de tres terminales para amplificar o conmutar. «Emisor, base y colector». Por eso la respuesta del enunciado es.",
+    "explain": "El transistor bipolar está formado por tres regiones semiconductoras, cada una con su terminal. Por eso sus tres patillas son «Emisor, base y colector».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4918,7 +4933,7 @@ export default [
       "Componentes de campo ajustados a impedancia nula"
     ],
     "correctIndex": 0,
-    "explain": "La geometría del sistema radiante y los radiales modifican la impedancia de entrada de la antena. «Interferencias». Por eso la respuesta del enunciado es.",
+    "explain": "La desadaptación provoca onda reflejada y ROE alta, además de pérdida de potencia útil. Por eso puede producir radiaciones no deseadas e «Interferencias».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4933,7 +4948,7 @@ export default [
       "Aisladores para corrientes inversas"
     ],
     "correctIndex": 2,
-    "explain": "Las trampas en un dipolo permiten resonar en varias bandas sin cambiar de antena físicamente. «Circuitos resonantes». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Las trampas de un dipolo multibanda son circuitos resonantes LC que, a su frecuencia, se comportan como un aislante y desconectan eléctricamente el resto de la antena. «Circuitos resonantes».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4993,7 +5008,7 @@ export default [
       "No almacena nada"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Carga eléctrica». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Un condensador acumula en sus armaduras cargas de signo opuesto y, con ellas, energía en el campo eléctrico del dieléctrico. Por eso lo que almacena es «Carga eléctrica».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5098,7 +5113,7 @@ export default [
       "La ganancia de modulación"
     ],
     "correctIndex": 2,
-    "explain": "En FM, el índice de modulación β = Δf_máx / f_mod. Con Δf = 25 kHz y f_mod = 10 kHz, β = 2,5. «La modulación de frecuencia». No confundir con el distractor del mismo bloque temático."
+    "explain": "El índice de modulación (β = desviación de frecuencia / frecuencia moduladora) cuantifica cuánto se desvía la portadora respecto a la moduladora, magnitud propia de la modulación de frecuencia. «La modulación de frecuencia»."
   },
   {
     "id": "ure-p1-q74",
@@ -5112,7 +5127,7 @@ export default [
       "No es necesario conectarlo a tierra"
     ],
     "correctIndex": 2,
-    "explain": "La protección y la toma de tierra siguen reglas de seguridad eléctrica; no confundas con fusibles de línea. «Proteger al operador de descargas». Por eso la respuesta del enunciado es.",
+    "explain": "La toma de tierra deriva hacia el suelo las corrientes de fuga y las descargas, de modo que protege al operador frente a posibles descargas eléctricas. «Proteger al operador de descargas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5127,7 +5142,7 @@ export default [
       "Elementos que viven a costa de los demás"
     ],
     "correctIndex": 1,
-    "explain": "Antenas directivas concentran radiación; Yagi usa reflector y directores, parabólicas enfocan por apertura. «Componentes de la antena no activos». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Los elementos parásitos de una Yagi no están conectados al alimentador (no son activos): reradian la señal para dirigir y reforzar la radiación. «Componentes de la antena no activos».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5142,7 +5157,7 @@ export default [
       "La orientación del campo magnético transmitido"
     ],
     "correctIndex": 1,
-    "explain": "La polarización de la antena debe alinearse con la de la onda para máxima transferencia. «La orientación del campo eléctrico transmitido». No confundir con el distractor del mismo bloque temático.",
+    "explain": "La polarización de una antena es la orientación del campo eléctrico que radia (vertical, horizontal…); conviene que coincida con la de la antena receptora para captar bien. «La orientación del campo eléctrico transmitido».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5187,7 +5202,7 @@ export default [
       "Los equipos modernos nunca producen armónicos"
     ],
     "correctIndex": 1,
-    "explain": "La etapa de potencia amplifica antes de la antena; filtros de salida reducen armónicos. Clase C es eficiente pero no lineal para AM. «La frecuencia de los de segundo orden es doble de la fundamental».",
+    "explain": "El armónico de segundo orden tiene frecuencia doble de la fundamental (2·f); el de tercer orden el triple, y así sucesivamente. «La frecuencia de los de segundo orden es doble de la fundamental».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5309,7 +5324,7 @@ export default [
       "1.100 kHz y 650 kHz"
     ],
     "correctIndex": 0,
-    "explain": "La señal de alarma en radiotelefonía usa dos tonos alternos; en el banco son aproximadamente 2.220 Hz y 1.300 Hz. «2.220 Hz y 1.300 Hz». Por eso la respuesta del enunciado es.",
+    "explain": "La señal de alarma radiotelefónica está pensada para activar alarmas automáticas en los receptores. Por eso emplea dos tonos sinusoidales alternados de aproximadamente «2.220 Hz y 1.300 Hz».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5519,7 +5534,7 @@ export default [
       "En dúplex"
     ],
     "correctIndex": 1,
-    "explain": "Emisiones fuera de banda son componentes espectrales adyacentes no deseadas (armónicos, splatter). «Fuera de banda». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Estas componentes nacen del propio proceso de modulación y caen justo al lado de la anchura de banda necesaria. Por eso se llaman emisiones «Fuera de banda», distintas de los armónicos.",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5669,7 +5684,7 @@ export default [
       "Sancionable según la reglamentación vigente"
     ],
     "correctIndex": 0,
-    "explain": "En fonía se usa «cambio» al ceder el turno de palabra; es buena práctica operativa. «Recomendable». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Decir «cambio» al ceder el turno avisa al corresponsal de que ya puede hablar. Por eso, como buena práctica operativa en fonía, su uso es «Recomendable».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5924,7 +5939,7 @@ export default [
       "QSA"
     ],
     "correctIndex": 0,
-    "explain": "QRT indica cese de transmisión; QRP es baja potencia y QSA la fuerza de la señal recibida. «QRT». No confundir con el distractor del mismo bloque temático.",
+    "explain": "En el código Q, QRT significa «cese la transmisión»; conviene no confundirlo con QRP (reducir potencia) ni con QSA (intensidad de la señal recibida). «QRT».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5984,7 +5999,7 @@ export default [
       "Nunca se usan en VHF"
     ],
     "correctIndex": 2,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Permiten contactar con otros operadores que utilizan el mismo modo». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Las frecuencias de llamada son puntos comunes donde los operadores de un mismo modo se buscan para establecer contacto, y después pasan a otra frecuencia para el QSO. «Permiten contactar con otros operadores que utilizan el mismo modo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6254,7 +6269,7 @@ export default [
       "Radiocomunicación"
     ],
     "correctIndex": 3,
-    "explain": "Radiocomunicación es toda telecomunicación realizada mediante ondas radioeléctricas. «Radiocomunicación». No confundir con el distractor del mismo bloque temático.",
+    "explain": "Se define como radiocomunicación toda telecomunicación realizada por medio de ondas radioeléctricas, frente a otras telecomunicaciones por cable o fibra. «Radiocomunicación».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6313,7 +6328,7 @@ export default [
       "AR"
     ],
     "correctIndex": 3,
-    "explain": "En telegrafía, AR (end of message) marca el fin del mensaje. VA (end of work) indica fin de la comunicación. «AR». No confundir con el distractor del mismo bloque temático.",
+    "explain": "En telegrafía, la señal de procedimiento AR (·−·−·) se transmite para marcar el fin del mensaje enviado. «AR».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7929,7 +7944,7 @@ export default [
       "QRP"
     ],
     "correctIndex": 0,
-    "explain": "QRO solicita aumentar potencia de transmisión; QRP pediría reducirla. «QRO». No confundir con el distractor del mismo bloque temático.",
+    "explain": "En el código Q, QRP pide reducir la potencia de transmisión. Por eso, para pedir lo contrario, aumentar la potencia, la abreviatura correcta es «QRO».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {

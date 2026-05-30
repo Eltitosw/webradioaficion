@@ -19,6 +19,35 @@ export const PADDING_REMNANT_FIXES = {
     "En un transformador reductor el secundario tiene menos espiras que el primario (V2 < V1 en ideal). El núcleo ferromagnético mejora el acoplamiento magnético. «El secundario tenga menos espiras que el primario».",
 };
 
+/**
+ * Preguntas a las que se pegó una explicación equivocada (intro de etapa de
+ * potencia / Clase C) que no corresponde con el enunciado. Reescritas a mano.
+ */
+export const MISASSIGNED_EXPLAIN_FIXES = {
+  "fedi-ag-007":
+    "El ancho de banda necesario es el mínimo imprescindible para transmitir la información con la calidad requerida; usar más desperdicia espectro e interfiere a otros usuarios. «La anchura de banda estrictamente suficiente para transmitir la información en condiciones adecuadas».",
+  "ure-p1-q136":
+    "En VHF la propagación es básicamente de visión directa (línea de vista), por lo que los enlaces son de alcance local o regional, no DX intercontinental como en HF. «Para distancias cortas».",
+  "ure-p1-q147":
+    "El reglamento exige que las radiaciones espurias por debajo de 30 MHz estén atenuadas al menos 40 dB respecto a la potencia de la frecuencia fundamental. «Para frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB».",
+  "ure-p1-q186":
+    "El rendimiento de un transmisor es la relación entre la potencia entregada al sistema radiante y la potencia consumida de la fuente; mide la eficiencia, no la potencia reflejada. «La relación entre la potencia entregada al sistema radiante y la consumida».",
+  "ure-p1-q191":
+    "La anchura de banda necesaria es la justa para transmitir a la velocidad y calidad requeridas; ni la máxima permitida ni la que contiene el 99% de la potencia. «Es la suficiente para permitir la transmisión a la velocidad y calidad requeridas».",
+  "ure-p1-q197":
+    "Un voltímetro de RF mide tensión, no frecuencia; para medir la frecuencia se emplea un frecuencímetro, un osciloscopio o un analizador de espectro. «Un voltímetro de radiofrecuencia».",
+  "ure-p1-q198":
+    "La potencia de pico de envolvente (PEP) en AM es siempre superior a la potencia media, porque la envolvente alcanza valores instantáneos mayores que el promedio. «Superior a la potencia media del transmisor».",
+  "ure-p1-q199":
+    "Los armónicos son múltiplos enteros de la frecuencia fundamental (2f, 3f, …); aparecen en circuitos no lineales y deben filtrarse para no emitir espurias. «Múltiplos de la frecuencia fundamental».",
+  "ure-p1-q2":
+    "El filtro de salida del transmisor atenúa armónicos y emisiones fuera de banda y deja pasar la frecuencia útil: elimina las frecuencias no deseadas antes de la antena. «Elimina las frecuencias no deseadas».",
+  "ure-p1-q433":
+    "Un transmisor de RF radia su energía en forma de onda electromagnética a través de la antena; no es emisión térmica ni rayos gamma. «Radiación electromagnética».",
+  "ure-p1-q79":
+    "El armónico de segundo orden tiene frecuencia doble de la fundamental (2·f); el de tercer orden el triple, y así sucesivamente. «La frecuencia de los de segundo orden es doble de la fundamental».",
+};
+
 export const TEMPLATE_EXPLAIN_FIXES = {
   "quijotes-84-1843":
     "El prefijo EA5 corresponde a radioaficionados con distrito de residencia en Comunidad Valenciana; el distintivo EA5EYR encaja con Valencia. No confundir EA6 (Baleares) ni EA7 (Aragón). «Valencia.».",
