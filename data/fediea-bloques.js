@@ -5474,7 +5474,7 @@ export default [
       "A su densidad y a su resistencia",
       "A su longitud y a su resistividad",
       "A su resistividad y a su sección",
-      "",
+      "A su sección y a su temperatura",
     ],
     correctIndex: 1,
     explain: "Práctica histórica (Fuente: FEDI-EA bloque d). Puede contener erratas u obsolescencia; contrastar con BOE y convocatoria vigente.",

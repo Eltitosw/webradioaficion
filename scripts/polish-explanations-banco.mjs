@@ -15,6 +15,7 @@ import {
   TEMPLATE_EXPLAIN_FIXES,
 } from "../data/template-explain-fixes.mjs";
 import { TECNICA_EXPLAIN_REWRITES } from "../data/tecnica-explain-rewrites.mjs";
+import { NORMATIVA_EXPLAIN_REWRITES } from "../data/normativa-explain-rewrites.mjs";
 import { passesExamGradeExplain } from "../lib/explain-exam-grade.mjs";
 import {
   isFigureTemplateExplain,
@@ -40,6 +41,7 @@ const fixIds = new Set([
   ...Object.keys(PADDING_REMNANT_FIXES),
   ...Object.keys(MISASSIGNED_EXPLAIN_FIXES),
   ...Object.keys(TECNICA_EXPLAIN_REWRITES),
+  ...Object.keys(NORMATIVA_EXPLAIN_REWRITES),
 ]);
 
 let mergedFixes = 0;
@@ -49,6 +51,7 @@ for (const [id, text] of Object.entries({
   ...PADDING_REMNANT_FIXES,
   ...MISASSIGNED_EXPLAIN_FIXES,
   ...TECNICA_EXPLAIN_REWRITES,
+  ...NORMATIVA_EXPLAIN_REWRITES,
 })) {
   nextCurated[id] = text;
   mergedFixes += 1;

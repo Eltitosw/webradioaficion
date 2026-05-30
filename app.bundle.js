@@ -1980,7 +1980,7 @@ var questions_banco_default = [
       "Est\xE1 prohibido"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSe utiliza para el deletreo de palabras\xBB."
+    "explain": "El alfabeto fon\xE9tico internacional asigna una palabra a cada letra para que el deletreo sea inequ\xEDvoco en fon\xEDa. Por eso \xABSe utiliza para el deletreo de palabras\xBB."
   },
   {
     "id": "fedi-ah-039",
@@ -1994,7 +1994,7 @@ var questions_banco_default = [
       "Granada"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABGuip\xFAzcoa\xBB."
+    "explain": "Los indicativos espa\xF1oles incluyen una cifra de distrito seg\xFAn la provincia. Entre las opciones, la provincia adscrita al distrito 7 es \xABGuip\xFAzcoa\xBB."
   },
   {
     "id": "fedi-ah-040",
@@ -2008,7 +2008,7 @@ var questions_banco_default = [
       "100 W"
     ],
     "correctIndex": 2,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB50 W\xBB."
+    "explain": "Seg\xFAn el art. 25.h del Reglamento IET/1311/2013, salvo causas justificadas, las estaciones desatendidas en VHF y UHF fuera del casco urbano se limitan en potencia. Por eso el m\xE1ximo es \xAB50 W\xBB."
   },
   {
     "id": "fedi-ah-041",
@@ -2148,7 +2148,7 @@ var questions_banco_default = [
       "Cualquier comunicaci\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xABComunicaciones relacionadas con el servicio de aficionados\xBB. (BOE-A-2013-7624)."
+    "explain": "El servicio de aficionados es de instrucci\xF3n individual, intercomunicaci\xF3n y estudios t\xE9cnicos sin fin lucrativo; por eso las transmisiones deben limitarse a \xABComunicaciones relacionadas con el servicio de aficionados\xBB."
   },
   {
     "id": "fedi-ah-055",
@@ -2337,7 +2337,7 @@ var questions_banco_default = [
       "Un acuerdo de club local"
     ],
     "correctIndex": 0,
-    "explain": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
+    "explain": "En Espa\xF1a el reglamento del servicio de aficionados se aprueba por norma ministerial (la orden IET/1311/2013 y sus modificaciones). Por eso se aprueba mediante \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacci\xF3n vigente en BOE."
   },
   {
@@ -2802,7 +2802,7 @@ var questions_banco_default = [
       "Se cierra la estaci\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "QRX indica que la estaci\xF3n volver\xE1 a llamar o est\xE1 esperando. QRL significa \xABestoy ocupado\xBB. \xABSe volver\xE1 a llamar m\xE1s tarde\xBB.",
+    "explain": "En el c\xF3digo Q, QRX significa que la estaci\xF3n cesa de momento y volver\xE1 a llamar m\xE1s tarde. Por eso QRX indica que \xABSe volver\xE1 a llamar m\xE1s tarde\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 y buenas pr\xE1cticas operativas (IARU / URE)."
   },
   {
@@ -3182,8 +3182,8 @@ var questions_banco_default = [
   },
   {
     "id": "quijotes-84-1810",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Como norma general, y salvo circunstancias especiales debidamente motivadas, las estaciones autom\xE1ticas desatendidas en las bandas de VHF y UHF fuera del casco urbano, emitir\xE1n una potencia de salida m\xE1xima de:",
     "options": [
       "10 W.",
@@ -3236,7 +3236,7 @@ var questions_banco_default = [
       "Cualquier comunicaci\xF3n."
     ],
     "correctIndex": 1,
-    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xABComunicaciones relacionadas con el Servicio de Aficionados.\xBB. (BOE-A-2013-7624).",
+    "explain": "El servicio de aficionados solo admite tr\xE1fico propio de la radioafici\xF3n, sin fines comerciales ni ajenos. Por eso las transmisiones deben limitarse a \xABComunicaciones relacionadas con el Servicio de Aficionados\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3266,7 +3266,7 @@ var questions_banco_default = [
       "Seguir emitiendo."
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSuspender de inmediato las emisiones.\xBB.",
+    "explain": "Ante interferencias perjudiciales a otros servicios, en especial a la recepci\xF3n de radiodifusi\xF3n o televisi\xF3n, el reglamento obliga a cesar la emisi\xF3n hasta resolver la causa; la responsabilidad de no perturbar recae en el radioaficionado. Por eso deber\xE1 \xABSuspender de inmediato las emisiones\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3343,7 +3343,7 @@ var questions_banco_default = [
       "Por todo radioaficionado que opera en Espa\xF1a."
     ],
     "correctIndex": 3,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPor todo radioaficionado que opera en Espa\xF1a.\xBB.",
+    "explain": "Los planes de banda de la IARU son recomendaciones voluntarias de autoorganizaci\xF3n del espectro; en la pr\xE1ctica deben seguirse para convivir. Por eso han de tenerse en cuenta \xABPor todo radioaficionado que opera en Espa\xF1a\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3986,11 +3986,7 @@ var questions_banco_default = [
       "14.4 MHz",
       "1 MHz",
       "200 MHz",
-      "10 MHz",
-      "",
-      "",
-      "",
-      ""
+      "10 MHz"
     ],
     "correctIndex": 3,
     "explain": "Un mezclador genera a su salida la suma y la diferencia de las frecuencias de entrada: 14 + 4 = 18 MHz y 14 \u2212 4 = 10 MHz. De las opciones, la v\xE1lida es la diferencia: \xAB10 MHz\xBB.",
@@ -4694,11 +4690,7 @@ var questions_banco_default = [
       "Un buen conductor",
       "Semiconductor",
       "Un aislante",
-      "Un condensador con polaridad",
-      "",
-      "",
-      "",
-      ""
+      "Un condensador con polaridad"
     ],
     "correctIndex": 2,
     "explain": "Un diel\xE9ctrico no conduce la corriente pero s\xED puede polarizarse, y se usa entre las armaduras de los condensadores. Por eso, en esencia, es \xABUn aislante\xBB.",
@@ -5701,11 +5693,7 @@ var questions_banco_default = [
       "Su resistencia est\xE1 en funci\xF3n de la corriente que la atraviesa",
       "Su valor aumenta con la temperatura",
       "Se usa como estabilizadora de corriente",
-      "Su valor disminuye al aumentar la temperatura",
-      "",
-      "",
-      "",
-      ""
+      "Su valor disminuye al aumentar la temperatura"
     ],
     "correctIndex": 1,
     "explain": "PTC: la resistencia sube con la temperatura; se usa en protecci\xF3n t\xE9rmica. NTC baja con el calor. \xABSu valor aumenta con la temperatura\xBB.",
@@ -6090,11 +6078,7 @@ var questions_banco_default = [
       "Resistencia",
       "Energ\xEDa",
       "Ancho de banda",
-      "Potencia",
-      "",
-      "",
-      "",
-      ""
+      "Potencia"
     ],
     "correctIndex": 3,
     "explain": "El dBW es una medida logar\xEDtmica de potencia referida a 1 vatio; por tanto, la magnitud que expresa es la potencia. \xABPotencia\xBB.",
@@ -6779,8 +6763,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q101",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "La se\xF1al de alarma en radiotelefon\xEDa consiste en dos se\xF1ales de audiofrecuencia, aproximadamente sinusoidales, transmitidas alternativamente. \xBFQu\xE9 frecuencias son?:",
     "options": [
       "2.220 Hz y 1.300 Hz",
@@ -6834,7 +6818,7 @@ var questions_banco_default = [
       "Permite operar permanentemente en cualquier pa\xEDs CEPT"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABPermite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pa\xEDs visitado que se haya adherido a la Recomendaci\xF3n T/R61-01 de la CEPT\xBB.",
+    "explain": "La Recomendaci\xF3n CEPT T/R 61-01 permite operar temporalmente, sin tr\xE1mite adicional, en los pa\xEDses que la han adoptado, usando all\xED las bandas atribuidas al Servicio de Aficionados. Por eso la licencia CEPT \xABPermite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pa\xEDs visitado que se haya adherido a la Recomendaci\xF3n T/R61-01 de la CEPT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6854,8 +6838,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q106",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "En el tejado de un edificio donde est\xE1 instalada una antena de radioaficionado autorizada:",
     "options": [
       "Se podr\xE1n realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalaci\xF3n de la antena",
@@ -6884,8 +6868,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q108",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "En la instalaci\xF3n de una antena de radioaficionado y sus elementos anejos:",
     "options": [
       "No es necesario tener en cuenta la proximidad de l\xEDneas el\xE9ctricas a\xE9reas",
@@ -6969,7 +6953,7 @@ var questions_banco_default = [
       "La licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLa licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n\xBB.",
+    "explain": "En el pa\xEDs visitado solo puedes emplear las bandas atribuidas al aficionado en ese pa\xEDs, no las autorizadas en el tuyo. Por eso, entre las condiciones de uso de la licencia CEPT, la afirmaci\xF3n falsa es \xABLa licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7014,7 +6998,7 @@ var questions_banco_default = [
       "Pan"
     ],
     "correctIndex": 2,
-    "explain": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+    "explain": "En radiotelefon\xEDa la se\xF1al internacional de socorro es la palabra Mayday, reservada a peligro grave e inminente. Por eso la se\xF1al es \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7029,7 +7013,7 @@ var questions_banco_default = [
       "Tango, Oslo, Pepe"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABTango, Oscar, Papa\xBB.",
+    "explain": "Con el alfabeto ICAO, T\u2192Tango, O\u2192Oscar y P\u2192Papa. Por eso TOP se deletrea \xABTango, Oscar, Papa\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7059,7 +7043,7 @@ var questions_banco_default = [
       "\xDAnicamente pa\xEDses de la Comunidad Europea"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABTodos los pa\xEDses pertenezcan, o no, a la CEPT\xBB.",
+    "explain": "El certificado HAREC de la Recomendaci\xF3n T/R 61-02 est\xE1 abierto tambi\xE9n a administraciones que la adoptan aunque no sean miembros de la CEPT, para reconocer ex\xE1menes internacionalmente. Por eso pueden participar \xABTodos los pa\xEDses pertenezcan, o no, a la CEPT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7074,7 +7058,7 @@ var questions_banco_default = [
       "A cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional"
     ],
     "correctIndex": 3,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABA cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional\xBB.",
+    "explain": "Los sufijos de dos letras son m\xE1s cortos y escasos, por lo que se reservan a operadores con experiencia acreditada. Por eso pueden asignarse \xABA cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7089,7 +7073,7 @@ var questions_banco_default = [
       'La palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)'
     ],
     "correctIndex": 3,
-    "explain": 'Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABLa palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)\xBB.',
+    "explain": 'La llamada de socorro en fon\xEDa repite Mayday tres veces, seguido de \xABaqu\xED\xBB o \xABde\xBB y del distintivo de la estaci\xF3n en peligro. Por eso se compone de \xABLa palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)\xBB.',
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7104,7 +7088,7 @@ var questions_banco_default = [
       "No tienen prefijo"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABED\xBB.",
+    "explain": "El prefijo ED se reserva en Espa\xF1a a estaciones autom\xE1ticas y desatendidas. Por eso estas estaciones utilizar\xE1n el prefijo \xABED\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7139,8 +7123,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q160",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": 'Utilizar la palabra "cambio" al finalizar una transmisi\xF3n en fon\xEDa es:',
     "options": [
       "Recomendable",
@@ -7194,7 +7178,7 @@ var questions_banco_default = [
       "Vid"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABVictor\xBB.",
+    "explain": "El alfabeto fon\xE9tico internacional asigna a cada letra una palabra fija para deletrear sin error en fon\xEDa. A la letra V le corresponde la palabra \xABVictor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7209,7 +7193,7 @@ var questions_banco_default = [
       "Toledo, Teruel, Tarragona, Santa Cruz de Tenerife"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABC\xE1ceres, C\xE1diz, Cuenca, Ciudad Real\xBB.",
+    "explain": "Hay que identificar qu\xE9 grupo re\xFAne m\xE1s provincias del distrito 4. La proposici\xF3n correcta es \xABC\xE1ceres, C\xE1diz, Cuenca, Ciudad Real\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7224,7 +7208,7 @@ var questions_banco_default = [
       "Siempre que el pa\xEDs de origen del radioaficionado aplique la Recomendaci\xF3n T/R 5000"
     ],
     "correctIndex": 2,
-    "explain": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABCuando exista Acuerdo o Convenio de reciprocidad en la materia con el pa\xEDs de origen del radioaficionado\xBB.",
+    "explain": "El acceso de extranjeros residentes a la autorizaci\xF3n espa\xF1ola se condiciona a la reciprocidad con su pa\xEDs de origen. Por eso podr\xE1n ser titulares \xABCuando exista Acuerdo o Convenio de reciprocidad en la materia con el pa\xEDs de origen del radioaficionado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7239,7 +7223,7 @@ var questions_banco_default = [
       "Para uso temporal en eventos de car\xE1cter auton\xF3mico o local"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABCon motivos de actos que sean inaugurados o visitados por Su Majestad el Rey\xBB.",
+    "explain": "La cifra 0 en el distintivo es excepcional y se reserva a actos de especial relevancia institucional. Por eso solo se autoriza \xABCon motivos de actos que sean inaugurados o visitados por Su Majestad el Rey\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7254,7 +7238,7 @@ var questions_banco_default = [
       "Autoridad que expide la licencia"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABFecha de superaci\xF3n del examen\xBB.",
+    "explain": "La licencia CEPT debe llevar datos de identificaci\xF3n, indicativo y referencia a la T/R 61-01, pero no la fecha en que se aprob\xF3 el examen, que es un dato administrativo previo. Por eso no es requisito que conste la \xABFecha de superaci\xF3n del examen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7319,8 +7303,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q174",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Los soportes de una antena de radioaficionado:",
     "options": [
       "Se podr\xE1n fijar a los anclajes de un pararrayos",
@@ -7344,7 +7328,7 @@ var questions_banco_default = [
       "Estaci\xF3n repetidora de gran alcance"
     ],
     "correctIndex": 0,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABEstaci\xF3n fija de aficionado que puede ser accionada a distancia\xBB.",
+    "explain": "Una estaci\xF3n fija remota es la que, estando en emplazamiento fijo, se gobierna a distancia por el operador. Por eso se define como \xABEstaci\xF3n fija de aficionado que puede ser accionada a distancia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7434,7 +7418,7 @@ var questions_banco_default = [
       "Eventos especiales de relevancia internacional"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABConcursos internacionales de alta competitividad\xBB.",
+    "explain": "El sufijo de una sola letra es el m\xE1s escaso del plan de indicativos, por lo que se limita a eventos de m\xE1xima relevancia. Por eso se reserva para \xABConcursos internacionales de alta competitividad\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7449,13 +7433,13 @@ var questions_banco_default = [
       "No hay planes de banda en la Regi\xF3n 3"
     ],
     "correctIndex": 0,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPueden ser distintos en cada Regi\xF3n\xBB.",
+    "explain": "El mundo se divide en tres Regiones de la UIT con atribuciones distintas, as\xED que los planes IARU se adaptan a cada una. Por eso \xABPueden ser distintos en cada Regi\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p2-q211",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "Las frecuencias de llamada:",
     "options": [
       "S\xF3lo se usan en HF",
@@ -7494,7 +7478,7 @@ var questions_banco_default = [
       "Mike, Alfa, Romeo"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMike, Alfa, Romeo\xBB.",
+    "explain": "Con el alfabeto ICAO, M\u2192Mike, A\u2192Alfa y R\u2192Romeo. Por eso MAR se deletrea \xABMike, Alfa, Romeo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7559,8 +7543,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q222",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Seg\xFAn la legislaci\xF3n de Telecomunicaciones, en el caso de desmontar una instalaci\xF3n de antenas por obras en la comunidad, cuando estas hayan terminado:",
     "options": [
       "Tendr\xE1 que presentar nueva memoria",
@@ -7599,7 +7583,7 @@ var questions_banco_default = [
       "Golf, oscar, lima, foxtrot"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABGolf, oscar, lima, foxtrot\xBB.",
+    "explain": "Con el alfabeto ICAO, G\u2192Golf, O\u2192Oscar, L\u2192Lima y F\u2192Foxtrot. Por eso GOLF se deletrea \xABGolf, oscar, lima, foxtrot\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7659,7 +7643,7 @@ var questions_banco_default = [
       "Le permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLe permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n\xBB.",
+    "explain": "Operando fuera de Espa\xF1a con licencia CEPT te ajustas a las bandas y condiciones del pa\xEDs visitado, no a las espa\xF1olas. Por eso, la licencia CEPT de un radioaficionado espa\xF1ol \xABLe permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7674,7 +7658,7 @@ var questions_banco_default = [
       "Presentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen"
     ],
     "correctIndex": 3,
-    "explain": "Con licencia CEPT u homologaci\xF3n, en el pa\xEDs visitado debes poder acreditar tu autorizaci\xF3n si la administraci\xF3n lo solicita. \xABPresentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen\xBB.",
+    "explain": "En el pa\xEDs visitado debes poder acreditar tu habilitaci\xF3n ante la autoridad que la requiera. Por eso est\xE1s obligado a \xABPresentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7689,7 +7673,7 @@ var questions_banco_default = [
       "Cuando la instalaci\xF3n de la antena sea defectuosa"
     ],
     "correctIndex": 2,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABEn cualquier momento a petici\xF3n del titular\xBB.",
+    "explain": "La autorizaci\xF3n es un derecho del titular, que puede renunciar a ella cuando quiera. Por eso la cancelaci\xF3n se efect\xFAa \xABEn cualquier momento a petici\xF3n del titular\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7704,7 +7688,7 @@ var questions_banco_default = [
       "Auxilio"
     ],
     "correctIndex": 2,
-    "explain": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+    "explain": "Para indicar peligro grave e inminente en fon\xEDa se emite la palabra Mayday. Por eso emitiremos \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7723,21 +7707,6 @@ var questions_banco_default = [
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q237",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Toda telecomunicaci\xF3n transmitida por medio de ondas radioel\xE9ctricas recibe el nombre de:",
-    "options": [
-      "Espectro radioel\xE9ctrico",
-      "Campo el\xE9ctrico",
-      "Radioafici\xF3n",
-      "Radiocomunicaci\xF3n"
-    ],
-    "correctIndex": 3,
-    "explain": "Se define como radiocomunicaci\xF3n toda telecomunicaci\xF3n realizada por medio de ondas radioel\xE9ctricas, frente a otras telecomunicaciones por cable o fibra. \xABRadiocomunicaci\xF3n\xBB.",
-    "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
     "id": "ure-p2-q238",
     "part": 2,
     "topicId": "marco-normativo",
@@ -7749,7 +7718,7 @@ var questions_banco_default = [
       "35 W"
     ],
     "correctIndex": 1,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB25 W\xBB."
+    "explain": "El Reglamento limita la potencia de salida de las estaciones desatendidas en VHF y UHF fuera del casco urbano para reducir interferencias. Por eso, como norma general, ser\xE1 de \xAB50 W\xBB."
   },
   {
     "id": "ure-p2-q269",
@@ -7763,7 +7732,7 @@ var questions_banco_default = [
       "Fox, India, Nada"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABFoxtrot, India, November\xBB.",
+    "explain": "Con el alfabeto ICAO, F\u2192Foxtrot, I\u2192India y N\u2192November. Por eso FIN se deletrea \xABFoxtrot, India, November\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7783,8 +7752,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q270",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "En telegraf\xEDa, la abreviatura de procedimiento usada para finalizar una transmisi\xF3n es:",
     "options": [
       "AS",
@@ -7808,7 +7777,7 @@ var questions_banco_default = [
       "MAYDAY (una vez), la palabra AQU\xCD o DE y el distintivo de llamada ( tres veces)"
     ],
     "correctIndex": 0,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMAYDAY (tres veces), la palabra AQU\xCD o DE y el distintivo de llamada (tres veces)\xBB.",
+    "explain": "La se\xF1al de socorro en fon\xEDa es Mayday (tres veces), la palabra \xABaqu\xED\xBB o \xABde\xBB y el distintivo (tres veces). Por eso se compone de \xABMAYDAY (tres veces), la palabra AQU\xCD o DE y el distintivo de llamada (tres veces)\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7823,7 +7792,7 @@ var questions_banco_default = [
       "En Espa\xF1a se deben aplicar los planes de banda de la IARU para la Regi\xF3n 2"
     ],
     "correctIndex": 1,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
+    "explain": "Los planes IARU no son ley, sino una gu\xEDa consensuada para ordenar modos y segmentos en cada banda. Por eso \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7928,7 +7897,7 @@ var questions_banco_default = [
       "Nunca"
     ],
     "correctIndex": 2,
-    "explain": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABSean titulares del Certificado HAREC\xBB.",
+    "explain": "Para obtener autorizaci\xF3n en Espa\xF1a, el extranjero residente debe acreditar su capacitaci\xF3n con el certificado HAREC. Por eso podr\xE1n obtenerla cuando \xABSean titulares del Certificado HAREC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7958,7 +7927,7 @@ var questions_banco_default = [
       "QRS"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABEEE\xBB.",
+    "explain": "El distintivo se forma con un prefijo (EA, EB, EC\u2026) y un sufijo de letras; hay que reconocer cu\xE1l encaja en el plan de distintivos. Entre las opciones, el sufijo asignable es \xABEEE\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7973,7 +7942,7 @@ var questions_banco_default = [
       "Certificado de empadronamiento"
     ],
     "correctIndex": 3,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABCertificado de empadronamiento\xBB.",
+    "explain": "La memoria descriptiva detalla emplazamiento, equipos y sistema radiante, pero no exige acreditar el padr\xF3n. Por eso no es preciso incluir el \xABCertificado de empadronamiento\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8062,7 +8031,7 @@ var questions_banco_default = [
       "No es obligatorio disponer de estaci\xF3n fija"
     ],
     "correctIndex": 3,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABNo es obligatorio disponer de estaci\xF3n fija\xBB.",
+    "explain": "El radioaficionado puede operar solo en portable o m\xF3vil; no se le impone tener instalaci\xF3n fija. Por eso \xABNo es obligatorio disponer de estaci\xF3n fija\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8107,7 +8076,7 @@ var questions_banco_default = [
       "Se compromete a emitir \xFAnicamente en VHF"
     ],
     "correctIndex": 0,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABCroacia aplica la Recomendaci\xF3n T/R 61-02 de la CEPT\xBB.",
+    "explain": "El reconocimiento mutuo del HAREC exige que el pa\xEDs de destino aplique la Recomendaci\xF3n T/R 61-02 de la CEPT. Por eso podr\xE1 obtener licencia en Croacia si \xABCroacia aplica la Recomendaci\xF3n T/R 61-02 de la CEPT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8137,7 +8106,7 @@ var questions_banco_default = [
       "Ungir"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABUniform\xBB.",
+    "explain": "El alfabeto fon\xE9tico internacional asigna a cada letra una palabra fija para deletrear sin error en fon\xEDa. A la letra U le corresponde la palabra \xABUniform\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8167,7 +8136,7 @@ var questions_banco_default = [
       "\xC1vila"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABAlbacete\xBB.",
+    "explain": "El indicativo lleva una cifra que identifica el distrito geogr\xE1fico, y cada provincia est\xE1 adscrita a uno de ellos. Entre las opciones, la provincia que pertenece al distrito 5 es \xABAlbacete\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8197,7 +8166,7 @@ var questions_banco_default = [
       "Bravo, Ortega, Julio"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABBravo, Oscar, Juliett\xBB.",
+    "explain": "Con el alfabeto ICAO, B\u2192Bravo, O\u2192Oscar y J\u2192Juliett. Por eso BOJ se deletrea \xABBravo, Oscar, Juliett\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8227,7 +8196,7 @@ var questions_banco_default = [
       "QSW"
     ],
     "correctIndex": 1,
-    "explain": "QRX indica que la estaci\xF3n volver\xE1 a llamar o est\xE1 esperando. QRL significa \xABestoy ocupado\xBB. \xABQRX\xBB.",
+    "explain": "La abreviatura que anuncia que el operador llamar\xE1 de nuevo m\xE1s tarde es QRX. Por eso el grupo correcto es \xABQRX\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8257,7 +8226,7 @@ var questions_banco_default = [
       "Por todo radioaficionado que opere en Espa\xF1a"
     ],
     "correctIndex": 3,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPor todo radioaficionado que opere en Espa\xF1a\xBB.",
+    "explain": "Aunque son recomendaciones, los planes IARU de la Regi\xF3n 1 ordenan la convivencia en el espectro y se siguen por consenso. Por eso han de tenerse en cuenta \xABPor todo radioaficionado que opere en Espa\xF1a\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8277,8 +8246,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q335",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "Comprobar si alguien est\xE1 utilizando una frecuencia, antes de iniciar una transmisi\xF3n en la misma, es:",
     "options": [
       "Muy perjudicial para el uso eficiente del espectro radioel\xE9ctrico",
@@ -8317,7 +8286,7 @@ var questions_banco_default = [
       "Usos temporales de relevancia internacional"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local\xBB.",
+    "explain": "El prefijo EG identifica usos temporales de relevancia regional, auton\xF3mica o local. Por eso el prefijo EG se relaciona con \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8377,7 +8346,7 @@ var questions_banco_default = [
       "Respetar las diferencias de atribuciones de frecuencias en los servicios de aficionados en las tres Regiones de la Uni\xF3n Internacional de Telecomunicaciones"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABNo respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci\xF3n vigente en el pa\xEDs de origen\xBB.",
+    "explain": "El titular de una licencia CEPT debe respetar el Reglamento de Radiocomunicaciones y la reglamentaci\xF3n vigente tanto en origen como en el pa\xEDs visitado. Por eso la afirmaci\xF3n falsa es la de \xABNo respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci\xF3n vigente en el pa\xEDs de origen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8591,8 +8560,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q37",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Para instalar una antena en un edificio en r\xE9gimen de propiedad horizontal:",
     "options": [
       "Se necesita autorizaci\xF3n expresa de la comunidad de propietarios",
@@ -8606,8 +8575,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q38",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Para la instalaci\xF3n de antenas de radioaficionados, es obligatorio tener un seguro que cubra:",
     "options": [
       "La responsabilidad civil del titular",
@@ -8691,7 +8660,7 @@ var questions_banco_default = [
       "Deben ser aprobados por la Direcci\xF3n General de Telecomunciaciones"
     ],
     "correctIndex": 1,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
+    "explain": "Los planes de banda son una referencia internacional consensuada, no una norma legal. Por eso \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8711,8 +8680,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q396",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Como norma general, la potencia de salida de los trasmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podr\xE1 exceder de:",
     "options": [
       "5 W",
@@ -8735,13 +8704,13 @@ var questions_banco_default = [
       "Documento que acredite estar inscrito en una asociaci\xF3n de Radioaficionado"
     ],
     "correctIndex": 0,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABSolicitud adjuntando una memoria descriptiva del conjunto de la instalaci\xF3n\xBB.",
+    "explain": "Para tramitar la licencia se acompa\xF1a una memoria que describe el conjunto de la instalaci\xF3n. Por eso es necesario presentar \xABSolicitud adjuntando una memoria descriptiva del conjunto de la instalaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p2-q398",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Las estaciones autom\xE1ticas desatendidas en la banda de HF tendr\xE1n una potencia de salida m\xE1xima de:",
     "options": [
       "25 W",
@@ -8825,7 +8794,7 @@ var questions_banco_default = [
       "Valencia, Valladolid, Vizcaya"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABAsturias, \xC1vila, Le\xF3n\xBB.",
+    "explain": "Hay que identificar el grupo con m\xE1s provincias del distrito 1 (norte y noroeste). La proposici\xF3n correcta es \xABAsturias, \xC1vila, Le\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8860,8 +8829,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q408",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Al instalar una antena de radioaficionado se tendr\xE1 en cuenta que:",
     "options": [
       "No se pueden situar en azoteas o lugares transitables",
@@ -8885,7 +8854,7 @@ var questions_banco_default = [
       "Realizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABRealizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01\xBB.",
+    "explain": "La habilitaci\xF3n temporal solo es v\xE1lida en pa\xEDses que han adoptado la T/R 61-01; sin esa adopci\xF3n no hay reconocimiento autom\xE1tico. Por eso, al visitar otro pa\xEDs, el titular podr\xE1 \xABRealizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8959,7 +8928,7 @@ var questions_banco_default = [
       "No especialmente significativos"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEspeciales de relevancia internacional\xBB.",
+    "explain": "Los sufijos cortos especiales como AO son escasos y muy visibles, por lo que se reservan a acontecimientos de gran proyecci\xF3n. Por eso el sufijo AO se otorga para eventos temporales \xABEspeciales de relevancia internacional\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8989,13 +8958,13 @@ var questions_banco_default = [
       "Charter, Inca , Delta"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABCharlie, India, Delta\xBB.",
+    "explain": "Con el alfabeto ICAO, C\u2192Charlie, I\u2192India y D\u2192Delta. Por eso CID se deletrea \xABCharlie, India, Delta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p2-q446",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Como norma general, la ganancia del sistema radiante de las estaciones desatendidas en las bandas de VHF y UHF, no ser\xE1 superior a:",
     "options": [
       "6 dB",
@@ -9049,7 +9018,7 @@ var questions_banco_default = [
       "No pueden ser reutilizados"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones\xBB.",
+    "explain": "Los sufijos de dos letras ya no son exclusivos de unos pocos: se conceden cumpliendo ciertos requisitos. Por eso los distintivos con sufijo de 2 letras \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9094,7 +9063,7 @@ var questions_banco_default = [
       "No tienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT"
     ],
     "correctIndex": 1,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABProporcionan informaci\xF3n sobre el modo recomendado de utilizaci\xF3n en cada banda de frecuencias\xBB.",
+    "explain": "Los planes IARU recomiendan qu\xE9 modo conviene en cada segmento (CW, fon\xEDa, datos\u2026) para evitar interferencias. Por eso \xABProporcionan informaci\xF3n sobre el modo recomendado de utilizaci\xF3n en cada banda de frecuencias\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9214,7 +9183,7 @@ var questions_banco_default = [
       "Exclusivamente, en las bandas atribuidas al servicio por Sat\xE9lite"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEn todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el pa\xEDs visitado\xBB.",
+    "explain": "Con licencia CEPT te rigen las atribuciones del pa\xEDs donde operas, no las de origen. Por eso se permite emitir \xABEn todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el pa\xEDs visitado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9264,8 +9233,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p2-q468",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "La Ley 19/1983, conocida como Ley de Antenas, regula:",
     "options": [
       "La obligaci\xF3n de comunicar la instalaci\xF3n de una antena a la Administraci\xF3n competente en espectro radioel\xE9ctrico",
@@ -9289,7 +9258,7 @@ var questions_banco_default = [
       "Se encuentra dentro de la clasificaci\xF3n de estaciones autom\xE1ticas desatendidas"
     ],
     "correctIndex": 1,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABPodr\xE1 ser utilizada con car\xE1cter temporal como portable\xBB.",
+    "explain": "Una estaci\xF3n fija puede trasladarse y usarse de forma ocasional como portable sin perder su condici\xF3n. Por eso una estaci\xF3n fija de radioaficionado \xABPodr\xE1 ser utilizada con car\xE1cter temporal como portable\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9304,7 +9273,7 @@ var questions_banco_default = [
       "Se asignar\xE1n para eventos especiales de relevancia internacional"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABMantendr\xE1n sin variaci\xF3n el resto del distintivo asignado con car\xE1cter permanente al radioaficionado\xBB.",
+    "explain": "Un prefijo temporal (ED, EE, EF) sustituye solo al prefijo del distintivo; el sufijo personal permanente se conserva para seguir identificando al operador. Por eso \xABMantendr\xE1n sin variaci\xF3n el resto del distintivo asignado con car\xE1cter permanente al radioaficionado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9349,7 +9318,7 @@ var questions_banco_default = [
       "\xDAnicamente en Europa"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEn cualquier pa\xEDs que haya adoptado la Recomendaci\xF3n T/R 61-01\xBB.",
+    "explain": "La validez de la licencia CEPT, tambi\xE9n para la operaci\xF3n m\xF3vil, depende de que el pa\xEDs de destino haya adoptado la Recomendaci\xF3n T/R 61-01. Por eso habilita \xABEn cualquier pa\xEDs que haya adoptado la Recomendaci\xF3n T/R 61-01\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9379,7 +9348,7 @@ var questions_banco_default = [
       "Six"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSeven\xBB.",
+    "explain": "Adem\xE1s de las letras, las cifras se transmiten con su palabra inglesa normalizada para evitar confusiones en fon\xEDa. El n\xFAmero 7 se deletrea como \xABSeven\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9439,7 +9408,7 @@ var questions_banco_default = [
       "Prev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos"
     ],
     "correctIndex": 3,
-    "explain": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABPrev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos\xBB.",
+    "explain": "El reglamento contempla que el car\xE1cter de uso especial de bandas o frecuencias pueda revisarse a trav\xE9s del CNAF. Por eso el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados \xABPrev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9469,7 +9438,7 @@ var questions_banco_default = [
       "Su titular tendr\xE1 que superar un examen especial"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABGoza de equiparaci\xF3n a la autorizaci\xF3n de aficionado nacional, en los t\xE9rminos recogidos en el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados\xBB.",
+    "explain": "El reglamento espa\xF1ol equipara la licencia CEPT extranjera a la autorizaci\xF3n nacional mientras se opera aqu\xED, sin tr\xE1mite a\xF1adido. Por eso toda licencia CEPT \xABGoza de equiparaci\xF3n a la autorizaci\xF3n de aficionado nacional, en los t\xE9rminos recogidos en el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9514,7 +9483,7 @@ var questions_banco_default = [
       "Tienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT"
     ],
     "correctIndex": 3,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABTienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT\xBB.",
+    "explain": "Los planes IARU se construyen respetando las atribuciones de bandas que fija el Reglamento de Radiocomunicaciones de la UIT. Por eso \xABTienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9604,7 +9573,7 @@ var questions_banco_default = [
       "MADRID, ECHO, ROMEO, OSCAR"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMIKE, ECHO, ROMEO, OSCAR\xBB.",
+    "explain": "Con el alfabeto ICAO, M\u2192Mike, E\u2192Echo, R\u2192Romeo y O\u2192Oscar. Por eso MERO se deletrea \xABMIKE, ECHO, ROMEO, OSCAR\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9634,7 +9603,7 @@ var questions_banco_default = [
       "En ning\xFAn caso, teniendo en cuenta que la autorizaci\xF3n de radioaficionado ya lleva asociado un distintivo de llamada"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos\xBB.",
+    "explain": "Los distintivos temporales se conceden para actividades concretas y limitadas en el tiempo, no para el uso ordinario. Por eso se puede solicitar uno \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9709,7 +9678,7 @@ var questions_banco_default = [
       "Sierra, Lima"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSierra, Lima\xBB.",
+    "explain": "En el alfabeto fon\xE9tico internacional, S\u2192Sierra y L\u2192Lima. Por eso a esas letras les corresponden \xABSierra, Lima\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9724,7 +9693,7 @@ var questions_banco_default = [
       "En ella ha de constar, entre otros datos, el distintivo de llamada y su periodo de validez"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLa utilizaci\xF3n a que habilita es de forma temporal\xBB.",
+    "explain": "La licencia CEPT del propio titular es su autorizaci\xF3n nacional, de car\xE1cter permanente; lo temporal es solo la operaci\xF3n en el pa\xEDs visitado. Por eso la afirmaci\xF3n falsa es \xABLa utilizaci\xF3n a que habilita es de forma temporal\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9739,7 +9708,7 @@ var questions_banco_default = [
       "Presentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades"
     ],
     "correctIndex": 3,
-    "explain": "Con licencia CEPT u homologaci\xF3n, en el pa\xEDs visitado debes poder acreditar tu autorizaci\xF3n si la administraci\xF3n lo solicita. \xABPresentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades\xBB.",
+    "explain": "Operando temporalmente en el extranjero debes llevar y mostrar tu autorizaci\xF3n si te la piden las autoridades. Por eso est\xE1s obligado a \xABPresentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9769,7 +9738,7 @@ var questions_banco_default = [
       "Murcia"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABMelilla\xBB.",
+    "explain": "Las ciudades aut\xF3nomas de Ceuta y Melilla tambi\xE9n tienen su cifra de distrito en el indicativo. Entre las opciones, la ciudad adscrita al distrito 9 es \xABMelilla\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9829,7 +9798,7 @@ var questions_banco_default = [
       "Romeo, Echo, Yuma"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABRomeo, Echo, Yankee\xBB.",
+    "explain": "Con el alfabeto ICAO, R\u2192Romeo, E\u2192Echo e Y\u2192Yankee. Por eso REY se deletrea \xABRomeo, Echo, Yankee\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9844,7 +9813,7 @@ var questions_banco_default = [
       "Se han suprimido los distritos"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xAB9 (nueve)\xBB.",
+    "explain": "Para los indicativos de llamada, el territorio espa\xF1ol se reparte en distritos numerados que se reflejan en la cifra del distintivo. El n\xFAmero total de distritos es \xAB9 (nueve)\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9874,7 +9843,7 @@ var questions_banco_default = [
       "Informar sobre la intensidad de la se\xF1al recibida"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABDeletrear el mensaje\xBB.",
+    "explain": "El alfabeto fon\xE9tico evita confusiones entre letras de sonido parecido al transmitir en fon\xEDa. Por eso sirve para \xABDeletrear el mensaje\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9925,7 +9894,7 @@ var questions_banco_default = [
 ];
 
 // data/questions-banco-estudio.js
-var BANCO_ESTUDIO_STATS = { "count": 587, "examSubset": 563, "studyOnlyAdded": 24, "paraphraseRemoved": 126, "withFigure": 30, "withPedagogicalExplain": 587 };
+var BANCO_ESTUDIO_STATS = { "count": 592, "examSubset": 562, "studyOnlyAdded": 30, "paraphraseRemoved": 120, "withFigure": 30, "withPedagogicalExplain": 592 };
 var questions_banco_estudio_default = [
   {
     "id": "fedi-ag-001",
@@ -10431,7 +10400,7 @@ var questions_banco_estudio_default = [
       "Est\xE1 prohibido"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABSe utiliza para el deletreo de palabras\xBB."
+    "explain": "El alfabeto fon\xE9tico internacional asigna una palabra a cada letra para que el deletreo sea inequ\xEDvoco en fon\xEDa. Por eso \xABSe utiliza para el deletreo de palabras\xBB."
   },
   {
     "id": "fedi-ah-039",
@@ -10445,7 +10414,7 @@ var questions_banco_estudio_default = [
       "Granada"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABGuip\xFAzcoa\xBB."
+    "explain": "Los indicativos espa\xF1oles incluyen una cifra de distrito seg\xFAn la provincia. Entre las opciones, la provincia adscrita al distrito 7 es \xABGuip\xFAzcoa\xBB."
   },
   {
     "id": "fedi-ah-040",
@@ -10459,7 +10428,7 @@ var questions_banco_estudio_default = [
       "100 W"
     ],
     "correctIndex": 2,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB50 W\xBB."
+    "explain": "Seg\xFAn el art. 25.h del Reglamento IET/1311/2013, salvo causas justificadas, las estaciones desatendidas en VHF y UHF fuera del casco urbano se limitan en potencia. Por eso el m\xE1ximo es \xAB50 W\xBB."
   },
   {
     "id": "fedi-ah-041",
@@ -10599,7 +10568,7 @@ var questions_banco_estudio_default = [
       "Cualquier comunicaci\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xABComunicaciones relacionadas con el servicio de aficionados\xBB. (BOE-A-2013-7624)."
+    "explain": "El servicio de aficionados es de instrucci\xF3n individual, intercomunicaci\xF3n y estudios t\xE9cnicos sin fin lucrativo; por eso las transmisiones deben limitarse a \xABComunicaciones relacionadas con el servicio de aficionados\xBB."
   },
   {
     "id": "fedi-ah-055",
@@ -10788,7 +10757,7 @@ var questions_banco_estudio_default = [
       "Un acuerdo de club local"
     ],
     "correctIndex": 0,
-    "explain": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
+    "explain": "En Espa\xF1a el reglamento del servicio de aficionados se aprueba por norma ministerial (la orden IET/1311/2013 y sus modificaciones). Por eso se aprueba mediante \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 (BOE-A-2013-7624); contrastar redacci\xF3n vigente en BOE."
   },
   {
@@ -11268,7 +11237,7 @@ var questions_banco_estudio_default = [
       "Se cierra la estaci\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "QRX indica que la estaci\xF3n volver\xE1 a llamar o est\xE1 esperando. QRL significa \xABestoy ocupado\xBB. \xABSe volver\xE1 a llamar m\xE1s tarde\xBB.",
+    "explain": "En el c\xF3digo Q, QRX significa que la estaci\xF3n cesa de momento y volver\xE1 a llamar m\xE1s tarde. Por eso QRX indica que \xABSe volver\xE1 a llamar m\xE1s tarde\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 Orden IET/1311/2013 y buenas pr\xE1cticas operativas (IARU / URE)."
   },
   {
@@ -11788,8 +11757,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "quijotes-84-1810",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Como norma general, y salvo circunstancias especiales debidamente motivadas, las estaciones autom\xE1ticas desatendidas en las bandas de VHF y UHF fuera del casco urbano, emitir\xE1n una potencia de salida m\xE1xima de:",
     "options": [
       "10 W.",
@@ -11842,7 +11811,7 @@ var questions_banco_estudio_default = [
       "Cualquier comunicaci\xF3n."
     ],
     "correctIndex": 1,
-    "explain": "El servicio de aficionados solo admite comunicaciones relacionadas con ensayos t\xE9cnicos, formaci\xF3n y actividad propia del servicio, no tr\xE1fico ajeno. Por eso encaja \xABComunicaciones relacionadas con el Servicio de Aficionados.\xBB. (BOE-A-2013-7624).",
+    "explain": "El servicio de aficionados solo admite tr\xE1fico propio de la radioafici\xF3n, sin fines comerciales ni ajenos. Por eso las transmisiones deben limitarse a \xABComunicaciones relacionadas con el Servicio de Aficionados\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1822). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11872,7 +11841,7 @@ var questions_banco_estudio_default = [
       "Seguir emitiendo."
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABSuspender de inmediato las emisiones.\xBB.",
+    "explain": "Ante interferencias perjudiciales a otros servicios, en especial a la recepci\xF3n de radiodifusi\xF3n o televisi\xF3n, el reglamento obliga a cesar la emisi\xF3n hasta resolver la causa; la responsabilidad de no perturbar recae en el radioaficionado. Por eso deber\xE1 \xABSuspender de inmediato las emisiones\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1829). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -11963,7 +11932,7 @@ var questions_banco_estudio_default = [
       "Por todo radioaficionado que opera en Espa\xF1a."
     ],
     "correctIndex": 3,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPor todo radioaficionado que opera en Espa\xF1a.\xBB.",
+    "explain": "Los planes de banda de la IARU son recomendaciones voluntarias de autoorganizaci\xF3n del espectro; en la pr\xE1ctica deben seguirse para convivir. Por eso han de tenerse en cuenta \xABPor todo radioaficionado que opera en Espa\xF1a\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1862). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12041,6 +12010,20 @@ var questions_banco_estudio_default = [
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
+    "id": "quijotes-84-1897",
+    "part": 1,
+    "topicId": "receptores-emisores",
+    "stem": "Como norma general, la potencia de salida de los transmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podr\xE1 exceder de:",
+    "options": [
+      "5 W.",
+      "10 W.",
+      "15 W.",
+      "20 W."
+    ],
+    "correctIndex": 1,
+    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB10 W.\xBB."
+  },
+  {
     "id": "quijotes-84-1904",
     "part": 1,
     "topicId": "magnetismo-ondas",
@@ -12112,6 +12095,20 @@ var questions_banco_estudio_default = [
     ],
     "correctIndex": 2,
     "explain": "Cualquier modificaci\xF3n sustancial de la instalaci\xF3n exige comunicaci\xF3n o autorizaci\xF3n ante la Administraci\xF3n competente, con el mismo procedimiento que una nueva instalaci\xF3n (BOE-A-2013-7624). \xABSe debe solicitar a la Administraci\xF3n competente y seguir el mismo procedimiento que si se tratase de la primera instalaci\xF3n.\xBB."
+  },
+  {
+    "id": "quijotes-84-1937",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "La Ley 19/1986, conocida como Ley de Antenas, regula:",
+    "options": [
+      "La obligaci\xF3n de comunicar la instalaci\xF3n de una antena a la Administraci\xF3n competente en espectro radioel\xE9ctrico.",
+      "El derecho a instalar una antena de cualquier tama\xF1o.",
+      "El derecho a instalar las antenas de aficionado en el exterior de los inmuebles.",
+      "La exenci\xF3n de presentar memoria descriptiva de la instalaci\xF3n."
+    ],
+    "correctIndex": 2,
+    "explain": "En \xABLa Ley 19/1986, conocida como Ley de Antenas, regula:\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles.\xBB. Contrasta con el temario de instalaciones, seguridad y normativa de antenas si el distractor te confundi\xF3."
   },
   {
     "id": "quijotes-84-1939",
@@ -12187,6 +12184,20 @@ var questions_banco_estudio_default = [
     "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABHay previstas frecuencias para repetidores en la banda 145,594-145,7935 MHz.\xBB."
   },
   {
+    "id": "quijotes-84-2017",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La se\xF1al de alarma en radiotelefon\xEDa consiste en dos se\xF1ales de audiofrecuencia, aproximadamente sinusoidales, transmitidas alternativamente. \xBFQu\xE9 frecuencias son?:",
+    "options": [
+      "2.220 Hz y 1.300 Hz",
+      "2.220 kHz y 1.300 KHz",
+      "1.100 Hz y 650 Kz",
+      "1.100 kHz y 650KHz"
+    ],
+    "correctIndex": 0,
+    "explain": "La se\xF1al de alarma en radiotelefon\xEDa usa dos tonos alternos; en el banco son aproximadamente 2.220 Hz y 1.300 Hz. \xAB2.220 Hz y 1.300 Hz\xBB."
+  },
+  {
     "id": "quijotes-84-2025",
     "part": 2,
     "topicId": "marco-normativo",
@@ -12215,6 +12226,20 @@ var questions_banco_estudio_default = [
     "correctIndex": 0,
     "explain": "La nota 5.141C UIT reserva segmentos en HF; contrasta el cuadro de atribuciones con el CNAF y el reglamento vigente. \xABLa banda 7100 a 7200 kHz est\xE1 atribuida a titulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    "id": "quijotes-84-2038",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "La utilizacion de frecuencias de llamada:",
+    "options": [
+      "S\xF3lo se usan en HF.",
+      "Actualmente ya no se utilizan.",
+      "Permiten contactar con otros operadores que utilizan el mismo modo.",
+      "Nunca se usan en VHF."
+    ],
+    "correctIndex": 2,
+    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABPermiten contactar con otros operadores que utilizan el mismo modo.\xBB."
   },
   {
     "id": "quijotes-84-2043",
@@ -12290,6 +12315,20 @@ var questions_banco_estudio_default = [
     "correctIndex": 2,
     "explain": "En \xABAl conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomi\u2026\xBB, la formulaci\xF3n que encaja seg\xFAn el banco de examen es \xABNo deseadas.\xBB. Contrasta con el temario de la normativa de aficionados y el BOE vigente si el distractor te confundi\xF3.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
+  },
+  {
+    "id": "quijotes-84-2062",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
+    "stem": "Toda telecomunicaci\xF3n transmitida por medio de ondas radioel\xE9ctricas recibe el nombre de:",
+    "options": [
+      "Espectro radioel\xE9ctrico.",
+      "Radioafici\xF3n.",
+      "Campo el\xE9ctrico.",
+      "Radiocomunicaci\xF3n."
+    ],
+    "correctIndex": 3,
+    "explain": "Radiocomunicaci\xF3n es toda telecomunicaci\xF3n realizada mediante ondas radioel\xE9ctricas. \xABRadiocomunicaci\xF3n.\xBB."
   },
   {
     "id": "quijotes-84-2069",
@@ -12690,11 +12729,7 @@ var questions_banco_estudio_default = [
       "14.4 MHz",
       "1 MHz",
       "200 MHz",
-      "10 MHz",
-      "",
-      "",
-      "",
-      ""
+      "10 MHz"
     ],
     "correctIndex": 3,
     "explain": "Un mezclador genera a su salida la suma y la diferencia de las frecuencias de entrada: 14 + 4 = 18 MHz y 14 \u2212 4 = 10 MHz. De las opciones, la v\xE1lida es la diferencia: \xAB10 MHz\xBB.",
@@ -13412,11 +13447,7 @@ var questions_banco_estudio_default = [
       "Un buen conductor",
       "Semiconductor",
       "Un aislante",
-      "Un condensador con polaridad",
-      "",
-      "",
-      "",
-      ""
+      "Un condensador con polaridad"
     ],
     "correctIndex": 2,
     "explain": "Un diel\xE9ctrico no conduce la corriente pero s\xED puede polarizarse, y se usa entre las armaduras de los condensadores. Por eso, en esencia, es \xABUn aislante\xBB.",
@@ -14433,11 +14464,7 @@ var questions_banco_estudio_default = [
       "Su resistencia est\xE1 en funci\xF3n de la corriente que la atraviesa",
       "Su valor aumenta con la temperatura",
       "Se usa como estabilizadora de corriente",
-      "Su valor disminuye al aumentar la temperatura",
-      "",
-      "",
-      "",
-      ""
+      "Su valor disminuye al aumentar la temperatura"
     ],
     "correctIndex": 1,
     "explain": "PTC: la resistencia sube con la temperatura; se usa en protecci\xF3n t\xE9rmica. NTC baja con el calor. \xABSu valor aumenta con la temperatura\xBB.",
@@ -14836,11 +14863,7 @@ var questions_banco_estudio_default = [
       "Resistencia",
       "Energ\xEDa",
       "Ancho de banda",
-      "Potencia",
-      "",
-      "",
-      "",
-      ""
+      "Potencia"
     ],
     "correctIndex": 3,
     "explain": "El dBW es una medida logar\xEDtmica de potencia referida a 1 vatio; por tanto, la magnitud que expresa es la potencia. \xABPotencia\xBB.",
@@ -15539,8 +15562,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q101",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "La se\xF1al de alarma en radiotelefon\xEDa consiste en dos se\xF1ales de audiofrecuencia, aproximadamente sinusoidales, transmitidas alternativamente. \xBFQu\xE9 frecuencias son?:",
     "options": [
       "2.220 Hz y 1.300 Hz",
@@ -15594,7 +15617,7 @@ var questions_banco_estudio_default = [
       "Permite operar permanentemente en cualquier pa\xEDs CEPT"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABPermite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pa\xEDs visitado que se haya adherido a la Recomendaci\xF3n T/R61-01 de la CEPT\xBB.",
+    "explain": "La Recomendaci\xF3n CEPT T/R 61-01 permite operar temporalmente, sin tr\xE1mite adicional, en los pa\xEDses que la han adoptado, usando all\xED las bandas atribuidas al Servicio de Aficionados. Por eso la licencia CEPT \xABPermite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pa\xEDs visitado que se haya adherido a la Recomendaci\xF3n T/R61-01 de la CEPT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15614,8 +15637,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q106",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "En el tejado de un edificio donde est\xE1 instalada una antena de radioaficionado autorizada:",
     "options": [
       "Se podr\xE1n realizar obras aun cuando haya que desmontar temporalmente, parcial o totalmente, la instalaci\xF3n de la antena",
@@ -15644,8 +15667,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q108",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "En la instalaci\xF3n de una antena de radioaficionado y sus elementos anejos:",
     "options": [
       "No es necesario tener en cuenta la proximidad de l\xEDneas el\xE9ctricas a\xE9reas",
@@ -15729,7 +15752,7 @@ var questions_banco_estudio_default = [
       "La licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLa licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n\xBB.",
+    "explain": "En el pa\xEDs visitado solo puedes emplear las bandas atribuidas al aficionado en ese pa\xEDs, no las autorizadas en el tuyo. Por eso, entre las condiciones de uso de la licencia CEPT, la afirmaci\xF3n falsa es \xABLa licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15774,7 +15797,7 @@ var questions_banco_estudio_default = [
       "Pan"
     ],
     "correctIndex": 2,
-    "explain": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+    "explain": "En radiotelefon\xEDa la se\xF1al internacional de socorro es la palabra Mayday, reservada a peligro grave e inminente. Por eso la se\xF1al es \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15789,7 +15812,7 @@ var questions_banco_estudio_default = [
       "Tango, Oslo, Pepe"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABTango, Oscar, Papa\xBB.",
+    "explain": "Con el alfabeto ICAO, T\u2192Tango, O\u2192Oscar y P\u2192Papa. Por eso TOP se deletrea \xABTango, Oscar, Papa\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15819,7 +15842,7 @@ var questions_banco_estudio_default = [
       "\xDAnicamente pa\xEDses de la Comunidad Europea"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABTodos los pa\xEDses pertenezcan, o no, a la CEPT\xBB.",
+    "explain": "El certificado HAREC de la Recomendaci\xF3n T/R 61-02 est\xE1 abierto tambi\xE9n a administraciones que la adoptan aunque no sean miembros de la CEPT, para reconocer ex\xE1menes internacionalmente. Por eso pueden participar \xABTodos los pa\xEDses pertenezcan, o no, a la CEPT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15834,7 +15857,7 @@ var questions_banco_estudio_default = [
       "A cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional"
     ],
     "correctIndex": 3,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABA cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional\xBB.",
+    "explain": "Los sufijos de dos letras son m\xE1s cortos y escasos, por lo que se reservan a operadores con experiencia acreditada. Por eso pueden asignarse \xABA cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15849,7 +15872,7 @@ var questions_banco_estudio_default = [
       'La palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)'
     ],
     "correctIndex": 3,
-    "explain": 'Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABLa palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)\xBB.',
+    "explain": 'La llamada de socorro en fon\xEDa repite Mayday tres veces, seguido de \xABaqu\xED\xBB o \xABde\xBB y del distintivo de la estaci\xF3n en peligro. Por eso se compone de \xABLa palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)\xBB.',
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15864,7 +15887,7 @@ var questions_banco_estudio_default = [
       "No tienen prefijo"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABED\xBB.",
+    "explain": "El prefijo ED se reserva en Espa\xF1a a estaciones autom\xE1ticas y desatendidas. Por eso estas estaciones utilizar\xE1n el prefijo \xABED\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15899,8 +15922,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q160",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": 'Utilizar la palabra "cambio" al finalizar una transmisi\xF3n en fon\xEDa es:',
     "options": [
       "Recomendable",
@@ -15954,7 +15977,7 @@ var questions_banco_estudio_default = [
       "Vid"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABVictor\xBB.",
+    "explain": "El alfabeto fon\xE9tico internacional asigna a cada letra una palabra fija para deletrear sin error en fon\xEDa. A la letra V le corresponde la palabra \xABVictor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15969,7 +15992,7 @@ var questions_banco_estudio_default = [
       "Toledo, Teruel, Tarragona, Santa Cruz de Tenerife"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABC\xE1ceres, C\xE1diz, Cuenca, Ciudad Real\xBB.",
+    "explain": "Hay que identificar qu\xE9 grupo re\xFAne m\xE1s provincias del distrito 4. La proposici\xF3n correcta es \xABC\xE1ceres, C\xE1diz, Cuenca, Ciudad Real\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15984,7 +16007,7 @@ var questions_banco_estudio_default = [
       "Siempre que el pa\xEDs de origen del radioaficionado aplique la Recomendaci\xF3n T/R 5000"
     ],
     "correctIndex": 2,
-    "explain": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABCuando exista Acuerdo o Convenio de reciprocidad en la materia con el pa\xEDs de origen del radioaficionado\xBB.",
+    "explain": "El acceso de extranjeros residentes a la autorizaci\xF3n espa\xF1ola se condiciona a la reciprocidad con su pa\xEDs de origen. Por eso podr\xE1n ser titulares \xABCuando exista Acuerdo o Convenio de reciprocidad en la materia con el pa\xEDs de origen del radioaficionado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15999,7 +16022,7 @@ var questions_banco_estudio_default = [
       "Para uso temporal en eventos de car\xE1cter auton\xF3mico o local"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABCon motivos de actos que sean inaugurados o visitados por Su Majestad el Rey\xBB.",
+    "explain": "La cifra 0 en el distintivo es excepcional y se reserva a actos de especial relevancia institucional. Por eso solo se autoriza \xABCon motivos de actos que sean inaugurados o visitados por Su Majestad el Rey\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16014,7 +16037,7 @@ var questions_banco_estudio_default = [
       "Autoridad que expide la licencia"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABFecha de superaci\xF3n del examen\xBB.",
+    "explain": "La licencia CEPT debe llevar datos de identificaci\xF3n, indicativo y referencia a la T/R 61-01, pero no la fecha en que se aprob\xF3 el examen, que es un dato administrativo previo. Por eso no es requisito que conste la \xABFecha de superaci\xF3n del examen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16079,8 +16102,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q174",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Los soportes de una antena de radioaficionado:",
     "options": [
       "Se podr\xE1n fijar a los anclajes de un pararrayos",
@@ -16104,7 +16127,7 @@ var questions_banco_estudio_default = [
       "Estaci\xF3n repetidora de gran alcance"
     ],
     "correctIndex": 0,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABEstaci\xF3n fija de aficionado que puede ser accionada a distancia\xBB.",
+    "explain": "Una estaci\xF3n fija remota es la que, estando en emplazamiento fijo, se gobierna a distancia por el operador. Por eso se define como \xABEstaci\xF3n fija de aficionado que puede ser accionada a distancia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16194,7 +16217,7 @@ var questions_banco_estudio_default = [
       "Eventos especiales de relevancia internacional"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABConcursos internacionales de alta competitividad\xBB.",
+    "explain": "El sufijo de una sola letra es el m\xE1s escaso del plan de indicativos, por lo que se limita a eventos de m\xE1xima relevancia. Por eso se reserva para \xABConcursos internacionales de alta competitividad\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16209,13 +16232,13 @@ var questions_banco_estudio_default = [
       "No hay planes de banda en la Regi\xF3n 3"
     ],
     "correctIndex": 0,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPueden ser distintos en cada Regi\xF3n\xBB.",
+    "explain": "El mundo se divide en tres Regiones de la UIT con atribuciones distintas, as\xED que los planes IARU se adaptan a cada una. Por eso \xABPueden ser distintos en cada Regi\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p2-q211",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "Las frecuencias de llamada:",
     "options": [
       "S\xF3lo se usan en HF",
@@ -16254,8 +16277,22 @@ var questions_banco_estudio_default = [
       "Mike, Alfa, Romeo"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMike, Alfa, Romeo\xBB.",
+    "explain": "Con el alfabeto ICAO, M\u2192Mike, A\u2192Alfa y R\u2192Romeo. Por eso MAR se deletrea \xABMike, Alfa, Romeo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+  },
+  {
+    "id": "ure-p2-q214",
+    "part": 1,
+    "topicId": "antenas-prop",
+    "stem": "En la instalaci\xF3n de una antena de radioaficionado y sus elementos anejos:",
+    "options": [
+      "No es necesario tener en cuenta la proximidad de las l\xEDneas el\xE9ctricas a\xE9reas",
+      "Es necesario se\xF1alizar los anclajes y riostras si la antena est\xE1 situada en un lugar transitable",
+      "No es necesario tener en cuenta las instalaciones y antenas de otros servicios",
+      "Los soportes de la antena se podr\xE1n fijar al m\xE1stil de un pararrayos"
+    ],
+    "correctIndex": 1,
+    "explain": "Debes coordinar la instalaci\xF3n con otros servicios y usuarios del espectro; evitar interferencias y respetar normativa de antenas. \xABEs necesario se\xF1alizar los anclajes y riostras si la antena est\xE1 situada en un lugar transitable\xBB."
   },
   {
     "id": "ure-p2-q215",
@@ -16319,8 +16356,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q222",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Seg\xFAn la legislaci\xF3n de Telecomunicaciones, en el caso de desmontar una instalaci\xF3n de antenas por obras en la comunidad, cuando estas hayan terminado:",
     "options": [
       "Tendr\xE1 que presentar nueva memoria",
@@ -16359,7 +16396,7 @@ var questions_banco_estudio_default = [
       "Golf, oscar, lima, foxtrot"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABGolf, oscar, lima, foxtrot\xBB.",
+    "explain": "Con el alfabeto ICAO, G\u2192Golf, O\u2192Oscar, L\u2192Lima y F\u2192Foxtrot. Por eso GOLF se deletrea \xABGolf, oscar, lima, foxtrot\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16419,7 +16456,7 @@ var questions_banco_estudio_default = [
       "Le permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLe permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n\xBB.",
+    "explain": "Operando fuera de Espa\xF1a con licencia CEPT te ajustas a las bandas y condiciones del pa\xEDs visitado, no a las espa\xF1olas. Por eso, la licencia CEPT de un radioaficionado espa\xF1ol \xABLe permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16434,7 +16471,7 @@ var questions_banco_estudio_default = [
       "Presentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen"
     ],
     "correctIndex": 3,
-    "explain": "Con licencia CEPT u homologaci\xF3n, en el pa\xEDs visitado debes poder acreditar tu autorizaci\xF3n si la administraci\xF3n lo solicita. \xABPresentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen\xBB.",
+    "explain": "En el pa\xEDs visitado debes poder acreditar tu habilitaci\xF3n ante la autoridad que la requiera. Por eso est\xE1s obligado a \xABPresentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16449,7 +16486,7 @@ var questions_banco_estudio_default = [
       "Cuando la instalaci\xF3n de la antena sea defectuosa"
     ],
     "correctIndex": 2,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABEn cualquier momento a petici\xF3n del titular\xBB.",
+    "explain": "La autorizaci\xF3n es un derecho del titular, que puede renunciar a ella cuando quiera. Por eso la cancelaci\xF3n se efect\xFAa \xABEn cualquier momento a petici\xF3n del titular\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16464,7 +16501,7 @@ var questions_banco_estudio_default = [
       "Auxilio"
     ],
     "correctIndex": 2,
-    "explain": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+    "explain": "Para indicar peligro grave e inminente en fon\xEDa se emite la palabra Mayday. Por eso emitiremos \xABMayday\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16483,21 +16520,6 @@ var questions_banco_estudio_default = [
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
-    "id": "ure-p2-q237",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Toda telecomunicaci\xF3n transmitida por medio de ondas radioel\xE9ctricas recibe el nombre de:",
-    "options": [
-      "Espectro radioel\xE9ctrico",
-      "Campo el\xE9ctrico",
-      "Radioafici\xF3n",
-      "Radiocomunicaci\xF3n"
-    ],
-    "correctIndex": 3,
-    "explain": "Se define como radiocomunicaci\xF3n toda telecomunicaci\xF3n realizada por medio de ondas radioel\xE9ctricas, frente a otras telecomunicaciones por cable o fibra. \xABRadiocomunicaci\xF3n\xBB.",
-    "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
-  },
-  {
     "id": "ure-p2-q238",
     "part": 2,
     "topicId": "marco-normativo",
@@ -16509,7 +16531,7 @@ var questions_banco_estudio_default = [
       "35 W"
     ],
     "correctIndex": 1,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB25 W\xBB."
+    "explain": "El Reglamento limita la potencia de salida de las estaciones desatendidas en VHF y UHF fuera del casco urbano para reducir interferencias. Por eso, como norma general, ser\xE1 de \xAB50 W\xBB."
   },
   {
     "id": "ure-p2-q269",
@@ -16523,7 +16545,7 @@ var questions_banco_estudio_default = [
       "Fox, India, Nada"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABFoxtrot, India, November\xBB.",
+    "explain": "Con el alfabeto ICAO, F\u2192Foxtrot, I\u2192India y N\u2192November. Por eso FIN se deletrea \xABFoxtrot, India, November\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16543,8 +16565,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q270",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "En telegraf\xEDa, la abreviatura de procedimiento usada para finalizar una transmisi\xF3n es:",
     "options": [
       "AS",
@@ -16568,7 +16590,7 @@ var questions_banco_estudio_default = [
       "MAYDAY (una vez), la palabra AQU\xCD o DE y el distintivo de llamada ( tres veces)"
     ],
     "correctIndex": 0,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xABMAYDAY (tres veces), la palabra AQU\xCD o DE y el distintivo de llamada (tres veces)\xBB.",
+    "explain": "La se\xF1al de socorro en fon\xEDa es Mayday (tres veces), la palabra \xABaqu\xED\xBB o \xABde\xBB y el distintivo (tres veces). Por eso se compone de \xABMAYDAY (tres veces), la palabra AQU\xCD o DE y el distintivo de llamada (tres veces)\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16583,7 +16605,7 @@ var questions_banco_estudio_default = [
       "En Espa\xF1a se deben aplicar los planes de banda de la IARU para la Regi\xF3n 2"
     ],
     "correctIndex": 1,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
+    "explain": "Los planes IARU no son ley, sino una gu\xEDa consensuada para ordenar modos y segmentos en cada banda. Por eso \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16688,7 +16710,7 @@ var questions_banco_estudio_default = [
       "Nunca"
     ],
     "correctIndex": 2,
-    "explain": "Un extranjero residente puede obtener autorizaci\xF3n en Espa\xF1a si acredita residencia y, seg\xFAn el supuesto, el certificado HAREC (armonizaci\xF3n CEPT T/R 61-02). \xABSean titulares del Certificado HAREC\xBB.",
+    "explain": "Para obtener autorizaci\xF3n en Espa\xF1a, el extranjero residente debe acreditar su capacitaci\xF3n con el certificado HAREC. Por eso podr\xE1n obtenerla cuando \xABSean titulares del Certificado HAREC\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16718,7 +16740,7 @@ var questions_banco_estudio_default = [
       "QRS"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABEEE\xBB.",
+    "explain": "El distintivo se forma con un prefijo (EA, EB, EC\u2026) y un sufijo de letras; hay que reconocer cu\xE1l encaja en el plan de distintivos. Entre las opciones, el sufijo asignable es \xABEEE\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16733,7 +16755,7 @@ var questions_banco_estudio_default = [
       "Certificado de empadronamiento"
     ],
     "correctIndex": 3,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABCertificado de empadronamiento\xBB.",
+    "explain": "La memoria descriptiva detalla emplazamiento, equipos y sistema radiante, pero no exige acreditar el padr\xF3n. Por eso no es preciso incluir el \xABCertificado de empadronamiento\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16822,7 +16844,7 @@ var questions_banco_estudio_default = [
       "No es obligatorio disponer de estaci\xF3n fija"
     ],
     "correctIndex": 3,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABNo es obligatorio disponer de estaci\xF3n fija\xBB.",
+    "explain": "El radioaficionado puede operar solo en portable o m\xF3vil; no se le impone tener instalaci\xF3n fija. Por eso \xABNo es obligatorio disponer de estaci\xF3n fija\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16867,7 +16889,7 @@ var questions_banco_estudio_default = [
       "Se compromete a emitir \xFAnicamente en VHF"
     ],
     "correctIndex": 0,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABCroacia aplica la Recomendaci\xF3n T/R 61-02 de la CEPT\xBB.",
+    "explain": "El reconocimiento mutuo del HAREC exige que el pa\xEDs de destino aplique la Recomendaci\xF3n T/R 61-02 de la CEPT. Por eso podr\xE1 obtener licencia en Croacia si \xABCroacia aplica la Recomendaci\xF3n T/R 61-02 de la CEPT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16897,7 +16919,7 @@ var questions_banco_estudio_default = [
       "Ungir"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABUniform\xBB.",
+    "explain": "El alfabeto fon\xE9tico internacional asigna a cada letra una palabra fija para deletrear sin error en fon\xEDa. A la letra U le corresponde la palabra \xABUniform\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16927,7 +16949,7 @@ var questions_banco_estudio_default = [
       "\xC1vila"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABAlbacete\xBB.",
+    "explain": "El indicativo lleva una cifra que identifica el distrito geogr\xE1fico, y cada provincia est\xE1 adscrita a uno de ellos. Entre las opciones, la provincia que pertenece al distrito 5 es \xABAlbacete\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16957,7 +16979,7 @@ var questions_banco_estudio_default = [
       "Bravo, Ortega, Julio"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABBravo, Oscar, Juliett\xBB.",
+    "explain": "Con el alfabeto ICAO, B\u2192Bravo, O\u2192Oscar y J\u2192Juliett. Por eso BOJ se deletrea \xABBravo, Oscar, Juliett\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16987,7 +17009,7 @@ var questions_banco_estudio_default = [
       "QSW"
     ],
     "correctIndex": 1,
-    "explain": "QRX indica que la estaci\xF3n volver\xE1 a llamar o est\xE1 esperando. QRL significa \xABestoy ocupado\xBB. \xABQRX\xBB.",
+    "explain": "La abreviatura que anuncia que el operador llamar\xE1 de nuevo m\xE1s tarde es QRX. Por eso el grupo correcto es \xABQRX\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17017,7 +17039,7 @@ var questions_banco_estudio_default = [
       "Por todo radioaficionado que opere en Espa\xF1a"
     ],
     "correctIndex": 3,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABPor todo radioaficionado que opere en Espa\xF1a\xBB.",
+    "explain": "Aunque son recomendaciones, los planes IARU de la Regi\xF3n 1 ordenan la convivencia en el espectro y se siguen por consenso. Por eso han de tenerse en cuenta \xABPor todo radioaficionado que opere en Espa\xF1a\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17037,8 +17059,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q335",
-    "part": 1,
-    "topicId": "receptores-emisores",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "Comprobar si alguien est\xE1 utilizando una frecuencia, antes de iniciar una transmisi\xF3n en la misma, es:",
     "options": [
       "Muy perjudicial para el uso eficiente del espectro radioel\xE9ctrico",
@@ -17077,7 +17099,7 @@ var questions_banco_estudio_default = [
       "Usos temporales de relevancia internacional"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local\xBB.",
+    "explain": "El prefijo EG identifica usos temporales de relevancia regional, auton\xF3mica o local. Por eso el prefijo EG se relaciona con \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17137,7 +17159,7 @@ var questions_banco_estudio_default = [
       "Respetar las diferencias de atribuciones de frecuencias en los servicios de aficionados en las tres Regiones de la Uni\xF3n Internacional de Telecomunicaciones"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABNo respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci\xF3n vigente en el pa\xEDs de origen\xBB.",
+    "explain": "El titular de una licencia CEPT debe respetar el Reglamento de Radiocomunicaciones y la reglamentaci\xF3n vigente tanto en origen como en el pa\xEDs visitado. Por eso la afirmaci\xF3n falsa es la de \xABNo respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci\xF3n vigente en el pa\xEDs de origen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17365,8 +17387,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q37",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Para instalar una antena en un edificio en r\xE9gimen de propiedad horizontal:",
     "options": [
       "Se necesita autorizaci\xF3n expresa de la comunidad de propietarios",
@@ -17380,8 +17402,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q38",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Para la instalaci\xF3n de antenas de radioaficionados, es obligatorio tener un seguro que cubra:",
     "options": [
       "La responsabilidad civil del titular",
@@ -17479,7 +17501,7 @@ var questions_banco_estudio_default = [
       "Deben ser aprobados por la Direcci\xF3n General de Telecomunciaciones"
     ],
     "correctIndex": 1,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
+    "explain": "Los planes de banda son una referencia internacional consensuada, no una norma legal. Por eso \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17499,8 +17521,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q396",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Como norma general, la potencia de salida de los trasmisores de las estaciones desatendidas en las bandas de VHF y UHF dentro del casco urbano, no podr\xE1 exceder de:",
     "options": [
       "5 W",
@@ -17523,13 +17545,13 @@ var questions_banco_estudio_default = [
       "Documento que acredite estar inscrito en una asociaci\xF3n de Radioaficionado"
     ],
     "correctIndex": 0,
-    "explain": "HAREC y las recomendaciones CEPT facilitan reconocimiento entre administraciones; cada pa\xEDs mantiene su procedimiento nacional. Encaja \xABSolicitud adjuntando una memoria descriptiva del conjunto de la instalaci\xF3n\xBB.",
+    "explain": "Para tramitar la licencia se acompa\xF1a una memoria que describe el conjunto de la instalaci\xF3n. Por eso es necesario presentar \xABSolicitud adjuntando una memoria descriptiva del conjunto de la instalaci\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p2-q398",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Las estaciones autom\xE1ticas desatendidas en la banda de HF tendr\xE1n una potencia de salida m\xE1xima de:",
     "options": [
       "25 W",
@@ -17613,7 +17635,7 @@ var questions_banco_estudio_default = [
       "Valencia, Valladolid, Vizcaya"
     ],
     "correctIndex": 1,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABAsturias, \xC1vila, Le\xF3n\xBB.",
+    "explain": "Hay que identificar el grupo con m\xE1s provincias del distrito 1 (norte y noroeste). La proposici\xF3n correcta es \xABAsturias, \xC1vila, Le\xF3n\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17648,8 +17670,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q408",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "Al instalar una antena de radioaficionado se tendr\xE1 en cuenta que:",
     "options": [
       "No se pueden situar en azoteas o lugares transitables",
@@ -17673,7 +17695,7 @@ var questions_banco_estudio_default = [
       "Realizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01"
     ],
     "correctIndex": 3,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABRealizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01\xBB.",
+    "explain": "La habilitaci\xF3n temporal solo es v\xE1lida en pa\xEDses que han adoptado la T/R 61-01; sin esa adopci\xF3n no hay reconocimiento autom\xE1tico. Por eso, al visitar otro pa\xEDs, el titular podr\xE1 \xABRealizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17747,7 +17769,7 @@ var questions_banco_estudio_default = [
       "No especialmente significativos"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEspeciales de relevancia internacional\xBB.",
+    "explain": "Los sufijos cortos especiales como AO son escasos y muy visibles, por lo que se reservan a acontecimientos de gran proyecci\xF3n. Por eso el sufijo AO se otorga para eventos temporales \xABEspeciales de relevancia internacional\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17777,13 +17799,13 @@ var questions_banco_estudio_default = [
       "Charter, Inca , Delta"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABCharlie, India, Delta\xBB.",
+    "explain": "Con el alfabeto ICAO, C\u2192Charlie, I\u2192India y D\u2192Delta. Por eso CID se deletrea \xABCharlie, India, Delta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
     "id": "ure-p2-q446",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "Como norma general, la ganancia del sistema radiante de las estaciones desatendidas en las bandas de VHF y UHF, no ser\xE1 superior a:",
     "options": [
       "6 dB",
@@ -17837,7 +17859,7 @@ var questions_banco_estudio_default = [
       "No pueden ser reutilizados"
     ],
     "correctIndex": 2,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones\xBB.",
+    "explain": "Los sufijos de dos letras ya no son exclusivos de unos pocos: se conceden cumpliendo ciertos requisitos. Por eso los distintivos con sufijo de 2 letras \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17882,7 +17904,7 @@ var questions_banco_estudio_default = [
       "No tienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT"
     ],
     "correctIndex": 1,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABProporcionan informaci\xF3n sobre el modo recomendado de utilizaci\xF3n en cada banda de frecuencias\xBB.",
+    "explain": "Los planes IARU recomiendan qu\xE9 modo conviene en cada segmento (CW, fon\xEDa, datos\u2026) para evitar interferencias. Por eso \xABProporcionan informaci\xF3n sobre el modo recomendado de utilizaci\xF3n en cada banda de frecuencias\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18002,7 +18024,7 @@ var questions_banco_estudio_default = [
       "Exclusivamente, en las bandas atribuidas al servicio por Sat\xE9lite"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEn todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el pa\xEDs visitado\xBB.",
+    "explain": "Con licencia CEPT te rigen las atribuciones del pa\xEDs donde operas, no las de origen. Por eso se permite emitir \xABEn todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el pa\xEDs visitado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18052,8 +18074,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p2-q468",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "La Ley 19/1983, conocida como Ley de Antenas, regula:",
     "options": [
       "La obligaci\xF3n de comunicar la instalaci\xF3n de una antena a la Administraci\xF3n competente en espectro radioel\xE9ctrico",
@@ -18077,7 +18099,7 @@ var questions_banco_estudio_default = [
       "Se encuentra dentro de la clasificaci\xF3n de estaciones autom\xE1ticas desatendidas"
     ],
     "correctIndex": 1,
-    "explain": "La memoria descriptiva identifica emplazamiento, equipos y sistema radiante; no sustituye otros documentos que el reglamento exija aparte. La opci\xF3n v\xE1lida es \xABPodr\xE1 ser utilizada con car\xE1cter temporal como portable\xBB.",
+    "explain": "Una estaci\xF3n fija puede trasladarse y usarse de forma ocasional como portable sin perder su condici\xF3n. Por eso una estaci\xF3n fija de radioaficionado \xABPodr\xE1 ser utilizada con car\xE1cter temporal como portable\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18092,7 +18114,7 @@ var questions_banco_estudio_default = [
       "Se asignar\xE1n para eventos especiales de relevancia internacional"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABMantendr\xE1n sin variaci\xF3n el resto del distintivo asignado con car\xE1cter permanente al radioaficionado\xBB.",
+    "explain": "Un prefijo temporal (ED, EE, EF) sustituye solo al prefijo del distintivo; el sufijo personal permanente se conserva para seguir identificando al operador. Por eso \xABMantendr\xE1n sin variaci\xF3n el resto del distintivo asignado con car\xE1cter permanente al radioaficionado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18137,7 +18159,7 @@ var questions_banco_estudio_default = [
       "\xDAnicamente en Europa"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABEn cualquier pa\xEDs que haya adoptado la Recomendaci\xF3n T/R 61-01\xBB.",
+    "explain": "La validez de la licencia CEPT, tambi\xE9n para la operaci\xF3n m\xF3vil, depende de que el pa\xEDs de destino haya adoptado la Recomendaci\xF3n T/R 61-01. Por eso habilita \xABEn cualquier pa\xEDs que haya adoptado la Recomendaci\xF3n T/R 61-01\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18167,7 +18189,7 @@ var questions_banco_estudio_default = [
       "Six"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSeven\xBB.",
+    "explain": "Adem\xE1s de las letras, las cifras se transmiten con su palabra inglesa normalizada para evitar confusiones en fon\xEDa. El n\xFAmero 7 se deletrea como \xABSeven\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18227,7 +18249,7 @@ var questions_banco_estudio_default = [
       "Prev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos"
     ],
     "correctIndex": 3,
-    "explain": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABPrev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos\xBB.",
+    "explain": "El reglamento contempla que el car\xE1cter de uso especial de bandas o frecuencias pueda revisarse a trav\xE9s del CNAF. Por eso el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados \xABPrev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18257,7 +18279,7 @@ var questions_banco_estudio_default = [
       "Su titular tendr\xE1 que superar un examen especial"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABGoza de equiparaci\xF3n a la autorizaci\xF3n de aficionado nacional, en los t\xE9rminos recogidos en el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados\xBB.",
+    "explain": "El reglamento espa\xF1ol equipara la licencia CEPT extranjera a la autorizaci\xF3n nacional mientras se opera aqu\xED, sin tr\xE1mite a\xF1adido. Por eso toda licencia CEPT \xABGoza de equiparaci\xF3n a la autorizaci\xF3n de aficionado nacional, en los t\xE9rminos recogidos en el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18302,7 +18324,7 @@ var questions_banco_estudio_default = [
       "Tienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT"
     ],
     "correctIndex": 3,
-    "explain": "Los planes IARU orientan el uso de segmentos y modos; no sustituyen al BOE, pero son la referencia operativa en Regi\xF3n 1. La respuesta correcta es \xABTienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT\xBB.",
+    "explain": "Los planes IARU se construyen respetando las atribuciones de bandas que fija el Reglamento de Radiocomunicaciones de la UIT. Por eso \xABTienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18392,7 +18414,7 @@ var questions_banco_estudio_default = [
       "MADRID, ECHO, ROMEO, OSCAR"
     ],
     "correctIndex": 2,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABMIKE, ECHO, ROMEO, OSCAR\xBB.",
+    "explain": "Con el alfabeto ICAO, M\u2192Mike, E\u2192Echo, R\u2192Romeo y O\u2192Oscar. Por eso MERO se deletrea \xABMIKE, ECHO, ROMEO, OSCAR\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18422,7 +18444,7 @@ var questions_banco_estudio_default = [
       "En ning\xFAn caso, teniendo en cuenta que la autorizaci\xF3n de radioaficionado ya lleva asociado un distintivo de llamada"
     ],
     "correctIndex": 2,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos\xBB.",
+    "explain": "Los distintivos temporales se conceden para actividades concretas y limitadas en el tiempo, no para el uso ordinario. Por eso se puede solicitar uno \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18497,7 +18519,7 @@ var questions_banco_estudio_default = [
       "Sierra, Lima"
     ],
     "correctIndex": 3,
-    "explain": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSierra, Lima\xBB.",
+    "explain": "En el alfabeto fon\xE9tico internacional, S\u2192Sierra y L\u2192Lima. Por eso a esas letras les corresponden \xABSierra, Lima\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18512,7 +18534,7 @@ var questions_banco_estudio_default = [
       "En ella ha de constar, entre otros datos, el distintivo de llamada y su periodo de validez"
     ],
     "correctIndex": 1,
-    "explain": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos aplicando sus bandas locales, no las del pa\xEDs de origen si difieren. \xABLa utilizaci\xF3n a que habilita es de forma temporal\xBB.",
+    "explain": "La licencia CEPT del propio titular es su autorizaci\xF3n nacional, de car\xE1cter permanente; lo temporal es solo la operaci\xF3n en el pa\xEDs visitado. Por eso la afirmaci\xF3n falsa es \xABLa utilizaci\xF3n a que habilita es de forma temporal\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18527,7 +18549,7 @@ var questions_banco_estudio_default = [
       "Presentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades"
     ],
     "correctIndex": 3,
-    "explain": "Con licencia CEPT u homologaci\xF3n, en el pa\xEDs visitado debes poder acreditar tu autorizaci\xF3n si la administraci\xF3n lo solicita. \xABPresentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades\xBB.",
+    "explain": "Operando temporalmente en el extranjero debes llevar y mostrar tu autorizaci\xF3n si te la piden las autoridades. Por eso est\xE1s obligado a \xABPresentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18557,7 +18579,7 @@ var questions_banco_estudio_default = [
       "Murcia"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABMelilla\xBB.",
+    "explain": "Las ciudades aut\xF3nomas de Ceuta y Melilla tambi\xE9n tienen su cifra de distrito en el indicativo. Entre las opciones, la ciudad adscrita al distrito 9 es \xABMelilla\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18617,7 +18639,7 @@ var questions_banco_estudio_default = [
       "Romeo, Echo, Yuma"
     ],
     "correctIndex": 1,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABRomeo, Echo, Yankee\xBB.",
+    "explain": "Con el alfabeto ICAO, R\u2192Romeo, E\u2192Echo e Y\u2192Yankee. Por eso REY se deletrea \xABRomeo, Echo, Yankee\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18632,7 +18654,7 @@ var questions_banco_estudio_default = [
       "Se han suprimido los distritos"
     ],
     "correctIndex": 0,
-    "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xAB9 (nueve)\xBB.",
+    "explain": "Para los indicativos de llamada, el territorio espa\xF1ol se reparte en distritos numerados que se reflejan en la cifra del distintivo. El n\xFAmero total de distritos es \xAB9 (nueve)\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18662,7 +18684,7 @@ var questions_banco_estudio_default = [
       "Informar sobre la intensidad de la se\xF1al recibida"
     ],
     "correctIndex": 0,
-    "explain": "El alfabeto fon\xE9tico ICAO deletrea letras para evitar errores en tr\xE1fico de voz. La secuencia correcta es \xABDeletrear el mensaje\xBB.",
+    "explain": "El alfabeto fon\xE9tico evita confusiones entre letras de sonido parecido al transmitir en fon\xEDa. Por eso sirve para \xABDeletrear el mensaje\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -21477,10 +21499,14 @@ var curated_explanations_default = {
   "fedi-ah-032": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB.",
   "fedi-ah-033": "Los c\xF3digos Q son abreviaturas de tres letras que empiezan por Q (QTH ubicaci\xF3n, QRM interferencia, etc.). Por eso la regla mnemot\xE9cnica del examen es que \xABEmpieza siempre por la letra Q\xBB.",
   "fedi-ah-034": "Salvo urgencia, la comunidad debe avisar al radioaficionado con tres meses de antelaci\xF3n antes de exigir el desmontaje de la antena por obras, para que pueda reorganizar su instalaci\xF3n. \xABTres meses\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-038": "El alfabeto fon\xE9tico internacional asigna una palabra a cada letra para que el deletreo sea inequ\xEDvoco en fon\xEDa. Por eso \xABSe utiliza para el deletreo de palabras\xBB.",
+  "fedi-ah-039": "Los indicativos espa\xF1oles incluyen una cifra de distrito seg\xFAn la provincia. Entre las opciones, la provincia adscrita al distrito 7 es \xABGuip\xFAzcoa\xBB.",
+  "fedi-ah-040": "Seg\xFAn el art. 25.h del Reglamento IET/1311/2013, salvo causas justificadas, las estaciones desatendidas en VHF y UHF fuera del casco urbano se limitan en potencia. Por eso el m\xE1ximo es \xAB50 W\xBB.",
   "fedi-ah-041": "El titular debe permitir las obras de conservaci\xF3n del edificio, pero la comunidad ha de comprometerse a reponer la antena en sus condiciones iniciales al terminarlas. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624).",
   "fedi-ah-042": "En Espa\xF1a se usa el alfabeto fon\xE9tico en castellano (Alfa, Noviembre\u2026), no la pronunciaci\xF3n inglesa de ICAO. Por eso la deletreado correcto es \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB.",
   "fedi-ah-043": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos. Verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB.",
   "fedi-ah-047": "El certificado CEPT no exige indicar la asociaci\xF3n del titular en el formato habitual del diploma. Por eso no es la respuesta correcta \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB.",
+  "fedi-ah-053": "El servicio de aficionados es de instrucci\xF3n individual, intercomunicaci\xF3n y estudios t\xE9cnicos sin fin lucrativo; por eso las transmisiones deben limitarse a \xABComunicaciones relacionadas con el servicio de aficionados\xBB.",
   "fedi-ah-056": "La colaboraci\xF3n con servicios de emergencia en cat\xE1strofes es voluntaria: el radioaficionado puede ayudar, pero el reglamento no le impone esa obligaci\xF3n. Por eso la respuesta es \xABEs voluntaria\xBB.",
   "fedi-ah-057": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB.",
   "fedi-ah-060": "Si causas interferencias perjudiciales debes cesar la emisi\xF3n de inmediato hasta resolver la causa. Es buena pr\xE1ctica y deber reglamentario. \xABSuspender de inmediato las emisiones\xBB.",
@@ -21488,13 +21514,14 @@ var curated_explanations_default = {
   "ofic-003": "En FM la informaci\xF3n se transmite variando la frecuencia instant\xE1nea de la portadora, no su amplitud, que se mantiene constante. Por eso la magnitud que var\xEDa es \xABLa frecuencia\xBB.",
   "ofic-005": "Un dipolo de media onda mide el\xE9ctricamente, como indica su nombre, \u03BB/2 en total, repartido en dos brazos de \u03BB/4. Por eso su longitud es \xABMedia longitud de onda\xBB.",
   "ofic-006": "En corriente continua y en r\xE9gimen permanente, un condensador ideal no deja pasar corriente continua: equivale a circuito abierto entre bornes (se carga hasta la tensi\xF3n aplicada). No confundir con cortocircuito. \xABUn circuito abierto\xBB.",
-  "ofic-008": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
+  "ofic-008": "En Espa\xF1a el reglamento del servicio de aficionados se aprueba por norma ministerial (la orden IET/1311/2013 y sus modificaciones). Por eso se aprueba mediante \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
   "ofic-009": "La convocatoria oficial define dos pruebas independientes (t\xE9cnica y reglamentaci\xF3n), alineadas con el programa de examen. La respuesta es \xABDos partes independientes (electricidad/radioelectricidad y reglamentaci\xF3n)\xBB. (BOE-A-2013-7624).",
   "ofic-013": "En un circuito LC ideal la resonancia ocurre cuando se igualan las reactancias de bobina y condensador; al despejar esa condici\xF3n se obtiene la f\xF3rmula f0 = 1/(2\u03C0\u221A(LC)). \xABf0 = 1/(2\u03C0\u221A(LC))\xBB.",
   "ofic-023": "El servicio de radioaficionado es t\xE9cnico y abierto: no se usan comunicaciones encubiertas ni fines ajenos al servicio (comercial, secreto, etc.). \xABNo son propias del servicio y deben evitarse\xBB.",
   "ofic-036": "En resonancia serie |XL| = |XC|; las reactancias se cancelan y la impedancia queda esencialmente resistiva. Por eso la respuesta es \xABSe igualan en magnitud y se cancelan\xBB.",
   "ofic-037": "El factor de calidad Q relaciona frecuencia central y ancho de banda: Q = f/B. A mayor Q, mayor selectividad del resonador. \xABQ = f / B\xBB.",
   "ofic-039": "El silenciador (squelch) corta el audio cuando no hay portadora o se\xF1al \xFAtil de RF, evitando ruido de fondo en el altavoz. No es AGC ni medici\xF3n de ROE. \xABSuprimir el audio cuando no hay se\xF1al \xFAtil de RF\xBB.",
+  "ofic-040": "En el c\xF3digo Q, QRX significa que la estaci\xF3n cesa de momento y volver\xE1 a llamar m\xE1s tarde. Por eso QRX indica que \xABSe volver\xE1 a llamar m\xE1s tarde\xBB.",
   "ofic-042": "La doble superheterodina usa dos mezclas a FI distintas para mejorar selectividad y suprimir imagen en bandas altas. Por eso encaja \xABDos frecuencias intermedias en cadena\xBB.",
   "ofic-043": "La relaci\xF3n delante\u2013atr\xE1s (F/B) compara radiaci\xF3n o recepci\xF3n del l\xF3bulo principal frente a la parte trasera, en dB. Por eso se define como \xABLa diferencia en dB entre radiaci\xF3n frontal y posterior\xBB.",
   "ofic-044": "El diodo varicap aprovecha que la capacidad de su uni\xF3n polarizada en inversa cambia con la tensi\xF3n aplicada. Por eso se emplea como condensador variable controlado por tensi\xF3n en circuitos de sinton\xEDa. \xABUn condensador variable controlado por tensi\xF3n\xBB.",
@@ -21503,8 +21530,11 @@ var curated_explanations_default = {
   "ofic-060": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABDeriva la mayor parte de la corriente en paralelo de baja resistencia\xBB.",
   "ofic-065": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEntre los dos nodos (derivaci\xF3n / paralelo)\xBB. (BOE-A-2013-7624).",
   "q4": "En AM la portadora conserva su frecuencia fija y es su amplitud la que sigue a la se\xF1al moduladora. Por eso la magnitud que var\xEDa principalmente es \xABLa amplitud\xBB.",
+  "quijotes-84-1822": "El servicio de aficionados solo admite tr\xE1fico propio de la radioafici\xF3n, sin fines comerciales ni ajenos. Por eso las transmisiones deben limitarse a \xABComunicaciones relacionadas con el Servicio de Aficionados\xBB.",
+  "quijotes-84-1829": "Ante interferencias perjudiciales a otros servicios, en especial a la recepci\xF3n de radiodifusi\xF3n o televisi\xF3n, el reglamento obliga a cesar la emisi\xF3n hasta resolver la causa; la responsabilidad de no perturbar recae en el radioaficionado. Por eso deber\xE1 \xABSuspender de inmediato las emisiones\xBB.",
   "quijotes-84-1836": "El mapa del enunciado corresponde al distrito EA5 (Comunidad Valenciana y Murcia en la tabla de residencia del BOE-A-2013-7624). La cifra 5 identifica ese distrito geogr\xE1fico. \xABDistrito 5.\xBB.",
   "quijotes-84-1843": "El prefijo EA5 corresponde a radioaficionados con distrito de residencia en Comunidad Valenciana; el distintivo EA5EYR encaja con Valencia. No confundir EA6 (Baleares) ni EA7 (Arag\xF3n). \xABValencia.\xBB.",
+  "quijotes-84-1862": "Los planes de banda de la IARU son recomendaciones voluntarias de autoorganizaci\xF3n del espectro; en la pr\xE1ctica deben seguirse para convivir. Por eso han de tenerse en cuenta \xABPor todo radioaficionado que opera en Espa\xF1a\xBB.",
   "quijotes-84-1864": "EA6 es la serie de las Islas Baleares; EA6PDM puede corresponder a estaciones en Mallorca, como Palma. Lleida es EA3, Huelva EA7. \xABPalma de Mallorca.\xBB.",
   "quijotes-84-1892": "Interferir deliberadamente a otra estaci\xF3n est\xE1 prohibido: es mala pr\xE1ctica y puede ser infracci\xF3n seg\xFAn el reglamento (BOE-A-2013-7624). Por eso la opci\xF3n correcta es \xABNunca.\xBB.",
   "quijotes-84-1939": "Antes de obras que afecten a una antena autorizada, la comunidad debe informar al titular de la licencia con un mes de antelaci\xF3n si fuera necesario desmontarla. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
@@ -21680,50 +21710,85 @@ var curated_explanations_default = {
   "ure-p2-q100": "Pan-Pan (tres veces) es la se\xF1al de urgencia radiotelef\xF3nica cuando hay riesgo sin peligro grave inmediato. Mayday (tres veces) reserva el socorro inminente. \xABPAN PAN\xBB.",
   "ure-p2-q101": "La se\xF1al de alarma radiotelef\xF3nica est\xE1 pensada para activar alarmas autom\xE1ticas en los receptores. Por eso emplea dos tonos sinusoidales alternados de aproximadamente \xAB2.220 Hz y 1.300 Hz\xBB.",
   "ure-p2-q102": "Marca la afirmaci\xF3n falsa: los sufijos de dos letras no est\xE1n reservados \xFAnicamente a estaciones colectivas en la normativa del banco. Por eso la opci\xF3n incorrecta es \xABSe reservan \xFAnicamente para estaciones colectivas\xBB.",
+  "ure-p2-q104": "La Recomendaci\xF3n CEPT T/R 61-01 permite operar temporalmente, sin tr\xE1mite adicional, en los pa\xEDses que la han adoptado, usando all\xED las bandas atribuidas al Servicio de Aficionados. Por eso la licencia CEPT \xABPermite operar en las bandas autorizadas al Servicio de Aficionados en cualquier pa\xEDs visitado que se haya adherido a la Recomendaci\xF3n T/R61-01 de la CEPT\xBB.",
   "ure-p2-q107": "Los indicativos ED\u2026 identifican estaciones autom\xE1ticas desatendidas en el esquema espa\xF1ol (anal\xF3gicas o digitales seg\xFAn el caso). ED3ZHO encaja en ese tipo. \xABCorresponde a una estaci\xF3n autom\xE1tica desatendida\xBB.",
   "ure-p2-q111": "EA seguido de cifra de distrito (1\u20139) y barra indica operador con licencia CEPT extranjero emitiendo temporalmente en Espa\xF1a, no un indicativo fijo espa\xF1ol ordinario. \xABEs que un titular de licencia CEPT extranjero est\xE1 emitiendo en Espa\xF1a\xBB.",
   "ure-p2-q112": "Revocada la autorizaci\xF3n, no puedes operar hasta obtener una nueva si la normativa lo permite. \xABHasta una nueva autorizaci\xF3n no podr\xE1 ejercer la actividad de la radioafici\xF3n\xBB. (BOE-A-2013-7624).",
   "ure-p2-q115": "La autorizaci\xF3n de espectro para aficionados conlleva la asignaci\xF3n del indicativo al concederse; no es gratuita ni sin requisitos previos. \xABCuando se conceda, a la vez se otorgar\xE1 el distintivo de llamada\xBB.",
+  "ure-p2-q116": "En el pa\xEDs visitado solo puedes emplear las bandas atribuidas al aficionado en ese pa\xEDs, no las autorizadas en el tuyo. Por eso, entre las condiciones de uso de la licencia CEPT, la afirmaci\xF3n falsa es \xABLa licencia permitir\xE1 utilizar todas las bandas de frecuencias atribuidas al Servicio de Aficionados, autorizadas en su pa\xEDs, aunque no lo est\xE9n en el pa\xEDs donde va a operar la estaci\xF3n\xBB.",
   "ure-p2-q117": "Con licencia CEPT debes cumplir la reglamentaci\xF3n del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
   "ure-p2-q119": "Estas componentes nacen del propio proceso de modulaci\xF3n y caen justo al lado de la anchura de banda necesaria. Por eso se llaman emisiones \xABFuera de banda\xBB, distintas de los arm\xF3nicos.",
-  "ure-p2-q120": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+  "ure-p2-q120": "En radiotelefon\xEDa la se\xF1al internacional de socorro es la palabra Mayday, reservada a peligro grave e inminente. Por eso la se\xF1al es \xABMayday\xBB.",
+  "ure-p2-q151": "Con el alfabeto ICAO, T\u2192Tango, O\u2192Oscar y P\u2192Papa. Por eso TOP se deletrea \xABTango, Oscar, Papa\xBB.",
   "ure-p2-q152": "En la nomenclatura ITU, la gama de 3 a 30 MHz recibe el s\xEDmbolo HF (High Frequency), las ondas decam\xE9tricas. \xABHF\xBB.",
+  "ure-p2-q153": "El certificado HAREC de la Recomendaci\xF3n T/R 61-02 est\xE1 abierto tambi\xE9n a administraciones que la adoptan aunque no sean miembros de la CEPT, para reconocer ex\xE1menes internacionalmente. Por eso pueden participar \xABTodos los pa\xEDses pertenezcan, o no, a la CEPT\xBB.",
+  "ure-p2-q154": "Los sufijos de dos letras son m\xE1s cortos y escasos, por lo que se reservan a operadores con experiencia acreditada. Por eso pueden asignarse \xABA cualquier radioaficionado que acredite cinco a\xF1os de pr\xE1cticas en la radioafici\xF3n internacional\xBB.",
+  "ure-p2-q155": 'La llamada de socorro en fon\xEDa repite Mayday tres veces, seguido de \xABaqu\xED\xBB o \xABde\xBB y del distintivo de la estaci\xF3n en peligro. Por eso se compone de \xABLa palabra "mayday" (tres veces), seguida de la palabra "aqu\xED" o "de" y a continuaci\xF3n el distintivo de llamada u otra se\xF1al que identifique a la estaci\xF3n m\xF3vil en peligro (tres veces)\xBB.',
+  "ure-p2-q156": "El prefijo ED se reserva en Espa\xF1a a estaciones autom\xE1ticas y desatendidas. Por eso estas estaciones utilizar\xE1n el prefijo \xABED\xBB.",
   "ure-p2-q157": "Hace falta licencia de estaci\xF3n (y autorizaci\xF3n de operador vigente); no basta con comprar equipo. \xABLicencia de Estaci\xF3n\xBB. (BOE-A-2013-7624).",
   "ure-p2-q158": "El prefijo EA9 identifica estaciones en Ceuta y Melilla dentro de la numeraci\xF3n de indicativos espa\xF1oles. Por eso EA9ADI corresponde a \xABCeuta\xBB.",
   "ure-p2-q160": "Decir \xABcambio\xBB al ceder el turno avisa al corresponsal de que ya puede hablar. Por eso, como buena pr\xE1ctica operativa en fon\xEDa, su uso es \xABRecomendable\xBB.",
   "ure-p2-q162": "Los plazos administrativos del reglamento deben contrastarse con el BOE vigente; el banco fija la opci\xF3n \xABSeis semanas\xBB para este enunciado. (BOE-A-2013-7624).",
-  "ure-p2-q163": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABVictor\xBB.",
+  "ure-p2-q163": "El alfabeto fon\xE9tico internacional asigna a cada letra una palabra fija para deletrear sin error en fon\xEDa. A la letra V le corresponde la palabra \xABVictor\xBB.",
+  "ure-p2-q165": "Hay que identificar qu\xE9 grupo re\xFAne m\xE1s provincias del distrito 4. La proposici\xF3n correcta es \xABC\xE1ceres, C\xE1diz, Cuenca, Ciudad Real\xBB.",
+  "ure-p2-q166": "El acceso de extranjeros residentes a la autorizaci\xF3n espa\xF1ola se condiciona a la reciprocidad con su pa\xEDs de origen. Por eso podr\xE1n ser titulares \xABCuando exista Acuerdo o Convenio de reciprocidad en la materia con el pa\xEDs de origen del radioaficionado\xBB.",
+  "ure-p2-q167": "La cifra 0 en el distintivo es excepcional y se reserva a actos de especial relevancia institucional. Por eso solo se autoriza \xABCon motivos de actos que sean inaugurados o visitados por Su Majestad el Rey\xBB.",
+  "ure-p2-q168": "La licencia CEPT debe llevar datos de identificaci\xF3n, indicativo y referencia a la T/R 61-01, pero no la fecha en que se aprob\xF3 el examen, que es un dato administrativo previo. Por eso no es requisito que conste la \xABFecha de superaci\xF3n del examen\xBB.",
   "ure-p2-q169": "Una estaci\xF3n colectiva para experimentaci\xF3n de propagaci\xF3n puede ser una radiobaliza u otra estaci\xF3n autom\xE1tica desatendida seg\xFAn el supuesto. \xABRadiobaliza\xBB. (BOE-A-2013-7624).",
   "ure-p2-q170": "La cifra del indicativo espa\xF1ol identifica el distrito geogr\xE1fico de la estaci\xF3n seg\xFAn la tabla oficial. Para este enunciado corresponde \xAB5\xBB.",
   "ure-p2-q172": "Las estaciones m\xF3viles mar\xEDtimas a\xF1aden el sufijo /MM al distintivo para indicar operaci\xF3n a bordo, seg\xFAn pr\xE1ctica internacional de identificaci\xF3n en radiocomunicaciones mar\xEDtimas. No confundir con /P (port\xE1til) ni con indicativos terrestres EA. \xAB/MM\xBB.",
+  "ure-p2-q175": "Una estaci\xF3n fija remota es la que, estando en emplazamiento fijo, se gobierna a distancia por el operador. Por eso se define como \xABEstaci\xF3n fija de aficionado que puede ser accionada a distancia\xBB.",
   "ure-p2-q176": "La licencia CEPT (T/R 61-01) permite operar temporalmente en pa\xEDses adheridos, pero siempre debes respetar la reglamentaci\xF3n local del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
   "ure-p2-q177": "Las autorizaciones en bandas de uso restringido tienen caducidad; el enunciado fija un m\xE1ximo de dieciocho meses renovable seg\xFAn tr\xE1mite. \xABSe otorgar\xE1n por un plazo m\xE1ximo de dieciocho meses\xBB.",
   "ure-p2-q180": "En el c\xF3digo Q, QRT significa \xABcese la transmisi\xF3n\xBB; conviene no confundirlo con QRP (reducir potencia) ni con QSA (intensidad de la se\xF1al recibida). \xABQRT\xBB.",
   "ure-p2-q206": "El alfabeto fon\xE9tico ICAO (NATO) asigna una palabra a cada letra para deletrear con claridad en fon\xEDa. La letra del enunciado corresponde a \xABRomeo\xBB.",
+  "ure-p2-q207": "El sufijo de una sola letra es el m\xE1s escaso del plan de indicativos, por lo que se limita a eventos de m\xE1xima relevancia. Por eso se reserva para \xABConcursos internacionales de alta competitividad\xBB.",
+  "ure-p2-q208": "El mundo se divide en tres Regiones de la UIT con atribuciones distintas, as\xED que los planes IARU se adaptan a cada una. Por eso \xABPueden ser distintos en cada Regi\xF3n\xBB.",
   "ure-p2-q211": "Las frecuencias de llamada son puntos comunes donde los operadores de un mismo modo se buscan para establecer contacto, y despu\xE9s pasan a otra frecuencia para el QSO. \xABPermiten contactar con otros operadores que utilizan el mismo modo\xBB.",
+  "ure-p2-q213": "Con el alfabeto ICAO, M\u2192Mike, A\u2192Alfa y R\u2192Romeo. Por eso MAR se deletrea \xABMike, Alfa, Romeo\xBB.",
   "ure-p2-q215": "QRT significa cese de transmisi\xF3n (\xABdeje de transmitir\xBB). No confundir con QSY (cambio de frecuencia) ni QRX (espera). \xABDeje de transmitir\xBB.",
   "ure-p2-q216": "El distintivo debe identificar la estaci\xF3n al inicio y al final de cada comunicaci\xF3n para que la contraparte sepa qui\xE9n emite. Es obligaci\xF3n de buena pr\xE1ctica y del reglamento del servicio de aficionados. \xABAl comienzo y final de cada emisi\xF3n\xBB.",
   "ure-p2-q219": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSea demasiado extensa\xBB. (BOE-A-2013-7624).",
   "ure-p2-q222": "Tras desmontar la antena por obras de la comunidad, el radioaficionado tiene derecho a reinstalarla en condiciones similares a las que ten\xEDa antes, una vez terminadas. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB.",
   "ure-p2-q223": "La banda HF son las ondas decam\xE9tricas, muy usadas para enlaces de larga distancia por reflexi\xF3n ionosf\xE9rica. Por eso, en la nomenclatura ITU, abarca de \xAB3 a 30 MHz\xBB.",
+  "ure-p2-q225": "Con el alfabeto ICAO, G\u2192Golf, O\u2192Oscar, L\u2192Lima y F\u2192Foxtrot. Por eso GOLF se deletrea \xABGolf, oscar, lima, foxtrot\xBB.",
   "ure-p2-q226": "El punto donde se fijan las riostras a la obra civil del inmueble reparte los esfuerzos mec\xE1nicos del m\xE1stil. Por eso ese elemento de fijaci\xF3n se denomina \xABAnclaje\xBB.",
-  "ure-p2-q233": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+  "ure-p2-q229": "Operando fuera de Espa\xF1a con licencia CEPT te ajustas a las bandas y condiciones del pa\xEDs visitado, no a las espa\xF1olas. Por eso, la licencia CEPT de un radioaficionado espa\xF1ol \xABLe permite la utilizaci\xF3n de todas las bandas atribuidas al Servicio de Aficionados autorizadas en el pa\xEDs donde se va a operar la estaci\xF3n\xBB.",
+  "ure-p2-q230": "En el pa\xEDs visitado debes poder acreditar tu habilitaci\xF3n ante la autoridad que la requiera. Por eso est\xE1s obligado a \xABPresentar la autorizaci\xF3n de radioaficionado, si las autoridades se lo exigen\xBB.",
+  "ure-p2-q232": "La autorizaci\xF3n es un derecho del titular, que puede renunciar a ella cuando quiera. Por eso la cancelaci\xF3n se efect\xFAa \xABEn cualquier momento a petici\xF3n del titular\xBB.",
+  "ure-p2-q233": "Para indicar peligro grave e inminente en fon\xEDa se emite la palabra Mayday. Por eso emitiremos \xABMayday\xBB.",
   "ure-p2-q237": "Se define como radiocomunicaci\xF3n toda telecomunicaci\xF3n realizada por medio de ondas radioel\xE9ctricas, frente a otras telecomunicaciones por cable o fibra. \xABRadiocomunicaci\xF3n\xBB.",
+  "ure-p2-q238": "El Reglamento limita la potencia de salida de las estaciones desatendidas en VHF y UHF fuera del casco urbano para reducir interferencias. Por eso, como norma general, ser\xE1 de \xAB50 W\xBB.",
+  "ure-p2-q269": "Con el alfabeto ICAO, F\u2192Foxtrot, I\u2192India y N\u2192November. Por eso FIN se deletrea \xABFoxtrot, India, November\xBB.",
   "ure-p2-q27": "QRM indica interferencia de origen artificial (otras emisiones, equipos cercanos). QRN es ruido atmosf\xE9rico natural. Por eso la abreviatura de interferencia es \xABQRM\xBB.",
   "ure-p2-q270": "En telegraf\xEDa, la se\xF1al de procedimiento AR (\xB7\u2212\xB7\u2212\xB7) se transmite para marcar el fin del mensaje enviado. \xABAR\xBB.",
+  "ure-p2-q271": "La se\xF1al de socorro en fon\xEDa es Mayday (tres veces), la palabra \xABaqu\xED\xBB o \xABde\xBB y el distintivo (tres veces). Por eso se compone de \xABMAYDAY (tres veces), la palabra AQU\xCD o DE y el distintivo de llamada (tres veces)\xBB.",
+  "ure-p2-q273": "Los planes IARU no son ley, sino una gu\xEDa consensuada para ordenar modos y segmentos en cada banda. Por eso \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
   "ure-p2-q274": "Sin superar la prueba de operador (diploma) no se concede la autorizaci\xF3n de radioaficionado. \xABDiploma de operador\xBB. (BOE-A-2013-7624).",
   "ure-p2-q278": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEl c\xF3digo de deletreo ICAO\xBB. (BOE-A-2013-7624).",
   "ure-p2-q279": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB. (BOE-A-2013-7624).",
   "ure-p2-q280": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q281": "Para obtener autorizaci\xF3n en Espa\xF1a, el extranjero residente debe acreditar su capacitaci\xF3n con el certificado HAREC. Por eso podr\xE1n obtenerla cuando \xABSean titulares del Certificado HAREC\xBB.",
   "ure-p2-q282": "EB es prefijo de estaci\xF3n de aficionado en Espa\xF1a; la cifra de distrito (EB1) asocia la provincia en el banco de examen. EB1VZY corresponde a \xAB\xC1vila\xBB.",
+  "ure-p2-q283": "El distintivo se forma con un prefijo (EA, EB, EC\u2026) y un sufijo de letras; hay que reconocer cu\xE1l encaja en el plan de distintivos. Entre las opciones, el sufijo asignable es \xABEEE\xBB.",
+  "ure-p2-q284": "La memoria descriptiva detalla emplazamiento, equipos y sistema radiante, pero no exige acreditar el padr\xF3n. Por eso no es preciso incluir el \xABCertificado de empadronamiento\xBB.",
   "ure-p2-q289": "La banda VHF (30\u2013300 MHz) corresponde a las ondas m\xE9tricas, llamadas as\xED porque su longitud de onda es del orden del metro. \xABM\xE9tricas\xBB.",
+  "ure-p2-q292": "El radioaficionado puede operar solo en portable o m\xF3vil; no se le impone tener instalaci\xF3n fija. Por eso \xABNo es obligatorio disponer de estaci\xF3n fija\xBB.",
+  "ure-p2-q295": "El reconocimiento mutuo del HAREC exige que el pa\xEDs de destino aplique la Recomendaci\xF3n T/R 61-02 de la CEPT. Por eso podr\xE1 obtener licencia en Croacia si \xABCroacia aplica la Recomendaci\xF3n T/R 61-02 de la CEPT\xBB.",
   "ure-p2-q296": "En la nomenclatura ITU, A3E designa una emisi\xF3n de amplitud con doble banda lateral y un solo canal de informaci\xF3n anal\xF3gica (telefon\xEDa AM cl\xE1sica). \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+  "ure-p2-q298": "El alfabeto fon\xE9tico internacional asigna a cada letra una palabra fija para deletrear sin error en fon\xEDa. A la letra U le corresponde la palabra \xABUniform\xBB.",
+  "ure-p2-q31": "El indicativo lleva una cifra que identifica el distrito geogr\xE1fico, y cada provincia est\xE1 adscrita a uno de ellos. Entre las opciones, la provincia que pertenece al distrito 5 es \xABAlbacete\xBB.",
   "ure-p2-q32": "Los distintivos espa\xF1oles de aficionado siguen el formato EA/EB/EC + distrito + sufijo; \xABAM8SOS\xBB no es un formato asignable en ese esquema. \xABNo se puede asignar\xBB.",
+  "ure-p2-q329": "Con el alfabeto ICAO, B\u2192Bravo, O\u2192Oscar y J\u2192Juliett. Por eso BOJ se deletrea \xABBravo, Oscar, Juliett\xBB.",
+  "ure-p2-q330": "La abreviatura que anuncia que el operador llamar\xE1 de nuevo m\xE1s tarde es QRX. Por eso el grupo correcto es \xABQRX\xBB.",
   "ure-p2-q331": "El distintivo espa\xF1ol combina prefijo nacional (E\u2026), cifra de distrito y sufijo asignado por la administraci\xF3n. Por eso la estructura es \xABPrefijo + Distrito + Sufijo\xBB.",
+  "ure-p2-q332": "Aunque son recomendaciones, los planes IARU de la Regi\xF3n 1 ordenan la convivencia en el espectro y se siguen por consenso. Por eso han de tenerse en cuenta \xABPor todo radioaficionado que opere en Espa\xF1a\xBB.",
   "ure-p2-q334": "El prefijo EA6 corresponde a las Islas Baleares en la numeraci\xF3n de indicativos espa\xF1oles. Por eso un distintivo EA6\u2026 asociado al archipi\xE9lago puede corresponder a \xABPalma de Mallorca\xBB.",
   "ure-p2-q336": "Espa\xF1a tiene prefijos ITU EA, EB y EC para estaciones amateur. FM/FN son franc\xE9s; KN americano. \xABEA, EB, EC\xBB.",
+  "ure-p2-q338": "El prefijo EG identifica usos temporales de relevancia regional, auton\xF3mica o local. Por eso el prefijo EG se relaciona con \xABUsos temporales de especial relevancia para eventos de car\xE1cter regional, auton\xF3mico o local\xBB.",
   "ure-p2-q339": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB. (BOE-A-2013-7624).",
   "ure-p2-q340": "Un mensaje de socorro usa Mayday o se\xF1ales de socorro, no Securit\xE9 (se\xF1al de seguridad para avisos que no son socorro). Por eso no incluye \xABLa se\xF1al de seguridad Securite\xBB.",
+  "ure-p2-q341": "El titular de una licencia CEPT debe respetar el Reglamento de Radiocomunicaciones y la reglamentaci\xF3n vigente tanto en origen como en el pa\xEDs visitado. Por eso la afirmaci\xF3n falsa es la de \xABNo respetar las disposiciones del Reglamento de Radiocomunicaciones y de la Reglamentaci\xF3n vigente en el pa\xEDs de origen\xBB.",
   "ure-p2-q344": "Las ondas m\xE9tricas (VHF, 30\u2013300 MHz) se abrevian B.m. en la nomenclatura de bandas, porque su longitud de onda es del orden del metro. \xABLa abreviatura m\xE9trica B. m.\xBB.",
   "ure-p2-q347": "Sin titular con autorizaci\xF3n de radioaficionado (y licencia de estaci\xF3n cuando proceda) no hay instalaci\xF3n regular. \xABLa autorizaci\xF3n de radioaficionado de su titular\xBB. (BOE-A-2013-7624).",
   "ure-p2-q349": "El repetidor ampl\xEDa cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tr\xE1fico ajeno al servicio. \xABAmpliar el alcance de las comunicaciones\xBB. (BOE-A-2013-7624).",
@@ -21735,33 +21800,56 @@ var curated_explanations_default = {
   "ure-p2-q390": "Bajo CEPT, el operador extranjero antepone el prefijo del pa\xEDs y distrito visitado a su indicativo de origen. Por eso EA3/OK2HM es un radioaficionado con licencia de otro pa\xEDs que opera ocasionalmente en el distrito 3. \xABUn radioaficionado con licencia expedida en otro pa\xEDs, opera ocasionalmente en el distrito 3\xBB.",
   "ure-p2-q392": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB. (BOE-A-2013-7624).",
   "ure-p2-q393": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEst\xE1 emitiendo desde Andaluc\xEDa\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q394": "Los planes de banda son una referencia internacional consensuada, no una norma legal. Por eso \xABSirven de gu\xEDa a los radioaficionados de todo el mundo\xBB.",
   "ure-p2-q395": "QRN indica perturbaci\xF3n por ruido atmosf\xE9rico (tormentas, descargas). QRM es interferencia artificial. Por eso el c\xF3digo Q atmosf\xE9rico es \xABQRN\xBB.",
   "ure-p2-q396": "El reglamento vigente (BOE-A-2013-7624) limita la potencia de las estaciones desatendidas en zona urbana. Por eso en VHF/UHF dentro del casco urbano la salida no puede superar los \xAB10 W\xBB.",
+  "ure-p2-q397": "Para tramitar la licencia se acompa\xF1a una memoria que describe el conjunto de la instalaci\xF3n. Por eso es necesario presentar \xABSolicitud adjuntando una memoria descriptiva del conjunto de la instalaci\xF3n\xBB.",
   "ure-p2-q398": "El reglamento vigente (BOE-A-2013-7624) fija el tope de potencia de las estaciones autom\xE1ticas desatendidas. Por eso en la banda de HF su salida m\xE1xima es de \xAB50 W\xBB.",
   "ure-p2-q400": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q404": "Hay que identificar el grupo con m\xE1s provincias del distrito 1 (norte y noroeste). La proposici\xF3n correcta es \xABAsturias, \xC1vila, Le\xF3n\xBB.",
+  "ure-p2-q409": "La habilitaci\xF3n temporal solo es v\xE1lida en pa\xEDses que han adoptado la T/R 61-01; sin esa adopci\xF3n no hay reconocimiento autom\xE1tico. Por eso, al visitar otro pa\xEDs, el titular podr\xE1 \xABRealizar emisiones si el pa\xEDs visitado ha adoptado la Recomendaci\xF3n CEPT T/R61-01\xBB.",
+  "ure-p2-q43": "Los sufijos cortos especiales como AO son escasos y muy visibles, por lo que se reservan a acontecimientos de gran proyecci\xF3n. Por eso el sufijo AO se otorga para eventos temporales \xABEspeciales de relevancia internacional\xBB.",
   "ure-p2-q44": "La comunidad de propietarios no autoriza la instalaci\xF3n: el derecho a instalar la antena lo ampara la normativa, aunque haya que informar a la comunidad. \xABNo\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q445": "Con el alfabeto ICAO, C\u2192Charlie, I\u2192India y D\u2192Delta. Por eso CID se deletrea \xABCharlie, India, Delta\xBB.",
   "ure-p2-q446": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q449": "Los sufijos de dos letras ya no son exclusivos de unos pocos: se conceden cumpliendo ciertos requisitos. Por eso los distintivos con sufijo de 2 letras \xABPodr\xE1n ser asignados a cualquier radioaficionado que cumpla con determinadas condiciones\xBB.",
   "ure-p2-q45": "La banda 10,00\u201310,5 GHz entre aficionados requiere autorizaci\xF3n especial de uso seg\xFAn el cuadro nacional del BOE; 14 MHz y 50 MHz son bandas habituales sin ese requisito adicional. \xAB10,00-10,5 GHz\xBB.",
+  "ure-p2-q451": "Los planes IARU recomiendan qu\xE9 modo conviene en cada segmento (CW, fon\xEDa, datos\u2026) para evitar interferencias. Por eso \xABProporcionan informaci\xF3n sobre el modo recomendado de utilizaci\xF3n en cada banda de frecuencias\xBB.",
   "ure-p2-q454": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB. (BOE-A-2013-7624).",
   "ure-p2-q457": "Las ondas m\xE9tricas, de longitud de onda en torno al metro, se representan con el s\xEDmbolo VHF (30\u2013300 MHz). \xABVHF\xBB.",
   "ure-p2-q458": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo\xBB. (BOE-A-2013-7624).",
   "ure-p2-q460": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q461": "Con licencia CEPT te rigen las atribuciones del pa\xEDs donde operas, no las de origen. Por eso se permite emitir \xABEn todas las bandas de frecuencias atribuidas al Servicio de Aficionados en el pa\xEDs visitado\xBB.",
   "ure-p2-q468": "La Ley 19/1983, llamada Ley de Antenas, reconoce el derecho de los radioaficionados a instalar sus antenas en el exterior de los inmuebles. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
-  "ure-p2-q504": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSeven\xBB.",
+  "ure-p2-q47": "Una estaci\xF3n fija puede trasladarse y usarse de forma ocasional como portable sin perder su condici\xF3n. Por eso una estaci\xF3n fija de radioaficionado \xABPodr\xE1 ser utilizada con car\xE1cter temporal como portable\xBB.",
+  "ure-p2-q471": "Un prefijo temporal (ED, EE, EF) sustituye solo al prefijo del distintivo; el sufijo personal permanente se conserva para seguir identificando al operador. Por eso \xABMantendr\xE1n sin variaci\xF3n el resto del distintivo asignado con car\xE1cter permanente al radioaficionado\xBB.",
+  "ure-p2-q48": "La validez de la licencia CEPT, tambi\xE9n para la operaci\xF3n m\xF3vil, depende de que el pa\xEDs de destino haya adoptado la Recomendaci\xF3n T/R 61-01. Por eso habilita \xABEn cualquier pa\xEDs que haya adoptado la Recomendaci\xF3n T/R 61-01\xBB.",
+  "ure-p2-q504": "Adem\xE1s de las letras, las cifras se transmiten con su palabra inglesa normalizada para evitar confusiones en fon\xEDa. El n\xFAmero 7 se deletrea como \xABSeven\xBB.",
   "ure-p2-q506": "En el c\xF3digo Q, QRP pide reducir la potencia de transmisi\xF3n. Por eso, para pedir lo contrario, aumentar la potencia, la abreviatura correcta es \xABQRO\xBB.",
+  "ure-p2-q51": "El reglamento contempla que el car\xE1cter de uso especial de bandas o frecuencias pueda revisarse a trav\xE9s del CNAF. Por eso el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados \xABPrev\xE9 que el CNAF podr\xE1 modificar en alg\xFAn momento el car\xE1cter de uso especial de determinadas bandas, subbandas o frecuencias y establecer su atribuci\xF3n para otros usos\xBB.",
+  "ure-p2-q511": "El reglamento espa\xF1ol equipara la licencia CEPT extranjera a la autorizaci\xF3n nacional mientras se opera aqu\xED, sin tr\xE1mite a\xF1adido. Por eso toda licencia CEPT \xABGoza de equiparaci\xF3n a la autorizaci\xF3n de aficionado nacional, en los t\xE9rminos recogidos en el Reglamento de uso del dominio p\xFAblico radioel\xE9ctrico por aficionados\xBB.",
   "ure-p2-q512": "Un distintivo puede reutilizarse cuando se cancela la autorizaci\xF3n anterior que lo ten\xEDa asignado; no queda reservado para siempre al titular previo. \xABSi se cancela la autorizaci\xF3n correspondiente\xBB.",
   "ure-p2-q513": "RST informa legibilidad (R), intensidad de se\xF1al (S) y tono (T) en fon\xEDa; no es un c\xF3digo Q ni una se\xF1al de socorro. \xABInformar sobre la intensidad de la se\xF1al recibida\xBB.",
+  "ure-p2-q514": "Los planes IARU se construyen respetando las atribuciones de bandas que fija el Reglamento de Radiocomunicaciones de la UIT. Por eso \xABTienen en cuenta la atribuci\xF3n de bandas del Reglamento de Radiocomunicaciones de la UIT\xBB.",
   "ure-p2-q515": "La Administraci\xF3n debe informar al presidente de la comunidad cuando se le ha solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB.",
   "ure-p2-q516": 'Pan-Pan (tres veces) es urgencia sin peligro grave inmediato. Mayday reserva el socorro grave. \xABDel grupo "pan pan" repetido tres veces\xBB.',
   "ure-p2-q518": "Sin acreditar residencia legal en Espa\xF1a no procede la autorizaci\xF3n de extranjero residente. \xABAcredite documentalmente su condici\xF3n de residente en Espa\xF1a\xBB. (BOE-A-2013-7624).",
   "ure-p2-q519": "El certificado HAREC acredita el examen de operador armonizado entre administraciones CEPT. Se vincula a la Recomendaci\xF3n T/R 61-02, distinta de T/R 61-01 (licencia CEPT para operar en el extranjero). \xABT/R 61-02\xBB.",
+  "ure-p2-q52": "Con el alfabeto ICAO, M\u2192Mike, E\u2192Echo, R\u2192Romeo y O\u2192Oscar. Por eso MERO se deletrea \xABMIKE, ECHO, ROMEO, OSCAR\xBB.",
   "ure-p2-q520": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTelecomunicaciones\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q523": "Los distintivos temporales se conceden para actividades concretas y limitadas en el tiempo, no para el uso ordinario. Por eso se puede solicitar uno \xABCuando un radioaficionado desee participar en concursos, experimentos, ensayos, demostraciones y otros eventos\xBB.",
   "ure-p2-q526": "Suelen autorizarse a asociaciones de aficionados legalmente constituidas, no a particulares sin estructura de gesti\xF3n. \xABUna asociaci\xF3n de radioaficionados reconocida\xBB. (BOE-A-2013-7624).",
-  "ure-p2-q531": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSierra, Lima\xBB.",
+  "ure-p2-q531": "En el alfabeto fon\xE9tico internacional, S\u2192Sierra y L\u2192Lima. Por eso a esas letras les corresponden \xABSierra, Lima\xBB.",
+  "ure-p2-q54": "La licencia CEPT del propio titular es su autorizaci\xF3n nacional, de car\xE1cter permanente; lo temporal es solo la operaci\xF3n en el pa\xEDs visitado. Por eso la afirmaci\xF3n falsa es \xABLa utilizaci\xF3n a que habilita es de forma temporal\xBB.",
+  "ure-p2-q56": "Operando temporalmente en el extranjero debes llevar y mostrar tu autorizaci\xF3n si te la piden las autoridades. Por eso est\xE1s obligado a \xABPresentar la autorizaci\xF3n de radioaficionado a petici\xF3n de las autoridades\xBB.",
   "ure-p2-q57": "La licencia CEPT permite operar temporalmente en otro pa\xEDs adherido, pero no garantiza protecci\xF3n administrativa contra interferencias ajenas all\xED. Por eso \xABNo\xBB.",
+  "ure-p2-q58": "Las ciudades aut\xF3nomas de Ceuta y Melilla tambi\xE9n tienen su cifra de distrito en el indicativo. Entre las opciones, la ciudad adscrita al distrito 9 es \xABMelilla\xBB.",
   "ure-p2-q87": "Espa\xF1a pertenece a la Regi\xF3n 1 de la UIT (Europa, \xC1frica y parte de Asia). \xABEspa\xF1a se encuentra en la Regi\xF3n 1\xBB. (BOE-A-2013-7624).",
   "ure-p2-q90": "Los distintivos temporales de una sola letra se reservan a concursos internacionales de alta competitividad seg\xFAn el criterio del banco/reglamento hist\xF3rico. \xABLa participaci\xF3n en concursos internacionales de alta competitividad\xBB.",
+  "ure-p2-q91": "Con el alfabeto ICAO, R\u2192Romeo, E\u2192Echo e Y\u2192Yankee. Por eso REY se deletrea \xABRomeo, Echo, Yankee\xBB.",
+  "ure-p2-q92": "Para los indicativos de llamada, el territorio espa\xF1ol se reparte en distritos numerados que se reflejan en la cifra del distintivo. El n\xFAmero total de distritos es \xAB9 (nueve)\xBB.",
   "ure-p2-q93": "En tr\xE1fico entre aficionados est\xE1n permitidos mensajes t\xE9cnicos de ensayos; no propaganda comercial ni usar indicativo ajeno sin permiso. \xABTransmitir mensajes de naturaleza t\xE9cnica sobre ensayos\xBB.",
+  "ure-p2-q94": "El alfabeto fon\xE9tico evita confusiones entre letras de sonido parecido al transmitir en fon\xEDa. Por eso sirve para \xABDeletrear el mensaje\xBB.",
   "ure-p2-q95": "Los prefijos de indicativos espa\xF1oles en el servicio de aficionado incluyen EA (aficionado), EB y EC seg\xFAn tipo de estaci\xF3n o autorizaci\xF3n en territorio nacional. Por eso la terna habitual del banco es \xABEA, EB, EC\xBB.",
   "ure-p2-q96": "QTH indica la ubicaci\xF3n o emplazamiento de la estaci\xF3n en tr\xE1fico. QSY es cambio de frecuencia y QSL confirma contacto. \xABQTH\xBB.",
   "ure-p2-q97": "El titular responde de da\xF1os por instalaci\xF3n, uso o mantenimiento defectuoso de su antena (seguro y responsabilidad civil). \xABEl radioaficionado\xBB. (BOE-A-2013-7624)."
