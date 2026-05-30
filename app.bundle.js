@@ -1397,8 +1397,30 @@ var STOP = /* @__PURE__ */ new Set([
   "diagrama",
   "pantalla"
 ]);
+var UNIT_TOKENS = /* @__PURE__ */ new Set([
+  "hz",
+  "khz",
+  "mhz",
+  "ghz",
+  "db",
+  "dbi",
+  "dbd",
+  "dbm",
+  "dbw",
+  "vatio",
+  "vatios",
+  "ohm",
+  "ohms",
+  "ohmio",
+  "ohmios",
+  "voltio",
+  "voltios",
+  "amperio",
+  "amperios"
+]);
+var FIGURE_REF_RE = /\b(dibujo|figura|gr[aá]fic|esquema|diagrama|pantalla|recuadro|cuadro)\b/i;
 function tokens(text) {
-  return String(text || "").toLowerCase().normalize("NFD").replace(/\p{M}/gu, "").match(/[a-z0-9áéíóúüñ]{3,}/gi)?.filter((t) => !STOP.has(t)) ?? [];
+  return String(text || "").toLowerCase().normalize("NFD").replace(/\p{M}/gu, "").match(/[a-z0-9áéíóúüñ]{3,}/gi)?.filter((t) => !STOP.has(t) && !UNIT_TOKENS.has(t) && !/^\d+$/.test(t)) ?? [];
 }
 function scoreLine(line, stemSet, extra) {
   const lt = new Set(tokens(line));
@@ -1438,7 +1460,8 @@ function pickDeepenFocusLines(q, opts = {}) {
   const correct = typeof q?.correctIndex === "number" && Array.isArray(q?.options) ? String(q.options[q.correctIndex] ?? "") : "";
   const stemSet = /* @__PURE__ */ new Set([...tokens(q?.stem), ...tokens(correct)]);
   const extra = new Set(tokens(q?.stemFigureAlt));
-  const ranked = candidates.map((line) => ({ line, score: scoreLine(line, stemSet, extra) })).filter((x) => x.score >= minScore).sort((a, b) => b.score - a.score);
+  const hasFigure = Boolean(q?.stemFigure || q?.stemFigureAlt);
+  const ranked = candidates.filter((line) => hasFigure || !FIGURE_REF_RE.test(line)).map((line) => ({ line, score: scoreLine(line, stemSet, extra) })).filter((x) => x.score >= minScore).sort((a, b) => b.score - a.score);
   const seen = /* @__PURE__ */ new Set();
   const picked = [];
   for (const { line } of ranked) {
@@ -1845,7 +1868,7 @@ var questions_banco_default = [
       "Troposfera"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABIonosfera\xBB."
+    "explain": "La ionosfera es la capa alta de la atm\xF3sfera ionizada por la radiaci\xF3n solar; refleja las ondas de HF, y por eso las condiciones de propagaci\xF3n cambian con la actividad solar. \xABIonosfera\xBB."
   },
   {
     "id": "fedi-ah-031",
@@ -1901,7 +1924,7 @@ var questions_banco_default = [
       "Medio a\xF1o"
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABTres meses\xBB. (BOE-A-2013-7624)."
+    "explain": "Salvo urgencia, la comunidad debe avisar al radioaficionado con tres meses de antelaci\xF3n antes de exigir el desmontaje de la antena por obras, para que pueda reorganizar su instalaci\xF3n. \xABTres meses\xBB. (BOE-A-2013-7624)."
   },
   {
     "id": "fedi-ah-035",
@@ -1999,7 +2022,7 @@ var questions_banco_default = [
       "Est\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales"
     ],
     "correctIndex": 3,
-    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624)."
+    "explain": "El titular debe permitir las obras de conservaci\xF3n del edificio, pero la comunidad ha de comprometerse a reponer la antena en sus condiciones iniciales al terminarlas. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624)."
   },
   {
     "id": "fedi-ah-042",
@@ -2239,7 +2262,7 @@ var questions_banco_default = [
       "La impedancia del vac\xEDo"
     ],
     "correctIndex": 1,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia\xBB.",
+    "explain": "En FM la informaci\xF3n se transmite variando la frecuencia instant\xE1nea de la portadora, no su amplitud, que se mantiene constante. Por eso la magnitud que var\xEDa es \xABLa frecuencia\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -3454,7 +3477,7 @@ var questions_banco_default = [
       "Solicitar permiso al titular de la licencia de estaci\xF3n."
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
+    "explain": "Antes de obras que afecten a una antena autorizada, la comunidad debe informar al titular de la licencia con un mes de antelaci\xF3n si fuera necesario desmontarla. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3484,7 +3507,7 @@ var questions_banco_default = [
       "Conjunto de emisiones de banda estrecha."
     ],
     "correctIndex": 2,
-    "explain": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
+    "explain": "Las emisiones no deseadas agrupan las no esenciales y las de fuera de banda: todo lo que se radia adem\xE1s de la emisi\xF3n necesaria para la comunicaci\xF3n. \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3529,7 +3552,7 @@ var questions_banco_default = [
       "En todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W."
     ],
     "correctIndex": 3,
-    "explain": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
+    "explain": "En el segmento 50,0\u201351,0 MHz se permite emitir en todo el territorio nacional siempre que la potencia m\xE1xima del equipo no supere los 50 W. \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3664,7 +3687,7 @@ var questions_banco_default = [
       "156,525 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xAB2.187,5 kHz\xBB.",
+    "explain": "En el GMDSS, la banda MF tiene una frecuencia internacional reservada para la alerta de socorro por Llamada Selectiva Digital (DSC). Por eso esa alerta se transmite en \xAB2.187,5 kHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -3784,7 +3807,7 @@ var questions_banco_default = [
       "Intensidad"
     ],
     "correctIndex": 0,
-    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABPotencia\xBB.",
+    "explain": "El dBm es una medida logar\xEDtmica de potencia referida a 1 mW. Por tanto, la magnitud que representa el dBm es la potencia. \xABPotencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3829,7 +3852,7 @@ var questions_banco_default = [
       "15 vatios"
     ],
     "correctIndex": 2,
-    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB.",
+    "explain": "La potencia disipada en una resistencia es P = I\xB2\xB7R. Con I = 2 A y R = 30 \u03A9 resulta P = 2\xB2\xB730 = 120 W. \xAB120 vatios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3921,7 +3944,7 @@ var questions_banco_default = [
       "La suma de las capacidades individuales"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABLa suma de las capacidades individuales\xBB.",
+    "explain": "Al conectar condensadores en paralelo las capacidades se suman, como si aumentara la superficie de armadura; por eso la capacidad total es mayor que cada una. \xABLa suma de las capacidades individuales\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4029,7 +4052,7 @@ var questions_banco_default = [
       "La frecuencia con la que debe cortarse la gu\xEDa para la transmisi\xF3n"
     ],
     "correctIndex": 0,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia por debajo de la cual no es posible la transmisi\xF3n en la gu\xEDa de onda\xBB.",
+    "explain": "Una gu\xEDa de onda no deja pasar se\xF1ales por debajo de cierta frecuencia: esa es su frecuencia de corte, por debajo de la cual no hay transmisi\xF3n por la gu\xEDa. \xABLa frecuencia por debajo de la cual no es posible la transmisi\xF3n en la gu\xEDa de onda\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4091,7 +4114,7 @@ var questions_banco_default = [
       "Es el medio de propagaci\xF3n caracter\xEDstico en las grandes ciudades"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABLa se\xF1al radioel\xE9ctrica se propaga siguiendo la curvatura terrestre\xBB."
+    "explain": "En la propagaci\xF3n por onda de superficie la se\xF1al se gu\xEDa por el terreno y sigue la curvatura terrestre, alcanzando puntos m\xE1s all\xE1 del horizonte \xF3ptico. \xABLa se\xF1al radioel\xE9ctrica se propaga siguiendo la curvatura terrestre\xBB."
   },
   {
     "id": "ure-p1-q147",
@@ -4167,7 +4190,7 @@ var questions_banco_default = [
       "300.000 m/h"
     ],
     "correctIndex": 0,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xAB300.000 km/s\xBB.",
+    "explain": "Las ondas electromagn\xE9ticas viajan en el vac\xEDo a la velocidad de la luz, unos 300.000 km/s (3\xB710\u2078 m/s). \xAB300.000 km/s\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4227,7 +4250,7 @@ var questions_banco_default = [
       "El vatio"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEl vatio\xBB.",
+    "explain": "La potencia el\xE9ctrica es energ\xEDa por unidad de tiempo. Por eso su unidad en el SI es el vatio (1 W = 1 julio por segundo). \xABEl vatio\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4242,7 +4265,7 @@ var questions_banco_default = [
       "Un divisor de tensi\xF3n en funci\xF3n de la temperatura externa"
     ],
     "correctIndex": 2,
-    "explain": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+    "explain": "Un termistor NTC tiene coeficiente de temperatura negativo: su resistencia disminuye al aumentar la temperatura, al contrario que un PTC. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4272,7 +4295,7 @@ var questions_banco_default = [
       "300.000 Km/seg"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABLa longitud de onda multiplicada por la frecuencia\xBB.",
+    "explain": "La velocidad de propagaci\xF3n cumple siempre la f\xF3rmula v = \u03BB\xB7f. Por tanto, es la longitud de onda multiplicada por la frecuencia. \xABLa longitud de onda multiplicada por la frecuencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4302,7 +4325,7 @@ var questions_banco_default = [
       "Q=B/f"
     ],
     "correctIndex": 0,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABQ=f/B\xBB.",
+    "explain": "El factor de calidad relaciona la frecuencia de resonancia f con el ancho de banda B mediante la f\xF3rmula Q = f/B. Por eso, cuanto m\xE1s estrecha la respuesta, mayor es Q. \xABQ=f/B\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4317,7 +4340,7 @@ var questions_banco_default = [
       "La diferencia que existe entre la se\xF1al sintonizada y el ruido"
     ],
     "correctIndex": 2,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad que tiene para separar dos se\xF1ales de frecuencias pr\xF3ximas\xBB.",
+    "explain": "La selectividad es la capacidad del receptor para separar dos se\xF1ales de frecuencias pr\xF3ximas, rechazando la adyacente y dejando pasar la deseada. \xABLa capacidad que tiene para separar dos se\xF1ales de frecuencias pr\xF3ximas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4362,7 +4385,7 @@ var questions_banco_default = [
       "Receptor con dos amplificadores de RF"
     ],
     "correctIndex": 0,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABReceptor con dos frecuencias intermedias independientes\xBB.",
+    "explain": "El superheterodino de doble conversi\xF3n emplea dos frecuencias intermedias independientes (dos mezclas sucesivas) para mejorar la selectividad y el rechazo de la frecuencia imagen. \xABReceptor con dos frecuencias intermedias independientes\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4392,7 +4415,7 @@ var questions_banco_default = [
       "Funcionan por el principio de electr\xF3lisis"
     ],
     "correctIndex": 0,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABDeben conectarse respetando la polaridad indicada\xBB.",
+    "explain": "Los condensadores electrol\xEDticos son polarizados: deben conectarse respetando la polaridad marcada, pues en inversa pueden da\xF1arse o reventar. \xABDeben conectarse respetando la polaridad indicada\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4407,7 +4430,7 @@ var questions_banco_default = [
       "La frecuencia de valor constante utilizada en los receptores superheterodinos"
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
+    "explain": "La frecuencia intermedia es una frecuencia fija a la que el superheterodino traslada todas las se\xF1ales para filtrarlas y amplificarlas con ganancia y selectividad constantes. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4570,7 +4593,7 @@ var questions_banco_default = [
       "La acci\xF3n de sintonizar una determinada estaci\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "El fading es variaci\xF3n r\xE1pida de nivel por multipath o propagaci\xF3n; no es arm\xF3nico ni selectividad. \xABEl desvanecimiento transitorio de una se\xF1al electromagn\xE9tica que se propaga\xBB.",
+    "explain": "El fading es el desvanecimiento transitorio del nivel de una se\xF1al que se propaga, causado por la interferencia de trayectos m\xFAltiples o por cambios en la propagaci\xF3n. \xABEl desvanecimiento transitorio de una se\xF1al electromagn\xE9tica que se propaga\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4585,7 +4608,7 @@ var questions_banco_default = [
       "S\xF3lo se aten\xFAan si hay lluvia"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABS\xED, siempre\xBB.",
+    "explain": "Toda onda se aten\xFAa al propagarse, porque su energ\xEDa se reparte en un frente cada vez mayor y el medio introduce p\xE9rdidas. Por eso la respuesta es \xABS\xED, siempre\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4693,7 +4716,7 @@ var questions_banco_default = [
       "Voltios"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABVoltios\xBB.",
+    "explain": "La diferencia de potencial o tensi\xF3n el\xE9ctrica se mide en voltios (V), unidad del SI que equivale al trabajo por unidad de carga. \xABVoltios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4708,7 +4731,7 @@ var questions_banco_default = [
       "Utilizar para su conexi\xF3n cable blindado"
     ],
     "correctIndex": 3,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABUtilizar para su conexi\xF3n cable blindado\xBB.",
+    "explain": "Para evitar que la RF se cuele en los altavoces de un equipo de baja frecuencia se usa cable blindado, cuya malla apantalla los conductores frente a las interferencias. \xABUtilizar para su conexi\xF3n cable blindado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4827,7 +4850,7 @@ var questions_banco_default = [
       "Cero"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABInversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador\xBB.",
+    "explain": "En resonancia las reactancias se igualan y f0 = 1/(2\u03C0\u221A(LC)); por tanto el cuadrado de la frecuencia es inversamente proporcional al producto L\xB7C. \xABInversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4889,7 +4912,7 @@ var questions_banco_default = [
       "Tensi\xF3n el\xE9ctrica"
     ],
     "correctIndex": 3,
-    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABTensi\xF3n el\xE9ctrica\xBB."
+    "explain": "El dB\xB5V es una medida logar\xEDtmica de tensi\xF3n referida a 1 microvoltio. Por tanto, \xAB10 dB\xB5V\xBB expresa un valor de tensi\xF3n el\xE9ctrica, no de potencia. \xABTensi\xF3n el\xE9ctrica\xBB."
   },
   {
     "id": "ure-p1-q255",
@@ -4962,7 +4985,7 @@ var questions_banco_default = [
       "EHF"
     ],
     "correctIndex": 0,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABHF\xBB.",
+    "explain": "La banda de HF (3\u201330 MHz) es la que mejor se refleja en la ionosfera. Por eso permite enlaces a larga distancia mediante salto ionosf\xE9rico. \xABHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5086,7 +5109,7 @@ var questions_banco_default = [
       "Mantener constante el valor de la frecuencia intermedia"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABMantener constante la amplitud de la se\xF1al de salida\xBB.",
+    "explain": "El control autom\xE1tico de ganancia (CAG) ajusta la ganancia del receptor seg\xFAn el nivel de entrada para mantener constante la amplitud de la se\xF1al de salida. \xABMantener constante la amplitud de la se\xF1al de salida\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5146,7 +5169,7 @@ var questions_banco_default = [
       "Que el circuito sea de corriente continua"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABQue las impedancias capacitiva e inductiva se igualen\xBB.",
+    "explain": "Hay resonancia cuando las reactancias capacitiva e inductiva se igualan y se cancelan, de modo que el circuito se comporta como puramente resistivo. \xABQue las impedancias capacitiva e inductiva se igualen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5205,7 +5228,7 @@ var questions_banco_default = [
       "Depende de la potencia del equipo y se expresa en dBm"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABEs una caracter\xEDstica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)\xBB.",
+    "explain": "La relaci\xF3n se\xF1al/ruido compara el nivel de se\xF1al \xFAtil con el de ruido; es un indicador de la calidad del receptor que se expresa en decibelios. \xABEs una caracter\xEDstica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5314,7 +5337,7 @@ var questions_banco_default = [
       "LF"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABHF\xBB.",
+    "explain": "La propagaci\xF3n por onda ionosf\xE9rica (reflexi\xF3n en la ionosfera) predomina en la banda de HF. Por eso con HF se logran alcances de miles de kil\xF3metros. \xABHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5378,7 +5401,7 @@ var questions_banco_default = [
       "Capac\xEDmetro"
     ],
     "correctIndex": 0,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABVat\xEDmetro\xBB.",
+    "explain": "La potencia de una se\xF1al el\xE9ctrica se mide con un vat\xEDmetro, que combina la medida de tensi\xF3n y de corriente para dar el producto P = V\xB7I. \xABVat\xEDmetro\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5425,7 +5448,7 @@ var questions_banco_default = [
       "Siempre vale 1"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABSi la frecuencia es 0, su valor es 0\xBB.",
+    "explain": "La reactancia inductiva es XL = 2\u03C0fL: crece con la frecuencia, de modo que en continua (f = 0) vale cero y la bobina se comporta como un cortocircuito. \xABSi la frecuencia es 0, su valor es 0\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5455,7 +5478,7 @@ var questions_banco_default = [
       "Es constante en un determinado medio"
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABEs constante en un determinado medio\xBB."
+    "explain": "La velocidad de propagaci\xF3n de una onda electromagn\xE9tica depende del medio; dentro de un mismo medio es constante (en el vac\xEDo, la velocidad de la luz). \xABEs constante en un determinado medio\xBB."
   },
   {
     "id": "ure-p1-q367",
@@ -5469,7 +5492,7 @@ var questions_banco_default = [
       "La portadora est\xE1 desfasada 180\xBA respecto a la \xFAnica banda lateral"
     ],
     "correctIndex": 0,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. \xABSe tiene una sola banda lateral sin portadora\xBB.",
+    "explain": "En banda lateral \xFAnica (SSB) se suprimen la portadora y una de las bandas laterales, transmitiendo solo la otra, lo que ahorra potencia y ancho de banda. \xABSe tiene una sola banda lateral sin portadora\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5575,7 +5598,7 @@ var questions_banco_default = [
       "Onda reflejada"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABOnda directa\xBB."
+    "explain": "En VHF y UHF las frecuencias apenas se reflejan en la ionosfera. Por eso la propagaci\xF3n habitual es de visi\xF3n directa entre antenas, llamada onda directa o espacial. \xABOnda directa\xBB."
   },
   {
     "id": "ure-p1-q377",
@@ -5604,7 +5627,7 @@ var questions_banco_default = [
       "HF"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMF\xBB.",
+    "explain": "En ondas medias la se\xF1al se gu\xEDa por el suelo siguiendo la curvatura terrestre. Por eso la propagaci\xF3n por onda de superficie predomina en la banda \xABMF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5700,7 +5723,7 @@ var questions_banco_default = [
       "Un oscilador de cuarzo"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABUn circuito para suprimir la salida de sonido de un receptor cuando la se\xF1al de entrada a este no supera un determinado nivel\xBB.",
+    "explain": "El squelch o silenciador corta la salida de audio cuando la se\xF1al de entrada no supera un umbral, para no o\xEDr ruido de fondo cuando no hay comunicaci\xF3n. \xABUn circuito para suprimir la salida de sonido de un receptor cuando la se\xF1al de entrada a este no supera un determinado nivel\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5946,7 +5969,7 @@ var questions_banco_default = [
       "La intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor"
     ],
     "correctIndex": 3,
-    "explain": "El fading es variaci\xF3n r\xE1pida de nivel por multipath o propagaci\xF3n; no es arm\xF3nico ni selectividad. \xABLa intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor\xBB.",
+    "explain": "En el desvanecimiento (fading) la intensidad de la se\xF1al recibida var\xEDa con el tiempo, pudiendo llegar a no detectarse, por interferencia de trayectos o cambios de propagaci\xF3n. \xABLa intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5993,7 +6016,7 @@ var questions_banco_default = [
       "VHF y superiores"
     ],
     "correctIndex": 3,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xABVHF y superiores\xBB.",
+    "explain": "El rebote lunar (EME) necesita atravesar la ionosfera sin reflejarse en ella. Por eso se usan VHF y bandas superiores, que la traspasan camino de la Luna. \xABVHF y superiores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6178,7 +6201,7 @@ var questions_banco_default = [
       "Longitud de onda"
     ],
     "correctIndex": 2,
-    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABPotencia el\xE9ctrica\xBB."
+    "explain": "El dBm expresa potencia en escala logar\xEDtmica referida a 1 mW; por tanto la magnitud a la que se refiere es la potencia el\xE9ctrica. \xABPotencia el\xE9ctrica\xBB."
   },
   {
     "id": "ure-p1-q483",
@@ -6268,7 +6291,7 @@ var questions_banco_default = [
       "Uno"
     ],
     "correctIndex": 3,
-    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABUno\xBB.",
+    "explain": "Con acoplamiento \xF3ptimo entre transmisor y antena no hay onda reflejada. Por eso el medidor de ROE marca su valor m\xEDnimo posible, que es uno. \xABUno\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6465,7 +6488,7 @@ var questions_banco_default = [
       "100 voltios"
     ],
     "correctIndex": 0,
-    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB.",
+    "explain": "Por la ley de Ohm, V = I\xB7R. Con I = 10 mA (0,01 A) y R = 1 k\u03A9 (1000 \u03A9) resulta V = 0,01\xB71000 = 10 V. \xAB10 voltios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6480,7 +6503,7 @@ var questions_banco_default = [
       "Mayor alcance que el meramente visual entre las antenas transmisora y receptora"
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMayor alcance que el meramente visual entre las antenas transmisora y receptora\xBB.",
+    "explain": "La dispersi\xF3n troposf\xE9rica reenv\xEDa parte de la se\xF1al hacia el suelo desde la trop\xF3sfera, logrando alcances mayores que la simple visi\xF3n directa entre antenas. \xABMayor alcance que el meramente visual entre las antenas transmisora y receptora\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6495,7 +6518,7 @@ var questions_banco_default = [
       "Nulos"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMenores\xBB.",
+    "explain": "En 3,5 MHz, de d\xEDa la capa D de la ionosfera absorbe la se\xF1al y reduce la reflexi\xF3n. Por eso los alcances diurnos son menores que durante la noche. \xABMenores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6525,7 +6548,7 @@ var questions_banco_default = [
       "Una resistencia cuyo valor se mantiene constante a medida que la temperatura disminuye"
     ],
     "correctIndex": 0,
-    "explain": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+    "explain": "El termistor NTC (coeficiente negativo) reduce su resistencia al calentarse; se usa como sensor de temperatura y para compensaci\xF3n t\xE9rmica. Por eso es \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6540,7 +6563,7 @@ var questions_banco_default = [
       "Incrementar el margen de sinton\xEDa de un amplificador"
     ],
     "correctIndex": 1,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABIncrementar la frecuencia de un oscilador\xBB.",
+    "explain": "Un multiplicador de frecuencia entrega a su salida un m\xFAltiplo entero de la frecuencia de entrada, y sirve para elevar la frecuencia de un oscilador hasta la banda de trabajo. \xABIncrementar la frecuencia de un oscilador\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6614,7 +6637,7 @@ var questions_banco_default = [
       "Igual a la de la antena y a la del transmisor"
     ],
     "correctIndex": 3,
-    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABIgual a la de la antena y a la del transmisor\xBB.",
+    "explain": "El acoplamiento \xF3ptimo exige que la l\xEDnea de transmisi\xF3n tenga la misma impedancia que la antena y que el transmisor; as\xED no hay reflexiones y la ROE vale 1. \xABIgual a la de la antena y a la del transmisor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6629,7 +6652,7 @@ var questions_banco_default = [
       "A la banda del transmisor"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABA la frecuencia por encima de la cual no hay reflexiones en la ionosfera\xBB.",
+    "explain": "La frecuencia cr\xEDtica es el l\xEDmite por encima del cual una onda con incidencia vertical ya no se refleja en la ionosfera, sino que la atraviesa. \xABA la frecuencia por encima de la cual no hay reflexiones en la ionosfera\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6659,7 +6682,7 @@ var questions_banco_default = [
       "Su capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABSu capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo\xBB.",
+    "explain": "Igual que en las resistencias, el c\xF3digo de bandas de color de un condensador indica su capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo. \xABSu capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7021,7 +7044,7 @@ var questions_banco_default = [
       "UHF"
     ],
     "correctIndex": 1,
-    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xABHF\xBB.",
+    "explain": "En la nomenclatura ITU, la gama de 3 a 30 MHz recibe el s\xEDmbolo HF (High Frequency), las ondas decam\xE9tricas. \xABHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7546,7 +7569,7 @@ var questions_banco_default = [
       "Deber\xE1 comunicarlo a la Administraci\xF3n competente en espectro radioel\xE9ctrico y Tecnolog\xEDa de la Informaci\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB es la formulaci\xF3n del banco.",
+    "explain": "Tras desmontar la antena por obras de la comunidad, el radioaficionado tiene derecho a reinstalarla en condiciones similares a las que ten\xEDa antes, una vez terminadas. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7561,7 +7584,7 @@ var questions_banco_default = [
       "300 a 3.000 MHz"
     ],
     "correctIndex": 2,
-    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xAB3 a 30 MHz\xBB.",
+    "explain": "La banda HF son las ondas decam\xE9tricas, muy usadas para enlaces de larga distancia por reflexi\xF3n ionosf\xE9rica. Por eso, en la nomenclatura ITU, abarca de \xAB3 a 30 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7591,7 +7614,7 @@ var questions_banco_default = [
       "Anclaje"
     ],
     "correctIndex": 3,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABAnclaje\xBB.",
+    "explain": "El punto donde se fijan las riostras a la obra civil del inmueble reparte los esfuerzos mec\xE1nicos del m\xE1stil. Por eso ese elemento de fijaci\xF3n se denomina \xABAnclaje\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8010,7 +8033,7 @@ var questions_banco_default = [
       "Milim\xE9tricas"
     ],
     "correctIndex": 1,
-    "explain": "Las ondas m\xE9tricas (30\u2013300 MHz) se asocian al s\xEDmbolo VHF en la nomenclatura habitual del examen. \xABM\xE9tricas\xBB.",
+    "explain": "La banda VHF (30\u2013300 MHz) corresponde a las ondas m\xE9tricas, llamadas as\xED porque su longitud de onda es del orden del metro. \xABM\xE9tricas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8099,7 +8122,7 @@ var questions_banco_default = [
       "Banda lateral \xFAnica con portadora reducida"
     ],
     "correctIndex": 1,
-    "explain": "Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+    "explain": "En la nomenclatura ITU, A3E designa una emisi\xF3n de amplitud con doble banda lateral y un solo canal de informaci\xF3n anal\xF3gica (telefon\xEDa AM cl\xE1sica). \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8369,7 +8392,7 @@ var questions_banco_default = [
       "La abreviatura m\xE9trica B. m."
     ],
     "correctIndex": 3,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa abreviatura m\xE9trica B. m.\xBB.",
+    "explain": "Las ondas m\xE9tricas (VHF, 30\u2013300 MHz) se abrevian B.m. en la nomenclatura de bandas, porque su longitud de onda es del orden del metro. \xABLa abreviatura m\xE9trica B. m.\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8698,7 +8721,7 @@ var questions_banco_default = [
       "20 W"
     ],
     "correctIndex": 1,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB10 W\xBB."
+    "explain": "El reglamento vigente (BOE-A-2013-7624) limita la potencia de las estaciones desatendidas en zona urbana. Por eso en VHF/UHF dentro del casco urbano la salida no puede superar los \xAB10 W\xBB."
   },
   {
     "id": "ure-p2-q397",
@@ -8727,7 +8750,7 @@ var questions_banco_default = [
       "100 W"
     ],
     "correctIndex": 1,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB50 W\xBB.",
+    "explain": "El reglamento vigente (BOE-A-2013-7624) fija el tope de potencia de las estaciones autom\xE1ticas desatendidas. Por eso en la banda de HF su salida m\xE1xima es de \xAB50 W\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8951,7 +8974,7 @@ var questions_banco_default = [
       "S\xF3lo en caso de que la instalaci\xF3n sea sencilla"
     ],
     "correctIndex": 0,
-    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABNo\xBB. (BOE-A-2013-7624).",
+    "explain": "La comunidad de propietarios no autoriza la instalaci\xF3n: el derecho a instalar la antena lo ampara la normativa, aunque haya que informar a la comunidad. \xABNo\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9131,7 +9154,7 @@ var questions_banco_default = [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Las ondas m\xE9tricas (30\u2013300 MHz) se asocian al s\xEDmbolo VHF en la nomenclatura habitual del examen. \xABVHF\xBB.",
+    "explain": "Las ondas m\xE9tricas, de longitud de onda en torno al metro, se representan con el s\xEDmbolo VHF (30\u2013300 MHz). \xABVHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9251,7 +9274,7 @@ var questions_banco_default = [
       "La exenci\xF3n de presentar memoria descriptiva de la instalaci\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "La Ley de 19 julio 1983 sobre inmobiliaria y antenas regula el derecho a instalar en fachadas y cubiertas con l\xEDmites de seguridad y est\xE9tica. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
+    "explain": "La Ley 19/1983, llamada Ley de Antenas, reconoce el derecho de los radioaficionados a instalar sus antenas en el exterior de los inmuebles. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9506,7 +9529,7 @@ var questions_banco_default = [
       "Se vayan a realizar obras por parte de la comunidad"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB es la formulaci\xF3n del banco.",
+    "explain": "La Administraci\xF3n debe informar al presidente de la comunidad cuando se le ha solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -9902,7 +9925,7 @@ var questions_banco_default = [
 ];
 
 // data/questions-banco-estudio.js
-var BANCO_ESTUDIO_STATS = { "count": 587, "examSubset": 563, "studyOnlyAdded": 24, "paraphraseRemoved": 126, "withFigure": 30, "withPedagogicalExplain": 580 };
+var BANCO_ESTUDIO_STATS = { "count": 587, "examSubset": 563, "studyOnlyAdded": 24, "paraphraseRemoved": 126, "withFigure": 30, "withPedagogicalExplain": 587 };
 var questions_banco_estudio_default = [
   {
     "id": "fedi-ag-001",
@@ -10296,7 +10319,7 @@ var questions_banco_estudio_default = [
       "Troposfera"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABIonosfera\xBB."
+    "explain": "La ionosfera es la capa alta de la atm\xF3sfera ionizada por la radiaci\xF3n solar; refleja las ondas de HF, y por eso las condiciones de propagaci\xF3n cambian con la actividad solar. \xABIonosfera\xBB."
   },
   {
     "id": "fedi-ah-031",
@@ -10352,7 +10375,7 @@ var questions_banco_estudio_default = [
       "Medio a\xF1o"
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABTres meses\xBB. (BOE-A-2013-7624)."
+    "explain": "Salvo urgencia, la comunidad debe avisar al radioaficionado con tres meses de antelaci\xF3n antes de exigir el desmontaje de la antena por obras, para que pueda reorganizar su instalaci\xF3n. \xABTres meses\xBB. (BOE-A-2013-7624)."
   },
   {
     "id": "fedi-ah-035",
@@ -10450,7 +10473,7 @@ var questions_banco_estudio_default = [
       "Est\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales"
     ],
     "correctIndex": 3,
-    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624)."
+    "explain": "El titular debe permitir las obras de conservaci\xF3n del edificio, pero la comunidad ha de comprometerse a reponer la antena en sus condiciones iniciales al terminarlas. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624)."
   },
   {
     "id": "fedi-ah-042",
@@ -10690,7 +10713,7 @@ var questions_banco_estudio_default = [
       "La impedancia del vac\xEDo"
     ],
     "correctIndex": 1,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia\xBB.",
+    "explain": "En FM la informaci\xF3n se transmite variando la frecuencia instant\xE1nea de la portadora, no su amplitud, que se mantiene constante. Por eso la magnitud que var\xEDa es \xABLa frecuencia\xBB.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -11691,7 +11714,7 @@ var questions_banco_estudio_default = [
       "La polarizaci\xF3n mec\xE1nica"
     ],
     "correctIndex": 2,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. \xABLa amplitud\xBB."
+    "explain": "En AM la portadora conserva su frecuencia fija y es su amplitud la que sigue a la se\xF1al moduladora. Por eso la magnitud que var\xEDa principalmente es \xABLa amplitud\xBB."
   },
   {
     "id": "q5",
@@ -12102,7 +12125,7 @@ var questions_banco_estudio_default = [
       "Solicitar permiso al titular de la licencia de estaci\xF3n."
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
+    "explain": "Antes de obras que afecten a una antena autorizada, la comunidad debe informar al titular de la licencia con un mes de antelaci\xF3n si fuera necesario desmontarla. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12132,7 +12155,7 @@ var questions_banco_estudio_default = [
       "Conjunto de emisiones de banda estrecha."
     ],
     "correctIndex": 2,
-    "explain": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
+    "explain": "Las emisiones no deseadas agrupan las no esenciales y las de fuera de banda: todo lo que se radia adem\xE1s de la emisi\xF3n necesaria para la comunicaci\xF3n. \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12205,7 +12228,7 @@ var questions_banco_estudio_default = [
       "En todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W."
     ],
     "correctIndex": 3,
-    "explain": "En reglamentaci\xF3n de aficionados, la redacci\xF3n del BOE y la convocatoria mandan sobre potencias, tr\xE1mites y procedimientos. La opci\xF3n que encaja con este enunciado es \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
+    "explain": "En el segmento 50,0\u201351,0 MHz se permite emitir en todo el territorio nacional siempre que la potencia m\xE1xima del equipo no supere los 50 W. \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12354,7 +12377,7 @@ var questions_banco_estudio_default = [
       "156,525 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Las se\xF1ales de socorro est\xE1n reservadas a emergencias reales; su uso indebido es infracci\xF3n grave. \xAB2.187,5 kHz\xBB.",
+    "explain": "En el GMDSS, la banda MF tiene una frecuencia internacional reservada para la alerta de socorro por Llamada Selectiva Digital (DSC). Por eso esa alerta se transmite en \xAB2.187,5 kHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -12399,7 +12422,7 @@ var questions_banco_estudio_default = [
       "V/m"
     ],
     "correctIndex": 3,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "El campo el\xE9ctrico mide la fuerza por unidad de carga, es decir, tensi\xF3n repartida a lo largo de una distancia. Por eso se expresa en voltios por metro: \xABV/m\xBB."
   },
   {
     "id": "ure-p1-q10",
@@ -12488,7 +12511,7 @@ var questions_banco_estudio_default = [
       "Intensidad"
     ],
     "correctIndex": 0,
-    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABPotencia\xBB.",
+    "explain": "El dBm es una medida logar\xEDtmica de potencia referida a 1 mW. Por tanto, la magnitud que representa el dBm es la potencia. \xABPotencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12533,7 +12556,7 @@ var questions_banco_estudio_default = [
       "15 vatios"
     ],
     "correctIndex": 2,
-    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB.",
+    "explain": "La potencia disipada en una resistencia es P = I\xB2\xB7R. Con I = 2 A y R = 30 \u03A9 resulta P = 2\xB2\xB730 = 120 W. \xAB120 vatios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12625,7 +12648,7 @@ var questions_banco_estudio_default = [
       "La suma de las capacidades individuales"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABLa suma de las capacidades individuales\xBB.",
+    "explain": "Al conectar condensadores en paralelo las capacidades se suman, como si aumentara la superficie de armadura; por eso la capacidad total es mayor que cada una. \xABLa suma de las capacidades individuales\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12733,7 +12756,7 @@ var questions_banco_estudio_default = [
       "La frecuencia con la que debe cortarse la gu\xEDa para la transmisi\xF3n"
     ],
     "correctIndex": 0,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia por debajo de la cual no es posible la transmisi\xF3n en la gu\xEDa de onda\xBB.",
+    "explain": "Una gu\xEDa de onda no deja pasar se\xF1ales por debajo de cierta frecuencia: esa es su frecuencia de corte, por debajo de la cual no hay transmisi\xF3n por la gu\xEDa. \xABLa frecuencia por debajo de la cual no es posible la transmisi\xF3n en la gu\xEDa de onda\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12795,7 +12818,7 @@ var questions_banco_estudio_default = [
       "Es el medio de propagaci\xF3n caracter\xEDstico en las grandes ciudades"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABLa se\xF1al radioel\xE9ctrica se propaga siguiendo la curvatura terrestre\xBB."
+    "explain": "En la propagaci\xF3n por onda de superficie la se\xF1al se gu\xEDa por el terreno y sigue la curvatura terrestre, alcanzando puntos m\xE1s all\xE1 del horizonte \xF3ptico. \xABLa se\xF1al radioel\xE9ctrica se propaga siguiendo la curvatura terrestre\xBB."
   },
   {
     "id": "ure-p1-q147",
@@ -12871,7 +12894,7 @@ var questions_banco_estudio_default = [
       "300.000 m/h"
     ],
     "correctIndex": 0,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xAB300.000 km/s\xBB.",
+    "explain": "Las ondas electromagn\xE9ticas viajan en el vac\xEDo a la velocidad de la luz, unos 300.000 km/s (3\xB710\u2078 m/s). \xAB300.000 km/s\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12931,7 +12954,7 @@ var questions_banco_estudio_default = [
       "El vatio"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEl vatio\xBB.",
+    "explain": "La potencia el\xE9ctrica es energ\xEDa por unidad de tiempo. Por eso su unidad en el SI es el vatio (1 W = 1 julio por segundo). \xABEl vatio\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12946,7 +12969,7 @@ var questions_banco_estudio_default = [
       "Hilo de cobre desnudo"
     ],
     "correctIndex": 0,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La fibra \xF3ptica transmite luz, no se\xF1ales el\xE9ctricas. Por eso no capta las interferencias electromagn\xE9ticas radiadas que s\xED afectan a los conductores met\xE1licos. \xABFibra \xF3ptica\xBB."
   },
   {
     "id": "ure-p1-q183",
@@ -12960,7 +12983,7 @@ var questions_banco_estudio_default = [
       "Un divisor de tensi\xF3n en funci\xF3n de la temperatura externa"
     ],
     "correctIndex": 2,
-    "explain": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+    "explain": "Un termistor NTC tiene coeficiente de temperatura negativo: su resistencia disminuye al aumentar la temperatura, al contrario que un PTC. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -12990,7 +13013,7 @@ var questions_banco_estudio_default = [
       "300.000 Km/seg"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABLa longitud de onda multiplicada por la frecuencia\xBB.",
+    "explain": "La velocidad de propagaci\xF3n cumple siempre la f\xF3rmula v = \u03BB\xB7f. Por tanto, es la longitud de onda multiplicada por la frecuencia. \xABLa longitud de onda multiplicada por la frecuencia\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13020,7 +13043,7 @@ var questions_banco_estudio_default = [
       "Q=B/f"
     ],
     "correctIndex": 0,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABQ=f/B\xBB.",
+    "explain": "El factor de calidad relaciona la frecuencia de resonancia f con el ancho de banda B mediante la f\xF3rmula Q = f/B. Por eso, cuanto m\xE1s estrecha la respuesta, mayor es Q. \xABQ=f/B\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13035,7 +13058,7 @@ var questions_banco_estudio_default = [
       "La diferencia que existe entre la se\xF1al sintonizada y el ruido"
     ],
     "correctIndex": 2,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABLa capacidad que tiene para separar dos se\xF1ales de frecuencias pr\xF3ximas\xBB.",
+    "explain": "La selectividad es la capacidad del receptor para separar dos se\xF1ales de frecuencias pr\xF3ximas, rechazando la adyacente y dejando pasar la deseada. \xABLa capacidad que tiene para separar dos se\xF1ales de frecuencias pr\xF3ximas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13080,7 +13103,7 @@ var questions_banco_estudio_default = [
       "Receptor con dos amplificadores de RF"
     ],
     "correctIndex": 0,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABReceptor con dos frecuencias intermedias independientes\xBB.",
+    "explain": "El superheterodino de doble conversi\xF3n emplea dos frecuencias intermedias independientes (dos mezclas sucesivas) para mejorar la selectividad y el rechazo de la frecuencia imagen. \xABReceptor con dos frecuencias intermedias independientes\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13110,7 +13133,7 @@ var questions_banco_estudio_default = [
       "Funcionan por el principio de electr\xF3lisis"
     ],
     "correctIndex": 0,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABDeben conectarse respetando la polaridad indicada\xBB.",
+    "explain": "Los condensadores electrol\xEDticos son polarizados: deben conectarse respetando la polaridad marcada, pues en inversa pueden da\xF1arse o reventar. \xABDeben conectarse respetando la polaridad indicada\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13125,7 +13148,7 @@ var questions_banco_estudio_default = [
       "La frecuencia de valor constante utilizada en los receptores superheterodinos"
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la se\xF1al a una FI fija para filtrar y amplificar con estabilidad. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
+    "explain": "La frecuencia intermedia es una frecuencia fija a la que el superheterodino traslada todas las se\xF1ales para filtrarlas y amplificarlas con ganancia y selectividad constantes. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13288,7 +13311,7 @@ var questions_banco_estudio_default = [
       "La acci\xF3n de sintonizar una determinada estaci\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "El fading es variaci\xF3n r\xE1pida de nivel por multipath o propagaci\xF3n; no es arm\xF3nico ni selectividad. \xABEl desvanecimiento transitorio de una se\xF1al electromagn\xE9tica que se propaga\xBB.",
+    "explain": "El fading es el desvanecimiento transitorio del nivel de una se\xF1al que se propaga, causado por la interferencia de trayectos m\xFAltiples o por cambios en la propagaci\xF3n. \xABEl desvanecimiento transitorio de una se\xF1al electromagn\xE9tica que se propaga\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13303,7 +13326,7 @@ var questions_banco_estudio_default = [
       "S\xF3lo se aten\xFAan si hay lluvia"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABS\xED, siempre\xBB.",
+    "explain": "Toda onda se aten\xFAa al propagarse, porque su energ\xEDa se reparte en un frente cada vez mayor y el medio introduce p\xE9rdidas. Por eso la respuesta es \xABS\xED, siempre\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13411,7 +13434,7 @@ var questions_banco_estudio_default = [
       "Voltios"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABVoltios\xBB.",
+    "explain": "La diferencia de potencial o tensi\xF3n el\xE9ctrica se mide en voltios (V), unidad del SI que equivale al trabajo por unidad de carga. \xABVoltios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13426,7 +13449,7 @@ var questions_banco_estudio_default = [
       "Utilizar para su conexi\xF3n cable blindado"
     ],
     "correctIndex": 3,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABUtilizar para su conexi\xF3n cable blindado\xBB.",
+    "explain": "Para evitar que la RF se cuele en los altavoces de un equipo de baja frecuencia se usa cable blindado, cuya malla apantalla los conductores frente a las interferencias. \xABUtilizar para su conexi\xF3n cable blindado\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13545,7 +13568,7 @@ var questions_banco_estudio_default = [
       "Cero"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABInversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador\xBB.",
+    "explain": "En resonancia las reactancias se igualan y f0 = 1/(2\u03C0\u221A(LC)); por tanto el cuadrado de la frecuencia es inversamente proporcional al producto L\xB7C. \xABInversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13607,7 +13630,7 @@ var questions_banco_estudio_default = [
       "Tensi\xF3n el\xE9ctrica"
     ],
     "correctIndex": 3,
-    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABTensi\xF3n el\xE9ctrica\xBB."
+    "explain": "El dB\xB5V es una medida logar\xEDtmica de tensi\xF3n referida a 1 microvoltio. Por tanto, \xAB10 dB\xB5V\xBB expresa un valor de tensi\xF3n el\xE9ctrica, no de potencia. \xABTensi\xF3n el\xE9ctrica\xBB."
   },
   {
     "id": "ure-p1-q255",
@@ -13680,7 +13703,7 @@ var questions_banco_estudio_default = [
       "EHF"
     ],
     "correctIndex": 0,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABHF\xBB.",
+    "explain": "La banda de HF (3\u201330 MHz) es la que mejor se refleja en la ionosfera. Por eso permite enlaces a larga distancia mediante salto ionosf\xE9rico. \xABHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13774,7 +13797,7 @@ var questions_banco_estudio_default = [
       "La resistencia el\xE9ctrica es inmune a los cambios de temperatura"
     ],
     "correctIndex": 0,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "En un conductor met\xE1lico, al subir la temperatura los \xE1tomos vibran m\xE1s y dificultan el paso de los electrones; por eso aumenta su resistencia el\xE9ctrica. \xABAumenta su resistencia el\xE9ctrica\xBB."
   },
   {
     "id": "ure-p1-q3",
@@ -13818,7 +13841,7 @@ var questions_banco_estudio_default = [
       "Mantener constante el valor de la frecuencia intermedia"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABMantener constante la amplitud de la se\xF1al de salida\xBB.",
+    "explain": "El control autom\xE1tico de ganancia (CAG) ajusta la ganancia del receptor seg\xFAn el nivel de entrada para mantener constante la amplitud de la se\xF1al de salida. \xABMantener constante la amplitud de la se\xF1al de salida\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13878,7 +13901,7 @@ var questions_banco_estudio_default = [
       "Que el circuito sea de corriente continua"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABQue las impedancias capacitiva e inductiva se igualen\xBB.",
+    "explain": "Hay resonancia cuando las reactancias capacitiva e inductiva se igualan y se cancelan, de modo que el circuito se comporta como puramente resistivo. \xABQue las impedancias capacitiva e inductiva se igualen\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -13937,7 +13960,7 @@ var questions_banco_estudio_default = [
       "Depende de la potencia del equipo y se expresa en dBm"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa se\xF1ales cercanas; sensibilidad detecta se\xF1ales d\xE9biles; el ruido limita el umbral m\xEDnimo. \xABEs una caracter\xEDstica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)\xBB.",
+    "explain": "La relaci\xF3n se\xF1al/ruido compara el nivel de se\xF1al \xFAtil con el de ruido; es un indicador de la calidad del receptor que se expresa en decibelios. \xABEs una caracter\xEDstica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14046,7 +14069,7 @@ var questions_banco_estudio_default = [
       "LF"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABHF\xBB.",
+    "explain": "La propagaci\xF3n por onda ionosf\xE9rica (reflexi\xF3n en la ionosfera) predomina en la banda de HF. Por eso con HF se logran alcances de miles de kil\xF3metros. \xABHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14110,7 +14133,7 @@ var questions_banco_estudio_default = [
       "Capac\xEDmetro"
     ],
     "correctIndex": 0,
-    "explain": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABVat\xEDmetro\xBB.",
+    "explain": "La potencia de una se\xF1al el\xE9ctrica se mide con un vat\xEDmetro, que combina la medida de tensi\xF3n y de corriente para dar el producto P = V\xB7I. \xABVat\xEDmetro\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14157,7 +14180,7 @@ var questions_banco_estudio_default = [
       "Siempre vale 1"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABSi la frecuencia es 0, su valor es 0\xBB.",
+    "explain": "La reactancia inductiva es XL = 2\u03C0fL: crece con la frecuencia, de modo que en continua (f = 0) vale cero y la bobina se comporta como un cortocircuito. \xABSi la frecuencia es 0, su valor es 0\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14187,7 +14210,7 @@ var questions_banco_estudio_default = [
       "Es constante en un determinado medio"
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABEs constante en un determinado medio\xBB."
+    "explain": "La velocidad de propagaci\xF3n de una onda electromagn\xE9tica depende del medio; dentro de un mismo medio es constante (en el vac\xEDo, la velocidad de la luz). \xABEs constante en un determinado medio\xBB."
   },
   {
     "id": "ure-p1-q367",
@@ -14201,7 +14224,7 @@ var questions_banco_estudio_default = [
       "La portadora est\xE1 desfasada 180\xBA respecto a la \xFAnica banda lateral"
     ],
     "correctIndex": 0,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. \xABSe tiene una sola banda lateral sin portadora\xBB.",
+    "explain": "En banda lateral \xFAnica (SSB) se suprimen la portadora y una de las bandas laterales, transmitiendo solo la otra, lo que ahorra potencia y ancho de banda. \xABSe tiene una sola banda lateral sin portadora\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14307,7 +14330,7 @@ var questions_banco_estudio_default = [
       "Onda reflejada"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABOnda directa\xBB."
+    "explain": "En VHF y UHF las frecuencias apenas se reflejan en la ionosfera. Por eso la propagaci\xF3n habitual es de visi\xF3n directa entre antenas, llamada onda directa o espacial. \xABOnda directa\xBB."
   },
   {
     "id": "ure-p1-q377",
@@ -14336,7 +14359,7 @@ var questions_banco_estudio_default = [
       "HF"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMF\xBB.",
+    "explain": "En ondas medias la se\xF1al se gu\xEDa por el suelo siguiendo la curvatura terrestre. Por eso la propagaci\xF3n por onda de superficie predomina en la banda \xABMF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14432,7 +14455,7 @@ var questions_banco_estudio_default = [
       "Un oscilador de cuarzo"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante se\xF1ales fuertes o d\xE9biles; no cambia la frecuencia sintonizada. \xABUn circuito para suprimir la salida de sonido de un receptor cuando la se\xF1al de entrada a este no supera un determinado nivel\xBB.",
+    "explain": "El squelch o silenciador corta la salida de audio cuando la se\xF1al de entrada no supera un umbral, para no o\xEDr ruido de fondo cuando no hay comunicaci\xF3n. \xABUn circuito para suprimir la salida de sonido de un receptor cuando la se\xF1al de entrada a este no supera un determinado nivel\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14524,7 +14547,7 @@ var questions_banco_estudio_default = [
       "La tensi\xF3n se mide en amperios"
     ],
     "correctIndex": 2,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La carga el\xE9ctrica es corriente por tiempo: un culombio equivale al producto de un amperio por un segundo (1 C = 1 A\xB7s). \xABUn culombio es igual al producto de un amperio por segundo\xBB."
   },
   {
     "id": "ure-p1-q420",
@@ -14692,7 +14715,7 @@ var questions_banco_estudio_default = [
       "La intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor"
     ],
     "correctIndex": 3,
-    "explain": "El fading es variaci\xF3n r\xE1pida de nivel por multipath o propagaci\xF3n; no es arm\xF3nico ni selectividad. \xABLa intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor\xBB.",
+    "explain": "En el desvanecimiento (fading) la intensidad de la se\xF1al recibida var\xEDa con el tiempo, pudiendo llegar a no detectarse, por interferencia de trayectos o cambios de propagaci\xF3n. \xABLa intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14739,7 +14762,7 @@ var questions_banco_estudio_default = [
       "VHF y superiores"
     ],
     "correctIndex": 3,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xABVHF y superiores\xBB.",
+    "explain": "El rebote lunar (EME) necesita atravesar la ionosfera sin reflejarse en ella. Por eso se usan VHF y bandas superiores, que la traspasan camino de la Luna. \xABVHF y superiores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -14924,7 +14947,7 @@ var questions_banco_estudio_default = [
       "Longitud de onda"
     ],
     "correctIndex": 2,
-    "explain": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABPotencia el\xE9ctrica\xBB."
+    "explain": "El dBm expresa potencia en escala logar\xEDtmica referida a 1 mW; por tanto la magnitud a la que se refiere es la potencia el\xE9ctrica. \xABPotencia el\xE9ctrica\xBB."
   },
   {
     "id": "ure-p1-q483",
@@ -15014,7 +15037,7 @@ var questions_banco_estudio_default = [
       "Uno"
     ],
     "correctIndex": 3,
-    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABUno\xBB.",
+    "explain": "Con acoplamiento \xF3ptimo entre transmisor y antena no hay onda reflejada. Por eso el medidor de ROE marca su valor m\xEDnimo posible, que es uno. \xABUno\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15059,7 +15082,7 @@ var questions_banco_estudio_default = [
       "Es el valor indicativo de la diferencia de fase de la sinusoide"
     ],
     "correctIndex": 0,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La amplitud de una se\xF1al sinusoidal es su valor de pico: la diferencia entre el valor m\xE1ximo y el valor medio (la l\xEDnea de cero) de la onda. \xABEs la diferencia entre el valor m\xE1ximo y el valor medio de la se\xF1al\xBB."
   },
   {
     "id": "ure-p1-q495",
@@ -15225,7 +15248,7 @@ var questions_banco_estudio_default = [
       "100 voltios"
     ],
     "correctIndex": 0,
-    "explain": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB.",
+    "explain": "Por la ley de Ohm, V = I\xB7R. Con I = 10 mA (0,01 A) y R = 1 k\u03A9 (1000 \u03A9) resulta V = 0,01\xB71000 = 10 V. \xAB10 voltios\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15240,7 +15263,7 @@ var questions_banco_estudio_default = [
       "Mayor alcance que el meramente visual entre las antenas transmisora y receptora"
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMayor alcance que el meramente visual entre las antenas transmisora y receptora\xBB.",
+    "explain": "La dispersi\xF3n troposf\xE9rica reenv\xEDa parte de la se\xF1al hacia el suelo desde la trop\xF3sfera, logrando alcances mayores que la simple visi\xF3n directa entre antenas. \xABMayor alcance que el meramente visual entre las antenas transmisora y receptora\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15255,7 +15278,7 @@ var questions_banco_estudio_default = [
       "Nulos"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABMenores\xBB.",
+    "explain": "En 3,5 MHz, de d\xEDa la capa D de la ionosfera absorbe la se\xF1al y reduce la reflexi\xF3n. Por eso los alcances diurnos son menores que durante la noche. \xABMenores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15285,7 +15308,7 @@ var questions_banco_estudio_default = [
       "Una resistencia cuyo valor se mantiene constante a medida que la temperatura disminuye"
     ],
     "correctIndex": 0,
-    "explain": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+    "explain": "El termistor NTC (coeficiente negativo) reduce su resistencia al calentarse; se usa como sensor de temperatura y para compensaci\xF3n t\xE9rmica. Por eso es \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15300,7 +15323,7 @@ var questions_banco_estudio_default = [
       "Incrementar el margen de sinton\xEDa de un amplificador"
     ],
     "correctIndex": 1,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABIncrementar la frecuencia de un oscilador\xBB.",
+    "explain": "Un multiplicador de frecuencia entrega a su salida un m\xFAltiplo entero de la frecuencia de entrada, y sirve para elevar la frecuencia de un oscilador hasta la banda de trabajo. \xABIncrementar la frecuencia de un oscilador\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15374,7 +15397,7 @@ var questions_banco_estudio_default = [
       "Igual a la de la antena y a la del transmisor"
     ],
     "correctIndex": 3,
-    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABIgual a la de la antena y a la del transmisor\xBB.",
+    "explain": "El acoplamiento \xF3ptimo exige que la l\xEDnea de transmisi\xF3n tenga la misma impedancia que la antena y que el transmisor; as\xED no hay reflexiones y la ROE vale 1. \xABIgual a la de la antena y a la del transmisor\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15389,7 +15412,7 @@ var questions_banco_estudio_default = [
       "A la banda del transmisor"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen m\xE1s de l\xEDnea de vista. MUF y frecuencia cr\xEDtica son conceptos ionosf\xE9ricos. \xABA la frecuencia por encima de la cual no hay reflexiones en la ionosfera\xBB.",
+    "explain": "La frecuencia cr\xEDtica es el l\xEDmite por encima del cual una onda con incidencia vertical ya no se refleja en la ionosfera, sino que la atraviesa. \xABA la frecuencia por encima de la cual no hay reflexiones en la ionosfera\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15419,7 +15442,7 @@ var questions_banco_estudio_default = [
       "Su capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede m\xEDnimizarse o maximizarse seg\xFAn el montaje. \xABSu capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo\xBB.",
+    "explain": "Igual que en las resistencias, el c\xF3digo de bandas de color de un condensador indica su capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo. \xABSu capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -15781,7 +15804,7 @@ var questions_banco_estudio_default = [
       "UHF"
     ],
     "correctIndex": 1,
-    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xABHF\xBB.",
+    "explain": "En la nomenclatura ITU, la gama de 3 a 30 MHz recibe el s\xEDmbolo HF (High Frequency), las ondas decam\xE9tricas. \xABHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16306,7 +16329,7 @@ var questions_banco_estudio_default = [
       "Deber\xE1 comunicarlo a la Administraci\xF3n competente en espectro radioel\xE9ctrico y Tecnolog\xEDa de la Informaci\xF3n"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB es la formulaci\xF3n del banco.",
+    "explain": "Tras desmontar la antena por obras de la comunidad, el radioaficionado tiene derecho a reinstalarla en condiciones similares a las que ten\xEDa antes, una vez terminadas. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16321,7 +16344,7 @@ var questions_banco_estudio_default = [
       "300 a 3.000 MHz"
     ],
     "correctIndex": 2,
-    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3\u201330 MHz. Para este enunciado la respuesta correcta es \xAB3 a 30 MHz\xBB.",
+    "explain": "La banda HF son las ondas decam\xE9tricas, muy usadas para enlaces de larga distancia por reflexi\xF3n ionosf\xE9rica. Por eso, en la nomenclatura ITU, abarca de \xAB3 a 30 MHz\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16351,7 +16374,7 @@ var questions_banco_estudio_default = [
       "Anclaje"
     ],
     "correctIndex": 3,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicaci\xF3n y a veces acuerdos; no es libertad total ni prohibici\xF3n absoluta. \xABAnclaje\xBB.",
+    "explain": "El punto donde se fijan las riostras a la obra civil del inmueble reparte los esfuerzos mec\xE1nicos del m\xE1stil. Por eso ese elemento de fijaci\xF3n se denomina \xABAnclaje\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16770,7 +16793,7 @@ var questions_banco_estudio_default = [
       "Milim\xE9tricas"
     ],
     "correctIndex": 1,
-    "explain": "Las ondas m\xE9tricas (30\u2013300 MHz) se asocian al s\xEDmbolo VHF en la nomenclatura habitual del examen. \xABM\xE9tricas\xBB.",
+    "explain": "La banda VHF (30\u2013300 MHz) corresponde a las ondas m\xE9tricas, llamadas as\xED porque su longitud de onda es del orden del metro. \xABM\xE9tricas\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -16859,7 +16882,7 @@ var questions_banco_estudio_default = [
       "Banda lateral \xFAnica con portadora reducida"
     ],
     "correctIndex": 1,
-    "explain": "Las clases ITU describen tipo de modulaci\xF3n y contenido; A3E indica AM con doble banda lateral y se\xF1al anal\xF3gica de telefon\xEDa. La correcta es \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
+    "explain": "En la nomenclatura ITU, A3E designa una emisi\xF3n de amplitud con doble banda lateral y un solo canal de informaci\xF3n anal\xF3gica (telefon\xEDa AM cl\xE1sica). \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17129,7 +17152,7 @@ var questions_banco_estudio_default = [
       "La abreviatura m\xE9trica B. m."
     ],
     "correctIndex": 3,
-    "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa abreviatura m\xE9trica B. m.\xBB.",
+    "explain": "Las ondas m\xE9tricas (VHF, 30\u2013300 MHz) se abrevian B.m. en la nomenclatura de bandas, porque su longitud de onda es del orden del metro. \xABLa abreviatura m\xE9trica B. m.\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17249,7 +17272,7 @@ var questions_banco_estudio_default = [
       "Se trata de una estaci\xF3n no autorizada"
     ],
     "correctIndex": 0,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "El indicativo compuesto con barra se\xF1ala operaci\xF3n temporal bajo CEPT. Por eso EA4ABC/M3BVM corresponde a un radioaficionado con licencia de otro pa\xEDs que opera ocasionalmente una estaci\xF3n espa\xF1ola. \xABSe trata de un radioaficionado con licencia expedida por otro pa\xEDs, operando ocasionalmente una estaci\xF3n espa\xF1ola\xBB."
   },
   {
     "id": "ure-p2-q353",
@@ -17412,7 +17435,7 @@ var questions_banco_estudio_default = [
       "Se trata de una conexi\xF3n con interferencias"
     ],
     "correctIndex": 1,
-    "explain": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "Bajo CEPT, el operador extranjero antepone el prefijo del pa\xEDs y distrito visitado a su indicativo de origen. Por eso EA3/OK2HM es un radioaficionado con licencia de otro pa\xEDs que opera ocasionalmente en el distrito 3. \xABUn radioaficionado con licencia expedida en otro pa\xEDs, opera ocasionalmente en el distrito 3\xBB."
   },
   {
     "id": "ure-p2-q392",
@@ -17486,7 +17509,7 @@ var questions_banco_estudio_default = [
       "20 W"
     ],
     "correctIndex": 1,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB10 W\xBB."
+    "explain": "El reglamento vigente (BOE-A-2013-7624) limita la potencia de las estaciones desatendidas en zona urbana. Por eso en VHF/UHF dentro del casco urbano la salida no puede superar los \xAB10 W\xBB."
   },
   {
     "id": "ure-p2-q397",
@@ -17515,7 +17538,7 @@ var questions_banco_estudio_default = [
       "100 W"
     ],
     "correctIndex": 1,
-    "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB50 W\xBB.",
+    "explain": "El reglamento vigente (BOE-A-2013-7624) fija el tope de potencia de las estaciones autom\xE1ticas desatendidas. Por eso en la banda de HF su salida m\xE1xima es de \xAB50 W\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17739,7 +17762,7 @@ var questions_banco_estudio_default = [
       "S\xF3lo en caso de que la instalaci\xF3n sea sencilla"
     ],
     "correctIndex": 0,
-    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalaci\xF3n unilateral sin informar. \xABNo\xBB. (BOE-A-2013-7624).",
+    "explain": "La comunidad de propietarios no autoriza la instalaci\xF3n: el derecho a instalar la antena lo ampara la normativa, aunque haya que informar a la comunidad. \xABNo\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -17919,7 +17942,7 @@ var questions_banco_estudio_default = [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Las ondas m\xE9tricas (30\u2013300 MHz) se asocian al s\xEDmbolo VHF en la nomenclatura habitual del examen. \xABVHF\xBB.",
+    "explain": "Las ondas m\xE9tricas, de longitud de onda en torno al metro, se representan con el s\xEDmbolo VHF (30\u2013300 MHz). \xABVHF\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18039,7 +18062,7 @@ var questions_banco_estudio_default = [
       "La exenci\xF3n de presentar memoria descriptiva de la instalaci\xF3n"
     ],
     "correctIndex": 2,
-    "explain": "La Ley de 19 julio 1983 sobre inmobiliaria y antenas regula el derecho a instalar en fachadas y cubiertas con l\xEDmites de seguridad y est\xE9tica. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
+    "explain": "La Ley 19/1983, llamada Ley de Antenas, reconoce el derecho de los radioaficionados a instalar sus antenas en el exterior de los inmuebles. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -18294,7 +18317,7 @@ var questions_banco_estudio_default = [
       "Se vayan a realizar obras por parte de la comunidad"
     ],
     "correctIndex": 1,
-    "explain": "La inspecci\xF3n verifica cumplimiento t\xE9cnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB es la formulaci\xF3n del banco.",
+    "explain": "La Administraci\xF3n debe informar al presidente de la comunidad cuando se le ha solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB.",
     "explainSourceNote": "Pr\xE1ctica URE (Fuente: URE (reglamentaci\xF3n)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -21450,8 +21473,11 @@ var curated_explanations_default = {
   "fedi-ag-027": "El tama\xF1o f\xEDsico de una antena resonante es proporcional a la longitud de onda, y como \u03BB = c/f, a mayor frecuencia la antena es m\xE1s corta. Por eso su tama\xF1o depende de la \xABFrecuencia\xBB.",
   "fedi-ag-028": "Cuando la onda rodea un obst\xE1culo comparable a su longitud de onda, se curva: ese fen\xF3meno es la difracci\xF3n, no reflexi\xF3n ni refracci\xF3n ionosf\xE9rica. \xABDifracci\xF3n.\xBB.",
   "fedi-ag-029": "EMI es interferencia electromagn\xE9tica conducida o radiada. Un filtro de l\xEDnea en la alimentaci\xF3n aten\xFAa componentes RF que entran o salen por la red. \xABColocando un filtro apropiado\xBB.",
+  "fedi-ag-030": "La ionosfera es la capa alta de la atm\xF3sfera ionizada por la radiaci\xF3n solar; refleja las ondas de HF, y por eso las condiciones de propagaci\xF3n cambian con la actividad solar. \xABIonosfera\xBB.",
   "fedi-ah-032": "Los distintivos especiales (p. ej. /MM, /P) tienen reglas de asignaci\xF3n en el reglamento vigente; el criterio FEDI (2011) puede diferir: contrasta con BOE-A-2013-7624. \xABSe reservan para concursos internacionales de alta competitividad\xBB.",
   "fedi-ah-033": "Los c\xF3digos Q son abreviaturas de tres letras que empiezan por Q (QTH ubicaci\xF3n, QRM interferencia, etc.). Por eso la regla mnemot\xE9cnica del examen es que \xABEmpieza siempre por la letra Q\xBB.",
+  "fedi-ah-034": "Salvo urgencia, la comunidad debe avisar al radioaficionado con tres meses de antelaci\xF3n antes de exigir el desmontaje de la antena por obras, para que pueda reorganizar su instalaci\xF3n. \xABTres meses\xBB. (BOE-A-2013-7624).",
+  "fedi-ah-041": "El titular debe permitir las obras de conservaci\xF3n del edificio, pero la comunidad ha de comprometerse a reponer la antena en sus condiciones iniciales al terminarlas. \xABEst\xE1 obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalaci\xF3n en las condiciones iniciales\xBB. (BOE-A-2013-7624).",
   "fedi-ah-042": "En Espa\xF1a se usa el alfabeto fon\xE9tico en castellano (Alfa, Noviembre\u2026), no la pronunciaci\xF3n inglesa de ICAO. Por eso la deletreado correcto es \xABAlfa, Noviembre, Seis, Bravo, Lima\xBB.",
   "fedi-ah-043": "El plazo de 12 meses aparece en enunciados FEDI hist\xF3ricos. Verifica el art\xEDculo concreto en el reglamento vigente (BOE-A-2013-7624). \xAB12 meses\xBB.",
   "fedi-ah-047": "El certificado CEPT no exige indicar la asociaci\xF3n del titular en el formato habitual del diploma. Por eso no es la respuesta correcta \xABAsociaci\xF3n de radioaficionados a la que pertenece\xBB.",
@@ -21459,7 +21485,7 @@ var curated_explanations_default = {
   "fedi-ah-057": "Potencias m\xE1ximas por banda en el anexo I del reglamento (BOE-A-2013-7624). El test FEDI (2011) puede usar redacci\xF3n antigua: contrasta banda y supuesto con el anexo vigente. \xAB50 W\xBB.",
   "fedi-ah-060": "Si causas interferencias perjudiciales debes cesar la emisi\xF3n de inmediato hasta resolver la causa. Es buena pr\xE1ctica y deber reglamentario. \xABSuspender de inmediato las emisiones\xBB.",
   "ofic-001": "En corriente continua la potencia disipada o entregada es P = V\xB7I (vatios). Es la relaci\xF3n b\xE1sica del bloque de electricidad. \xABP = V \xB7 I\xBB.",
-  "ofic-003": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABLa frecuencia\xBB.",
+  "ofic-003": "En FM la informaci\xF3n se transmite variando la frecuencia instant\xE1nea de la portadora, no su amplitud, que se mantiene constante. Por eso la magnitud que var\xEDa es \xABLa frecuencia\xBB.",
   "ofic-005": "Un dipolo de media onda mide el\xE9ctricamente, como indica su nombre, \u03BB/2 en total, repartido en dos brazos de \u03BB/4. Por eso su longitud es \xABMedia longitud de onda\xBB.",
   "ofic-006": "En corriente continua y en r\xE9gimen permanente, un condensador ideal no deja pasar corriente continua: equivale a circuito abierto entre bornes (se carga hasta la tensi\xF3n aplicada). No confundir con cortocircuito. \xABUn circuito abierto\xBB.",
   "ofic-008": "El reglamento de aficionados define el uso del espectro; el CNAF puede ajustar condiciones seg\xFAn el texto vigente. \xABUna orden ministerial que aprueba el reglamento (p. ej. IET/1311/2013)\xBB.",
@@ -21476,41 +21502,60 @@ var curated_explanations_default = {
   "ofic-055": "Una bobina solo se opone a las variaciones de corriente; en corriente continua estable no hay variaci\xF3n, as\xED que no presenta reactancia y equivale a un cortocircuito. \xABUn cortocircuito\xBB.",
   "ofic-060": "La resistencia shunt va en paralelo con el galvan\xF3metro para derivar corriente y ampliar el rango del amper\xEDmetro. \xABDeriva la mayor parte de la corriente en paralelo de baja resistencia\xBB.",
   "ofic-065": "Potencia es energ\xEDa por unidad de tiempo; en CC P = V\xB7I. Identifica unidad y f\xF3rmula antes de elegir. \xABEntre los dos nodos (derivaci\xF3n / paralelo)\xBB. (BOE-A-2013-7624).",
+  "q4": "En AM la portadora conserva su frecuencia fija y es su amplitud la que sigue a la se\xF1al moduladora. Por eso la magnitud que var\xEDa principalmente es \xABLa amplitud\xBB.",
   "quijotes-84-1836": "El mapa del enunciado corresponde al distrito EA5 (Comunidad Valenciana y Murcia en la tabla de residencia del BOE-A-2013-7624). La cifra 5 identifica ese distrito geogr\xE1fico. \xABDistrito 5.\xBB.",
   "quijotes-84-1843": "El prefijo EA5 corresponde a radioaficionados con distrito de residencia en Comunidad Valenciana; el distintivo EA5EYR encaja con Valencia. No confundir EA6 (Baleares) ni EA7 (Arag\xF3n). \xABValencia.\xBB.",
   "quijotes-84-1864": "EA6 es la serie de las Islas Baleares; EA6PDM puede corresponder a estaciones en Mallorca, como Palma. Lleida es EA3, Huelva EA7. \xABPalma de Mallorca.\xBB.",
   "quijotes-84-1892": "Interferir deliberadamente a otra estaci\xF3n est\xE1 prohibido: es mala pr\xE1ctica y puede ser infracci\xF3n seg\xFAn el reglamento (BOE-A-2013-7624). Por eso la opci\xF3n correcta es \xABNunca.\xBB.",
+  "quijotes-84-1939": "Antes de obras que afecten a una antena autorizada, la comunidad debe informar al titular de la licencia con un mes de antelaci\xF3n si fuera necesario desmontarla. \xABInformar, con antelaci\xF3n m\xEDnima de un mes, al titular de la licencia de estaci\xF3n si fuera necesario desmontar la antena y/o elementos anejos.\xBB. (BOE-A-2013-7624).",
+  "quijotes-84-1963": "Las emisiones no deseadas agrupan las no esenciales y las de fuera de banda: todo lo que se radia adem\xE1s de la emisi\xF3n necesaria para la comunicaci\xF3n. \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
+  "quijotes-84-2043": "En el segmento 50,0\u201351,0 MHz se permite emitir en todo el territorio nacional siempre que la potencia m\xE1xima del equipo no supere los 50 W. \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
   "quijotes-84-2057": "Seg\xFAn el r\xE9gimen andorrano del banco, un radioaficionado con licencia extranjera vigente en su pa\xEDs de residencia puede obtener autorizaci\xF3n temporal para operar en territorio andorrano. \xABSi, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el pa\xEDs en el que residen habitualmente, pueden obtener una licencia temporal para usar su estaci\xF3n en territorio andorrano.\xBB.",
   "quijotes-84-2069": "En Espa\xF1a los distintivos de aficionado usan prefijos EA/EB/EC y formato del reglamento; \xABAM3SOS\xBB no encaja en esa estructura de asignaci\xF3n nacional. Por eso \xABNo se puede asignar.\xBB.",
+  "quijotes-84-2203": "En el GMDSS, la banda MF tiene una frecuencia internacional reservada para la alerta de socorro por Llamada Selectiva Digital (DSC). Por eso esa alerta se transmite en \xAB2.187,5 kHz\xBB.",
+  "ure-p1-q1": "El campo el\xE9ctrico mide la fuerza por unidad de carga, es decir, tensi\xF3n repartida a lo largo de una distancia. Por eso se expresa en voltios por metro: \xABV/m\xBB.",
   "ure-p1-q10": "Los transistores bipolares se fabrican en dos polaridades seg\xFAn el dopado de sus uniones: NPN y PNP. Por eso uno de los tipos v\xE1lidos es \xABNPN\xBB.",
   "ure-p1-q11": "La energ\xEDa almacenada en un condensador depende de su capacidad y del cuadrado de la tensi\xF3n, seg\xFAn la f\xF3rmula E = \xBD\xB7C\xB7V\xB2. Por eso la expresi\xF3n correcta es \xAB\xBDC.V\xB2\xBB.",
   "ure-p1-q12": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xAB30 dBm\xBB. (BOE-A-2013-7624).",
   "ure-p1-q122": "Si una emisi\xF3n perjudica servicios protegidos, el titular debe corregir o cesar; la buena pr\xE1ctica es actuar antes de que escale. \xABTener una ROE baja\xBB. (BOE-A-2013-7624).",
   "ure-p1-q123": "El periodo es el tiempo que tarda la onda en completar un ciclo, es decir, el intervalo entre dos puntos equivalentes consecutivos (dos m\xE1ximos o dos m\xEDnimos). \xABEs el tiempo que transcurre entre dos m\xEDnimos consecutivos\xBB.",
+  "ure-p1-q124": "El dBm es una medida logar\xEDtmica de potencia referida a 1 mW. Por tanto, la magnitud que representa el dBm es la potencia. \xABPotencia\xBB.",
   "ure-p1-q125": "Un transformador necesita como m\xEDnimo un primario y un secundario que transfieren energ\xEDa por inducci\xF3n. Por eso est\xE1 formado al menos por \xABDos bobinas acopladas\xBB.",
   "ure-p1-q126": "Para impedir que la RF del equipo salga hacia la red el\xE9ctrica se intercala un filtro de l\xEDnea de desacoplo, que bloquea la radiofrecuencia y deja pasar los 50 Hz de la alimentaci\xF3n. \xABFiltro de l\xEDnea de desacoplo\xBB.",
-  "ure-p1-q127": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB120 vatios\xBB.",
+  "ure-p1-q127": "La potencia disipada en una resistencia es P = I\xB2\xB7R. Con I = 2 A y R = 30 \u03A9 resulta P = 2\xB2\xB730 = 120 W. \xAB120 vatios\xBB.",
   "ure-p1-q128": "La m\xE1xima transferencia de potencia entre dos circuitos se produce cuando las impedancias est\xE1n adaptadas (carga y fuente acopladas). No es lo mismo que ROE baja por casualidad ni que \xABantena despejada\xBB. \xABExista adaptaci\xF3n de las impedancias\xBB.",
   "ure-p1-q129": "El espectro muestra una portadora central y dos bandas laterales sim\xE9tricas: es t\xEDpico de modulaci\xF3n de amplitud (AM). En FM el ancho ser\xEDa distinto; en SSB solo un lateral. \xABAmplitud\xBB.",
   "ure-p1-q13": "El dipolo doblado presenta una impedancia unas cuatro veces mayor que el dipolo simple (del orden de 300 \u03A9 frente a 75 \u03A9). Por eso, respecto al dipolo simple, su impedancia es \xABMayor\xBB.",
   "ure-p1-q130": "Tras el rectificador la salida de una fuente de alimentaci\xF3n tiene rizado (ripple); el filtro (condensadores, a veces inductores) lo aten\xFAa para dejar una tensi\xF3n de salida m\xE1s estable. \xABPara reducir el rizado de la se\xF1al de salida y obtener un valor m\xE1s constante de esta\xBB.",
   "ure-p1-q131": "Modular es variar un par\xE1metro de la portadora con la informaci\xF3n a transmitir; en amplitud modulada (AM) lo que var\xEDa es precisamente la amplitud de la portadora siguiendo la se\xF1al moduladora. \xABLa modulaci\xF3n AM hace variar la amplitud de la portadora\xBB.",
+  "ure-p1-q132": "Al conectar condensadores en paralelo las capacidades se suman, como si aumentara la superficie de armadura; por eso la capacidad total es mayor que cada una. \xABLa suma de las capacidades individuales\xBB.",
   "ure-p1-q133": "La sensibilidad mide la capacidad de detectar se\xF1ales d\xE9biles (umbral m\xEDnimo \xFAtil). La selectividad separa frecuencias pr\xF3ximas; la fidelidad se refiere a poca distorsi\xF3n. \xABLa capacidad que tiene de captar se\xF1ales d\xE9biles y amplificarlas\xBB.",
   "ure-p1-q134": "Las curvas de respuesta en FI muestran el ancho de banda \xFAtil: la curva m\xE1s estrecha separa emisoras adyacentes (mayor selectividad). En 455 kHz, A es m\xE1s selectivo que B. \xABEl receptor A es m\xE1s selectivo que el receptor B\xBB.",
   "ure-p1-q135": "Un mezclador genera a su salida la suma y la diferencia de las frecuencias de entrada: 14 + 4 = 18 MHz y 14 \u2212 4 = 10 MHz. De las opciones, la v\xE1lida es la diferencia: \xAB10 MHz\xBB.",
   "ure-p1-q136": "En VHF la propagaci\xF3n es b\xE1sicamente de visi\xF3n directa (l\xEDnea de vista), por lo que los enlaces son de alcance local o regional, no DX intercontinental como en HF. \xABPara distancias cortas\xBB.",
+  "ure-p1-q139": "Una gu\xEDa de onda no deja pasar se\xF1ales por debajo de cierta frecuencia: esa es su frecuencia de corte, por debajo de la cual no hay transmisi\xF3n por la gu\xEDa. \xABLa frecuencia por debajo de la cual no es posible la transmisi\xF3n en la gu\xEDa de onda\xBB.",
   "ure-p1-q140": "El diagrama presenta un l\xF3bulo principal estrecho y l\xF3bulos secundarios peque\xF1os: patr\xF3n de antena directiva. Omnidireccional ser\xEDa casi circular en el plano horizontal. \xABDirectiva\xBB.",
   "ure-p1-q142": "La Yagi concentra la radiaci\xF3n en una direcci\xF3n gracias a sus elementos par\xE1sitos (reflector y directores), lo que le da ganancia hacia delante. Por eso \xABSon directivas\xBB.",
+  "ure-p1-q143": "En la propagaci\xF3n por onda de superficie la se\xF1al se gu\xEDa por el terreno y sigue la curvatura terrestre, alcanzando puntos m\xE1s all\xE1 del horizonte \xF3ptico. \xABLa se\xF1al radioel\xE9ctrica se propaga siguiendo la curvatura terrestre\xBB.",
   "ure-p1-q147": "El reglamento exige que las radiaciones espurias por debajo de 30 MHz est\xE9n atenuadas al menos 40 dB respecto a la potencia de la frecuencia fundamental. \xABPara frecuencias inferiores a 30 MHz se atenuaran al menos 40 dB\xBB.",
   "ure-p1-q148": "En la traza del osciloscopio, A es la altura pico a pico (amplitud) y B la distancia entre dos picos iguales sucesivos (periodo T=1/f). No confundir periodo con frecuencia en Hz. \xABA es la amplitud y B es el periodo de la se\xF1al\xBB.",
   "ure-p1-q149": "En serie las tensiones de cada pila o bater\xEDa se suman; en paralelo se suman capacidades de corriente manteniendo la misma tensi\xF3n nominal. \xABLa tensi\xF3n de un conjunto conectadas en serie es la suma de las tensiones de cada una de ellas\xBB.",
   "ure-p1-q15": "La clase AB conduce algo m\xE1s de medio ciclo: combina la buena linealidad de la clase A con la mayor eficiencia de la clase B, reduciendo la distorsi\xF3n de cruce. \xABEl de clase AB es una combinaci\xF3n de A y B\xBB.",
+  "ure-p1-q150": "Las ondas electromagn\xE9ticas viajan en el vac\xEDo a la velocidad de la luz, unos 300.000 km/s (3\xB710\u2078 m/s). \xAB300.000 km/s\xBB.",
   "ure-p1-q17": "En un superheterodino la se\xF1al pasa: antena \u2192 amplificador RF \u2192 mezclador (+ oscilador) \u2192 amplificador FI \u2192 demodulador \u2192 audio. Ese es el flujo est\xE1ndar del temario. \xABAmplificador RF, mezclador, amplificador de FI, demodulador, amplificador de audio\xBB.",
+  "ure-p1-q181": "La potencia el\xE9ctrica es energ\xEDa por unidad de tiempo. Por eso su unidad en el SI es el vatio (1 W = 1 julio por segundo). \xABEl vatio\xBB.",
+  "ure-p1-q182": "La fibra \xF3ptica transmite luz, no se\xF1ales el\xE9ctricas. Por eso no capta las interferencias electromagn\xE9ticas radiadas que s\xED afectan a los conductores met\xE1licos. \xABFibra \xF3ptica\xBB.",
+  "ure-p1-q183": "Un termistor NTC tiene coeficiente de temperatura negativo: su resistencia disminuye al aumentar la temperatura, al contrario que un PTC. \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
   "ure-p1-q184": "El diodo de estado s\xF3lido conduce preferentemente en un sentido y bloquea en el otro; por eso rectifica y protege etapas. No confundir con resistencia o condensador. \xABDispositivo que permite el paso de la corriente el\xE9ctrica en un s\xF3lo sentido\xBB.",
+  "ure-p1-q185": "La velocidad de propagaci\xF3n cumple siempre la f\xF3rmula v = \u03BB\xB7f. Por tanto, es la longitud de onda multiplicada por la frecuencia. \xABLa longitud de onda multiplicada por la frecuencia\xBB.",
   "ure-p1-q186": "El rendimiento de un transmisor es la relaci\xF3n entre la potencia entregada al sistema radiante y la potencia consumida de la fuente; mide la eficiencia, no la potencia reflejada. \xABLa relaci\xF3n entre la potencia entregada al sistema radiante y la consumida\xBB.",
-  "ure-p1-q187": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABQ=f/B\xBB.",
+  "ure-p1-q187": "El factor de calidad relaciona la frecuencia de resonancia f con el ancho de banda B mediante la f\xF3rmula Q = f/B. Por eso, cuanto m\xE1s estrecha la respuesta, mayor es Q. \xABQ=f/B\xBB.",
+  "ure-p1-q188": "La selectividad es la capacidad del receptor para separar dos se\xF1ales de frecuencias pr\xF3ximas, rechazando la adyacente y dejando pasar la deseada. \xABLa capacidad que tiene para separar dos se\xF1ales de frecuencias pr\xF3ximas\xBB.",
   "ure-p1-q189": "Una Yagi enfoca la energ\xEDa hacia delante mediante su reflector y sus directores, lo que le da ganancia en una direcci\xF3n concreta. Por eso es una antena \xABDirectiva\xBB.",
+  "ure-p1-q190": "El superheterodino de doble conversi\xF3n emplea dos frecuencias intermedias independientes (dos mezclas sucesivas) para mejorar la selectividad y el rechazo de la frecuencia imagen. \xABReceptor con dos frecuencias intermedias independientes\xBB.",
   "ure-p1-q191": "La anchura de banda necesaria es la justa para transmitir a la velocidad y calidad requeridas; ni la m\xE1xima permitida ni la que contiene el 99% de la potencia. \xABEs la suficiente para permitir la transmisi\xF3n a la velocidad y calidad requeridas\xBB.",
+  "ure-p1-q192": "Los condensadores electrol\xEDticos son polarizados: deben conectarse respetando la polaridad marcada, pues en inversa pueden da\xF1arse o reventar. \xABDeben conectarse respetando la polaridad indicada\xBB.",
+  "ure-p1-q193": "La frecuencia intermedia es una frecuencia fija a la que el superheterodino traslada todas las se\xF1ales para filtrarlas y amplificarlas con ganancia y selectividad constantes. \xABLa frecuencia de valor constante utilizada en los receptores superheterodinos\xBB.",
   "ure-p1-q195": "La polarizaci\xF3n de una onda electromagn\xE9tica se define por la direcci\xF3n en la que oscila su campo el\xE9ctrico (vertical, horizontal o circular). \xABLa direcci\xF3n del campo el\xE9ctrico\xBB.",
   "ure-p1-q197": "Un volt\xEDmetro de RF mide tensi\xF3n, no frecuencia; para medir la frecuencia se emplea un frecuenc\xEDmetro, un osciloscopio o un analizador de espectro. \xABUn volt\xEDmetro de radiofrecuencia\xBB.",
   "ure-p1-q198": "La potencia de pico de envolvente (PEP) en AM es siempre superior a la potencia media, porque la envolvente alcanza valores instant\xE1neos mayores que el promedio. \xABSuperior a la potencia media del transmisor\xBB.",
@@ -21518,51 +21563,70 @@ var curated_explanations_default = {
   "ure-p1-q2": "El filtro de salida del transmisor aten\xFAa arm\xF3nicos y emisiones fuera de banda y deja pasar la frecuencia \xFAtil: elimina las frecuencias no deseadas antes de la antena. \xABElimina las frecuencias no deseadas\xBB.",
   "ure-p1-q202": "La ganancia de una antena es una relaci\xF3n de potencias; por tanto se expresa en decibelios, referida a un dipolo (dBd) o a una antena is\xF3tropa (dBi). \xABdB\xBB.",
   "ure-p1-q204": "La intensidad de campo el\xE9ctrico en un punto se expresa en V/m (dBV/m en dB). dBW es potencia; dBV es tensi\xF3n. \xABdBV/m\xBB.",
+  "ure-p1-q205": "El fading es el desvanecimiento transitorio del nivel de una se\xF1al que se propaga, causado por la interferencia de trayectos m\xFAltiples o por cambios en la propagaci\xF3n. \xABEl desvanecimiento transitorio de una se\xF1al electromagn\xE9tica que se propaga\xBB.",
+  "ure-p1-q21": "Toda onda se aten\xFAa al propagarse, porque su energ\xEDa se reparte en un frente cada vez mayor y el medio introduce p\xE9rdidas. Por eso la respuesta es \xABS\xED, siempre\xBB.",
   "ure-p1-q22": "Un generador de se\xF1al de RF entrega una se\xF1al patr\xF3n de frecuencia y nivel conocidos; se inyecta en un equipo para medir, ajustar y caracterizar sus etapas de radiofrecuencia. \xABCaracterizar etapas de radiofrecuencia\xBB.",
   "ure-p1-q23": "El silenciador (squelch) corta la salida de audio cuando desaparece la portadora o se\xF1al \xFAtil de RF, para no escuchar ruido de fondo. No es AGC (regula ganancia) ni selectividad. \xABSuprimir el audio si no hay se\xF1al de RF\xBB.",
   "ure-p1-q239": "Cuando coinciden las impedancias del emisor, la l\xEDnea y la antena hay adaptaci\xF3n: no aparece onda reflejada y se transfiere la m\xE1xima potencia a la antena. \xABSe transfiere la m\xE1xima energ\xEDa a la antena\xBB.",
   "ure-p1-q241": "Un diel\xE9ctrico no conduce la corriente pero s\xED puede polarizarse, y se usa entre las armaduras de los condensadores. Por eso, en esencia, es \xABUn aislante\xBB.",
+  "ure-p1-q242": "La diferencia de potencial o tensi\xF3n el\xE9ctrica se mide en voltios (V), unidad del SI que equivale al trabajo por unidad de carga. \xABVoltios\xBB.",
+  "ure-p1-q243": "Para evitar que la RF se cuele en los altavoces de un equipo de baja frecuencia se usa cable blindado, cuya malla apantalla los conductores frente a las interferencias. \xABUtilizar para su conexi\xF3n cable blindado\xBB.",
   "ure-p1-q244": "En un montaje en paralelo la corriente se reparte por cada rama; por la ley de nudos de Kirchhoff, la intensidad total es la suma de las intensidades de cada rama. \xABLa suma de las intensidades de cada una de las ramas\xBB.",
   "ure-p1-q245": "Las ondas de radio son campos el\xE9ctrico y magn\xE9tico acoplados que se propagan por el espacio sin necesidad de medio material. Por eso su naturaleza es \xABElectromagn\xE9tica\xBB.",
   "ure-p1-q247": "La etapa de frecuencia intermedia se construye con amplificadores sintonizados y filtros, que aportan la mayor parte de la ganancia y de la selectividad del receptor. \xABAmplificadores y filtros\xBB.",
   "ure-p1-q248": "El transistor sirve para amplificar, conmutar u oscilar, pero no para adaptar l\xEDneas balanceadas y no balanceadas; de eso se encarga un balun, que es un componente pasivo. \xABBalun\xBB.",
   "ure-p1-q249": "La resistencia shunt deriva parte de la corriente para poder medir intensidades mayores, y para ello se conecta junto al aparato de medida. Por eso va \xABEn paralelo\xBB.",
   "ure-p1-q25": "El varicap es un diodo polarizado en inversa cuya capacidad de uni\xF3n cambia con la tensi\xF3n aplicada; por eso equivale a un condensador variable controlado por tensi\xF3n. \xABUn condensador variable controlado por tensi\xF3n\xBB.",
+  "ure-p1-q250": "En resonancia las reactancias se igualan y f0 = 1/(2\u03C0\u221A(LC)); por tanto el cuadrado de la frecuencia es inversamente proporcional al producto L\xB7C. \xABInversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador\xBB.",
   "ure-p1-q251": "La etapa de detecci\xF3n recupera la informaci\xF3n (audio o datos) que viajaba montada sobre la portadora ya filtrada y amplificada. Por eso sirve para \xABDemodular la se\xF1al recibida\xBB.",
   "ure-p1-q252": "El enunciado pide nivel de audio constante pese a variaciones de se\xF1al en antena: es funci\xF3n del AGC (CAG), que regula la ganancia en RF/FI. CAF mantiene frecuencia; no es squelch. \xABControl autom\xE1tico de ganancia\xBB.",
-  "ure-p1-q254": "dBm expresa potencia referida a 1 mW; dB\xB5V suele referirse a tensi\xF3n. No confundas con dB de ganancia sin referencia. \xABTensi\xF3n el\xE9ctrica\xBB.",
+  "ure-p1-q254": "El dB\xB5V es una medida logar\xEDtmica de tensi\xF3n referida a 1 microvoltio. Por tanto, \xAB10 dB\xB5V\xBB expresa un valor de tensi\xF3n el\xE9ctrica, no de potencia. \xABTensi\xF3n el\xE9ctrica\xBB.",
   "ure-p1-q255": "Para cambiar la frecuencia de emisi\xF3n hace falta un oscilador de frecuencia variable (VFO o sintetizador) que fije en cada momento la frecuencia de trabajo. \xABUn oscilador de frecuencia variable\xBB.",
   "ure-p1-q257": "La sensibilidad mide la se\xF1al m\xEDnima que el receptor puede aprovechar con calidad: cuanta menos se\xF1al necesita, m\xE1s sensible es y mejor capta se\xF1ales d\xE9biles. \xABSu capacidad para recibir se\xF1ales d\xE9biles\xBB.",
   "ure-p1-q258": "Los elementos par\xE1sitos de una Yagi (reflector y directores) no est\xE1n alimentados, pero reradian la se\xF1al con la fase adecuada para reforzar la radiaci\xF3n hacia delante: dan directividad. \xABProporcionan directividad\xBB.",
   "ure-p1-q259": "Una antena pasiva no amplifica: solo irradia o captura; por reciprocidad los diagramas de radiaci\xF3n en transmisi\xF3n y recepci\xF3n son iguales para la misma antena. \xABLos diagramas de radiaci\xF3n en transmisi\xF3n y en recepci\xF3n son iguales\xBB.",
+  "ure-p1-q260": "La banda de HF (3\u201330 MHz) es la que mejor se refleja en la ionosfera. Por eso permite enlaces a larga distancia mediante salto ionosf\xE9rico. \xABHF\xBB.",
   "ure-p1-q261": "Antes de la toma de antena conviene un filtro paso bajo o paso banda que aten\xFAe arm\xF3nicos y emisiones no deseadas para que no lleguen a radiarse. \xABUn filtro paso bajo o paso banda\xBB.",
   "ure-p1-q262": "Las bobinas en serie en los brazos del dipolo a\xF1aden inductancia y alargan la longitud el\xE9ctrica sin aumentar tanto el tama\xF1o f\xEDsico (antena con carga inductiva). \xABIncrementar la longitud el\xE9ctrica de antena\xBB.",
   "ure-p1-q265": "La onda sinusoidal de la figura tiene valor de pico 10 V; la tensi\xF3n eficaz es Vrms = Vp/\u221A2 \u2248 7,071 V. 10 V ser\xEDa el pico, no la eficaz. \xAB7,071 V\xBB.",
+  "ure-p1-q299": "En un conductor met\xE1lico, al subir la temperatura los \xE1tomos vibran m\xE1s y dificultan el paso de los electrones; por eso aumenta su resistencia el\xE9ctrica. \xABAumenta su resistencia el\xE9ctrica\xBB.",
   "ure-p1-q3": "La selectividad es la capacidad de discriminar emisoras o se\xF1ales de frecuencias muy cercanas (filtros y FI estrecha). La sensibilidad es captar se\xF1ales d\xE9biles, no confundir ambos conceptos. \xABSelectividad\xBB.",
   "ure-p1-q301": "A mayor potencia de transmisi\xF3n aumenta la probabilidad de interferir a otros receptores si no hay filtros, ubicaci\xF3n y buenas pr\xE1cticas. \xABMayor\xBB. (BOE-A-2013-7624).",
+  "ure-p1-q303": "El control autom\xE1tico de ganancia (CAG) ajusta la ganancia del receptor seg\xFAn el nivel de entrada para mantener constante la amplitud de la se\xF1al de salida. \xABMantener constante la amplitud de la se\xF1al de salida\xBB.",
+  "ure-p1-q307": "Hay resonancia cuando las reactancias capacitiva e inductiva se igualan y se cancelan, de modo que el circuito se comporta como puramente resistivo. \xABQue las impedancias capacitiva e inductiva se igualen\xBB.",
   "ure-p1-q308": "La frecuencia de corte es aquella en la que el filtro pasa de dejar pasar la se\xF1al a atenuarla (ca\xEDda de 3 dB); marca el l\xEDmite entre la banda de paso y la de rechazo. \xABLa frecuencia que delimita la banda de paso o no paso por el filtro\xBB.",
   "ure-p1-q309": "Una pila o bater\xEDa convierte energ\xEDa qu\xEDmica almacenada en energ\xEDa el\xE9ctrica mediante reacciones en sus electrodos (FEM). Por eso la transformaci\xF3n correcta es \xABEnerg\xEDa qu\xEDmica en energ\xEDa el\xE9ctrica\xBB.",
   "ure-p1-q311": "Colocada en paralelo con el instrumento, la resistencia shunt deriva el exceso de corriente y ampl\xEDa la escala, protegiendo as\xED los aparatos de medida frente a sobreintensidades. \xABProteger aparatos de medida\xBB.",
+  "ure-p1-q313": "La relaci\xF3n se\xF1al/ruido compara el nivel de se\xF1al \xFAtil con el de ruido; es un indicador de la calidad del receptor que se expresa en decibelios. \xABEs una caracter\xEDstica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)\xBB.",
   "ure-p1-q316": "En un transmisor SSB el ALC limita la excitaci\xF3n de la etapa de potencia y reduce distorsi\xF3n e interferencias cuando sube el nivel de entrada. CAF estabiliza frecuencia; CAG es del receptor. \xABControl autom\xE1tico de nivel o ALC\xBB.",
   "ure-p1-q319": "Hay sobremodulaci\xF3n cuando el \xEDndice de modulaci\xF3n de AM supera el 100%: la envolvente se recorta y aparecen distorsi\xF3n y emisiones espurias. \xABEl \xEDndice modulaci\xF3n es superior al 100%\xBB.",
   "ure-p1-q320": "Una antena vertical de cuarto de onda radiencia con m\xE1ximo en el plano horizontal perpendicular al m\xE1stil, no hacia el zenit. No confundir con el efecto de inclinar radiales (impedancia). \xABEn el plano horizontal\xBB.",
   "ure-p1-q322": "Si transmisor, l\xEDnea y antena est\xE1n adaptados (misma impedancia), no hay reflexiones: la potencia reflejada del vat\xEDmetro es cero. Con desadaptaci\xF3n la reflejada ser\xEDa notable. \xABLa potencia reflejada es cero\xBB.",
+  "ure-p1-q323": "La propagaci\xF3n por onda ionosf\xE9rica (reflexi\xF3n en la ionosfera) predomina en la banda de HF. Por eso con HF se logran alcances de miles de kil\xF3metros. \xABHF\xBB.",
   "ure-p1-q324": "En serie las resistencias se suman (Req = R1 + R2 + \u2026), de modo que la resistencia total siempre resulta mayor que cualquiera de las individuales. \xABEn serie, la resistencia total siempre es mayor que cualquiera de ellas\xBB.",
   "ure-p1-q325": "En diagramas polares, la relaci\xF3n delante-atr\xE1s compara el nivel de radiaci\xF3n del l\xF3bulo principal (punto 1) frente al opuesto (punto 2), en dB. No es ganancia absoluta ni impedancia. \xABRelaci\xF3n delante-atr\xE1s\xBB.",
   "ure-p1-q326": "El circuito entre transmisor y antena con elementos L y C en \u03C0 o T es un acoplador (antenna tuner) para adaptar impedancias y minimizar ROE. No es discriminador ni atenuador fijo. \xABAcoplador de antena\xBB.",
+  "ure-p1-q327": "La potencia de una se\xF1al el\xE9ctrica se mide con un vat\xEDmetro, que combina la medida de tensi\xF3n y de corriente para dar el producto P = V\xB7I. \xABVat\xEDmetro\xBB.",
   "ure-p1-q360": "La caja de apantallamiento tipo jaula de Faraday debe ser conductora, continua y a tierra para derivar corrientes inducidas; aislante o grietas dejan pasar el campo externo. \xABMet\xE1lica, el\xE9ctricamente estanca y con conexi\xF3n a tierra\xBB.",
+  "ure-p1-q362": "La reactancia inductiva es XL = 2\u03C0fL: crece con la frecuencia, de modo que en continua (f = 0) vale cero y la bobina se comporta como un cortocircuito. \xABSi la frecuencia es 0, su valor es 0\xBB.",
   "ure-p1-q365": "El cristal de cuarzo tiene una resonancia mec\xE1nica muy precisa y poco sensible a la temperatura; por eso los osciladores a cuarzo generan una frecuencia muy estable. \xABDe frecuencia muy estable\xBB.",
+  "ure-p1-q366": "La velocidad de propagaci\xF3n de una onda electromagn\xE9tica depende del medio; dentro de un mismo medio es constante (en el vac\xEDo, la velocidad de la luz). \xABEs constante en un determinado medio\xBB.",
+  "ure-p1-q367": "En banda lateral \xFAnica (SSB) se suprimen la portadora y una de las bandas laterales, transmitiendo solo la otra, lo que ahorra potencia y ancho de banda. \xABSe tiene una sola banda lateral sin portadora\xBB.",
   "ure-p1-q369": "CAG son las siglas de Control Autom\xE1tico de Ganancia: ajusta la ganancia del receptor en funci\xF3n del nivel de se\xF1al para mantener el volumen del audio aproximadamente constante. \xABControl Autom\xE1tico de Ganancia\xBB.",
   "ure-p1-q373": "En el transformador ideal la relaci\xF3n de tensiones depende del n\xFAmero de espiras N1/N2; el n\xFAcleo ferromagn\xE9tico aumenta el acoplamiento. No confundir con la frecuencia de trabajo. \xABEl n\xFAmero de espiras del primario y del secundario\xBB.",
   "ure-p1-q375": "Entre las dos l\xEDneas a \u22123 dB del l\xF3bulo principal se mide el ancho de haz (beamwidth): \xE1ngulo donde la radiaci\xF3n cae a la mitad de potencia respecto al m\xE1ximo. \xABAncho de haz de radiaci\xF3n\xBB.",
+  "ure-p1-q376": "En VHF y UHF las frecuencias apenas se reflejan en la ionosfera. Por eso la propagaci\xF3n habitual es de visi\xF3n directa entre antenas, llamada onda directa o espacial. \xABOnda directa\xBB.",
   "ure-p1-q377": "El balun adapta la l\xEDnea coaxial (no balanceada) al dipolo (balanceado), evitando corrientes par\xE1sitas por la malla del cable. Por eso el circuito buscado es el \xABBalun\xBB.",
+  "ure-p1-q378": "En ondas medias la se\xF1al se gu\xEDa por el suelo siguiendo la curvatura terrestre. Por eso la propagaci\xF3n por onda de superficie predomina en la banda \xABMF\xBB.",
   "ure-p1-q379": "Si el vat\xEDmetro muestra potencia reflejada apreciable, hay desadaptaci\xF3n entre transmisor y antena (ROE > 1). Adaptado, la reflejada ser\xEDa m\xEDnima y la directa m\xE1xima. \xABEl transmisor no est\xE1 adaptado a la antena\xBB.",
   "ure-p1-q380": "La onda reflejada por la desadaptaci\xF3n se compara con la directa para cuantificarla. Por eso se usa \xABUn medidor de ROE\xBB, que da la relaci\xF3n de onda estacionaria entre transmisor y antena.",
   "ure-p1-q381": "El osciloscopio representa la se\xF1al en el dominio del tiempo, mostrando gr\xE1ficamente su forma de onda (amplitud frente a tiempo). \xABLa representaci\xF3n gr\xE1fica de las formas de onda\xBB.",
+  "ure-p1-q386": "El squelch o silenciador corta la salida de audio cuando la se\xF1al de entrada no supera un umbral, para no o\xEDr ruido de fondo cuando no hay comunicaci\xF3n. \xABUn circuito para suprimir la salida de sonido de un receptor cuando la se\xF1al de entrada a este no supera un determinado nivel\xBB.",
   "ure-p1-q387": "El esquema muestra mezclador y filtro de producto t\xEDpicos de un receptor que demodula SSB y CW (telegraf\xEDa). No es un circuito solo FM ni un bloque in\xFAtil en el diagrama. \xABSSB y CW\xBB.",
   "ure-p1-q416": "7,4 V es la tensi\xF3n nominal; 1500 mAh indica que puede entregar 1500 mA (1,5 A) durante una hora aproximadamente si la descarga es nominal (capacidad en miliamperios-hora). \xAB7,4 voltios y 1,5 amperios durante una hora\xBB.",
   "ure-p1-q417": "El amper\xEDmetro mide la corriente que circula, de modo que esa misma corriente debe atravesarlo. Por eso se intercala \xABEn serie\xBB en la rama que se quiere medir.",
   "ure-p1-q418": "Al asociar resistencias en serie sus valores se suman (Req = R1 + R2 + \u2026), por lo que el total siempre supera al de cualquiera de ellas. \xABEs mayor que el valor de cualquiera de las resistencias\xBB.",
+  "ure-p1-q419": "La carga el\xE9ctrica es corriente por tiempo: un culombio equivale al producto de un amperio por un segundo (1 C = 1 A\xB7s). \xABUn culombio es igual al producto de un amperio por segundo\xBB.",
   "ure-p1-q420": "El LC en paralelo con diodo forma un circuito resonante selectivo en la frecuencia de resonancia: puede actuar como receptor AM pasivo. No es amplificador ni oscilador alimentado. \xABComo receptor de AM a la frecuencia de resonancia del circuito LC\xBB.",
   "ure-p1-q422": "El diodo en serie con resistencia de carga y condensador rectifica y filtra la envolvente de una se\xF1al modulada: act\xFAa como detector de envolvente, no como limitador. \xABDetector de envolvente\xBB.",
   "ure-p1-q424": "La selectividad es la capacidad de discriminar se\xF1ales de frecuencias muy pr\xF3ximas; la sensibilidad es detectar se\xF1ales d\xE9biles. \xABLa capacidad de separar dos se\xF1ales muy pr\xF3ximas en frecuencia\xBB.",
@@ -21571,8 +21635,10 @@ var curated_explanations_default = {
   "ure-p1-q429": "En la banda de 40 m la longitud de onda es de unos 40 m, y un dipolo de media onda mide \u03BB/2. Por eso su longitud f\xEDsica es de aproximadamente \xAB20 m\xBB.",
   "ure-p1-q430": "La relaci\xF3n de espiras N1:N2 = 2:1 implica que un devanado tiene el doble de espiras que el otro (tensi\xF3n y corriente se transforman seg\xFAn esa relaci\xF3n en el transformador ideal). \xABUno de los devanados tiene el doble n\xFAmero de espiras que el otro\xBB.",
   "ure-p1-q431": "Las trampas (circuitos LC) a\xEDslan tramos del dipolo seg\xFAn la banda en uso, de manera que la misma antena puede resonar en varias frecuencias. \xABPermite obtener resonancia en varias frecuencias\xBB.",
+  "ure-p1-q432": "En el desvanecimiento (fading) la intensidad de la se\xF1al recibida var\xEDa con el tiempo, pudiendo llegar a no detectarse, por interferencia de trayectos o cambios de propagaci\xF3n. \xABLa intensidad de una se\xF1al emitida sufre variaciones en un per\xEDodo de tiempo pudiendo llegar a no detectarse en el receptor\xBB.",
   "ure-p1-q433": "Un transmisor de RF radia su energ\xEDa en forma de onda electromagn\xE9tica a trav\xE9s de la antena; no es emisi\xF3n t\xE9rmica ni rayos gamma. \xABRadiaci\xF3n electromagn\xE9tica\xBB.",
   "ure-p1-q434": "Un receptor superheterodino de FM necesita un oscilador local para mezclar y trasladar la se\xF1al a frecuencia intermedia. Por eso el bloque que falta en el diagrama es \xABUn oscilador\xBB.",
+  "ure-p1-q435": "El rebote lunar (EME) necesita atravesar la ionosfera sin reflejarse en ella. Por eso se usan VHF y bandas superiores, que la traspasan camino de la Luna. \xABVHF y superiores\xBB.",
   "ure-p1-q438": "El S-meter mide el nivel relativo de la se\xF1al que llega al receptor (la fuerza de la se\xF1al recibida), no la potencia transmitida ni la frecuencia. \xABLa intensidad de la se\xF1al de entrada del receptor\xBB.",
   "ure-p1-q439": "Si el LC resuena a la frecuencia del transmisor, la impedancia vista puede hacer que el vat\xEDmetro lea potencia m\xEDnima hacia la carga (energ\xEDa desviada o absorbida en el resonador). \xABM\xEDnima\xBB.",
   "ure-p1-q440": "El transistor bipolar controla la corriente entre dos de sus patillas mediante una tercera. Por eso son dispositivos que \xABTienen tres terminales\xBB: emisor, base y colector.",
@@ -21580,11 +21646,14 @@ var curated_explanations_default = {
   "ure-p1-q444": "Para bajar la frecuencia de resonancia hay que aumentar la longitud el\xE9ctrica de la antena, y 28.500 kHz es menor que 29.900 kHz. Por eso la soluci\xF3n es \xABAlargarla\xBB.",
   "ure-p1-q478": "Dos resistencias en paralelo dan una resistencia equivalente menor que cualquiera de ellas; en serie ser\xEDa mayor. Los termistores PTC/NTC var\xEDan R con la temperatura. \xABEl valor de la conexi\xF3n de dos resistencias en paralelo da un valor resultante menor que cualquiera de ellas\xBB.",
   "ure-p1-q479": "Con la antena transmitiendo existen tensiones y corrientes de RF elevadas que pueden producir quemaduras; por seguridad no se debe tocar mientras se emite. \xABNo se debe tocar una antena trasmitiendo\xBB.",
+  "ure-p1-q482": "El dBm expresa potencia en escala logar\xEDtmica referida a 1 mW; por tanto la magnitud a la que se refiere es la potencia el\xE9ctrica. \xABPotencia el\xE9ctrica\xBB.",
   "ure-p1-q483": "El mezclador traslada la se\xF1al a la frecuencia intermedia; la etapa de FI se conecta justo a su salida para amplificar y filtrar esa FI antes de la detecci\xF3n. \xABA la salida del mezclador\xBB.",
   "ure-p1-q486": "Con impedancias iguales la energ\xEDa se transfiere hacia la antena: en el vat\xEDmetro la potencia hacia delante supera a la reflejada. Con desadaptaci\xF3n la reflejada ser\xEDa comparable. \xABLa potencia directa es superior a la potencia reflejada\xBB.",
   "ure-p1-q488": "Las comunicaciones por sat\xE9lite de radioaficionado (SO-50, etc.) usan bandas VHF/UHF con enlaces l\xEDnea de vista al sat\xE9lite; HF depende de ion\xF3sfera y MF/LF no son el caso t\xEDpico. \xABVHF\xBB.",
+  "ure-p1-q491": "Con acoplamiento \xF3ptimo entre transmisor y antena no hay onda reflejada. Por eso el medidor de ROE marca su valor m\xEDnimo posible, que es uno. \xABUno\xBB.",
   "ure-p1-q492": "La estabilidad de un receptor se define como su capacidad de mantener la frecuencia sintonizada sin derivas con el paso del tiempo o los cambios de temperatura. \xABEstabilidad\xBB.",
   "ure-p1-q493": "Un campo el\xE9ctrico intenso puede acoplar energ\xEDa a circuitos cercanos y saturar entradas de RF: aparece desensibilizaci\xF3n o bloqueo en equipos electr\xF3nicos de las inmediaciones. No aumenta la potencia hacia la antena ni \xABmejora\xBB la recepci\xF3n. \xABLa desensibilizaci\xF3n o bloqueo de los diferentes equipos electr\xF3nicos que se encuentren en las inmediaciones\xBB.",
+  "ure-p1-q494": "La amplitud de una se\xF1al sinusoidal es su valor de pico: la diferencia entre el valor m\xE1ximo y el valor medio (la l\xEDnea de cero) de la onda. \xABEs la diferencia entre el valor m\xE1ximo y el valor medio de la se\xF1al\xBB.",
   "ure-p1-q495": "El diodo es un dispositivo de uni\xF3n PN que conduce preferentemente en un sentido y bloquea en inversa; por eso rectifica y protege etapas. \xABUn dispositivo que permite el paso de la comente el\xE9ctrica en un \xFAnico sentido\xBB.",
   "ure-p1-q498": "El transistor bipolar est\xE1 formado por tres regiones semiconductoras, cada una con su terminal. Por eso sus tres patillas son \xABEmisor, base y colector\xBB.",
   "ure-p1-q499": "El vat\xEDmetro en figura mide en la resistencia de prueba: en la posici\xF3n 1 los conmutadores conectan correctamente sensor directo/reflejado a esa resistencia. \xABLos conmutadores en la posici\xF3n 1\xBB.",
@@ -21592,13 +21661,19 @@ var curated_explanations_default = {
   "ure-p1-q503": "Las trampas de un dipolo multibanda son circuitos resonantes LC que, a su frecuencia, se comportan como un aislante y desconectan el\xE9ctricamente el resto de la antena. \xABCircuitos resonantes\xBB.",
   "ure-p1-q6": "En transmisi\xF3n anal\xF3gica la se\xF1al puede tomar infinitos valores intermedios entre extremos (continua en amplitud). La digital usa s\xEDmbolos discretos. \xABPueden tener infinitos valores\xBB.",
   "ure-p1-q64": "Un condensador acumula en sus armaduras cargas de signo opuesto y, con ellas, energ\xEDa en el campo el\xE9ctrico del diel\xE9ctrico. Por eso lo que almacena es \xABCarga el\xE9ctrica\xBB.",
-  "ure-p1-q65": "En una resistencia, P = V\xB7I = I\xB2R = V\xB2/R. Calcula V = I\xB7R y luego la potencia disipada. \xAB10 voltios\xBB.",
+  "ure-p1-q65": "Por la ley de Ohm, V = I\xB7R. Con I = 10 mA (0,01 A) y R = 1 k\u03A9 (1000 \u03A9) resulta V = 0,01\xB71000 = 10 V. \xAB10 voltios\xBB.",
+  "ure-p1-q67": "La dispersi\xF3n troposf\xE9rica reenv\xEDa parte de la se\xF1al hacia el suelo desde la trop\xF3sfera, logrando alcances mayores que la simple visi\xF3n directa entre antenas. \xABMayor alcance que el meramente visual entre las antenas transmisora y receptora\xBB.",
+  "ure-p1-q68": "En 3,5 MHz, de d\xEDa la capa D de la ionosfera absorbe la se\xF1al y reduce la reflexi\xF3n. Por eso los alcances diurnos son menores que durante la noche. \xABMenores\xBB.",
+  "ure-p1-q7": "El termistor NTC (coeficiente negativo) reduce su resistencia al calentarse; se usa como sensor de temperatura y para compensaci\xF3n t\xE9rmica. Por eso es \xABUna resistencia cuyo valor se reduce a medida que la temperatura aumenta\xBB.",
+  "ure-p1-q70": "Un multiplicador de frecuencia entrega a su salida un m\xFAltiplo entero de la frecuencia de entrada, y sirve para elevar la frecuencia de un oscilador hasta la banda de trabajo. \xABIncrementar la frecuencia de un oscilador\xBB.",
   "ure-p1-q71": "El \xEDndice de modulaci\xF3n (\u03B2 = desviaci\xF3n de frecuencia / frecuencia moduladora) cuantifica cu\xE1nto se desv\xEDa la portadora respecto a la moduladora, magnitud propia de la modulaci\xF3n de frecuencia. \xABLa modulaci\xF3n de frecuencia\xBB.",
   "ure-p1-q74": "La toma de tierra deriva hacia el suelo las corrientes de fuga y las descargas, de modo que protege al operador frente a posibles descargas el\xE9ctricas. \xABProteger al operador de descargas\xBB.",
   "ure-p1-q75": "Los elementos par\xE1sitos de una Yagi no est\xE1n conectados al alimentador (no son activos): reradian la se\xF1al para dirigir y reforzar la radiaci\xF3n. \xABComponentes de la antena no activos\xBB.",
   "ure-p1-q76": "La polarizaci\xF3n de una antena es la orientaci\xF3n del campo el\xE9ctrico que radia (vertical, horizontal\u2026); conviene que coincida con la de la antena receptora para captar bien. \xABLa orientaci\xF3n del campo el\xE9ctrico transmitido\xBB.",
-  "ure-p1-q77": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptaci\xF3n ideal). Valores muy altos indican desadaptaci\xF3n. \xABIgual a la de la antena y a la del transmisor\xBB.",
+  "ure-p1-q77": "El acoplamiento \xF3ptimo exige que la l\xEDnea de transmisi\xF3n tenga la misma impedancia que la antena y que el transmisor; as\xED no hay reflexiones y la ROE vale 1. \xABIgual a la de la antena y a la del transmisor\xBB.",
+  "ure-p1-q78": "La frecuencia cr\xEDtica es el l\xEDmite por encima del cual una onda con incidencia vertical ya no se refleja en la ionosfera, sino que la atraviesa. \xABA la frecuencia por encima de la cual no hay reflexiones en la ionosfera\xBB.",
   "ure-p1-q79": "El arm\xF3nico de segundo orden tiene frecuencia doble de la fundamental (2\xB7f); el de tercer orden el triple, y as\xED sucesivamente. \xABLa frecuencia de los de segundo orden es doble de la fundamental\xBB.",
+  "ure-p1-q8": "Igual que en las resistencias, el c\xF3digo de bandas de color de un condensador indica su capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo. \xABSu capacidad, su tolerancia y su tensi\xF3n m\xE1xima de trabajo\xBB.",
   "ure-p1-q82": "En un transformador reductor el secundario tiene menos espiras que el primario (V2 < V1 en ideal). El n\xFAcleo ferromagn\xE9tico mejora el acoplamiento magn\xE9tico. \xABEl secundario tenga menos espiras que el primario\xBB.",
   "ure-p1-q84": "A partir del circuito resonante y del esquema del superheterodino de la figura, la frecuencia de sinton\xEDa calculada coincide con 14,2 MHz (relaci\xF3n entre oscilador, FI y RF). \xABF=14,2 MHz\xBB.",
   "ure-p1-q85": "Con pilas id\xE9nticas en serie circula la misma intensidad en toda la rama (un solo camino); la tensi\xF3n total es la suma de las de cada pila. No confundir con resistencias en serie. \xABLa intensidad del conjunto es igual a la de una pila\xBB.",
@@ -21612,6 +21687,7 @@ var curated_explanations_default = {
   "ure-p2-q117": "Con licencia CEPT debes cumplir la reglamentaci\xF3n del pa\xEDs visitado (bandas, potencias, identificaci\xF3n). No basta con aplicar solo las normas de tu pa\xEDs de origen. \xABSiempre\xBB.",
   "ure-p2-q119": "Estas componentes nacen del propio proceso de modulaci\xF3n y caen justo al lado de la anchura de banda necesaria. Por eso se llaman emisiones \xABFuera de banda\xBB, distintas de los arm\xF3nicos.",
   "ure-p2-q120": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
+  "ure-p2-q152": "En la nomenclatura ITU, la gama de 3 a 30 MHz recibe el s\xEDmbolo HF (High Frequency), las ondas decam\xE9tricas. \xABHF\xBB.",
   "ure-p2-q157": "Hace falta licencia de estaci\xF3n (y autorizaci\xF3n de operador vigente); no basta con comprar equipo. \xABLicencia de Estaci\xF3n\xBB. (BOE-A-2013-7624).",
   "ure-p2-q158": "El prefijo EA9 identifica estaciones en Ceuta y Melilla dentro de la numeraci\xF3n de indicativos espa\xF1oles. Por eso EA9ADI corresponde a \xABCeuta\xBB.",
   "ure-p2-q160": "Decir \xABcambio\xBB al ceder el turno avisa al corresponsal de que ya puede hablar. Por eso, como buena pr\xE1ctica operativa en fon\xEDa, su uso es \xABRecomendable\xBB.",
@@ -21628,6 +21704,9 @@ var curated_explanations_default = {
   "ure-p2-q215": "QRT significa cese de transmisi\xF3n (\xABdeje de transmitir\xBB). No confundir con QSY (cambio de frecuencia) ni QRX (espera). \xABDeje de transmitir\xBB.",
   "ure-p2-q216": "El distintivo debe identificar la estaci\xF3n al inicio y al final de cada comunicaci\xF3n para que la contraparte sepa qui\xE9n emite. Es obligaci\xF3n de buena pr\xE1ctica y del reglamento del servicio de aficionados. \xABAl comienzo y final de cada emisi\xF3n\xBB.",
   "ure-p2-q219": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABSea demasiado extensa\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q222": "Tras desmontar la antena por obras de la comunidad, el radioaficionado tiene derecho a reinstalarla en condiciones similares a las que ten\xEDa antes, una vez terminadas. \xABPodr\xE1 instalarla nuevamente en condiciones similares a las anteriores\xBB.",
+  "ure-p2-q223": "La banda HF son las ondas decam\xE9tricas, muy usadas para enlaces de larga distancia por reflexi\xF3n ionosf\xE9rica. Por eso, en la nomenclatura ITU, abarca de \xAB3 a 30 MHz\xBB.",
+  "ure-p2-q226": "El punto donde se fijan las riostras a la obra civil del inmueble reparte los esfuerzos mec\xE1nicos del m\xE1stil. Por eso ese elemento de fijaci\xF3n se denomina \xABAnclaje\xBB.",
   "ure-p2-q233": "Mayday (tres veces) es la se\xF1al internacional de socorro en radiotelefon\xEDa para peligro grave e inmediato. Pan-Pan indica urgencia sin peligro inmediato. \xABMayday\xBB.",
   "ure-p2-q237": "Se define como radiocomunicaci\xF3n toda telecomunicaci\xF3n realizada por medio de ondas radioel\xE9ctricas, frente a otras telecomunicaciones por cable o fibra. \xABRadiocomunicaci\xF3n\xBB.",
   "ure-p2-q27": "QRM indica interferencia de origen artificial (otras emisiones, equipos cercanos). QRN es ruido atmosf\xE9rico natural. Por eso la abreviatura de interferencia es \xABQRM\xBB.",
@@ -21637,31 +21716,42 @@ var curated_explanations_default = {
   "ure-p2-q279": "Los sufijos que empiezan por Y o Z se reservan a estaciones autom\xE1ticas desatendidas (anal\xF3gicas y digitales). \xABLos que comienzan por: UR y RC o RK\xBB. (BOE-A-2013-7624).",
   "ure-p2-q280": "Los plazos de resoluci\xF3n administrativa est\xE1n en el reglamento; el banco fija un plazo concreto para este supuesto (p. ej. seis semanas). \xABSeis semanas\xBB. (BOE-A-2013-7624).",
   "ure-p2-q282": "EB es prefijo de estaci\xF3n de aficionado en Espa\xF1a; la cifra de distrito (EB1) asocia la provincia en el banco de examen. EB1VZY corresponde a \xAB\xC1vila\xBB.",
+  "ure-p2-q289": "La banda VHF (30\u2013300 MHz) corresponde a las ondas m\xE9tricas, llamadas as\xED porque su longitud de onda es del orden del metro. \xABM\xE9tricas\xBB.",
+  "ure-p2-q296": "En la nomenclatura ITU, A3E designa una emisi\xF3n de amplitud con doble banda lateral y un solo canal de informaci\xF3n anal\xF3gica (telefon\xEDa AM cl\xE1sica). \xABDoble banda lateral con un solo canal con informaci\xF3n anal\xF3gica\xBB.",
   "ure-p2-q32": "Los distintivos espa\xF1oles de aficionado siguen el formato EA/EB/EC + distrito + sufijo; \xABAM8SOS\xBB no es un formato asignable en ese esquema. \xABNo se puede asignar\xBB.",
   "ure-p2-q331": "El distintivo espa\xF1ol combina prefijo nacional (E\u2026), cifra de distrito y sufijo asignado por la administraci\xF3n. Por eso la estructura es \xABPrefijo + Distrito + Sufijo\xBB.",
   "ure-p2-q334": "El prefijo EA6 corresponde a las Islas Baleares en la numeraci\xF3n de indicativos espa\xF1oles. Por eso un distintivo EA6\u2026 asociado al archipi\xE9lago puede corresponder a \xABPalma de Mallorca\xBB.",
   "ure-p2-q336": "Espa\xF1a tiene prefijos ITU EA, EB y EC para estaciones amateur. FM/FN son franc\xE9s; KN americano. \xABEA, EB, EC\xBB.",
   "ure-p2-q339": "QRT indica cese de transmisi\xF3n o cierre de estaci\xF3n en el Q-code internacional; otros Q-codes abrevian tr\xE1fico (QSY, QSL\u2026). \xABCierre de la estaci\xF3n\xBB. (BOE-A-2013-7624).",
   "ure-p2-q340": "Un mensaje de socorro usa Mayday o se\xF1ales de socorro, no Securit\xE9 (se\xF1al de seguridad para avisos que no son socorro). Por eso no incluye \xABLa se\xF1al de seguridad Securite\xBB.",
+  "ure-p2-q344": "Las ondas m\xE9tricas (VHF, 30\u2013300 MHz) se abrevian B.m. en la nomenclatura de bandas, porque su longitud de onda es del orden del metro. \xABLa abreviatura m\xE9trica B. m.\xBB.",
   "ure-p2-q347": "Sin titular con autorizaci\xF3n de radioaficionado (y licencia de estaci\xF3n cuando proceda) no hay instalaci\xF3n regular. \xABLa autorizaci\xF3n de radioaficionado de su titular\xBB. (BOE-A-2013-7624).",
   "ure-p2-q349": "El repetidor ampl\xEDa cobertura retransmitiendo en otra frecuencia; no sustituye la licencia ni autoriza tr\xE1fico ajeno al servicio. \xABAmpliar el alcance de las comunicaciones\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q352": "El indicativo compuesto con barra se\xF1ala operaci\xF3n temporal bajo CEPT. Por eso EA4ABC/M3BVM corresponde a un radioaficionado con licencia de otro pa\xEDs que opera ocasionalmente una estaci\xF3n espa\xF1ola. \xABSe trata de un radioaficionado con licencia expedida por otro pa\xEDs, operando ocasionalmente una estaci\xF3n espa\xF1ola\xBB.",
   "ure-p2-q358": "En el alfabeto fon\xE9tico ICAO internacional el d\xEDgito 9 se deletrea \xABNine\xBB (ingl\xE9s). En tr\xE1fico espa\xF1ol se usan equivalencias en castellano en otros enunciados.",
   "ure-p2-q38": "El seguro de antenas cubre da\xF1os a terceros por la instalaci\xF3n; es parte de la responsabilidad del titular. \xABLa responsabilidad civil del titular\xBB. (BOE-A-2013-7624).",
   "ure-p2-q389": "ED1YBD es un indicativo de estaci\xF3n desatendida anal\xF3gica en la nomenclatura del banco (prefijo ED + numeraci\xF3n de repetidor/desatendida). \xABCorresponde a una estaci\xF3n desatendida anal\xF3gica\xBB.",
   "ure-p2-q39": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABPor un grupo alfanum\xE9rico\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q390": "Bajo CEPT, el operador extranjero antepone el prefijo del pa\xEDs y distrito visitado a su indicativo de origen. Por eso EA3/OK2HM es un radioaficionado con licencia de otro pa\xEDs que opera ocasionalmente en el distrito 3. \xABUn radioaficionado con licencia expedida en otro pa\xEDs, opera ocasionalmente en el distrito 3\xBB.",
   "ure-p2-q392": "La identificaci\xF3n autom\xE1tica en CW del repetidor va a la velocidad que fija el banco (diez palabras por minuto). \xABDiez palabras por minuto\xBB. (BOE-A-2013-7624).",
   "ure-p2-q393": "El distintivo identifica la estaci\xF3n en cada contacto; la forma y momento concretos dependen del supuesto del enunciado. \xABEst\xE1 emitiendo desde Andaluc\xEDa\xBB. (BOE-A-2013-7624).",
   "ure-p2-q395": "QRN indica perturbaci\xF3n por ruido atmosf\xE9rico (tormentas, descargas). QRM es interferencia artificial. Por eso el c\xF3digo Q atmosf\xE9rico es \xABQRN\xBB.",
+  "ure-p2-q396": "El reglamento vigente (BOE-A-2013-7624) limita la potencia de las estaciones desatendidas en zona urbana. Por eso en VHF/UHF dentro del casco urbano la salida no puede superar los \xAB10 W\xBB.",
+  "ure-p2-q398": "El reglamento vigente (BOE-A-2013-7624) fija el tope de potencia de las estaciones autom\xE1ticas desatendidas. Por eso en la banda de HF su salida m\xE1xima es de \xAB50 W\xBB.",
   "ure-p2-q400": "El CNAF fija atribuciones de bandas en Espa\xF1a; el reglamento de aficionados remite a \xE9l para frecuencias permitidas. \xABCuadro Nacional de Atribuci\xF3n de Frecuencias\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q44": "La comunidad de propietarios no autoriza la instalaci\xF3n: el derecho a instalar la antena lo ampara la normativa, aunque haya que informar a la comunidad. \xABNo\xBB. (BOE-A-2013-7624).",
   "ure-p2-q446": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30\u2013300 MHz. Para este enunciado la respuesta correcta es \xAB6 dB\xBB. (BOE-A-2013-7624).",
   "ure-p2-q45": "La banda 10,00\u201310,5 GHz entre aficionados requiere autorizaci\xF3n especial de uso seg\xFAn el cuadro nacional del BOE; 14 MHz y 50 MHz son bandas habituales sin ese requisito adicional. \xAB10,00-10,5 GHz\xBB.",
   "ure-p2-q454": "Las estaciones desatendidas deben identificarse peri\xF3dicamente; el banco fija un intervalo (p. ej. seis horas). \xABSeis horas\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q457": "Las ondas m\xE9tricas, de longitud de onda en torno al metro, se representan con el s\xEDmbolo VHF (30\u2013300 MHz). \xABVHF\xBB.",
   "ure-p2-q458": "El distintivo asignado es un grupo alfanum\xE9rico (prefijo, cifra de distrito y sufijo seg\xFAn el caso). \xABUn grupo alfanum\xE9rico de 6 caracteres como m\xE1ximo\xBB. (BOE-A-2013-7624).",
   "ure-p2-q460": "El acceso a repetidores debe ser libre salvo c\xF3digo t\xE9cnico justificado; no puede reservarse a un club sin base reglamentaria. \xABNecesariamente libre\xBB. (BOE-A-2013-7624).",
+  "ure-p2-q468": "La Ley 19/1983, llamada Ley de Antenas, reconoce el derecho de los radioaficionados a instalar sus antenas en el exterior de los inmuebles. \xABEl derecho a instalar las antenas de aficionado en el exterior de los inmuebles\xBB.",
   "ure-p2-q504": "El alfabeto fon\xE9tico ICAO evita confusiones entre letras parecidas (B/D, M/N) en tr\xE1fico de voz. La palabra correcta del enunciado es \xABSeven\xBB.",
   "ure-p2-q506": "En el c\xF3digo Q, QRP pide reducir la potencia de transmisi\xF3n. Por eso, para pedir lo contrario, aumentar la potencia, la abreviatura correcta es \xABQRO\xBB.",
   "ure-p2-q512": "Un distintivo puede reutilizarse cuando se cancela la autorizaci\xF3n anterior que lo ten\xEDa asignado; no queda reservado para siempre al titular previo. \xABSi se cancela la autorizaci\xF3n correspondiente\xBB.",
   "ure-p2-q513": "RST informa legibilidad (R), intensidad de se\xF1al (S) y tono (T) en fon\xEDa; no es un c\xF3digo Q ni una se\xF1al de socorro. \xABInformar sobre la intensidad de la se\xF1al recibida\xBB.",
+  "ure-p2-q515": "La Administraci\xF3n debe informar al presidente de la comunidad cuando se le ha solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble. \xABSe le haya solicitado autorizaci\xF3n para instalar antenas de radioaficionado en el exterior del inmueble\xBB.",
   "ure-p2-q516": 'Pan-Pan (tres veces) es urgencia sin peligro grave inmediato. Mayday reserva el socorro grave. \xABDel grupo "pan pan" repetido tres veces\xBB.',
   "ure-p2-q518": "Sin acreditar residencia legal en Espa\xF1a no procede la autorizaci\xF3n de extranjero residente. \xABAcredite documentalmente su condici\xF3n de residente en Espa\xF1a\xBB. (BOE-A-2013-7624).",
   "ure-p2-q519": "El certificado HAREC acredita el examen de operador armonizado entre administraciones CEPT. Se vincula a la Recomendaci\xF3n T/R 61-02, distinta de T/R 61-01 (licencia CEPT para operar en el extranjero). \xABT/R 61-02\xBB.",

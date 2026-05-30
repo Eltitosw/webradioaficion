@@ -8,7 +8,7 @@
  */
 
 export const BANCO_ESTUDIO_GENERATED_AT = "2026-05-30";
-export const BANCO_ESTUDIO_STATS = {"count":587,"examSubset":563,"studyOnlyAdded":24,"paraphraseRemoved":126,"withFigure":30,"withPedagogicalExplain":580};
+export const BANCO_ESTUDIO_STATS = {"count":587,"examSubset":563,"studyOnlyAdded":24,"paraphraseRemoved":126,"withFigure":30,"withPedagogicalExplain":587};
 
 export default [
   {
@@ -403,7 +403,7 @@ export default [
       "Troposfera"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Ionosfera»."
+    "explain": "La ionosfera es la capa alta de la atmósfera ionizada por la radiación solar; refleja las ondas de HF, y por eso las condiciones de propagación cambian con la actividad solar. «Ionosfera»."
   },
   {
     "id": "fedi-ah-031",
@@ -459,7 +459,7 @@ export default [
       "Medio año"
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Tres meses». (BOE-A-2013-7624)."
+    "explain": "Salvo urgencia, la comunidad debe avisar al radioaficionado con tres meses de antelación antes de exigir el desmontaje de la antena por obras, para que pueda reorganizar su instalación. «Tres meses». (BOE-A-2013-7624)."
   },
   {
     "id": "fedi-ah-035",
@@ -557,7 +557,7 @@ export default [
       "Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales"
     ],
     "correctIndex": 3,
-    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalación unilateral sin informar. «Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales». (BOE-A-2013-7624)."
+    "explain": "El titular debe permitir las obras de conservación del edificio, pero la comunidad ha de comprometerse a reponer la antena en sus condiciones iniciales al terminarlas. «Está obligado a permitir las obras, siempre que la Comunidad de vecinos se comprometa a dejar la instalación en las condiciones iniciales». (BOE-A-2013-7624)."
   },
   {
     "id": "fedi-ah-042",
@@ -797,7 +797,7 @@ export default [
       "La impedancia del vacío"
     ],
     "correctIndex": 1,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La frecuencia».",
+    "explain": "En FM la información se transmite variando la frecuencia instantánea de la portadora, no su amplitud, que se mantiene constante. Por eso la magnitud que varía es «La frecuencia».",
     "sourceRef": "Elaboración propia (2026) · programa HAREC / magnetismo y ondas electromagnéticas."
   },
   {
@@ -1798,7 +1798,7 @@ export default [
       "La polarización mecánica"
     ],
     "correctIndex": 2,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «La amplitud»."
+    "explain": "En AM la portadora conserva su frecuencia fija y es su amplitud la que sigue a la señal moduladora. Por eso la magnitud que varía principalmente es «La amplitud»."
   },
   {
     "id": "q5",
@@ -2209,7 +2209,7 @@ export default [
       "Solicitar permiso al titular de la licencia de estación."
     ],
     "correctIndex": 2,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Informar, con antelación mínima de un mes, al titular de la licencia de estación si fuera necesario desmontar la antena y/o elementos anejos.». (BOE-A-2013-7624).",
+    "explain": "Antes de obras que afecten a una antena autorizada, la comunidad debe informar al titular de la licencia con un mes de antelación si fuera necesario desmontarla. «Informar, con antelación mínima de un mes, al titular de la licencia de estación si fuera necesario desmontar la antena y/o elementos anejos.». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1939). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -2239,7 +2239,7 @@ export default [
       "Conjunto de emisiones de banda estrecha."
     ],
     "correctIndex": 2,
-    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.».",
+    "explain": "Las emisiones no deseadas agrupan las no esenciales y las de fuera de banda: todo lo que se radia además de la emisión necesaria para la comunicación. «Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -2312,7 +2312,7 @@ export default [
       "En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W."
     ],
     "correctIndex": 3,
-    "explain": "En reglamentación de aficionados, la redacción del BOE y la convocatoria mandan sobre potencias, trámites y procedimientos. La opción que encaja con este enunciado es «En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W.».",
+    "explain": "En el segmento 50,0–51,0 MHz se permite emitir en todo el territorio nacional siempre que la potencia máxima del equipo no supere los 50 W. «En todo el territorio nacional si la potencia máxima del equipo es inferior a 50 W.».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -2461,7 +2461,7 @@ export default [
       "156,525 MHz"
     ],
     "correctIndex": 1,
-    "explain": "Las señales de socorro están reservadas a emergencias reales; su uso indebido es infracción grave. «2.187,5 kHz».",
+    "explain": "En el GMDSS, la banda MF tiene una frecuencia internacional reservada para la alerta de socorro por Llamada Selectiva Digital (DSC). Por eso esa alerta se transmite en «2.187,5 kHz».",
     "explainSourceNote": "Práctica histórica (Quijotes EA3RCQ · reglamentacion-correccion-inmediata, quiz 84, pregunta 2203). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
@@ -2506,7 +2506,7 @@ export default [
       "V/m"
     ],
     "correctIndex": 3,
-    "explain": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "El campo eléctrico mide la fuerza por unidad de carga, es decir, tensión repartida a lo largo de una distancia. Por eso se expresa en voltios por metro: «V/m»."
   },
   {
     "id": "ure-p1-q10",
@@ -2595,7 +2595,7 @@ export default [
       "Intensidad"
     ],
     "correctIndex": 0,
-    "explain": "dBm expresa potencia referida a 1 mW; dBµV suele referirse a tensión. No confundas con dB de ganancia sin referencia. «Potencia».",
+    "explain": "El dBm es una medida logarítmica de potencia referida a 1 mW. Por tanto, la magnitud que representa el dBm es la potencia. «Potencia».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2640,7 +2640,7 @@ export default [
       "15 vatios"
     ],
     "correctIndex": 2,
-    "explain": "En una resistencia, P = V·I = I²R = V²/R. Calcula V = I·R y luego la potencia disipada. «120 vatios».",
+    "explain": "La potencia disipada en una resistencia es P = I²·R. Con I = 2 A y R = 30 Ω resulta P = 2²·30 = 120 W. «120 vatios».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2732,7 +2732,7 @@ export default [
       "La suma de las capacidades individuales"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «La suma de las capacidades individuales».",
+    "explain": "Al conectar condensadores en paralelo las capacidades se suman, como si aumentara la superficie de armadura; por eso la capacidad total es mayor que cada una. «La suma de las capacidades individuales».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2840,7 +2840,7 @@ export default [
       "La frecuencia con la que debe cortarse la guía para la transmisión"
     ],
     "correctIndex": 0,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La frecuencia por debajo de la cual no es posible la transmisión en la guía de onda».",
+    "explain": "Una guía de onda no deja pasar señales por debajo de cierta frecuencia: esa es su frecuencia de corte, por debajo de la cual no hay transmisión por la guía. «La frecuencia por debajo de la cual no es posible la transmisión en la guía de onda».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -2902,7 +2902,7 @@ export default [
       "Es el medio de propagación característico en las grandes ciudades"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «La señal radioeléctrica se propaga siguiendo la curvatura terrestre»."
+    "explain": "En la propagación por onda de superficie la señal se guía por el terreno y sigue la curvatura terrestre, alcanzando puntos más allá del horizonte óptico. «La señal radioeléctrica se propaga siguiendo la curvatura terrestre»."
   },
   {
     "id": "ure-p1-q147",
@@ -2978,7 +2978,7 @@ export default [
       "300.000 m/h"
     ],
     "correctIndex": 0,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «300.000 km/s».",
+    "explain": "Las ondas electromagnéticas viajan en el vacío a la velocidad de la luz, unos 300.000 km/s (3·10⁸ m/s). «300.000 km/s».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3038,7 +3038,7 @@ export default [
       "El vatio"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «El vatio».",
+    "explain": "La potencia eléctrica es energía por unidad de tiempo. Por eso su unidad en el SI es el vatio (1 W = 1 julio por segundo). «El vatio».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3053,7 +3053,7 @@ export default [
       "Hilo de cobre desnudo"
     ],
     "correctIndex": 0,
-    "explain": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La fibra óptica transmite luz, no señales eléctricas. Por eso no capta las interferencias electromagnéticas radiadas que sí afectan a los conductores metálicos. «Fibra óptica»."
   },
   {
     "id": "ure-p1-q183",
@@ -3067,7 +3067,7 @@ export default [
       "Un divisor de tensión en función de la temperatura externa"
     ],
     "correctIndex": 2,
-    "explain": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta».",
+    "explain": "Un termistor NTC tiene coeficiente de temperatura negativo: su resistencia disminuye al aumentar la temperatura, al contrario que un PTC. «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3097,7 +3097,7 @@ export default [
       "300.000 Km/seg"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «La longitud de onda multiplicada por la frecuencia».",
+    "explain": "La velocidad de propagación cumple siempre la fórmula v = λ·f. Por tanto, es la longitud de onda multiplicada por la frecuencia. «La longitud de onda multiplicada por la frecuencia».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3127,7 +3127,7 @@ export default [
       "Q=B/f"
     ],
     "correctIndex": 0,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Q=f/B».",
+    "explain": "El factor de calidad relaciona la frecuencia de resonancia f con el ancho de banda B mediante la fórmula Q = f/B. Por eso, cuanto más estrecha la respuesta, mayor es Q. «Q=f/B».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3142,7 +3142,7 @@ export default [
       "La diferencia que existe entre la señal sintonizada y el ruido"
     ],
     "correctIndex": 2,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «La capacidad que tiene para separar dos señales de frecuencias próximas».",
+    "explain": "La selectividad es la capacidad del receptor para separar dos señales de frecuencias próximas, rechazando la adyacente y dejando pasar la deseada. «La capacidad que tiene para separar dos señales de frecuencias próximas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3187,7 +3187,7 @@ export default [
       "Receptor con dos amplificadores de RF"
     ],
     "correctIndex": 0,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «Receptor con dos frecuencias intermedias independientes».",
+    "explain": "El superheterodino de doble conversión emplea dos frecuencias intermedias independientes (dos mezclas sucesivas) para mejorar la selectividad y el rechazo de la frecuencia imagen. «Receptor con dos frecuencias intermedias independientes».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3217,7 +3217,7 @@ export default [
       "Funcionan por el principio de electrólisis"
     ],
     "correctIndex": 0,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Deben conectarse respetando la polaridad indicada».",
+    "explain": "Los condensadores electrolíticos son polarizados: deben conectarse respetando la polaridad marcada, pues en inversa pueden dañarse o reventar. «Deben conectarse respetando la polaridad indicada».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3232,7 +3232,7 @@ export default [
       "La frecuencia de valor constante utilizada en los receptores superheterodinos"
     ],
     "correctIndex": 3,
-    "explain": "En superheterodino el mezclador con oscilador local traslada la señal a una FI fija para filtrar y amplificar con estabilidad. «La frecuencia de valor constante utilizada en los receptores superheterodinos».",
+    "explain": "La frecuencia intermedia es una frecuencia fija a la que el superheterodino traslada todas las señales para filtrarlas y amplificarlas con ganancia y selectividad constantes. «La frecuencia de valor constante utilizada en los receptores superheterodinos».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3395,7 +3395,7 @@ export default [
       "La acción de sintonizar una determinada estación"
     ],
     "correctIndex": 1,
-    "explain": "El fading es variación rápida de nivel por multipath o propagación; no es armónico ni selectividad. «El desvanecimiento transitorio de una señal electromagnética que se propaga».",
+    "explain": "El fading es el desvanecimiento transitorio del nivel de una señal que se propaga, causado por la interferencia de trayectos múltiples o por cambios en la propagación. «El desvanecimiento transitorio de una señal electromagnética que se propaga».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3410,7 +3410,7 @@ export default [
       "Sólo se atenúan si hay lluvia"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Sí, siempre».",
+    "explain": "Toda onda se atenúa al propagarse, porque su energía se reparte en un frente cada vez mayor y el medio introduce pérdidas. Por eso la respuesta es «Sí, siempre».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3518,7 +3518,7 @@ export default [
       "Voltios"
     ],
     "correctIndex": 3,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Voltios».",
+    "explain": "La diferencia de potencial o tensión eléctrica se mide en voltios (V), unidad del SI que equivale al trabajo por unidad de carga. «Voltios».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3533,7 +3533,7 @@ export default [
       "Utilizar para su conexión cable blindado"
     ],
     "correctIndex": 3,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Utilizar para su conexión cable blindado».",
+    "explain": "Para evitar que la RF se cuele en los altavoces de un equipo de baja frecuencia se usa cable blindado, cuya malla apantalla los conductores frente a las interferencias. «Utilizar para su conexión cable blindado».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3652,7 +3652,7 @@ export default [
       "Cero"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador».",
+    "explain": "En resonancia las reactancias se igualan y f0 = 1/(2π√(LC)); por tanto el cuadrado de la frecuencia es inversamente proporcional al producto L·C. «Inversamente proporcional al producto de la inductancia de la bobina por la capacidad del condensador».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3714,7 +3714,7 @@ export default [
       "Tensión eléctrica"
     ],
     "correctIndex": 3,
-    "explain": "dBm expresa potencia referida a 1 mW; dBµV suele referirse a tensión. No confundas con dB de ganancia sin referencia. «Tensión eléctrica»."
+    "explain": "El dBµV es una medida logarítmica de tensión referida a 1 microvoltio. Por tanto, «10 dBµV» expresa un valor de tensión eléctrica, no de potencia. «Tensión eléctrica»."
   },
   {
     "id": "ure-p1-q255",
@@ -3787,7 +3787,7 @@ export default [
       "EHF"
     ],
     "correctIndex": 0,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «HF».",
+    "explain": "La banda de HF (3–30 MHz) es la que mejor se refleja en la ionosfera. Por eso permite enlaces a larga distancia mediante salto ionosférico. «HF».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3881,7 +3881,7 @@ export default [
       "La resistencia eléctrica es inmune a los cambios de temperatura"
     ],
     "correctIndex": 0,
-    "explain": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "En un conductor metálico, al subir la temperatura los átomos vibran más y dificultan el paso de los electrones; por eso aumenta su resistencia eléctrica. «Aumenta su resistencia eléctrica»."
   },
   {
     "id": "ure-p1-q3",
@@ -3925,7 +3925,7 @@ export default [
       "Mantener constante el valor de la frecuencia intermedia"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Mantener constante la amplitud de la señal de salida».",
+    "explain": "El control automático de ganancia (CAG) ajusta la ganancia del receptor según el nivel de entrada para mantener constante la amplitud de la señal de salida. «Mantener constante la amplitud de la señal de salida».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -3985,7 +3985,7 @@ export default [
       "Que el circuito sea de corriente continua"
     ],
     "correctIndex": 2,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Que las impedancias capacitiva e inductiva se igualen».",
+    "explain": "Hay resonancia cuando las reactancias capacitiva e inductiva se igualan y se cancelan, de modo que el circuito se comporta como puramente resistivo. «Que las impedancias capacitiva e inductiva se igualen».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4044,7 +4044,7 @@ export default [
       "Depende de la potencia del equipo y se expresa en dBm"
     ],
     "correctIndex": 1,
-    "explain": "Selectividad separa señales cercanas; sensibilidad detecta señales débiles; el ruido limita el umbral mínimo. «Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)».",
+    "explain": "La relación señal/ruido compara el nivel de señal útil con el de ruido; es un indicador de la calidad del receptor que se expresa en decibelios. «Es una característica del equipo indicativa de la calidad de este, que se expresa en decibelios (dB)».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4153,7 +4153,7 @@ export default [
       "LF"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «HF».",
+    "explain": "La propagación por onda ionosférica (reflexión en la ionosfera) predomina en la banda de HF. Por eso con HF se logran alcances de miles de kilómetros. «HF».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4217,7 +4217,7 @@ export default [
       "Capacímetro"
     ],
     "correctIndex": 0,
-    "explain": "Potencia es energía por unidad de tiempo; en CC P = V·I. Identifica unidad y fórmula antes de elegir. «Vatímetro».",
+    "explain": "La potencia de una señal eléctrica se mide con un vatímetro, que combina la medida de tensión y de corriente para dar el producto P = V·I. «Vatímetro».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4264,7 +4264,7 @@ export default [
       "Siempre vale 1"
     ],
     "correctIndex": 1,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Si la frecuencia es 0, su valor es 0».",
+    "explain": "La reactancia inductiva es XL = 2πfL: crece con la frecuencia, de modo que en continua (f = 0) vale cero y la bobina se comporta como un cortocircuito. «Si la frecuencia es 0, su valor es 0».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4294,7 +4294,7 @@ export default [
       "Es constante en un determinado medio"
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Es constante en un determinado medio»."
+    "explain": "La velocidad de propagación de una onda electromagnética depende del medio; dentro de un mismo medio es constante (en el vacío, la velocidad de la luz). «Es constante en un determinado medio»."
   },
   {
     "id": "ure-p1-q367",
@@ -4308,7 +4308,7 @@ export default [
       "La portadora está desfasada 180º respecto a la única banda lateral"
     ],
     "correctIndex": 0,
-    "explain": "AM suele usar detector de envolvente; SSB/CW detector de producto; FM discriminador o equivalente de frecuencia. «Se tiene una sola banda lateral sin portadora».",
+    "explain": "En banda lateral única (SSB) se suprimen la portadora y una de las bandas laterales, transmitiendo solo la otra, lo que ahorra potencia y ancho de banda. «Se tiene una sola banda lateral sin portadora».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4414,7 +4414,7 @@ export default [
       "Onda reflejada"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Onda directa»."
+    "explain": "En VHF y UHF las frecuencias apenas se reflejan en la ionosfera. Por eso la propagación habitual es de visión directa entre antenas, llamada onda directa o espacial. «Onda directa»."
   },
   {
     "id": "ure-p1-q377",
@@ -4443,7 +4443,7 @@ export default [
       "HF"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «MF».",
+    "explain": "En ondas medias la señal se guía por el suelo siguiendo la curvatura terrestre. Por eso la propagación por onda de superficie predomina en la banda «MF».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4539,7 +4539,7 @@ export default [
       "Un oscilador de cuarzo"
     ],
     "correctIndex": 0,
-    "explain": "El CAG/AGC ajusta ganancia para mantener nivel de audio ante señales fuertes o débiles; no cambia la frecuencia sintonizada. «Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel».",
+    "explain": "El squelch o silenciador corta la salida de audio cuando la señal de entrada no supera un umbral, para no oír ruido de fondo cuando no hay comunicación. «Un circuito para suprimir la salida de sonido de un receptor cuando la señal de entrada a este no supera un determinado nivel».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4631,7 +4631,7 @@ export default [
       "La tensión se mide en amperios"
     ],
     "correctIndex": 2,
-    "explain": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La carga eléctrica es corriente por tiempo: un culombio equivale al producto de un amperio por un segundo (1 C = 1 A·s). «Un culombio es igual al producto de un amperio por segundo»."
   },
   {
     "id": "ure-p1-q420",
@@ -4799,7 +4799,7 @@ export default [
       "La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor"
     ],
     "correctIndex": 3,
-    "explain": "El fading es variación rápida de nivel por multipath o propagación; no es armónico ni selectividad. «La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor».",
+    "explain": "En el desvanecimiento (fading) la intensidad de la señal recibida varía con el tiempo, pudiendo llegar a no detectarse, por interferencia de trayectos o cambios de propagación. «La intensidad de una señal emitida sufre variaciones en un período de tiempo pudiendo llegar a no detectarse en el receptor».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -4846,7 +4846,7 @@ export default [
       "VHF y superiores"
     ],
     "correctIndex": 3,
-    "explain": "En la nomenclatura ITU, VHF designa el tramo aproximado de 30–300 MHz. Para este enunciado la respuesta correcta es «VHF y superiores».",
+    "explain": "El rebote lunar (EME) necesita atravesar la ionosfera sin reflejarse en ella. Por eso se usan VHF y bandas superiores, que la traspasan camino de la Luna. «VHF y superiores».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5031,7 +5031,7 @@ export default [
       "Longitud de onda"
     ],
     "correctIndex": 2,
-    "explain": "dBm expresa potencia referida a 1 mW; dBµV suele referirse a tensión. No confundas con dB de ganancia sin referencia. «Potencia eléctrica»."
+    "explain": "El dBm expresa potencia en escala logarítmica referida a 1 mW; por tanto la magnitud a la que se refiere es la potencia eléctrica. «Potencia eléctrica»."
   },
   {
     "id": "ure-p1-q483",
@@ -5121,7 +5121,7 @@ export default [
       "Uno"
     ],
     "correctIndex": 3,
-    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptación ideal). Valores muy altos indican desadaptación. «Uno».",
+    "explain": "Con acoplamiento óptimo entre transmisor y antena no hay onda reflejada. Por eso el medidor de ROE marca su valor mínimo posible, que es uno. «Uno».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5166,7 +5166,7 @@ export default [
       "Es el valor indicativo de la diferencia de fase de la sinusoide"
     ],
     "correctIndex": 0,
-    "explain": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "La amplitud de una señal sinusoidal es su valor de pico: la diferencia entre el valor máximo y el valor medio (la línea de cero) de la onda. «Es la diferencia entre el valor máximo y el valor medio de la señal»."
   },
   {
     "id": "ure-p1-q495",
@@ -5332,7 +5332,7 @@ export default [
       "100 voltios"
     ],
     "correctIndex": 0,
-    "explain": "En una resistencia, P = V·I = I²R = V²/R. Calcula V = I·R y luego la potencia disipada. «10 voltios».",
+    "explain": "Por la ley de Ohm, V = I·R. Con I = 10 mA (0,01 A) y R = 1 kΩ (1000 Ω) resulta V = 0,01·1000 = 10 V. «10 voltios».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5347,7 +5347,7 @@ export default [
       "Mayor alcance que el meramente visual entre las antenas transmisora y receptora"
     ],
     "correctIndex": 3,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Mayor alcance que el meramente visual entre las antenas transmisora y receptora».",
+    "explain": "La dispersión troposférica reenvía parte de la señal hacia el suelo desde la tropósfera, logrando alcances mayores que la simple visión directa entre antenas. «Mayor alcance que el meramente visual entre las antenas transmisora y receptora».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5362,7 +5362,7 @@ export default [
       "Nulos"
     ],
     "correctIndex": 1,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «Menores».",
+    "explain": "En 3,5 MHz, de día la capa D de la ionosfera absorbe la señal y reduce la reflexión. Por eso los alcances diurnos son menores que durante la noche. «Menores».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5392,7 +5392,7 @@ export default [
       "Una resistencia cuyo valor se mantiene constante a medida que la temperatura disminuye"
     ],
     "correctIndex": 0,
-    "explain": "NTC: la resistencia baja cuando sube la temperatura (coeficiente negativo). PTC hace lo contrario. «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta».",
+    "explain": "El termistor NTC (coeficiente negativo) reduce su resistencia al calentarse; se usa como sensor de temperatura y para compensación térmica. Por eso es «Una resistencia cuyo valor se reduce a medida que la temperatura aumenta».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5407,7 +5407,7 @@ export default [
       "Incrementar el margen de sintonía de un amplificador"
     ],
     "correctIndex": 1,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «Incrementar la frecuencia de un oscilador».",
+    "explain": "Un multiplicador de frecuencia entrega a su salida un múltiplo entero de la frecuencia de entrada, y sirve para elevar la frecuencia de un oscilador hasta la banda de trabajo. «Incrementar la frecuencia de un oscilador».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5481,7 +5481,7 @@ export default [
       "Igual a la de la antena y a la del transmisor"
     ],
     "correctIndex": 3,
-    "explain": "Con acoplamiento perfecto no hay reflexiones y la ROE vale 1 (adaptación ideal). Valores muy altos indican desadaptación. «Igual a la de la antena y a la del transmisor».",
+    "explain": "El acoplamiento óptimo exige que la línea de transmisión tenga la misma impedancia que la antena y que el transmisor; así no hay reflexiones y la ROE vale 1. «Igual a la de la antena y a la del transmisor».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5496,7 +5496,7 @@ export default [
       "A la banda del transmisor"
     ],
     "correctIndex": 2,
-    "explain": "HF usa mucho la ionosfera; VHF/UHF dependen más de línea de vista. MUF y frecuencia crítica son conceptos ionosféricos. «A la frecuencia por encima de la cual no hay reflexiones en la ionosfera».",
+    "explain": "La frecuencia crítica es el límite por encima del cual una onda con incidencia vertical ya no se refleja en la ionosfera, sino que la atraviesa. «A la frecuencia por encima de la cual no hay reflexiones en la ionosfera».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5526,7 +5526,7 @@ export default [
       "Su capacidad, su tolerancia y su tensión máxima de trabajo"
     ],
     "correctIndex": 3,
-    "explain": "La reactancia de C baja al subir frecuencia y la de L sube; en resonancia LC la impedancia puede mínimizarse o maximizarse según el montaje. «Su capacidad, su tolerancia y su tensión máxima de trabajo».",
+    "explain": "Igual que en las resistencias, el código de bandas de color de un condensador indica su capacidad, su tolerancia y su tensión máxima de trabajo. «Su capacidad, su tolerancia y su tensión máxima de trabajo».",
     "explainSourceNote": "Práctica URE (Fuente: URE (electricidad y radioelectricidad)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -5888,7 +5888,7 @@ export default [
       "UHF"
     ],
     "correctIndex": 1,
-    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3–30 MHz. Para este enunciado la respuesta correcta es «HF».",
+    "explain": "En la nomenclatura ITU, la gama de 3 a 30 MHz recibe el símbolo HF (High Frequency), las ondas decamétricas. «HF».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6413,7 +6413,7 @@ export default [
       "Deberá comunicarlo a la Administración competente en espectro radioeléctrico y Tecnología de la Información"
     ],
     "correctIndex": 1,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Podrá instalarla nuevamente en condiciones similares a las anteriores» es la formulación del banco.",
+    "explain": "Tras desmontar la antena por obras de la comunidad, el radioaficionado tiene derecho a reinstalarla en condiciones similares a las que tenía antes, una vez terminadas. «Podrá instalarla nuevamente en condiciones similares a las anteriores».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6428,7 +6428,7 @@ export default [
       "300 a 3.000 MHz"
     ],
     "correctIndex": 2,
-    "explain": "En la nomenclatura ITU, HF (High Frequency) designa el tramo aproximado de 3–30 MHz. Para este enunciado la respuesta correcta es «3 a 30 MHz».",
+    "explain": "La banda HF son las ondas decamétricas, muy usadas para enlaces de larga distancia por reflexión ionosférica. Por eso, en la nomenclatura ITU, abarca de «3 a 30 MHz».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6458,7 +6458,7 @@ export default [
       "Anclaje"
     ],
     "correctIndex": 3,
-    "explain": "Las antenas en comunidades de propietarios requieren procedimiento, comunicación y a veces acuerdos; no es libertad total ni prohibición absoluta. «Anclaje».",
+    "explain": "El punto donde se fijan las riostras a la obra civil del inmueble reparte los esfuerzos mecánicos del mástil. Por eso ese elemento de fijación se denomina «Anclaje».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6877,7 +6877,7 @@ export default [
       "Milimétricas"
     ],
     "correctIndex": 1,
-    "explain": "Las ondas métricas (30–300 MHz) se asocian al símbolo VHF en la nomenclatura habitual del examen. «Métricas».",
+    "explain": "La banda VHF (30–300 MHz) corresponde a las ondas métricas, llamadas así porque su longitud de onda es del orden del metro. «Métricas».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -6966,7 +6966,7 @@ export default [
       "Banda lateral única con portadora reducida"
     ],
     "correctIndex": 1,
-    "explain": "Las clases ITU describen tipo de modulación y contenido; A3E indica AM con doble banda lateral y señal analógica de telefonía. La correcta es «Doble banda lateral con un solo canal con información analógica».",
+    "explain": "En la nomenclatura ITU, A3E designa una emisión de amplitud con doble banda lateral y un solo canal de información analógica (telefonía AM clásica). «Doble banda lateral con un solo canal con información analógica».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7236,7 +7236,7 @@ export default [
       "La abreviatura métrica B. m."
     ],
     "correctIndex": 3,
-    "explain": "Relación clave: λ = c/f (en vacío c ≈ 3·10⁸ m/s) o λ = v/f en un medio. «La abreviatura métrica B. m.».",
+    "explain": "Las ondas métricas (VHF, 30–300 MHz) se abrevian B.m. en la nomenclatura de bandas, porque su longitud de onda es del orden del metro. «La abreviatura métrica B. m.».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7356,7 +7356,7 @@ export default [
       "Se trata de una estación no autorizada"
     ],
     "correctIndex": 0,
-    "explain": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "El indicativo compuesto con barra señala operación temporal bajo CEPT. Por eso EA4ABC/M3BVM corresponde a un radioaficionado con licencia de otro país que opera ocasionalmente una estación española. «Se trata de un radioaficionado con licencia expedida por otro país, operando ocasionalmente una estación española»."
   },
   {
     "id": "ure-p2-q353",
@@ -7519,7 +7519,7 @@ export default [
       "Se trata de una conexión con interferencias"
     ],
     "correctIndex": 1,
-    "explain": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
+    "explain": "Bajo CEPT, el operador extranjero antepone el prefijo del país y distrito visitado a su indicativo de origen. Por eso EA3/OK2HM es un radioaficionado con licencia de otro país que opera ocasionalmente en el distrito 3. «Un radioaficionado con licencia expedida en otro país, opera ocasionalmente en el distrito 3»."
   },
   {
     "id": "ure-p2-q392",
@@ -7593,7 +7593,7 @@ export default [
       "20 W"
     ],
     "correctIndex": 1,
-    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «10 W»."
+    "explain": "El reglamento vigente (BOE-A-2013-7624) limita la potencia de las estaciones desatendidas en zona urbana. Por eso en VHF/UHF dentro del casco urbano la salida no puede superar los «10 W»."
   },
   {
     "id": "ure-p2-q397",
@@ -7622,7 +7622,7 @@ export default [
       "100 W"
     ],
     "correctIndex": 1,
-    "explain": "Según el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivación especial. En este enunciado la opción correcta del banco es «50 W».",
+    "explain": "El reglamento vigente (BOE-A-2013-7624) fija el tope de potencia de las estaciones automáticas desatendidas. Por eso en la banda de HF su salida máxima es de «50 W».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -7846,7 +7846,7 @@ export default [
       "Sólo en caso de que la instalación sea sencilla"
     ],
     "correctIndex": 0,
-    "explain": "En elementos comunes hace falta acuerdo o procedimiento con la comunidad; no es instalación unilateral sin informar. «No». (BOE-A-2013-7624).",
+    "explain": "La comunidad de propietarios no autoriza la instalación: el derecho a instalar la antena lo ampara la normativa, aunque haya que informar a la comunidad. «No». (BOE-A-2013-7624).",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8026,7 +8026,7 @@ export default [
       "VHF"
     ],
     "correctIndex": 3,
-    "explain": "Las ondas métricas (30–300 MHz) se asocian al símbolo VHF en la nomenclatura habitual del examen. «VHF».",
+    "explain": "Las ondas métricas, de longitud de onda en torno al metro, se representan con el símbolo VHF (30–300 MHz). «VHF».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8146,7 +8146,7 @@ export default [
       "La exención de presentar memoria descriptiva de la instalación"
     ],
     "correctIndex": 2,
-    "explain": "La Ley de 19 julio 1983 sobre inmobiliaria y antenas regula el derecho a instalar en fachadas y cubiertas con límites de seguridad y estética. «El derecho a instalar las antenas de aficionado en el exterior de los inmuebles».",
+    "explain": "La Ley 19/1983, llamada Ley de Antenas, reconoce el derecho de los radioaficionados a instalar sus antenas en el exterior de los inmuebles. «El derecho a instalar las antenas de aficionado en el exterior de los inmuebles».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
@@ -8401,7 +8401,7 @@ export default [
       "Se vayan a realizar obras por parte de la comunidad"
     ],
     "correctIndex": 1,
-    "explain": "La inspección verifica cumplimiento técnico y reglamentario de estaciones; no la sustituye el hecho de tener licencia. «Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble» es la formulación del banco.",
+    "explain": "La Administración debe informar al presidente de la comunidad cuando se le ha solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble. «Se le haya solicitado autorización para instalar antenas de radioaficionado en el exterior del inmueble».",
     "explainSourceNote": "Práctica URE (Fuente: URE (reglamentación)). Contrastar con BOE-A-2013-7624 y convocatoria vigente del Ministerio."
   },
   {
