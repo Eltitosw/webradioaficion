@@ -3224,7 +3224,7 @@ function updateScheduleDetail() {
 function quizFeedbackTemarioHint(q) {
   const href = `#temario--${encodeURIComponent(q.topicId)}`;
   const label = topicBlockLabel(q.topicId);
-  return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> amplía en el bloque «${escapeHtml(label)}» del <a href="${href}">temario</a> (ganchos y viñetas de estudio).</p>`;
+  return `<p class="quiz-fb-hint"><a class="quiz-fb-hint__chip" href="${href}">Temario · ${escapeHtml(label)} →</a></p>`;
 }
 
 /** Explicación didáctica usable (sin plantillas genéricas ni LF/RST mal asignados). */
@@ -3309,26 +3309,30 @@ function renderDeepenPanel(q) {
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml(ureLinkText)}</a></li>
       <li><a href="#normativa--normativa-boe">Normativa BOE</a></li>
     </ul>`;
+  const resourcesBlock = (pdfHint || ocrDeepen || historical || links)
+    ? `<details class="quiz-deepen__resources">
+        <summary class="quiz-deepen__resources-toggle">Recursos y referencias</summary>
+        <div class="quiz-deepen__resources-body">
+          ${pdfHint}
+          ${ocrDeepen}
+          ${historical ? `<p class="muted quiz-deepen__hist-inline">${escapeHtml(historical)}</p>` : ""}
+          <p class="quiz-deepen__note quiz-deepen__links-label">Abrir para contrastar:</p>${links}
+        </div>
+      </details>`
+    : "";
+  const ruleBlock = showBankLiteral
+    ? `<p class="quiz-deepen__section-label">Regla de esta pregunta</p><p class="quiz-deepen__rule">${escapeHtml(rawExplain)}</p>`
+    : "";
   return `<div class="quiz-deepen">
-    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicación larga del modo «corrección inmediata».</p>
-    ${
-      showBankLiteral
-        ? `<p class="quiz-deepen__note"><strong>Regla de esta pregunta (banco):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml(rawExplain)}</p></blockquote>`
-        : ""
-    }
+    ${ruleBlock}
     ${
       focusList
-        ? `<p class="quiz-deepen__note"><strong>Repaso del temario relacionado con este enunciado:</strong></p>${focusList}`
-        : `<p class="quiz-deepen__note muted">Abre el temario del bloque «${escapeHtml(blockTitle)}» (secciones 3 y 5) para contrastar la regla con el PDF.</p>`
+        ? `<p class="quiz-deepen__section-label">Repasar</p>${focusList}`
+        : !ruleBlock
+          ? `<p class="quiz-deepen__note muted">Abre el temario del bloque «${escapeHtml(blockTitle)}» (secciones 3 y 5) para contrastar la regla con el PDF.</p>`
+          : ""
     }
-    ${pdfHint}
-    ${ocrDeepen}
-    ${
-      historical
-        ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco histórico)</summary><p class="muted">${escapeHtml(historical)}</p></details>`
-        : ""
-    }
-    <p class="quiz-deepen__note">Abrir para contrastar:</p>${links}
+    ${resourcesBlock}
   </div>`;
 }
 

@@ -1446,6 +1446,12 @@ function collectCandidateLines(study, libroResumen) {
       out.push(...parts);
     }
   }
+  if (Array.isArray(study?.bookGuide)) {
+    for (const para of study.bookGuide) {
+      const parts = String(para).split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter((s) => s.length >= 28);
+      out.push(...parts);
+    }
+  }
   push(libroResumen);
   return out;
 }
@@ -1458,7 +1464,11 @@ function pickDeepenFocusLines(q, opts = {}) {
   const candidates = collectCandidateLines(study, libroResumen);
   if (!candidates.length) return [];
   const correct = typeof q?.correctIndex === "number" && Array.isArray(q?.options) ? String(q.options[q.correctIndex] ?? "") : "";
-  const stemSet = /* @__PURE__ */ new Set([...tokens(q?.stem), ...tokens(correct)]);
+  const stemSet = /* @__PURE__ */ new Set([
+    ...tokens(q?.stem),
+    ...tokens(correct),
+    ...Array.isArray(q?.options) ? q.options.flatMap((o) => tokens(o)) : []
+  ]);
   const extra = new Set(tokens(q?.stemFigureAlt));
   const hasFigure = Boolean(q?.stemFigure || q?.stemFigureAlt);
   const ranked = candidates.filter((line) => hasFigure || !FIGURE_REF_RE.test(line)).map((line) => ({ line, score: scoreLine(line, stemSet, extra) })).filter((x) => x.score >= minScore).sort((a, b) => b.score - a.score);
@@ -27220,7 +27230,7 @@ function updateScheduleDetail() {
 function quizFeedbackTemarioHint(q) {
   const href = `#temario--${encodeURIComponent(q.topicId)}`;
   const label = topicBlockLabel(q.topicId);
-  return `<p class="quiz-fb-hint muted"><strong>Contexto:</strong> ampl\xEDa en el bloque \xAB${escapeHtml2(label)}\xBB del <a href="${href}">temario</a> (ganchos y vi\xF1etas de estudio).</p>`;
+  return `<p class="quiz-fb-hint"><a class="quiz-fb-hint__chip" href="${href}">Temario \xB7 ${escapeHtml2(label)} \u2192</a></p>`;
 }
 function usablePedagogy(q) {
   const fromBank = pedagogicalExplain(q);
@@ -27268,14 +27278,20 @@ function renderDeepenPanel(q) {
       <li><a href="${ureHref}" rel="noopener noreferrer">${escapeHtml2(ureLinkText)}</a></li>
       <li><a href="#normativa--normativa-boe">Normativa BOE</a></li>
     </ul>`;
+  const resourcesBlock = pdfHint || ocrDeepen || historical || links ? `<details class="quiz-deepen__resources">
+        <summary class="quiz-deepen__resources-toggle">Recursos y referencias</summary>
+        <div class="quiz-deepen__resources-body">
+          ${pdfHint}
+          ${ocrDeepen}
+          ${historical ? `<p class="muted quiz-deepen__hist-inline">${escapeHtml2(historical)}</p>` : ""}
+          <p class="quiz-deepen__note quiz-deepen__links-label">Abrir para contrastar:</p>${links}
+        </div>
+      </details>` : "";
+  const ruleBlock = showBankLiteral ? `<p class="quiz-deepen__section-label">Regla de esta pregunta</p><p class="quiz-deepen__rule">${escapeHtml2(rawExplain)}</p>` : "";
   return `<div class="quiz-deepen">
-    <p class="quiz-deepen__note"><strong>Siguiente paso:</strong> fija la regla en el temario o en el PDF; este modo no repite la explicaci\xF3n larga del modo \xABcorrecci\xF3n inmediata\xBB.</p>
-    ${showBankLiteral ? `<p class="quiz-deepen__note"><strong>Regla de esta pregunta (banco):</strong></p><blockquote class="quiz-deepen__exact"><p>${escapeHtml2(rawExplain)}</p></blockquote>` : ""}
-    ${focusList ? `<p class="quiz-deepen__note"><strong>Repaso del temario relacionado con este enunciado:</strong></p>${focusList}` : `<p class="quiz-deepen__note muted">Abre el temario del bloque \xAB${escapeHtml2(blockTitle)}\xBB (secciones 3 y 5) para contrastar la regla con el PDF.</p>`}
-    ${pdfHint}
-    ${ocrDeepen}
-    ${historical ? `<details class="quiz-deepen__hist"><summary>Origen de la pregunta (banco hist\xF3rico)</summary><p class="muted">${escapeHtml2(historical)}</p></details>` : ""}
-    <p class="quiz-deepen__note">Abrir para contrastar:</p>${links}
+    ${ruleBlock}
+    ${focusList ? `<p class="quiz-deepen__section-label">Repasar</p>${focusList}` : !ruleBlock ? `<p class="quiz-deepen__note muted">Abre el temario del bloque \xAB${escapeHtml2(blockTitle)}\xBB (secciones 3 y 5) para contrastar la regla con el PDF.</p>` : ""}
+    ${resourcesBlock}
   </div>`;
 }
 function focusConfidencePicker() {

@@ -2568,11 +2568,33 @@ body.quiz-focus-active #save-toast {
 }
 
 .quiz-deepen {
-  margin-top: 1rem;
-  padding: 1.1rem 1.2rem;
+  margin-top: 0.85rem;
+  padding: 0.95rem 1.1rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--feedback-reasoning-border);
   background: var(--feedback-reasoning-bg);
+  color: var(--text);
+}
+
+.quiz-deepen__section-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.quiz-deepen__section-label:not(:first-child) {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--feedback-reasoning-border);
+}
+
+.quiz-deepen__rule {
+  margin: 0 0 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
   color: var(--text);
 }
 
@@ -2584,10 +2606,10 @@ body.quiz-focus-active #save-toast {
 }
 
 .quiz-deepen__note {
-  margin: 0 0 0.65rem;
-  font-size: 0.88rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
   color: var(--muted);
-  line-height: 1.45;
+  line-height: 1.4;
 }
 
 .quiz-deepen__source {
@@ -2624,6 +2646,53 @@ body.quiz-focus-active #save-toast {
 .quiz-deepen__hist summary {
   cursor: pointer;
   color: var(--muted);
+}
+
+/* Sección colapsada de recursos y referencias */
+.quiz-deepen__resources {
+  margin-top: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--feedback-reasoning-border);
+  overflow: hidden;
+}
+
+.quiz-deepen__resources-toggle {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.quiz-deepen__resources-toggle::-webkit-details-marker { display: none; }
+
+.quiz-deepen__resources-toggle::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.35em;
+  transition: transform 0.15s;
+}
+
+.quiz-deepen__resources[open] .quiz-deepen__resources-toggle::before {
+  transform: rotate(90deg);
+}
+
+.quiz-deepen__resources-body {
+  padding: 0.6rem 0.75rem 0.65rem;
+  border-top: 1px solid var(--feedback-reasoning-border);
+  font-size: 0.83rem;
+}
+
+.quiz-deepen__hist-inline {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+}
+
+.quiz-deepen__links-label {
+  margin-bottom: 0.3rem !important;
 }
 
 .quiz-deepen--links-only {
@@ -3122,9 +3191,27 @@ html.a11y-reduce-motion .conf-btn:active {
 }
 
 .quiz-fb-hint {
-  margin: 0.5rem 0 0;
-  font-size: 0.9rem;
-  line-height: 1.45;
+  margin: 0.55rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.quiz-fb-hint__chip {
+  display: inline-block;
+  padding: 0.2em 0.65em;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--link) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--link) 30%, transparent);
+  color: var(--link);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: background 0.15s;
+}
+
+.quiz-fb-hint__chip:hover {
+  background: color-mix(in srgb, var(--link) 22%, transparent);
 }
 
 .quiz-fb-hint a {
@@ -4244,6 +4331,18 @@ html.a11y-reduce-motion .flashcard__inner {
 
 .temario-list--compact li {
   margin-bottom: 0.2rem;
+  padding-left: 0.2rem;
+  list-style: none;
+  position: relative;
+}
+
+.temario-list--compact li::before {
+  content: "▸";
+  position: absolute;
+  left: -1rem;
+  color: var(--link);
+  font-size: 0.75em;
+  top: 0.15em;
 }
 
 .temario-fc-block {
@@ -4621,6 +4720,26 @@ html[data-theme="light"] .quiz-deepen__links {
 html.a11y-light .quiz-deepen__links a,
 html[data-theme="light"] .quiz-deepen__links a {
   color: var(--link);
+}
+
+html.a11y-light .quiz-deepen__resources,
+html[data-theme="light"] .quiz-deepen__resources {
+  border-color: var(--feedback-reasoning-border);
+}
+
+html.a11y-light .quiz-deepen__resources-toggle,
+html[data-theme="light"] .quiz-deepen__resources-toggle {
+  color: var(--text-secondary);
+}
+
+html.a11y-light .quiz-deepen__section-label,
+html[data-theme="light"] .quiz-deepen__section-label {
+  color: var(--muted);
+}
+
+html.a11y-light .quiz-deepen__rule,
+html[data-theme="light"] .quiz-deepen__rule {
+  color: var(--text);
 }
 
 html.a11y-light .source-hierarchy li,

@@ -27,4 +27,23 @@ describe("pickDeepenFocusLines", () => {
     const genericOhm = lines.every((l) => /^Magnitudes:/i.test(l) || /^Serie suma R/i.test(l));
     assert.equal(genericOhm, false);
   });
+
+  it("usa tokens de todas las opciones para priorizar bookGuide (PTC/NTC)", () => {
+    const lines = pickDeepenFocusLines({
+      topicId: "electricidad-basica",
+      stem: "Un termistor PTC es aquel que:",
+      correctIndex: 1,
+      options: [
+        "Su resistencia está en función de la corriente",
+        "Su valor aumenta con la temperatura",
+        "Se usa como estabilizadora de corriente",
+        "Su valor disminuye al aumentar la temperatura",
+      ],
+    });
+    assert.ok(lines.length >= 1);
+    assert.ok(
+      lines.some((l) => /ptc|ntc|termistor|temperatura/i.test(l)),
+      `esperaba foco PTC/NTC desde bookGuide, obtuvo: ${lines.join(" | ")}`,
+    );
+  });
 });
