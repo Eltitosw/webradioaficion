@@ -21,7 +21,7 @@ export default [
   {
     id: "ofic-002",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:",
     options: [
       "R1 · R2 / (R1 + R2)",
@@ -36,7 +36,7 @@ export default [
   {
     id: "ofic-003",
     part: 1,
-    topicId: "magnetismo-ondas",
+    topicId: "receptores-emisores",
     stem: "En modulación de frecuencia (FM), la magnitud de la portadora que varía con la señal moduladora es principalmente:",
     options: [
       "La amplitud",
@@ -51,7 +51,7 @@ export default [
   {
     id: "ofic-004",
     part: 1,
-    topicId: "magnetismo-ondas",
+    topicId: "electricidad-basica",
     stem: "Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:",
     options: [
       "Doblar la potencia",
@@ -336,7 +336,7 @@ export default [
   {
     id: "ofic-023",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado mediante cifrado:",
     options: [
       "Están permitidas si son entre amigos",
@@ -351,7 +351,7 @@ export default [
   {
     id: "ofic-024",
     part: 2,
-    topicId: "instalaciones",
+    topicId: "operacion-seguridad",
     stem: "Durante una transmisión, tocar una antena o elementos próximos al sistema radiante:",
     options: [
       "Es inocuo si la ROE es baja",
@@ -365,8 +365,8 @@ export default [
   },
   {
     id: "ofic-025",
-    part: 2,
-    topicId: "instalaciones",
+    part: 1,
+    topicId: "receptores-emisores",
     stem: "Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida técnica razonable es:",
     options: [
       "Aumentar siempre la potencia",
@@ -456,7 +456,7 @@ export default [
   {
     id: "ofic-031",
     part: 2,
-    topicId: "licencias-indicativos",
+    topicId: "operacion-seguridad",
     stem: "En bancos españoles de práctica, si se pide deletrear la letra N con la tabla fonética usada para indicativos, la respuesta esperada suele ser:",
     options: [
       "Noviembre",
@@ -485,8 +485,8 @@ export default [
   },
   {
     id: "ofic-033",
-    part: 2,
-    topicId: "marco-normativo",
+    part: 1,
+    topicId: "magnetismo-ondas",
     stem: "La designación internacional de una clase de emisión consta, en el esquema habitual, de:",
     options: [
       "Un solo dígito",
@@ -546,7 +546,7 @@ export default [
   {
     id: "ofic-037",
     part: 1,
-    topicId: "receptores-emisores",
+    topicId: "componentes",
     stem: "El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el ancho de banda B como:",
     options: [
       "Q = B / f",
@@ -561,7 +561,7 @@ export default [
   {
     id: "ofic-038",
     part: 1,
-    topicId: "magnetismo-ondas",
+    topicId: "electricidad-basica",
     stem: "Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:",
     options: [
       "0 dBm",
@@ -681,7 +681,7 @@ export default [
   {
     id: "ofic-046",
     part: 2,
-    topicId: "operacion-seguridad",
+    topicId: "marco-normativo",
     stem: "En tráfico de radioaficionado, la abreviatura «CL» suele significar:",
     options: [
       "Cambio de polarización",
@@ -713,7 +713,7 @@ export default [
   {
     id: "ofic-048",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Dos resistencias iguales de valor R conectadas en paralelo equivalen a:",
     options: ["2R", "R / 2", "R²", "1 / (2R)"],
     correctIndex: 1,
@@ -746,7 +746,7 @@ export default [
   {
     id: "ofic-051",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Para medir la tensión entre dos puntos de un circuito, el voltímetro debe conectarse:",
     options: [
       "En serie con la rama",
@@ -762,7 +762,7 @@ export default [
   {
     id: "ofic-052",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "magnetismo-ondas",
     stem: "La unidad dBm expresa potencia referida a:",
     options: ["1 vatio", "1 miliwatio", "1 voltio", "1 ohmio"],
     correctIndex: 1,
@@ -773,7 +773,7 @@ export default [
   {
     id: "ofic-053",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Una resistencia con bandas violeta–verde–rojo–oro (tolerancia oro) tiene un valor nominal aproximado de:",
     options: ["75 Ω", "750 Ω", "7500 Ω", "75 kΩ"],
     correctIndex: 2,
@@ -784,7 +784,7 @@ export default [
   {
     id: "ofic-054",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Un condensador ideal en régimen permanente de corriente continua se comporta, en primera aproximación, como:",
     options: [
       "Un cortocircuito",
@@ -800,7 +800,7 @@ export default [
   {
     id: "ofic-055",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Una bobina ideal en régimen permanente de corriente continua se comporta, en primera aproximación, como:",
     options: [
       "Un circuito abierto",
@@ -816,7 +816,7 @@ export default [
   {
     id: "ofic-056",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "4,7 kΩ expresado en ohmios (Ω) sin prefijo es:",
     options: ["47 Ω", "470 Ω", "4700 Ω", "47 000 Ω"],
     correctIndex: 2,
@@ -827,7 +827,7 @@ export default [
   {
     id: "ofic-057",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 Ω. Si la corriente de carga es 2 A, la tensión en bornes es aproximadamente:",
     options: ["12 V", "11 V", "13 V", "6 V"],
     correctIndex: 1,
@@ -849,7 +849,7 @@ export default [
   {
     id: "ofic-059",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "La energía almacenada en un condensador cargado (modelo ideal) es proporcional a:",
     options: [
       "Solo a la capacidad C",
@@ -865,7 +865,7 @@ export default [
   {
     id: "ofic-060",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "componentes",
     stem: "Para proteger un amperímetro de sobrecorriente suele usarse un resistencia shunt que:",
     options: [
       "Va en serie y es muy alta",
@@ -908,7 +908,7 @@ export default [
   {
     id: "ofic-063",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "magnetismo-ondas",
     stem: "Una onda de radio en el espacio libre se modela principalmente como:",
     options: [
       "Solo onda sonora",

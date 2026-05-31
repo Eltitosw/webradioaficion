@@ -2248,7 +2248,7 @@ var questions_banco_default = [
   {
     "id": "ofic-002",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:",
     "options": [
       "R1 \xB7 R2 / (R1 + R2)",
@@ -2263,7 +2263,7 @@ var questions_banco_default = [
   {
     "id": "ofic-003",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En modulaci\xF3n de frecuencia (FM), la magnitud de la portadora que var\xEDa con la se\xF1al moduladora es principalmente:",
     "options": [
       "La amplitud",
@@ -2278,7 +2278,7 @@ var questions_banco_default = [
   {
     "id": "ofic-004",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:",
     "options": [
       "Doblar la potencia",
@@ -2287,7 +2287,7 @@ var questions_banco_default = [
       "Igual de potencia"
     ],
     "correctIndex": 0,
-    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABDoblar la potencia\xBB. (BOE-A-2013-7624). 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
+    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABDoblar la potencia\xBB. (BOE-A-2013-7624). 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -2563,7 +2563,7 @@ var questions_banco_default = [
   {
     "id": "ofic-023",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado mediante cifrado:",
     "options": [
       "Est\xE1n permitidas si son entre amigos",
@@ -2578,7 +2578,7 @@ var questions_banco_default = [
   {
     "id": "ofic-024",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "operacion-seguridad",
     "stem": "Durante una transmisi\xF3n, tocar una antena o elementos pr\xF3ximos al sistema radiante:",
     "options": [
       "Es inocuo si la ROE es baja",
@@ -2592,8 +2592,8 @@ var questions_banco_default = [
   },
   {
     "id": "ofic-025",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Si la RF de una estaci\xF3n entra en altavoces o equipos de audio cercanos, una medida t\xE9cnica razonable es:",
     "options": [
       "Aumentar siempre la potencia",
@@ -2683,7 +2683,7 @@ var questions_banco_default = [
   {
     "id": "ofic-031",
     "part": 2,
-    "topicId": "licencias-indicativos",
+    "topicId": "operacion-seguridad",
     "stem": "En bancos espa\xF1oles de pr\xE1ctica, si se pide deletrear la letra N con la tabla fon\xE9tica usada para indicativos, la respuesta esperada suele ser:",
     "options": [
       "Noviembre",
@@ -2712,8 +2712,8 @@ var questions_banco_default = [
   },
   {
     "id": "ofic-033",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La designaci\xF3n internacional de una clase de emisi\xF3n consta, en el esquema habitual, de:",
     "options": [
       "Un solo d\xEDgito",
@@ -2758,7 +2758,7 @@ var questions_banco_default = [
   {
     "id": "ofic-037",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "componentes",
     "stem": "El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el ancho de banda B como:",
     "options": [
       "Q = B / f",
@@ -2773,7 +2773,7 @@ var questions_banco_default = [
   {
     "id": "ofic-038",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:",
     "options": [
       "0 dBm",
@@ -2893,7 +2893,7 @@ var questions_banco_default = [
   {
     "id": "ofic-046",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "En tr\xE1fico de radioaficionado, la abreviatura \xABCL\xBB suele significar:",
     "options": [
       "Cambio de polarizaci\xF3n",
@@ -2923,7 +2923,7 @@ var questions_banco_default = [
   {
     "id": "ofic-048",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Dos resistencias iguales de valor R conectadas en paralelo equivalen a:",
     "options": [
       "2R",
@@ -2968,7 +2968,7 @@ var questions_banco_default = [
   {
     "id": "ofic-051",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Para medir la tensi\xF3n entre dos puntos de un circuito, el volt\xEDmetro debe conectarse:",
     "options": [
       "En serie con la rama",
@@ -2983,7 +2983,7 @@ var questions_banco_default = [
   {
     "id": "ofic-052",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "La unidad dBm expresa potencia referida a:",
     "options": [
       "1 vatio",
@@ -2998,7 +2998,7 @@ var questions_banco_default = [
   {
     "id": "ofic-053",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Una resistencia con bandas violeta\u2013verde\u2013rojo\u2013oro (tolerancia oro) tiene un valor nominal aproximado de:",
     "options": [
       "75 \u03A9",
@@ -3013,7 +3013,7 @@ var questions_banco_default = [
   {
     "id": "ofic-054",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Un condensador ideal en r\xE9gimen permanente de corriente continua se comporta, en primera aproximaci\xF3n, como:",
     "options": [
       "Un cortocircuito",
@@ -3028,7 +3028,7 @@ var questions_banco_default = [
   {
     "id": "ofic-055",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Una bobina ideal en r\xE9gimen permanente de corriente continua se comporta, en primera aproximaci\xF3n, como:",
     "options": [
       "Un circuito abierto",
@@ -3043,7 +3043,7 @@ var questions_banco_default = [
   {
     "id": "ofic-056",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "4,7 k\u03A9 expresado en ohmios (\u03A9) sin prefijo es:",
     "options": [
       "47 \u03A9",
@@ -3058,7 +3058,7 @@ var questions_banco_default = [
   {
     "id": "ofic-057",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 \u03A9. Si la corriente de carga es 2 A, la tensi\xF3n en bornes es aproximadamente:",
     "options": [
       "12 V",
@@ -3088,7 +3088,7 @@ var questions_banco_default = [
   {
     "id": "ofic-059",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "La energ\xEDa almacenada en un condensador cargado (modelo ideal) es proporcional a:",
     "options": [
       "Solo a la capacidad C",
@@ -3103,7 +3103,7 @@ var questions_banco_default = [
   {
     "id": "ofic-060",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Para proteger un amper\xEDmetro de sobrecorriente suele usarse un resistencia shunt que:",
     "options": [
       "Va en serie y es muy alta",
@@ -3148,7 +3148,7 @@ var questions_banco_default = [
   {
     "id": "ofic-063",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "Una onda de radio en el espacio libre se modela principalmente como:",
     "options": [
       "Solo onda sonora",
@@ -3417,21 +3417,6 @@ var questions_banco_default = [
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1892). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-1904",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "En la banda de frecuencia de 50,00-51,00 MHz, existen restricciones geogr\xE1ficas de uso. Se\xF1ale la provincia desde la que se podr\xE1n efectuar emisiones:",
-    "options": [
-      "Madrid.",
-      "Avila.",
-      "Valladolid.",
-      "Almer\xEDa."
-    ],
-    "correctIndex": 3,
-    "explain": "La autorizaci\xF3n y el indicativo condicionan qui\xE9n puede operar, d\xF3nde y con qu\xE9 requisitos. Para este enunciado, la respuesta correcta es \xABAlmer\xEDa.\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-1906",
     "part": 2,
     "topicId": "marco-normativo",
@@ -3463,8 +3448,8 @@ var questions_banco_default = [
   },
   {
     "id": "quijotes-84-1936",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "El cambio de ubicaci\xF3n de una antena:",
     "options": [
       "No es necesario solicitarlo a la Administraci\xF3n competente en espectro radioel\xE9ctrico.",
@@ -3506,21 +3491,6 @@ var questions_banco_default = [
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-1963",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "\xBFQu\xE9 se entiende por emisiones no deseadas?:",
-    "options": [
-      "Conjunto de emisiones que producen interferencias.",
-      "Conjunto de emisiones situadas fuera de la anchura de banda.",
-      "Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.",
-      "Conjunto de emisiones de banda estrecha."
-    ],
-    "correctIndex": 2,
-    "explain": "Las emisiones no deseadas agrupan las no esenciales y las de fuera de banda: todo lo que se radia adem\xE1s de la emisi\xF3n necesaria para la comunicaci\xF3n. \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-2025",
     "part": 2,
     "topicId": "marco-normativo",
@@ -3549,21 +3519,6 @@ var questions_banco_default = [
     "correctIndex": 0,
     "explain": "La nota 5.141C se refiere al reparto de uso de la banda 7100-7200 kHz en una etapa concreta. La frase que debes reconocer es que esa banda estaba atribuida a t\xEDtulo primario al servicio de radiodifusi\xF3n hasta el 29 de marzo de 2009.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2034). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2043",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podr\xE1n efectuar:",
-    "options": [
-      "Desde cualquier punto del territorio nacional.",
-      "Desde las provincias de Barcelona, Valencia y Zaragoza.",
-      "Desde la provincia de Valencia.",
-      "En todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W."
-    ],
-    "correctIndex": 3,
-    "explain": "En el segmento 50,0\u201351,0 MHz se permite emitir en todo el territorio nacional siempre que la potencia m\xE1xima del equipo no supere los 50 W. \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2048",
@@ -3611,21 +3566,6 @@ var questions_banco_default = [
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-2060",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emisiones:",
-    "options": [
-      "Cat\xF3dicas.",
-      "Par\xE1sitas.",
-      "No deseadas.",
-      "Por conversi\xF3n de frecuencias."
-    ],
-    "correctIndex": 2,
-    "explain": "Las emisiones no esenciales y las emisiones fuera de banda son se\xF1ales que salen fuera de lo que se pretende transmitir. En conjunto se llaman emisiones \xABNo deseadas\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-2069",
     "part": 2,
     "topicId": "licencias-indicativos",
@@ -3671,24 +3611,9 @@ var questions_banco_default = [
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-2104",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de las emisiones, no deber\xE1 ser superior a",
-    "options": [
-      "5 w",
-      "50 w",
-      "75 w",
-      "1000 w"
-    ],
-    "correctIndex": 1,
-    "explain": "La banda 1.830-1.850 kHz est\xE1 en 160 metros. La pregunta solo pide recordar el l\xEDmite de potencia: frente a 5 W, 75 W o 1000 W, el valor correcto es \xAB50 w\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-2203",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "En el sistema GMDSS, la alerta de socorro inicial en MF/HF se realiza mediante Llamada Selectiva Digital (DSC). \xBFEn qu\xE9 frecuencia se transmite esta alerta en banda MF?",
     "options": [
       "2.182 kHz",
@@ -3717,8 +3642,8 @@ var questions_banco_default = [
   },
   {
     "id": "quijotes-84-2214",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "En la banda de radioaficionado de 40 metros, el modo de emisi\xF3n que normalmente se utiliza es",
     "options": [
       "USB",
@@ -3777,8 +3702,8 @@ var questions_banco_default = [
   },
   {
     "id": "ure-p1-q122",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Para tratar de minimizar la producci\xF3n de interferencias con una estaci\xF3n de radioaficionado, debe procurarse:",
     "options": [
       "Radiar con potencia elevada",
@@ -9904,7 +9829,7 @@ var questions_banco_default = [
 ];
 
 // data/questions-banco-estudio.js
-var BANCO_ESTUDIO_STATS = { "count": 592, "examSubset": 562, "studyOnlyAdded": 30, "paraphraseRemoved": 120, "withFigure": 30, "withPedagogicalExplain": 592 };
+var BANCO_ESTUDIO_STATS = { "count": 587, "examSubset": 557, "studyOnlyAdded": 30, "paraphraseRemoved": 120, "withFigure": 30, "withPedagogicalExplain": 587 };
 var questions_banco_estudio_default = [
   {
     "id": "fedi-ag-001",
@@ -10668,7 +10593,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-002",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:",
     "options": [
       "R1 \xB7 R2 / (R1 + R2)",
@@ -10683,7 +10608,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-003",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "receptores-emisores",
     "stem": "En modulaci\xF3n de frecuencia (FM), la magnitud de la portadora que var\xEDa con la se\xF1al moduladora es principalmente:",
     "options": [
       "La amplitud",
@@ -10698,7 +10623,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-004",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:",
     "options": [
       "Doblar la potencia",
@@ -10707,7 +10632,7 @@ var questions_banco_estudio_default = [
       "Igual de potencia"
     ],
     "correctIndex": 0,
-    "explain": "La geometr\xEDa del sistema radiante y los radiales modifican la impedancia de entrada de la antena. \xABDoblar la potencia\xBB. (BOE-A-2013-7624). 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
+    "explain": "Los decibelios expresan relaciones logar\xEDtmicas; dBm referencia potencia a 1 mW. La respuesta es \xABDoblar la potencia\xBB. (BOE-A-2013-7624). 3 dB en potencia implica un factor ~2 (doble); 10 dB implica un factor ~10.",
     "sourceRef": "Elaboraci\xF3n propia (2026) \xB7 programa HAREC / magnetismo y ondas electromagn\xE9ticas."
   },
   {
@@ -10983,7 +10908,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-023",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado mediante cifrado:",
     "options": [
       "Est\xE1n permitidas si son entre amigos",
@@ -10998,7 +10923,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-024",
     "part": 2,
-    "topicId": "instalaciones",
+    "topicId": "operacion-seguridad",
     "stem": "Durante una transmisi\xF3n, tocar una antena o elementos pr\xF3ximos al sistema radiante:",
     "options": [
       "Es inocuo si la ROE es baja",
@@ -11012,8 +10937,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ofic-025",
-    "part": 2,
-    "topicId": "instalaciones",
+    "part": 1,
+    "topicId": "receptores-emisores",
     "stem": "Si la RF de una estaci\xF3n entra en altavoces o equipos de audio cercanos, una medida t\xE9cnica razonable es:",
     "options": [
       "Aumentar siempre la potencia",
@@ -11103,7 +11028,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-031",
     "part": 2,
-    "topicId": "licencias-indicativos",
+    "topicId": "operacion-seguridad",
     "stem": "En bancos espa\xF1oles de pr\xE1ctica, si se pide deletrear la letra N con la tabla fon\xE9tica usada para indicativos, la respuesta esperada suele ser:",
     "options": [
       "Noviembre",
@@ -11132,8 +11057,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ofic-033",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "magnetismo-ondas",
     "stem": "La designaci\xF3n internacional de una clase de emisi\xF3n consta, en el esquema habitual, de:",
     "options": [
       "Un solo d\xEDgito",
@@ -11193,7 +11118,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-037",
     "part": 1,
-    "topicId": "receptores-emisores",
+    "topicId": "componentes",
     "stem": "El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonancia f y el ancho de banda B como:",
     "options": [
       "Q = B / f",
@@ -11208,7 +11133,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-038",
     "part": 1,
-    "topicId": "magnetismo-ondas",
+    "topicId": "electricidad-basica",
     "stem": "Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:",
     "options": [
       "0 dBm",
@@ -11328,7 +11253,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-046",
     "part": 2,
-    "topicId": "operacion-seguridad",
+    "topicId": "marco-normativo",
     "stem": "En tr\xE1fico de radioaficionado, la abreviatura \xABCL\xBB suele significar:",
     "options": [
       "Cambio de polarizaci\xF3n",
@@ -11358,7 +11283,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-048",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Dos resistencias iguales de valor R conectadas en paralelo equivalen a:",
     "options": [
       "2R",
@@ -11403,7 +11328,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-051",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Para medir la tensi\xF3n entre dos puntos de un circuito, el volt\xEDmetro debe conectarse:",
     "options": [
       "En serie con la rama",
@@ -11418,7 +11343,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-052",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "La unidad dBm expresa potencia referida a:",
     "options": [
       "1 vatio",
@@ -11433,7 +11358,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-053",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Una resistencia con bandas violeta\u2013verde\u2013rojo\u2013oro (tolerancia oro) tiene un valor nominal aproximado de:",
     "options": [
       "75 \u03A9",
@@ -11448,7 +11373,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-054",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Un condensador ideal en r\xE9gimen permanente de corriente continua se comporta, en primera aproximaci\xF3n, como:",
     "options": [
       "Un cortocircuito",
@@ -11463,7 +11388,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-055",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Una bobina ideal en r\xE9gimen permanente de corriente continua se comporta, en primera aproximaci\xF3n, como:",
     "options": [
       "Un circuito abierto",
@@ -11478,7 +11403,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-056",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "4,7 k\u03A9 expresado en ohmios (\u03A9) sin prefijo es:",
     "options": [
       "47 \u03A9",
@@ -11493,7 +11418,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-057",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 \u03A9. Si la corriente de carga es 2 A, la tensi\xF3n en bornes es aproximadamente:",
     "options": [
       "12 V",
@@ -11523,7 +11448,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-059",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "La energ\xEDa almacenada en un condensador cargado (modelo ideal) es proporcional a:",
     "options": [
       "Solo a la capacidad C",
@@ -11538,7 +11463,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-060",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "componentes",
     "stem": "Para proteger un amper\xEDmetro de sobrecorriente suele usarse un resistencia shunt que:",
     "options": [
       "Va en serie y es muy alta",
@@ -11583,7 +11508,7 @@ var questions_banco_estudio_default = [
   {
     "id": "ofic-063",
     "part": 1,
-    "topicId": "electricidad-basica",
+    "topicId": "magnetismo-ondas",
     "stem": "Una onda de radio en el espacio libre se modela principalmente como:",
     "options": [
       "Solo onda sonora",
@@ -12034,21 +11959,6 @@ var questions_banco_estudio_default = [
     "explain": "Seg\xFAn el art. 25.h y el anexo I del reglamento vigente (BOE-A-2013-7624), en VHF/UHF desatendidas suele ser hasta 10 W en casco urbano y hasta 50 W fuera, salvo motivaci\xF3n especial. En este enunciado la opci\xF3n correcta del banco es \xAB10 W.\xBB."
   },
   {
-    "id": "quijotes-84-1904",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "En la banda de frecuencia de 50,00-51,00 MHz, existen restricciones geogr\xE1ficas de uso. Se\xF1ale la provincia desde la que se podr\xE1n efectuar emisiones:",
-    "options": [
-      "Madrid.",
-      "Avila.",
-      "Valladolid.",
-      "Almer\xEDa."
-    ],
-    "correctIndex": 3,
-    "explain": "La autorizaci\xF3n y el indicativo condicionan qui\xE9n puede operar, d\xF3nde y con qu\xE9 requisitos. Para este enunciado, la respuesta correcta es \xABAlmer\xEDa.\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1904). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-1905",
     "part": 2,
     "topicId": "marco-normativo",
@@ -12094,8 +12004,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "quijotes-84-1936",
-    "part": 1,
-    "topicId": "antenas-prop",
+    "part": 2,
+    "topicId": "instalaciones",
     "stem": "El cambio de ubicaci\xF3n de una antena:",
     "options": [
       "No es necesario solicitarlo a la Administraci\xF3n competente en espectro radioel\xE9ctrico.",
@@ -12149,21 +12059,6 @@ var questions_banco_estudio_default = [
     "correctIndex": 2,
     "explain": "El indicativo espa\xF1ol combina prefijo E, cifra de distrito y sufijo asignado por la administraci\xF3n. La opci\xF3n v\xE1lida es \xABEl interesado podr\xE1 solicitar mantener su sufijo, si este estuviera disponible. Caso contrario le ser\xE1 asignado un nuevo sufijo siguiendo el orden establecido.\xBB. (BOE-A-2013-7624).",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1952). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-1963",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "\xBFQu\xE9 se entiende por emisiones no deseadas?:",
-    "options": [
-      "Conjunto de emisiones que producen interferencias.",
-      "Conjunto de emisiones situadas fuera de la anchura de banda.",
-      "Conjunto de las emisiones no esenciales y de las emisiones fuera de banda.",
-      "Conjunto de emisiones de banda estrecha."
-    ],
-    "correctIndex": 2,
-    "explain": "Las emisiones no deseadas agrupan las no esenciales y las de fuera de banda: todo lo que se radia adem\xE1s de la emisi\xF3n necesaria para la comunicaci\xF3n. \xABConjunto de las emisiones no esenciales y de las emisiones fuera de banda.\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 1963). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-1965",
@@ -12252,21 +12147,6 @@ var questions_banco_estudio_default = [
     "explain": "Relaci\xF3n clave: \u03BB = c/f (en vac\xEDo c \u2248 3\xB710\u2078 m/s) o \u03BB = v/f en un medio. \xABPermiten contactar con otros operadores que utilizan el mismo modo.\xBB."
   },
   {
-    "id": "quijotes-84-2043",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Las emisiones en la banda de frecuencias 50,0-51,0 MHz se podr\xE1n efectuar:",
-    "options": [
-      "Desde cualquier punto del territorio nacional.",
-      "Desde las provincias de Barcelona, Valencia y Zaragoza.",
-      "Desde la provincia de Valencia.",
-      "En todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W."
-    ],
-    "correctIndex": 3,
-    "explain": "En el segmento 50,0\u201351,0 MHz se permite emitir en todo el territorio nacional siempre que la potencia m\xE1xima del equipo no supere los 50 W. \xABEn todo el territorio nacional si la potencia m\xE1xima del equipo es inferior a 50 W.\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2043). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-2048",
     "part": 2,
     "topicId": "marco-normativo",
@@ -12310,21 +12190,6 @@ var questions_banco_estudio_default = [
     "correctIndex": 0,
     "explain": "Seg\xFAn el r\xE9gimen andorrano del banco, un radioaficionado con licencia extranjera vigente en su pa\xEDs de residencia puede obtener autorizaci\xF3n temporal para operar en territorio andorrano. \xABSi, segun el articulo 6, radioaficionados titulares de una licencia extranjera en vigor en el pa\xEDs en el que residen habitualmente, pueden obtener una licencia temporal para usar su estaci\xF3n en territorio andorrano.\xBB.",
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2057). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
-    "id": "quijotes-84-2060",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "Al conjunto de las emisiones no esenciales y de las emisiones fuera de banda se las denomina emisiones:",
-    "options": [
-      "Cat\xF3dicas.",
-      "Par\xE1sitas.",
-      "No deseadas.",
-      "Por conversi\xF3n de frecuencias."
-    ],
-    "correctIndex": 2,
-    "explain": "Las emisiones no esenciales y las emisiones fuera de banda son se\xF1ales que salen fuera de lo que se pretende transmitir. En conjunto se llaman emisiones \xABNo deseadas\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2060). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
     "id": "quijotes-84-2062",
@@ -12400,24 +12265,9 @@ var questions_banco_estudio_default = [
     "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2094). Puede contener erratas; contrastar con BOE/convocatoria."
   },
   {
-    "id": "quijotes-84-2104",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
-    "stem": "En la banda de frecuencias de 1.830-1.850 kHz, la potencia de cresta de la envolvente (p.c.e.) de las emisiones, no deber\xE1 ser superior a",
-    "options": [
-      "5 w",
-      "50 w",
-      "75 w",
-      "1000 w"
-    ],
-    "correctIndex": 1,
-    "explain": "La banda 1.830-1.850 kHz est\xE1 en 160 metros. La pregunta solo pide recordar el l\xEDmite de potencia: frente a 5 W, 75 W o 1000 W, el valor correcto es \xAB50 w\xBB.",
-    "explainSourceNote": "Pr\xE1ctica hist\xF3rica (Quijotes EA3RCQ \xB7 reglamentacion-correccion-inmediata, quiz 84, pregunta 2104). Puede contener erratas; contrastar con BOE/convocatoria."
-  },
-  {
     "id": "quijotes-84-2203",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "operacion-seguridad",
     "stem": "En el sistema GMDSS, la alerta de socorro inicial en MF/HF se realiza mediante Llamada Selectiva Digital (DSC). \xBFEn qu\xE9 frecuencia se transmite esta alerta en banda MF?",
     "options": [
       "2.182 kHz",
@@ -12446,8 +12296,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "quijotes-84-2214",
-    "part": 1,
-    "topicId": "magnetismo-ondas",
+    "part": 2,
+    "topicId": "marco-normativo",
     "stem": "En la banda de radioaficionado de 40 metros, el modo de emisi\xF3n que normalmente se utiliza es",
     "options": [
       "USB",
@@ -12520,8 +12370,8 @@ var questions_banco_estudio_default = [
   },
   {
     "id": "ure-p1-q122",
-    "part": 2,
-    "topicId": "marco-normativo",
+    "part": 1,
+    "topicId": "antenas-prop",
     "stem": "Para tratar de minimizar la producci\xF3n de interferencias con una estaci\xF3n de radioaficionado, debe procurarse:",
     "options": [
       "Radiar con potencia elevada",

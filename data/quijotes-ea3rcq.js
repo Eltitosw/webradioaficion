@@ -5835,8 +5835,8 @@ export default [
   },
   {
     id: "quijotes-84-1936",
-    part: 1,
-    topicId: "antenas-prop",
+    part: 2,
+    topicId: "instalaciones",
     stem: "El cambio de ubicación de una antena:",
     options: [
       "No es necesario solicitarlo a la Administración competente en espectro radioeléctrico.",

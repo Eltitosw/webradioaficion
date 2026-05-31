@@ -91,3 +91,49 @@ describe("reconcilePartAndTopic — FEDI bloque c", () => {
     assert.equal(isMisfiledPart2TechnicalStem(stem, 2), false);
   });
 });
+
+describe("mezclas frecuentes — bandas, antenas, emisión, seguridad", () => {
+  it("bandas con límite de potencia van a P2 marco-normativo", () => {
+    const c = classifyQuestion({
+      stem: "En la banda de 1.830-1.850 kHz, la potencia de cresta no deberá ser superior a:",
+      sourcePart: 2,
+      id: "quijotes-84-2104",
+    });
+    assert.equal(c.part, 2);
+    assert.equal(c.topicId, "marco-normativo");
+    assert.equal(c.ruleId, "override");
+  });
+
+  it("antena con trámite de ubicación va a instalaciones P2", () => {
+    const c = classifyQuestion({
+      stem: "El cambio de ubicación de una antena:",
+      sourcePart: 2,
+      id: "quijotes-84-1936",
+    });
+    assert.equal(c.part, 2);
+    assert.equal(c.topicId, "instalaciones");
+    assert.equal(c.ruleId, "override");
+  });
+
+  it("clase de emisión UIT es técnica P1 magnetismo-ondas", () => {
+    const c = classifyQuestion({
+      stem: "La designación internacional de una clase de emisión consta de:",
+      sourcePart: 2,
+      id: "ofic-033",
+    });
+    assert.equal(c.part, 1);
+    assert.equal(c.topicId, "magnetismo-ondas");
+    assert.equal(c.ruleId, "override");
+  });
+
+  it("tocar antena en transmisión va a operacion-seguridad P2", () => {
+    const c = classifyQuestion({
+      stem: "Durante una transmisión, tocar una antena o elementos próximos:",
+      sourcePart: 2,
+      id: "ofic-024",
+    });
+    assert.equal(c.part, 2);
+    assert.equal(c.topicId, "operacion-seguridad");
+    assert.equal(c.ruleId, "override");
+  });
+});

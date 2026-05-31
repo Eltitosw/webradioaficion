@@ -97,4 +97,9 @@ if (asJson) {
   console.error(`\nEscrito ${OUT}`);
 }
 
-if (drift.length > 120) process.exitCode = 1;
+if (drift.length > 0) {
+  console.error(
+    `FAIL: ${drift.length} pregunta(s) con drift de clasificación. Edita la fuente o añade override en data/question-classification-overrides.mjs.`,
+  );
+  process.exitCode = 1;
+}

@@ -7,11 +7,6 @@ export const CLASSIFICATION_OVERRIDES = {
   "fedi-a-108": { part: 1, topicId: "receptores-emisores" },
   /** Objeto del servicio / límites de emisión: reglamento P2. */
   "quijotes-84-2071": { part: 2, topicId: "marco-normativo" },
-  /** Clases de emisión en banda de 40 m: técnica modulación (P1). */
-  "quijotes-84-2214": { part: 1, topicId: "magnetismo-ondas" },
-  /** Emisiones no deseadas / espurias: técnica P1. */
-  "quijotes-84-1963": { part: 1, topicId: "magnetismo-ondas" },
-  "quijotes-84-2060": { part: 1, topicId: "magnetismo-ondas" },
   /** Designación de clase de emisión (UIT): técnica P1. */
   "ofic-033": { part: 1, topicId: "magnetismo-ondas" },
   "quijotes-84-1856": { part: 1, topicId: "magnetismo-ondas" },
@@ -28,6 +23,17 @@ export const CLASSIFICATION_OVERRIDES = {
   /** Fading / desvanecimiento. */
   "quijotes-1-0182": { part: 1, topicId: "magnetismo-ondas" },
 
+  /** Tocar antena en TX: seguridad operativa P2 (no antenas-prop por palabra «antena»). */
+  "ofic-024": { part: 2, topicId: "operacion-seguridad" },
+  /** Escuchar antes de transmitir: operación P2. */
+  "ofic-045": { part: 2, topicId: "operacion-seguridad" },
+  /** Periodo T = 1/f: electricidad básica P1. */
+  "ofic-050": { part: 1, topicId: "electricidad-basica" },
+  /** 4,7 kΩ: componentes P1 (evita falso positivo «prefijo» en licencias). */
+  "ofic-056": { part: 1, topicId: "componentes" },
+  /** ROE e interferencias: técnica P1 antenas. */
+  "ure-p1-q122": { part: 1, topicId: "antenas-prop" },
+
   /**
    * Normativa de instalación de antenas (Ley de Antenas / propiedad horizontal /
    * comunidad): 2.ª prueba, bloque instalaciones. Estaban en «antenas-prop» (P1)
@@ -43,6 +49,8 @@ export const CLASSIFICATION_OVERRIDES = {
   "ure-p2-q468": { part: 2, topicId: "instalaciones" },
   /** Duplicada (solo estudio) de ure-p2-q408: misma normativa de instalación. */
   "quijotes-84-1910": { part: 2, topicId: "instalaciones" },
+  /** Cambio de ubicación de antena: trámite administrativo P2. */
+  "quijotes-84-1936": { part: 2, topicId: "instalaciones" },
 
   /** Procedimiento de operación (fonía/telegrafía, frecuencias de llamada, alarma): 2.ª prueba. */
   "ure-p2-q101": { part: 2, topicId: "operacion-seguridad" },
@@ -57,4 +65,20 @@ export const CLASSIFICATION_OVERRIDES = {
   "ure-p2-q398": { part: 2, topicId: "marco-normativo" },
   "ure-p2-q446": { part: 2, topicId: "marco-normativo" },
   "quijotes-84-1810": { part: 2, topicId: "marco-normativo" },
+
+  /**
+   * Límites reglamentarios de bandas (potencia, geografía, modos permitidos): P2 marco-normativo.
+   * Estaban en magnetismo-ondas (P1) por mencionar frecuencias o modos de emisión.
+   */
+  "quijotes-84-1904": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-1947": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-1963": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-2043": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-2060": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-2081": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-2104": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-2201": { part: 2, topicId: "marco-normativo" },
+  "quijotes-84-2214": { part: 2, topicId: "marco-normativo" },
+  /** GMDSS / alerta DSC en MF: operación P2. */
+  "quijotes-84-2203": { part: 2, topicId: "operacion-seguridad" },
 };

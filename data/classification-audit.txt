@@ -1,74 +1,24 @@
 === Auditoría clasificación (banco activo) ===
-Fecha: 2026-05-30
-Preguntas: 562
-Drift (almacenado ≠ clasificador): 24
+Fecha: 2026-05-31
+Preguntas: 557
+Drift (almacenado ≠ clasificador): 0
 Confianza baja (revisar — fallback-review): 0
 
 Distribución según clasificador:
-  129	2/licencias-indicativos
+  128	2/licencias-indicativos
   88	2/marco-normativo
   77	1/receptores-emisores
-  63	1/antenas-prop
-  59	1/componentes
-  46	1/electricidad-basica
-  45	1/magnetismo-ondas
-  37	2/operacion-seguridad
-  18	2/instalaciones
+  62	1/antenas-prop
+  60	1/componentes
+  47	1/electricidad-basica
+  40	2/operacion-seguridad
+  36	1/magnetismo-ondas
+  19	2/instalaciones
 
 Reglas aplicadas:
-  235	p2-regulatory
-  137	inferred-topic
-  120	p1-technical
+  233	p2-regulatory
+  132	inferred-topic
+  117	p1-technical
   29	default-topic-ok
-  23	override
+  28	override
   18	p2-reg-over-tech
-
-Cambios sugeridos (primeros 80):
-  ofic-002: 1/electricidad-basica → 1/componentes [inferred-topic]
-    Dos resistencias en serie R1 y R2 se comportan como una resistencia equivalente:
-  ofic-003: 1/magnetismo-ondas → 1/receptores-emisores [inferred-topic]
-    En modulación de frecuencia (FM), la magnitud de la portadora que varía con la señal modul
-  ofic-004: 1/magnetismo-ondas → 1/electricidad-basica [default-topic-ok]
-    Un aumento de 3 dB en potencia (misma impedancia) corresponde aproximadamente a:
-  ofic-023: 2/operacion-seguridad → 2/marco-normativo [p2-regulatory]
-    Las comunicaciones de radioaficionado destinadas a ocultar deliberadamente su significado 
-  ofic-024: 2/instalaciones → 1/antenas-prop [p1-technical]
-    Durante una transmisión, tocar una antena o elementos próximos al sistema radiante:
-  ofic-025: 2/instalaciones → 1/receptores-emisores [override]
-    Si la RF de una estación entra en altavoces o equipos de audio cercanos, una medida técnic
-  ofic-031: 2/licencias-indicativos → 2/operacion-seguridad [p2-regulatory]
-    En bancos españoles de práctica, si se pide deletrear la letra N con la tabla fonética usa
-  ofic-033: 2/marco-normativo → 1/magnetismo-ondas [override]
-    La designación internacional de una clase de emisión consta, en el esquema habitual, de:
-  ofic-037: 1/receptores-emisores → 1/componentes [p1-technical]
-    El factor de calidad Q de un circuito resonante se relaciona con la frecuencia de resonanc
-  ofic-038: 1/magnetismo-ondas → 1/electricidad-basica [default-topic-ok]
-    Una potencia de 1000 mW (1 W) referida a 1 mW equivale aproximadamente a:
-  ofic-045: 2/operacion-seguridad → 1/magnetismo-ondas [p1-technical]
-    Antes de transmitir en una frecuencia, escuchar si la frecuencia está libre es:
-  ofic-046: 2/operacion-seguridad → 2/marco-normativo [p2-regulatory]
-    En tráfico de radioaficionado, la abreviatura «CL» suele significar:
-  ofic-048: 1/electricidad-basica → 1/componentes [inferred-topic]
-    Dos resistencias iguales de valor R conectadas en paralelo equivalen a:
-  ofic-050: 1/electricidad-basica → 1/magnetismo-ondas [p1-technical]
-    La relación entre periodo T (segundos) y frecuencia f (hertzios) de una señal periódica es
-  ofic-051: 1/electricidad-basica → 1/componentes [p1-technical]
-    Para medir la tensión entre dos puntos de un circuito, el voltímetro debe conectarse:
-  ofic-052: 1/electricidad-basica → 1/magnetismo-ondas [inferred-topic]
-    La unidad dBm expresa potencia referida a:
-  ofic-053: 1/electricidad-basica → 1/componentes [inferred-topic]
-    Una resistencia con bandas violeta–verde–rojo–oro (tolerancia oro) tiene un valor nominal 
-  ofic-054: 1/electricidad-basica → 1/componentes [p1-technical]
-    Un condensador ideal en régimen permanente de corriente continua se comporta, en primera a
-  ofic-055: 1/electricidad-basica → 1/componentes [p1-technical]
-    Una bobina ideal en régimen permanente de corriente continua se comporta, en primera aprox
-  ofic-056: 1/electricidad-basica → 2/licencias-indicativos [p2-regulatory]
-    4,7 kΩ expresado en ohmios (Ω) sin prefijo es:
-  ofic-057: 1/electricidad-basica → 1/componentes [p1-technical]
-    Una pila tiene fuerza electromotriz 12 V y resistencia interna 0,5 Ω. Si la corriente de c
-  ofic-059: 1/electricidad-basica → 1/componentes [p1-technical]
-    La energía almacenada en un condensador cargado (modelo ideal) es proporcional a:
-  ofic-060: 1/electricidad-basica → 1/componentes [p1-technical]
-    Para proteger un amperímetro de sobrecorriente suele usarse un resistencia shunt que:
-  ofic-063: 1/electricidad-basica → 1/magnetismo-ondas [inferred-topic]
-    Una onda de radio en el espacio libre se modela principalmente como:

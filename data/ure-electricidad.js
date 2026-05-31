@@ -79,7 +79,7 @@ export default [
   {
     id: "ure-p1-q122",
     part: 1,
-    topicId: "electricidad-basica",
+    topicId: "antenas-prop",
     stem: "Para tratar de minimizar la producción de interferencias con una estación de radioaficionado, debe procurarse:",
     options: [
       "Radiar con potencia elevada",
