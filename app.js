@@ -534,7 +534,7 @@ async function onRoute() {
     if (fuentes instanceof HTMLDetailsElement) {
       fuentes.open = true;
       requestAnimationFrame(() => {
-        fuentes.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        fuentes.scrollIntoView({ behavior: quizScrollBehavior(), block: "nearest" });
       });
     }
     return;
@@ -613,7 +613,7 @@ async function onRoute() {
   if (scrollTargetId) {
     requestAnimationFrame(() => {
       setTimeout(() => {
-        document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        document.getElementById(scrollTargetId)?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
       }, 70);
     });
   }
@@ -702,7 +702,7 @@ function renderNormativa() {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-norm-jump");
       const el = id ? document.getElementById(id) : null;
-      el?.scrollIntoView({ behavior: "smooth", block: "start" });
+      el?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
     });
   });
 }
@@ -982,7 +982,7 @@ function fillTemarioBlockChips() {
 function scrollToTemarioBlock(anchorId) {
   if (!anchorId) return;
   const el = document.getElementById(anchorId);
-  el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  el?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
   setTemarioPinnedBlockId(anchorId.replace(/^temario-/, ""));
   const sel = $("#temario-jump");
   if (sel instanceof HTMLSelectElement) sel.value = anchorId;
@@ -1662,7 +1662,7 @@ function resumeQuizSession() {
   }
   launchQuizUi(examRemainingMs);
   requestAnimationFrame(() => {
-    $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    $("#quiz-area")?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
   });
   showSaveToast("Sesión reanudada.");
 }
@@ -2753,7 +2753,7 @@ function startExamSimulation(partValue) {
   saveQuizPrefs();
   startQuiz();
   requestAnimationFrame(() => {
-    $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    $("#quiz-area")?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
   });
 }
 
@@ -3339,7 +3339,7 @@ function renderDeepenPanel(q) {
 function focusConfidencePicker() {
   const picker = document.getElementById("quiz-confidence");
   if (!picker) return;
-  picker.scrollIntoView({ behavior: "smooth", block: "center" });
+  picker.scrollIntoView({ behavior: quizScrollBehavior(), block: "center" });
   const first = picker.querySelector("[data-conf]");
   if (first instanceof HTMLButtonElement) {
     first.focus({ preventScroll: true });
@@ -3677,7 +3677,7 @@ function bindResultActions() {
     saveQuizPrefs();
     startQuiz();
     requestAnimationFrame(() => {
-      $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      $("#quiz-area")?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
     });
   });
   feedback?.querySelector("[data-result-new-practice]")?.addEventListener("click", () => {
@@ -3689,7 +3689,7 @@ function bindResultActions() {
     }
     startQuiz();
     requestAnimationFrame(() => {
-      $("#quiz-area")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      $("#quiz-area")?.scrollIntoView({ behavior: quizScrollBehavior(), block: "start" });
     });
   });
 }
@@ -3786,7 +3786,10 @@ function finishQuiz() {
 }
 
 function quizScrollBehavior() {
-  return document.documentElement.classList.contains("a11y-reduce-motion") ? "auto" : "smooth";
+  const reduced =
+    document.documentElement.classList.contains("a11y-reduce-motion") ||
+    (typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  return reduced ? "auto" : "smooth";
 }
 
 /** Muestra el enunciado bajo la cabecera fija (útil en móvil/tablet tras Siguiente/Anterior). */

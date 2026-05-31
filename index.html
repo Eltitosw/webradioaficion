@@ -19,10 +19,13 @@
   <script>
     (function () {
       try {
-        var raw = localStorage.getItem("radioexam_a11y_v1");
-        if (!raw) return;
-        var o = JSON.parse(raw);
         var root = document.documentElement;
+        var raw = localStorage.getItem("radioexam_a11y_v1");
+        if (!raw) {
+          root.dataset.theme = "dark";
+          return;
+        }
+        var o = JSON.parse(raw);
         if (o.theme === "light") {
           root.classList.add("a11y-light");
           root.dataset.theme = "light";
@@ -556,7 +559,7 @@
           <p class="pretest__label">Sin ver opciones todavía: ¿cuál dirías que es la respuesta (en una frase)?</p>
           <textarea id="quiz-pretext" rows="2" placeholder="Opcional: escribe tu hipótesis…"></textarea>
         </div>
-        <article class="q-card" id="quiz-question" aria-live="polite"></article>
+        <article class="q-card" id="quiz-question"></article>
         <div class="quiz__nav">
           <button type="button" class="btn btn--ghost" id="quiz-prev" disabled>Anterior</button>
           <button type="button" class="btn btn--primary" id="quiz-next">Siguiente</button>
