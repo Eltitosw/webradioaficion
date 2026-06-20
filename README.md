@@ -45,8 +45,9 @@ npm run cleanup:project  # quitar SVG/scripts legacy (una vez)
    node scripts/sync-version.mjs
    ```
 
-3. Sube **toda** la carpeta: `index.html`, `app.js`, `styles.css`, `lib/`, `data/`, `images/`.
-4. Comprueba en producción con recarga forzada (Ctrl+F5) que el pie de página muestra la versión nueva.
+3. Sube **solo** lo necesario en la raíz del dominio: `index.html`, `app.bundle.js`, `styles.css`, `robots.txt`, `_headers` o `.htaccess` (según hosting), e `images/`.
+4. **No subas** `data/`, `lib/` ni `scripts/` — el banco va embebido en `app.bundle.js` (minificado).
+5. Comprueba en producción con recarga forzada (Ctrl+F5) que el pie de página muestra la versión nueva.
 
 ## Progreso del alumno
 

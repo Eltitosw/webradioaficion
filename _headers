@@ -1,0 +1,16 @@
+# Netlify / Cloudflare Pages — cabeceras de seguridad y anti-embeber
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Content-Security-Policy: frame-ancestors 'self'
+
+/app.bundle.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/styles.css
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=300, must-revalidate

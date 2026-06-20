@@ -4,6 +4,7 @@ import { LIBRO_OFICIAL_INTRO, TEMARIO_BLOCK_ENRICHMENT } from "./data/temario-bo
 import { LIBRO_TEMA_TEORIA } from "./data/libro-temario-sync.mjs";
 import { LIBRO_TECNICA_OCR_HINT } from "./data/libro-tecnica-indice.mjs";
 import { pickDeepenFocusLines } from "./lib/quiz-deepen-focus.mjs";
+import { initSiteProtection, isBankHostAllowed, renderSiteAttributionHtml } from "./lib/site-protection.mjs";
 import questionsBanco from "./data/questions-banco.js";
 import { BANCO_STATS } from "./data/questions-banco.js";
 import questionsBancoEstudio from "./data/questions-banco-estudio.js";
@@ -1622,6 +1623,10 @@ function launchQuizUi(/** @type {number|undefined} */ examRemainingMs) {
 }
 
 function resumeQuizSession() {
+  if (!isBankHostAllowed()) {
+    void guardBankHost();
+    return;
+  }
   const draft = loadQuizDraft();
   if (!draft || isQuizSessionInProgress()) return;
   const s = /** @type {Record<string, unknown>} */ (draft.session);
@@ -1693,7 +1698,20 @@ function updateQuizStats() {
   el.textContent = bits.join(" · ");
 }
 
+async function guardBankHost() {
+  if (isBankHostAllowed()) return true;
+  await showAppConfirm({
+    title: "Sitio no autorizado",
+    message:
+      "Practicar, simulacros y tarjetas solo están disponibles en examenradioaficionado.online. Esta copia del sitio no puede usar el banco de preguntas.",
+    confirmLabel: "Entendido",
+    cancelLabel: "Cerrar",
+  });
+  return false;
+}
+
 async function startQuiz() {
+  if (!(await guardBankHost())) return;
   if (isQuizSessionInProgress()) {
     if (!(await promptQuizLeave())) return;
   }
@@ -1784,6 +1802,7 @@ async function startQuiz() {
 }
 
 async function startSmartReviewSession() {
+  if (!(await guardBankHost())) return;
   if (isQuizSessionInProgress()) {
     if (!(await promptQuizLeave())) return;
   }
@@ -1968,6 +1987,7 @@ function renderQuestion() {
     ${topicMeta}
     ${figureHtml}
     <h2 class="q-card__stem">${escapeHtml(q.stem)}</h2>
+    ${renderSiteAttributionHtml(escapeHtml)}
     <div class="opts" role="radiogroup" aria-label="Opciones">${optsHtml}</div>
     ${confidenceInline}
     ${preBtn}
@@ -4079,7 +4099,7 @@ function renderFlashcard() {
     Array.isArray(q.options) && typeof q.correctIndex === "number" && q.options[q.correctIndex] !== undefined
       ? q.options[q.correctIndex]
       : "";
-  const stemBlock = `<div class="fc-stem">${escapeHtml(q.stem)}</div>`;
+  const stemBlock = `<div class="fc-stem">${escapeHtml(q.stem)}</div>${renderSiteAttributionHtml(escapeHtml)}`;
   front.innerHTML = badge + stemBlock;
   if (!ans) {
     back.innerHTML = `${badge}<p class="muted">No hay texto de respuesta asociado a esta pregunta.</p>`;
@@ -4107,6 +4127,10 @@ function renderFlashcard() {
 }
 
 function loadFlashcards() {
+  if (!isBankHostAllowed()) {
+    void guardBankHost();
+    return;
+  }
   fcState.deck = buildFlashDeck();
   fcState.index = 0;
   const imp = $("#fc-import-status");
@@ -4476,6 +4500,7 @@ function initA11y() {
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
+    initSiteProtection();
     initNav();
 
     initA11y();

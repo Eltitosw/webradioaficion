@@ -29,9 +29,15 @@ if (missing.length) {
   process.exit(1);
 }
 console.log("\nSube al hosting (raíz del dominio):");
-for (const f of ["index.html", "app.bundle.js", "styles.css"]) {
-  const st = fs.statSync(path.join(root, f));
+for (const f of ["index.html", "app.bundle.js", "styles.css", "robots.txt", "_headers", ".htaccess"]) {
+  const p = path.join(root, f);
+  if (!fs.existsSync(p)) {
+    console.log(`  - ${f}  (opcional / no presente)`);
+    continue;
+  }
+  const st = fs.statSync(p);
   console.log(`  - ${f}  (${(st.size / 1024).toFixed(1)} KB)`);
 }
 console.log("  - images/quiz/  (carpeta completa si cambiaste figuras)");
+console.log("\nNO subas data/, lib/ ni scripts/ — el banco va solo dentro de app.bundle.js.");
 console.log("\nDespués: recarga forzada (Ctrl+F5) en el navegador.");

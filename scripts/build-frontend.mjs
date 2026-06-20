@@ -12,7 +12,7 @@ const outfile = path.join(root, "app.bundle.js");
 
 const r = spawnSync(
   process.platform === "win32" ? "npx.cmd" : "npx",
-  ["--yes", "esbuild", entry, "--bundle", "--format=esm", "--platform=browser", "--target=es2020", `--outfile=${outfile}`],
+  ["--yes", "esbuild", entry, "--bundle", "--format=esm", "--platform=browser", "--target=es2020", "--minify", "--legal-comments=none", `--outfile=${outfile}`],
   { cwd: root, stdio: "inherit", shell: process.platform === "win32" },
 );
 

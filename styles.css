@@ -2400,6 +2400,108 @@ body.quiz-focus-active #save-toast {
   }
 }
 
+/* Protección disuasoria del banco (quiz, feedback, tarjetas) */
+.site-protected {
+  position: relative;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.site-protected::after {
+  content: "RadioExamen · examenradioaficionado.online";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: clamp(0.72rem, 2.4vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0.11;
+  transform: rotate(-16deg);
+  text-align: center;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.site-protected > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feedback.site-protected::after {
+  opacity: 0.08;
+  font-size: 0.72rem;
+}
+
+.site-attribution {
+  margin: 0.35rem 0 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.72;
+}
+
+.site-host-banner {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  margin: 0;
+  padding: 0.65rem var(--page-pad-x);
+  background: #3d1a1a;
+  color: #ffd4d4;
+  border-bottom: 1px solid #7a3030;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.site-host-banner p {
+  margin: 0;
+}
+
+.site-host-banner a {
+  color: #ffb4b4;
+  font-weight: 600;
+}
+
+html.site-host-blocked #quiz-area,
+html.site-host-blocked #fc-area {
+  pointer-events: none;
+  opacity: 0.45;
+  filter: grayscale(0.35);
+}
+
+@media print {
+  .site-protected,
+  #quiz-area,
+  #fc-area,
+  .site-host-banner {
+    display: none !important;
+  }
+
+  body::after {
+    content: "Contenido protegido — no disponible para impresión. Visita https://examenradioaficionado.online";
+    display: block;
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+  }
+}
+
+.footer-rights {
+  max-width: 52rem;
+  line-height: 1.45;
+}
+
 .q-card {
   position: relative;
   background:
